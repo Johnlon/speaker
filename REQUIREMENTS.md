@@ -45,15 +45,34 @@ Driver selections must be vetted against this before inclusion in recommendation
 
 ---
 
+## Recommendations by Scenario
+
+Recommendations must cover best pairings for the scenarios defined in this file, including (at minimum):
+- Best overall for kitchen 60° off-axis listening
+- Best for on-axis listening (direct, centred)
+- Best for compact baffle / minimum width
+- Best value (under £50 and under £100 tiers)
+- Best for visual interest 
+  - by shape class — round, 
+  - square/non-round, 
+  - mixed
+
 ## Recommendation Tables
 
-- PSU voltage (24V or 29V) must be shown as a column in the quick reference table and both budget recommendation tables
-- Recommendations must include visual sub-groups covering:
-  - Pairings where mid and tweeter are both circular/round
-  - Pairings where mid and tweeter are square or non-round
-  - Other visual classes as appropriate (e.g. mixed shapes, oval, compact waveguide)
-- Owner is not yet sure what good looks like in terms of visual types and layouts — recommendations should help explore this
-- Driver centre spacing must be noted where it affects acoustic performance (lobing geometry at the crossover frequency - )
+Minimum required columns in every recommendation table:
+
+| Column | Notes |
+|--------|-------|
+| ID | Reference code |
+| Mid | Driver model |
+| Tweeter | Driver model |
+| Crossover | Frequency or range |
+| Price | Combined £ estimate |
+| PSU | 24V or 29V |
+| Character | Tonal signature (warm / detailed / neutral etc.) |
+| Why | Key reason for inclusion or rank |
+
+Additional columns permitted only where the value has direct and significant bearing on a decision. Centre spacing is one example — include it only when notably tight or wide enough to affect performance or baffle design. Do not add columns for their own sake.
 
 ## Physical
 
