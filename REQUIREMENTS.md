@@ -270,4 +270,4 @@ Additional columns permitted only where the value has direct and significant bea
 - All drivers surface-mounted — proud of the baffle, not flush-recessed
 - No wiring or connectors visible on front or top face
 - Compact — Google Home Max footprint is the size reference; up to ~5 cm taller is acceptable
-- Classic look — inspired by B&W DM4 and similar wooden speaker designs
+- Classic look — I like B&W DM4 and similar wooden speaker designs, but I also like the idea of an ultra compact speaker with great bass and lovely mids and highs

@@ -42,10 +42,10 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Dayton DS115-8 | 4" | 8Ω | €36.95 | 4 | 55.2 | 85.3 | 4.1 | 35 | 115.6 | Round | Black paper | ✓ (S1) — top candidate; 4 left |
 | Peerless SDS-P830656 | 5.25" | 8Ω | €29.95 | 10+ | 65 | 86.1 | 10.0 | 60 | 152×134 | Trunc | Dark paper | ✓ (B7) — Xmax 10mm; trunc. frame |
 | Dayton SIG150-4 | 5.25" | 4Ω | €44.95 | in stock | 61.5 | 91.1 | 4.0 | 60 | 152 | Round | ? Al | ✓ (B8) — 5.25"; beams above 1,990Hz |
-| SICA 3,5 L 1 SL-4 | 3.5" | 4Ω | €46.95 | 4 | — | — | — | — | — | — | ? | ? URL not found on SI |
-| SB15SFCR39-4 | 5×8" oval | 4Ω | €47.45 | 10+ | — | — | — | — | oval | Oval | ? | ? URL not found on SI; active oval woofer/PR unclear |
-| SB15SFCR39-8 | 5×8" oval | 8Ω | €47.45 | 10+ | — | — | — | — | oval | Oval | ? | ? URL not found on SI |
-| FaitalPRO 4FE42-4F | 4" | 4Ω | €47.95 | 2 | — | — | — | — | — | — | ? | ? URL not found on SI (2 patterns tried); only 2 in stock |
+| SICA 3,5 L 1 SL-4 | 3.5" | 4Ω | €46.95 | 4 | 100 | 87 | 1.6 | 30 | 88 | Round | Paper | ✗ Fs 100Hz (1.5×) + Xmax 1.6mm — both fail |
+| SB15SFCR39-4 | 5×8" oval | 4Ω | €47.45 | 10+ | 31.5 | 89.5 | 5.5 | 80 | oval | Oval | Hard paper | ✗ active woofer; oval racetrack; Sd=178cm² (beams ~1460Hz as mid); alt sub only |
+| SB15SFCR39-8 | 5×8" oval | 8Ω | €47.45 | 10+ | — | — | — | — | oval | Oval | ? | ? URL not yet fetched |
+| FaitalPRO 4FE42-4F | 4" | 4Ω | €47.95 | 2 | 110 | 93@1W | 2.83 | 40 | 129.8 | Round | ? | ✗ Fs 110Hz (1.36× at 150Hz); same fail class as SICA |
 | Tectonic TEBM65C20F-8 | 3.5" BMR | 8Ω | €49.95 | 10+ | 86 | 81 | 3.5 | 30 | 108 | Round | ? | ~ 81dB low sens (−4dB vs sub); BMR = very wide dispersion |
 | Peerless HDS-P830870 | 4" | 8Ω | €49.95 | 10+ | 100 | 84.7 | 7.5 | 25 | 120×107 | Oval | ? | ~ Fs 100Hz (1.5× at 150Hz); Xmax 7.5mm notable |
 | PRV Audio 4MR60-NDY-4 | 4" | 4Ω | €49.95 | 10+ | 95.6 | 91 | 1.4 | 60 | 127.5 | Round | ? | ✗ Xmax 1.4mm + Fs 95.6Hz both fail |
