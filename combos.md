@@ -14,6 +14,8 @@ Exhaustive record of every evaluated mid+tweeter pairing. One row per combinatio
 - **RMS min** = lowest voltage where all three drivers match at 98 dB. Sub (40W/4Ω) needs 19.4V → 24V covers every combo at RMS except TCP115-8 (28V).
 - **Burst min** = lowest voltage for 101 dB parity. Sub (80W/4Ω) sets a 27.4V → **28V floor**. 8Ω mids with sensitivity below ~85 dB push higher. All within JAB5's 10–39V unless flagged with *.
 
+**Power correction for 4Ω drivers:** Sensitivity specs are at 2.83V/1m. For 4Ω drivers, 2.83V delivers 2W — so the 1W sensitivity = Sens_2.83V − 3.01 dB. Correct burst power: P = 10^((101 − (Sens_2.83V − 3.01)) / 10). Example: SB19ST (4Ω, 88.5 dB) → P_burst = 10^((101−85.49)/10) = 35.5W vs 30W rated (18% over — brief transients only, DSP limiter caps at 100 dB). For 8Ω drivers, 2.83V = 1W, no correction needed.
+
 Per-driver power requirements are in [drivers.md](drivers.md).
 
 ---
@@ -56,6 +58,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | TD25F-4 | 1,800 Hz | 93.5 | 91 | 20 |
 | DA25BG08-06 | 1,420 Hz | 104 | 91.6 | 15 |
 | XT25SC90-04 | 1,650 Hz | ~90 | 90.1 | 100 |
+| XT19TD00-04 | 1,640 Hz | 94 | 88.9 | 20 |
 | SB19ST | 1,960 Hz | 88 | 88.5 | 30 |
 | SB26STCN-C000-4 | 1,900 Hz | 72 | 92 | 120 |
 | DT-28N | 2,400 Hz | ~72 | ~92 | 50 |
@@ -164,6 +167,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
 | D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
 | D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
+| XT19_1 | DSA90-8 | XT19TD00-04 | 1,640–3,260 | 93 | ~61 | 24V / 29V* | Detailed + ring | 19mm ring rad; 93mm spacing; burst needs 32.4W (4Ω correction) vs 20W rated — DSP limiter at 18W caps tweeter to 98.9dB (2.1dB gap to sub burst — audible HF compression) |
+| XT19_2 | SB12PFCR25-4 | XT19TD00-04 | 1,640–2,730 | 108 | ~52 | 24V / 28V* | Warm + ring | 19mm ring; 1090Hz window; same 2.1dB HF ceiling at burst; DSP limiter essential |
+| XT19_3 | DS115-8 | XT19TD00-04 | 1,640–2,636 | 105 | ~62 | 24V / 28V* | Warm + ring | 19mm ring + paper warmth; 996Hz window; burst ceiling 98.9dB; SB19ST (100dB cap) or XT25TG30 preferred |
 
 ---
 
