@@ -13,24 +13,24 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | ND25FA-4 | Dome | 4Ω | €15.95 | 10+ | 1,350 | 90 | 20 | 66 | Round | 25 | Dark | 2,700 | ✓ (B10) — compact FP |
 | DC25T-8 | Dome (Ti) | 8Ω | €18.97 | 10+ | 1,468 | 93 | 50 | — | Round | 25 | Silver | 2,936 | ✓ — Ti dome; bright |
 | SB19ST-C000-4 | Dome | 4Ω | €21.45 | 10+ | 980 | 88.5 | 30 | 88 | Round | 19 | Dark | 1,960 | ✓ (S1,S2,A1–A3,A6–A8,B1,B5) — reference |
-| BC25SC06-04 | Dome | 4Ω | €24.95 | 10+ | 1,350 | 95.4 | 50 | ~70 | Round | 25 | ? | 2,700 | ✓ (BC1-3) — 50W; 95.4dB → 1.8W at ref/3.6W burst; FP ~70mm (est) |
+| BC25SC06-04 | Dome | 4Ω | €24.95 | 10+ | 1,350 | 95.4 | 50 | ~70 | Round | 25 | Dark | 2,700 | ✓ (BC1-3) — 50W; 95.4dB → 1.8W at ref/3.6W burst; FP ~70mm (est) |
 | HiVi TN25 | Dome | 5Ω | €25.45 | 5 | 1,500 | 91 | 20 | 54×54 | Square | 25 | Dark | 3,000 | ✓ (B6) — square FP; tightest spacing |
 | XT25SC90-04 | Ring Rad | 4Ω | £18.20 Falcon | 10+ | 825 | 90.1 | 100 | ~90 | Round | 25 | Dark ring | 1,650 | ✓ (RR4) — 100W; UK stock |
-| OC25SC65-04 | Dome | 4Ω | €26.95 | 10+ | 1,400 | 92.3 | 12 | 41 no plate | — | 25 | ? | 2,800 | ✗ no faceplate; 12W |
-| SB14ST-C000-4 | Dome | 4Ω | €28.45 | exp 27-08-2026 | — | — | — | — | Round | 14 | ? | — | OOS Aug 2026 |
-| BC25TG15-04 | Dome | 4Ω | €29.95 | 10+ | 1,100 | 93.9 | 7 | 104 | Round | 25 | ? | 2,200 | ✗ 7W power rating fatal |
+| OC25SC65-04 | Dome | 4Ω | €26.95 | 10+ | 1,400 | 92.3 | 12 | 41 no plate | — | 25 | Dark | 2,800 | ✗ no faceplate; 12W |
+| SB14ST-C000-4 | Dome | 4Ω | €28.45 | exp 27-08-2026 | — | — | — | — | Round | 14 | Dark | — | OOS Aug 2026 |
+| BC25TG15-04 | Dome | 4Ω | €29.95 | 10+ | 1,100 | 93.9 | 7 | 104 | Round | 25 | Dark | 2,200 | ✗ 7W power rating fatal |
 | DT-25N | Dome | 8Ω | €29.95 | 10+ | 1,600 | 95 | 40 | 66 | Round | 25 | Dark | 3,200 | ✓ — high Fs; min xover 3,200 Hz |
-| Swan TN28-B | Dome | 6Ω | €29.95 | 10+ | 1,300 | 90 | 15 | 47.6 | Round | 28 | ? | 2,600 | ★ ultra-compact FP 47.6mm; tight spacing potential |
+| Swan TN28-B | Dome | 6Ω | €29.95 | 10+ | 1,300 | 90 | 15 | 47.6 | Round | 28 | Dark | 2,600 | ★ ultra-compact FP 47.6mm; tight spacing potential |
 | XT25SC40-04 | Ring Rad | 4Ω | €29.95 | 10+ | 1,018 | 94 | 100 | 43.9 | Round | 25 | Dark ring | 2,036 | ★ SMALLEST ring rad FP 43.9mm; 100W; min xover 2036 |
-| DT 94-8 | Dome | 8Ω | €29.95 | 3 | 1,900 | 90 | 70 | 94 | Round | 20 | ? | 3,800 | ✗ min xover 3800Hz exceeds 2800Hz project target |
-| DX20BF00-04 | Dome | 4Ω | €29.95 | 10+ | 840 | 88 | 10 | 66 | Round | 20 | ? | 1,680 | ✗ 10W — fatal at burst; needs 20W at 101dB |
-| TD25F-4 | Dome(semi) | 4Ω | €29.95 | 10+ | 900 | 91 | 20 | 93.5 | Round | 25 | ? | 1,800 | ✓ — semi-horn FP; Cutout 70mm; Depth 32mm; narrows off-axis |
-| GT-525 | Dome | 8Ω | €29.95 | 4 | — | — | — | — | ? | 25 | ? | — | ? URL not found on SI (tried 3 patterns) |
+| DT 94-8 | Dome | 8Ω | €29.95 | 3 | 1,900 | 90 | 70 | 94 | Round | 20 | Dark | 3,800 | ✗ min xover 3800Hz exceeds 2800Hz project target |
+| DX20BF00-04 | Dome | 4Ω | €29.95 | 10+ | 840 | 88 | 10 | 66 | Round | 20 | Dark | 1,680 | ✗ 10W — fatal at burst; needs 20W at 101dB |
+| TD25F-4 | Dome(semi) | 4Ω | €29.95 | 10+ | 900 | 91 | 20 | 93.5 | Round | 25 | Dark | 1,800 | ✓ — semi-horn FP; Cutout 70mm; Depth 32mm; narrows off-axis |
+| GT-525 | Dome | 8Ω | €29.95 | 4 | 856 | 92 | 100 | ~103 | Round | 25 | Dark | 1,712 | Goldwood GT-525; silk dome; semi-horn FP; SI URL: goldwood-gt-525.html |
 | SB26ST-C000-5 | Dome | 5Ω | €30.95 | 10+ | 870 | 91 | 80 | ~72 | Round | 26 | Dark | 1,740 | ★ 80W; assumed ~72mm FP (SB26 family); ST1-3 pairings |
 | DX25TG59-04 | Dome | 4Ω | €32.95 | 10+ | 590 | 93.4 | 15 | 104 | Round | 25 | Dark | 1,180 | ✓ (A4,A5,B3,B4,B7,B8) — best Fs margin |
 | XT19TD00-04 | Ring Rad | 4Ω | €34.95 | 10+ | ~820 | 88.9 | 20 | 94 | Round | 19 | Dark ring | ~1,640 | ✓ — small ring rad; 94mm FP |
-| SB26STC-C000-04 | Dome | 4Ω | €34.95 | exp 28-08-2026 | — | — | — | — | Round | 26 | ? | — | OOS Aug 2026 |
-| DTM-104/8 | Dome | 8Ω | €34.95 | exp 31-07-2026 | — | — | — | — | Round | 25 | ? | — | OOS Jul 2026 |
+| SB26STC-C000-04 | Dome | 4Ω | €34.95 | exp 28-08-2026 | — | — | — | — | Round | 26 | Dark | — | OOS Aug 2026 |
+| DTM-104/8 | Dome | 8Ω | €34.95 | exp 31-07-2026 | — | — | — | — | Round | 25 | Dark | — | OOS Jul 2026 |
 | SB26STCN-C000-4 | Dome | 4Ω | €36.45 | 10+ | 950 | 92 | 120 | 72 | Round | 25 | Dark | 1,900 | ✓ — 120W; compact 72mm FP |
 | AMT Mini-8 | AMT | 8Ω | €36.45 | 10+ | ~1,750 | 88 | 15 | 57 | Round | AMT fold | — | ~3,500 | ~ stated lower limit 3.5kHz; super-tweeter role only |
 | CF18N-4 | Dome (CF) | 4Ω | €36.95 | 6 | 1,100 | 90 | 40 | 58 | Round | 18 | Dark weave | 2,200 | ★ carbon fiber 18mm dome; FP=58mm (3rd smallest); Cutout=37mm; Depth=38mm |
