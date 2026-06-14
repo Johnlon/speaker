@@ -14,13 +14,13 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 |-------|------|-----|-------|-------|-------|---------|---------|-------|-------------|-------|------|--------|
 | TCP115-8 | 4" | 8Ω | €16.95 | 10+ | 59.2 | 81.9 | 4.0 | 40 | 116 | Round | Dark paper | ✓ — warm paper; 28V RMS / 36V burst (mid-limited) |
 | HiVi B4N | 4" | 8Ω | €22.45 | 10+ | 66.3 | 85 | 3.2 | 25 | 116.5 | Round | Gold alloy | ✓ (A1) — perfect sens match; Fs from CLIO (SI page wrong) |
-| SB12PFCR25-4 | 4" | 4Ω | €25.95 | 10+ | 58 | 87.5 | 4.9 | 30 | ~122 | Round | Nat. fibre | ✓ (S2) — nat. fibre; best value |
+| SB12PFCR25-4 | 4" | 4Ω | €25.95 / £20.58 Willys | 10+ | 58 | 87.5 | 4.9 | 30 | ~122 | Round | Nat. fibre | ✓ (S2) — nat. fibre; best value |
 | DMA105-8 | 4" | 8Ω | €26.45 | 10+ | 72 | 84.8 | 2.5 | 35 | 104.1 | Round | Black Al | ~ full-range; Xmax=2.5mm borderline; Fs margin 2.08× |
-| SB12PFCR25-8 | 4" | 8Ω | €27.45 | 3 | 58 | ~87.5 | 4.9 | 30 | ~122 | Round | Nat. fibre | ~ 8Ω variant; 3 in stock |
-| SB12PFC25-4 | 4" | 4Ω | €27.45 | 4+4-19Jun | 58 | 87.5 | 5 | 30 | ~122 | Round | Nat. fibre | ~ same specs as PFCR25-4 but €1.50 more; flat cone |
+| SB12PFCR25-8 | 4" | 8Ω | €27.45 / £18.27 Willys | 3 SI; Willys in stock | 58 | ~87.5 | 4.9 | 30 | ~122 | Round | Nat. fibre | ~ 8Ω variant; Willys cheaper than SI |
+| SB12PFC25-4 | 4" | 4Ω | €27.45 | 4+4-19Jun | 58 | 87.5 | 5 | 30 | ~122 | Round | Nat. fibre | ~ same specs as PFCR25-4 but €1.50 more; flat cone; not stocked at Willys |
 | SB12PFC25-8 | 4" | 8Ω | €27.45 | 8 | ~58 | ~87.5 | ~5 | ~30 | ~122 | Round | Nat. fibre | ~ 8Ω flat-cone; same family specs inferred |
-| SB13PFCR25-4 | 5" | 4Ω | €28.45 | 10+ | 44 | 89 | 4.5 | 40 | ~130 | Round | Nat. fibre | ✓ (B4) — best Fs margin |
-| SB13PFC25-4 | 5" | 4Ω | €28.45 | 10+ | 44 | 89 | 4.5 | 40 | ~130 | Round | Nat. fibre | ✓ equivalent to SB13PFCR25-4 (same specs, flat cone) |
+| SB13PFCR25-4 | 5" | 4Ω | €28.45 / £24.50 Willys | 10+ | 44 | 89 | 4.5 | 40 | ~130 | Round | Nat. fibre | ✓ (B4) — best Fs margin |
+| SB13PFC25-4 | 5" | 4Ω | €28.45 | 10+ | 44 | 89 | 4.5 | 40 | ~130 | Round | Nat. fibre | ✓ equivalent to SB13PFCR25-4 (same specs, flat cone); not stocked at Willys |
 | SB13PFC25-8 | 5" | 8Ω | €28.45 | 7 | ~44 | ~89 | ~4.5 | ~40 | ~130 | Round | Nat. fibre | ~ 8Ω flat-cone 5"; specs inferred from 4Ω sibling |
 | Visaton KT 100 V | 4" | 4Ω | €28.95 | 5 | 42 | 83 | 2 | 25 | 99 | Round | Paper | ✗ needs 32W at ref (rated 25W); Xmax 2mm too low |
 | SICA 3,5 F 1 CS-8 | 3.5" | 8Ω | €28.95 | 4 | 107 | 88.5 | 1.5 | 90pr | 88 | Round | Paper (WP) | ✗ Fs 107Hz (1.42×) + Xmax 1.5mm — both fail; Sd 38.5 cm² |
@@ -30,8 +30,8 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Peerless SDS-P830855 | 4" | 8Ω | €29.95 | exp Aug 2027 | — | — | — | — | — | — | — | OOS until Aug 2027 |
 | HiVi M5N | 5" | 8Ω | €29.95 | 10+ | 50 | ~86 | ~3.5 | 30 | ~126 | Round | Silver Al/Mg | ✓ (B3) — 5"; best Fs; wide OD |
 | Beyma 4FR40 | 4" | 8Ω | €30.95 | 10 | ~85–100 | ~91 | ~2 | — | ~116 | Round | Paper (WP) | ✓ (A6) — full-range; Fs unconfirmed |
-| SB13PFCR25-8 | 5" | 8Ω | €31.45 | 7 | ~44 | ~87 | 4.5 | 30 | ~130 | Round | Nat. fibre | ~ 8Ω variant of 5" PFCR |
-| SB12PAC25-4 | 4" | 4Ω | €31.45 | 4 | — | — | — | — | ~122 | Round | Dark Al | ? URL not found on SI (tried 2 patterns); anodised Al cone (same PAC family as PACR Dark Al) |
+| SB13PFCR25-8 | 5" | 8Ω | €31.45 / £24.50 Willys | 7 SI; Willys in stock | ~44 | ~87 | 4.5 | 30 | ~130 | Round | Nat. fibre | ~ 8Ω variant of 5" PFCR; Willys significantly cheaper than SI |
+| SB12PAC25-4 | 4" | 4Ω | €31.45 / £22.54 Willys | 4 SI; Willys in stock | — | — | — | — | ~122 | Round | Dark Al | ? URL not found on SI (tried 2 patterns); anodised Al cone (same PAC family as PACR Dark Al) |
 | Markaudio CHN-70 | 4" | 8Ω | €32.45 | 2 | 71.6 | 86.7 | 4 | 16 | 125.1 | Round | Blue paper | ✗ 16W rated; needs 27W at burst — underpowered |
 | SB12PACR25-4 | 4" | 4Ω | €32.45 / £23.76 Willys | SI OOS Nov 2026; Willys UK stock | 52.5 | 87 | 5.0 | 30 | 122 | Round | Dark Al | ✓ — OOS at SI; available Willys-Hifi UK £23.76 |
 | Visaton SC 13 | 5" | 8Ω | €32.95 | 8 | 78 | 90 | 0.75 | 40 | 162 | Round | Cellulose | ✗ Xmax 0.75mm fatal; OD 162mm |
@@ -53,14 +53,14 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Dayton RS100-8 | 4" | 8Ω | €48.95 | 1 | 92 | 84.6 | 3.5 | 30 | 98 | Round | Black Al | ✓ (C1) — Fs 1.63×; 1 left |
 | Markaudio PLUVIA-7HD (Gold) | 4" | 8Ω | €52.45 | 10+ | 72.5 | 85.74 | 4 | 20 | 122.3 | Round | Gold Mg | ~ Mg alloy FR; sens=85.74dB (near-perfect match!); needs 33.5W at burst vs 20W rated |
 | Dayton RS100P-8 | 4" | 8Ω | €54.95 | 4+4-19Jun | 95.6 | 86.2 | 3.7 | 30 | 98 | Round | Paper/Kvlar | ✗ Fs 1.57× at 150Hz — too tight; paper/Kevlar |
-| SB12PFC25-4-COAX | 4" | 4Ω | €56.95 | 8 | 58 | 87 | 5 | 30 | ~122 | Round | Nat. fibre | ★ nat. fibre coaxial; point-source; SPL ceiling ~94dB |
+| SB12PFC25-4-COAX | 4" | 4Ω | €56.95 | 8 | 58 | 87 | 5 | 30 | ~122 | Round | Nat. fibre | ★ nat. fibre coaxial; point-source; SPL ceiling ~94dB; not found at Willys (SB12PFCR25-4-COAX OOS at Willys) |
 | Monacor MSH-115 | 4" | 8Ω | €66.95 | 9 | 85 | 89 | 1.5 | 50 | ~102 | Round | ? | ✗ Fs 85Hz (1.76×) + Xmax 1.5mm both fail |
-| SB Acoustics SB12NRX25-4 | 4" | 4Ω | €59.95 | 8 | 55 | 87.5 | 5.0 | 30 | ~122 | Round | Nat. fibre | ★ NEW — paper NRX; Xmax=5mm; 8 in stock |
-| SB12MNRX2-25-4 | 4" | 4Ω | €61.95 | 10+ | ~58 | ~88 | ~4.5 | 30 | ~122 | Round | Nat. fibre | ✓ (S3,A2,RR3) — Qts 0.27; top candidate |
+| SB Acoustics SB12NRX25-4 | 4" | 4Ω | €59.95 / £45.75 Willys | 8 SI; Willys in stock | 55 | 87.5 | 5.0 | 30 | ~122 | Round | Nat. fibre | ★ NEW — paper NRX; Xmax=5mm; Willys £15 cheaper than SI |
+| SB12MNRX2-25-4 | 4" | 4Ω | €61.95 / £48.10 Willys | 10+ | ~58 | ~88 | ~4.5 | 30 | ~122 | Round | Nat. fibre | ✓ (S3,A2,RR3) — Qts 0.27; top candidate; Willys £14 cheaper than SI |
 | SB12MNRX25-4 | 4" | 4Ω | €62.45 | 3 | 58 | 88.5 | 2.3 | 30 | ~122 | Round | Nat. fibre | ~ shortened VC; Xmax 2.3mm concern |
-| SB12NRXF25-4 | 4" | 4Ω | €62.45 | 6 | 61 | 87 | 5.0 | 30 | 123 | Round | Nat. fibre | ~ foam surround; rated to 2,000Hz only; xover ≤2kHz |
-| SB12NRXF25-8 | 4" | 8Ω | €62.45 | 2 | ~61 | ~87 | 5.0 | 30 | 123 | Round | Nat. fibre | ~ 8Ω foam; 2kHz limit; 2 left |
-| SB12PACR25-4-COAX | 4" | 4Ω | €68.45 | 8 | 55 | 87.5 | 5.0 | 30+10 | 122 | Round | Dark Al | ✓ (B9) — coaxial; SPL ceiling 94dB |
+| SB12NRXF25-4 | 4" | 4Ω | €62.45 / £43.11 Willys | 6 SI; Willys in stock | 61 | 87 | 5.0 | 30 | 123 | Round | Nat. fibre | ~ foam surround; rated to 2,000Hz only; xover ≤2kHz; Willys £19 cheaper than SI |
+| SB12NRXF25-8 | 4" | 8Ω | €62.45 / £43.11 Willys | 2 SI; Willys in stock | ~61 | ~87 | 5.0 | 30 | 123 | Round | Nat. fibre | ~ 8Ω foam; 2kHz limit; Willys £19 cheaper than SI |
+| SB12PACR25-4-COAX | 4" | 4Ω | €68.45 / £52.53 Willys | 8 SI; Willys in stock | 55 | 87.5 | 5.0 | 30+10 | 122 | Round | Dark Al | ✓ (B9) — coaxial; SPL ceiling 94dB; Willys £16 cheaper than SI |
 | Beyma 5MP60/N | 5" | 8Ω | €66.95 | 4 | 63 | 88 | 5.5 | 100(prog) | 150 | Round | ? | ~ PA driver; Fs 2.38×; OD=150mm wide; technically viable but large |
 | SB15NRXC30-8 | 5.9" | 8Ω | €59.95 sale | 3+10-Jul | 38 | 88 | 5 | 50 | ~165 | Round | Nat. fibre | ✗ 5.9" (SB15=15cm); OD too large for desktop baffle |
 | Dayton RS125-4 | 5" | 4Ω | €66.95 | 10+ | 57.2 | 89.9 | 4 | 30 | 125.5 | Round | Silver Al | ★ premium 5" Al; Fs 2.62×; beams ~2,248Hz; needs xover ≤2,200Hz |

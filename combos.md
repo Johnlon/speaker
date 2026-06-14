@@ -81,34 +81,34 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | ID | Mid | Tweeter | Xover Hz | Spacing mm | Price £ | PSU (RMS/Burst) | Character | Flags / Notes |
 |----|-----|---------|----------|-----------|---------|-----------------|-----------|---------------|
 | S1 | DS115-8 | SB19ST | 2,500 | 102 | ~50 | 24V / 28V | Warm | 4 units left |
-| S2 | SB12PFCR25-4 | SB19ST | 2,700 | 105 | ~41 | 24V / 28V | Warm, natural | Best value; 10+ stock |
-| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 | ~107 | ~92 | 24V / 28V | Warm-neutral | Ring dome; wide xover window |
+| S2 | SB12PFCR25-4 | SB19ST | 2,700 | 105 | ~41 | 24V / 28V | Warm, natural | Best value; SB12PFCR £20.58 + SB19ST £20.14 Willys (both UK stock) |
+| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 | ~107 | ~84 | 24V / 28V | Warm-neutral | Ring dome; wide xover window; MNRX2 £48.10 + SB29SDAC £34.30 Willys |
 | A1 | HiVi B4N | SB19ST | 2,500 | 102 | ~38 | 24V / 28V | Warm | Zero DSP correction; 10+ stock; Fs 66.3 Hz (2.26× margin) |
-| A2 | SB12MNRX2-25-4 | SB19ST | 2,700 | 105 | ~72 | 24V / 28V | Warm, dynamic | Controlled transients |
+| A2 | SB12MNRX2-25-4 | SB19ST | 2,700 | 105 | ~68 | 24V / 28V | Warm, dynamic | Controlled transients; MNRX2 £48.10 + SB19ST £20.14 Willys |
 | A3 | DSA90-8 | SB19ST | 2,800 | 90 | ~49 | 24V / 29V | Detailed | Tightest round spacing |
-| A4 | DS115-8 | DX25TG59-04 | 1,800–2,500 | 110 | ~60 | 24V / 28V | Warm, flexible | Widest xover window (std dome) |
-| A5 | SB12PFCR25-4 | DX25TG59-04 | 1,800–2,700 | 110 | ~51 | 24V / 28V | Warm, flexible | A4 at lower cost |
+| A4 | DS115-8 | DX25TG59-04 | 1,800–2,500 | 110 | ~50 | 24V / 28V | Warm, flexible | Widest xover window (std dome); DX25 £18.44 Willys (was ~£28 SI) |
+| A5 | SB12PFCR25-4 | DX25TG59-04 | 1,800–2,700 | 110 | ~40 | 24V / 28V | Warm, flexible | A4 at lower cost; DX25 £18.44 + SB12PFCR £20.58 both Willys |
 | A6 | Beyma 4FR40 | SB19ST | 2,500 | 103 | ~45 | 24V / 28V | Warm | Confirm Fs before ordering |
 | A7 | SPM-116/8 | SB19ST | 2,500 | 102 | ~37 | 24V / 32V | Warm | Cheapest paper mid; 84 dB sens → mid-limited at burst |
 | A8 | SIG120-4 | SB19ST | 2,500 | 105 | ~48 | 24V / 28V | Clear, dynamic | 4Ω; Audiophonics FR only |
 | B1 | TCP115-8 | SB19ST | 2,500 | 102 | ~31 + PSU | 28V / 36V* | Warmest | Cheapest drivers; mid maxes at ~100.3 dB at 36V |
 | B2 | ND91-4 | SB19ST | 2,700 | 97 | ~48 | 24V / 28V | Detailed | Confirm Fs before ordering |
-| B3 | HiVi M5N | DX25TG59-04 | 1,200–2,100 | ~103 | ~54 | 24V / 28V | Warm | 5"; DX25 needed (not SB19ST) |
-| B4 | SB13PFC25-8 | DX25TG59-04 | 1,200–2,080 | ~110 | ~53 | 24V / 28V | Warm | Best Fs margin; 5" natural fibre |
+| B3 | HiVi M5N | DX25TG59-04 | 1,200–2,100 | ~103 | ~44 | 24V / 28V | Warm | 5"; DX25 needed (not SB19ST); DX25 £18.44 Willys |
+| B4 | SB13PFC25-8 | DX25TG59-04 | 1,200–2,080 | ~110 | ~43 | 24V / 28V | Warm | Best Fs margin; 5" natural fibre; DX25 £18.44 Willys |
 | B5 | DA115-8 | SB19ST | 2,500 | 102 | ~40 | 24V / 28V | Detailed | Near-perfect sensitivity match; 3 left; DA115 on sale €24.75 (Jun 2026) |
 | B6 | DSA90-8 | HiVi TN25 | 3,000 | 73 | ~52 | 24V / 29V | Detailed | Tightest spacing; square tweeter; TN25 depth 63.5mm — check clearance |
-| B7 | SDS-P830656 | DX25TG59-04 | 1,500–2,000 | ~105 | ~54 | 24V / 28V | Natural | Xmax 10mm; truncated frame |
-| B8 | SIG150-4 | DX25TG59-04 | 1,500–1,990 | 128 | ~60 | 24V / 28V | Neutral | 152mm OD — wide baffle; poor 60° off-axis |
+| B7 | SDS-P830656 | DX25TG59-04 | 1,500–2,000 | ~105 | ~44 | 24V / 28V | Natural | Xmax 10mm; truncated frame; DX25 £18.44 Willys |
+| B8 | SIG150-4 | DX25TG59-04 | 1,500–1,990 | 128 | ~50 | 24V / 28V | Neutral | 152mm OD — wide baffle; poor 60° off-axis; DX25 £18.44 Willys |
 | B9 | SB12PACR25-4-COAX | (built-in) | 2,800 | 0 | ~59 | 24V / 28V | Clear | Point source; max SPL ~94 dB — sub must be limited |
 | B10 | DSA90-8 | ND25FA-4 | 2,700 | 79 | ~44 | 24V / 29V | Detailed | Minimum round spacing |
 | B11 | DSA90-8 | DT-28N | 2,500 | ~82 | ~65 | 24V / 29V | Detailed | Compact waveguide |
 | B12 | SLS-85S25CP04-04 | DT-28N | 2,500 | ~82 | ~61 | 24V / 28V | Warm | Oval mid; 86 dB → sub-limited at burst |
 | RR1 | DS115-8 | XT25TG30-04 | 880–2,636 | 113 | ~62 | 24V / 28V | Warm + wide | Best ring radiator; widest xover window |
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 | 116 | ~52 | 24V / 28V | Warm + wide | Best value ring radiator |
-| RR3 | SB12MNRX2-25-4 | XT25TG30-04 | 880–2,730 | 116 | ~83 | 24V / 28V | Warm + wide | Ring radiator + highest headroom |
-| RR4 | DSA90-8 | XT25SC90-04 | 2,800 | 91 | ~37 | 24V / 29V | Detailed + wide | Cheapest ring radiator; single Falcon order |
-| RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 | 106 | ~39 | 24V / 28V | Warm + wide | Cheapest ring rad + nat. fibre; 1080Hz DSP window; £8 under RR2 |
-| RR4C | DS115-8 | XT25SC90-04 | 1,650–2,636 | 103 | ~49 | 24V / 28V | Warm + wide | Paper warmth + ring rad; cheaper than RR1 (XT25TG30) by ~£13 |
+| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 | 116 | ~50 | 24V / 28V | Warm + wide | Best value ring radiator; SB12PFCR £20.58 Willys + XT25TG30 £29.90 Falcon |
+| RR3 | SB12MNRX2-25-4 | XT25TG30-04 | 880–2,730 | 116 | ~78 | 24V / 28V | Warm + wide | Ring radiator + highest headroom; MNRX2 £48.10 Willys; XT25TG30 £29.90 Falcon |
+| RR4 | DSA90-8 | XT25SC90-04 | 2,800 | 91 | ~37 | 24V / 29V | Detailed + wide | Cheapest ring radiator; XT25SC90 £18.20 Falcon / £19.52 Willys |
+| RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 | 106 | ~40 | 24V / 28V | Warm + wide | Cheapest ring rad + nat. fibre; SB12PFCR £20.58 + XT25SC90 £19.52 Willys |
+| RR4C | DS115-8 | XT25SC90-04 | 1,650–2,636 | 103 | ~49 | 24V / 28V | Warm + wide | Paper warmth + ring rad; XT25SC90 £18.20 Falcon / £19.52 Willys |
 | RR5 | SIG150-4 | XT25TG30-04 | 1,000–1,990 | 140 | ~67 | 24V / 28V | Neutral | Only tweeter that works with SIG150-4 |
 | RR6 | DS115-8 | SB29SDAC | 1,200–2,636 | ~110 | ~71 | 24V / 28V | Warm + ring dome | Ring dome + paper warmth |
 | C1 | RS100-8 | SB19ST | 2,500 | — | ~60 | 24V / 29V | Detailed | Fs 1.63× at 150 Hz — marginal; 84.6 dB → mid-limited at burst |
@@ -121,7 +121,7 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | RD0 | DSA90-8 | SB21SDC-C000-4 | 1,440–3,260 | 92 | ~64 | 24V / 29V* | Detailed + ring dome | Widest ring dome window (1,820Hz!); 92mm spacing; compact detailed mid + ring dome; 29V for burst |
 | RD1 | DS115-8 | SB21SDC-C000-4 | 1,440–2,636 | 104 | ~65 | 24V / 28V | Warm + ring dome | Ring dome alt to RR6; saves ~£6; 92mm FP tighter than SB29 |
 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~56 | 24V / 28V | Warm + ring dome | Cheapest ring dome pairing; nat. fibre + smaller SB21 ring dome |
-| RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~86 | 24V / 28V | Warm + ring dome | Engineering ring dome; saves ~£6 vs S3 |
+| RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~78 | 24V / 28V | Warm + ring dome | Engineering ring dome; MNRX2 £48.10 + SB21SDC £28.51 Willys |
 | XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 | 68 | ~55 | 24V / 29V | Detailed + wide | Absolute minimum spacing (68 mm); ring rad dispersion; 100W |
 | XC2 | DS115-8 | XT25SC40-04 | 2,036–2,636 | 80 | ~56 | 24V / 28V | Warm + wide | Paper warmth + ultra-compact ring rad; ~600 Hz xover window |
 | XC3 | SB12PFCR25-4 | XT25SC40-04 | 2,036–2,730 | 83 | ~47 | 24V / 28V | Warm + wide | Best value ultra-compact ring rad; nat. fibre + 43.9mm ring rad |
@@ -129,9 +129,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | TN2 | DS115-8 | HiVi TN28-B | 2,600–2,636 | 82 | ~56 | 24V / 28V | Warm | Only 36 Hz xover window — risky; likely unusable |
 | DA1 | DS115-8 | DA25BG08-06 | 1,420–2,636 | 110 | ~65 | 24V / 28V | Warm, flexible | Peerless dome; same FP as DX25; wide xover window |
 | DA2 | SB12PFCR25-4 | DA25BG08-06 | 1,420–2,730 | 113 | ~56 | 24V / 28V | Warm, flexible | Wide-window pairing; ~£5 cheaper than A5 (DX25) |
-| R1 | RS125-4 | DX25TG59-04 | 1,180–2,184 | 115 | ~78 | 24V / 28V | Neutral-bright | Premium 5" Al; 4Ω; needs DX25 (beams above 2184 Hz) |
+| R1 | RS125-4 | DX25TG59-04 | 1,180–2,184 | 115 | ~68 | 24V / 28V | Neutral-bright | Premium 5" Al; 4Ω; needs DX25 (beams above 2184 Hz); DX25 £18.44 Willys |
 | R2 | RS125-4 | XT25TG30-04 | 880–2,184 | 115 | ~87 | 24V / 28V | Neutral + wide | Premium 5" + ring rad; widest window possible for 5" |
-| R3 | SB13PFCR25-4 | DX25TG59-04 | 1,180–2,080 | 117 | ~45 | 24V / 28V | Warm, nat. fibre | Cheaper 5" option vs R1 at same crossover constraint |
+| R3 | SB13PFCR25-4 | DX25TG59-04 | 1,180–2,080 | 117 | ~35 | 24V / 28V | Warm, nat. fibre | Cheaper 5" option vs R1; DX25 £18.44 + SB13PFCR £24.50 both Willys |
 | COAX2 | SB12PFC25-4-COAX | (built-in) | ~2,800 | 0 | ~48 | 24V / 28V | Warm | Nat. fibre coaxial; cheaper than B9 (£59); same SPL ceiling ~94 dB |
 | ST1 | DS115-8 | SB26ST-C000-5 | 1,740–2,636 | 94 | ~58 | 24V | Warm | 80W tweeter; ~72mm FP (assume); wide window; robust power handling |
 | ST2 | SB12PFCR25-4 | SB26ST-C000-5 | 1,740–2,730 | 97 | ~48 | 24V | Warm, nat. | Cheapest 80W tweeter pairing; nat. fibre + indestructible tweeter |
@@ -163,7 +163,7 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | XBG3 | DSA90-8 | XT25BG60-04 | 1,140–3,260 | 98 | ~67 | 24V / 29V | Detailed + wide | Widest xover window of any DSA90-8 pairing; ring rad off-axis |
 | RPN1 | DS115-8 | SB29RDNC-C000-4 | 1,160–2,636 | 110 | ~87 | 24V / 28V | Warm + ring dome 100W | Premium ring dome; 1,476Hz DSP window; 94dB → only 5W at burst; 100W = burnout impossible |
 | RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~79 | 24V / 28V | Warm nat. + ring dome 100W | Widest ring dome window in catalogue (1,570Hz); nat. fibre + premium ring dome |
-| RPN3 | SB12MNRX2-25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~109 | 24V / 28V | Warm + ring dome 100W | Engineering flagship; Qts 0.27 mid + 100W ring dome; cost ceiling option |
+| RPN3 | SB12MNRX2-25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~102 | 24V / 28V | Warm + ring dome 100W | Engineering flagship; MNRX2 £48.10 + SB29RDNC £54.31 Willys |
 | RPN4 | DSA90-8 | SB29RDNC-C000-4 | 1,160–3,260 | 98 | ~86 | 24V / 29V | Detailed + ring dome 100W | Widest window of any DSA90-8 pairing (2,100Hz); 98mm spacing; premium compact option |
 | RST1 | DS115-8 | RST28F-4 | 1,420–2,636 | 110 | ~70 | 24V / 28V | Warm + 80W | 80W; 93.5dB → 5.6W at burst; same spacing as DC1; £0 premium over D2604 |
 | RST2 | SB12PFCR25-4 | RST28F-4 | 1,420–2,730 | 113 | ~60 | 24V / 28V | Warm nat. + 80W | 80W; wider window than STC3 (SB26STCN); lower sensitivity match (+6dB vs +7dB DSP pad) |
@@ -171,9 +171,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
 | D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
 | D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
-| SB13_TG | SB13PFCR25-4 | XT25TG30-04 | 880–2,080 | 117 | ~67 | 24V / 28V | Warm, nat. + wide | 5"; Fs=44Hz (3.4× margin); 1,200Hz ring rad window; deepest low-end DSP flexibility; 190mm baffle OK (vertical layout) |
-| SB13_DC | SB13PFCR25-4 | D2604/830000 | 1,260–2,080 | 117 | ~63 | 24V / 28V | Warm, nat. + 100W | 5" + Scan-Speak 100W; 820Hz window; 190mm baffle OK |
-| SB13_RPN | SB13PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,080 | 117 | ~81 | 24V / 28V | Warm nat. + ring dome | 5"; 920Hz window; 100W ring dome; engineering peak for 5" mid; 190mm baffle OK |
+| SB13_TG | SB13PFCR25-4 | XT25TG30-04 | 880–2,080 | 117 | ~54 | 24V / 28V | Warm, nat. + wide | 5"; Fs=44Hz (3.4× margin); 1,200Hz ring rad window; SB13PFCR £24.50 Willys + XT25TG30 £29.90 Falcon |
+| SB13_DC | SB13PFCR25-4 | D2604/830000 | 1,260–2,080 | 117 | ~60 | 24V / 28V | Warm, nat. + 100W | 5" + Scan-Speak 100W; SB13PFCR £24.50 Willys + D2604 £35.65 Willys |
+| SB13_RPN | SB13PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,080 | 117 | ~79 | 24V / 28V | Warm nat. + ring dome | 5"; 920Hz window; 100W ring dome; SB13PFCR £24.50 + SB29RDNC £54.31 Willys |
 | M_TG | HiVi M5N | XT25TG30-04 | 880–2,185 | 115 | ~68 | 24V / 28V | Warm + wide | 5"; best Fs margin (50Hz); 1,305Hz window; widest M5N option; 190mm baffle OK |
 | M_RPN | HiVi M5N | SB29RDNC-C000-4 | 1,160–2,185 | 115 | ~83 | 24V / 28V | Warm + ring dome | 5"; 1,025Hz window; 100W ring dome; 190mm baffle OK |
 | B_TG | HiVi B4N | XT25TG30-04 | 880–2,636 | 110 | ~62 | 24V / 28V | Warm gold + wide | Perfect sub sens match (85dB); widest B4N window (1,756Hz); ring rad; single order Falcon+SI |
@@ -200,5 +200,6 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 
 - **SoundImports** (EU) — primary source for most drivers
 - **Falcon Acoustics** (UK) — SB19ST £14.30, XT25TG30-04 £29.90 (**in stock**), XT25SC90-04 £18.20, DX25TG59-04 £20.85
-- **Note (Jun 2026):** XT25TG30-04 now also in stock at SI (€49.95, 10+). Falcon £29.90 is ~£13 cheaper; use SI only if combining with other SI order. XT25SC90-04 also at SI (€26.95) vs Falcon (£18.20 ≈ £5 cheaper).
+- **Willys-Hifi** (UK) — full catalogue scraped Jun 2026. Key prices: DX25TG59-04 £18.44, SB12PFCR25-4 £20.58, SB12MNRX2-25-4 £48.10, SB13PFCR25-4 £24.50, SB12PACR25-4 £23.76, SB12NRXF25-4 £43.11, SB12NRX25-4 £45.75, SB19ST £20.14, SB26STCN-C000-4 £28.92, SB29SDAC £34.30, SB29RDNC £54.31, D2604/830000 £35.65, BC25SC06-04 £16.78, XT25SC90-04 £19.52, XT25TG30-04 £31.95, MDT12 £39.50, H26TG45-06 £31.80, SB29SDNC £56.64, NE19VTS-04 £25.20, NE25VTS-04 £36.44, SB26ADC £41.60, SB26ST-C000-5 £25.30, XT25BG60-04 £37.14, DC25T-8 £15.10, DT-25N £26.91, D27TG35-06 £27.52
+- **Note (Jun 2026):** XT25TG30-04 now also in stock at SI (€49.95, 10+). Falcon £29.90 cheapest; Willys £31.95; SI most expensive. XT25SC90-04: Falcon £18.20 < Willys £19.52. DX25TG59-04: Willys £18.44 < Falcon £20.85 — **Willys is cheapest source for DX25**.
 - **Audiophonics** (France) — SIG120-4 in stock, ships to UK
