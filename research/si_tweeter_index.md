@@ -40,7 +40,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | DA25BG08-06 | Dome | 6Ω | €39.95 | 10+ | 710 | 91.6 | 15 | 104 | Round | 25 | Silver | 1,420 | ★ Fs=710Hz; same FP class as DX25; 15W (OK at ref) |
 | SB21SDC-C000-4 | Ring Dome | 4Ω | €39.95 | 1+7-Jul | 720 | 91 | 40 | 92 | Round | 21 | Dark ring | 1,440 | ★ ring dome; cheaper SB29 alt; 40W; Fs=720Hz |
 | NE19VTS-04 | Dome | 4Ω | €29.95 | exp 31-12-2026 | — | — | — | — | Round | 19 | ? | — | OOS Dec 2026 |
-| XT25TG30-04 | Ring Rad | 4Ω | £29.90 Falcon | pre-order SI | 440 | 91.9 | 15 | 104 | Round | 25 | Dark ring | 880 | ✓ (RR1–3) — lowest Fs; widest xover window |
+| XT25TG30-04 | Ring Rad | 4Ω | £29.90 Falcon / €49.95 SI | 10+ SI Jun 2026 | 440 | 91.9 | 15 | 104 | Round | 25 | Dark ring | 880 | ✓ (RR1–3) — lowest Fs; widest xover window; now in stock SI (Falcon still £13 cheaper) |
 | DT-28N | Dome | 8Ω | €40.95 | 5 | 1,200 | ~92 | 50 | ~72 | Round | 28 | Dark | 2,400 | ✓ (B11,B12) — compact wg; 50W |
 | SB29SDAC-C000-4 | Ring Dome | 4Ω | €44.95 | 10 | 600 | ~91 | ~30 | ~104 | Round | 29 | Dark ring | 1,200 | ✓ (S3,RR6) — ring dome construction |
 | Discovery D2604/830000 | Dome | 4Ω | €44.95 | 10+ | ~630 | 92 | 100 | 104.2 | Round | 26 | Dark | ~1,260 | ✓ — 100W/240W; Cutout 75mm; Depth 25.4mm; SI URL confirmed |

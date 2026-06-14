@@ -184,3 +184,16 @@ Researched June 2026. All URLs fetched via WebFetch.
 | Thomann UK | Yes | N/A | Poor (PA/musical instruments) | No |
 | Parts Express (USA) | Yes (international) | No (shipping+customs overhead) | Very good | Last resort only |
 | Axiomedia (Italy) | Unknown | No (PA/expensive) | Poor (PA focus) | No |
+
+---
+
+## Reference Resources
+
+Speaker driver selection guides bookmarked during research (June 2026):
+
+| Resource | URL |
+|----------|-----|
+| Parts Express — Woofer Selection Guide | https://www.parts-express.com/woofer-selection-guide |
+| Parts Express — Tweeter Selection Guide | https://www.parts-express.com/which-tweeter-is-right-for-you |
+| Alibaba — Speaker Driver Buyer Guide | https://electronics.alibaba.com/buyingguides/speaker-driver-guide-how-to-choose-right |
+| YouTube — Speaker Driver Video Guide | https://www.youtube.com/watch?v=ul8NJNPpM60 |
