@@ -48,14 +48,14 @@ Driver selections must be vetted against this before inclusion in recommendation
 ## Recommendations by Scenario
 
 Recommendations must cover best pairings for the scenarios defined in this file, including (at minimum):
-- Best overall for kitchen 60° off-axis listening
-- Best for on-axis listening (direct, centred)
-- Best for compact baffle / minimum width
-- Best value (under £50 and under £100 tiers)
 - Best for visual interest 
   - by shape class — round, 
   - square/non-round, 
   - mixed
+- Best overall for kitchen 60° off-axis listening
+- Best for on-axis listening (direct, centred)
+- Best for compact baffle / minimum width
+- Best value (under £50 and under £100 tiers)
 
 ## Recommendation Tables
 

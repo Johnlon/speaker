@@ -30,17 +30,17 @@ The rated 100W/ch is specified at **36V into 6Ω** (confirmed in official datash
 
 > **JAB5 datasheet note (confirmed June 2026):** The official datasheet specifies only 100W/ch at 36V into 6Ω. No per-channel figure at 24V into 8Ω is published. The ~31W into 8Ω at 24V above is derived from the standard Class D formula — it is the best available estimate and will not be superseded by a manufacturer figure. The ~31W figure is the binding constraint for the mid driver choice — see PSU Voltage section below.
 
-### Power budget at full volume (24V supply)
+### Power at full volume (24V supply) — mid candidates vs sub reference
 
-| Channel | Driver | Imp | Power needed | Available @ 24V | Headroom |
-|---------|--------|-----|--------------|-----------------|----------|
-| Sub | TB W5-1138SMF | 4Ω | 40W RMS | ~61W | 53% |
-| Mid — SIG120-4 (OOS) | SIG120-4 | 4Ω | 13.5W | ~61W | 352% |
-| Mid — DS115-8 | DS115-8 | 8Ω | 18.6W | ~31W | 66% |
-| Mid — HiVi B4N | HiVi B4N | 8Ω | 20.0W | ~31W | 55% |
-| Mid — DSA90-8 | DSA90-8 | 8Ω | 21.4W | ~31W | 45% |
-| Mid — TCP115-8 | TCP115-8 | 8Ω | 40.7W | ~31W | **Deficit — 9.7W short** |
-| Tweeter | SB19ST | 4Ω | 17.8W | ~61W | 243% |
+| Channel | Driver | Imp | Needed at 98 dB | Available @ 24V | PSU |
+|---------|--------|-----|-----------------|-----------------|-----|
+| Sub | TB W5-1138SMF | 4Ω | 40W RMS | ~61W | 24V |
+| Mid | SIG120-4 (OOS) | 4Ω | 13.5W | ~61W | 24V |
+| Mid | DS115-8 | 8Ω | 18.6W | ~31W | 24V |
+| Mid | HiVi B4N | 8Ω | 20.0W | ~31W | 24V |
+| Mid | DSA90-8 | 8Ω | 21.4W | ~31W | 24V |
+| Mid | TCP115-8 | 8Ω | 40.7W | ~31W | **29V required** |
+| Tweeter | SB19ST | 4Ω | 17.8W | ~61W | 24V |
 
 Total DC draw at sustained full output: ~165W. The LRS-150-24 is rated 156W — tight for continuous sine-wave full power. Real music is far lower average power. Real music crest factor is 10–15 dB (rock) to 20 dB (classical); average power is typically 1/10 to 1/20 of peak.
 
