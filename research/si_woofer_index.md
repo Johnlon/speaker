@@ -12,8 +12,8 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 
 | Model | Size | Imp | Price | Stock | Fs Hz | Sens dB | Xmax mm | Pwr W | Frame OD mm | Shape | Status |
 |-------|------|-----|-------|-------|-------|---------|---------|-------|-------------|-------|--------|
-| TCP115-8 | 4" | 8Ω | €16.95 | 10+ | 59.2 | 81.9 | 4.0 | 40 | 116 | Round | ✓ — warm paper; 29V needed |
-| HiVi B4N | 4" | 8Ω | €22.45 | 10+ | 56 | 85 | 3.2 | 25 | 116.5 | Round | ✓ (A1) — perfect sens match |
+| TCP115-8 | 4" | 8Ω | €16.95 | 10+ | 59.2 | 81.9 | 4.0 | 40 | 116 | Round | ✓ — warm paper; 28V RMS / 36V burst (mid-limited) |
+| HiVi B4N | 4" | 8Ω | €22.45 | 10+ | 66.3 | 85 | 3.2 | 25 | 116.5 | Round | ✓ (A1) — perfect sens match; Fs from CLIO (SI page wrong) |
 | SB12PFCR25-4 | 4" | 4Ω | €25.95 | 10+ | 58 | 87.5 | 4.9 | 30 | ~122 | Round | ✓ (S2) — nat. fibre; best value |
 | DMA105-8 | 4" | 8Ω | €26.45 | 10+ | 72 | 84.8 | 2.5 | 35 | 104.1 | Round | ~ full-range; Xmax=2.5mm borderline; Fs margin 2.08× |
 | SB12PFCR25-8 | 4" | 8Ω | €27.45 | 3 | 58 | ~87.5 | 4.9 | 30 | ~122 | Round | ~ 8Ω variant; 3 in stock |
