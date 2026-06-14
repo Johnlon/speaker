@@ -883,6 +883,32 @@ All tweeters indexed from SoundImports pages 4–6 (cheapest sort, June 2026). N
 - **Source:** https://www.soundimports.eu/en/grs-a25-2t.html | Price: €39.95 | Stock: 10+
 - Note: 2" dome — larger dome typically narrower HF dispersion. Designed as Dynaco A25 replacement. 92.8 dB sensitivity. Reviewer noted unit-to-unit variation requiring individual measurement.
 
+### Scan-Speak Discovery R2604/833000 — Catalogue (10+ in stock)
+- Type: Ring Radiator (dual) | Size: 1" (25mm) | Imp: 4Ω | Sensitivity: 92 dB | Power: 100W RMS | Fs: 440 Hz | Re: 2.9Ω | Xmax: 0.2mm
+- **Source:** https://www.soundimports.eu/en/scan-speak-r2604-833000.html | Price: €62.45 | Stock: 10+
+- Note: **New window champion.** Fs=440Hz identical to XT25TG30-04 but 100W vs 15W. RP1 pairing with DSA90-8 = 2,380Hz DSP window — absolute widest in catalogue. See full analysis in Candidate section above.
+
+### Scan-Speak Discovery R2604/832000 — Catalogue (10+ in stock)
+- Type: Ring Radiator (dual) | Size: 1" (25mm) | Imp: 4Ω | Sensitivity: 90 dB | Power: 100W RMS | Fs: 500 Hz | Re: 2.9Ω | Xmax: 0.2mm
+- **Source:** https://www.soundimports.eu/en/scan-speak-r2604-832000.html | Price: €52.95 | Stock: 10+
+- Note: Budget Discovery ring rad. Fs=500Hz → min 1,000Hz xover. 100W. €52.95 = comparable to XT25TG30-04 at same ring rad price point but 6.7× more power. See full analysis above.
+
+### SB Acoustics SB21RDC-C000-4 — Catalogue (8 in stock)
+- Type: Ring Radiator | Size: 3/4" (20mm) | Imp: 4Ω | Sensitivity: 90 dB | Power: 40W RMS | Fs: 760 Hz | Re: 3.1Ω | Xmax: 0.5mm
+- **Source:** https://www.soundimports.eu/en/sb-acoustics-sb21rdc-c000-4.html | Price: €49.95 | Stock: 8
+- Note: Ring radiator variant of SB21SDC-C000-4 (ring dome). Fs 760 Hz → min xover 1,520 Hz. 40W power. 8 in stock. Slightly higher Fs (760 vs 720 Hz) and €10 more than SB21SDC — choose SDC unless ring rad dispersion is specifically preferred and stock of SDC is exhausted.
+
+### SB Acoustics SB29RDAC-C000-4 — Catalogue (OOS until ~Jul 31)
+- Type: Ring Radiator (fabric) | Size: 1¼" (25mm) | Imp: 4Ω | Sensitivity: 93 dB | Power: 100W RMS | Fs: 900 Hz | FP OD: 103.8mm | Cutout: 70mm
+- **Source:** https://www.soundimports.eu/en/sb-acoustics-sb29rdac-c000-4.html | Price: €56.95 | Stock: OOS; 6 expected 31 Jul 2026
+- Note: Ring radiator (not dome despite "dome tweeter" label on SI). Fs 900 Hz → min xover 1,800 Hz (worse than XT25TG30 at 880Hz and R2604/833000 at 880Hz). 100W. At €56.95 it falls between R2604/832000 (€52.95, Fs 500Hz, better) and R2604/833000 (€62.45, Fs 440Hz, better). Not a priority over R2604 series. Monitor restock if R2604 goes OOS.
+
+### Dayton Audio CF120-4 — Catalogue (OOS at SI; in stock Audiophonics)
+- Size: 4.5" | Frame OD: ~127mm | Cutout: ~95mm | Depth: ~57mm | Imp: 4Ω | Sensitivity: 89.1 dB | Power: 30W RMS / 60W max | Cone: carbon fiber
+- Fs: 53.2 Hz | Qts: 0.28 | Qes: 0.32 | Qms: 1.89 | Vas: 4.87L | Xmax: 3.5mm | Sd: 51.5 cm²
+- **Source:** https://www.soundimports.eu/en/dayton-audio-cf120-4.html (OOS) | SI Price: €62.45 (sale) | Audiophonics: €49.92 (sale), in stock
+- Note: Carbon fiber 4.5" midwoofer. Fs 53.2 Hz → min LP crossover 106 Hz (excellent). Beaming limit 2,703 Hz (slightly below 2,800 Hz target — marginal at 60° off-axis for the last 100 Hz). Burst power needed: 31W vs 30W rated — tight (DSP limiter at 28W gives 100.6 dB). OOS at SI; in stock at Audiophonics (€49.92). Consider if DS115-8 goes OOS.
+
 ---
 
 ## June 2026 Mass Index — Woofers & Midranges (all visual constraints removed)
