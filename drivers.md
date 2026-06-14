@@ -335,7 +335,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Dome: **18 mm woven carbon fiber** | Faceplate OD: **58 mm** | Cutout: 36.9 mm | Depth: 38.3 mm | Impedance: 4Ω | Re: 3.54Ω
 - Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **1,100 Hz** | Frequency response: 2,500–20,000 Hz
 - Qts: 1.2 | Qms: 2.0 | Qes: 3.1 | Neodymium motor | Ferrofluid VC cooling
-- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-cf18n-4.html) (fetched June 2026) | Price: **€36.95** | Stock (June 2026): 6 units
+- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-cf18n-4.html) (fetched June 2026) | Price: **€30.54** (sale, was €36.95) | Stock (Jun 2026): **pre-order / OOS** (was 6 units; gone OOS)
 - **Min crossover:** 2× Fs = **2,200 Hz** — comfortable margin at 2,800 Hz. Response starts 2,500 Hz; LR48 at 2,800 Hz provides 24 dB protection at 2,500 Hz.
 - **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed.
 - **Power at reference (98 dB):** 6.3W (15.8% of 40W). At burst (101 dB): 12.6W (31.5%). Well within 40W rating.
@@ -350,7 +350,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Dome: 26 mm Sonolex precoated fabric | Faceplate: **69.7 × 54 mm oval** | Cutout: 46 mm | Depth: **21.5 mm** | Impedance: 4Ω | Re: 2.7Ω
 - Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS / 200W max** | Fs: **1,170 Hz** | Frequency response: 2,500–30,000 Hz
 - Double chamber magnet system | Sonolex precoated lightweight fabric
-- **Source:** [SoundImports](https://www.soundimports.eu/en/seas-27tffnc-cg.html) (fetched June 2026) | Price: **€48.95** | Stock (June 2026): 4 units
+- **Source:** [SoundImports](https://www.soundimports.eu/en/seas-27tffnc-cg.html) (fetched June 2026) | Price: **€40.45** (sale, was €48.95) | Stock (Jun 2026): **pre-order / OOS** (was 4 units; gone OOS)
 - **Min crossover:** 2× Fs = **2,340 Hz** — comfortable margin at 2,800 Hz crossover. Freq response starts 2,500 Hz: LP crossover at 2,800 Hz gives ~6 dB order protection at 2,500 Hz (LR48 gives 24 dB protection at 2,500 Hz — ample).
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
 - **Power at reference (98 dB):** 5.0W (6.25% of 80W). At burst (101 dB): **10.0W** (12.5%). Well within 80W/200W rating.
@@ -767,8 +767,8 @@ All tweeters indexed from SoundImports pages 4–6 (cheapest sort, June 2026). N
 ### Dayton Audio CF18N-4 — Catalogue
 - Type: Dome (woven carbon fiber) | Size: 3/4" (18mm) | Imp: 4Ω | Sensitivity: 90 dB | Power: 40W RMS | Fs: 1100 Hz
 - Neodymium motor. Ferrofluid. Cast aluminium faceplate with protective grill.
-- **Source:** https://www.soundimports.eu/en/dayton-audio-cf18n-4.html | Price: €36.95 | Stock: 6
-- Note: Carbon fiber dome — distinctive appearance. Reviewer noted rolloff above 12 kHz beyond 30°. Fs 1100 Hz → min xover 2200 Hz.
+- **Source:** https://www.soundimports.eu/en/dayton-audio-cf18n-4.html | Price: €30.54 (sale, was €36.95) | Stock: **pre-order / OOS** (Jun 2026)
+- Note: Carbon fiber dome — distinctive appearance. Reviewer noted rolloff above 12 kHz beyond 30°. Fs 1100 Hz → min xover 2200 Hz. **OOS — CF1/CF2/CF3 pairings not available for immediate order.**
 
 ### Peerless by Tymphany NE25VTS-04 — Catalogue
 - Type: Dome (silk) | Size: 1" | Imp: 4Ω | Sensitivity: 91.1 dB | Power: 15W RMS | Fs: 730 Hz | OD: 66.3 mm
@@ -842,8 +842,8 @@ All tweeters indexed from SoundImports pages 4–6 (cheapest sort, June 2026). N
 ### SEAS Prestige 27TFFNC/CG H1406-04 — Catalogue
 - Type: Dome (sonolex precoated fabric) | Size: 1.1" (26mm dome on wider former) | Imp: 4Ω | Sensitivity: 91 dB | Power: 80W RMS / 200W max | Freq: 2500–30,000 Hz
 - Neodymium. Wide roll surround. Dual-chamber magnet. Magnetic fluid immersion.
-- **Source:** https://www.soundimports.eu/en/seas-27tffnc-cg.html | Price: €48.95 | Stock: 4
-- Note: SEAS Prestige series. 80W power. Magnetic fluid improves power handling. Sonolex fabric dome. 4 in stock.
+- **Source:** https://www.soundimports.eu/en/seas-27tffnc-cg.html | Price: €40.45 (sale, was €48.95) | Stock: **pre-order / OOS** (Jun 2026)
+- Note: SEAS Prestige series. 80W power. Magnetic fluid improves power handling. Sonolex fabric dome. **OOS — SE1/SE2 pairings not available for immediate order.**
 
 ### Markaudio TW 6 — Catalogue
 - Type: Dome (aluminium) | Size: 1" | Imp: 4Ω | Sensitivity: 98 dB | Power: 15W RMS / 30W max | Fs: 1700 Hz | OD: 74mm

@@ -139,11 +139,11 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | PL1 | PLUVIA-7HD Gold | SB19ST | 1,960–~2,900 | ~105 | ~58 | 24V | Warm, zero-pad | Unique zero-correction mid; system SPL capped 97 dB (DSP at 18W); Mg/Al cone |
 | DC1 | DS115-8 | D2604/830000 | 1,260–2,636 | 110 | ~70 | 24V | Warm, 100W | Scan-Speak 100W dome; same spacing as DA1 but wider window + indestructible tweeter |
 | DC2 | SB12PFCR25-4 | D2604/830000 | 1,260–2,730 | 113 | ~60 | 24V | Warm, nat. 100W | Cheapest 100W wide-window pairing; nat. fibre + Scan-Speak 100W at €45 |
-| SE1 | DSA90-8 | SEAS H1406-04 | 2,340–3,260 | ~75 | ~74 | 24V | Detailed | 80W oval tweeter; mount portrait (54mm) = 73mm vert spacing (same as B6 TN25) |
-| SE2 | DS115-8 | SEAS H1406-04 | 2,340–2,636 | ~85 | ~76 | 24V | Warm | SEAS 80W; portrait orientation; only 296Hz window — very tight |
-| CF1 | DSA90-8 | CF18N-4 | 2,200–3,260 | **75** | ~61 | 24V | Detailed, CF | 18mm CF dome; 3rd smallest FP (58mm); 75mm spacing; wide off-axis |
-| CF2 | DS115-8 | CF18N-4 | 2,200–2,636 | 87 | ~63 | 24V | Warm, CF | Carbon fibre dome; 40W; paper warmth + CF detail |
-| CF3 | SB12PFCR25-4 | CF18N-4 | 2,200–2,730 | 90 | ~53 | 24V | Warm nat., CF | Best value CF dome; nat. fibre + 18mm carbon dome; 40W |
+| SE1 | DSA90-8 | SEAS H1406-04 | 2,340–3,260 | ~75 | ~74 | 24V | Detailed | **⚠ H1406-04 OOS (Jun 2026)** — pre-order only. 80W oval tweeter; 73mm portrait spacing; on sale €40.45 |
+| SE2 | DS115-8 | SEAS H1406-04 | 2,340–2,636 | ~85 | ~76 | 24V | Warm | **⚠ H1406-04 OOS** — pre-order only. SEAS 80W; only 296Hz window — very tight; not recommended even if restocked |
+| CF1 | DSA90-8 | CF18N-4 | 2,200–3,260 | **75** | ~61 | 24V | Detailed, CF | **⚠ CF18N-4 OOS (Jun 2026)** — pre-order only. 18mm CF dome; on sale €30.54; monitor for restock |
+| CF2 | DS115-8 | CF18N-4 | 2,200–2,636 | 87 | ~63 | 24V | Warm, CF | **⚠ CF18N-4 OOS** — pre-order only. Carbon fibre dome; 40W; paper warmth + CF detail |
+| CF3 | SB12PFCR25-4 | CF18N-4 | 2,200–2,730 | 90 | ~53 | 24V | Warm nat., CF | **⚠ CF18N-4 OOS** — pre-order only. Best value CF dome; 40W; monitor for restock |
 | TD1 | DSA90-8 | TD25F-4 | 1,800–3,260 | 93 | ~55 | 24V | Detailed | Semi-horn 93.5mm FP; wide xover window; note semi-horn narrows HF off-axis |
 | TD2 | DS115-8 | TD25F-4 | 1,800–2,636 | 105 | ~58 | 24V | Warm | Semi-horn + paper warmth; wide window (836Hz) but semi-horn off-axis concern |
 | DT1 | DS115-8 | D27TG35-06 | 1,800–2,636 | 110 | ~65 | 24V | Warm, 6Ω | 6Ω tweeter; 104mm FP; same spacing as DA1; 15W (adequate at 10.5W burst) |

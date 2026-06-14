@@ -62,8 +62,8 @@ Narrowest possible front baffle. Driven by mid frame OD and centre spacing.
 | 1 | XC1 | DSA90-8 (92mm OD) | XT25SC40-04 (43.9mm OD) | **68mm** | ~£55 | 24V / ~3.9A | NEW MINIMUM: ring rad at 43.9mm FP — tighter than any previous pairing AND ring rad dispersion |
 | 2 | TN1 | DSA90-8 (92mm OD) | HiVi TN28-B (47.6mm OD) | **70mm** | ~£55 | 24V / ~3.8A | 2nd tightest; compact round dome; narrow xover window (2,600 Hz min) |
 | 3 | B6 | DSA90-8 (92mm OD) | TN25 (54×54mm sq) | **73mm** | ~£52 | 24V / ~3.8A | Tightest square tweeter; contrast look |
-| 3= | SE1 | DSA90-8 (92mm OD) | SEAS H1406-04 (oval, 54mm portrait) | **73mm** | ~£74 | 24V / ~3.8A | 80W oval portrait-mounted = same 73mm as B6; 4× more power handling; shallow 21.5mm depth |
-| 5 | CF1 | DSA90-8 (92mm OD) | CF18N-4 (58mm OD) | **75mm** | ~£61 | 24V / ~3.8A | 18mm CF dome; 3rd smallest FP; 75mm spacing; excellent HF off-axis; 40W robust |
+| 3= | SE1 | DSA90-8 (92mm OD) | SEAS H1406-04 (oval, 54mm portrait) | **73mm** | ~£74 | 24V / ~3.8A | **⚠ H1406-04 OOS (Jun 2026)** — 80W oval; 73mm spacing; on sale €40.45; pre-order only |
+| 5 | CF1 | DSA90-8 (92mm OD) | CF18N-4 (58mm OD) | **75mm** | ~£61 | 24V / ~3.8A | **⚠ CF18N-4 OOS (Jun 2026)** — 18mm CF dome; on sale €30.54; pre-order only; monitor for restock |
 | 6 | NR1 | DSA90-8 (92mm OD) | NE25VTS-04 (66.3mm OD) | **79mm** | ~£64 | 24V / ~3.9A | Same spacing as B10 but much wider xover window (1,460 Hz min vs 2,700 Hz) |
 | 6 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | **79mm** | ~£44 | 24V / ~3.9A | Tightest 79mm at lowest cost; min xover 2,700 Hz |
 
@@ -179,7 +179,7 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 | D2606/920000 | **100W** | ~104 | 91.4 | 1,100 | 2,200 | €39.95 | Scan-Speak 6Ω; narrower window than D2604 (Fs 1,100 vs 630Hz) |
 | RST28F-4 | **80W** | 104.8 | 93.5 | 710 | 1,420 | €46.95 | 80W; Fs=710Hz; 1,216Hz window with DS115 — near-identical to DC1 at same price |
 | SB26ST-C000-5 | **80W** | ~72 | 91 | 870 | 1,740 | €30.95 | 80W; compact FP assumed ~72mm; 5Ω; cheapest 80W |
-| SEAS H1406-04 | **80W** | 69.7×54 oval | 91 | 1,170 | 2,340 | €48.95 | 80W; portrait-mount 73mm spacing; shallowest 21.5mm |
+| SEAS H1406-04 | **80W** | 69.7×54 oval | 91 | 1,170 | 2,340 | €40.45 (sale) | **⚠ OOS/pre-order (Jun 2026)** — 80W; portrait-mount 73mm spacing; shallowest 21.5mm |
 | BC25SC06-04 | 50W | ~70 | 95.4 | 1,350 | 2,700 | €24.95 | 50W; high sens → near-zero amp power at 98dB |
 
 ### Shortlist analysis
@@ -190,7 +190,7 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 
 **Cheapest 80W (absolute):** SB26ST-C000-5 (€30.95) — 80W, compact FP, 5Ω matches 8Ω amp channel better than 4Ω for equal power split. At 29V/5Ω: P = 29²/(2×5)×0.85 = 71.7W — just under rating. Good margin.
 
-**Best compact + portrait mount:** SEAS H1406-04 (€48.95) — 80W, oval 54mm portrait dimension gives 73mm centre spacing with DSA90-8 (tighter than any round 80W tweeter). Shallowest driver in the catalogue (21.5mm). Only 4 in stock.
+**Best compact + portrait mount:** SEAS H1406-04 (€40.45 on sale, **OOS Jun 2026**) — 80W, oval 54mm portrait dimension gives 73mm centre spacing with DSA90-8. Shallowest driver in catalogue (21.5mm). Now pre-order only; RST28F-4 (€46.95, 80W, 104mm FP) is the in-stock 80W alternative.
 
 **Wide crossover window champion (standard dome):** D2604/830000 (€44.95) — Fs=630Hz, min xover 1,260Hz. More than 1,500Hz of crossover latitude below the 2,800Hz target. 100W/240W Scan-Speak quality. Large 104mm FP.
 
@@ -226,8 +226,8 @@ Order ahead if your shortlist includes any of these. All counts from SoundImport
 | DS115-8 | Mid | 4 units | High — could vanish; used in S1, S3 adjacent, RR1, DC1, STC2, DA1, XBG1, BC2 | Order immediately if chosen |
 | DA115-8 | Mid | 3 units | Very high — alternative to DS115-8; on sale €24.75 (was €29.95) — cheaper than usual | Order now while on sale; 3 left |
 | SB21SDC-C000-4 | Tweeter | 1 in stock + 7 exp. 3 Jul 2026 | Medium — 1 now, restock 3 Jul; ring dome; RD1/RD2 | Can order now or wait for Jul 3 restock |
-| SEAS H1406-04 | Tweeter | 4 units | Medium — oval tweeter for SE1 compact pairing | Order if targeting compact baffle |
-| CF18N-4 | Tweeter | 6 units | Low-medium — carbon fibre dome; used in CF1/CF2 | Monitor |
+| SEAS H1406-04 | Tweeter | **OOS / pre-order** (Jun 2026) | **Gone OOS** — was 4 units; on sale €40.45 (was €48.95); SE1/SE2 not orderable now | Monitor for restock; consider RST28F-4 (80W, €46.95, in stock) as 80W alternative |
+| CF18N-4 | Tweeter | **OOS / pre-order** (Jun 2026) | **Gone OOS** — was 6 units; on sale €30.54 (was €36.95); CF1/CF2/CF3 not orderable | Monitor for restock; consider BC25SC06-04 (50W, €24.95, in stock) as compact alternative |
 | SB12PFCR25-4 | Mid | 10+ units | Low | No urgency |
 | DSA90-8 | Mid | 10+ units | Low | No urgency |
 | XT25TG30-04 | Tweeter | 10+ SI (€49.95) / Falcon £29.90 | Low — now in stock at both suppliers; Falcon is £13 cheaper | Order from Falcon for best price, or SI if combining with other SI drivers |
