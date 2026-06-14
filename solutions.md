@@ -91,10 +91,12 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 |----|-----|---------|-------|---------|-------|-----|-----------|-------|
 | XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 Hz | 68mm | ~£55 | 24V / ~3.9A | Detailed + wide | Smallest FP ring rad (43.9mm); 100W; minimum spacing champion |
 | RR4 | DSA90-8 | XT25SC90-04 | 2,800 Hz | 91mm | ~£37 | 24V / ~3.8A | Detailed + wide | Cheapest ring rad; larger FP (90mm) vs XC1 but no DSP sensitivity mismatch |
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; natural fibre mid |
-| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window |
+| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; nat. fibre mid (XT25TG30 pre-order at SI — order from Falcon) |
+| XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 Hz | ~110mm | ~£66 | 24V / ~3.8A | Warm + wide | SI-stocked ring rad alt to RR2 when XT25TG30 unavailable; Fs=570Hz; same off-axis character |
+| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window (Falcon order) |
+| RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 Hz | 106mm | ~£39 | 24V / ~3.8A | Warm + wide | Cheapest ring rad + nat. fibre; 1,080Hz window; single Falcon order |
 | S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~107mm | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
-| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£56 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 is smaller (92mm FP) and cheaper (€5 less) than SB29 |
+| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£56 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 smaller (92mm FP) than SB29; 1 in stock + 7 Jul |
 
 ---
 
@@ -108,7 +110,8 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | 2 | HiVi B4N + SB19ST (A1) | ~£38 | 24V / ~3.9A | Warm | Sensitivity-matched; simplest DSP; always in stock |
 | 3 | SB12PFCR25-4 + SB19ST (S2) | ~£41 | 24V / ~3.8A | Warm, natural | Natural fibre warmth + 19mm dome; best all-round value |
 | 4 | SB12PFCR25-4 + XT25SC40-04 (XC3) | ~£47 | 24V / ~3.8A | Warm + ring rad | Ultra-compact ring rad (83mm spacing); nat. fibre + 43.9mm ring rad |
-| 5 | RR4 alt: DSA90-8 + XT25SC40-04 (XC1) | ~£55 | 24V / ~3.8A | Detailed + ring rad | 68mm spacing champion; ring rad dispersion |
+| 5 | SB12PFCR25-4 + SB26STCN-C000-4 (STC3) | ~£55 | 24V / ~3.8A | Warm + 120W safe | Nat. fibre mid + 120W tweeter; burnout impossible at 24V; best power safety under £60 |
+| 6 | RR4 alt: DSA90-8 + XT25SC40-04 (XC1) | ~£55 | 24V / ~3.8A | Detailed + ring rad | 68mm spacing champion; ring rad dispersion |
 
 **Absolute minimum spend:** TCP115-8 + SB19ST at ~£31 for drivers — but 29V PSU required (+£25); total ~£56.
 
@@ -180,3 +183,21 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 | ST1 | DS115-8 | SB26ST-C000-5 | 80W | 1,740–2,636 Hz | 94mm | ~£58 |
 | STC2 | DS115-8 | SB26STCN-C000-4 | **120W** | 1,900–2,636 Hz | 94mm | ~£65 |
 | DC1 | DS115-8 | D2604/830000 | 100W | 1,260–2,636 Hz | 110mm | ~£70 |
+
+---
+
+## Stock Risk — Low-Count Items (June 2026)
+
+Order ahead if your shortlist includes any of these. All counts from SoundImports unless noted.
+
+| Driver | Role | Stock | Risk | Action |
+|--------|------|-------|------|--------|
+| DS115-8 | Mid | 4 units | High — could vanish; used in S1, S3 adjacent, RR1, DC1, STC2, DA1, XBG1, BC2 | Order immediately if chosen |
+| DA115-8 | Mid | 3 units | Very high — alternative to DS115-8; Xmax 10.2mm | Order with DS115-8 backup plan |
+| SB21SDC-C000-4 | Tweeter | 1 in stock + 7 exp. 7 Jul 2026 | Medium — 1 now, restock expected | Can wait; order by mid-July |
+| SEAS H1406-04 | Tweeter | 4 units | Medium — oval tweeter for SE1 compact pairing | Order if targeting compact baffle |
+| CF18N-4 | Tweeter | 6 units | Low-medium — carbon fibre dome; used in CF1/CF2 | Monitor |
+| SB12PFCR25-4 | Mid | 10+ units | Low | No urgency |
+| DSA90-8 | Mid | 10+ units | Low | No urgency |
+| XT25TG30-04 | Tweeter | Pre-order SI; Falcon £29.90 | Pre-order risk — buy from Falcon for guaranteed stock | Order from Falcon, not SI |
+| XT25BG60-04 | Tweeter | 10+ units SI | Low — stocked SI alternative to XT25TG30 | No urgency |
