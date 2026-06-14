@@ -139,8 +139,8 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | NX1 | SB12NRX25-4 | SB19ST | 1,960–2,730 | ~105 | ~65 | 24V | Warm, nat. | Premium paper NRX; acoustically identical to S2 (SB12PFCR25-4) — choose S2 on value |
 | NX2 | SB12NRX25-4 | XT25TG30-04 | 880–2,730 | ~116 | ~81 | 24V | Warm + wide | Premium NRX + ring rad; acoustically identical to RR2 — choose RR2 on value |
 | PL1 | PLUVIA-7HD Gold | SB19ST | 1,960–~2,900 | ~105 | ~58 | 24V | Warm, zero-pad | Unique zero-correction mid; system SPL capped 97 dB (DSP at 18W); Mg/Al cone |
-| DC1 | DS115-8 | D2604/830000 | 1,260–2,636 | 110 | ~70 | 24V | Warm, 100W | Scan-Speak 100W dome; same spacing as DA1 but wider window + indestructible tweeter |
-| DC2 | SB12PFCR25-4 | D2604/830000 | 1,260–2,730 | 113 | ~60 | 24V | Warm, nat. 100W | Cheapest 100W wide-window pairing; nat. fibre + Scan-Speak 100W at €45 |
+| DC1 | DS115-8 | D2604/830000 | 1,260–2,636 | 110 | ~57 | 24V | Warm, 100W | Scan-Speak 100W dome; **Falcon £33.05** (vs SI €44.95); same spacing as DA1 but wider window + indestructible tweeter |
+| DC2 | SB12PFCR25-4 | D2604/830000 | 1,260–2,730 | 113 | ~56 | 24V | Warm, nat. 100W | Cheapest 100W wide-window pairing; nat. fibre + Scan-Speak 100W; **Falcon £33.05** |
 | SE1 | DSA90-8 | SEAS H1406-04 | 2,340–3,260 | ~75 | ~74 | 24V | Detailed | **⚠ H1406-04 OOS (Jun 2026)** — pre-order only. 80W oval tweeter; 73mm portrait spacing; on sale €40.45 |
 | SE2 | DS115-8 | SEAS H1406-04 | 2,340–2,636 | ~85 | ~76 | 24V | Warm | **⚠ H1406-04 OOS** — pre-order only. SEAS 80W; only 296Hz window — very tight; not recommended even if restocked |
 | CF1 | DSA90-8 | CF18N-4 | 2,200–3,260 | **75** | ~61 | 24V | Detailed, CF | **⚠ CF18N-4 OOS (Jun 2026)** — pre-order only. 18mm CF dome; on sale €30.54; monitor for restock |
@@ -165,12 +165,12 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~79 | 24V / 28V | Warm nat. + ring dome 100W | Widest ring dome window in catalogue (1,570Hz); nat. fibre + premium ring dome |
 | RPN3 | SB12MNRX2-25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~102 | 24V / 28V | Warm + ring dome 100W | Engineering flagship; MNRX2 £48.10 + SB29RDNC £54.31 Willys |
 | RPN4 | DSA90-8 | SB29RDNC-C000-4 | 1,160–3,260 | 98 | ~86 | 24V / 29V | Detailed + ring dome 100W | Widest window of any DSA90-8 pairing (2,100Hz); 98mm spacing; premium compact option |
-| RST1 | DS115-8 | RST28F-4 | 1,420–2,636 | 110 | ~70 | 24V / 28V | Warm + 80W | 80W; 93.5dB → 5.6W at burst; same spacing as DC1; £0 premium over D2604 |
+| RST1 | DS115-8 | RST28F-4 | 1,420–2,636 | 110 | ~64 | 24V / 28V | Warm + 80W | 80W; 93.5dB → 5.6W at burst; same spacing as DC1; +£7 over D2604 (Falcon) |
 | RST2 | SB12PFCR25-4 | RST28F-4 | 1,420–2,730 | 113 | ~60 | 24V / 28V | Warm nat. + 80W | 80W; wider window than STC3 (SB26STCN); lower sensitivity match (+6dB vs +7dB DSP pad) |
 | RST3 | DSA90-8 | RST28F-4 | 1,420–3,260 | 98 | ~68 | 24V / 29V | Detailed + 80W | 1,840Hz window; 98mm spacing; 80W insurance at 29V |
-| D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
-| D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
-| D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
+| D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~48 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; **Falcon £29.35**; compact 98mm spacing |
+| D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~53 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; **Falcon £29.35**; cross at DS115 beaming limit; 6Ω |
+| D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~52 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; **Falcon £29.35** = cheapest 100W tweeter in catalogue |
 | SB13_TG | SB13PFCR25-4 | XT25TG30-04 | 880–2,080 | 117 | ~54 | 24V / 28V | Warm, nat. + wide | 5"; Fs=44Hz (3.4× margin); 1,200Hz ring rad window; SB13PFCR £24.50 Willys + XT25TG30 £29.90 Falcon |
 | SB13_DC | SB13PFCR25-4 | D2604/830000 | 1,260–2,080 | 117 | ~60 | 24V / 28V | Warm, nat. + 100W | 5" + Scan-Speak 100W; SB13PFCR £24.50 Willys + D2604 £35.65 Willys |
 | SB13_RPN | SB13PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,080 | 117 | ~79 | 24V / 28V | Warm nat. + ring dome | 5"; 920Hz window; 100W ring dome; SB13PFCR £24.50 + SB29RDNC £54.31 Willys |
@@ -187,19 +187,19 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | DMA1 | DMA105-8 | SB19ST | 1,960–2,900 | 96 | ~44 | 24V / 28V | Al neodymium | 4" dual-neo Al cone; beaming 2,900Hz (better than DS115 at 2,636); **min LP 200Hz recommended** (Fs 72Hz → 2×Fs=144Hz marginal at 150); 35W rated (better than DA115 at 20W); 940Hz window |
 | DMA2 | DMA105-8 | XT25TG30-04 | 880–2,900 | 107 | ~52 | 24V / 28V | Al + ring rad | 2,020Hz DSP window (widest DMA105 pairing); ring rad off-axis; 107mm spacing; Falcon £29.90 for twt saves ~£13; **min LP 200Hz** |
 | DMA3 | DMA105-8 | SB29RDNC-C000-4 | 1,160–2,900 | 104 | ~80 | 24V / 28V | Al + ring dome 100W | 1,740Hz window; premium 100W ring dome; 104mm spacing; compact pairing; **min LP 200Hz** |
-| RP1 | DSA90-8 | R2604/833000 | 880–3,260 | 98 | ~75 | 24V / 29V | Detailed + ring rad 100W | **Absolute window champion: 2,380Hz** (widest in catalogue); same Fs as XT25TG30 + 100W; 98mm spacing; Scan-Speak Discovery ring rad |
-| RP2 | DS115-8 | R2604/833000 | 880–2,636 | 110 | ~80 | 24V / 28V | Warm + ring rad 100W | 1,756Hz window (tied with RR1); 100W vs XT25TG30 15W; same price class (+€12.50); indestructible tweeter |
-| RP3 | SB12PFCR25-4 | R2604/833000 | 880–2,730 | 113 | ~70 | 24V / 28V | Warm nat. + ring rad 100W | 1,850Hz window (wider than RR2); 100W; nat. fibre + Discovery ring rad; €12.50 over RR2 |
-| RP4 | DSA90-8 | R2604/832000 | 1,000–3,260 | 98 | ~63 | 24V / 29V | Detailed + ring rad 100W | 2,260Hz window; cheaper (€52.95 vs €62.45); 2dB less sens than RP1; 120Hz narrower than RP1 |
-| RP5 | DS115-8 | R2604/832000 | 1,000–2,636 | 110 | ~66 | 24V / 28V | Warm + ring rad 100W | 1,636Hz window; budget Discovery 100W ring rad; ~£3 premium over XT25TG30 |
-| RP6 | SB12PFCR25-4 | R2604/832000 | 1,000–2,730 | 113 | ~56 | 24V / 28V | Warm nat. + ring rad 100W | 1,730Hz window; cheapest 100W ring rad + nat. fibre; best value in RP series |
+| RP1 | DSA90-8 | R2604/833000 | 880–3,260 | 98 | ~65 | 24V / 29V | Detailed + ring rad 100W | **Absolute window champion: 2,380Hz**; **Falcon £45.95**; same Fs as XT25TG30 + 100W; 98mm spacing |
+| RP2 | DS115-8 | R2604/833000 | 880–2,636 | 110 | ~70 | 24V / 28V | Warm + ring rad 100W | 1,756Hz window; **Falcon £45.95**; 100W vs XT25TG30 15W; +£16 over RR1 for burnout immunity |
+| RP3 | SB12PFCR25-4 | R2604/833000 | 880–2,730 | 113 | ~68 | 24V / 28V | Warm nat. + ring rad 100W | 1,850Hz window; **Falcon £45.95**; nat. fibre + Discovery ring rad; +£16 over RR2 |
+| RP4 | DSA90-8 | R2604/832000 | 1,000–3,260 | 98 | ~58 | 24V / 29V | Detailed + ring rad 100W | 2,260Hz window; **Falcon £38.95** (+£9 over XT25TG30); 100W; 120Hz narrower than RP1 |
+| RP5 | DS115-8 | R2604/832000 | 1,000–2,636 | 110 | ~63 | 24V / 28V | Warm + ring rad 100W | 1,636Hz window; **Falcon £38.95** (+£9 over XT25TG30); 100W for £9 premium |
+| RP6 | SB12PFCR25-4 | R2604/832000 | 1,000–2,730 | 113 | ~62 | 24V / 28V | Warm nat. + ring rad 100W | 1,730Hz window; **Falcon £38.95**; cheapest 100W ring rad + nat. fibre |
 
 ---
 
 ## Supplier Notes (June 2026)
 
 - **SoundImports** (EU) — primary source for most drivers
-- **Falcon Acoustics** (UK) — SB19ST £14.30, XT25TG30-04 £29.90 (**in stock**), XT25SC90-04 £18.20, DX25TG59-04 £20.85
+- **Falcon Acoustics** (UK) — SB19ST £14.30, XT25TG30-04 £29.90 (**in stock**), XT25SC90-04 £18.20, DX25TG59-04 £20.85; **Scan-Speak Discovery:** D2604/830000 £33.05, D2606/920000 £29.35, R2604/832000 £38.95, R2604/833000 £45.95 — all cheaper than SI by £4–8
 - **Willys-Hifi** (UK) — full catalogue scraped Jun 2026. Key prices: DX25TG59-04 £18.44, SB12PFCR25-4 £20.58, SB12MNRX2-25-4 £48.10, SB13PFCR25-4 £24.50, SB12PACR25-4 £23.76, SB12NRXF25-4 £43.11, SB12NRX25-4 £45.75, SB19ST £20.14, SB26STCN-C000-4 £28.92, SB29SDAC £34.30, SB29RDNC £54.31, D2604/830000 £35.65, BC25SC06-04 £16.78, XT25SC90-04 £19.52, XT25TG30-04 £31.95, MDT12 £39.50, H26TG45-06 £31.80, SB29SDNC £56.64, NE19VTS-04 £25.20, NE25VTS-04 £36.44, SB26ADC £41.60, SB26ST-C000-5 £25.30, XT25BG60-04 £37.14, DC25T-8 £15.10, DT-25N £26.91, D27TG35-06 £27.52
-- **Note (Jun 2026):** XT25TG30-04 now also in stock at SI (€49.95, 10+). Falcon £29.90 cheapest; Willys £31.95; SI most expensive. XT25SC90-04: Falcon £18.20 < Willys £19.52. DX25TG59-04: Willys £18.44 < Falcon £20.85 — **Willys is cheapest source for DX25**.
-- **Audiophonics** (France) — SIG120-4 in stock, ships to UK
+- **Note (Jun 2026):** XT25TG30-04 now also in stock at SI (€49.95, 10+). Falcon £29.90 cheapest; Willys £31.95; SI most expensive. XT25SC90-04: Falcon £18.20 < Willys £19.52. DX25TG59-04: Willys £18.44 < Falcon £20.85 — **Willys is cheapest source for DX25**. **For Scan-Speak Discovery tweeters: Falcon is cheapest UK source.**
+- **Audiophonics** (France) — SIG120-4 in stock; CF120-4 in stock (€49.92 sale); ships to UK
