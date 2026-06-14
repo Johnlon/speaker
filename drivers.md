@@ -97,7 +97,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Qts: 0.44 | Le: 0.009 mH | Ferrite magnet | Rear chamber | No ferrofluid
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html) (specs fetched June 2026)
 - **Datasheet:** [original URL](https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf) — download to research/ on order
-- SoundImports price: €41.28 (pre-order only) | Falcon Acoustics price: **£29.90** (in stock, UK) | June 2026
+- SoundImports price: €49.95 (**10+ in stock**, Jun 2026) | Falcon Acoustics price: **£29.90** (in stock, UK) | Falcon is ~£13 cheaper
 - **DSP correction vs TB sub (85 dB ref):** −6.9 dB pad needed.
 - **Power at reference:** 98 dB from 91.9 dB driver → needs 8.2W RMS (54% of 15W rating ✓) | burst 101 dB → 16.3W (exceeds rating — see below)
 - **DSP limiter:** Set tweeter channel at 13W → maximum tweeter SPL = 91.9 + 10×log(13/2) = **100.0 dB**. Sub peaks at 101 dB. 1 dB gap at burst, irrelevant in practice (bass transients, not treble).

@@ -91,9 +91,9 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 |----|-----|---------|-------|---------|-------|-----|-----------|-------|
 | XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 Hz | 68mm | ~£55 | 24V / ~3.9A | Detailed + wide | Smallest FP ring rad (43.9mm); 100W; minimum spacing champion |
 | RR4 | DSA90-8 | XT25SC90-04 | 2,800 Hz | 91mm | ~£37 | 24V / ~3.8A | Detailed + wide | Cheapest ring rad; larger FP (90mm) vs XC1 but no DSP sensitivity mismatch |
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; nat. fibre mid (XT25TG30 pre-order at SI — order from Falcon) |
-| XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 Hz | ~110mm | ~£66 | 24V / ~3.8A | Warm + wide | SI-stocked ring rad alt to RR2 when XT25TG30 unavailable; Fs=570Hz; same off-axis character |
-| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window (Falcon order) |
+| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; Falcon £29.90 or SI €49.95; Falcon £13 cheaper |
+| XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 Hz | ~110mm | ~£66 | 24V / ~3.8A | Warm + wide | SI-stocked alt to RR2; Fs=570Hz (vs 440Hz TG30) — narrower low-end window; only if combining SI order |
+| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window; Falcon £29.90 or SI €49.95 |
 | RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 Hz | 106mm | ~£39 | 24V / ~3.8A | Warm + wide | Cheapest ring rad + nat. fibre; 1,080Hz window; single Falcon order |
 | S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~107mm | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
 | RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 Hz | 113mm | ~£79 | 24V / ~3.8A | Warm + ring dome 100W | Premium ring dome (RDNC = 100W, 94dB); widest ring dome xover window (1,570Hz) |
@@ -208,5 +208,5 @@ Order ahead if your shortlist includes any of these. All counts from SoundImport
 | CF18N-4 | Tweeter | 6 units | Low-medium — carbon fibre dome; used in CF1/CF2 | Monitor |
 | SB12PFCR25-4 | Mid | 10+ units | Low | No urgency |
 | DSA90-8 | Mid | 10+ units | Low | No urgency |
-| XT25TG30-04 | Tweeter | Pre-order SI; Falcon £29.90 | Pre-order risk — buy from Falcon for guaranteed stock | Order from Falcon, not SI |
-| XT25BG60-04 | Tweeter | 10+ units SI | Low — stocked SI alternative to XT25TG30 | No urgency |
+| XT25TG30-04 | Tweeter | 10+ SI (€49.95) / Falcon £29.90 | Low — now in stock at both suppliers; Falcon is £13 cheaper | Order from Falcon for best price, or SI if combining with other SI drivers |
+| XT25BG60-04 | Tweeter | 10+ units SI | Low — SI-stocked alternative; Fs=570Hz vs TG30's 440Hz | No urgency |

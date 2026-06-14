@@ -176,5 +176,6 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 ## Supplier Notes (June 2026)
 
 - **SoundImports** (EU) — primary source for most drivers
-- **Falcon Acoustics** (UK) — SB19ST £14.30, XT25TG30-04 £29.90, XT25SC90-04 £18.20, DX25TG59-04 £20.85
+- **Falcon Acoustics** (UK) — SB19ST £14.30, XT25TG30-04 £29.90 (**in stock**), XT25SC90-04 £18.20, DX25TG59-04 £20.85
+- **Note (Jun 2026):** XT25TG30-04 now also in stock at SI (€49.95, 10+). Falcon £29.90 is ~£13 cheaper; use SI only if combining with other SI order. XT25SC90-04 also at SI (€26.95) vs Falcon (£18.20 ≈ £5 cheaper).
 - **Audiophonics** (France) — SIG120-4 in stock, ships to UK
