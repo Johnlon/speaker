@@ -256,6 +256,45 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-dc25t-8.html) | Price: €18.97 | Stock: 10+
 - Note: Titanium dome (silver metallic appearance). Precision phase lens. Previously visual-excluded — visual constraints removed June 2026. Remaining concern: Fs 1,468 Hz → min crossover 2,936 Hz is high; response starts at 3,000 Hz. €18.97 — budget-friendly.
 
+### Peerless by Tymphany XT25SC40-04 — Candidate (ultra-compact ring radiator)
+- Type: **Ring radiator** | VC: 25 mm | Faceplate OD: **43.9 mm** (smallest ring rad in field) | Impedance: 4Ω
+- Sensitivity: **94 dB @ 2.83V/1m** | Power: **100W RMS** | Fs: **1,018 Hz** | Frequency response: to 20,000+ Hz
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/xt25sc40-04.html) (fetched June 2026)
+- SoundImports price: **€29.95** | Stock (June 2026): 10+
+- **Min crossover:** 2× Fs = **2,036 Hz** — comfortably below 2,800 Hz project target.
+- **DSP correction vs TB sub (85 dB ref):** −9.0 dB pad needed (tweeter is 9 dB hotter than sub reference).
+- **Power at reference (98 dB):** 10^((98−94)/10) = **2.5W** (2.5% of 100W — minimal draw). At burst (101 dB): **5.0W** (5% of 100W). 100W power rating is effectively indestructible in this application.
+- **Why this matters — spacing:** 43.9 mm faceplate is the smallest tweeter OD in the entire field by a wide margin. With DSA90-8 (92 mm OD): centre spacing = (92 + 43.9) / 2 = **68 mm** — new project minimum (beats B6 at 73 mm AND is a ring radiator, not a square dome). Pairing XC1.
+- **Ring radiator advantage:** Wide controlled off-axis dispersion — relevant to 60° kitchen geometry. Same advantage as XT25TG30-04 and XT25SC90-04 but in a dramatically smaller package.
+- **Sensitivity mismatch:** 94 dB vs DSA90-8's 84.7 dB = 9.3 dB differential. The ADAU1701 DSP handles this comfortably; the tweeter channel simply receives 9 dB less gain. No audible artefact.
+- **Concern — small diaphragm:** Ring element is smaller than XT25SC90-04 (90 mm FP). Verify polar plots if available. Very small annular ring at 43.9 mm may have narrower dispersion than the larger ring radiators above 10 kHz — but below 10 kHz all ring rads are wide. Kitchen use is dominated by lower treble (2.8–8 kHz) where dispersion should be fine.
+- **vs XT25SC90-04:** SC40 has 43.9 mm FP vs SC90's ~90 mm. SC40 at 68 mm spacing beats SC90 at 91 mm. Both 100W rated. SC90 has lower Fs (825 Hz vs 1,018 Hz) but both are well within 2,800 Hz project target. SC40 costs same (€29.95 vs £18.20). SC40 wins on spacing; SC90 wins on Fs margin.
+
+### SB Acoustics SB21SDC-C000-4 — Candidate (compact ring dome)
+- Type: **Ring dome** (SB Acoustics ring construction, annular diaphragm) | Dome: 21 mm | Faceplate OD: **92 mm** | Impedance: 4Ω
+- Sensitivity: **91 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **720 Hz** | Frequency response: to 20,000+ Hz
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/sb21sdc-c000-4.html) (fetched June 2026)
+- SoundImports price: **€39.95** | Stock (June 2026): 1 unit + 7 expected 3-Jul-2026
+- **Min crossover:** 2× Fs = **1,440 Hz** — excellent; same range as SB29SDAC's 1,200 Hz.
+- **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
+- **Power at reference (98 dB):** 10^((98−91)/10) = **5.0W** (12.5% of 40W ✓). At burst (101 dB): **10.0W** (25% ✓). Excellent headroom.
+- **Why interesting — cheaper ring dome:** SB29SDAC (S3/RR6 pairings) costs €44.95. SB21SDC costs €39.95 — €5 cheaper with similar ring dome construction. The SB21SDC has a 92 mm faceplate vs SB29SDAC's ~104 mm → tighter spacing. Fs 720 Hz vs SB29's 600 Hz → min xover 1,440 Hz vs 1,200 Hz — slightly tighter but still excellent.
+- **New pairings enabled:** RD1 (DS115-8 + SB21SDC = 104 mm spacing, 1,440–2,636 Hz window, ~£49), RD2 (SB12PFCR25-4 + SB21SDC = 107 mm spacing, ~£40 — cheapest ring dome pairing in catalogue).
+- **vs SB29SDAC:** SB21 is €5 cheaper, 92 mm vs 104 mm FP (tighter spacing), 21 mm vs 29 mm dome (slightly less diaphragm area). SB21 is the value ring dome; SB29 is the full engineering showcase.
+- **Stock caveat:** Only 1 available now; 7 expected July 3. For pairing RD2 (~£40) this is the first ring dome option that doesn't break the £50 driver budget.
+
+### Scan-Speak Discovery D2604/830000 — Candidate
+- Dome: 26 mm | Impedance: 4Ω
+- Sensitivity: **92 dB @ 2.83V/1m** | Fs: **630 Hz** | Power: high-quality textile (see note)
+- **Source:** [Scan-Speak product page](https://www.scan-speak.dk/product/d2604-830000/) (fetched June 2026); SoundImports product page URL not resolved (multiple 404s)
+- SoundImports price: **€44.95** | Stock (June 2026): 10+
+- **Min crossover:** 2× Fs = **1,260 Hz** — excellent; second only to XT25TG30-04 (880 Hz) and on par with SB29SDAC.
+- **DSP correction vs TB sub (85 dB ref):** −7.0 dB pad needed.
+- **Power at reference (98 dB):** 10^((98−92)/10) = **4.0W** | At burst (101 dB): **8.0W**. Power rating not confirmed from pages found; Scan-Speak Discovery class is typically 100W+.
+- **Why interesting:** Scan-Speak brand = high-quality engineering. 630 Hz Fs → 1,260 Hz min xover gives the widest crossover window of any dome tweeter in the field (only ring radiators beat it). 92 dB sensitivity is a strong match. €44.95 is mid-range pricing.
+- **Note:** Faceplate OD not confirmed from pages found — likely ~104 mm based on Scan-Speak Discovery series mounting dimensions, but verify before ordering.
+- **Source gap:** SoundImports page URL could not be resolved after multiple attempts. Spec from manufacturer site. FP OD and confirmed power rating pending SI page fetch.
+
 ### Dayton Audio ND25FN-4 — Rejected (no faceplate — unmountable on standard baffle)
 - Dome: 25 mm treated silk | Impedance: 4Ω | Sensitivity: 90 dB | Power: 20W RMS | Fs: 1,350 Hz
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd25fn-4.html) | Price: €12.36 | Stock: 10+
