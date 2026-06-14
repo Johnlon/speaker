@@ -23,7 +23,7 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | SB13PFC25-4 | 5" | 4Ω | €28.45 | 10+ | 44 | 89 | 4.5 | 40 | ~130 | Round | ✓ equivalent to SB13PFCR25-4 (same specs, flat cone) |
 | SB13PFC25-8 | 5" | 8Ω | €28.45 | 7 | ~44 | ~89 | ~4.5 | ~40 | ~130 | Round | ~ 8Ω flat-cone 5"; specs inferred from 4Ω sibling |
 | Visaton KT 100 V | 4" | 4Ω | €28.95 | 5 | 42 | 83 | 2 | 25 | 99 | Round | ✗ needs 32W at ref (rated 25W); Xmax 2mm too low |
-| SICA 3,5 F 1 CS-8 | 3.5" | 8Ω | €28.95 | 4 | — | — | — | — | — | — | ? URL not found on SI (3 patterns tried) |
+| SICA 3,5 F 1 CS-8 | 3.5" | 8Ω | €28.95 | 4 | 107 | 88.5 | 1.5 | 90pr | 88 | Round | ✗ Fs 107Hz (1.42×) + Xmax 1.5mm — both fail; Sd 38.5 cm² |
 | Peerless SLS-85S25CP04-04 | 3.5" | 4Ω | €29.95 | 10+ | 73 | 86 | 10.2 | 30 | 105×91 | Oval | ✓ (B12) — highest Xmax; oval frame |
 | Monacor SP-4/60PRO | 4" | 8Ω | €29.95 | 10 | 92 | 90 | 2.3 | 30 | 113×113 | Square | ~ Fs 92Hz too high (1.63×); sq frame |
 | Dayton DA115-8 | 4" | 8Ω | €29.95 | 3 | 60 | ~85 | ~3.5 | 30 | ~116 | Round | ✓ (B5) — near-perfect sens; 3 left |

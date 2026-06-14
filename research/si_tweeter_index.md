@@ -24,9 +24,9 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | XT25SC40-04              | Ring Rad  | 4Ω  | €29.95        | 10+            | 1,018  | 94      | 100   | 43.9        | 25       | 2,036        | ★ SMALLEST ring rad FP 43.9mm; 100W; min xover 2036  |
 | DT 94-8                  | Dome      | 8Ω  | €29.95        | 3              | 1,900  | 90      | 70    | 94          | 20       | 3,800        | ✗ min xover 3800Hz exceeds 2800Hz project target     |
 | DX20BF00-04              | Dome      | 4Ω  | €29.95        | 10+            | 840    | 88      | 10    | 66          | 20       | 1,680        | ✗ 10W — fatal at burst; needs 20W at 101dB          |
-| TD25F-4                  | Dome      | 4Ω  | €29.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 4 patterns)             |
+| TD25F-4                  | Dome(semi)| 4Ω  | €29.95        | 10+            | 900    | 91      | 20    | 93.5        | 25       | 1,800        | ✓ — semi-horn FP; Cutout 70mm; Depth 32mm; narrows off-axis |
 | GT-525                   | Dome      | 8Ω  | €29.95        | 4              | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 3 patterns)             |
-| SB26ST-C000-5            | Dome      | 5Ω  | €30.95        | 10+            | 870    | 91      | 80    | —           | 26       | 1,740        | ★ 80W power; FP OD unknown; 5Ω (JAB5 compatible)    |
+| SB26ST-C000-5            | Dome      | 5Ω  | €30.95        | 10+            | 870    | 91      | 80    | ~72         | 26       | 1,740        | ★ 80W; assumed ~72mm FP (SB26 family); ST1-3 pairings |
 | DX25TG59-04              | Dome      | 4Ω  | €32.95        | 10+            | 590    | 93.4    | 15    | 104         | 25       | 1,180        | ✓ (A4,A5,B3,B4,B7,B8) — best Fs margin               |
 | XT19TD00-04              | Ring Rad  | 4Ω  | €34.95        | 10+            | ~820   | 88.9    | 20    | 94          | 19       | ~1,640       | ✓ — small ring rad; 94mm FP                          |
 | SB26STC-C000-04          | Dome      | 4Ω  | €34.95        | exp 28-08-2026 | —      | —       | —     | —           | 26       | —            | OOS Aug 2026                                         |
@@ -43,10 +43,10 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | XT25TG30-04              | Ring Rad  | 4Ω  | £29.90 Falcon | pre-order SI   | 440    | 91.9    | 15    | 104         | 25       | 880          | ✓ (RR1–3) — lowest Fs; widest xover window           |
 | DT-28N                   | Dome      | 8Ω  | €40.95        | 5              | 1,200  | ~92     | 50    | ~72         | 28       | 2,400        | ✓ (B11,B12) — compact wg; 50W                        |
 | SB29SDAC-C000-4          | Ring Dome | 4Ω  | €44.95        | 10             | 600    | ~91     | ~30   | ~104        | 29       | 1,200        | ✓ (S3,RR6) — ring dome construction                  |
-| Discovery D2604/830000   | Dome      | 4Ω  | €44.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 3 patterns)             |
+| Discovery D2604/830000   | Dome      | 4Ω  | €44.95        | 10+            | ~630   | 92      | 100   | 104.2       | 26       | ~1,260       | ✓ — 100W/240W; Cutout 75mm; Depth 25.4mm; SI URL confirmed |
 | TW 6 (Markaudio)         | Dome      | 4Ω  | €44.95        | 8              | 1,700  | —       | —     | —           | 25       | 3,400        | ✓ (C4) — min xover above most mid beaming limits     |
 | RST28F-4                 | Dome      | 4Ω  | €46.95        | 10+            | 710    | 93.5    | 80    | 104.8       | 28       | 1,420        | ✓ — 80W; very high sens; large FP                    |
-| SEAS 27TFFNC/CG H1406-04 | Dome      | 4Ω  | €48.95        | 4              | —      | —       | —     | —           | 27       | —            | ? URL not found on SI (tried 3 patterns)             |
+| SEAS 27TFFNC/CG H1406-04 | Dome      | 4Ω  | €48.95        | 4              | 1,170  | 91      | 80    | 69.7×54oval | 26       | 2,340        | ★ 80W; oval 69.7×54mm FP; Depth 21.5mm; Cutout 46mm |
 | XT25BG60-04              | Ring Rad  | 4Ω  | €49.95        | 10+            | 570    | 92.6    | 15    | 104.5       | 25       | 1,140        | ✓ — ring rad; huge 104.5mm FP concern                |
 | SB26ADC-C000-4           | Dome (Al) | 4Ω  | €52.45        | 10+            | 680    | 90      | 120   | ~104        | 26       | 1,360        | ✓ — 120W; bright Al dome                             |
 

@@ -284,16 +284,29 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Stock caveat:** Only 1 available now; 7 expected July 3. For pairing RD2 (~£40) this is the first ring dome option that doesn't break the £50 driver budget.
 
 ### Scan-Speak Discovery D2604/830000 — Candidate
-- Dome: 26 mm | Impedance: 4Ω
-- Sensitivity: **92 dB @ 2.83V/1m** | Fs: **630 Hz** | Power: high-quality textile (see note)
-- **Source:** [Scan-Speak product page](https://www.scan-speak.dk/product/d2604-830000/) (fetched June 2026); SoundImports product page URL not resolved (multiple 404s)
-- SoundImports price: **€44.95** | Stock (June 2026): 10+
-- **Min crossover:** 2× Fs = **1,260 Hz** — excellent; second only to XT25TG30-04 (880 Hz) and on par with SB29SDAC.
+- Dome: 26 mm textile | Faceplate OD: **104.2 mm** | Cutout: **75 mm** | Depth: **25.4 mm** | Impedance: 4Ω | Re: 2.8Ω
+- Sensitivity: **92 dB @ 2.83V/1m** | Power: **100W RMS / 240W max** | Fs: **~630 Hz** (est. from Qts data; response starts 1,000 Hz) | Qts: 0.79 | Qms: 3.46 | Qes: 1.02
+- **Source:** [SoundImports](https://www.soundimports.eu/en/scan-speak-d2604830000.html) (fetched June 2026; URL confirmed) | [Scan-Speak](https://www.scan-speak.dk/product/d2604-830000/)
+- SoundImports price: **€44.95** | Stock (June 2026): 10+ (listed as pre-order at SI but in stock)
+- **Min crossover:** 2× Fs ≈ **1,260 Hz** — excellent; same window class as SB29SDAC (1,200 Hz). Only XT25TG30-04 (880 Hz) goes lower among domes.
 - **DSP correction vs TB sub (85 dB ref):** −7.0 dB pad needed.
-- **Power at reference (98 dB):** 10^((98−92)/10) = **4.0W** | At burst (101 dB): **8.0W**. Power rating not confirmed from pages found; Scan-Speak Discovery class is typically 100W+.
-- **Why interesting:** Scan-Speak brand = high-quality engineering. 630 Hz Fs → 1,260 Hz min xover gives the widest crossover window of any dome tweeter in the field (only ring radiators beat it). 92 dB sensitivity is a strong match. €44.95 is mid-range pricing.
-- **Note:** Faceplate OD not confirmed from pages found — likely ~104 mm based on Scan-Speak Discovery series mounting dimensions, but verify before ordering.
-- **Source gap:** SoundImports page URL could not be resolved after multiple attempts. Spec from manufacturer site. FP OD and confirmed power rating pending SI page fetch.
+- **Power at reference (98 dB):** 4.0W (4% of 100W). At burst (101 dB): 8.0W (8%). Effectively indestructible at 100W/240W rating.
+- **Why interesting:** Scan-Speak Discovery class engineering in a 104mm faceplate with 100W power handling, Fs ~630 Hz, and widest crossover window of any dome in the candidate field. €44.95 mid-range price. 104mm OD — same footprint class as DX25TG59-04, SB29SDAC. Depth only 25.4mm (shallowest large-FP tweeter in the field).
+- **Pairing note:** At 104.2mm FP, spacing with DS115-8 (116mm OD) ≈ 110mm; with SB12PFCR25-4 (~122mm OD) ≈ 113mm — same as DA1/DA2. Centre spacing with DSA90-8 ≈ 98mm.
+
+### SEAS Prestige 27TFFNC/CG H1406-04 — Candidate (80W, low-profile, oval faceplate)
+- Dome: 26 mm Sonolex precoated fabric | Faceplate: **69.7 × 54 mm oval** | Cutout: 46 mm | Depth: **21.5 mm** | Impedance: 4Ω | Re: 2.7Ω
+- Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS / 200W max** | Fs: **1,170 Hz** | Frequency response: 2,500–30,000 Hz
+- Double chamber magnet system | Sonolex precoated lightweight fabric
+- **Source:** [SoundImports](https://www.soundimports.eu/en/seas-27tffnc-cg.html) (fetched June 2026) | Price: **€48.95** | Stock (June 2026): 4 units
+- **Min crossover:** 2× Fs = **2,340 Hz** — comfortable margin at 2,800 Hz crossover. Freq response starts 2,500 Hz: LP crossover at 2,800 Hz gives ~6 dB order protection at 2,500 Hz (LR48 gives 24 dB protection at 2,500 Hz — ample).
+- **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
+- **Power at reference (98 dB):** 5.0W (6.25% of 80W). At burst (101 dB): **10.0W** (12.5%). Well within 80W/200W rating.
+- **Why interesting — spacing:** Oval 69.7×54mm faceplate. Mounted portrait (54mm axis vertical): effective vertical dimension = 54mm → centre spacing with DSA90-8 (92mm OD) = (92+54)/2 = **73mm** — matching B6 (TN25 at 73mm) as joint tightest spacing, but this is a 80W tweeter. If mounted landscape (69.7mm vertical), spacing becomes (92+69.7)/2 = 81mm.
+- **Why interesting — power:** 80W RMS in a non-round compact faceplate with a quality SEAS pedigree. RST28F-4 is the only competitor at 80W (104mm FP, 80W, €46.95). SEAS H1406 is smaller (69.7×54mm vs 104mm round) and €2 more.
+- **Depth advantage:** 21.5mm depth is the shallowest of any tweeter candidate (even shallower than D2604/830000 at 25.4mm). Very easy to fit in any enclosure.
+- **Concern — oval faceplate:** Non-round OD. Visual note only (not an exclusion). The 54mm narrow dimension is what drives tight spacing in portrait orientation. This is an aesthetically distinct look — oval tweeter above round mid above round sub.
+- **Concern — narrow window SE2:** With DS115-8 (beams at 2,636 Hz), only a 296 Hz window (2,340–2,636 Hz) for the crossover. Very tight; SE1 (DSA90-8, beams 3,260 Hz) gives a much better 920 Hz window.
 
 ### SB Acoustics SB26ST-C000-5 — Candidate (high-power compact tweeter)
 - Dome: 26 mm fine weave soft fabric | Faceplate OD: **~72 mm** (assumed — SB26 family standard; confirm from datasheet) | Impedance: 5Ω | Re: 4.4Ω

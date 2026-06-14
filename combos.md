@@ -48,6 +48,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | NE25VTS-04 | 1,460 Hz | 66.3 | 91.1 | 15 |
 | SB21SDC-C000-4 | 1,440 Hz | 92 | 91 | 40 |
 | SB26ST-C000-5 | 1,740 Hz | ~72 | 91 | 80 |
+| SEAS H1406-04 | 2,340 Hz | 69.7×54oval | 91 | 80 |
 | DA25BG08-06 | 1,420 Hz | 104 | 91.6 | 15 |
 | XT25SC90-04 | 1,650 Hz | ~90 | 90.1 | 100 |
 | SB19ST | 1,960 Hz | 88 | 88.5 | 30 |
@@ -123,6 +124,10 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | NX1 | SB12NRX25-4 | SB19ST | 1,960–2,730 | ~105 | ~65 | 24V | Warm, nat. | Premium paper NRX; acoustically identical to S2 (SB12PFCR25-4) — choose S2 on value |
 | NX2 | SB12NRX25-4 | XT25TG30-04 | 880–2,730 | ~116 | ~81 | 24V | Warm + wide | Premium NRX + ring rad; acoustically identical to RR2 — choose RR2 on value |
 | PL1 | PLUVIA-7HD Gold | SB19ST | 1,960–~2,900 | ~105 | ~58 | 24V | Warm, zero-pad | Unique zero-correction mid; system SPL capped 97 dB (DSP at 18W); Mg/Al cone |
+| DC1 | DS115-8 | D2604/830000 | 1,260–2,636 | 110 | ~70 | 24V | Warm, 100W | Scan-Speak 100W dome; same spacing as DA1 but wider window + indestructible tweeter |
+| DC2 | SB12PFCR25-4 | D2604/830000 | 1,260–2,730 | 113 | ~60 | 24V | Warm, nat. 100W | Cheapest 100W wide-window pairing; nat. fibre + Scan-Speak 100W at €45 |
+| SE1 | DSA90-8 | SEAS H1406-04 | 2,340–3,260 | ~75 | ~74 | 24V | Detailed | 80W oval tweeter; mount portrait (54mm) = 73mm vert spacing (same as B6 TN25) |
+| SE2 | DS115-8 | SEAS H1406-04 | 2,340–2,636 | ~85 | ~76 | 24V | Warm | SEAS 80W; portrait orientation; only 296Hz window — very tight |
 
 ---
 
