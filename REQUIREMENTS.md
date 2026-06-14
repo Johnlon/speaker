@@ -68,7 +68,7 @@ Minimum required columns in every recommendation table:
 | Tweeter | Driver model |
 | Crossover | Frequency or range |
 | Price | Combined £ estimate |
-| PSU | 24V or 29V |
+| PSU | 24V or other standard / common values |
 | Character | Tonal signature (warm / detailed / neutral etc.) |
 | Why | Key reason for inclusion or rank |
 
