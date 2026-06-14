@@ -37,16 +37,16 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | D27TG35-06               | Dome      | 6Ω  | €39.95        | 10+            | 900    | 91.8    | 15    | 104         | 25       | 1,800        | ✓ — 6Ω; large FP                                     |
 | NE25VTS-04               | Dome      | 4Ω  | €39.95        | 10+            | 730    | 91.1    | 15    | 66.3        | 25       | 1,460        | ★ compact FP; similar to ND25FA; higher sens         |
 | D2606/920000             | Dome      | 6Ω  | €39.95        | 10+            | 1,100  | 91.4    | 100   | —           | 25       | 2,200        | ✓ — Scan-Speak quality; 100W                         |
-| DA25BG08-06              | Dome      | 6Ω  | €39.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? need fetch                                         |
-| SB21SDC-C000-4           | Ring Dome | 4Ω  | €39.95        | 1              | —      | —       | —     | —           | 21       | —            | ? need fetch; low stock                              |
+| DA25BG08-06              | Dome      | 6Ω  | €39.95        | 10+            | 710    | 91.6    | 15    | 104         | 25       | 1,420        | ★ Fs=710Hz; same FP class as DX25; 15W (OK at ref)  |
+| SB21SDC-C000-4           | Ring Dome | 4Ω  | €39.95        | 1+7-Jul        | 720    | 91      | 40    | 92          | 21       | 1,440        | ★ ring dome; cheaper SB29 alt; 40W; Fs=720Hz         |
 | NE19VTS-04               | Dome      | 4Ω  | €29.95        | exp 31-12-2026 | —      | —       | —     | —           | 19       | —            | OOS Dec 2026                                         |
 | XT25TG30-04              | Ring Rad  | 4Ω  | £29.90 Falcon | pre-order SI   | 440    | 91.9    | 15    | 104         | 25       | 880          | ✓ (RR1–3) — lowest Fs; widest xover window           |
 | DT-28N                   | Dome      | 8Ω  | €40.95        | 5              | 1,200  | ~92     | 50    | ~72         | 28       | 2,400        | ✓ (B11,B12) — compact wg; 50W                        |
 | SB29SDAC-C000-4          | Ring Dome | 4Ω  | €44.95        | 10             | 600    | ~91     | ~30   | ~104        | 29       | 1,200        | ✓ (S3,RR6) — ring dome construction                  |
-| Discovery D2604/830000   | Dome      | 4Ω  | €44.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? need fetch; Scan-Speak                             |
+| Discovery D2604/830000   | Dome      | 4Ω  | €44.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 3 patterns)             |
 | TW 6 (Markaudio)         | Dome      | 4Ω  | €44.95        | 8              | 1,700  | —       | —     | —           | 25       | 3,400        | ✓ (C4) — min xover above most mid beaming limits     |
 | RST28F-4                 | Dome      | 4Ω  | €46.95        | 10+            | 710    | 93.5    | 80    | 104.8       | 28       | 1,420        | ✓ — 80W; very high sens; large FP                    |
-| SEAS 27TFFNC/CG H1406-04 | Dome      | 4Ω  | €48.95        | 4              | —      | —       | —     | —           | 27       | —            | ? need fetch; SEAS                                   |
+| SEAS 27TFFNC/CG H1406-04 | Dome      | 4Ω  | €48.95        | 4              | —      | —       | —     | —           | 27       | —            | ? URL not found on SI (tried 3 patterns)             |
 | XT25BG60-04              | Ring Rad  | 4Ω  | €49.95        | 10+            | 570    | 92.6    | 15    | 104.5       | 25       | 1,140        | ✓ — ring rad; huge 104.5mm FP concern                |
 | SB26ADC-C000-4           | Dome (Al) | 4Ω  | €52.45        | 10+            | 680    | 90      | 120   | ~104        | 26       | 1,360        | ✓ — 120W; bright Al dome                             |
 
