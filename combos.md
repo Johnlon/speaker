@@ -61,6 +61,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | HiVi TN25 | 3,000 Hz | 54×54sq | 91 | 20 |
 | XT25SC40-04 (ring rad) | 2,036 Hz | 43.9 | 94 | 100 |
 | Markaudio TW 6 | 3,400 Hz | ~90 | — | — |
+| BC25SC06-04 | 2,700 Hz | ~70 | 95.4 | 50 |
 
 ---
 
@@ -137,6 +138,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | TD2 | DS115-8 | TD25F-4 | 1,800–2,636 | 105 | ~58 | 24V | Warm | Semi-horn + paper warmth; wide window (836Hz) but semi-horn off-axis concern |
 | DT1 | DS115-8 | D27TG35-06 | 1,800–2,636 | 110 | ~65 | 24V | Warm, 6Ω | 6Ω tweeter; 104mm FP; same spacing as DA1; 15W (adequate at 10.5W burst) |
 | DT2 | SB12PFCR25-4 | D27TG35-06 | 1,800–2,730 | 113 | ~56 | 24V | Warm nat., 6Ω | 6Ω; same class as DA2 at same price; DA25 wins on Fs (710 vs 900Hz) |
+| BC1 | DSA90-8 | BC25SC06-04 | 2,700–3,260 | 81 | ~55 | 24V / 29V | Detailed | 50W tweeter; 95.4dB → only 1.8W at ref / 3.6W burst; FP ~70mm (est); 81mm spacing |
+| BC2 | DS115-8 | BC25SC06-04 | 2,700 | 93 | ~55 | 24V / 28V | Warm | Xover at DS115 beaming limit (2636Hz) — marginally tight; on-axis only |
+| BC3 | SB12PFCR25-4 | BC25SC06-04 | 2,700–2,730 | 96 | ~47 | 24V / 28V | Warm, nat. | 30Hz xover window only — fixed at ~2,715Hz; cheapest 50W nat. fibre pairing |
 
 ---
 

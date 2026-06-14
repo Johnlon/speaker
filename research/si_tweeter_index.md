@@ -13,7 +13,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | ND25FA-4 | Dome | 4Ω | €15.95 | 10+ | 1,350 | 90 | 20 | 66 | Round | 25 | Dark | 2,700 | ✓ (B10) — compact FP |
 | DC25T-8 | Dome (Ti) | 8Ω | €18.97 | 10+ | 1,468 | 93 | 50 | — | Round | 25 | Silver | 2,936 | ✓ — Ti dome; bright |
 | SB19ST-C000-4 | Dome | 4Ω | €21.45 | 10+ | 980 | 88.5 | 30 | 88 | Round | 19 | Dark | 1,960 | ✓ (S1,S2,A1–A3,A6–A8,B1,B5) — reference |
-| BC25SC06-04 | Dome | 4Ω | €24.95 | 10+ | 1,350 | 95.4 | 50 | ~70 | Round | 25 | ? | 2,700 | ✓ — 50W; high sens |
+| BC25SC06-04 | Dome | 4Ω | €24.95 | 10+ | 1,350 | 95.4 | 50 | ~70 | Round | 25 | ? | 2,700 | ✓ (BC1-3) — 50W; 95.4dB → 1.8W at ref/3.6W burst; FP ~70mm (est) |
 | HiVi TN25 | Dome | 5Ω | €25.45 | 5 | 1,500 | 91 | 20 | 54×54 | Square | 25 | Dark | 3,000 | ✓ (B6) — square FP; tightest spacing |
 | XT25SC90-04 | Ring Rad | 4Ω | £18.20 Falcon | 10+ | 825 | 90.1 | 100 | ~90 | Round | 25 | Dark ring | 1,650 | ✓ (RR4) — 100W; UK stock |
 | OC25SC65-04 | Dome | 4Ω | €26.95 | 10+ | 1,400 | 92.3 | 12 | 41 no plate | — | 25 | ? | 2,800 | ✗ no faceplate; 12W |
@@ -36,7 +36,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | CF18N-4 | Dome (CF) | 4Ω | €36.95 | 6 | 1,100 | 90 | 40 | 58 | Round | 18 | Dark weave | 2,200 | ★ carbon fiber 18mm dome; FP=58mm (3rd smallest); Cutout=37mm; Depth=38mm |
 | D27TG35-06 | Dome | 6Ω | €39.95 | 10+ | 900 | 91.8 | 15 | 104 | Round | 25 | Dark | 1,800 | ✓ — 6Ω; large FP |
 | NE25VTS-04 | Dome | 4Ω | €39.95 | 10+ | 730 | 91.1 | 15 | 66.3 | Round | 25 | Dark | 1,460 | ★ compact FP; similar to ND25FA; higher sens |
-| D2606/920000 | Dome | 6Ω | €39.95 | 10+ | 1,100 | 91.4 | 100 | — | Round | 25 | Dark | 2,200 | ✓ — Scan-Speak quality; 100W |
+| D2606/920000 | Dome | 6Ω | €39.95 | 10+ | 1,100 | 91.4 | 100 | ~104 | Round | 25 | Dark | 2,200 | ✓ — 100W; 6Ω; FP ~104mm (est from SS family); URL 404 on SI |
 | DA25BG08-06 | Dome | 6Ω | €39.95 | 10+ | 710 | 91.6 | 15 | 104 | Round | 25 | Silver | 1,420 | ★ Fs=710Hz; same FP class as DX25; 15W (OK at ref) |
 | SB21SDC-C000-4 | Ring Dome | 4Ω | €39.95 | 1+7-Jul | 720 | 91 | 40 | 92 | Round | 21 | Dark ring | 1,440 | ★ ring dome; cheaper SB29 alt; 40W; Fs=720Hz |
 | NE19VTS-04 | Dome | 4Ω | €29.95 | exp 31-12-2026 | — | — | — | — | Round | 19 | ? | — | OOS Dec 2026 |

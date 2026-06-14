@@ -63,7 +63,9 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | SB12PACR25-4-COAX | 4" | 4Ω | €68.45 | 8 | 55 | 87.5 | 5.0 | 30+10 | 122 | Round | Dark Al | ✓ (B9) — coaxial; SPL ceiling 94dB |
 | Beyma 5MP60/N | 5" | 8Ω | €66.95 | 4 | 63 | 88 | 5.5 | 100(prog) | 150 | Round | ? | ~ PA driver; Fs 2.38×; OD=150mm wide; technically viable but large |
 | SB15NRXC30-8 | 5.9" | 8Ω | €59.95 sale | 3+10-Jul | 38 | 88 | 5 | 50 | ~165 | Round | Nat. fibre | ✗ 5.9" (SB15=15cm); OD too large for desktop baffle |
-| Dayton RS125-4 | 5" | 4Ω | €66.95 | 10+ | 57.2 | 89.9 | 4 | 30 | 125.5 | Round | Silver Al | ★ premium 5" Al; Fs 2.62×; beams 2184Hz; needs DX25 |
+| Dayton RS125-4 | 5" | 4Ω | €66.95 | 10+ | 57.2 | 89.9 | 4 | 30 | 125.5 | Round | Silver Al | ★ premium 5" Al; Fs 2.62×; beams ~2,248Hz; needs xover ≤2,200Hz |
+| Dayton RS125P-4 | 5" | 4Ω | €64.95 | 9 | 70 | 90 | 4 | 30 | 125.5 | Round | Paper/Kevlar | ~ paper/Kevlar composite; Fs 2.14×; same beaming ~2,248Hz; inferior to RS125-4 on Fs |
+| SICA 5 C 1 CS-4 | 5" | 4Ω | €54.95 | 4 | 86 | 91.5 | 2.0 | 50 | 130.5 | Round | Treated paper | ✗ coaxial; Fs=86Hz (1.75×) + Xmax=2.0mm both fail; coax tweeter = Macrofol dome/Neo |
 | Celestion TF0510 | 5" | 8Ω | £30 Thomann | in stock | 106 | 91 | 1.1 | 30 | 136×151 | Non-rd | Dark paper | ✓ (C3) — weakest Fs+Xmax |
 
 ---
@@ -109,11 +111,11 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Dayton DS90-8 / DMA80-4 | OOS; 3" too small |
 | Sure AA-SP15113 | Subwoofer module |
 | Peerless TC9FD00-04 / TC9FD18-08 | 3.5" full-range; OOS / unsuitable |
-| Visaton WS 13 E | 5"; ? evaluate if others exhaust |
+| Visaton WS 13 E | ✗ Fs=83Hz (1.1×) + Xmax=0.75mm — catastrophic failure; 162mm OD; subwoofer replacement driver |
 | HiVi Swan M4N-B | Full-range variant; low spec |
 | SEAS FA8RCND/S | 3" — too small |
-| SICA 5 C 1 CS-4 | 5" coaxial; ? need fetch |
-| SICA 4 L 1 SL-8 | 4"; exp Jul 2026; ? need fetch |
+| SICA 5 C 1 CS-4 | ✗ Fs=86Hz (1.75×) + Xmax=2.0mm both fail; coaxial with Macrofol dome, 130.5mm OD, 4Ω; 4 in stock €54.95 |
+| SICA 4 L 1 SL-8 | ✗ Fs=108.3Hz (1.44×) + Xmax=2.4mm both fail; 8Ω, 100mm OD, paper cone, OOS until Jul 2026 |
 | SICA 3,5 L 1 SL-8 | 3.5"; OOS Jul 2026 |
 | Visaton W 130 x | Subwoofer, not mid |
 | Tang Band T3-2190S | 3" subwoofer; 1 left |

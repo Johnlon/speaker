@@ -27,8 +27,9 @@ Listener seated directly in front, 6–8 ft. Off-axis dispersion matters less; a
 | 1 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V / ~4A | Wide crossover tuning window; ring dome; controlled transients; engineering showcase |
 | 2 | RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | ~£86 | 24V / ~4A | Same mid as S3 but smaller cheaper ring dome; saves ~£6 |
 | 3 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | Warm character; best Fs margin; coherent integration |
-| 4 | DA1 | DS115-8 | DA25BG08-06 | ~£65 | 24V / ~3.8A | Wide xover window (1,420–2,636 Hz); Peerless dome Fs=710Hz |
-| 5 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V / ~3.5A | True point source; zero time offset; perfect phase at crossover; SPL ceiling 94 dB |
+| 4 | DC1 | DS115-8 | D2604/830000 | ~£70 | 24V / ~3.8A | Scan-Speak 100W; widest std-dome window (1,260–2,636 Hz); indestructible tweeter |
+| 5 | DA1 | DS115-8 | DA25BG08-06 | ~£65 | 24V / ~3.8A | Wide xover window (1,420–2,636 Hz); 15W adequate at ref; £5 cheaper than DC1 |
+| 6 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V / ~3.5A | True point source; zero time offset; perfect phase at crossover; SPL ceiling 94 dB |
 
 ---
 
