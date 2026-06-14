@@ -172,6 +172,42 @@ Researched June 2026. All URLs fetched via WebFetch.
 
 ---
 
+## 9. Willys-Hifi (willys-hifi.com) — RECOMMENDED UK SECONDARY
+
+- **Website:** https://willys-hifi.com/
+- **Ships to UK:** Yes — UK-based (Southend-on-Sea area). Family business, 40+ years in trade.
+- **Phone:** +44 1702 523999
+- **Catalogue:** Wide Hi-Fi DIY range from Accuton, Audax, Dayton Audio, Fountek, Hiquphon, Monacor, Morel, Peerless/Vifa, SB Acoustics, Scanspeak. Also crossover components (capacitors, inductors, resistors) and cabinet parts. Estimated 2,000+ drive units in UK stock.
+- **Assessment:** Excellent UK primary alternative to Falcon Acoustics. Stronger range than Falcon on Morel and Dayton Audio lines. Competitive pricing — often below SoundImports on key Peerless/Vifa lines.
+- **Shipping:** UK domestic only (international not confirmed on homepage).
+
+**Confirmed stock and pricing (June 2026):**
+
+| Driver | Role | Willys £ | SI equiv. | Notes |
+|--------|------|----------|-----------|-------|
+| NE19VTS-04 | Tweeter | **£25.20** | €29.95 OOS Dec 2026 | In stock at Willys; SI OOS |
+| SB12PACR25-4 | Mid | **£23.76** | €32.45 OOS Nov 2026 | In stock at Willys; £9 below SI; SI OOS |
+| DX25TG59-04 | Tweeter | **£18.44** | €32.95 (≈£28) | £10 below SI |
+| BC25SC06-04 | Tweeter | **£16.78** | €24.95 (≈£21) | £4 below SI |
+| XT25SC90-04 | Tweeter | **£19.52** | — | Similar to Falcon £18.20 |
+| XT25TG30-04 | Tweeter | **£31.95** | €49.95 (≈£43) | Falcon £29.90 is cheaper; Willys middle option |
+| D27TG-35-06 | Tweeter | **£27.52** | €39.95 (≈£34) | Slightly above Falcon £28.35 |
+| BC25SC55-04 | Tweeter | **£16.65** | €? SI | Truncated FP, 100W, Fs 1,400 Hz |
+| H26TG45-06 | Tweeter | **£31.80** | — | Waveguide design; 96 dB, 100W |
+| SB29SDNC-C000-4 | Tweeter | **£56.64** | — | 72mm FP, 95.5 dB, 80W; cloth dome |
+| Morel MDT12 | Tweeter | **£39.50** | €? SI | 54mm FP, 80W, 19mm depth |
+| SB12MNRX2-25-4 | Mid | **£48.10** | €61.95 (≈£53) | £5 below SI |
+
+**Category URLs:**
+- https://willys-hifi.com/collections/vifa-peerless-tweeters
+- https://willys-hifi.com/collections/dome-tweeters
+- https://willys-hifi.com/collections/midrange-speakers
+- https://willys-hifi.com/collections/sb-acoustics-drive-units-all
+- https://willys-hifi.com/collections/dayton-audio-drive-units
+- https://willys-hifi.com/collections/new-arrivals
+
+---
+
 ## Summary Table
 
 | Supplier | Ships UK | Budget-friendly | Hi-Fi DIY range | Recommended |
@@ -181,6 +217,7 @@ Researched June 2026. All URLs fetched via WebFetch.
 | Blue Aran (UK) | Yes (domestic) | Yes (PA-grade) | Poor (PA focus) | Not for this project |
 | HiFi Collective (UK) | Yes (domestic) | No (premium) | Very good | Over budget |
 | Falcon Acoustics (UK) | Yes (domestic) | Yes (competitive on Peerless/SB Acoustics) | Very good | **SECONDARY — use for UK orders** |
+| Willys-Hifi (UK) | Yes (domestic) | Yes (often below SI on Peerless/Vifa) | Excellent | **SECONDARY — strong on Morel, Dayton, Peerless** |
 | Thomann UK | Yes | N/A | Poor (PA/musical instruments) | No |
 | Parts Express (USA) | Yes (international) | No (shipping+customs overhead) | Very good | Last resort only |
 | Axiomedia (Italy) | Unknown | No (PA/expensive) | Poor (PA focus) | No |

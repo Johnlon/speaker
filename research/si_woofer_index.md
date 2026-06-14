@@ -33,7 +33,7 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | SB13PFCR25-8 | 5" | 8Ω | €31.45 | 7 | ~44 | ~87 | 4.5 | 30 | ~130 | Round | Nat. fibre | ~ 8Ω variant of 5" PFCR |
 | SB12PAC25-4 | 4" | 4Ω | €31.45 | 4 | — | — | — | — | ~122 | Round | Dark Al | ? URL not found on SI (tried 2 patterns); anodised Al cone (same PAC family as PACR Dark Al) |
 | Markaudio CHN-70 | 4" | 8Ω | €32.45 | 2 | 71.6 | 86.7 | 4 | 16 | 125.1 | Round | Blue paper | ✗ 16W rated; needs 27W at burst — underpowered |
-| SB12PACR25-4 | 4" | 4Ω | €32.45 | exp Nov 2026 | 52.5 | 87 | 5.0 | 30 | 122 | Round | Dark Al | ✓ — OOS Nov 2026 |
+| SB12PACR25-4 | 4" | 4Ω | €32.45 / £23.76 Willys | SI OOS Nov 2026; Willys UK stock | 52.5 | 87 | 5.0 | 30 | 122 | Round | Dark Al | ✓ — OOS at SI; available Willys-Hifi UK £23.76 |
 | Visaton SC 13 | 5" | 8Ω | €32.95 | 8 | 78 | 90 | 0.75 | 40 | 162 | Round | Cellulose | ✗ Xmax 0.75mm fatal; OD 162mm |
 | Dayton PA130-8 | 5" | 8Ω | €33.45 | 10+ | 83.4 | 88.2 | 2.0 | 50 | 132 | Round | Paper | ✓ (C2) — Xmax 2mm; Fs 1.8× |
 | Dayton ND91-4 | 3.5" | 4Ω | €33.95 | 10+ | ~72 | ~88 | 4.6 | — | ~95 | Round | Paper | ✓ (B2) — compact; high Xmax |

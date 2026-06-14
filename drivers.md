@@ -20,6 +20,9 @@ Formula: P_needed = (2.83² / R) × 10^((SPL_target − sensitivity) / 10)
 | DSA90-8 | Mid | 8Ω | 84.7 dB | 21.4W | 42.8W | ~31W | 24V / 29V |
 | TCP115-8 | Mid | 8Ω | 81.9 dB | 40.7W | 81.4W | ~31W | 28V / 36V* |
 | SB19ST | Tweeter | 4Ω | 88.5 dB | 17.8W | 35.5W | ~61W | 24V / 28V |
+| NE19VTS-04 | Tweeter | 4Ω | 90.4 dB | 11.5W | 23W (>20W rated) | ~61W | 24V / 28V |
+| SB29SDNC | Tweeter | 4Ω | 95.5 dB | 3.6W | 7.1W | ~61W | 24V / 28V |
+| Morel MDT12 | Tweeter | 8Ω | 89 dB | 7.9W | 15.9W | ~31W | 24V / 28V |
 
 Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At sub burst (80W): ~120W peak (~5A at 24V) — within LRS-150-24 (6.5A) for music content. Capacitor bank absorbs transient peaks.
 
@@ -231,6 +234,45 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Why interesting:** 66.3 mm faceplate is the same compact class as ND25FA-4 (66 mm) — significantly smaller than the 88 mm SB19ST and the 104 mm DX25TG59-04 family. Compact footprint means tighter centre spacing with any mid driver. Sensitivity at 91.1 dB is 2.6 dB higher than ND25FA-4 (90 dB) — needs a little more DSP attenuation but draws less power. Neodymium motor.
 - **vs ND25FA-4 (B10 pairing):** Near-identical faceplate OD. NE25VTS-04 is 1.1 dB higher sensitivity, €24 more expensive. Both 25 mm domes — same dispersion characteristic. Use NE25VTS-04 if ND25FA-4 is out of stock; otherwise ND25FA-4 is better value.
 - **Concern:** 15W power rating — lowest alongside XT25TG30-04 and XT25BG60-04. Fine at project SPL (9.3W at burst), but driver cannot be pushed harder.
+
+### Peerless by Tymphany NE19VTS-04 — Candidate (compact 19mm, UK stock Willys-Hifi)
+- Dome: 19 mm silk (neodymium, copper cap) | Faceplate OD: **52 mm** | Cutout: 38 mm | Depth: 35.5 mm | Impedance: 4Ω
+- Sensitivity: **90.4 dB @ 2.83V/1m** | Power: **20W RMS** | Fs: **770 Hz** | Frequency response: 700–20,000 Hz
+- Rear aluminium chamber (heat sink) | No ferrofluid | Silk dome, dark
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/vifa-peerless-ne19vts-04-tweeter) | [SoundImports](https://www.soundimports.eu/en/peerless-by-tymphany-ne19vts-04.html) (OOS Dec 2026)
+- Willys-Hifi price: **£25.20** (UK, in stock June 2026) | SoundImports: €29.95 (OOS Dec 2026)
+- **DSP correction vs TB sub (85 dB ref):** −5.4 dB pad needed.
+- **Power at reference:** 98 dB → 11.5W (57% of 20W ✓) | burst 101 dB → 23W — exceeds 20W rating. **DSP limiter mandatory at ≤20W.** Max tweeter SPL = 90.4 + 10×log(20/2) = **100.4 dB** (0.6 dB below sub burst ceiling — inaudible at transients).
+- **PSU:** 24V RMS / 28V burst (sub-limited; tweeter DSP-capped at 20W).
+- **Centre spacing (FP OD 52mm):** DSA90-8 (92mm OD) → 72mm | DS115-8 (115.6mm) → 83.8mm | SB12PFCR25-4 (~122mm) → 87mm
+- **Why considered:** 52mm FP is the 2nd most compact dome tweeter in the field (after XT25SC40-04 ring rad at 43.9mm). 19mm dome = same off-axis dispersion class as SB19ST. Warm silk character. UK stock now.
+- **Vs SB19ST-C000-4:** FP 52mm vs 88mm — significantly more compact. Same 19mm dome. SB19ST has 1.9 dB higher sensitivity (less power needed), 30W vs 20W rating, cheaper (€21.45 / £18 Falcon). NE19VTS-04 wins only on faceplate compactness.
+
+### SB Acoustics SB29SDNC-C000-4 — Candidate (compact 29mm cloth dome, Willys-Hifi)
+- Dome: 29 mm cloth (textile, dark) | Faceplate OD: **72 mm** | Impedance: 4Ω
+- Sensitivity: **95.5 dB @ 2.83V/1m** | Power: **80W RMS** | Fs: **630 Hz** | Sd: 9.6 cm²
+- Neodymium motor | Re: 3.0Ω | VC diameter: 29 mm
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb29sdnc-c000-4-tweeter) | [SB Acoustics product page](https://sbacoustics.com/product/sb29sdnc-c000-4-fabric/)
+- Willys-Hifi price: **£56.64** (UK, in stock June 2026)
+- **DSP correction vs TB sub (85 dB ref):** −10.5 dB pad needed.
+- **Power at reference:** 98 dB → 3.6W (4.5% of 80W) | burst 101 dB → 7.1W (8.9% ✓). Effectively indestructible at project SPL levels.
+- **PSU:** 24V / 28V (sub-limited; tweeter barely loaded).
+- **Why considered:** 72mm FP is compact (same as SB26STCN). Fs 630 Hz → min xover 1,260 Hz — second widest crossover window of any cloth dome candidate. 80W rating gives enormous headroom. Cloth dome = warm character.
+- **Vs SB26STCN-C000-4:** Both 72mm FP. SB29SDNC: 95.5 dB (3.5 dB more sensitive), 80W vs 120W, Fs 630 vs 950 Hz (better margin), 29mm dome vs 25mm (narrower dispersion), £56.64 vs ~£31 (significantly more expensive). Use SB29SDNC only if the lower Fs crossover flexibility justifies the cost.
+- **Concern:** 29mm dome is wider than the ≤19mm ideal for off-axis dispersion. At 60° kitchen position, output above 8–10 kHz is slightly lower than a 19–25mm dome. Same concern as RST28F-4.
+
+### Morel MDT12 — Candidate (compact FP, ultra-shallow, Willys-Hifi)
+- Dome: 28 mm (1-1/8") textile (dark) | Faceplate OD: **54 mm** | Impedance: 8Ω
+- Sensitivity: **89 dB @ 2.83V/1m** | Power: **80W RMS** | Fs: **1,000 Hz** | Depth: **19 mm**
+- Neodymium motor | Chamberless design | Frequency response: 1,800–25,000 Hz
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/morel-mdt12-soft-dome-tweeter) | [SoundImports](https://www.soundimports.eu/en/morel-mdt-12.html)
+- Willys-Hifi price: **£39.50** (UK, in stock June 2026)
+- **DSP correction vs TB sub (85 dB ref):** −4.0 dB pad needed.
+- **Power at reference (8Ω):** 98 dB → 7.9W (10% of 80W ✓) | burst 101 dB → 15.9W (20% ✓). Large headroom.
+- **Available @ 24V into 8Ω:** ~31W. 31W >> 15.9W needed ✓.
+- **PSU:** 24V / 28V (sub-limited).
+- **Why considered:** 54mm FP is the 3rd most compact dome in the field (after NE19VTS-04 at 52mm and XT25SC40-04 ring rad at 43.9mm). Extremely shallow at 19mm depth — barely protrudes from baffle. 80W with chamberless design keeps rear volume minimal. 8Ω = lower current draw.
+- **Concern:** 28mm dome → same off-axis dispersion concern as RST28F-4. Fs 1,000 Hz → min xover 2,000 Hz — works at 2,800 Hz target with 800 Hz margin (adequate but not generous). Response specified from 1,800 Hz; only 1,000 Hz below crossover.
 
 ### Dayton Audio ND20FA-6 — Candidate
 - Dome: 19 mm soft dome | Faceplate OD: 45 mm | Impedance: 6Ω
