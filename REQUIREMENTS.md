@@ -199,9 +199,9 @@ The Mean Well LRS-150-24 supplies 6.5A / 156W at 24V. At standard 24V combos wit
 ## Crossover — Integration and Listening Quality
 
 - All three drivers must sum flat and in-phase at the crossover points — no audible suck-outs or brightness peaks at the transitions
-- Crossover targets: sub LP 150 Hz (LR24) · mid BP 150–2,800 Hz · tweeter HP 2,800 Hz (LR48)
-- Per-pairing crossover must be checked: the mid's beaming frequency sets the upper limit; the tweeter's Fs (×2) sets the lower limit — these must not conflict
-- Both crossover points should be well away from driver resonances — Fs margin of ≥2× is the minimum for the sub/mid crossover; ≥2× for the mid/tweeter crossover
+- **Sub/mid crossover:** approximately 150 Hz (LR24) — exact point derived from the sub's and mid's Fs margins, not owner-specified
+- **Mid/tweeter crossover:** no fixed target — it is defined entirely by the chosen drivers: the mid's beaming frequency sets the upper limit; the tweeter's Fs (×2) sets the lower limit. The per-pairing crossover window is recorded in combos.md; the DSP is set within that window
+- Both crossover points should be well away from driver resonances — Fs margin of ≥2× is the minimum for both transitions
 - The goal is a system that sounds seamless: no listener awareness of individual drivers, natural and uncoloured across the full range at any volume level
 
 ---

@@ -118,7 +118,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP correction vs TB sub (85 dB ref):** −5.1 dB pad needed.
 - **Power at reference:** 98 dB → 12.3W (12.3% of 100W ✓) | burst 101 dB → 24.5W (24.5% ✓). Large power headroom.
 - **Why liked:** Fs 825 Hz → minimum crossover 1,650 Hz — works with all mid drivers. 100W power rating is the most robust of any tweeter in the field. £18.20 is the second cheapest tweeter after ND20FA-6. Ring radiator off-axis characteristics similar to XT25TG30-04.
-- **Vs XT25TG30-04:** Higher power headroom (100W vs 15W). Lower Fs flexibility (1,650 Hz vs 880 Hz min xover). Lower sensitivity (90.1 vs 91.9 dB). Cheaper (£18.20 vs £29.90). For standard 4" mids where crossover is 2,000–2,800 Hz, the SC90 is perfectly adequate and £11.70 cheaper.
+- **Vs XT25TG30-04:** Higher power headroom (100W vs 15W). Lower Fs flexibility (1,650 Hz vs 880 Hz min xover). Lower sensitivity (90.1 vs 91.9 dB). Cheaper (£18.20 vs £29.90). For mid/tweeter windows above 1,650 Hz (all standard 4" mids), the SC90 is perfectly adequate and £11.70 cheaper.
 
 ### SB Acoustics SB19ST-C000-4 — Candidate (top-ranked)
 - Dome: 19 mm textile | Faceplate OD: 88 mm round | Impedance: 4Ω
@@ -137,7 +137,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/sb-acoustics-sb26adc-c000-4.html) (specs fetched June 2026)
 - SoundImports price: €52.45 | Stock (June 2026): 10+
 - **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed
-- **What's good:** 120W RMS — effectively indestructible. Fs 680 Hz gives comfortable margin below 2,800 Hz crossover.
+- **What's good:** 120W RMS — effectively indestructible. Fs 680 Hz → min crossover 1,360 Hz.
 - **Concern:** Aluminium dome sounds brighter/harder than the warm fabric character this project targets. At €52.45 it takes most of the £75 budget, leaving little for the mid.
 
 ### HiVi TN25 — Candidate (owner-accepted visual)
@@ -188,9 +188,9 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/dayton-audio-rst28f-4.html) (specs fetched June 2026)
 - **Datasheet:** [research/dayton_audio_rst28f-4.pdf](research/dayton_audio_rst28f-4.pdf) | [original URL](https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/RST28F-4/pdf_Dayton%20Audio_RST28F-4_1.pdf) (image-based PDF, downloaded June 2026)
 - SoundImports price: €46.95 | Stock: 10+
-- **Why considered:** 80W RMS is the highest power rating in the tweeter field by far — effectively indestructible. Fs 710 Hz gives excellent margin below 2,800 Hz crossover (3.94×). Very high sensitivity at 93.5 dB means only 5.6W needed to match reference — amp is virtually always loafing.
+- **Why considered:** 80W RMS is the highest power rating in the tweeter field by far — effectively indestructible. Fs 710 Hz → min crossover 1,420 Hz. Very high sensitivity at 93.5 dB means only 5.6W needed to match reference — amp is virtually always loafing.
 - **DSP correction vs TB sub (85 dB ref):** −8.5 dB pad needed. Large attenuation, but the JAB5 handles this in DSP without issue.
-- **Trade-off — dome size:** 28 mm dome is wider than the ≤19 mm ideal stated in goals.md. Wider dome = narrower dispersion above ~6 kHz. At the 60° kitchen position, output above 8–10 kHz may be 3–6 dB lower than on-axis compared to a 19 mm dome. The LR48 48 dB/oct crossover at 2,800 Hz rolls this off sharply anyway; the practical impact is on air and presence rather than tone.
+- **Trade-off — dome size:** 28 mm dome is wider than the ≤19 mm ideal stated in REQUIREMENTS.md. Wider dome = narrower dispersion above ~6 kHz. At the 60° kitchen position, output above 8–10 kHz may be 3–6 dB lower than on-axis compared to a 19 mm dome. The practical impact is on air and presence rather than tone.
 - **Trade-off — price:** €46.95 leaves ~£28 for the midrange within the combined £75 budget. Workable with DS115-8 (€36.95 + €46.95 = €83.90 ≈ £72) or HiVi B4N (€22.45 + €46.95 = €69.40 ≈ £60).
 
 ### Peerless by Tymphany DX25TG59-04 — Candidate (reinstated)
@@ -229,7 +229,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/ne25vts-04.html) (fetched June 2026)
 - SoundImports price: **€39.95** | Stock (June 2026): 10+
 - **DSP correction vs TB sub (85 dB ref):** −6.1 dB pad needed.
-- **Fs check:** 730 Hz → min crossover 1,460 Hz. Comfortable 1.93× margin at 2,800 Hz project target.
+- **Fs check:** 730 Hz → min crossover 1,460 Hz.
 - **Power at reference (98 dB):** 4.7W (31% of 15W ✓). At burst (101 dB): 9.3W (62% ✓). Headroom adequate; no DSP limiter required at project SPL levels.
 - **Why interesting:** 66.3 mm faceplate is the same compact class as ND25FA-4 (66 mm) — significantly smaller than the 88 mm SB19ST and the 104 mm DX25TG59-04 family. Compact footprint means tighter centre spacing with any mid driver. Sensitivity at 91.1 dB is 2.6 dB higher than ND25FA-4 (90 dB) — needs a little more DSP attenuation but draws less power. Neodymium motor.
 - **vs ND25FA-4 (B10 pairing):** Near-identical faceplate OD. NE25VTS-04 is 1.1 dB higher sensitivity, €24 more expensive. Both 25 mm domes — same dispersion characteristic. Use NE25VTS-04 if ND25FA-4 is out of stock; otherwise ND25FA-4 is better value.
@@ -272,7 +272,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Available @ 24V into 8Ω:** ~31W. 31W >> 15.9W needed ✓.
 - **PSU:** 24V / 28V (sub-limited).
 - **Why considered:** 54mm FP is the 3rd most compact dome in the field (after NE19VTS-04 at 52mm and XT25SC40-04 ring rad at 43.9mm). Extremely shallow at 19mm depth — barely protrudes from baffle. 80W with chamberless design keeps rear volume minimal. 8Ω = lower current draw.
-- **Concern:** 28mm dome → same off-axis dispersion concern as RST28F-4. Fs 1,000 Hz → min xover 2,000 Hz — works at 2,800 Hz target with 800 Hz margin (adequate but not generous). Response specified from 1,800 Hz; only 1,000 Hz below crossover.
+- **Concern:** 28mm dome → same off-axis dispersion concern as RST28F-4. Fs 1,000 Hz → min xover 2,000 Hz. Response specified from 1,800 Hz — per-pairing window in combos.md.
 
 ### Dayton Audio ND20FA-6 — Candidate
 - Dome: 19 mm soft dome | Faceplate OD: 45 mm | Impedance: 6Ω
@@ -298,14 +298,14 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Sensitivity: **94 dB @ 2.83V/1m** | Power: **100W RMS** | Fs: **1,018 Hz** | Frequency response: to 20,000+ Hz
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/xt25sc40-04.html) (fetched June 2026)
 - SoundImports price: **€29.95** | Stock (June 2026): 10+
-- **Min crossover:** 2× Fs = **2,036 Hz** — comfortably below 2,800 Hz project target.
+- **Min crossover:** 2× Fs = **2,036 Hz**.
 - **DSP correction vs TB sub (85 dB ref):** −9.0 dB pad needed (tweeter is 9 dB hotter than sub reference).
 - **Power at reference (98 dB):** 10^((98−94)/10) = **2.5W** (2.5% of 100W — minimal draw). At burst (101 dB): **5.0W** (5% of 100W). 100W power rating is effectively indestructible in this application.
 - **Why this matters — spacing:** 43.9 mm faceplate is the smallest tweeter OD in the entire field by a wide margin. With DSA90-8 (92 mm OD): centre spacing = (92 + 43.9) / 2 = **68 mm** — new project minimum (beats B6 at 73 mm AND is a ring radiator, not a square dome). Pairing XC1.
 - **Ring radiator advantage:** Wide controlled off-axis dispersion — relevant to 60° kitchen geometry. Same advantage as XT25TG30-04 and XT25SC90-04 but in a dramatically smaller package.
 - **Sensitivity mismatch:** 94 dB vs DSA90-8's 84.7 dB = 9.3 dB differential. The ADAU1701 DSP handles this comfortably; the tweeter channel simply receives 9 dB less gain. No audible artefact.
 - **Concern — small diaphragm:** Ring element is smaller than XT25SC90-04 (90 mm FP). Verify polar plots if available. Very small annular ring at 43.9 mm may have narrower dispersion than the larger ring radiators above 10 kHz — but below 10 kHz all ring rads are wide. Kitchen use is dominated by lower treble (2.8–8 kHz) where dispersion should be fine.
-- **vs XT25SC90-04:** SC40 has 43.9 mm FP vs SC90's ~90 mm. SC40 at 68 mm spacing beats SC90 at 91 mm. Both 100W rated. SC90 has lower Fs (825 Hz vs 1,018 Hz) but both are well within 2,800 Hz project target. SC40 costs same (€29.95 vs £18.20). SC40 wins on spacing; SC90 wins on Fs margin.
+- **vs XT25SC90-04:** SC40 has 43.9 mm FP vs SC90's ~90 mm. SC40 at 68 mm spacing beats SC90 at 91 mm. Both 100W rated. SC90 has lower Fs (825 Hz vs 1,018 Hz) — both give adequate headroom above min crossover for all standard 4" mids. SC40 costs same (€29.95 vs £18.20). SC40 wins on spacing; SC90 wins on Fs margin.
 
 ### SB Acoustics SB21SDC-C000-4 — Candidate (compact ring dome)
 - Type: **Ring dome** (SB Acoustics ring construction, annular diaphragm) | Dome: 21 mm | Faceplate OD: **92 mm** | Impedance: 4Ω
@@ -370,7 +370,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **1,100 Hz** | Frequency response: 2,500–20,000 Hz
 - Qts: 1.2 | Qms: 2.0 | Qes: 3.1 | Neodymium motor | Ferrofluid VC cooling
 - **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-cf18n-4.html) (fetched June 2026) | Price: **€30.54** (sale, was €36.95) | Stock (Jun 2026): **pre-order / OOS** (was 6 units; gone OOS)
-- **Min crossover:** 2× Fs = **2,200 Hz** — comfortable margin at 2,800 Hz. Response starts 2,500 Hz; LR48 at 2,800 Hz provides 24 dB protection at 2,500 Hz.
+- **Min crossover:** 2× Fs = **2,200 Hz**. Response starts 2,500 Hz — crossover must be placed above this; LR48 slope provides ample mechanical protection below it.
 - **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed.
 - **Power at reference (98 dB):** 6.3W (15.8% of 40W). At burst (101 dB): 12.6W (31.5%). Well within 40W rating.
 - **Why this stands out — spacing:** 58mm FP OD is the 3rd smallest in the entire candidate field, after XT25SC40-04 (43.9mm) and HiVi TN28-B (47.6mm). With DSA90-8 (92mm OD): spacing = (92+58)/2 = **75mm** — between TN1 (70mm) and B6 (73mm). With SB12PFCR25-4 (~122mm): **90mm spacing**.
@@ -385,7 +385,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS / 200W max** | Fs: **1,170 Hz** | Frequency response: 2,500–30,000 Hz
 - Double chamber magnet system | Sonolex precoated lightweight fabric
 - **Source:** [SoundImports](https://www.soundimports.eu/en/seas-27tffnc-cg.html) (fetched June 2026) | Price: **€40.45** (sale, was €48.95) | Stock (Jun 2026): **pre-order / OOS** (was 4 units; gone OOS)
-- **Min crossover:** 2× Fs = **2,340 Hz** — comfortable margin at 2,800 Hz crossover. Freq response starts 2,500 Hz: LP crossover at 2,800 Hz gives ~6 dB order protection at 2,500 Hz (LR48 gives 24 dB protection at 2,500 Hz — ample).
+- **Min crossover:** 2× Fs = **2,340 Hz**. Response specified from 2,500 Hz — crossover must be placed above this; LR48 slope provides ample mechanical protection below it.
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
 - **Power at reference (98 dB):** 5.0W (6.25% of 80W). At burst (101 dB): **10.0W** (12.5%). Well within 80W/200W rating.
 - **Why interesting — spacing:** Oval 69.7×54mm faceplate. Mounted portrait (54mm axis vertical): effective vertical dimension = 54mm → centre spacing with DSA90-8 (92mm OD) = (92+54)/2 = **73mm** — matching B6 (TN25 at 73mm) as joint tightest spacing, but this is a 80W tweeter. If mounted landscape (69.7mm vertical), spacing becomes (92+69.7)/2 = 81mm.
@@ -399,7 +399,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS** | Fs: **870 Hz** | Xmax: 0.6 mm | Sd: 6.2 cm²
 - CCAW voice coil (0.33 g moving mass) | Saturation-controlled motor | Internal pressure equalisation
 - **Source:** [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb26st-c000-5.html) | [SB Acoustics](https://sbacoustics.com/product/sb26st-c000-5/) | Price: **€30.95** | Stock (June 2026): 10+
-- **Min crossover:** 2× Fs = **1,740 Hz** — comfortable margin below 2,800 Hz project target.
+- **Min crossover:** 2× Fs = **1,740 Hz**.
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
 - **Power at reference (98 dB):** 5.0W (6.3% of 80W). At burst (101 dB): **10.0W** (12.5%). Effectively indestructible in this application.
 - **5Ω note:** JAB5 at 24V → ~49W into 5Ω. Massively above the 10W needed at burst.
@@ -435,12 +435,91 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - SoundImports price: €17.95 (OOS) | **Amazon UK: in stock** (price not confirmed — Amazon page returned error June 2026)
 - **DSP correction vs TB sub (85 dB ref):** −9.0 dB pad needed. Largest attenuation of any tweeter candidate.
 - **Power check:** At reference (98 dB): 5.0W needed. At woofer max (101 dB): 10.0W needed. Both within 20W rating. ✓
-- **Crossover minimum:** Fs 1350 Hz. Dayton's datasheet states crossover "as low as 2,500 Hz" is safe. Standard 2× rule gives 2,700 Hz. LR24 at 2,500 Hz is within Dayton's spec but tight; 2,800 Hz is more comfortable.
+- **Crossover minimum:** Fs 1350 Hz. Dayton's datasheet states crossover "as low as 2,500 Hz" is safe. Standard 2× rule gives 2,700 Hz minimum crossover.
 - **Dome colour:** Not explicitly stated. "Treated silk dome" material. Likely grey/natural silk — confirm from product photo before ordering.
 - **Faceplate:** 104 mm round — same as DX25TG59-04, D27TG35-06, RST28F-4. Widest footprint class; baffle width impact same as those drivers.
 - **Key concern — off-axis dispersion:** The waveguide concentrates HF output on-axis. From the datasheet FR plot, 30° off-axis (green) begins rolling off above ~7 kHz; 45° (blue) rolls off above ~5 kHz. At the project's 60° off-axis kitchen listening position, high-frequency output above 4–5 kHz will be noticeably attenuated. The SB19ST (no waveguide, 19 mm dome) has significantly better off-axis response. **If the speaker is aimed directly at the listener this concern is reduced; if it points straight ahead on the counter, HF at 60° will sound dull.**
 - **Upside of waveguide:** Reduces early reflections from kitchen surfaces directly behind and beside the listening position — can improve midrange clarity in a reflective kitchen. A trade-off, not a pure negative.
-- **Vs SB19ST:** Cheaper (if similar Amazon price), higher sensitivity (needs less power), but: larger faceplate (104 vs 88 mm), narrower HF dispersion, higher Fs (forces ≥2,500 Hz crossover vs SB19ST's comfortable 2,800 Hz). SB19ST remains better choice for off-axis listening unless speaker can be aimed.
+- **Vs SB19ST:** Cheaper (if similar Amazon price), higher sensitivity (needs less power), but: larger faceplate (104 vs 88 mm), narrower HF dispersion, higher Fs (min crossover 2,700 Hz vs SB19ST's 1,960 Hz). SB19ST remains better choice for off-axis listening unless speaker can be aimed.
+
+### SB Acoustics SB21RDCN-C000-4 ★ — most compact ring radiator, neodymium (Willys-Hifi)
+- Type: Ring radiator | Dome: **21 mm fabric ring** | Faceplate OD: **58.0 mm** round | Cutout: **38.25 mm** | Depth: **22.7 mm total** (3.2 mm protrusion, ~19.5 mm behind baffle) | Impedance: 4Ω | Re: 3.1Ω | Le: 0.04 mH
+- Sensitivity: **89.5 dB @ 2.83V/1m** | Power: **40W RMS** (IEC HP Butterworth 2600 Hz 12dB/oct) | Fs: **850 Hz**
+- Sd: 4.6 cm² | VC dia: 20.4 mm | VC height: 1.5 mm | Air gap: 2.0 mm | Xlin (p-p): 0.5 mm | Mms: 0.25 g | BL: 1.3 Tm | Qms: 2.71 | Qes: 2.45 | Qts: 1.28 | Flux density: 0.9 T
+- Dome colour: **Dark** (black ring fabric, confirmed from SB Acoustics datasheet photo)
+- Net weight: **0.06 kg** (neodymium — lightest tweeter candidate)
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter) | **Datasheet:** [research/sb_acoustics_sb21rdcn-c000-4.pdf](research/sb_acoustics_sb21rdcn-c000-4.pdf) | [SB Acoustics URL](https://sbacoustics.com/wp-content/uploads/2020/04/SB21RDCN-C000-4.pdf) | Price: **£41.60** | Stock (Jun 2026): UK in stock
+- **Min crossover:** 2× Fs = **1,700 Hz** — comfortable 1,100 Hz margin below project target.
+- **DSP correction vs TB sub (85 dB ref):** −4.5 dB attenuation.
+- **Power at reference (4Ω, 98 dB):** 10^((98−89.5)/10) = **7.1W** (17.7% of 40W ✓). At burst (101 dB): **14.1W** (35.3% of 40W ✓). Well within rating.
+- **Available @ 24V into 4Ω:** ~61W >> 14.1W ✓.
+- **Centre spacing (FP OD 58 mm):** DSA90-8 (92mm OD) → **75mm** | DS115-8 (115.6mm OD) → **87mm** | SB12PFCR25-4 (~122mm OD) → **90mm**
+- **FR at 60° off-axis:** Ring radiator maintains wide directivity. On-axis flat ~1kHz–15kHz; 30° off-axis tracks to ~5kHz; 60° off-axis tracks to ~3kHz then diverges gradually. At 2,800 Hz the 60° response is very close to on-axis. Excellent for kitchen listening geometry.
+- **Why this stands out — compactness:** 58mm FP is among the smallest in-stock tweeters in the field. For any mid ≤122mm, SB21RDCN keeps centre spacing ≤90mm.
+- **Why this stands out — technology:** Ring radiator inherently produces wider off-axis HF than a conventional dome of the same diaphragm area. At the kitchen 60° position this matters.
+- **Why this stands out — depth:** 22.7mm total depth (19.5mm behind baffle) — among the shallowest in the field, comparable to MDT12 (19mm). No rear-chamber clearance concern.
+- **Concern:** Qts 1.28 is high — typical for ring-radiator and high-Fs tweeters. Not a concern in normal use above the min crossover.
+- **Pairings enabled (new combo IDs):**
+  - **XCR1:** DSA90-8 + SB21RDCN-C000-4 → 75mm spacing, window 1,700–3,260 Hz (1,560 Hz wide)
+  - **XCR2:** DS115-8 + SB21RDCN-C000-4 → 87mm spacing, window 1,700–2,636 Hz (936 Hz wide)
+  - **XCR3:** SB12PFCR25-4 + SB21RDCN-C000-4 → 90mm spacing, window 1,700–2,730 Hz (1,030 Hz wide)
+
+### Scan-Speak Discovery D2604/833000 ★ — lowest Fs dome in field, tuned rear chamber (Willys-Hifi)
+- Type: Textile dome | Dome: **26 mm dark textile, wide surround** | Faceplate OD: **104.2 mm** round | Cutout: **74 mm** | Depth: **~55 mm total** (~5 mm protrusion, ~50 mm behind baffle; tuned rear chamber — much deeper than D2604/830000's 25.4 mm) | Impedance: 4Ω | Re: 2.8Ω | Le: 0.04 mH
+- Sensitivity: **93 dB @ 2.83V/1m** | Power: **100W** (IEC 18.4) / **240W** (IEC 18.2) | Fs: **475 Hz**
+- Sd: 8 cm² | Mms: 0.42 g | Cms: 0.27 mm/N | Rms: 0.49 kg/s | BL: 2.2 Tm | Qms: 2.55 | Qes: 0.71 | Qts: 0.55 | Vas: 0.02 L
+- Operating frequency: **2,500–20,000 Hz** | Scan-Speak recommended crossover: **2nd order HP Butterworth 2.5 kHz** (our 2,800 Hz LR48 is within specification)
+- Dome colour: **Dark** (dark textile, confirmed from Scan-Speak datasheet photo)
+- Net weight: 0.8 kg | 5× Ø4.2mm mounting holes on 92mm pitch circle at 72° spacing
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/scanspeak-d2604-833000-tweeter) | **Datasheet:** [research/scanspeak_d2604-833000.pdf](research/scanspeak_d2604-833000.pdf) | [Scan-Speak URL](https://www.scan-speak.dk/datasheet/pdf/d2604-833000.pdf) | Price: **£41.88** | Stock (Jun 2026): UK in stock
+- **Min crossover:** 2× Fs = **950 Hz** — lowest of any dome candidate in the project field. Scan-Speak confirms operating from 2,500 Hz; our 2,800 Hz LR48 crossover is within spec.
+- **DSP correction vs TB sub (85 dB ref):** −8.0 dB attenuation.
+- **Power at reference (4Ω, 98 dB):** 10^((98−93)/10) = **3.2W** (3.2% of 100W). At burst (101 dB): **6.3W** (6.3%). Effectively indestructible.
+- **Available @ 24V into 4Ω:** ~61W >> 6.3W ✓.
+- **Centre spacing (FP OD 104.2 mm):** DSA90-8 (92mm) → **98mm** | DS115-8 (115.6mm) → **110mm** | SB12PFCR25-4 (~122mm) → **113mm**
+- **Why this stands out:** Lowest Fs dome enables widest crossover window. If a 5" mid (beaming ~2,200 Hz) is considered, D2604/833000 is the only dome compatible. At 104mm FP it bolt-interchanges with SB29RDNC, R2604/833000, SEAS H1189-06 without baffle changes.
+- **Critical depth concern:** ~55mm total depth (50mm behind baffle). The tuned rear chamber is structural — cannot be shortened. Plan for dedicated tweeter chamber ≥55mm deep or recessed tweeter rebate.
+- **vs D2604/830000 (£35.65 Willys, in index):** 830000 = Fs ~630 Hz (min xover ~1,260 Hz), 92 dB, 25.4mm depth. 833000 = Fs 475 Hz (min xover 950 Hz), 93 dB, ~55mm depth. Choose 833000 when pairing with 5"+ mids or sub-1,200 Hz crossover flexibility is needed.
+- **Pairings enabled (new combo IDs):**
+  - **D6R1:** DSA90-8 + D2604/833000 → 98mm spacing, window 950–3,260 Hz (2,310 Hz wide — widest combo window in the project)
+  - **D6R2:** DS115-8 + D2604/833000 → 110mm spacing, window 950–2,636 Hz (1,686 Hz wide)
+  - **D6R3:** SB12PFCR25-4 + D2604/833000 → 113mm spacing, window 950–2,730 Hz (1,780 Hz wide)
+
+### Morel MDT22T — Candidate (lower Fs than MDT12 but far deeper; Willys-Hifi)
+- Type: Soft dome | Dome: **28 mm selected soft fabric (dark)** | Faceplate: **54 × 54 mm SQUARE** (R5.5mm corner radii) | Cutout: **Ø44.0 mm** (chassis) | Depth: **~55 mm total** (3 mm protrusion, ~52 mm behind baffle) | Impedance: 8Ω | Re: 5.2Ω | Le: 0.05 mH @ 1kHz
+- Sensitivity: **89 dB @ 1W/1m** | Power: **80W RMS** / **500W transient** (10ms) | Fs: **650 Hz** | Frequency response: **1,800–25,000 Hz** | Morel recommended crossover: 2.5 kHz / 12dB
+- VC dia: 28 mm | VC height: 2.5 mm | VC former: Aluminum | BL: 2.8 N·A | Flux density (B): 1.4 T | Mms: 0.47 g | Sd: 6.0 cm² | Magnetic gap: 2.5 mm | Mounting: Ø3.5mm holes on Ø43.5mm pitch circle (4 corner holes in square faceplate)
+- Q factors: **not published by Morel** (blank in datasheet) | Magnetically shielded: Yes | Net weight: 0.09 kg
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/morel-mdt22-soft-dome-tweeter) | **Datasheet:** [research/morel_mdt22t.pdf](research/morel_mdt22t.pdf) | [Willys CDN URL](https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880) | Price: **£47.55** | Stock (Jun 2026): UK in stock
+- **Min crossover:** 2× Fs = **1,300 Hz** — 700 Hz better margin than MDT12 (min xover 2,000 Hz).
+- **DSP correction vs TB sub (85 dB ref):** −4.0 dB attenuation.
+- **Power at reference (8Ω, 98 dB):** 10^((98−89)/10) = **7.9W** (9.9% of 80W ✓). At burst (101 dB): **15.9W** (19.9% ✓).
+- **Available @ 24V into 8Ω:** ~31W >> 15.9W ✓.
+- **Centre spacing (FP 54mm sq):** DSA90-8 (92mm) → **73mm** | DS115-8 (115.6mm) → **85mm** | SB12PFCR25-4 (~122mm) → **88mm**
+- **Why considered:** Same 54mm square faceplate as MDT12 → same tight spacing. Fs 650 Hz → min xover 1,300 Hz is 700 Hz lower than MDT12's 2,000 Hz.
+- **Critical depth concern:** ~55mm total depth (52mm behind baffle). Morel uses a vented motor system unlike the MDT12's chamberless design. **MDT22T is 36mm deeper than MDT12.** Must accommodate ≥52mm behind baffle at tweeter location.
+- **vs Morel MDT12 (£39.50 Willys, in index):** MDT12: Fs 1,000 Hz (min xover 2,000 Hz), 19mm deep, £39.50. MDT22T: Fs 650 Hz (min xover 1,300 Hz), 55mm deep, £47.55. Same: 54mm sq FP, 28mm dome, 80W, dark fabric, ~89 dB. Choose MDT12 when depth is critical. Choose MDT22T when crossover must be below 2,000 Hz and 52mm depth is achievable.
+
+### SB Acoustics SB29RDAC-C000-4 — Candidate (ferrite ring dome, cheaper SB29RDNC alternative; Willys-Hifi)
+- Type: Ring dome | Dome: **29 mm fabric ring** | Faceplate OD: **103.8 mm** round | Cutout: **70.0 mm** | Depth: **37.25 mm total** (4.0 mm protrusion, 33.25 mm behind baffle) | Impedance: 4Ω | Re: 3.0Ω | Le: 0.05 mH | Net weight: 0.54 kg | Cast aluminium faceplate
+- Sensitivity: **93 dB @ 2.83V/1m** | Power: **100W** | Fs: **600 Hz** | Sd: 9.6 cm² | VC dia: 29mm | Air gap: 2.5mm | Xlin (p-p): 0.5mm | Mms: 0.45g | BL: 2.4 Tm | Qms: 2.2 | Qes: 0.9 | Qts: 0.64 | Flux density: 1.1T | Mounting: 7× Ø4.2mm holes
+- ⚠️ Willys product page states cutout 74mm — **SB Acoustics datasheet confirms 70.0mm**
+- Dome colour: **Dark** (dark ring fabric, confirmed from SB Acoustics datasheet photo)
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb29rdac-c000-4-tweeter) | **Datasheet:** [research/sb_acoustics_sb29rdac-c000-4.pdf](research/sb_acoustics_sb29rdac-c000-4.pdf) | [SB Acoustics URL](https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf) | Price: **£44.39** | Stock (Jun 2026): UK in stock
+- **Min crossover:** 2× Fs = **1,200 Hz**. | **DSP correction:** −8.0 dB. | **Power at reference:** 3.2W (3.2% of 100W); burst 6.3W (6.3%). Indestructible.
+- **Centre spacing (FP OD 103.8 mm):** DSA90-8 → 98mm | DS115-8 → 110mm | SB12PFCR25-4 → 113mm
+- **vs SB29RDNC-C000-4 (£54.31 Willys, confirmed in index):** RDAC = ferrite, RDNC = neodymium. Both 100W, ~104mm FP, 29mm ring dome, Fs ~580–600 Hz. RDAC saves **£9.92** (18%). Both within limits. RDAC is the value choice; prefer RDNC only for reduced mounting weight.
+
+### SB Acoustics SB21RDC-C000-4 — Candidate (ferrite ring dome; Willys-Hifi)
+- Type: Ring radiator | Dome: **21 mm fabric ring** | Faceplate OD: **92.0 mm** round | Cutout: **62.5 mm** | Depth: **30.6 mm total** (3.3 mm protrusion, 26.5 mm behind baffle) | Impedance: 4Ω | Re: 3.1Ω | Le: 0.04 mH | Net weight: 0.33 kg
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** (IEC HP Butterworth 2600 Hz 12dB/oct) | Fs: **760 Hz**
+- Sd: 4.6 cm² | VC dia: 20.4mm | VC height: 1.5mm | Air gap: 2.5mm | Xlin (p-p): 1.0mm | Mms: 0.25g | BL: 1.5 Tm | Qms: 2.54 | Qes: 1.64 | Qts: 1.0 | Flux density: 1.02T
+- ⚠️ Willys product page states 60W power — **SB Acoustics datasheet confirms 40W**
+- Dome colour: **Dark** (dark ring fabric, confirmed from SB Acoustics datasheet photo)
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb21rdc-c000-4-tweeter) | **Datasheet:** [research/sb_acoustics_sb21rdc-c000-4.pdf](research/sb_acoustics_sb21rdc-c000-4.pdf) | [SB Acoustics URL](https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf) | Price: **£36.55** | Stock (Jun 2026): UK in stock
+- **Min crossover:** 2× Fs = **1,520 Hz**. | **DSP correction:** −5.0 dB. | **Power at reference:** 6.3W (15.8% of 40W ✓); burst 12.6W (31.5% ✓).
+- **Centre spacing (FP OD 92 mm):** DSA90-8 (92mm) → 92mm | DS115-8 → 104mm | SB12PFCR25-4 → 107mm
+- **vs SB21RDCN-C000-4:** Same 21mm ring radiator diaphragm. RDC ferrite (0.33kg), RDCN neodymium (0.06kg). RDC: 92mm FP, £36.55, Fs 760 Hz (min xover 1,520 Hz). RDCN: 58mm FP, £41.60, Fs 850 Hz (min xover 1,700 Hz). RDCN's 34mm FP compactness advantage decisively outweighs the 180 Hz Fs advantage. Prefer RDCN for all new designs; only choose RDC if 92mm FP spacing is already committed.
 
 ---
 
@@ -453,7 +532,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/dayton-audio-dsa90-8.html) (specs fetched June 2026)
 - **Datasheet:** [research/dayton_audio_dsa90-8.pdf](research/dayton_audio_dsa90-8.pdf) | [original URL](https://www.parts-express.com/pedocs/specs/295-522--dayton-audio-DSA90-8-specifications.pdf)
 - SoundImports price: €34.95 | Stock (June 2026): 10+
-- **Why liked:** Most compact frame that passes the circular rule. Black anodised cone and concave dust cap are the most visually stealthy option available. Runs cleanly past 8 kHz, integrating well with a 19 mm tweeter at 2,800 Hz. 10+ in stock.
+- **Why liked:** Most compact frame that passes the circular rule. Black anodised cone and concave dust cap are the most visually stealthy option available. Runs cleanly past 8 kHz. Per-pairing crossover window in combos.md. 10+ in stock.
 - **Concern:** 20 W RMS rating is modest. Fs of 66.6 Hz means a 120 Hz sub/mid crossover places it only 1.8× above Fs — marginal excursion headroom at the low end. **Mitigated by raising the crossover to 150–160 Hz** (the TB sub handles this easily), which increases the Fs margin to 2.25× and brings peak power within the 40 W max rating.
 - **DSP adjustment needed:** +0.3 dB gain to match TB sub reference level (85 dB). Effectively zero correction — the best-matched mid candidate.
 
@@ -488,7 +567,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports](https://www.soundimports.eu/en/hivi-b4n.html) | Datasheets: [research/hivi_b4n_datasheet_1.pdf](research/hivi_b4n_datasheet_1.pdf) (drawings + FR) | [research/hivi_b4n_datasheet_2.pdf](research/hivi_b4n_datasheet_2.pdf) (CLIO T/S + impedance) | Original URLs: [pdf_hiVi_B4N_1.pdf](https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_1.pdf) | [pdf_hiVi_B4N_2.pdf](https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_2.pdf)
 - SoundImports price: €22.45 | Stock (June 2026): 10+
 - **Fs margin at 150 Hz crossover:** 150/66.27 = **2.26×** — passes ≥2× minimum. Tighter than DS115-8 (2.72×). Previously estimated as 2.68× based on the incorrect SI page figure.
-- **Frequency response (CLIO MLS):** ~82–84 dB from 200 Hz–1 kHz; slight dip ~700 Hz; rising above 1 kHz; severe cone breakup peak at 4–5 kHz (~90–92 dB on-axis); steep rolloff above 5 kHz. 30° off-axis tracks on-axis to ~3 kHz then diverges. LR24 LP at 2,800 Hz attenuates the breakup by ~24 dB — adequate. Breakup is severe enough that the DSP limiter is worth setting conservatively.
+- **Frequency response (CLIO MLS):** ~82–84 dB from 200 Hz–1 kHz; slight dip ~700 Hz; rising above 1 kHz; severe cone breakup peak at 4–5 kHz (~90–92 dB on-axis); steep rolloff above 5 kHz. 30° off-axis tracks on-axis to ~3 kHz then diverges. LR24 LP attenuates the breakup by ~24 dB at 4 kHz, well above the crossover region — adequate. Breakup is severe enough that the DSP limiter is worth setting conservatively.
 - **Why liked:** Perfect sensitivity match to TB sub (85 dB) — zero DSP correction. 10+ stock. €22.45 is cheapest standalone mid candidate. Round frame. Metallic bronze cone is visually distinctive — counterpoint to dark paper DS115-8.
 - **Concern:** 25W RMS lowest power rating of active mid candidates. Xmax 3.2 mm lower than DS115-8 (4.1 mm). Vas 2.86 L (CLIO) is much smaller than 4.53 L on SI page — use CLIO figure for enclosure modelling. A sealed cavity of ~0.5 L is sufficient.
 - **Visual note:** "Bronze/aluminum alloy" cone — bright metallic copper-gold appearance, visually distinctive from paper mids. Owner has reviewed and accepts.
@@ -513,7 +592,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power check:** At reference (98 dB): 25.2W ✓ (within 30W, 84% of rating). At woofer max (101 dB): 50.2W ✗ — over rating. Practical fix: DSP sub limiter at ~40W caps system at 98 dB; mid then needs 25.2W — fine.
 - **Fs check:** 52.5 Hz → **2.86× at 150 Hz** — best Fs margin of any available mid candidate.
 - **Xmax:** 5.0 mm — joint best with SB12PACR25-4-COAX woofer, better than DS115-8 (4.1 mm).
-- **Beaming:** Sd 50 cm² → effective cone dia ~80 mm → beaming starts ~2,730 Hz. Comfortable at 2,800 Hz crossover.
+- **Beaming:** Sd 50 cm² → effective cone dia ~80 mm → beaming starts ~2,730 Hz. Beaming limit above the typical 4" mid crossover range.
 - **Character:** Aluminium cone — detailed and analytical, similar to DSA90-8. Less warm than DS115-8 paper cone.
 - **Note:** Same driver family as SB12PACR25-4-COAX (without tweeter). BL and Qts differ slightly from coaxial version due to separate build batches.
 
@@ -527,7 +606,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP correction vs TB sub (85 dB ref):** −2.5 dB — near-perfect match.
 - **Fs check:** 55 Hz → **2.72× at 150 Hz** — same class as DS115-8, best of any 4" mid.
 - **Xmax:** 5.0 mm — matches SB12PFCR25-4; better than DS115-8 (4.1 mm).
-- **Beaming:** Sd 50 cm² → beaming starts ~2,730 Hz. Fine at 2,800 Hz crossover.
+- **Beaming:** Sd 50 cm² → beaming starts ~2,730 Hz. Beaming limit above the typical 4" mid crossover range.
 - **Character:** Paper NRX cone — warm, natural. CCAW voice coil for low moving mass. Vented pole piece reduces compression. Paper cone = same warm tonality class as SB12PFCR25-4.
 - **vs SB12PFCR25-4:** Same Fs, Xmax, Sd, sensitivity, power, and cone character. Key difference: NRX25-4 costs €59.95 vs PFCR25-4 at €25.95. The NRX chassis (cast aluminium, vented) is higher grade. No acoustic advantage over PFCR at this crossover. Choose PFCR25-4 on value; NRX25-4 only if PFCR25-4 sells out.
 - **Concern:** At €59.95 it is over twice the price of the functionally equivalent PFCR25-4.
@@ -543,7 +622,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power check:** At reference (98 dB): 22.4W ✓ (within 30W). At woofer max (101 dB): 44.7W ✗. Same practical fix: DSP sub limiter ~40W keeps mid within 30W.
 - **Fs check:** 58 Hz → **2.59× at 150 Hz** — excellent, better than DSA90-8 (2.25×) and SIG120-4 (2.01×).
 - **Xmax:** 4.9 mm — effectively equal to SB12PACR25-4 and better than DS115-8.
-- **Beaming:** Same Sd 50 cm² as PACR → beaming starts ~2,730 Hz. Fine at 2,800 Hz crossover.
+- **Beaming:** Same Sd 50 cm² as PACR → beaming starts ~2,730 Hz. Beaming limit above the typical 4" mid crossover range.
 - **Character:** Natural fiber paper cone — warm, natural tonality. Better match to GHM-inspired tonal goal than the aluminium PACR version. Reviewers describe "deep midbass and warm sound character."
 - **Price note:** At €25.95 this is the cheapest standalone mid candidate with competitive specs — cheaper than B4N (€22.45 but lower Xmax and power), TCP115-8 (€14.01 but needs 29V PSU), DS115-8 (€36.95). Excellent value.
 
@@ -686,7 +765,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power check:** At reference (98 dB): 9.8W. At woofer max (101 dB): 19.5W. Both within 60W. ✓ 4Ω channel delivers ~61W at 24V — huge headroom.
 - **Fs check:** 61.5 Hz → **2.44× at 150 Hz crossover** — excellent. Better than DSA90-8 (2.25×) and SIG120-4 (2.01×). Close to DS115-8 (2.72×).
 - **Xmax:** 4 mm — same class as DS115-8 (4.1 mm). Very good.
-- **Critical concern — beaming:** Sd 96 cm² → effective cone diameter ~110 mm. Beaming becomes significant at ~f = c/(π×a) ≈ 343/(π×0.055) = **~2,000 Hz**. At the project's 2,800 Hz crossover, this driver is already beaming substantially. At 40–50° off-axis, mid output at 2–3 kHz will be audibly attenuated. **Mitigation:** lower the mid/tweeter crossover to ~1,500–2,000 Hz; requires a tweeter with Fs ≤750–1,000 Hz (SB19ST, DX25TG59-04, or RST28F-4 all qualify).
+- **Critical concern — beaming:** Sd 96 cm² → effective cone diameter ~110 mm. Beaming becomes significant at ~f = c/(π×a) ≈ 343/(π×0.055) = **~2,000 Hz**. This driver is already beaming substantially by 2,000 Hz. At 40–50° off-axis, mid output at 2–3 kHz will be audibly attenuated. **Mitigation:** lower the mid/tweeter crossover to ~1,500–2,000 Hz; requires a tweeter with Fs ≤750–1,000 Hz (SB19ST, DX25TG59-04, or RST28F-4 all qualify).
 - **Cabinet fit concern:** 152 mm OD on 190 mm wide baffle leaves ~19 mm each side — very tight for mounting hardware. Option A layout (sub on side, SIG150-4 on front baffle alone) gives more room.
 - **Depth concern:** 67 mm — verify internal clearance. Same depth issue as SDS-P830656.
 - **Mixed review note:** One reported cone breakage under normal listening conditions. Note as durability flag.
@@ -926,7 +1005,7 @@ All tweeters indexed from SoundImports pages 4–6 (cheapest sort, June 2026). N
 - Size: 4.5" | Frame OD: ~127mm | Cutout: ~95mm | Depth: ~57mm | Imp: 4Ω | Sensitivity: 89.1 dB | Power: 30W RMS / 60W max | Cone: carbon fiber
 - Fs: 53.2 Hz | Qts: 0.28 | Qes: 0.32 | Qms: 1.89 | Vas: 4.87L | Xmax: 3.5mm | Sd: 51.5 cm²
 - **Source:** https://www.soundimports.eu/en/dayton-audio-cf120-4.html (OOS) | SI Price: €62.45 (sale) | Audiophonics: €49.92 (sale), in stock
-- Note: Carbon fiber 4.5" midwoofer. Fs 53.2 Hz → min LP crossover 106 Hz (excellent). Beaming limit 2,703 Hz (slightly below 2,800 Hz target — marginal at 60° off-axis for the last 100 Hz). Burst power needed: 31W vs 30W rated — tight (DSP limiter at 28W gives 100.6 dB). OOS at SI; in stock at Audiophonics (€49.92). Consider if DS115-8 goes OOS.
+- Note: Carbon fiber 4.5" midwoofer. Fs 53.2 Hz → min LP crossover 106 Hz (excellent). Beaming limit 2,703 Hz — place mid LP at or below this. Burst power needed: 31W vs 30W rated — tight (DSP limiter at 28W gives 100.6 dB). OOS at SI; in stock at Audiophonics (€49.92). Consider if DS115-8 goes OOS.
 
 ---
 

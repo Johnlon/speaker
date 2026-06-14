@@ -4,6 +4,33 @@ Curated final recommendations per scenario. A small number of justified, actiona
 
 ---
 
+## Best Overall Recommendation
+
+**For this build** — kitchen counter speaker, listener frequently at 60° off-axis — **RR2 wins on value, RP3 for burnproof insurance**.
+
+| Priority | ID | Combo | Price | Why |
+|----------|----|-------|-------|-----|
+| **Best overall (value)** | **RR2** | **SB12PFCR25-4 + XT25TG30-04** | **~£52** | Ring rad dispersion + natural fibre warmth + widest 4" xover window (880–2,730 Hz); Falcon £29.90 + Willys £20.58 |
+| **Best overall (burnproof)** | **RP3** | **SB12PFCR25-4 + R2604/833000** | **~£68** | Acoustically identical to RR2; 100W tweeter; complete power immunity; +£16 |
+| On-axis showcase | S3 | SB12MNRX2-25-4 + SB29SDAC | ~£84 | Premium ring dome; controlled transients; engineering showpiece |
+| Absolute budget | RR4 | DSA90-8 + XT25SC90-04 | ~£37 | Cheapest ring rad; single Falcon order; ring rad off-axis |
+| Tightest baffle | XC1 | DSA90-8 + XT25SC40-04 | ~£55 | 68mm centre spacing record; ring rad dispersion |
+| Point source (limited SPL) | COAX2 | SB12PFC25-4-COAX (built-in) | ~£48 | Zero time offset; **but** 94 dB SPL ceiling AND tweeter FR shows severe 60° rolloff above 3 kHz — on-axis only |
+
+### Why RR2 wins
+
+The ring radiator advantage is measurable and directly relevant at 60° off-axis: ring radiators hold flat output ~15–20° further than equivalent domes before HF rolloff sets in. For a speaker aimed straight ahead while the listener is at the cooker, this is the deciding factor.
+
+The **SB12PFCR25-4** mid provides Fs 58 Hz → 2.59× at 150 Hz crossover (no excursion stress at the sub/mid transition), natural fibre warmth closest to the B&W DM4 tonal reference, and Xmax 4.9 mm — joint-best of all 4" candidates. The **XT25TG30-04** opens an 880 Hz minimum crossover — the widest window of any ring radiator in the field — giving the ADAU1701 DSP 1,850 Hz of latitude to place the mid/tweeter crossover optimally.
+
+The XT25TG30-04 needs a DSP limiter at 13W (tweeter caps at 100 dB SPL, 1 dB below sub burst ceiling — inaudible in practice). If this margin feels uncomfortable, **RP3** substitutes the Scan-Speak Discovery R2604/833000 at 100W for +£16; acoustic signature is identical.
+
+### Coaxial note (SB12PACR25-4-COAX datasheet, June 2026)
+
+The FR plot shows the tweeter's 60° off-axis trace rolling off sharply above ~3–4 kHz. At the kitchen 60° geometry, HF presence above 3 kHz is materially reduced — the coaxial is **worse** than RR2 for the primary use case despite its point-source alignment advantage. Additionally, the tweeter is rated 10W, capping system SPL at ~94 dB (sub must be limited). Right pick only for centred, on-axis near-field listening at moderate levels.
+
+---
+
 ## Quick Selection Guide
 
 | If your priority is… | Best pick | ID | Price |
@@ -71,7 +98,7 @@ Narrowest possible front baffle. Driven by mid frame OD and centre spacing.
 
 Minimum baffle width: DSA90-8 at 92mm OD is the smallest mid frame in the catalogue — any DSA90-8 pairing can run on a ~120mm wide baffle (92mm + margin).
 
-**XT25SC40-04 note:** Ring radiator with a 43.9mm faceplate. Fs=1,018 Hz (min xover 2,036 Hz) — comfortable for our 2,800 Hz target. Sensitivity 94 dB — needs large DSP pad (vs 84.7 dB DSA90-8) but the 100W power handling means there's no power headroom concern. Available from SoundImports €29.95 / 10+ stock.
+**XT25SC40-04 note:** Ring radiator with a 43.9mm faceplate. Fs=1,018 Hz (min xover 2,036 Hz) — well clear of its min crossover (2,036 Hz) for all standard 4" mids. Sensitivity 94 dB — needs large DSP pad (vs 84.7 dB DSA90-8) but the 100W power handling means there's no power headroom concern. Available from SoundImports €29.95 / 10+ stock.
 
 ---
 
@@ -84,9 +111,9 @@ Sub, mid, and tweeter all circular. Classic, symmetrical, traditional speaker ae
 | ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
 |----|-----|---------|-------|-------|-----|-----------|-------|
 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | 2,700 Hz | ~£44 | 24V / ~3.9A | Detailed | Minimum spacing (79mm) — pair reads almost as one unit |
-| A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | 2,800 Hz | ~£49 | 24V / ~3.9A | Detailed | Tightest spacing (90mm) with best-in-class tweeter |
+| A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | 1,960–3,260 Hz | ~£49 | 24V / ~3.9A | Detailed | Tightest spacing (90mm) with best-in-class tweeter |
 | S1 | DS115-8 (~116mm OD) | SB19ST (88mm OD) | 2,500 Hz | ~£50 | 24V / ~3.8A | Warm | Reference pairing; warm paper cone; best overall |
-| RR4 | DSA90-8 (92mm OD) | XT25SC90-04 (~90mm OD) | 2,800 Hz | ~£37 | 24V / ~3.8A | Detailed, wide | Ring radiator tweeter — annular face gives subtle visual variety |
+| RR4 | DSA90-8 (92mm OD) | XT25SC90-04 (~90mm OD) | 1,960–3,260 Hz | ~£37 | 24V / ~3.8A | Detailed, wide | Ring radiator tweeter — annular face gives subtle visual variety |
 
 ---
 
@@ -111,7 +138,7 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | ID | Mid | Tweeter | Xover | Spacing | Price | PSU | Character | Notes |
 |----|-----|---------|-------|---------|-------|-----|-----------|-------|
 | XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 Hz | 68mm | ~£55 | 24V / ~3.9A | Detailed + wide | Smallest FP ring rad (43.9mm); 100W; minimum spacing champion |
-| RR4 | DSA90-8 | XT25SC90-04 | 2,800 Hz | 91mm | ~£37 | 24V / ~3.8A | Detailed + wide | Cheapest ring rad; larger FP (90mm) vs XC1 but no DSP sensitivity mismatch |
+| RR4 | DSA90-8 | XT25SC90-04 | 1,960–3,260 Hz | 91mm | ~£37 | 24V / ~3.8A | Detailed + wide | Cheapest ring rad; larger FP (90mm) vs XC1 but no DSP sensitivity mismatch |
 | RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; Falcon £29.90 or SI €49.95; Falcon £13 cheaper |
 | XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 Hz | ~110mm | ~£66 | 24V / ~3.8A | Warm + wide | SI-stocked alt to RR2; Fs=570Hz (vs 440Hz TG30) — narrower low-end window; only if combining SI order |
 | RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window; Falcon £29.90 or SI €49.95 |

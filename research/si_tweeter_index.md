@@ -57,6 +57,13 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | SB26ADC-C000-4 | Dome (Al) | 4Ω | €52.45 / £41.60 Willys | 10+ | 680 | 90 | 120 | ~104 | Round | 26 | Silver | 1,360 | ✓ — 120W; bright Al dome |
 | SB29SDNC-C000-4 | Dome | 4Ω | £56.64 Willys | UK stock | 630 | 95.5 | 80 | 72 | Round | 29 | Dark | 1,260 | ★ compact 72mm FP; 95.5dB; 80W; Fs 630 Hz; cloth dome; Willys-Hifi |
 | SB29RDNC-C000-4 | Ring Dome | 4Ω | €68.45 / £54.31 Willys | 10+ | 580 | 94 | 100 | ~104 | Round | 29 | Dark ring | 1,160 | ✓ — premium ring dome; 94dB; Fs 580Hz |
+| SB21RDCN-C000-4 | Ring Rad | 4Ω | £41.60 Willys | UK stock | 850 | 89.5 | 40 | 58 | Round | 21 | Dark | 1,700 | ★ most compact ring dome; 38mm cutout; 22.7mm deep; neo; Willys-Hifi |
+| SB21RDC-C000-4 | Ring Rad | 4Ω | £36.55 Willys | UK stock | 760 | 90 | 40 | 92 | Round | 21 | Dark | 1,520 | ~ ferrite ring dome; 62.5mm cutout; 30.6mm deep; 40W (Willys page says 60W — wrong); Willys-Hifi |
+| Morel MDT22T | Dome | 8Ω | £47.55 Willys | UK stock | 650 | 89 | 80 | 54×54 | Square | 28 | Dark | 1,300 | ~ upgrade over MDT12 on Fs; same sq FP; 55mm deep (vs MDT12 19mm chamberless); Willys-Hifi |
+| SB29RDAC-C000-4 | Ring Rad | 4Ω | £44.39 Willys | UK stock | 600 | 93 | 100 | 103.8 | Round | 29 | Dark | 1,200 | ~ ferrite alt to SB29RDNC (£54.31); 70mm cutout (Willys says 74mm — wrong); 37.25mm deep; Willys-Hifi |
+| D2604/833000 | Dome | 4Ω | £41.88 Willys | UK stock | 475 | 93 | 100 | 104.2 | Round | 26 | Dark | 950 | ★ lowest Fs dome; 74mm cutout; ~55mm deep (tuned chamber); min xover 2.5kHz per SS; Willys-Hifi |
+| D2008/852100 | Dome | 8Ω | £57.88 Willys | UK stock | 550 | 89 | 90 | 92 | Round | 20 | ? | 1,100 | ? FR at 2.8kHz unverified — datasheet needed before committing; Willys-Hifi |
+| SB26STAC-C000-4 | Dome | 4Ω | £37.64 Willys | UK stock | 750 | 91.5 | 120 | 100 | Round | 26 | Dark | 1,500 | ~ in stock at Willys (SI OOS Aug 2026); 100mm FP wider than STCN (72mm); Willys-Hifi |
 
 ---
 
@@ -87,7 +94,6 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | DT-300 | Dome | exp Sep 2026 |
 | SB21SDCN-C000-4 | 3/4" Dome | exp Aug 2026 |
 | ST601-4 | Bullet pair | 2 in stock |
-| SB26STAC-C000-4 | Dome | exp Aug 2026 |
 | SEAS 27TFFNC/G H1396-04 | Dome | exp Jul 2026 |
 | ND25FN-4 | Dome | No faceplate; cannot surface-mount |
 | OC25SC65-04 | Dome | Faceplate-less twist-lock; cannot surface-mount |

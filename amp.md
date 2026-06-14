@@ -142,9 +142,9 @@ Programmed via SigmaStudio (Analog Devices free software). All crossover, EQ, an
 
 | Stage | Filter type | Frequency | Slope |
 |-------|-------------|-----------|-------|
-| Sub low-pass | Linkwitz-Riley | 150 Hz | 24 dB/oct |
-| Mid band-pass | LR | 150 Hz HP / 2,800 Hz LP | 24 dB/oct |
-| Tweeter high-pass | LR | 2,800 Hz | 48 dB/oct |
+| Sub low-pass | Linkwitz-Riley | ~150 Hz | 24 dB/oct |
+| Mid band-pass | LR | ~150 Hz HP / per-pairing LP | 24 dB/oct |
+| Tweeter high-pass | LR | per-pairing | 48 dB/oct |
 
 ### Level correction (vs TB sub at 85 dB reference)
 
