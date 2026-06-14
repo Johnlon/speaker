@@ -141,6 +141,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | BC1 | DSA90-8 | BC25SC06-04 | 2,700–3,260 | 81 | ~55 | 24V / 29V | Detailed | 50W tweeter; 95.4dB → only 1.8W at ref / 3.6W burst; FP ~70mm (est); 81mm spacing |
 | BC2 | DS115-8 | BC25SC06-04 | 2,700 | 93 | ~55 | 24V / 28V | Warm | Xover at DS115 beaming limit (2636Hz) — marginally tight; on-axis only |
 | BC3 | SB12PFCR25-4 | BC25SC06-04 | 2,700–2,730 | 96 | ~47 | 24V / 28V | Warm, nat. | 30Hz xover window only — fixed at ~2,715Hz; cheapest 50W nat. fibre pairing |
+| STC1 | DSA90-8 | SB26STCN-C000-4 | 1,900–3,260 | 82 | ~63 | 24V / 29V | Detailed | 120W indestructible; 82mm spacing; 1360Hz DSP window; burnout impossible at 29V |
+| STC2 | DS115-8 | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~65 | 24V / 28V | Warm | 120W + paper warmth; 736Hz window; best power safety for DS115 pairing |
+| STC3 | SB12PFCR25-4 | SB26STCN-C000-4 | 1,900–2,730 | 97 | ~55 | 24V / 28V | Warm, nat. | Best value 120W pairing; nat. fibre + indestructible tweeter; 830Hz window |
 
 ---
 
