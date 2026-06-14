@@ -3,14 +3,6 @@ Resume engineering for "Kitchen Counter Monitor" — paste-ready AI prompt
 
 Resume engineering for "Kitchen Counter Monitor" Option C: deliver a finalized `Option C` design (side-firing low-profile monitor) that meets these measurable goals: 98 dB SPL peak at 6 ft, stable tonal balance across 60° horizontal sweep, and native sub extension to 38 Hz. Fixed decisions: tweeter SB19ST-C000-4, sub Tang Band W5-1138SMF, PR SB15SFCR racetrack, Mean Well LRS-150-24 PSU, target sealed mid chamber 1.5 L and sub chamber 7.5 L. Open decision: midrange — compare Dayton DSA90-8 vs TCP115-8 and recommend with quantitative trade-offs (sensitivity, required amp power, baffle interaction, DSP gain).
 
-Required outputs:
-1) CNC-ready panel cut sheet for Option C with driver center coordinates, hole diameters, flange offsets, and final net volumes after subtracting driver displacements; include tolerances ±0.5 mm.
-2) SigmaStudio block diagram and parameter list implementing: LR24 low-pass @120 Hz, band-pass 120–2800 Hz for mid, HP 48 dB/oct @2800 Hz for tweeter, and a -9.5 dB tweeter pad; include exact DSP gain/attenuation values.
-3) Passive-radiator mass calculation to tune SB15SFCR to 38 Hz (show T/S used or fetch them and state assumptions).
-4) Thermal check for PSU placement with suggested mitigations if the Mean Well is inside the sealed base vault.
-5) Short measurement/test plan: microphone placement (6 ft listening position), target curves, smoothing, and acceptance criteria.
-
-If any physical driver T/S or displacement numbers are missing, fetch them and state assumptions. Provide results as numbered deliverables with acceptance criteria and file-ready artifacts (SVG/CNC cut list, SigmaStudio steps, and a short measurement checklist).
 
 Constraints and decisions extracted from `desktop-idea.md` (include these in all resumed sessions):
 
@@ -28,7 +20,9 @@ Constraints and decisions extracted from `desktop-idea.md` (include these in all
 - Manufacturing notes: Base isolates PSU and electronics into a sealed drawer; verify ventilation or relocate PSU if thermal limits exceeded.
 - Optional modes: Option A (wired master-slave with umbilical), Option B (wireless single-board active TWS) — wireless adds latency and sync complexity; prefer wired for deterministic performance unless user requires wireless.
 
-Acceptance criteria for prompt execution: deliverables (1–5) exist, include numeric values and units, and are committed as files in the repo when applicable.
+- Passive radiator SB15SFCR: Sd ≈ 178 cm² (~2.05× active driver displacement); mount vertical on rear centerline and add mass to the rear M6-threaded bolt assembly to lower native tuning to 38 Hz.
+- Tang Band sub surround sits ~8.5 mm proud of the baffle, reclaiming ≈160 mL — include this in final net-volume math.
+- volume calcs should take account of the fact the speakers are surface mounted and thereofre the thickness of the walls may subtract from the overal depth of the driver
 
 ---
 End of prompt.
