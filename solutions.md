@@ -42,7 +42,8 @@ Narrowest possible front baffle. Driven by mid frame OD and centre spacing.
 | 2 | TN1 | DSA90-8 (92mm OD) | HiVi TN28-B (47.6mm OD) | **70mm** | ~£55 | 24V / ~3.8A | 2nd tightest; compact round dome; narrow xover window (2,600 Hz min) |
 | 3 | B6 | DSA90-8 (92mm OD) | TN25 (54×54mm sq) | **73mm** | ~£52 | 24V / ~3.8A | Tightest square tweeter; contrast look |
 | 3= | SE1 | DSA90-8 (92mm OD) | SEAS H1406-04 (oval, 54mm portrait) | **73mm** | ~£74 | 24V / ~3.8A | 80W oval portrait-mounted = same 73mm as B6; 4× more power handling; shallow 21.5mm depth |
-| 5 | NR1 | DSA90-8 (92mm OD) | NE25VTS-04 (66.3mm OD) | **79mm** | ~£64 | 24V / ~3.9A | Same spacing as B10 but much wider xover window (1,460 Hz min vs 2,700 Hz) |
+| 5 | CF1 | DSA90-8 (92mm OD) | CF18N-4 (58mm OD) | **75mm** | ~£61 | 24V / ~3.8A | 18mm CF dome; 3rd smallest FP; 75mm spacing; excellent HF off-axis; 40W robust |
+| 6 | NR1 | DSA90-8 (92mm OD) | NE25VTS-04 (66.3mm OD) | **79mm** | ~£64 | 24V / ~3.9A | Same spacing as B10 but much wider xover window (1,460 Hz min vs 2,700 Hz) |
 | 6 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | **79mm** | ~£44 | 24V / ~3.9A | Tightest 79mm at lowest cost; min xover 2,700 Hz |
 
 Minimum baffle width: DSA90-8 at 92mm OD is the smallest mid frame in the catalogue — any DSA90-8 pairing can run on a ~120mm wide baffle (92mm + margin).

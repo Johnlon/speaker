@@ -294,6 +294,21 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Why interesting:** Scan-Speak Discovery class engineering in a 104mm faceplate with 100W power handling, Fs ~630 Hz, and widest crossover window of any dome in the candidate field. €44.95 mid-range price. 104mm OD — same footprint class as DX25TG59-04, SB29SDAC. Depth only 25.4mm (shallowest large-FP tweeter in the field).
 - **Pairing note:** At 104.2mm FP, spacing with DS115-8 (116mm OD) ≈ 110mm; with SB12PFCR25-4 (~122mm OD) ≈ 113mm — same as DA1/DA2. Centre spacing with DSA90-8 ≈ 98mm.
 
+### Dayton Audio CF18N-4 — Candidate (compact carbon fiber 18mm dome)
+- Dome: **18 mm woven carbon fiber** | Faceplate OD: **58 mm** | Cutout: 36.9 mm | Depth: 38.3 mm | Impedance: 4Ω | Re: 3.54Ω
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **1,100 Hz** | Frequency response: 2,500–20,000 Hz
+- Qts: 1.2 | Qms: 2.0 | Qes: 3.1 | Neodymium motor | Ferrofluid VC cooling
+- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-cf18n-4.html) (fetched June 2026) | Price: **€36.95** | Stock (June 2026): 6 units
+- **Min crossover:** 2× Fs = **2,200 Hz** — comfortable margin at 2,800 Hz. Response starts 2,500 Hz; LR48 at 2,800 Hz provides 24 dB protection at 2,500 Hz.
+- **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed.
+- **Power at reference (98 dB):** 6.3W (15.8% of 40W). At burst (101 dB): 12.6W (31.5%). Well within 40W rating.
+- **Why this stands out — spacing:** 58mm FP OD is the 3rd smallest in the entire candidate field, after XT25SC40-04 (43.9mm) and HiVi TN28-B (47.6mm). With DSA90-8 (92mm OD): spacing = (92+58)/2 = **75mm** — between TN1 (70mm) and B6 (73mm). With SB12PFCR25-4 (~122mm): **90mm spacing**.
+- **Why this stands out — off-axis:** 18mm dome = widest off-axis dispersion of any dome candidate except ND20FA-6 (45mm FP, 19mm dome, but Fs=2,005 Hz min xover 4,010 Hz). Carbon fiber dome = detailed, low-colouration character. At 60° kitchen geometry the 18mm dome maintains output well into HF.
+- **Why this stands out — power:** 40W RMS is double the typical 15-20W fabric/silk dome at this FP size. CF3 pairing (SB12PFCR25-4 + CF18N-4 at ~£53) gives 90mm spacing with both 30W mid and 40W tweeter — very robust.
+- **Concern — HF rolloff at 30° off-axis:** Reviewer noted "rolloff above 12 kHz beyond 30°." At 60° kitchen position HF above 12 kHz will be attenuated. This is less audible than mid-treble rolloff; the critical 2.8–10 kHz range may still be fine.
+- **Concern — depth:** 38.3mm depth requires adequate tweeter chamber depth.
+- **Carbon fiber visual note:** Woven CF dome has a distinctive dark-weave appearance — different from fabric or silk domes. Owner has removed all visual exclusions; CF appearance is noted as distinctive, not a concern.
+
 ### SEAS Prestige 27TFFNC/CG H1406-04 — Candidate (80W, low-profile, oval faceplate)
 - Dome: 26 mm Sonolex precoated fabric | Faceplate: **69.7 × 54 mm oval** | Cutout: 46 mm | Depth: **21.5 mm** | Impedance: 4Ω | Re: 2.7Ω
 - Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS / 200W max** | Fs: **1,170 Hz** | Frequency response: 2,500–30,000 Hz

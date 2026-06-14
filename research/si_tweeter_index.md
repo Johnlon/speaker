@@ -33,7 +33,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | DTM-104/8                | Dome      | 8Ω  | €34.95        | exp 31-07-2026 | —      | —       | —     | —           | 25       | —            | OOS Jul 2026                                         |
 | SB26STCN-C000-4          | Dome      | 4Ω  | €36.45        | 10+            | 950    | 92      | 120   | 72          | 25       | 1,900        | ✓ — 120W; compact 72mm FP                            |
 | AMT Mini-8               | AMT       | 8Ω  | €36.45        | 10+            | ~1,750 | 88      | 15    | 57          | AMT fold | ~3,500       | ~ stated lower limit 3.5kHz; super-tweeter role only |
-| CF18N-4                  | Dome      | 4Ω  | €36.95        | 6              | —      | —       | —     | —           | 18       | —            | ? URL not found on SI                                |
+| CF18N-4                  | Dome (CF) | 4Ω  | €36.95        | 6              | 1,100  | 90      | 40    | **58**      | 18       | 2,200        | ★ carbon fiber 18mm dome; FP=58mm (3rd smallest); Cutout=37mm; Depth=38mm |
 | D27TG35-06               | Dome      | 6Ω  | €39.95        | 10+            | 900    | 91.8    | 15    | 104         | 25       | 1,800        | ✓ — 6Ω; large FP                                     |
 | NE25VTS-04               | Dome      | 4Ω  | €39.95        | 10+            | 730    | 91.1    | 15    | 66.3        | 25       | 1,460        | ★ compact FP; similar to ND25FA; higher sens         |
 | D2606/920000             | Dome      | 6Ω  | €39.95        | 10+            | 1,100  | 91.4    | 100   | —           | 25       | 2,200        | ✓ — Scan-Speak quality; 100W                         |
