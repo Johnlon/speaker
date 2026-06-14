@@ -11,25 +11,25 @@ Scanned June 2026 from hificollective.co.uk. Specs pulled from individual produc
 
 | Model | Type | Imp | Price | Stock | Fs Hz | Sens dB | Pwr W LT | FP OD mm | Dome mm | Min Xover Hz | Notes |
 | ----- | ---- | --- | ----- | ----- | ----- | ------- | -------- | -------- | ------- | ------------ | ----- |
-| SEAS 22TFF H0280-06 | Dome (soft) | 6Ω | £41.47 | ? | 1,050 | 91 | 90 | ? | 22 | 2,100 | ★ Prestige; Sonomex dome+surround; 180W ST; HFC URL: seas-22tff-h0280-06 |
-| SEAS 22TAF/G H1283-06 | Dome (Al/Mg) | 6Ω | £46.35 | ? | 1,100 | 92 | 80 | ? | 22 | 2,200 | ★ Prestige; Al/Mg alloy; VC=19.5mm; 180W ST; freq 2.5–30kHz |
-| SEAS 27TFF H0831-06 | Dome (soft) | 6Ω | £40.66 | ? | 1,200 | 90 | 90 | ? | 27 | 2,400 | ★ Prestige budget; 220W ST; recommended from 2kHz |
-| SEAS 27TDFC H1189-06 | Dome+chamber | 6Ω | £56.92 | ? | 550 | 90 | 90 | ? | 27 | 1,100 | ★ rear chamber; LOWEST Fs at HFC; min xover only 1.1kHz; recommended from 1.5kHz; 220W ST |
-| SEAS 27TDFC H1211-06 | Dome (soft) | 6Ω | ? | ? | ? | ? | ? | ? | 27 | ? | ? non-chamber sibling of H1189; price not fetched |
-| SEAS 27TBC/G H1147-06 | Dome (Al/Mg) | 6Ω | £51.71 | 1 | 1,050 | 91 | 90 | ? | 27 | 2,100 | ★ metal dome; Hexagrid cover; polymer surround; 180W ST; 1 left |
-| SEAS 27TBCD/GB-DXT H1499-06 | Dome (Al/Mg) DXT | 6Ω | £84.40 | ? | 900 | 92 | 55 | ? | 27 | 1,800 | ★ DXT lens for controlled dispersion; recommended from 2kHz; expensive; 150W ST |
-| SEAS 29TFF/W H1318-06 | Dome (soft) | 6Ω | £50.41 | 1 | 950 | 92 | 90 | ? | 29 | 1,900 | ★ 29mm large dome; VC=26mm; 200W ST; 1 left |
+| SEAS 22TFF H0280-06 | Dome (soft) | 6Ω | £41.47 | ? | 1,050 | 91 | 90 | 97.7 | 22 | 2,100 | ★ Prestige; Sonomex dome+surround; 180W ST; HFC URL: seas-22tff-h0280-06 |
+| SEAS 22TAF/G H1283-06 | Dome (Al/Mg) | 6Ω | £46.35 | ? | 1,100 | 92 | 80 | 97.7 | 22 | 2,200 | ★ Prestige; Al/Mg alloy; VC=19.5mm; 180W ST; freq 2.5–30kHz |
+| SEAS 27TFF H0831-06 | Dome (soft) | 6Ω | £40.66 | ? | 1,200 | 90 | 90 | 103.8 | 27 | 2,400 | ★ Prestige budget; 220W ST; recommended from 2kHz |
+| SEAS 27TDFC H1189-06 | Dome+chamber | 6Ω | £56.92 | ? | 550 | 90 | 90 | 103.8 | 27 | 1,100 | ★ rear chamber; LOWEST Fs at HFC; min xover only 1.1kHz; recommended from 1.5kHz; 220W ST |
+| SEAS 27TDFC H1211-06 | Dome (soft) | 6Ω | £46.70 | ? | 900 | 91 | 90 | 103.8 | 27 | 1,800 | ? non-chamber sibling of H1189; price HFC confirmed |
+| SEAS 27TBC/G H1147-06 | Dome (Al/Mg) | 6Ω | £51.71 | 1 | 1,050 | 91 | 90 | 103.8 | 27 | 2,100 | ★ metal dome; Hexagrid cover; polymer surround; 180W ST; 1 left |
+| SEAS 27TBCD/GB-DXT H1499-06 | Dome (Al/Mg) DXT | 6Ω | £84.40 | ? | 900 | 92 | 55 | 104 | 27 | 1,800 | ★ DXT lens for controlled dispersion; recommended from 2kHz; expensive; 150W ST |
+| SEAS 29TFF/W H1318-06 | Dome (soft) | 6Ω | £50.41 | 1 | 950 | 92 | 90 | 104 | 29 | 1,900 | ★ 29mm large dome; VC=26mm; 200W ST; 1 left |
 | SEAS 27TFFNC/CG H1406-04 | Dome (soft) | 4Ω | £33.66 | ? | 1,170 | 91 | 80 | 69.7×54 oval | 27 | 2,340 | ≡ SI index ★ entry (OOS check); oval FP 69.7×54mm; compact Neo; UK source |
-| SEAS 27TFFNC/G H1396-04 | Dome (soft) | 4Ω | £32.84 | ? | 1,170 | 91 | 80 | ? | 27 | 2,340 | ≡ SI index OOS (exp Jul 2026) → check HFC stock; sibling of H1406 without CG coating |
+| SEAS 27TFFNC/G H1396-04 | Dome (soft) | 4Ω | £32.84 | ? | 1,170 | 91 | 80 | 53 | 27 | 2,340 | ≡ SI index OOS (exp Jul 2026) → check HFC stock; sibling of H1406 without CG coating |
 | Morel CAT-298 | Dome (Acuflex) | 8Ω | £42.00 | ? | 900 | 89 | 80 | 104 | 28 | 1,800 | ★ MDT-29 replacement; FP=104mm; Cutout=72mm; ferrofluid; from 2kHz |
-| Morel CAT-328-104 | Dome (Acuflex) | ? | £80.00 | ? | ? | ? | ? | 104 | 28 | ? | ★ premium; 28mm Hexatech VC; 104mm Al FP; replaceable dome; need datasheet |
-| Scanspeak D2004/602000 | Dome (Illuminator) | ? | £94.82* | 2 | ? | ? | ? | ? | ~19 | ? | ★ Illuminator 3/4" dome; compact; £113.78 if ex-VAT; need datasheet from SS |
-| Scanspeak D2008/852100 | Dome (Classic) | ? | £57.29* | 1 | ? | ? | ? | ? | ~26 | ? | ★ Classic range; 1 left; need datasheet |
-| Scanspeak D2608/913000 | Dome (Discovery) | ? | £73.39* | OOS | ? | ? | ? | ? | ~26 | ? | OOS; replaces Peerless 810921; need datasheet |
-| Scanspeak D2905/950000 | Dome (Classic) | ? | £104.98* | 1 | ? | ? | ? | ? | ~28 | ? | ~ expensive; Classic 28mm; 1 left; need datasheet |
-| Scanspeak D2905/930000 | Dome (Classic) | ? | £102.06* | OOS | ? | ? | ? | ? | ~28 | ? | OOS |
-| Scanspeak D3004/602000 | Dome (Illuminator) | ? | £80.56* | 2 | ? | ? | ? | ? | ~26 | ? | ★ Illuminator; 2 in stock; need datasheet |
-| Scanspeak D3004/602010 | Dome (Illuminator) | ? | £95.65* | 4 | ? | ? | ? | ? | ~26 | ? | ★ Illuminator updated; 4 in stock; need datasheet |
+| Morel CAT-328-104 | Dome (Acuflex) | 8Ω | £80.00 | ? | 650 | 90 | 200 | 104 | 28 | 1,300 | ★ premium; 28mm Hexatech VC; 104mm Al FP; replaceable dome; need datasheet |
+| Scanspeak D2004/602000 | Dome (Illuminator) | 4Ω | £94.82* | 2 | 600 | 88.4 | 50 | 55.5 | ~19 | 1,200 | ★ Illuminator 3/4" dome; compact; £113.78 if ex-VAT; need datasheet from SS |
+| Scanspeak D2008/852100 | Dome (Classic) | 8Ω | £57.29* | 1 | 550 | 89 | 90 | 92 | ~26 | 1,100 | ★ Classic range; 1 left; need datasheet |
+| Scanspeak D2608/913000 | Dome (Discovery) | 8Ω | £73.39* | OOS | 700 | 91.3 | 80 | 104 | ~26 | 1,400 | OOS; replaces Peerless 810921; need datasheet |
+| Scanspeak D2905/950000 | Dome (Classic) | 6Ω | £104.98* | 1 | 550 | 90 | 150 | 104 | ~28 | 1,100 | ~ expensive; Classic 28mm; 1 left; need datasheet |
+| Scanspeak D2905/930000 | Dome (Classic) | 6Ω | £102.06* | OOS | 650 | 90 | 150 | 104 | ~28 | 1,300 | OOS |
+| Scanspeak D3004/602000 | Dome (Illuminator) | 4Ω | £80.56* | 2 | 700 | 89.2 | 50 | 61.9 | ~26 | 1,400 | ★ Illuminator; 2 in stock; need datasheet |
+| Scanspeak D3004/602010 | Dome (Illuminator) | 4Ω | £95.65* | 4 | 425 | 89.6 | 50 | 61.9 | ~26 | 850 | ★ Illuminator updated; 4 in stock; need datasheet |
 | SEAS 19TAFD/G H0532-08 | Dome (Al) | 8Ω | £41.63 | ? | 1,700 | 88 | 90 | ? | 19 | 3,400 | ✗ Fs=1,700Hz → min xover 3,400Hz exceeds 2,800Hz target |
 | Fostex FT28D | Dome | 8Ω | £104.50 | ? | ? | 90 | ? | ? | ? | ? | ✗ £125.40 incl VAT; specs too sparse; too expensive |
 | Scanspeak D3004/660000 | Dome (Illuminator) | ? | £170.48* | 4 | ? | ? | ? | ? | ~26 | ? | ✗ premium tier; too expensive for this project |
@@ -77,7 +77,7 @@ Scanned June 2026 from hificollective.co.uk. Specs pulled from individual produc
 ---
 
 ## Key Reference
-- **Project tweeter crossover target:** 2,800 Hz HP (LR48)
+- **Project tweeter crossover target:** Per-pairing (determined by mid beaming and tweeter 2×Fs)
 - **Min Xover** = 2 × Fs; Fs must be ≤ 1,400 Hz to meet target
 - **Dome ≤19 mm preferred** for widest off-axis dispersion (kitchen 60°)
 - **FP OD unknown** for most SEAS models — need individual datasheets (at doc.seas.no or retailer PDFs)

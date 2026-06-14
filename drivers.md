@@ -150,7 +150,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Note:** Square 54.1×54.1mm faceplate; non-standard shape.
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
 - **Impedance note:** 5Ω — at 24V the JAB5 delivers ≈49W into 5Ω; 8W needed to match reference level. Ample headroom.
-- **Acoustic concern — Fs/crossover ratio:** Fs 1500 Hz vs 2800 Hz crossover = 1.87× margin. This is the tightest of all active tweeter candidates. The TN25's specified response starts at 2500 Hz — only 300 Hz below the crossover point. The LR48 48 dB/oct HP filter provides mechanical protection, but the comfort margin here is smaller than ideal. The Monacor DT-25N was rejected on similar grounds (Fs 1600 Hz, 1.75× ratio, response start 1600 Hz). TN25 is marginally better but the same concern applies.
+- **Acoustic concern — Fs/crossover ratio:** Fs 1500 Hz vs a typical 2500–3000 Hz crossover = ~1.8× margin. This is the tightest of all active tweeter candidates. The TN25's specified response starts at 2500 Hz. The LR48 48 dB/oct HP filter provides mechanical protection, but the comfort margin here is smaller than ideal. The Monacor DT-25N was rejected on similar grounds (Fs 1600 Hz, 1.75× ratio, response start 1600 Hz). TN25 is marginally better but the same concern applies.
 - **Depth note:** 63.5 mm depth is roughly double the SB19ST (≈35 mm). Verify against tweeter chamber depth in the enclosure layout before ordering.
 
 ### Dayton Audio ND25FA-4 — Candidate
@@ -158,8 +158,8 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Sensitivity: 90 dB | Power: 20W RMS | Fs: 1350 Hz | Qts: 1.56 | Qes: 2.61 | Qms: 3.87
 - Re: 3.20Ω | Le: 0.48 mH | Cutout: 45 mm | Depth: 25 mm
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html) | Price: €15.95 | Stock: 10+
-- **Why liked:** Compact round faceplate (66 mm OD) — smallest footprint of any candidate tweeter. 90 dB sensitivity exceeds the 85 dB sub reference and is only 1.5 dB below the SB19ST. Neodymium motor for tight, efficient operation. Budget-friendly at €15.95. Fs 1350 Hz gives comfortable room below a 2800 Hz crossover.
-- **Concern:** Dome colour not confirmed from product page text — likely dark/black based on neodymium compact design. Power at 20W RMS is modest (same as SB19ST-C000-4). Qts 1.56 is high; needs to be used above its Fs by a comfortable margin, which is met at 2800 Hz. **Recommend confirming dome colour before ordering.**
+- **Why liked:** Compact round faceplate (66 mm OD) — smallest footprint of any candidate tweeter. 90 dB sensitivity exceeds the 85 dB sub reference and is only 1.5 dB below the SB19ST. Neodymium motor for tight, efficient operation. Budget-friendly at €15.95. Fs 1350 Hz gives comfortable room below target crossovers.
+- **Concern:** Dome colour not confirmed from product page text — likely dark/black based on neodymium compact design. Power at 20W RMS is modest (same as SB19ST-C000-4). Qts 1.56 is high; needs to be used above its Fs by a comfortable margin, which is met at target crossovers. **Recommend confirming dome colour before ordering.**
 - **Note:** Dome colour could not be confirmed from web content; manufacturer datasheet confirms it as a black soft dome. Sensitivity at 2.83V/1m is 90 dB.
 - **Source:** https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html (fetched June 2026)
 
@@ -176,7 +176,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Dome: 25 mm fine weave soft fabric | Faceplate OD: 72 mm round | Impedance: 4Ω
 - Sensitivity: 92 dB | Power: 120W RMS | Fs: 950 Hz | Re: 3.2Ω | Le: 0.04 mH
 - Supplier: [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html) | Price: €36.45 | Stock: 10+
-- **Why liked:** Massive 120W RMS power handling — effectively indestructible in this application. Fs 950 Hz gives good margin below 2800 Hz crossover. Soft fabric dome offers warm character similar to SB19ST. Neodymium magnet. Internal pressure equalisation. 72 mm faceplate is compact and confirmed circular.
+- **Why liked:** Massive 120W RMS power handling — effectively indestructible in this application. Fs 950 Hz gives good margin below target crossovers. Soft fabric dome offers warm character similar to SB19ST. Neodymium magnet. Internal pressure equalisation. 72 mm faceplate is compact and confirmed circular.
 - **Concern:** At €36.45 it leaves only ~£32 for the midrange if paired with this tweeter. Dome colour not confirmed from page text — likely dark fabric. Sensitivity at 92 dB is 7 dB above sub; needs DSP attenuation.
 - **Source:** https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html (fetched June 2026)
 
@@ -201,7 +201,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Datasheet:** [research/peerless_dx25tg59-04.pdf](research/peerless_dx25tg59-04.pdf) | [original URL](https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/DX25TG59-04/DX25TG59-04.pdf) (downloaded June 2026)
 - SoundImports price: €32.95 | Stock (June 2026): 10+
 - **Power at reference:** 5.8W RMS and 11.5W at burst — both well within 15W rating. DSP limiter set at 12W protects the driver with 25% margin.
-- **Why liked:** Fs 590 Hz → 2800/590 = **4.74× crossover margin** — best of all tweeter candidates by a wide margin. Qts 0.48 is the lowest (best behaved) of any candidate. Ferrofluid cooling adds thermal safety at the limits. Circular faceplate. 10+ in stock.
+- **Why liked:** Fs 590 Hz → ~4.7× margin at typical crossovers — best of all tweeter candidates by a wide margin. Qts 0.48 is the lowest (best behaved) of any candidate. Ferrofluid cooling adds thermal safety at the limits. Circular faceplate. 10+ in stock.
 - **DSP correction vs TB sub (85 dB ref):** −8.4 dB pad needed. Large attenuation — verify noise floor with the JAB5 at idle before committing.
 - **Concern — dome colour:** "Damped silk diaphragm" material confirmed; colour not explicitly stated on page. Likely dark (standard hi-fi silk), but verify from datasheet images or product photo before ordering.
 - **Concern — faceplate size:** 104 mm OD is large — same footprint as SB26ADC. Front baffle width impact the same as those drivers.
@@ -642,7 +642,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Is 94 dB enough?** For kitchen counter listening at 6ft, 89 dB at ear is comfortably loud. The sub's power is simply limited by DSP to match the tweeter ceiling. Usable if the build is not intended to play very loud.
 - **The compelling case — coaxial alignment:** Woofer and tweeter share the same acoustic centre — zero time offset at the crossover. No centre-spacing calculation. No vertical integration lobing. Front baffle is cleaner. Uses the JAB5's fourth channel for the tweeter. This is the only way to achieve true point-source mid+tweeter in this build.
 - **Concerns:** Tweeter dome colour unconfirmed. Depth 69mm is deepest of any candidate — check internal clearance. At €68.45 it is more expensive than any individual driver but covers both mid and tweeter slots. Tweeter at 12.4mm is very small — HF power handling and extension above 15 kHz may be limited.
-- **Crossover:** Tweeter Fs 1300 Hz → minimum crossover ≥2600 Hz; 2800 Hz is comfortable (2.15×).
+- **Crossover:** Tweeter Fs 1000 Hz → minimum crossover ≥2000 Hz; typical crossovers are comfortable (2× margin).
 
 ### Dayton Audio PA130-8 — Candidate
 - Size: 5" | Frame OD: 132 mm | Impedance: 8Ω
@@ -841,7 +841,7 @@ These are excluded permanently and should not be re-evaluated.
 
 | Driver | Reason |
 |--------|--------|
-| Monacor DT-25N | Fs 1600 Hz marginal for 2800 Hz xover; waveguide design |
+| Monacor DT-25N | Fs 1600 Hz marginal for low crossovers; waveguide design |
 | Dayton ND20FA-6 | Fs 2005 Hz too high; 15W RMS; 6Ω impedance |
 | Scan-Speak D7608/920010 | Xmax 0.4 mm; Qts 1.73; €106.95 over budget |
 | HiVi Swan DM-7500 | €79.95 over budget; 600 Hz+ min crossover eliminates separate tweeter |
@@ -1151,7 +1151,7 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 
 ### Dayton Audio DA115-8 — Catalogue
 - Size: 4" | Imp: 8Ω | Sensitivity: 84.9 dB | Power: 20W RMS / 40W max | Fs: 60 Hz | Cone: aluminum | Frame: cosmetic stamped steel | VC: 25mm
-- **Source:** https://www.soundimports.eu/en/dayton-audio-da115-8.html | Price: €29.95 | Stock: 3
+- **Source:** https://www.soundimports.eu/en/dayton-audio-da115-8.html | Price: €29.95 | Stock (**14 June 2026**): **3 units** (very low stock)
 - Note: 84.9 dB close to sub reference. Fs 60 Hz → 2.5× at 150 Hz (solid). 20W modest. Aluminum cone (analytical character). 3 in stock.
 
 ### Monacor SPM-116/8 — Catalogue
@@ -1272,4 +1272,12 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 - Size: 5" | Frame: cast (6 holes) | Imp: 4Ω | Sensitivity: 90 dB | Power: 30W RMS / 45W max | Fs: 70 Hz | Cone: paper/Kevlar/glass composite | VC: 25mm Cu/Al | Phase plug: solid aluminum
 - **Source:** https://www.soundimports.eu/en/dayton-audio-rs125p-4.html | Price: €64.95 | Stock: 9
 - Note: Proprietary composite paper cone. Aluminum phase plug (may be silver-coloured). 90 dB near-perfect. Fs 70 Hz → 2.14× at 150 Hz. Reviewer noted lack of dust cover makes it unsuitable for non-downfiring applications.
+
+ions.
+
+tions.
+
+ions.
+
+s.
 

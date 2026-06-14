@@ -27,16 +27,16 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Peerless SLS-85S25CP04-04 | 3.5" | 4Ω | €29.95 | 10+ | 73 | 86 | 10.2 | 30 | 105×91 | Oval | Paper | ✓ (B12) — highest Xmax; oval frame |
 | Monacor SP-4/60PRO | 4" | 8Ω | €29.95 | 10 | 92 | 90 | 2.3 | 30 | 113×113 | Square | Paper | ~ Fs 92Hz too high (1.63×); sq frame |
 | Dayton DA115-8 | 4" | 8Ω | €24.75 sale (€29.95 RRP) | 3 | 60 | ~85 | ~3.5 | 30 | ~116 | Round | Silver Al | ✓ (B5) — near-perfect sens; 3 left; on sale Jun 2026 |
-| Peerless SDS-P830855 | 4" | 8Ω | €29.95 | exp Aug 2027 | — | — | — | — | — | — | — | OOS until Aug 2027 |
+| Peerless SDS-P830855 | 4" | 8Ω | €29.95 | exp Aug 2027 | 66 | 83.1 | 3.0 | 30 | 123×105 | Trunc | Dark paper | OOS until Aug 2027 |
 | HiVi M5N | 5" | 8Ω | €29.95 | 10+ | 50 | ~86 | ~3.5 | 30 | ~126 | Round | Silver Al/Mg | ✓ (B3) — 5"; best Fs; wide OD |
-| Beyma 4FR40 | 4" | 8Ω | €30.95 | 10 | ~85–100 | ~91 | ~2 | — | ~116 | Round | Paper (WP) | ✓ (A6) — full-range; Fs unconfirmed |
+| Beyma 4FR40 | 4" | 8Ω | €30.95 | 10 | 92 | 87 | 3.0 | 40 | ~116 | Round | Paper (WP) | ✓ (A6) — full-range; confirmed specs |
 | SB13PFCR25-8 | 5" | 8Ω | €31.45 / £24.50 Willys | 7 SI; Willys in stock | ~44 | ~87 | 4.5 | 30 | ~130 | Round | Nat. fibre | ~ 8Ω variant of 5" PFCR; Willys significantly cheaper than SI |
-| SB12PAC25-4 | 4" | 4Ω | €31.45 / £22.54 Willys | 4 SI; Willys in stock | — | — | — | — | ~122 | Round | Dark Al | ? URL not found on SI (tried 2 patterns); anodised Al cone (same PAC family as PACR Dark Al) |
+| SB12PAC25-4 | 4" | 4Ω | €31.45 / £22.54 Willys | 4 SI; Willys in stock | 52.5 | 87 | 5.0 | 30 | ~122 | Round | Dark Al | ? URL not found on SI (tried 2 patterns); anodised Al cone (same PAC family as PACR Dark Al) |
 | Markaudio CHN-70 | 4" | 8Ω | €32.45 | 2 | 71.6 | 86.7 | 4 | 16 | 125.1 | Round | Blue paper | ✗ 16W rated; needs 27W at burst — underpowered |
 | SB12PACR25-4 | 4" | 4Ω | €32.45 / £23.76 Willys | SI OOS Nov 2026; Willys UK stock | 52.5 | 87 | 5.0 | 30 | 122 | Round | Dark Al | ✓ — OOS at SI; available Willys-Hifi UK £23.76 |
 | Visaton SC 13 | 5" | 8Ω | €32.95 | 8 | 78 | 90 | 0.75 | 40 | 162 | Round | Cellulose | ✗ Xmax 0.75mm fatal; OD 162mm |
 | Dayton PA130-8 | 5" | 8Ω | €33.45 | 10+ | 83.4 | 88.2 | 2.0 | 50 | 132 | Round | Paper | ✓ (C2) — Xmax 2mm; Fs 1.8× |
-| Dayton ND91-4 | 3.5" | 4Ω | €33.95 | 10+ | ~72 | ~88 | 4.6 | — | ~95 | Round | Paper | ✓ (B2) — compact; high Xmax |
+| Dayton ND91-4 | 3.5" | 4Ω | €33.95 | 10+ | ~72 | ~88 | 4.6 | 30 | ~95 | Round | Paper | ✓ (B2) — compact; high Xmax |
 | Dayton DSA90-8 | 3" | 8Ω | €34.95 | 10+ | 66.6 | 84.7 | 2.5 | 20 | 92 | Round | Black Al | ✓ — top candidate; smallest frame |
 | Dayton SIG120-4 | 4" | 4Ω | €34.95 | OOS@SI | 74.6 | 89.7 | 4.0 | 40 | 123 | Round | Black Al | ✓ (A8) — OOS@SI; Audiophonics FR |
 | Dayton DS115-8 | 4" | 8Ω | €36.95 | 4 | 55.2 | 85.3 | 4.1 | 35 | 115.6 | Round | Black paper | ✓ (S1) — top candidate; 4 left |

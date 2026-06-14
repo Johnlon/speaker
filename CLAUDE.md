@@ -23,6 +23,7 @@ The owner cannot track console output across sessions. Write all findings to the
 - Recommendation for a scenario → `solutions.md`
 - Amp/PSU/DSP electronics → `amp.md`
 - Supplier info → `suppliers.md`
+- Calculations and formatting automation scripts → `scripts/`
 
 **Never put per-driver data in combos.md.** If a fact is true regardless of which driver the mid or tweeter is paired with, it belongs in drivers.md.
 

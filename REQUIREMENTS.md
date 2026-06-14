@@ -19,6 +19,7 @@ Each file has a single responsibility. Do not write content into the wrong file.
 | `solutions.md` | Curated final report. Small number of recommended pairings per scenario (off-axis, on-axis, compact, budget, visual). Justified and actionable. | Exhaustive lists, marginal options, runner-ups beyond 5th place |
 | `amp.md` | JAB5 specs, PSU specs and options, DSP crossover and loudness configuration. | Per-driver analysis, driver names, model-specific recommendations |
 | `suppliers.md` | Supplier list with notes on UK shipping, range, and findings. | Driver evaluations |
+| `scripts/` | Python scripts for automating calculations (crossovers, spacing, PSU current/power) and markdown formatting. | Raw scraped data, analysis, or recommendations |
 | `CLAUDE.md` | Narrow operational instructions for the AI assistant only. | Requirements, evaluation criteria, project context |
 
 ### No data duplication
@@ -37,6 +38,7 @@ Before writing any analysis, run through this test:
 - **Is this a recommendation for a specific use case?** → `solutions.md`
 - **Is this about the amplifier or PSU electronics?** → `amp.md`
 - **Is this a raw spec scraped from a product page?** → `research/`
+- **Is this a script for calculations or formatting automation?** → `scripts/`
 
 Examples of correct placement:
 - "DS115-8 needs 18.6W to reach 98 dB" → **drivers.md** (true regardless of what tweeter pairs with it)

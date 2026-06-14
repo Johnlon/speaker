@@ -13,13 +13,13 @@ Key thresholds: Fs ≤75 Hz for 2× margin at 150 Hz crossover; Xmax ≥2.5 mm; 
 
 | Model | Size | Imp | Price | Stock | Fs Hz | Sens dB | Xmax mm | Pwr W | Frame OD mm | Cone | Notes |
 |-------|------|-----|-------|-------|-------|---------|---------|-------|-------------|------|-------|
-| Scanspeak 12W/8524G00 | 4.7" (12 cm) | ? | £54.93* | 4 | ? | ? | ? | ? | ~120 | Glass fibre coated | ★ Discovery range; in stock; need full specs — see /catalog/scanspeak-12w-8524g00-midwoofer.html |
-| Morel CAW 428 | 4.66" | 8Ω | £58.75 | ? | ? | 88 | ±4.0 | 150 | 118.5 | — | ★ Neo motor; Xmax=4mm; OD=118.5mm; 150W; **Fs unknown** — fetch datasheet; DC Res=5.5Ω |
-| SEAS MCA12RC H1304-08 | 4" | 8Ω | £76.59 | ? | 68 | 86 | ? | 110 | ? | Paper (hand coated) | ★ Prestige midrange; Fs=68Hz (2.27×); 400–5kHz range; 400W ST; Xmax and OD unknown |
-| SEAS MCA15RCY H1262-08 | 5" | 8Ω | £89.11 | ? | 51 | 89.5 | 3.4 p-p | 100 | ? | Coated paper | ★ Prestige midrange; Fs=51Hz (2.94×); excellent margin; 100–4kHz range; 300W ST; OD unknown |
-| Vifa NE123-W08 | 4" | 8Ω | ? | ? | ? | ? | ? | ? | ? | ? | ? Vifa/Peerless 4" mid; specs not fetched |
-| Vifa PL14WJ09 | 5" | 8Ω | ? | ? | ? | ? | ? | ? | ? | ? | ? Vifa/Peerless 5" mid; specs not fetched |
-| Audax AP100ZG | 4" | ? | £34.00 | ? | ? | ? | ? | ? | ? | ? | ? shielded magnet; was active last check; need specs — /components/audax-ap100zg-midrange.html |
+| Scanspeak 12W/8524G00 | 4.7" (12 cm) | 8Ω | £54.93* | 4 | 52 | 85.8 | 3.0 | 40 | 125 | Glass fibre coated | ★ Discovery range; in stock; full specs |
+| Morel CAW 428 | 4.66" | 8Ω | £58.75 | ? | 74 | 88 | ±4.0 | 150 | 118.5 | Damped polymer | ★ Neo motor; Xmax=4mm; OD=118.5mm; 150W; Fs=74Hz; DC Res=5.5Ω |
+| SEAS MCA12RC H1304-08 | 4" | 8Ω | £76.59 | ? | 68 | 86 | 0.9 | 110 | 120.4 | Paper (hand coated) | ★ Prestige midrange; Fs=68Hz (2.27×); 400–5kHz range; 400W ST; Xmax=0.9mm; OD=120.4mm |
+| SEAS MCA15RCY H1262-08 | 5" | 8Ω | £89.11 | ? | 51 | 89.5 | 3.4 p-p | 100 | 146 | Coated paper | ★ Prestige midrange; Fs=51Hz (2.94×); excellent margin; 100–4kHz range; 300W ST; OD=146mm |
+| Vifa NE123-W08 | 4" | 8Ω | £60.84 | ? | 61 | 86.1 | 3.1 | 45 | 123 | Wood fiber | ? Vifa/Peerless 4" mid; HFC confirmed price |
+| Vifa PL14WJ09 | 5" | 8Ω | £81.97 | ? | 47 | 86 | 3.0 | 200 | 149 | Coated paper | ? Vifa/Peerless 5" mid; discontinued |
+| Audax AP100ZG | 4" | 6Ω | £34.00 | ? | 64 | 84.7 | 2.7 | 30 | 117 | Aerogel | ? Shielded magnet; model AP100Z0; aerogel cone |
 | Fostex FW108HS | 4" | 8Ω | £150.30 | ? | ? | 84.5 | ? | ? | ? | Pulp | ✗ £180.36 incl VAT — too expensive; sens 84.5dB borderline low |
 
 ---

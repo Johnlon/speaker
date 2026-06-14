@@ -13,15 +13,15 @@ To merge: add passing candidates to drivers.md midrange section.
 - Size: 4" | Frame OD: 123 mm | Impedance: 4Ω | Re: 3.1Ω
 - Cone: White ceramic bonded to aluminium substrate | Surround: rubber
 - Sensitivity: **88 dB @ 2.83V/1m** | Power: **30W RMS** | Fs: **51 Hz** | Qts: 0.31 | Qes: 0.33 | Qms: 4.89 | Vas: 5.7 L
-- Xmax: not confirmed on page
+- Xmax: **5.0 mm** (one-way, confirmed from datasheet)
 - **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb12cacs25-4-ceramic-midwoofer-speaker) | Price: **£58.96** | Stock: UK in stock June 2026
 - **Also available:** 8Ω version SB12CACS25-8 at £58.96
 - **Fs check:** 51 Hz → 2.94× at 150 Hz crossover ✓ (comfortable margin).
 - **DSP correction vs TB sub (85 dB ref):** −3.0 dB pad.
 - **Power at reference (98 dB):** 10^(10/10) = 10.0W (33% of 30W ✓). Burst 101 dB: 20.0W (67% ✓). Headroom adequate.
-- **Beaming (Sd ~50 cm², same class as SB12PFCR25-4):** beaming ≈ 2,730 Hz — fine at 2,800 Hz crossover.
+- **Beaming (Sd ~50 cm², same class as SB12PFCR25-4):** beaming ≈ 2,730 Hz.
 - **Why interesting:** SB Acoustics ceramic construction claims "excellent stiffness to damping ratio" — potentially lower cone coloration and sharper transient. Ceramic cones tend to have very flat pass-band but often have hard breakup resonances.
-- **Concern — breakup:** Ceramic cone breakup resonances can be severe. Need to verify FR plot from datasheet to confirm no prominent breakup below 3,500 Hz, which would land uncomfortably close to the 2,800 Hz crossover. LR48 provides 48 dB/oct roll but breakup at 3,000 Hz would be a concern.
+- **Concern — breakup:** Ceramic cone breakup resonances can be severe. Need to verify FR plot from datasheet to confirm no prominent breakup below 3,500 Hz, which would land uncomfortably close to the upper crossover limit. LR48 provides 48 dB/oct roll but breakup at 3,000 Hz would be a concern.
 - **Concern — cost:** £58.96 is by far the most expensive mid candidate. More than twice the SB12PFCR25-4 (£20.58) for similar sensitivity and power.
 - **Concern — colour:** White ceramic cone is visually distinct. Owner has removed visual exclusions; noted as unusual but not grounds for rejection.
 - **vs SB12PFCR25-4 (£20.58 Willys):** PFCR: 87.5 dB, 30W, Fs 58 Hz, Qts 0.43, paper. CACS: 88 dB, 30W, Fs 51 Hz, Qts 0.31 — marginally better T/S but at 2.87× price premium. Only justified if ceramic breakup is confirmed above 3 kHz from datasheet.
@@ -49,7 +49,7 @@ To merge: add passing candidates to drivers.md midrange section.
 
 | Model | Willys price | Verdict |
 |-------|-------------|---------|
-| SB65WBAC25-4 | £25.95 | 2.5" full range — too small for 150–2800 Hz mid role |
+| SB65WBAC25-4 | £25.95 | 2.5" full range — too small for typical mid role |
 | SB10PGC21-4 | £15.80 | 3" polypropylene glass — very small; no specs fetched |
 | Scanspeak 12W/4524G00 | £53.10 | 4" Discovery Range mid — specs not fetched; expensive |
 | Scanspeak 12W/8524G00 | £53.10 | 8Ω version — same; specs not fetched |
@@ -78,3 +78,4 @@ Listed for completeness; too large for mid role in this build (beaming starts <2
 These are full-range woofer class; crossover to tweeter would need to be below 1,800 Hz and centre spacing would exceed any tweeter candidate. Not applicable.
 
 *Sources: willys-hifi.com product pages fetched June 2026*
+ product pages fetched June 2026*

@@ -17,7 +17,7 @@ To merge: add rows to si_tweeter_index.md candidate table; create drivers.md ent
 | Morel MDT22T | Dome | 8Ω | £47.55 Willys | UK stock | 650 | 89 | 80 | 54×54 | Square | 28 | Dark | 1,300 | ~ upgrade over MDT12 on Fs; same FP; but 55mm deep (vs MDT12 19mm) |
 | SB29RDAC-C000-4 | Ring Rad | 4Ω | £44.39 Willys | UK stock | 600 | 93 | 100 | 103.8 | Round | 29 | Dark | 1,200 | ~ ferrite alt to SB29RDNC (£54.31); 70mm cutout (not 74 as Willys says); 37.25mm deep |
 | SS D2604/833000 | Dome | 4Ω | £41.88 Willys | UK stock | 475 | 93 | 100 | 104.2 | Round | 26 | Dark | 950 | ★ lowest Fs dome in field; 74mm cutout; 55mm deep (tuned chamber); min xover 2.5kHz per SS |
-| SS D2008/852100 | Dome | 8Ω | £57.88 Willys | UK stock | 550 | 89 | 90 | 92 | Round | 20 | ? | 1,100 | ? FR at 2.8kHz unverified — Willys recommends 4kHz xover; datasheet needed |
+| SS D2008/852100 | Dome | 8Ω | £57.88 Willys | UK stock | 550 | 89 | 90 | 92 | Round | 20 | Dark | 1,100 | ? FR at 2.8kHz unverified — Willys recommends 4kHz xover; datasheet needed |
 | SB26STAC-C000-4 | Dome | 4Ω | £37.64 Willys | UK stock | 750 | 91.5 | 120 | 100 | Round | 26 | Dark | 1,500 | ~ in stock at Willys (OOS at SI); inferior to SB26STCN (72mm FP £28.92) on spacing |
 
 SS = Scan-Speak

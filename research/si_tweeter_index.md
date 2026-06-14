@@ -11,14 +11,14 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | ----- | ---- | --- | ----- | ----- | ----- | ------- | ----- | -------- | -------- | ------- | -------- | ------------ | ------ |
 | ND20FA-6 | Dome | 6Ω | €14.95 | 10+ | 2,005 | 91.5 | 15 | 45 | Round | 19 | Dark | 4,010 | ✓ — highest min-xover; tiny FP |
 | ND25FA-4 | Dome | 4Ω | €15.95 | 10+ | 1,350 | 90 | 20 | 66 | Round | 25 | Dark | 2,700 | ✓ (B10) — compact FP |
-| DC25T-8 | Dome (Ti) | 8Ω | €18.97 / £15.10 Willys | 10+ | 1,468 | 93 | 50 | — | Round | 25 | Silver | 2,936 | ✓ — Ti dome; bright |
+| DC25T-8 | Dome (Ti) | 8Ω | €18.97 / £15.10 Willys | 10+ | 1,468 | 93 | 50 | 100 | Round | 25 | Silver | 2,936 | ✓ — Ti dome; bright |
 | SB19ST-C000-4 | Dome | 4Ω | €21.45 / £20.14 Willys | 10+ | 980 | 88.5 | 30 | 88 | Round | 19 | Dark | 1,960 | ✓ (S1,S2,A1–A3,A6–A8,B1,B5) — reference |
 | BC25SC06-04 | Dome | 4Ω | €24.95 / £16.78 Willys | 10+ | 1,350 | 95.4 | 50 | ~70 | Round | 25 | Dark | 2,700 | ✓ (BC1-3) — 50W; 95.4dB → 1.8W at ref/3.6W burst; FP ~70mm (est) |
 | BC25SC55-04 | Dome | 4Ω | £16.65 Willys | UK stock | 1,400 | 93.2 | 100 | 70×54 trunc | Trunc | 25 | Dark | 2,800 | ~ 100W; truncated FP; Fs 1400 → min xover exactly 2800 Hz — zero margin |
 | HiVi TN25 | Dome | 5Ω | €25.45 | 5 | 1,500 | 91 | 20 | 54×54 | Square | 25 | Dark | 3,000 | ✓ (B6) — square FP; tightest spacing |
 | XT25SC90-04 | Ring Rad | 4Ω | £18.20 Falcon / £19.52 Willys | 10+ | 825 | 90.1 | 100 | ~90 | Round | 25 | Dark ring | 1,650 | ✓ (RR4) — 100W; UK stock |
 | OC25SC65-04 | Dome | 4Ω | €26.95 | 10+ | 1,400 | 92.3 | 12 | 41 no plate | — | 25 | Dark | 2,800 | ✗ no faceplate; 12W |
-| SB14ST-C000-4 | Dome | 4Ω | €28.45 / £22.56 Willys | exp 27-08-2026 SI | — | — | — | — | Round | 14 | Dark | — | OOS Aug 2026 SI; Willys in stock |
+| SB14ST-C000-4 | Dome | 4Ω | €28.45 / £22.56 Willys | exp 27-08-2026 SI | 1,300 | 86 | 10 | 24.2 | Round | 14 | Dark | 2,600 | OOS Aug 2026 SI; Willys in stock |
 | BC25TG15-04 | Dome | 4Ω | €29.95 | 10+ | 1,100 | 93.9 | 7 | 104 | Round | 25 | Dark | 2,200 | ✗ 7W power rating fatal |
 | DT-25N | Dome | 8Ω | €29.95 / £26.91 Willys | 10+ | 1,600 | 95 | 40 | 66 | Round | 25 | Dark | 3,200 | ✓ — high Fs; min xover 3,200 Hz |
 | Swan TN28-B | Dome | 6Ω | €29.95 | 10+ | 1,300 | 90 | 15 | 47.6 | Round | 28 | Dark | 2,600 | ★ ultra-compact FP 47.6mm; tight spacing potential |
@@ -30,8 +30,8 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | SB26ST-C000-5 | Dome | 5Ω | €30.95 / £25.30 Willys | 10+ | 870 | 91 | 80 | ~72 | Round | 26 | Dark | 1,740 | ★ 80W; assumed ~72mm FP (SB26 family); ST1-3 pairings |
 | DX25TG59-04 | Dome | 4Ω | €32.95 / £18.44 Willys | 10+ | 590 | 93.4 | 15 | 104 | Round | 25 | Dark | 1,180 | ✓ (A4,A5,B3,B4,B7,B8) — best Fs margin; Willys £14 below SI |
 | XT19TD00-04 | Ring Rad | 4Ω | €34.95 | 10+ SI; Willys OOS | ~820 | 88.9 | 20 | 94 | Round | 19 | Dark ring | ~1,640 | ✓ — small ring rad; 94mm FP |
-| SB26STC-C000-04 | Dome | 4Ω | €34.95 | exp 28-08-2026 | — | — | — | — | Round | 26 | Dark | — | OOS Aug 2026 |
-| DTM-104/8 | Dome | 8Ω | €34.95 | exp 31-07-2026 | — | — | — | — | Round | 25 | Dark | — | OOS Jul 2026 |
+| SB26STC-C000-04 | Dome | 4Ω | €34.95 | exp 28-08-2026 | 750 | 91.5 | 120 | 100 | Round | 26 | Dark | 1,500 | OOS Aug 2026 |
+| DTM-104/8 | Dome | 8Ω | €34.95 | exp 31-07-2026 | 1,200 | 92 | 45 | 104 | Round | 25 | Dark | 2,400 | OOS Jul 2026 |
 | SB26STCN-C000-4 | Dome | 4Ω | €36.45 / £28.92 Willys | 10+ | 950 | 92 | 120 | 72 | Round | 25 | Dark | 1,900 | ✓ — 120W; compact 72mm FP |
 | H26TG45-06 | Dome+wg | 6Ω | £31.80 Willys | UK stock | 1,019 | 96 | 100 | 104 | Round | 25 | Dark | 2,038 | ~ waveguide; 96dB; 100W; 6Ω; excellent power but narrows off-axis |
 | AMT Mini-8 | AMT | 8Ω | €36.45 | 10+ | ~1,750 | 88 | 15 | 57 | Round | AMT fold | — | ~3,500 | ~ stated lower limit 3.5kHz; super-tweeter role only |
@@ -49,7 +49,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | Discovery R2604/832000 | Ring Rad | 4Ω | €52.95 | 10+ | 500 | 90 | 100 | ~104 | Round | 25 | Dark ring | 1,000 | ★ new — 100W dual ring rad; Fs 500Hz; budget vs 833000; RP4-6 pairings |
 | Discovery R2604/833000 | Ring Rad | 4Ω | €62.45 | 10+ | 440 | 92 | 100 | ~104 | Round | 25 | Dark ring | 880 | ★ new — 100W dual ring rad; Fs=440Hz (same as XT25TG30); **new window champion**; RP1 = 2,380Hz with DSA90-8 |
 | SEAS 27TDFC H1189-06 | Dome+chamber | 6Ω | €71.86 (sale) / £56.92 HFC | 10+ SI | 550 | 90 | 90 | 103.8 | Round | 27 | Dark | 1,100 | ★ new — 90W cloth dome; rear chamber; Fs=550Hz; **widest-window standard dome**; TF1-3 pairings; 6Ω; depth 39mm |
-| TW 6 (Markaudio) | Dome | 4Ω | €44.95 | 8 | 1,700 | — | — | — | Round | 25 | Silver | 3,400 | ✓ (C4) — min xover above most mid beaming limits |
+| TW 6 (Markaudio) | Dome | 4Ω | €44.95 | 8 | 1,700 | 92 | 15 | 74 | Round | 25 | Silver | 3,400 | ✓ (C4) — min xover above most mid beaming limits |
 | RST28F-4 | Dome | 4Ω | €46.95 | 10+ | 710 | 93.5 | 80 | 104.8 | Round | 28 | Dark | 1,420 | ✓ — 80W; very high sens; large FP |
 | Morel MDT12 | Dome | 8Ω | £39.50 Willys | UK stock | 1,000 | 89 | 80 | 54 | Round | 28 | Dark | 2,000 | ★ compact 54mm FP; 80W; only 19mm deep; 8Ω; Willys-Hifi |
 | SEAS 27TFFNC/CG H1406-04 | Dome | 4Ω | €48.95 | 4 | 1,170 | 91 | 80 | 69.7×54 | Oval | 26 | Dark | 2,340 | ★ 80W; oval 69.7×54mm FP; Depth 21.5mm; Cutout 46mm |
@@ -105,7 +105,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 
 ## Key Reference
 
-- **Project tweeter crossover target:** 2,800 Hz HP (LR48)
+- **Project tweeter crossover target:** Per-pairing (determined by mid beaming and tweeter 2×Fs)
 - **Dome ≤19 mm preferred** for widest off-axis dispersion (kitchen 60°)
 - **Min Xover** = 2 × Fs
 - **Power needed at burst (101 dB):** P = 10^((101 − Sens) / 10) watts
