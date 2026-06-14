@@ -37,7 +37,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Datasheet:** [research/tang_band_w5-1138smf.pdf](research/tang_band_w5-1138smf.pdf) | [original URL](https://www.tb-speaker.com/uploads/files/cadcecac0ea8af7e07014e520d4ea00d.pdf)
 - SoundImports price: €54.95 | Stock (June 2026): 10+
 - **Why locked:** Class-leading excursion for its size; round frame; dark/stealth motor. This is the performance anchor — all other driver choices are judged against its output capability.
-- **Note:** Sensitivity is 85 dB, not 88 dB as stated in early project notes. All DSP correction figures in pre-June 2026 analysis were based on the wrong figure.
 
 ---
 
@@ -76,7 +75,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP correction vs TB sub (85 dB ref):** −7.6 dB pad needed.
 - **Power at reference:** 98 dB from 92.6 dB → needs **6.9W** RMS (46% of 15W ✓) | burst 101 dB → **13.8W** (92% of 15W — within rating, just) | DSP limiter at 14W gives small margin.
 - **Why this is the best-matched ring radiator for this system:** At burst (101 dB), needs 13.8W vs 15W rating — stays within spec (just). The XT25TG30-04 (91.9 dB, also 15W) needs 16.3W at burst — over rated power. The XT25BG60-04's 0.7 dB higher sensitivity is the critical difference. Fs 570 Hz → min xover 1,140 Hz — more crossover flexibility than XT25SC90-04 (1,650 Hz) while staying within 15W at burst, unlike XT25TG30-04.
-- **Fabric diaphragm note:** "Fabric ring radiator" — textile/cloth radiating element. Almost certainly dark in colour (fabric = woven material, not metal). Visual check still recommended but strong likelihood of visual pass.
 - **Off-axis:** Same ring radiator off-axis advantage as all XT25 series — wide controlled dispersion, directly relevant to 40–50° kitchen position.
 - **Concern:** 104.5 mm OD is large. Centre spacing with any standard 4" mid: (mid_OD + 104.5)/2.
 
@@ -105,7 +103,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP limiter:** Set tweeter channel at 13W → maximum tweeter SPL = 91.9 + 10×log(13/2) = **100.0 dB**. Sub peaks at 101 dB. 1 dB gap at burst, irrelevant in practice (bass transients, not treble).
 - **Why this is the standout tweeter find:** Fs 440 Hz is the lowest of **any tweeter candidate in this project**. Minimum crossover: **880 Hz**. This means the XT25TG30-04 is compatible with every mid driver in the field including the large 5"+ drivers (SIG150-4, SDS-P830656, SB13PFCR25-4) that beam early and need a crossover at or below 2,000 Hz. No other tweeter in the field can open that range of crossover positions.
 - **Off-axis advantage:** Ring radiators have inherently wide, controlled dispersion because the annular ring radiates energy at larger off-axis angles than an equivalent dome. Directly relevant to the 40–50° kitchen listening geometry.
-- **Concern — visual:** Face plate colour not yet confirmed from product photography. Ring radiators have a distinctive annular appearance — not a dome. If the ring element or faceplate has silver/chrome colouring, it would fail the visual rule. **Confirm colour before ordering.**
 - **Concern — power:** 15W rating is the same as DX25TG59-04 but sensitivity is 1.5 dB lower, so it needs more power for the same SPL. DSP limiter at 13W is essential. DX25TG59-04 has more headroom at the same rating because of its higher sensitivity.
 - **Concern — faceplate size:** 104 mm OD is the widest tweeter in the candidate field. Same as DX25TG59-04 and D27TG35-06. Cabinet baffle must be at least 190 mm wide to fit alongside any standard 4" mid.
 
@@ -119,8 +116,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power at reference:** 98 dB → 12.3W (12.3% of 100W ✓) | burst 101 dB → 24.5W (24.5% ✓). Large power headroom.
 - **Why liked:** Fs 825 Hz → minimum crossover 1,650 Hz — works with all mid drivers. 100W power rating is the most robust of any tweeter in the field. £18.20 is the second cheapest tweeter after ND20FA-6. Ring radiator off-axis characteristics similar to XT25TG30-04.
 - **Vs XT25TG30-04:** Higher power headroom (100W vs 15W). Lower Fs flexibility (1,650 Hz vs 880 Hz min xover). Lower sensitivity (90.1 vs 91.9 dB). Cheaper (£18.20 vs £29.90). For standard 4" mids where crossover is 2,000–2,800 Hz, the SC90 is perfectly adequate and £11.70 cheaper.
-- **Concern — visual:** Face colour not confirmed. Same caveat as XT25TG30-04 above. **Confirm colour before ordering.**
-- **Note on XT25SC90-04 being missed:** This driver was visible on page 1 of the SoundImports tweeter category all along. It was missed in the original survey — a plain gap, not a pagination issue. Caught in June 2026 Falcon Acoustics survey.
 
 ### SB Acoustics SB19ST-C000-4 — Candidate (top-ranked)
 - Dome: 19 mm textile | Faceplate OD: 88 mm round | Impedance: 4Ω
@@ -149,7 +144,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/hivi-tn25.html) (specs fetched June 2026)
 - **Datasheet:** [research/hivi_tn25.pdf](research/hivi_tn25.pdf) | [original URL](https://doc.soundimports.nl/pdf/brands/HiVi/TN25/pdf_HiVi_TN25_1.pdf) (image-based PDF, downloaded June 2026)
 - SoundImports price: €25.45 | Stock (June 2026): 5
-- **Visual note:** Square 54.1×54.1mm faceplate. Previously hard-excluded. Owner has reviewed and accepted — June 2026.
+- **Note:** Square 54.1×54.1mm faceplate; non-standard shape.
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
 - **Impedance note:** 5Ω — at 24V the JAB5 delivers ≈49W into 5Ω; 8W needed to match reference level. Ample headroom.
 - **Acoustic concern — Fs/crossover ratio:** Fs 1500 Hz vs 2800 Hz crossover = 1.87× margin. This is the tightest of all active tweeter candidates. The TN25's specified response starts at 2500 Hz — only 300 Hz below the crossover point. The LR48 48 dB/oct HP filter provides mechanical protection, but the comfort margin here is smaller than ideal. The Monacor DT-25N was rejected on similar grounds (Fs 1600 Hz, 1.75× ratio, response start 1600 Hz). TN25 is marginally better but the same concern applies.
@@ -192,7 +187,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - SoundImports price: €46.95 | Stock: 10+
 - **Why considered:** 80W RMS is the highest power rating in the tweeter field by far — effectively indestructible. Fs 710 Hz gives excellent margin below 2,800 Hz crossover (3.94×). Very high sensitivity at 93.5 dB means only 5.6W needed to match reference — amp is virtually always loafing.
 - **DSP correction vs TB sub (85 dB ref):** −8.5 dB pad needed. Large attenuation, but the JAB5 handles this in DSP without issue.
-- **Trade-off — dome size:** 28 mm dome is wider than the ≤19 mm ideal stated in goals.md. Wider dome = narrower dispersion above ~6 kHz. At the 60° kitchen position, output above 8–10 kHz may be 3–6 dB lower than on-axis compared to a 19 mm dome. The LR48 48 dB/oct crossover at 2,800 Hz rolls this off sharply anyway; the practical impact is on air and presence rather than tone. Owner has accepted. Previously rejected on this basis — reinstated June 2026.
+- **Trade-off — dome size:** 28 mm dome is wider than the ≤19 mm ideal stated in goals.md. Wider dome = narrower dispersion above ~6 kHz. At the 60° kitchen position, output above 8–10 kHz may be 3–6 dB lower than on-axis compared to a 19 mm dome. The LR48 48 dB/oct crossover at 2,800 Hz rolls this off sharply anyway; the practical impact is on air and presence rather than tone.
 - **Trade-off — price:** €46.95 leaves ~£28 for the midrange within the combined £75 budget. Workable with DS115-8 (€36.95 + €46.95 = €83.90 ≈ £72) or HiVi B4N (€22.45 + €46.95 = €69.40 ≈ £60).
 
 ### Peerless by Tymphany DX25TG59-04 — Candidate (reinstated)
@@ -202,7 +197,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/peerless-by-tymphany-dx25tg59-04.html) (specs fetched June 2026)
 - **Datasheet:** [research/peerless_dx25tg59-04.pdf](research/peerless_dx25tg59-04.pdf) | [original URL](https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/DX25TG59-04/DX25TG59-04.pdf) (downloaded June 2026)
 - SoundImports price: €32.95 | Stock (June 2026): 10+
-- **Why reinstated:** Previous 20W RMS minimum rule was overly conservative for high-sensitivity drivers. Actual power needed to match 98 dB reference is only **5.8W** (RMS) and **11.5W** (burst at 101 dB) — both well within the 15W rating. DSP limiter set at 12W protects the driver with 25% margin. Reinstated June 2026.
+- **Power at reference:** 5.8W RMS and 11.5W at burst — both well within 15W rating. DSP limiter set at 12W protects the driver with 25% margin.
 - **Why liked:** Fs 590 Hz → 2800/590 = **4.74× crossover margin** — best of all tweeter candidates by a wide margin. Qts 0.48 is the lowest (best behaved) of any candidate. Ferrofluid cooling adds thermal safety at the limits. Circular faceplate. 10+ in stock.
 - **DSP correction vs TB sub (85 dB ref):** −8.4 dB pad needed. Large attenuation — verify noise floor with the JAB5 at idle before committing.
 - **Concern — dome colour:** "Damped silk diaphragm" material confirmed; colour not explicitly stated on page. Likely dark (standard hi-fi silk), but verify from datasheet images or product photo before ordering.
@@ -219,7 +214,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Dome: 25 mm silk | Faceplate OD: 104 mm | Impedance: 6Ω
 - Sensitivity: 91.8 dB | Power: 15W RMS | Fs: 900 Hz
 - Supplier: [SoundImports](https://www.soundimports.eu/en/peerless-by-tymphany-d27tg35-06.html) | Price: €39.95 | Stock: 10+
-- **Why reinstated:** Power rule removed. At woofer max (80W), tweeter needs 11.1W — within the 15W rating with 35% headroom. Reinstated June 2026.
+- **Power at reference:** At woofer max (80W), tweeter needs 11.1W — within 15W rating with 35% headroom.
 - **DSP correction vs TB sub (85 dB ref):** −6.8 dB pad needed.
 - **Note:** 6Ω impedance — JAB5 is rated into 6Ω (its specified load), so this is fine. ~41W available at 24V, well above the 11.1W needed.
 - **Concern:** Dome colour unconfirmed. Faceplate 104 mm is large (same as DX25TG59-04). Fetch datasheet to confirm colour before ordering.
@@ -494,13 +489,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Concerns:** Tweeter dome colour unconfirmed. Depth 69mm is deepest of any candidate — check internal clearance. At €68.45 it is more expensive than any individual driver but covers both mid and tweeter slots. Tweeter at 12.4mm is very small — HF power handling and extension above 15 kHz may be limited.
 - **Crossover:** Tweeter Fs 1300 Hz → minimum crossover ≥2600 Hz; 2800 Hz is comfortable (2.15×).
 
-### SB Acoustics SB12PACR25-4 — Rejected (out of stock)
-- Size: 4" | Frame OD: not specified (circular plastic chassis) | Impedance: 4Ω
-- Cone: Anodised aluminium | Sensitivity: 87 dB | Power: 30W RMS | Xmax: 5 mm | Fs: 52.5 Hz
-- Qts: 0.31 | Vas: 5.3 L
-- Supplier: [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html) | Price: €32.45 | Stock: **OUT OF STOCK — 10 expected 27 November 2026**
-- **Reason for rejection:** Out of stock, restock not until November 2026. Pre-order only.
-
 ### Dayton Audio PA130-8 — Candidate
 - Size: 5" | Frame OD: 132 mm | Impedance: 8Ω
 - Cone: Paper | Sensitivity: 88.2 dB | Power: 50W RMS / 100W max | Xmax: 2 mm | Fs: 83.4 Hz
@@ -528,13 +516,12 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Cone: Treated paper | Sensitivity: 86 dB | Power: 30W RMS | Xmax: **10.2 mm** | Fs: 73 Hz
 - Qts: 0.36 | Vas: 1.43 L
 - Supplier: [SoundImports](https://www.soundimports.eu/en/peerless-by-tymphany-sls-85s25cp04-04.html) | Price: €29.95 | Stock: 10+
-- **Reinstated June 2026:** Previously rejected for non-circular frame. Visual constraints removed — oval/rectangular frame is now accepted.
 - **Why interesting:** Xmax 10.2 mm is equal to SDS-P830656 — outstanding mechanical headroom. Paper cone, warm character. Fs 73 Hz → 2.05× at 150 Hz crossover (adequate). 4Ω: at 29V delivers 90W vs 31.7W needed at 98 dB ✓. Frame 105×91mm — if the 91mm axis is vertical, centre spacing with compact tweeters (DT-28N ~72mm OD) is ~82mm.
 - **DSP correction:** −1 dB vs sub (86 dB vs 85 dB ref).
 - **Power at reference:** 4Ω, 86 dB → 2×10^((98−86)/10) = 31.7W (within 30W RMS — marginal; DSP limit at 30W; at burst 63.4W vs 30W — cap sub via DSP limiter). 29V required.
 
 ### Peerless by Tymphany SDS-P830656 — Candidate (reconsidering)
-- Size: 5.25" | Frame: **152 × 134 mm** truncated cast frame (circular rule fails — owner reconsidering) | Impedance: 8Ω
+- Size: 5.25" | Frame: **152 × 134 mm** truncated cast frame | Impedance: 8Ω
 - Cone: Coated paper | Sensitivity: 86.1 dB @ 2.83V/1m | Power: 60W RMS | Xmax: 10 mm | Fs: 65 Hz
 - Re: 5.9Ω | Qts: 0.62 | Qes: 0.76 | Qms: 3.47 | Vas: 6.58 L | Sd: 86.6 cm² | BL: 5.53 Tm | Mms: 9.67 g
 - Baffle cutout: 118 mm | Bolt circle: 141.8 mm | Depth: 66 mm | Frequency response: 50–5,000 Hz
@@ -558,8 +545,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Concern — Fs:** 106 Hz → **1.42× at 150 Hz**. Worst Fs margin of any mid candidate. Operating close to resonance — elevated distortion, higher excursion at the crossover point. Even at 200 Hz crossover: 1.89×. Mitigated slightly by active DSP HP filter which provides mechanical protection.
 - **Concern — Xmax:** 1.1 mm — lowest of any mid candidate. At 150 Hz, excursion demand near the crossover limits clean output headroom before mechanical clipping.
 - **What's interesting:** Kevlar-loaded paper cone (warm but detailed character), Celestion UK heritage, £30 at Thomann UK (cheapest available mid), Celestion specifies it as "MF in 3-way". Would be a strong candidate if Fs were 60–70 Hz and Xmax were 3+ mm.
-- **Reinstated June 2026:** Power passes, no visual issue. Spec weaknesses noted — will rank low in comparison matrix.
-
 ### Scan-Speak Discovery D7608/920010 — Rejected (Qts too high, Xmax too low, price)
 - Size: 3" mid-dome | Frame OD: circular | Impedance: 8Ω
 - Diaphragm: not specified | Sensitivity: 92 dB | Power: 80W RMS | Xmax: 0.4 mm | Fs: 300 Hz
@@ -574,7 +559,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Fs note:** 300 Hz — this is a mid-dome, not a cone mid. The 150 Hz crossover is 0.5× its Fs — far below resonance. **Would need crossover at 600 Hz minimum (2× Fs).** That means the sub would handle 40–600 Hz, and this covers 600 Hz–20 kHz with no separate tweeter. A 2.5-way or 2-way active rather than true 3-way.
 - **Impedance:** 5Ω — JAB5 handles it safely; power at 24V into 5Ω ≈ 49W. Fine.
 - **Price:** €79.95 — exceeds the ~£75 combined mid+tweeter budget unless budget is extended.
-- **Reinstated June 2026:** No power or visual failure. High price and unusual role (needs 600 Hz+ crossover, eliminates separate tweeter) are engineering trade-offs not rules.
 
 ### Dayton Audio RS52FN-8 — Rejected (Xmax, Fs, size)
 - Size: 2" midrange dome | Frame OD: 130 mm (5.12") | Impedance: 8Ω
@@ -612,12 +596,6 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 
 ---
 
-## Drivers With Visual Caveats — Ranked, Not Hard-Rejected
-
-These pass enough criteria to be worth considering if the ranking context justifies it.
-
-*(PLS-P830987 moved to Hard-Excluded — see below)*
-
 ### Dayton Audio SIG150-4 — Candidate
 - Size: 5.25" | Frame OD: **152 mm** | Impedance: 4Ω | Open cast aluminium frame
 - Cone: Anodised aluminium (colour unconfirmed — assume black like SIG120-4 pending visual)
@@ -647,11 +625,8 @@ These pass enough criteria to be worth considering if the ranking context justif
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/dayton-audio-sig120-4.html) (specs fetched June 2026)
 - SoundImports price: €34.95 | Stock at SoundImports (June 2026): **OUT OF STOCK**
 - **Audiophonics (France): €34.90 — IN STOCK ("last items") — order urgently** | Ships to UK via Colissimo/UPS/DPD | UK import VAT (20%) likely added at checkout
-- **Why it was previously noted:** "Required changing the original baffle math significantly." This was misleading. The actual trade-off is:
-  - The front baffle in Option C (side-mounted sub) needs to be wide enough for the largest front-facing driver. At 123 mm frame OD, the baffle needs a minimum of ~140 mm interior width to surface-mount the SIG120-4 with reasonable edge clearance.
-  - The current Option C design is 190 mm wide — the SIG120-4's 123 mm frame fits with 33.5 mm margin each side. **There is no redesign required in Option C.**
-  - The "significant redesign" note was relevant only to the original narrow tall-tower layouts (Options A/B), which are archived.
-- **Visual merit:** Continuous round frame with a single-piece black dish — one of the most visually coherent mid drivers evaluated. Black finish confirmed.
+- **Note:** 123 mm OD on 190 mm baffle leaves 33.5 mm margin each side — adequate clearance for surface mounting.
+- **Visual note:** Continuous round frame with a single-piece black dish. Black finish confirmed.
 - **Impedance note:** 4Ω — JAB5 mid channel into 4Ω delivers ~42W at 24V supply, which comfortably exceeds any sensitivity-matching requirement.
 - **Acoustic assessment:** Fs 74.6 Hz is higher than DSA90-8 (66.6 Hz) and TCP115-8 (59.2 Hz). A 150 Hz crossover places it only 2.01× above Fs — adequate but not as generous as TCP115-8 (2.53×). Sensitivity at 89.7 dB is 4.7 dB above the 85 dB sub reference — needs −4.7 dB DSP attenuation. Xmax 4 mm is good.
 - **DSP correction vs TB sub (85 dB ref):** −4.7 dB attenuation needed.
@@ -661,8 +636,6 @@ These pass enough criteria to be worth considering if the ranking context justif
 ## Hard-Excluded Drivers
 
 These are excluded permanently and should not be re-evaluated.
-
-*(DS115-8 and HiVi B4N reinstated as candidates — see Midranges section. Research agent conclusions overridden by owner visual review and official datasheet.)*
 
 ### Peerless by Tymphany PLS-P830987 — Hard excluded
 - Size: 3" nominal | Frame: **78×78 mm square** (confirmed pincushion — 4 flat edges, not a circle)
@@ -686,7 +659,7 @@ These are excluded permanently and should not be re-evaluated.
 - **Reason excluded:** Cannot balance with woofer. At 87 dB sensitivity, needs 12.6W at reference level (98 dB) — already above the 10W RMS rating. At woofer max (101 dB) needs 25.1W vs 20W max. Power handling definitely excludes it.
 
 ### Monacor SPX-31M — Hard excluded
-- **Reason:** Protruding silver phase plug (visually unacceptable) + only 83 dB sensitivity (needs excessive DSP gain) + Xmax only 1.1 mm (inadequate at 150 Hz crossover).
+- **Reason:** 83 dB sensitivity (needs excessive DSP gain) + Xmax only 1.1 mm (inadequate at 150 Hz crossover).
 
 ### Peerless by Tymphany BC25TG15-04 — Hard excluded
 - Sensitivity: 93.9 dB | Power: 7W RMS | Supplier: [SoundImports](https://www.soundimports.eu/en/peerless-by-tymphany-bc25tg15-04.html) | Price: €29.95
@@ -701,32 +674,25 @@ These are excluded permanently and should not be re-evaluated.
 
 ---
 
-## Out-of-Stock / Not Available (re-check periodically)
+## Out-of-Stock / Deferred
 
-| Driver | Reason not available now | When to recheck |
-|--------|--------------------------|-----------------|
-| Dayton Audio ND25FW-4 | OOS at SoundImports — **now available Amazon UK** (June 2026) | Move to Candidates |
-| SB Acoustics SB12PACR25-4 | Out of stock until November 2026 | November 2026 |
-| Scan-Speak D2606/920000 | Over budget at €39.95; 6Ω impedance | If budget increases |
+| Driver | Status |
+|--------|--------|
+| SB Acoustics SB12PACR25-4 | OOS at SoundImports until November 2026; available Willy's HiFi UK (£23.76) — see Candidate entry |
 
 ---
 
-## Eliminated on Specification (not visual)
+## Eliminated on Specification
 
 | Driver | Reason |
 |--------|--------|
-| ~~Dayton Audio RST28F-4~~ | Reinstated June 2026 — owner accepted dome size trade-off |
-| ~~Peerless DX25TG59-04~~ | Reinstated June 2026 — power rule was too conservative for high-sensitivity drivers |
-| ~~Peerless D27TG35-06~~ | Reinstated June 2026 — power rule removed; 11.1W needed at woofer max vs 15W rated |
 | Monacor DT-25N | Fs 1600 Hz marginal for 2800 Hz xover; waveguide design |
 | Dayton ND20FA-6 | Fs 2005 Hz too high; 15W RMS; 6Ω impedance |
 | Scan-Speak D7608/920010 | Xmax 0.4 mm; Qts 1.73; €106.95 over budget |
-| HiVi Swan DM-7500 | 5Ω impedance; €79.95 over budget |
+| HiVi Swan DM-7500 | €79.95 over budget; 600 Hz+ min crossover eliminates separate tweeter |
 | Dayton Audio RS52FN-8 | Xmax 1 mm; Fs 394 Hz (not suitable as bass-mid) |
 | Dayton Audio PA130-8 | Frame OD 132 mm; Xmax 2 mm |
-| SB Acoustics SB13PFCR25-4 | 5" nominal, large frame; Qts 0.29 needs huge enclosure |
-| Peerless SLS-85S25CP04-04 | Rectangular frame 105×91 mm |
-| ~~Peerless SDS-P830656~~ | Reconsidering June 2026 — truncated frame allows TN25 square tweeter to sit close; owner evaluating |
+| SB Acoustics SB13PFCR25-4 | 5" nominal, large frame; Qts 0.29 |
 
 ---
 
