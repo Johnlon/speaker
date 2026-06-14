@@ -274,6 +274,51 @@ Ring radiators (XT25 family) produce inherently wide, controlled dispersion thro
 
 ---
 
+## Visual Recommendations
+
+Driver appearance and shape affect how the front baffle reads. The sub is round and large — the mid and tweeter choices either reinforce or contrast that. Three approaches are described below. Owner is exploring what looks best; these are starting points.
+
+---
+
+### All-Round — Consistent Circular Theme
+
+Sub, mid, and tweeter all circular. Classic, symmetrical, traditional speaker aesthetic. The three discs graduate in size down the baffle.
+
+| ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
+|----|-----|---------|-------|-------|-----|-----------|-------|
+| B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | 2,700 Hz | ~£44 | 24V | Detailed | Minimum spacing (79mm) — pair reads almost as one unit |
+| A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | 2,800 Hz | ~£49 | 24V | Detailed | Tightest spacing (90mm) with best-in-class tweeter |
+| S1 | DS115-8 (~116mm OD) | SB19ST (88mm OD) | 2,500 Hz | ~£50 | 24V | Warm | Reference pairing; warm paper cone; best overall |
+| RR4 | DSA90-8 (92mm OD) | XT25SC90-04 (~90mm OD) | 2,800 Hz | ~£37 | 24V | Detailed, wide | Ring radiator tweeter — annular face gives subtle visual variety while staying circular |
+
+---
+
+### Square / Non-Round — Contrast with the Round Sub
+
+Sub is large and round. A non-round mid or tweeter breaks the pattern — more eclectic or modern look. Could be just the tweeter (round mid, square tweeter) or both.
+
+| ID | Mid | Tweeter | Xover | Spacing | Price | PSU | Character | Notes |
+|----|-----|---------|-------|---------|-------|-----|-----------|-------|
+| B6 | DSA90-8 (round, 92mm) | TN25 (54×54mm square) | 3,000 Hz | **73mm** | ~£52 | 24V | Detailed | Strongest contrast — square tweeter above round mid; also tightest spacing of any pairing |
+| B12 | SLS (105×91mm oval) | DT-28N (compact waveguide) | 2,500 Hz | ~82mm | ~£61 | **29V** | Warm | Oval mid vs round sub — organic non-standard shapes; Xmax 10.2mm |
+| B11 | DSA90-8 (round, 92mm) | DT-28N (compact waveguide) | 2,500 Hz | ~82mm | ~£65 | 24V | Detailed | Small compact tweeter above round mid — modern, restrained contrast |
+
+**On B6 spacing (73mm):** This is the tightest centre-to-centre of any pairing in the catalogue. At 3,000 Hz crossover, 73mm = 0.73λ — very good lobing geometry. The tight spacing combined with the visual contrast is a strong combination.
+
+---
+
+### Ring Radiator — Circular but Visually Different
+
+Ring radiators are circular but their annular (ring-shaped) diaphragm looks distinctly different from a solid dome. Paired with a round mid, everything stays circular but the tweeter has a different visual character — subtle variety rather than stark contrast.
+
+| ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
+|----|-----|---------|-------|-------|-----|-----------|-------|
+| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | ~£52 | 24V | Warm + wide | Best value; natural fibre mid + ring radiator |
+| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | ~£62 | 24V | Warm + wide | Reference warmth + ring radiator |
+| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~£92 | 24V | Warm-neutral | SB29 ring dome — not a ring radiator but has a distinctly ringed face; engineering showcase |
+
+---
+
 ## Scenario Recommendations
 
 ### Scenario 1 — Kitchen 60° Off-Axis (Primary Use Case)
@@ -347,51 +392,6 @@ Minimum baffle width is set by the largest driver on the front face. DSA90-8 at 
 | 5 | SB12MNRX2-25-4 + SB19ST (A2) | ~£72 | 24V | Warm, dynamic | Natural fibre; controlled midrange transients |
 
 **Ring radiator vs dome:** XT25TG30-04 costs ~£16 more than SB19ST. For a speaker where the listener is frequently at 60°, the ring radiator's wide dispersion is a directly audible benefit. RR2 at ~£52 is the strongest single upgrade argument in the catalogue.
-
----
-
-## Visual Recommendations
-
-Driver appearance and shape affect how the front baffle reads. The sub is round and large — the mid and tweeter choices either reinforce or contrast that. Three approaches are described below. Owner is exploring what looks best; these are starting points.
-
----
-
-### All-Round — Consistent Circular Theme
-
-Sub, mid, and tweeter all circular. Classic, symmetrical, traditional speaker aesthetic. The three discs graduate in size down the baffle.
-
-| ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
-|----|-----|---------|-------|-------|-----|-----------|-------|
-| B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | 2,700 Hz | ~£44 | 24V | Detailed | Minimum spacing (79mm) — pair reads almost as one unit |
-| A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | 2,800 Hz | ~£49 | 24V | Detailed | Tightest spacing (90mm) with best-in-class tweeter |
-| S1 | DS115-8 (~116mm OD) | SB19ST (88mm OD) | 2,500 Hz | ~£50 | 24V | Warm | Reference pairing; warm paper cone; best overall |
-| RR4 | DSA90-8 (92mm OD) | XT25SC90-04 (~90mm OD) | 2,800 Hz | ~£37 | 24V | Detailed, wide | Ring radiator tweeter — annular face gives subtle visual variety while staying circular |
-
----
-
-### Square / Non-Round — Contrast with the Round Sub
-
-Sub is large and round. A non-round mid or tweeter breaks the pattern — more eclectic or modern look. Could be just the tweeter (round mid, square tweeter) or both.
-
-| ID | Mid | Tweeter | Xover | Spacing | Price | PSU | Character | Notes |
-|----|-----|---------|-------|---------|-------|-----|-----------|-------|
-| B6 | DSA90-8 (round, 92mm) | TN25 (54×54mm square) | 3,000 Hz | **73mm** | ~£52 | 24V | Detailed | Strongest contrast — square tweeter above round mid; also tightest spacing of any pairing |
-| B12 | SLS (105×91mm oval) | DT-28N (compact waveguide) | 2,500 Hz | ~82mm | ~£61 | **29V** | Warm | Oval mid vs round sub — organic non-standard shapes; Xmax 10.2mm |
-| B11 | DSA90-8 (round, 92mm) | DT-28N (compact waveguide) | 2,500 Hz | ~82mm | ~£65 | 24V | Detailed | Small compact tweeter above round mid — modern, restrained contrast |
-
-**On B6 spacing (73mm):** This is the tightest centre-to-centre of any pairing in the catalogue. At 3,000 Hz crossover, 73mm = 0.73λ — very good lobing geometry. The tight spacing combined with the visual contrast is a strong combination.
-
----
-
-### Ring Radiator — Circular but Visually Different
-
-Ring radiators are circular but their annular (ring-shaped) diaphragm looks distinctly different from a solid dome. Paired with a round mid, everything stays circular but the tweeter has a different visual character — subtle variety rather than stark contrast.
-
-| ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
-|----|-----|---------|-------|-------|-----|-----------|-------|
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | ~£52 | 24V | Warm + wide | Best value; natural fibre mid + ring radiator |
-| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | ~£62 | 24V | Warm + wide | Reference warmth + ring radiator |
-| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~£92 | 24V | Warm-neutral | SB29 ring dome — not a ring radiator but has a distinctly ringed face; engineering showcase |
 
 ---
 
