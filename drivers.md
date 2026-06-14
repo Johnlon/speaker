@@ -359,23 +359,26 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - Cone: **Coated paper — confirmed dark from official Dayton Audio datasheet (PDF)** | Surround: Half-roll rubber
 - Sensitivity: 85.3 dB @ 2.83V/1m | Power: 35W RMS | Xmax: 4.1 mm | Fs: 55.2 Hz
 - Qts: 0.38 | Qms: 2.10 | Qes: 0.46 | Re: 5.8Ω | Le: 0.8 mH | Mms: 7.9 g | Cms: 1.05 mm/N | BL: 5.88 Tm | Vas: 4.33 L | Sd: 54.1 cm² | Vd: 22.2 cm³
-- Baffle cutout: 93.6 mm | Depth: 29.7 mm | VC diameter: 25.4 mm
-- **Source:** [SoundImports product page](https://www.soundimports.eu/en/dayton-audio-ds115-8.html) | Official Dayton Audio datasheet (PDF supplied by owner June 2026)
+- Baffle cutout: 93.6 mm | Depth: 54.7 mm | VC diameter: 25.4 mm
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/dayton-audio-ds115-8.html) | [Dayton Audio product page](https://www.daytonaudio.com/product/1054/ds115-8-4-designer-series-woofer-speaker-8-ohm) | Datasheet: [research/dayton_ds115-8_specifications.pdf](research/dayton_ds115-8_specifications.pdf) | [original URL](https://www.parts-express.com/pedocs/specs/295-424--dayton-audio-ds115-8-specifications.pdf)
 - SoundImports price: €36.95 | Stock (June 2026): 4 units
 - **Why liked:** Best Fs margin of any 8Ω candidate (55.2 Hz → 2.72× at 150 Hz crossover). Best Xmax of any 8Ω candidate (4.1 mm). Sensitivity 85.3 dB is essentially a perfect match to the 85 dB sub — only −0.3 dB DSP correction needed (zero in practice). 35W RMS provides comfortable thermal margin. Datasheet explicitly states "Cosmetic frame with low profile lip, designed for front mounting — no countersinking required." Confirmed dark coated paper cone — visual rule passes.
 - **Concern:** Only 4 units in stock — enough for one build but no surplus. Re 5.8Ω is slightly higher than a standard 8Ω driver; the amp channel draws slightly less current than a true 8Ω load at the same voltage.
 - **DSP adjustment needed:** −0.3 dB (effectively zero).
 
 ### HiVi Swan B4N — Candidate
-- Size: 4" | Frame OD: 116.5 mm round | Impedance: 8Ω
-- Cone: Aluminium/Magnesium alloy with copper-tone anodising | Surround: Rubber
-- Sensitivity: 85 dB @ 2.83V/1m | Power: 25W RMS / 50W max | Xmax: 3.2 mm | Fs: 56 Hz
-- Qts: 0.52 | Vas: 4.53 L | Re: 6.5Ω | Qms: 3.91 | Qes: 0.63
-- **Source:** [SoundImports](https://www.soundimports.eu/en/hivi-b4n.html) (specs fetched June 2026)
+- Size: 4" | Frame OD: 116.5 mm round | Cutout: 108 mm | Depth: 67.6 mm | Impedance: 8Ω
+- Cone: Aluminium/bronze alloy (bright metallic finish) | Surround: Rubber
+- Sensitivity: 85 dB @ 2.83V/1m | Power: 25W RMS / 50W max | Xmax: 3.2 mm
+- **T/S (CLIO, Sample 5, HiVi lab, 2004-05-09 — authoritative):** Fs: **66.27 Hz** | Re: 6.40 Ω | Qms: 2.94 | Qes: 0.54 | Qts: 0.46 | Mms: 7.86 g | Cms: 0.73 mm/N | Vas: 2.86 L | Bl: 6.22 N/A | L1K: 0.82 mH | L10K: 0.38 mH | Effective cone dia: 82 mm
+- **Fs discrepancy:** SoundImports product page lists Fs = 56 Hz — contradicted by HiVi's own CLIO lab measurement (66.27 Hz). CLIO figure used for all calculations.
+- **Source:** [SoundImports](https://www.soundimports.eu/en/hivi-b4n.html) | Datasheets: [research/hivi_b4n_datasheet_1.pdf](research/hivi_b4n_datasheet_1.pdf) (drawings + FR) | [research/hivi_b4n_datasheet_2.pdf](research/hivi_b4n_datasheet_2.pdf) (CLIO T/S + impedance) | Original URLs: [pdf_hiVi_B4N_1.pdf](https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_1.pdf) | [pdf_hiVi_B4N_2.pdf](https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_2.pdf)
 - SoundImports price: €22.45 | Stock (June 2026): 10+
-- **Why liked:** Fs 56 Hz gives 2.68× margin at 150 Hz crossover — excellent. Sensitivity 85 dB is a perfect match to the TB sub — zero DSP correction needed. 10+ in stock. Affordable at €22.45. Round frame confirmed. Owner has reviewed the copper-tone anodising and accepted the visual.
-- **Concern:** 25W RMS is the lowest power rating of the active mid candidates. Xmax 3.2 mm is lower than DS115-8 or TCP115-8. Re 6.5Ω is higher than nominal — same effect as DS115-8 note above.
-- **Visual note:** Research agent described cone as "bright metallic copper" from a Madisound listing. Owner has reviewed and accepts the appearance. Not hard-excluded.
+- **Fs margin at 150 Hz crossover:** 150/66.27 = **2.26×** — passes ≥2× minimum. Tighter than DS115-8 (2.72×). Previously estimated as 2.68× based on the incorrect SI page figure.
+- **Frequency response (CLIO MLS):** ~82–84 dB from 200 Hz–1 kHz; slight dip ~700 Hz; rising above 1 kHz; severe cone breakup peak at 4–5 kHz (~90–92 dB on-axis); steep rolloff above 5 kHz. 30° off-axis tracks on-axis to ~3 kHz then diverges. LR24 LP at 2,800 Hz attenuates the breakup by ~24 dB — adequate. Breakup is severe enough that the DSP limiter is worth setting conservatively.
+- **Why liked:** Perfect sensitivity match to TB sub (85 dB) — zero DSP correction. 10+ stock. €22.45 is cheapest standalone mid candidate. Round frame. Metallic bronze cone is visually distinctive — counterpoint to dark paper DS115-8.
+- **Concern:** 25W RMS lowest power rating of active mid candidates. Xmax 3.2 mm lower than DS115-8 (4.1 mm). Vas 2.86 L (CLIO) is much smaller than 4.53 L on SI page — use CLIO figure for enclosure modelling. A sealed cavity of ~0.5 L is sufficient.
+- **Visual note:** "Bronze/aluminum alloy" cone — bright metallic copper-gold appearance, visually distinctive from paper mids. Owner has reviewed and accepts.
 - **DSP adjustment needed:** 0 dB — perfectly matched to sub reference.
 
 ### Dayton Audio RS100-8 — Candidate (low stock)
