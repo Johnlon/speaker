@@ -47,6 +47,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | R2604/833000 | 880 Hz | ~104 | 92 | **100** |
 | XT25TG30-04 | 880 Hz | 104 | 91.9 | 15 |
 | R2604/832000 | 1,000 Hz | ~104 | 90 | **100** |
+| H1189-06 | 1,100 Hz | 103.8 | 90 | **90** |
 | XT25BG60-04 | 1,140 Hz | 104.5 | 92.6 | 15 |
 | DX25TG59-04 | 1,180 Hz | 104 | 93.4 | 15 |
 | SB29SDAC | 1,200 Hz | ~104 | ~91 | ~30 |
@@ -193,6 +194,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | RP4 | DSA90-8 | R2604/832000 | 1,000–3,260 | 98 | ~58 | 24V / 29V | Detailed + ring rad 100W | 2,260Hz window; **Falcon £38.95** (+£9 over XT25TG30); 100W; 120Hz narrower than RP1 |
 | RP5 | DS115-8 | R2604/832000 | 1,000–2,636 | 110 | ~63 | 24V / 28V | Warm + ring rad 100W | 1,636Hz window; **Falcon £38.95** (+£9 over XT25TG30); 100W for £9 premium |
 | RP6 | SB12PFCR25-4 | R2604/832000 | 1,000–2,730 | 113 | ~62 | 24V / 28V | Warm nat. + ring rad 100W | 1,730Hz window; **Falcon £38.95**; cheapest 100W ring rad + nat. fibre |
+| TF1 | DSA90-8 | H1189-06 | 1,100–3,260 | 98 | ~76 | 24V / 29V | Detailed + dome 90W | **2,160Hz window — widest of any standard dome pairing**; **HFC £56.92** (SI €71.86); 98mm spacing; cloth dome character |
+| TF2 | DS115-8 | H1189-06 | 1,100–2,636 | 110 | ~81 | 24V / 28V | Warm + dome 90W | 1,536Hz window; wider than DC1 (1,376Hz); **best dome window for DS115 pairing**; HFC £56.92 |
+| TF3 | SB12PFCR25-4 | H1189-06 | 1,100–2,730 | 113 | ~78 | 24V / 28V | Warm nat. + dome 90W | 1,630Hz window; 113mm spacing; SEAS cloth dome + nat. fibre; HFC £56.92 |
 
 ---
 

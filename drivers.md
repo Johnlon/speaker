@@ -351,6 +351,20 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Why interesting:** Budget Discovery ring radiator — 100W for only €52.95 (cheaper than SB29RDNC at €68.45, same price bracket as XT25TG30-04). Wider window than D2604/830000 despite being a ring radiator. Best budget 100W ring radiator option. Prefer R2604/833000 at +€9.50 for the 880 Hz min xover — 120 Hz extra window is meaningful for DSP flexibility.
 - **Pairing note:** At ~104mm FP, spacing with DS115-8 ≈ 110mm; with SB12PFCR25-4 ≈ 113mm; with DSA90-8 ≈ 98mm.
 
+### SEAS 27TDFC H1189-06 — Candidate (90W dome, Fs 550 Hz — widest-window standard dome)
+- Dome: 27 mm soft textile | Rear chamber | Faceplate OD: **103.8 mm** | Cutout: 73 mm | Depth: **39 mm** | Impedance: 6Ω
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **90W RMS / 220W max** | Fs: **550 Hz** | Frequency response: specified from 1,500 Hz
+- **Source:** [SoundImports](https://www.soundimports.eu/en/seas-27tdfc.html) (fetched June 2026) | Price: **€71.86** (sale from €86.95) | Stock (Jun 2026): **10+**
+- **Also at HiFi Collective:** £56.92 (stock status unknown; verify before ordering)
+- **Min crossover:** 2× Fs = **1,100 Hz** — widest-window standard dome in the catalogue. Better than SB29RDNC-C000-4 (1,160 Hz), SB29SDNC-C000-4 (1,260 Hz), D2604/830000 (1,260 Hz).
+- **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed.
+- **Power at reference (6Ω, 98 dB):** 2.83²/6 × 10^((98−90)/10) = 1.334 × 6.31 = **8.4W** (9.4% of 90W ✓). At burst (101 dB): **16.8W** (18.7%). Completely safe.
+- **Available @ 24V into 6Ω:** ~41W >> 16.8W needed ✓. No PSU concern.
+- **Centre spacing (FP 103.8 mm):** DSA90-8 (92mm OD) → **98mm** | DS115-8 (~116mm OD) → **110mm** | SB12PFCR25-4 (~122mm OD) → **113mm** — same as R2604/833000 at identical FP OD.
+- **Why interesting:** SEAS Prestige-quality standard dome with the lowest Fs of any dome candidate (550 Hz). Rear chamber lowers compliance resonance further than chamberless designs. Cloth dome character is smooth and warm vs ring-radiator brightness. At 103.8mm FP it physically matches SB29RDNC-C000-4, R2604/833000, R2604/832000 — interchangeable bolt-on without baffle change.
+- **vs R2604/833000:** R2604/833000 wins on window width (880 Hz vs 1,100 Hz), sensitivity (92 vs 90 dB), power (100W vs 90W), and price (Falcon £45.95 vs £56.92). H1189-06 wins if cloth dome character is preferred. For kitchen-monitor DSP system, R2604/833000 is the stronger choice; H1189-06 is the best dome alternative for buyers who specifically want a dome at this FP size.
+- **Depth note:** 39mm depth requires ≥40mm clearance behind baffle inner face. Plan for recessed tweeter rebate or a deeper baffle section at tweeter location.
+
 ### Dayton Audio CF18N-4 — Candidate (compact carbon fiber 18mm dome)
 - Dome: **18 mm woven carbon fiber** | Faceplate OD: **58 mm** | Cutout: 36.9 mm | Depth: 38.3 mm | Impedance: 4Ω | Re: 3.54Ω
 - Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **1,100 Hz** | Frequency response: 2,500–20,000 Hz
@@ -882,6 +896,11 @@ All tweeters indexed from SoundImports pages 4–6 (cheapest sort, June 2026). N
 - Neodymium. Dimensionally compatible with Dynaco A25 crossover.
 - **Source:** https://www.soundimports.eu/en/grs-a25-2t.html | Price: €39.95 | Stock: 10+
 - Note: 2" dome — larger dome typically narrower HF dispersion. Designed as Dynaco A25 replacement. 92.8 dB sensitivity. Reviewer noted unit-to-unit variation requiring individual measurement.
+
+### SEAS 27TDFC H1189-06 — Catalogue (10+ in stock)
+- Type: Dome (soft textile) + rear chamber | Size: 1" (27mm) | Imp: 6Ω | Sensitivity: 90 dB | Power: 90W RMS / 220W max | Fs: 550 Hz | FP OD: 103.8mm | Cutout: 73mm | Depth: 39mm
+- **Source:** https://www.soundimports.eu/en/seas-27tdfc.html | Price: €71.86 (sale) | Stock: 10+
+- Note: Widest-window standard dome in catalogue. Fs 550 Hz → min xover 1,100 Hz. 90W/220W; at project SPL needs only 16.8W burst. 6Ω: 41W available at 24V. See full Candidate entry above.
 
 ### Scan-Speak Discovery R2604/833000 — Catalogue (10+ in stock)
 - Type: Ring Radiator (dual) | Size: 1" (25mm) | Imp: 4Ω | Sensitivity: 92 dB | Power: 100W RMS | Fs: 440 Hz | Re: 2.9Ω | Xmax: 0.2mm

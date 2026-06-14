@@ -48,6 +48,7 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | Discovery D2604/830000 | Dome | 4Ω | €44.95 / £35.65 Willys | 10+ | ~630 | 92 | 100 | 104.2 | Round | 26 | Dark | ~1,260 | ✓ — 100W/240W; Cutout 75mm; Depth 25.4mm; SI URL confirmed |
 | Discovery R2604/832000 | Ring Rad | 4Ω | €52.95 | 10+ | 500 | 90 | 100 | ~104 | Round | 25 | Dark ring | 1,000 | ★ new — 100W dual ring rad; Fs 500Hz; budget vs 833000; RP4-6 pairings |
 | Discovery R2604/833000 | Ring Rad | 4Ω | €62.45 | 10+ | 440 | 92 | 100 | ~104 | Round | 25 | Dark ring | 880 | ★ new — 100W dual ring rad; Fs=440Hz (same as XT25TG30); **new window champion**; RP1 = 2,380Hz with DSA90-8 |
+| SEAS 27TDFC H1189-06 | Dome+chamber | 6Ω | €71.86 (sale) / £56.92 HFC | 10+ SI | 550 | 90 | 90 | 103.8 | Round | 27 | Dark | 1,100 | ★ new — 90W cloth dome; rear chamber; Fs=550Hz; **widest-window standard dome**; TF1-3 pairings; 6Ω; depth 39mm |
 | TW 6 (Markaudio) | Dome | 4Ω | €44.95 | 8 | 1,700 | — | — | — | Round | 25 | Silver | 3,400 | ✓ (C4) — min xover above most mid beaming limits |
 | RST28F-4 | Dome | 4Ω | €46.95 | 10+ | 710 | 93.5 | 80 | 104.8 | Round | 28 | Dark | 1,420 | ✓ — 80W; very high sens; large FP |
 | Morel MDT12 | Dome | 8Ω | £39.50 Willys | UK stock | 1,000 | 89 | 80 | 54 | Round | 28 | Dark | 2,000 | ★ compact 54mm FP; 80W; only 19mm deep; 8Ω; Willys-Hifi |
