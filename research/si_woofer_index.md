@@ -26,7 +26,7 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | SICA 3,5 F 1 CS-8 | 3.5" | 8Ω | €28.95 | 4 | 107 | 88.5 | 1.5 | 90pr | 88 | Round | Paper (WP) | ✗ Fs 107Hz (1.42×) + Xmax 1.5mm — both fail; Sd 38.5 cm² |
 | Peerless SLS-85S25CP04-04 | 3.5" | 4Ω | €29.95 | 10+ | 73 | 86 | 10.2 | 30 | 105×91 | Oval | Paper | ✓ (B12) — highest Xmax; oval frame |
 | Monacor SP-4/60PRO | 4" | 8Ω | €29.95 | 10 | 92 | 90 | 2.3 | 30 | 113×113 | Square | Paper | ~ Fs 92Hz too high (1.63×); sq frame |
-| Dayton DA115-8 | 4" | 8Ω | €29.95 | 3 | 60 | ~85 | ~3.5 | 30 | ~116 | Round | Silver Al | ✓ (B5) — near-perfect sens; 3 left |
+| Dayton DA115-8 | 4" | 8Ω | €24.75 sale (€29.95 RRP) | 3 | 60 | ~85 | ~3.5 | 30 | ~116 | Round | Silver Al | ✓ (B5) — near-perfect sens; 3 left; on sale Jun 2026 |
 | Peerless SDS-P830855 | 4" | 8Ω | €29.95 | exp Aug 2027 | — | — | — | — | — | — | — | OOS until Aug 2027 |
 | HiVi M5N | 5" | 8Ω | €29.95 | 10+ | 50 | ~86 | ~3.5 | 30 | ~126 | Round | Silver Al/Mg | ✓ (B3) — 5"; best Fs; wide OD |
 | Beyma 4FR40 | 4" | 8Ω | €30.95 | 10 | ~85–100 | ~91 | ~2 | — | ~116 | Round | Paper (WP) | ✓ (A6) — full-range; Fs unconfirmed |

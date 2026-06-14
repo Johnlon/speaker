@@ -92,7 +92,7 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | B2 | ND91-4 | SB19ST | 2,700 | 97 | ~48 | 24V / 28V | Detailed | Confirm Fs before ordering |
 | B3 | HiVi M5N | DX25TG59-04 | 1,200–2,100 | ~103 | ~54 | 24V / 28V | Warm | 5"; DX25 needed (not SB19ST) |
 | B4 | SB13PFC25-8 | DX25TG59-04 | 1,200–2,080 | ~110 | ~53 | 24V / 28V | Warm | Best Fs margin; 5" natural fibre |
-| B5 | DA115-8 | SB19ST | 2,500 | 102 | ~44 | 24V / 28V | Detailed | Near-perfect sensitivity match; 3 left |
+| B5 | DA115-8 | SB19ST | 2,500 | 102 | ~40 | 24V / 28V | Detailed | Near-perfect sensitivity match; 3 left; DA115 on sale €24.75 (Jun 2026) |
 | B6 | DSA90-8 | HiVi TN25 | 3,000 | 73 | ~52 | 24V / 29V | Detailed | Tightest spacing; square tweeter; TN25 depth 63.5mm — check clearance |
 | B7 | SDS-P830656 | DX25TG59-04 | 1,500–2,000 | ~105 | ~54 | 24V / 28V | Natural | Xmax 10mm; truncated frame |
 | B8 | SIG150-4 | DX25TG59-04 | 1,500–1,990 | 128 | ~60 | 24V / 28V | Neutral | 152mm OD — wide baffle; poor 60° off-axis |
@@ -170,8 +170,8 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | B_TG | HiVi B4N | XT25TG30-04 | 880–2,636 | 110 | ~62 | 24V / 28V | Warm gold + wide | Perfect sub sens match (85dB); widest B4N window (1,756Hz); ring rad; single order Falcon+SI |
 | B_STC | HiVi B4N | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~50 | 24V / 28V | Warm gold + 120W | Cheapest 120W pairing (~£50); 94mm spacing; zero DSP correction needed at 85dB |
 | B_DC | HiVi B4N | D2604/830000 | 1,260–2,636 | 110 | ~63 | 24V / 28V | Warm gold + 100W | Scan-Speak 100W; widest window for B4N standard dome (1,376Hz); DS115 replacement |
-| DA_TG | DA115-8 | XT25TG30-04 | 880–2,636 | 110 | ~68 | 24V / 28V | Al + ring rad | Ring rad + Al cone; 3 units left — order now; widest Al-mid window (1,756Hz) |
-| DA_STC | DA115-8 | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~57 | 24V / 28V | Al + 120W | 120W safety + near-sens-matched Al cone; 3 units left; 94mm spacing |
+| DA_TG | DA115-8 | XT25TG30-04 | 880–2,636 | 110 | ~64 | 24V / 28V | Al + ring rad | Ring rad + Al; 3 left — order now; widest Al-mid window (1,756Hz); DA115 sale €24.75 |
+| DA_STC | DA115-8 | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~52 | 24V / 28V | Al + 120W | 120W + Al cone; 3 left; 94mm spacing; DA115 sale → ~£52 now |
 | XT19_1 | DSA90-8 | XT19TD00-04 | 1,640–3,260 | 93 | ~61 | 24V / 29V* | Detailed + ring | 19mm ring rad; 93mm spacing; burst needs 32.4W (4Ω correction) vs 20W rated — DSP limiter at 18W caps tweeter to 98.9dB (2.1dB gap to sub burst — audible HF compression) |
 | XT19_2 | SB12PFCR25-4 | XT19TD00-04 | 1,640–2,730 | 108 | ~52 | 24V / 28V* | Warm + ring | 19mm ring; 1090Hz window; same 2.1dB HF ceiling at burst; DSP limiter essential |
 | XT19_3 | DS115-8 | XT19TD00-04 | 1,640–2,636 | 105 | ~62 | 24V / 28V* | Warm + ring | 19mm ring + paper warmth; 996Hz window; burst ceiling 98.9dB; SB19ST (100dB cap) or XT25TG30 preferred |

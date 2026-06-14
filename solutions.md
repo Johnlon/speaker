@@ -98,7 +98,7 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~107mm | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
 | RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 Hz | 113mm | ~£79 | 24V / ~3.8A | Warm + ring dome 100W | Premium ring dome (RDNC = 100W, 94dB); widest ring dome xover window (1,570Hz) |
 | RPN4 | DSA90-8 | SB29RDNC-C000-4 | 1,160–3,260 Hz | 98mm | ~£86 | 24V / ~3.9A | Detailed + ring dome 100W | Widest xover window of any pairing (2,100Hz); 98mm spacing; engineering pinnacle |
-| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£56 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 smaller (92mm FP) than SB29; 1 in stock + 7 Jul |
+| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£56 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 smaller (92mm FP) than SB29; 1 in stock + 7 on 3 Jul |
 
 ---
 
@@ -203,8 +203,8 @@ Order ahead if your shortlist includes any of these. All counts from SoundImport
 | Driver | Role | Stock | Risk | Action |
 |--------|------|-------|------|--------|
 | DS115-8 | Mid | 4 units | High — could vanish; used in S1, S3 adjacent, RR1, DC1, STC2, DA1, XBG1, BC2 | Order immediately if chosen |
-| DA115-8 | Mid | 3 units | Very high — alternative to DS115-8; Xmax 10.2mm | Order with DS115-8 backup plan |
-| SB21SDC-C000-4 | Tweeter | 1 in stock + 7 exp. 7 Jul 2026 | Medium — 1 now, restock expected | Can wait; order by mid-July |
+| DA115-8 | Mid | 3 units | Very high — alternative to DS115-8; on sale €24.75 (was €29.95) — cheaper than usual | Order now while on sale; 3 left |
+| SB21SDC-C000-4 | Tweeter | 1 in stock + 7 exp. 3 Jul 2026 | Medium — 1 now, restock 3 Jul; ring dome; RD1/RD2 | Can order now or wait for Jul 3 restock |
 | SEAS H1406-04 | Tweeter | 4 units | Medium — oval tweeter for SE1 compact pairing | Order if targeting compact baffle |
 | CF18N-4 | Tweeter | 6 units | Low-medium — carbon fibre dome; used in CF1/CF2 | Monitor |
 | SB12PFCR25-4 | Mid | 10+ units | Low | No urgency |
