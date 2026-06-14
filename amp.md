@@ -30,7 +30,7 @@ The rated 100W/ch is specified at **36V into 6Ω** (confirmed in official datash
 
 > **JAB5 datasheet note (confirmed June 2026):** The official datasheet specifies only 100W/ch at 36V into 6Ω. No per-channel figure at 24V into 8Ω is published. The ~31W into 8Ω at 24V above is derived from the standard Class D formula — it is the best available estimate and will not be superseded by a manufacturer figure. The ~31W figure is the binding constraint for the mid driver choice — see PSU Voltage section below.
 
-Per-driver power requirements (watts needed per channel at reference SPL) are in [drivers.md](drivers.md). Per-pairing PSU voltage and current figures are in [potential-solutions.md](potential-solutions.md).
+Per-driver power requirements (watts needed per channel at reference SPL) are in [drivers.md](drivers.md). Per-pairing PSU voltage and current figures are in [combos.md](combos.md).
 
 ---
 
@@ -67,13 +67,13 @@ Swap to a Mean Well LRS-150-27, LRS-150-29, or LRS-150-30. These are the same fo
 
 | Supply | P into 8Ω | P into 4Ω | Net result |
 |--------|-----------|-----------|-----------|
-| 24V | 31W | 61W | TCP115-8 under-powered at 8Ω; DSA90-8 RMS fine; SIG120-4 (4Ω) very comfortable |
-| 27V | 39W | 77W | DSA90-8 RMS fine; approaching burst headroom |
-| 29V | 45W | 89W | DSA90-8 has burst parity; TCP fine |
-| 32V | 54W | 109W | All 8Ω mids comfortable at RMS and burst |
-| **36V** | **69W** | **138W** | **JAB5 rated operating voltage — full spec.** All drivers comfortable. DSP channel limiters mandatory (sub ≤80W, tweeter ≤30W). TCP115-8 now works easily. |
+| 24V | 31W | 61W | Adequate for most 8Ω mids at RMS; 4Ω mid has full headroom |
+| 27V | 39W | 77W | 8Ω mid approaching burst headroom |
+| 29V | 45W | 89W | 8Ω mid has burst parity with sub; 4Ω mid very comfortable |
+| 32V | 54W | 109W | All mid impedances comfortable at RMS and burst |
+| **36V** | **69W** | **138W** | **JAB5 rated operating voltage — full spec.** DSP channel limiters mandatory (sub ≤80W, tweeter per rating). |
 
-**Recommended:** 29V is the sweet spot — gives burst headroom for DSA90-8 without requiring extreme DSP limiting. Cost: £15–20.
+**Sweet spot: 29V** — gives burst headroom for 8Ω mids without requiring extreme DSP limiting. Cost: £15–20.
 
 **Side effect:** At 29V, total continuous power budget is ~165W × (29/24)² = ~240W DC. The LRS-150-24 cannot supply this. Move to LRS-200-29 or LRS-200-30 (~£25) for the higher voltage option.
 
@@ -102,17 +102,15 @@ A bank of 4× 10,000 µF / 35V keeps the rail above 23.2V for a 10 ms burst. Wit
 
 #### Option 3 — Higher voltage + cap bank (best of both)
 
-29V LRS-200-29 + 40,000 µF cap bank = maximum headroom with minimum transient impedance. Recommended if committing to DSA90-8 and wanting transient performance to match the sub cleanly.
+29V LRS-200-29 + 40,000 µF cap bank = maximum headroom with minimum transient impedance. Best all-round solution for 8Ω mid drivers.
 
-**Combined effect:** At 29V with 40 mF on the rail, the mid channel delivers the full 44.7W for the duration of any musical transient — well above the 42.7W needed by DSA90-8 at burst. The system is now transient-complete.
+**Combined effect:** At 29V with 40 mF on the rail, the mid channel delivers the full 44.7W for the duration of any musical transient — sufficient for any 8Ω mid driver in the field. The system is transient-complete.
 
 #### Option 4 — 4Ω mid driver (most elegant, no PSU change)
 
-The SIG120-4 is a 4Ω midrange. At 24V into 4Ω, the JAB5 delivers ~61W — more than double what any 8Ω mid gets. Burst to 80W is easy.
+A 4Ω mid driver at 24V into 4Ω gives the JAB5 ~61W per channel — more than double what any 8Ω mid gets. Burst headroom is easy with no PSU upgrade.
 
-If the SIG120-4 passes its spec check (Fs, Xmax, sensitivity — currently being fetched), it might be the cleanest solution: no PSU upgrade, no caps required, full headroom on the existing supply.
-
-The catch is the impedance shift. The JAB5 mid channel at 4Ω draws twice the current at the same SPL — the PSU budget increases, and the DSP sensitivity correction (currently calculated for 8Ω drivers) needs recalculating.
+Trade-off: the mid channel draws twice the current at the same SPL — check total PSU current budget. Per-driver analysis in [drivers.md](drivers.md).
 
 #### Option 5 — Dual PSU, per-channel voltage (advanced project)
 
@@ -150,11 +148,9 @@ Programmed via SigmaStudio (Analog Devices free software). All crossover, EQ, an
 
 ### Level correction (vs TB sub at 85 dB reference)
 
-| Driver | Correction | Reason |
-|--------|------------|--------|
-| DSA90-8 (mid) | +0.3 dB | Essentially zero — naturally matched |
-| TCP115-8 (mid) | +3.1 dB | Sensitivity 3.1 dB below sub reference |
-| SB19ST (tweeter) | −3.5 dB | Sensitivity 3.5 dB above sub reference |
+Formula: **Correction (dB) = 85 − driver_sensitivity**
+
+A positive value means the channel needs gain; negative means attenuation. Per-driver correction figures are in [drivers.md](drivers.md). The ADAU1701 handles corrections in both directions with no signal degradation.
 
 ### Loudness compensation
 
