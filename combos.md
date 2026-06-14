@@ -29,6 +29,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | DSA90-8 | 3" | ~26 | 3,260 Hz |
 | SB12PFCR/MNRX2-25-4 | 4" | ~50 | 2,730 Hz |
 | DS115-8 / HiVi B4N | 4" | ~48 | ~2,636 Hz |
+| DMA105-8 | 4" (105mm OD) | ~40 | ~2,900 Hz |
 | SPM-116/8 / Beyma 4FR40 / DA115-8 | 4" | ~46 | ~2,600 Hz |
 | TCP115-8 / SIG120-4 | 4" | ~45 | ~2,570 Hz |
 | Tang Band W4-655F | 4" (125mm OD) | ~50 | ~2,636 Hz |
@@ -181,6 +182,9 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | XT19_1 | DSA90-8 | XT19TD00-04 | 1,640–3,260 | 93 | ~61 | 24V / 29V* | Detailed + ring | 19mm ring rad; 93mm spacing; burst needs 32.4W (4Ω correction) vs 20W rated — DSP limiter at 18W caps tweeter to 98.9dB (2.1dB gap to sub burst — audible HF compression) |
 | XT19_2 | SB12PFCR25-4 | XT19TD00-04 | 1,640–2,730 | 108 | ~52 | 24V / 28V* | Warm + ring | 19mm ring; 1090Hz window; same 2.1dB HF ceiling at burst; DSP limiter essential |
 | XT19_3 | DS115-8 | XT19TD00-04 | 1,640–2,636 | 105 | ~62 | 24V / 28V* | Warm + ring | 19mm ring + paper warmth; 996Hz window; burst ceiling 98.9dB; SB19ST (100dB cap) or XT25TG30 preferred |
+| DMA1 | DMA105-8 | SB19ST | 1,960–2,900 | 96 | ~44 | 24V / 28V | Al neodymium | 4" dual-neo Al cone; beaming 2,900Hz (better than DS115 at 2,636); **min LP 200Hz recommended** (Fs 72Hz → 2×Fs=144Hz marginal at 150); 35W rated (better than DA115 at 20W); 940Hz window |
+| DMA2 | DMA105-8 | XT25TG30-04 | 880–2,900 | 107 | ~52 | 24V / 28V | Al + ring rad | 2,020Hz DSP window (widest DMA105 pairing); ring rad off-axis; 107mm spacing; Falcon £29.90 for twt saves ~£13; **min LP 200Hz** |
+| DMA3 | DMA105-8 | SB29RDNC-C000-4 | 1,160–2,900 | 104 | ~80 | 24V / 28V | Al + ring dome 100W | 1,740Hz window; premium 100W ring dome; 104mm spacing; compact pairing; **min LP 200Hz** |
 
 ---
 
