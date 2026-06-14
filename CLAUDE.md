@@ -14,17 +14,19 @@ Push to GitHub at least every 10 minutes during active work so the owner can tra
 
 ## Write Analysis to Files
 
-The owner cannot track console output across sessions. Write all findings to the appropriate file:
+The owner cannot track console output across sessions. Write all findings to the appropriate file. File roles and placement rules are defined in REQUIREMENTS.md — read that section before writing to any file.
 
-- Raw specs → `research/si_tweeter_index.md` or `research/si_woofer_index.md`
-- Per-driver analysis → `drivers.md`
-- Pairing spreadsheet → `combos.md`
-- Curated recommendations → `solutions.md`
-- Amp/PSU/DSP specs → `amp.md`
-- Supplier findings → `suppliers.md`
-- Datasheets → `research/` (download PDF, link local path + original URL)
+**Quick routing:**
+- Raw scraped specs → `research/`
+- Fact about one driver (power needed, DSP correction, crossover margin, PSU minimum) → `drivers.md`
+- Fact about two drivers paired together (combo crossover, centre spacing, combo PSU) → `combos.md`
+- Recommendation for a scenario → `solutions.md`
+- Amp/PSU/DSP electronics → `amp.md`
+- Supplier info → `suppliers.md`
 
-When performing a supplier stock check, record findings with the date.
+**Never put per-driver data in combos.md.** If a fact is true regardless of which driver the mid or tweeter is paired with, it belongs in drivers.md.
+
+When performing a supplier stock check, record findings in the relevant driver entry in drivers.md (stock and date) and update combos.md/solutions.md if a previously available driver is now out of stock.
 
 ---
 

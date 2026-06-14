@@ -20,20 +20,20 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 | SB14ST-C000-4            | Dome      | 4Ω  | €28.45        | exp 27-08-2026 | —      | —       | —     | —           | 14       | —            | OOS Aug 2026                                         |
 | BC25TG15-04              | Dome      | 4Ω  | €29.95        | 10+            | 1,100  | 93.9    | 7     | 104         | 25       | 2,200        | ✗ 7W power rating fatal                              |
 | DT-25N                   | Dome      | 8Ω  | €29.95        | 10+            | 1,600  | 95      | 40    | 66          | 25       | 3,200        | ✓ — high Fs; min xover 3,200 Hz                      |
-| Swan TN28-B              | Dome      | 6Ω  | €29.95        | 10+            | —      | —       | —     | —           | 28       | —            | ? need fetch                                         |
-| XT25SC40-04              | Ring Rad  | 4Ω  | €29.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? need fetch                                         |
-| DT 94-8                  | Dome      | 8Ω  | €29.95        | 3              | —      | —       | —     | —           | 20       | —            | ? need fetch; 0.8"                                   |
-| DX20BF00-04              | Dome      | 4Ω  | €29.95        | 10+            | —      | —       | —     | —           | 20       | —            | ? need fetch; 3/4"                                   |
-| TD25F-4                  | Dome      | 4Ω  | €29.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? need fetch                                         |
-| GT-525                   | Dome      | 8Ω  | €29.95        | 4              | —      | —       | —     | —           | 25       | —            | ? need fetch                                         |
-| SB26ST-C000-5            | Dome      | 5Ω  | €30.95        | 10+            | —      | —       | —     | —           | 26       | —            | ? need fetch                                         |
+| Swan TN28-B              | Dome      | 6Ω  | €29.95        | 10+            | 1,300  | 90      | 15    | 47.6        | 28       | 2,600        | ★ ultra-compact FP 47.6mm; tight spacing potential   |
+| XT25SC40-04              | Ring Rad  | 4Ω  | €29.95        | 10+            | 1,018  | 94      | 100   | 43.9        | 25       | 2,036        | ★ SMALLEST ring rad FP 43.9mm; 100W; min xover 2036  |
+| DT 94-8                  | Dome      | 8Ω  | €29.95        | 3              | 1,900  | 90      | 70    | 94          | 20       | 3,800        | ✗ min xover 3800Hz exceeds 2800Hz project target     |
+| DX20BF00-04              | Dome      | 4Ω  | €29.95        | 10+            | 840    | 88      | 10    | 66          | 20       | 1,680        | ✗ 10W — fatal at burst; needs 20W at 101dB          |
+| TD25F-4                  | Dome      | 4Ω  | €29.95        | 10+            | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 4 patterns)             |
+| GT-525                   | Dome      | 8Ω  | €29.95        | 4              | —      | —       | —     | —           | 25       | —            | ? URL not found on SI (tried 3 patterns)             |
+| SB26ST-C000-5            | Dome      | 5Ω  | €30.95        | 10+            | 870    | 91      | 80    | —           | 26       | 1,740        | ★ 80W power; FP OD unknown; 5Ω (JAB5 compatible)    |
 | DX25TG59-04              | Dome      | 4Ω  | €32.95        | 10+            | 590    | 93.4    | 15    | 104         | 25       | 1,180        | ✓ (A4,A5,B3,B4,B7,B8) — best Fs margin               |
 | XT19TD00-04              | Ring Rad  | 4Ω  | €34.95        | 10+            | ~820   | 88.9    | 20    | 94          | 19       | ~1,640       | ✓ — small ring rad; 94mm FP                          |
 | SB26STC-C000-04          | Dome      | 4Ω  | €34.95        | exp 28-08-2026 | —      | —       | —     | —           | 26       | —            | OOS Aug 2026                                         |
 | DTM-104/8                | Dome      | 8Ω  | €34.95        | exp 31-07-2026 | —      | —       | —     | —           | 25       | —            | OOS Jul 2026                                         |
 | SB26STCN-C000-4          | Dome      | 4Ω  | €36.45        | 10+            | 950    | 92      | 120   | 72          | 25       | 1,900        | ✓ — 120W; compact 72mm FP                            |
 | AMT Mini-8               | AMT       | 8Ω  | €36.45        | 10+            | ~1,750 | 88      | 15    | 57          | AMT fold | ~3,500       | ~ stated lower limit 3.5kHz; super-tweeter role only |
-| CF18N-4                  | Dome      | 4Ω  | €36.95        | 6              | —      | —       | —     | —           | 18       | —            | ? need fetch; 3/4"                                   |
+| CF18N-4                  | Dome      | 4Ω  | €36.95        | 6              | —      | —       | —     | —           | 18       | —            | ? URL not found on SI                                |
 | D27TG35-06               | Dome      | 6Ω  | €39.95        | 10+            | 900    | 91.8    | 15    | 104         | 25       | 1,800        | ✓ — 6Ω; large FP                                     |
 | NE25VTS-04               | Dome      | 4Ω  | €39.95        | 10+            | 730    | 91.1    | 15    | 66.3        | 25       | 1,460        | ★ compact FP; similar to ND25FA; higher sens         |
 | D2606/920000             | Dome      | 6Ω  | €39.95        | 10+            | 1,100  | 91.4    | 100   | —           | 25       | 2,200        | ✓ — Scan-Speak quality; 100W                         |

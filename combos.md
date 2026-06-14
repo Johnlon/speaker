@@ -11,19 +11,7 @@ Exhaustive record of mid + tweeter pairings evaluated against the locked subwoof
 - JAB5 amp output (η = 0.85, full H-bridge class D): 24V → 31W/8Ω, 61W/4Ω | 29V → 45W/8Ω, 90W/4Ω
 - Crossover targets: sub LP 150 Hz (LR24) · mid BP 150–2,800 Hz · tweeter HP 2,800 Hz (LR48)
 
-### Power needed per driver at reference levels
-
-| Driver | Role | Imp | Sensitivity | Needed @ 98 dB | Needed @ 101 dB | Available @ 24V | PSU |
-|--------|------|-----|-------------|----------------|-----------------|-----------------|-----|
-| TB W5-1138SMF | Sub | 4Ω | 85 dB | 40W RMS | 80W | ~61W | 24V |
-| SIG120-4 | Mid | 4Ω | 89.7 dB | 13.5W | 27W | ~61W | 24V |
-| DS115-8 | Mid | 8Ω | 85.3 dB | 18.6W | 37.2W | ~31W | 24V |
-| HiVi B4N | Mid | 8Ω | 85 dB | 20.0W | 40W | ~31W | 24V |
-| DSA90-8 | Mid | 8Ω | 84.7 dB | 21.4W | 42.8W | ~31W | 24V (burst: 29V) |
-| TCP115-8 | Mid | 8Ω | 81.9 dB | 40.7W | 81.4W | ~31W | **29V required** |
-| SB19ST | Tweeter | 4Ω | 88.5 dB | 17.8W | 35.5W | ~61W | 24V |
-
-Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At sub burst (80W): ~120W peak (~5A at 24V) — within LRS-150-24 (6.5A) for music content. Capacitor bank absorbs transient peaks.
+Per-driver power requirements (P_needed at 98 dB and 101 dB per driver) are in [drivers.md](drivers.md) — that data is driver-specific, not combo-specific.
 
 ---
 

@@ -8,18 +8,33 @@ This file records requirements explicitly stated by the owner, plus fixed system
 
 Each file has a single responsibility. Do not write content into the wrong file.
 
-| File | Role |
-|------|------|
-| `REQUIREMENTS.md` | This file. Owner requirements, fixed constants, evaluation policy, file structure. |
-| `research/si_tweeter_index.md` | Raw tweeter specs from SoundImports — scraped data, no analysis. |
-| `research/si_woofer_index.md` | Raw woofer/mid specs from SoundImports — scraped data, no analysis. |
-| `research/*.pdf` | Downloaded datasheets for offline reference. |
-| `drivers.md` | Per-driver analysis: derived figures (DSP correction, power check vs reference SPL, crossover margin), ranking, decisions, why liked/disliked. No raw spec duplication — refer to research/ for raw specs. |
-| `combos.md` | Exhaustive spreadsheet of mid+tweeter pairings. One row or entry per combination. Records: crossover window, centre spacing, PSU voltage, ruled-out reason if applicable, visual appearance notes, and any combo-specific trade-offs. |
-| `solutions.md` | Curated final report. A small number of recommended pairings per scenario (off-axis, on-axis, compact, budget, visual). Each recommendation is justified and actionable. |
-| `amp.md` | Amplifier and PSU electronics only — JAB5 specs, PSU specs and options, DSP configuration. No per-driver analysis. |
-| `suppliers.md` | Supplier list with notes on UK shipping, range, and findings. |
-| `CLAUDE.md` | Narrow operational instructions for the AI assistant only — autonomous operation rules, source URL policy, tone. Nothing that belongs in the other files above. |
+| File | Role | What does NOT go here |
+|------|------|----------------------|
+| `REQUIREMENTS.md` | Owner requirements, fixed constants, evaluation policy, file structure. | Analysis, opinions, rankings |
+| `research/si_tweeter_index.md` | Raw tweeter specs from SoundImports — scraped data only. | Any derived figures or analysis |
+| `research/si_woofer_index.md` | Raw woofer/mid specs from SoundImports — scraped data only. | Any derived figures or analysis |
+| `research/*.pdf` | Downloaded datasheets for offline reference. | — |
+| `drivers.md` | Per-driver analysis: DSP correction, power check vs sub reference SPL, crossover margin, ranking, decisions, why liked/disliked, minimum PSU voltage. No raw spec duplication — refer to research/ for raw specs. | Anything that doesn't change based on which driver you pick |
+| `combos.md` | Exhaustive spreadsheet of mid+tweeter pairings. Records only combo-specific data: crossover window, centre spacing, PSU voltage for the combination, visual notes on the pair together, ruling and reason, combo trade-offs. | Per-driver data (power needed, sensitivity, Fs etc.) — those belong in drivers.md even when displayed in a combo context |
+| `solutions.md` | Curated final report. Small number of recommended pairings per scenario (off-axis, on-axis, compact, budget, visual). Justified and actionable. | Exhaustive lists, marginal options, runner-ups beyond 5th place |
+| `amp.md` | JAB5 specs, PSU specs and options, DSP crossover and loudness configuration. | Per-driver analysis, driver names, model-specific recommendations |
+| `suppliers.md` | Supplier list with notes on UK shipping, range, and findings. | Driver evaluations |
+| `CLAUDE.md` | Narrow operational instructions for the AI assistant only. | Requirements, evaluation criteria, project context |
+
+### File placement test — ask before writing
+
+Before writing any analysis, run through this test:
+- **Is this fact true for a single driver regardless of what it's paired with?** → `drivers.md`
+- **Is this fact only true when two specific drivers are paired together?** → `combos.md`
+- **Is this a recommendation for a specific use case?** → `solutions.md`
+- **Is this about the amplifier or PSU electronics?** → `amp.md`
+- **Is this a raw spec scraped from a product page?** → `research/`
+
+Examples of correct placement:
+- "DS115-8 needs 18.6W to reach 98 dB" → **drivers.md** (true regardless of what tweeter pairs with it)
+- "S1 crossover is 2,500 Hz" → **combos.md** (combo-specific)
+- "RR2 is the best pick for 60° off-axis" → **solutions.md** (recommendation)
+- "JAB5 delivers 31W into 8Ω at 24V" → **amp.md** (amp spec)
 
 ---
 
