@@ -203,6 +203,19 @@ One entry per driver. Status: **Locked** / **Candidate** / **Rejected**.
 - **Note:** 6Ω impedance — JAB5 is rated into 6Ω (its specified load), so this is fine. ~41W available at 24V, well above the 11.1W needed.
 - **Concern:** Dome colour unconfirmed. Faceplate 104 mm is large (same as DX25TG59-04). Fetch datasheet to confirm colour before ordering.
 
+### Peerless by Tymphany NE25VTS-04 — Candidate (compact faceplate)
+- Dome: 25 mm silk (neodymium, copper cap) | Faceplate OD: **66.3 mm** | Impedance: 4Ω
+- Sensitivity: 91.1 dB @ 2.83V/1m | Power: 15W RMS | Fs: 730 Hz | Frequency response: 700–20,000 Hz
+- Rear aluminium chamber (heat dissipator)
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/ne25vts-04.html) (fetched June 2026)
+- SoundImports price: **€39.95** | Stock (June 2026): 10+
+- **DSP correction vs TB sub (85 dB ref):** −6.1 dB pad needed.
+- **Fs check:** 730 Hz → min crossover 1,460 Hz. Comfortable 1.93× margin at 2,800 Hz project target.
+- **Power at reference (98 dB):** 4.7W (31% of 15W ✓). At burst (101 dB): 9.3W (62% ✓). Headroom adequate; no DSP limiter required at project SPL levels.
+- **Why interesting:** 66.3 mm faceplate is the same compact class as ND25FA-4 (66 mm) — significantly smaller than the 88 mm SB19ST and the 104 mm DX25TG59-04 family. Compact footprint means tighter centre spacing with any mid driver. Sensitivity at 91.1 dB is 2.6 dB higher than ND25FA-4 (90 dB) — needs a little more DSP attenuation but draws less power. Neodymium motor.
+- **vs ND25FA-4 (B10 pairing):** Near-identical faceplate OD. NE25VTS-04 is 1.1 dB higher sensitivity, €24 more expensive. Both 25 mm domes — same dispersion characteristic. Use NE25VTS-04 if ND25FA-4 is out of stock; otherwise ND25FA-4 is better value.
+- **Concern:** 15W power rating — lowest alongside XT25TG30-04 and XT25BG60-04. Fine at project SPL (9.3W at burst), but driver cannot be pushed harder.
+
 ### Dayton Audio ND20FA-6 — Candidate
 - Dome: 19 mm soft dome | Faceplate OD: 45 mm | Impedance: 6Ω
 - Sensitivity: 91.5 dB @ 2.83V/1m | Power: 15W RMS | Fs: 2005 Hz | Frequency response: 2,000–20,000 Hz
@@ -328,6 +341,21 @@ One entry per driver. Status: **Locked** / **Candidate** / **Rejected**.
 - **Character:** Aluminium cone — detailed and analytical, similar to DSA90-8. Less warm than DS115-8 paper cone.
 - **Note:** Same driver family as SB12PACR25-4-COAX (without tweeter). BL and Qts differ slightly from coaxial version due to separate build batches.
 
+### SB Acoustics SB12NRX25-4 — Candidate (new — paper NRX cone)
+- Size: 4" | Frame OD: ~122 mm | Impedance: 4Ω | Cast aluminium vented chassis
+- Cone: Proprietary composition paper | Surround: High-damping butyl rubber
+- Sensitivity: 87.5 dB @ 2.83V/1m | Power: 30W RMS | Fs: 55 Hz | Xmax: 5.0 mm | Sd: 50 cm²
+- Qts: 0.40 | Re: 3.1Ω (est)
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/sb-acoustics-sb12nrx25-4.html) (fetched June 2026)
+- SoundImports price: **€59.95** | Stock (June 2026): 8 units
+- **DSP correction vs TB sub (85 dB ref):** −2.5 dB — near-perfect match.
+- **Fs check:** 55 Hz → **2.72× at 150 Hz** — same class as DS115-8, best of any 4" mid.
+- **Xmax:** 5.0 mm — matches SB12PFCR25-4; better than DS115-8 (4.1 mm).
+- **Beaming:** Sd 50 cm² → beaming starts ~2,730 Hz. Fine at 2,800 Hz crossover.
+- **Character:** Paper NRX cone — warm, natural. CCAW voice coil for low moving mass. Vented pole piece reduces compression. Paper cone = same warm tonality class as SB12PFCR25-4.
+- **vs SB12PFCR25-4:** Same Fs, Xmax, Sd, sensitivity, power, and cone character. Key difference: NRX25-4 costs €59.95 vs PFCR25-4 at €25.95. The NRX chassis (cast aluminium, vented) is higher grade. No acoustic advantage over PFCR at this crossover. Choose PFCR25-4 on value; NRX25-4 only if PFCR25-4 sells out.
+- **Concern:** At €59.95 it is over twice the price of the functionally equivalent PFCR25-4.
+
 ### SB Acoustics SB12PFCR25-4 — Candidate (paper fiber cone)
 - Size: 4" | Frame OD: ~122 mm (same family as PACR — confirm before ordering) | Impedance: 4Ω | Plastic chassis
 - Cone: Natural fiber paper (proprietary SB Acoustics in-house material) | Surround: Butyl rubber
@@ -449,6 +477,21 @@ One entry per driver. Status: **Locked** / **Candidate** / **Rejected**.
 - Qts: 1.05 | Sd: 26.4 cm²
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-rs52fn-8.html) | Price: €62.95 | Stock: 9
 - **Reason for rejection:** Xmax of only 1 mm is far below the 2.5 mm minimum. Fs at 394 Hz with typical 150 Hz crossover would be only 0.38× Fs ratio — would be severely overdriven at the crossover point. This is a dedicated upper-midrange dome, not a woofer-style mid.
+
+### Tectonic TEBM65C20F-8 BMR — Candidate (noted; low sensitivity)
+- Size: 3.5" | Frame OD: 108 mm round | Impedance: 8Ω
+- Diaphragm: Paper (Balanced Mode Radiator — distributed excitation, not piston) | Surround: Foam
+- Sensitivity: **81 dB @ 2.83V/1m** | Power: 30W RMS / 60W max | Xmax: 3.5 mm | Fs: 86 Hz
+- Qts: 0.89 | Depth: 56.8 mm | Frequency response: 80–20,000 Hz
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/tectonic-elements-tebm65c20f-8.html) (fetched June 2026)
+- SoundImports price: **€49.95** | Stock (June 2026): 10+
+- **What makes it different:** A BMR driver is not a conventional piston. Excitation is distributed across the cone via bending waves at higher frequencies — this gives the driver unusually wide, near-omnidirectional dispersion above a certain frequency. Off-axis response at 60–90° is far superior to any conventional dome or cone mid. This is directly relevant to the kitchen 60° geometry. Tectonic states "dispersion up to 100 degrees."
+- **DSP correction vs TB sub (85 dB ref):** +4.0 dB boost needed — this is a significant DSP demand in the mid channel.
+- **Fs check:** 86 Hz → **1.74× at 150 Hz crossover** — below the 2× target. Tighter than any recommended mid candidate. Would benefit from crossover raised to 175–200 Hz.
+- **Xmax:** 3.5 mm — adequate. Same class as TCP115-8.
+- **The engineering case:** BMR technology used in premium soundbars (Bang & Olufsen, Tectonic OEM) specifically for its wide dispersion. In a kitchen counter speaker, this could outperform a conventional mid + ring radiator for off-axis stability. The 4 dB sensitivity deficit is a manageable DSP trade-off.
+- **Concern — sensitivity:** 81 dB requires a +4 dB boost in DSP. The amp must deliver 2.5× more power to this driver than to an 85 dB mid, all else equal. At 24V into 8Ω: ~31W available. At reference (98 dB): needs 50W — **exceeds available power at 24V**. At 29V: 45W available, still 11% short. **Needs 32V or higher to reach reference level without limiting.** This is the main blocker.
+- **Status:** Keep as a curiosity for a high-voltage variant build (36V JAB5 with appropriate limiters). Not suitable at 24V or 29V for reference-level matching.
 
 ---
 
