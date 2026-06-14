@@ -109,7 +109,7 @@ Source: [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb15sfcr-00.h
 
 The official datasheet specifies only 100W/ch at 36V into 6Ω. All other figures are derived from the formula above.
 
-> **Warning:** At 29V and above, the 4Ω channels (sub and tweeter) can deliver more than the sub's 80W maximum and far more than most tweeter power ratings. DSP channel-level limiters are mandatory at any supply voltage above 24V.
+> **Warning:** DSP channel-level limiters can be used to avoid damage to devices.
 
 Datasheet: [research/jab5_datasheet.pdf](research/jab5_datasheet.pdf)
 

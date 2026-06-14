@@ -127,3 +127,51 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 **New compact ring radiator (XT25SC40-04, €29.95):** Fs=1,018 Hz, 43.9mm FP, 100W, 94dB. Pairs with DSA90-8 at 68mm spacing — new minimum record, plus ring rad dispersion. High sensitivity mismatch (+9.3dB DSP pad) but well within ADAU1701 range. XC1 at ~£55 beats B6 (73mm) on spacing AND adds ring rad off-axis advantage.
 
 **New ring dome option (SB21SDC-C000-4, €39.95):** Fs=720Hz, 92mm FP, 40W, 91dB. Ring dome construction (like SB29SDAC) but smaller and cheaper (€5 less). RD2 (SB12PFCR25-4 + SB21SDC-C000-4) at ~£56 is the cheapest ring dome pairing in the catalogue. Low stock: 1 unit now + 7 expected Jul 2026.
+
+---
+
+## High-Power Tweeter Comparison
+
+### Why tweeter power rating matters (and when it doesn't)
+
+At the 98 dB continuous reference, the tweeter receives 5–12 W (depending on sensitivity). At 101 dB burst, that doubles: 10–25 W. So most standard 15–20W tweeters are theoretically adequate — the DSP ensures they never see more than they need.
+
+The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a DSP level control is inadvertently set wrong, the tweeter channel could receive full amplifier output. A tweeter rated 15W on a 90W channel is a single miscalibration away from failure. High-power tweeters (≥50W) remove this risk entirely.
+
+**Power calculation at burst (101 dB):** P = 10^((101 − Sens) / 10)
+
+| Model | Power W | FP OD mm | Sens dB | Fs Hz | Min Xover Hz | Price | Notes |
+|-------|---------|----------|---------|-------|-------------|-------|-------|
+| SB26STCN-C000-4 | **120W** | 72 | 92 | 950 | 1,900 | €36.45 | Most robust; compact FP; 4Ω |
+| SB26ADC-C000-4 | **120W** | ~104 | 90 | 680 | 1,360 | €52.45 | 120W Al dome; large FP |
+| XT25SC40-04 | **100W** | 43.9 | 94 | 1,018 | 2,036 | €29.95 | Ring rad; smallest FP; cheapest 100W |
+| XT25SC90-04 | **100W** | ~90 | 90.1 | 825 | 1,650 | £18.20 | Ring rad; cheapest overall; Falcon UK |
+| D2604/830000 | **100W** | 104.2 | 92 | 630 | 1,260 | €44.95 | Scan-Speak; widest xover window; 240W peak |
+| D2606/920000 | **100W** | — | 91.4 | 1,100 | 2,200 | €39.95 | Scan-Speak 6Ω; FP unconfirmed |
+| RST28F-4 | **80W** | 104.8 | 93.5 | 710 | 1,420 | €46.95 | 80W; very high sens; large FP |
+| SB26ST-C000-5 | **80W** | ~72 | 91 | 870 | 1,740 | €30.95 | 80W; compact FP assumed ~72mm; 5Ω |
+| SEAS H1406-04 | **80W** | 69.7×54 oval | 91 | 1,170 | 2,340 | €48.95 | 80W; portrait-mount 73mm spacing; shallowest 21.5mm |
+| BC25SC06-04 | 50W | ~70 | 95.4 | 1,350 | 2,700 | €24.95 | 50W; high sens → near-zero amp power at 98dB |
+
+### Shortlist analysis
+
+**Best all-round insurance:** SB26STCN-C000-4 (120W, €36.45) — 120W rating beats even 29V/8Ω amplifier output (45W), so no failure mode exists. Compact 72mm FP. Min xover 1,900Hz fits the 2,800Hz plan. Already confirmed in drivers.md.
+
+**Cheapest 100W ring radiator:** XT25SC40-04 (€29.95) — only 43.9mm FP (spacing champion); 100W provides complete burnout immunity at 24V. Widest off-axis dispersion. High sensitivity (94dB) means only 2.5W at 98dB and 5W at burst.
+
+**Cheapest 80W (absolute):** SB26ST-C000-5 (€30.95) — 80W, compact FP, 5Ω matches 8Ω amp channel better than 4Ω for equal power split. At 29V/5Ω: P = 29²/(2×5)×0.85 = 71.7W — just under rating. Good margin.
+
+**Best compact + portrait mount:** SEAS H1406-04 (€48.95) — 80W, oval 54mm portrait dimension gives 73mm centre spacing with DSA90-8 (tighter than any round 80W tweeter). Shallowest driver in the catalogue (21.5mm). Only 4 in stock.
+
+**Wide crossover window champion:** D2604/830000 (€44.95) — Fs=630Hz, min xover 1,260Hz. More than 1,500Hz of crossover latitude below the 2,800Hz target. 100W/240W Scan-Speak quality. Large 104mm FP.
+
+### Pairings using high-power tweeters
+
+| ID | Mid | Tweeter | P_rating | Xover Window | Spacing | Price |
+|----|-----|---------|----------|-------------|---------|-------|
+| XC1 | DSA90-8 | XT25SC40-04 | 100W | 2,036–3,260 Hz | 68mm | ~£55 |
+| RR4 | DSA90-8 | XT25SC90-04 | 100W | 1,650–3,260 Hz | 91mm | ~£37 |
+| ST3 | DSA90-8 | SB26ST-C000-5 | 80W | 1,740–3,260 Hz | 82mm | ~£56 |
+| SE1 | DSA90-8 | SEAS H1406-04 | 80W | 2,340–3,260 Hz | 73mm | ~£74 |
+| ST1 | DS115-8 | SB26ST-C000-5 | 80W | 1,740–2,636 Hz | 94mm | ~£58 |
+| DC1 | DS115-8 | D2604/830000 | 100W | 1,260–2,636 Hz | 110mm | ~£70 |

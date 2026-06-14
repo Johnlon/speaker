@@ -44,10 +44,10 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Dayton SIG150-4 | 5.25" | 4Ω | €44.95 | in stock | 61.5 | 91.1 | 4.0 | 60 | 152 | Round | ? Al | ✓ (B8) — 5.25"; beams above 1,990Hz |
 | SICA 3,5 L 1 SL-4 | 3.5" | 4Ω | €46.95 | 4 | 100 | 87 | 1.6 | 30 | 88 | Round | Paper | ✗ Fs 100Hz (1.5×) + Xmax 1.6mm — both fail |
 | SB15SFCR39-4 | 5×8" oval | 4Ω | €47.45 | 10+ | 31.5 | 89.5 | 5.5 | 80 | oval | Oval | Hard paper | ✗ active woofer; oval racetrack; Sd=178cm² (beams ~1460Hz as mid); alt sub only |
-| SB15SFCR39-8 | 5×8" oval | 8Ω | €47.45 | 10+ | — | — | — | — | oval | Oval | ? | ? URL not yet fetched |
+| SB15SFCR39-8 | 5×8" oval | 8Ω | €47.45 | 10+ | 32 | 87 | 5.0 | 50 | 219.3×120.6 | Oval | Hard paper | ✗ same racetrack frame as 4Ω; beams ~1,460Hz as mid; alt sub only |
 | FaitalPRO 4FE42-4F | 4" | 4Ω | €47.95 | 2 | 110 | 93@1W | 2.83 | 40 | 129.8 | Round | ? | ✗ Fs 110Hz (1.36× at 150Hz); same fail class as SICA |
 | Tectonic TEBM65C20F-8 | 3.5" BMR | 8Ω | €49.95 | 10+ | 86 | 81 | 3.5 | 30 | 108 | Round | ? | ~ 81dB low sens (−4dB vs sub); BMR = very wide dispersion |
-| Peerless HDS-P830870 | 4" | 8Ω | €49.95 | 10+ | 100 | 84.7 | 7.5 | 25 | 120×107 | Oval | ? | ~ Fs 100Hz (1.5× at 150Hz); Xmax 7.5mm notable |
+| Peerless HDS-P830870 | 4" | 8Ω | €49.95 | 10+ | 100 | 84.7 | 7.5 | 25 | 120.4×106.6 | Oval | Polyprop | ~ Fs 100Hz (1.5× at 150Hz); xover to 200Hz gives 2.0×; Xmax 7.5mm outstanding; 25W rated (burst 42.7W needed → fails burst); polyprop cone |
 | PRV Audio 4MR60-NDY-4 | 4" | 4Ω | €49.95 | 10+ | 95.6 | 91 | 1.4 | 60 | 127.5 | Round | ? | ✗ Xmax 1.4mm + Fs 95.6Hz both fail |
 | Tang Band W4-655F | 4" | 8Ω | €49.95 | 10+ | 70 | 89 | 3 | 25 | 125 | Round | ? | ~ full-range; Fs 2.14×; Xmax 3mm; beaming ~2636Hz OK |
 | Dayton RS100-8 | 4" | 8Ω | €48.95 | 1 | 92 | 84.6 | 3.5 | 30 | 98 | Round | Black Al | ✓ (C1) — Fs 1.63×; 1 left |
