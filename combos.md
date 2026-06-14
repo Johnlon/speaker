@@ -167,6 +167,11 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
 | D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
 | D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
+| B_TG | HiVi B4N | XT25TG30-04 | 880–2,636 | 110 | ~62 | 24V / 28V | Warm gold + wide | Perfect sub sens match (85dB); widest B4N window (1,756Hz); ring rad; single order Falcon+SI |
+| B_STC | HiVi B4N | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~50 | 24V / 28V | Warm gold + 120W | Cheapest 120W pairing (~£50); 94mm spacing; zero DSP correction needed at 85dB |
+| B_DC | HiVi B4N | D2604/830000 | 1,260–2,636 | 110 | ~63 | 24V / 28V | Warm gold + 100W | Scan-Speak 100W; widest window for B4N standard dome (1,376Hz); DS115 replacement |
+| DA_TG | DA115-8 | XT25TG30-04 | 880–2,636 | 110 | ~68 | 24V / 28V | Al + ring rad | Ring rad + Al cone; 3 units left — order now; widest Al-mid window (1,756Hz) |
+| DA_STC | DA115-8 | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~57 | 24V / 28V | Al + 120W | 120W safety + near-sens-matched Al cone; 3 units left; 94mm spacing |
 | XT19_1 | DSA90-8 | XT19TD00-04 | 1,640–3,260 | 93 | ~61 | 24V / 29V* | Detailed + ring | 19mm ring rad; 93mm spacing; burst needs 32.4W (4Ω correction) vs 20W rated — DSP limiter at 18W caps tweeter to 98.9dB (2.1dB gap to sub burst — audible HF compression) |
 | XT19_2 | SB12PFCR25-4 | XT19TD00-04 | 1,640–2,730 | 108 | ~52 | 24V / 28V* | Warm + ring | 19mm ring; 1090Hz window; same 2.1dB HF ceiling at burst; DSP limiter essential |
 | XT19_3 | DS115-8 | XT19TD00-04 | 1,640–2,636 | 105 | ~62 | 24V / 28V* | Warm + ring | 19mm ring + paper warmth; 996Hz window; burst ceiling 98.9dB; SB19ST (100dB cap) or XT25TG30 preferred |

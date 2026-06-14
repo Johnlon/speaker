@@ -109,11 +109,12 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | Rank | Pairing | Price | PSU | Character | Why |
 |------|---------|-------|-----|-----------|-----|
 | 1 | DSA90-8 + XT25SC90-04 (RR4) | ~£37 | 24V / ~3.8A | Detailed, wide | Cheapest ring radiator; single Falcon order |
-| 2 | HiVi B4N + SB19ST (A1) | ~£38 | 24V / ~3.9A | Warm | Sensitivity-matched; simplest DSP; always in stock |
+| 2 | HiVi B4N + SB19ST (A1) | ~£38 | 24V / ~3.9A | Warm | Sensitivity-matched (zero pad); simplest DSP; always in stock |
 | 3 | SB12PFCR25-4 + SB19ST (S2) | ~£41 | 24V / ~3.8A | Warm, natural | Natural fibre warmth + 19mm dome; best all-round value |
 | 4 | SB12PFCR25-4 + XT25SC40-04 (XC3) | ~£47 | 24V / ~3.8A | Warm + ring rad | Ultra-compact ring rad (83mm spacing); nat. fibre + 43.9mm ring rad |
-| 5 | SB12PFCR25-4 + SB26STCN-C000-4 (STC3) | ~£55 | 24V / ~3.8A | Warm + 120W safe | Nat. fibre mid + 120W tweeter; burnout impossible at 24V; best power safety under £60 |
-| 6 | RR4 alt: DSA90-8 + XT25SC40-04 (XC1) | ~£55 | 24V / ~3.8A | Detailed + ring rad | 68mm spacing champion; ring rad dispersion |
+| 5 | HiVi B4N + SB26STCN-C000-4 (B_STC) | ~£50 | 24V / ~3.8A | Warm + 120W | Cheapest 120W tweeter pairing; zero pad for mid; 94mm spacing |
+| 6 | SB12PFCR25-4 + SB26STCN-C000-4 (STC3) | ~£55 | 24V / ~3.8A | Warm + 120W safe | Nat. fibre mid + 120W tweeter; burnout impossible at 24V; best power safety under £60 |
+| 7 | DSA90-8 + XT25SC40-04 (XC1) | ~£55 | 24V / ~3.8A | Detailed + ring rad | 68mm spacing champion; ring rad dispersion |
 
 **Absolute minimum spend:** TCP115-8 + SB19ST at ~£31 for drivers — but 29V PSU required (+£25); total ~£56.
 
