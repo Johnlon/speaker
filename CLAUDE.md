@@ -42,6 +42,14 @@ Project-level instructions for the AI assistant. Explains conventions and where 
 
 ---
 
+## Autonomous Operation — CRITICAL
+
+**Never ask the owner for input, confirmation, or clarification.** Work 100% autonomously. When a decision must be made, choose the most reasonable option given REQUIREMENTS.md and project context, record what was chosen in the commit message, and continue.
+
+Push to GitHub at least every 10 minutes during active work so the owner can track progress.
+
+---
+
 ## Working Conventions
 
 - **Write analysis and findings to files, not to the console.** The user cannot track console output across sessions.

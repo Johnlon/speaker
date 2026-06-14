@@ -274,6 +274,52 @@ Ring radiators (XT25 family) produce inherently wide, controlled dispersion thro
 
 ---
 
+## Scenario Recommendations
+
+### Scenario 1 — Kitchen 60° Off-Axis (Primary Use Case)
+
+Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-axis dispersion is the critical variable — a narrow tweeter beam causes tonal thinning at this angle. Ring radiators and small-dome tweeters are the strongest choices.
+
+| Rank | ID | Mid | Tweeter | Price | PSU | Why |
+|------|----|-----|---------|-------|-----|-----|
+| 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£52 | 24V | Ring radiator = widest controlled dispersion of any tweeter; natural fibre warmth |
+| 2 | RR1 | DS115-8 | XT25TG30-04 | ~£62 | 24V | Same ring radiator advantage; reference warm paper cone |
+| 3 | S1 | DS115-8 | SB19ST | ~£50 | 24V | 19mm dome = widest dome option; best all-round pairing |
+| 4 | RR3 | SB12MNRX2-25-4 | XT25TG30-04 | ~£83 | 24V | Ring radiator + highest-headroom mid; engineering-first pick |
+| 5 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V | Ring dome construction adds off-axis benefit over standard dome |
+
+---
+
+### Scenario 2 — On-Axis Listening (Direct, Centred)
+
+Listener seated directly in front, 6–8 ft. Off-axis dispersion matters less; acoustic precision, low crossover distortion, and tonal quality become the primary ranking factors.
+
+| Rank | ID | Mid | Tweeter | Price | PSU | Why |
+|------|----|-----|---------|-------|-----|-----|
+| 1 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V | Wide crossover tuning window; ring dome; controlled transients; engineering showcase |
+| 2 | S1 | DS115-8 | SB19ST | ~£50 | 24V | Warm character; best Fs margin; point-source coherence |
+| 3 | A4 | DS115-8 | DX25TG59-04 | ~£60 | 24V | Most flexible crossover point — dial in the optimal transition precisely |
+| 4 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V | True point source; zero time offset; perfect phase at crossover |
+| 5 | A2 | SB12MNRX2-25-4 | SB19ST | ~£72 | 24V | Natural fibre warmth + controlled midrange transients |
+
+---
+
+### Scenario 3 — Compact Baffle / Minimum Width
+
+Narrowest possible front baffle. Driven by mid frame OD and centre spacing. Smaller driver = narrower baffle; tighter spacing = less interference.
+
+| Rank | ID | Mid | Tweeter | Spacing | Price | PSU | Why |
+|------|----|-----|---------|---------|-------|-----|-----|
+| 1 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | **79mm** | ~£44 | 24V | Smallest combined footprint; tightest round spacing |
+| 2 | A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | **90mm** | ~£49 | 24V | Tightest spacing with best-in-class tweeter |
+| 3 | B6 | DSA90-8 (92mm OD) | TN25 (54×54mm sq) | **73mm** | ~£52 | 24V | Absolute tightest spacing of any pairing; square tweeter |
+| 4 | B11 | DSA90-8 (92mm OD) | DT-28N (~72mm OD) | **~82mm** | ~£65 | 24V | Compact waveguide tweeter; tight spacing |
+| 5 | B2 | ND91-4 (3.5") | SB19ST | **97mm** | ~£48 | 29V | 3.5" mid = smallest mid frame; compact footprint |
+
+Minimum baffle width is set by the largest driver on the front face. DSA90-8 at 92mm OD is the smallest mid frame in the catalogue — any DSA90-8 pairing can run on a ~120mm wide baffle (92mm + margin).
+
+---
+
 ## Budget Recommendations
 
 ### Best picks under £50 (mid + tweeter combined)
