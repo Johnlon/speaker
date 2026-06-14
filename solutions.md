@@ -11,7 +11,7 @@ Curated final recommendations per scenario. A small number of justified, actiona
 | 60° off-axis kitchen listening | SB12PFCR25-4 + XT25TG30-04 | RR2 | ~£52 |
 | Cheapest possible pair | DSA90-8 + XT25SC90-04 | RR4 | ~£37 |
 | Cheapest ring rad + natural fibre | SB12PFCR25-4 + XT25SC90-04 | RR4B | ~£39 |
-| Maximum DSP crossover flexibility | DSA90-8 + SB29RDNC-C000-4 | RPN4 | ~£86 |
+| Maximum DSP crossover flexibility | DSA90-8 + R2604/833000 | RP1 | ~£75 |
 | Widest ring dome window + budget | DSA90-8 + SB21SDC-C000-4 | RD0 | ~£64 |
 | Narrowest baffle (tightest spacing) | DSA90-8 + XT25SC40-04 | XC1 | ~£55 |
 | 120W tweeter insurance (cheapest) | HiVi B4N + SB26STCN-C000-4 | B_STC | ~£50 |
@@ -194,7 +194,9 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 
 **Wide crossover window champion (standard dome):** D2604/830000 (€44.95) — Fs=630Hz, min xover 1,260Hz. More than 1,500Hz of crossover latitude below the 2,800Hz target. 100W/240W Scan-Speak quality. Large 104mm FP.
 
-**Wide crossover window champion (ring dome, absolute):** SB29RDNC-C000-4 (€68.45) — Fs=580Hz, min xover 1,160Hz. With SB12PFCR25-4: 1,570Hz window (RPN2). With DSA90-8: 2,100Hz window (RPN4) — widest of any pairing in the catalogue. 100W rating, 94dB sensitivity (only 5W at burst). The premium option for engineering flexibility.
+**Wide crossover window champion (ring dome):** SB29RDNC-C000-4 (€68.45) — Fs=580Hz, min xover 1,160Hz. With DSA90-8: 2,100Hz window (RPN4). 100W, 94dB. Superseded by R2604/833000 on window width.
+
+**Wide crossover window champion (ring radiator, absolute):** R2604/833000 (€62.45) — Scan-Speak Discovery dual ring rad, Fs 440Hz, 100W, 92dB. With DSA90-8: **2,380Hz window** (RP1) — widest of any pairing in the catalogue. €6 cheaper than SB29RDNC yet wider window (880Hz vs 1,160Hz min xover). New top pick for maximum DSP flexibility. In stock 10+.
 
 ### Pairings using high-power tweeters
 
@@ -203,7 +205,8 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 | XC1 | DSA90-8 | XT25SC40-04 | 100W | 2,036–3,260 Hz | 68mm | ~£55 |
 | RR4 | DSA90-8 | XT25SC90-04 | 100W | 1,650–3,260 Hz | 91mm | ~£37 |
 | STC1 | DSA90-8 | SB26STCN-C000-4 | 120W | 1,900–3,260 Hz | 82mm | ~£63 |
-| RPN4 | DSA90-8 | SB29RDNC-C000-4 | 100W | 1,160–3,260 Hz | 98mm | ~£86 | Widest DSP window (2,100Hz); ring dome; premium |
+| RP1 | DSA90-8 | R2604/833000 | 100W | 880–3,260 Hz | 98mm | ~£75 | **ABSOLUTE window champion (2,380Hz)**; Discovery ring rad; 100W; €6 under RPN4 |
+| RPN4 | DSA90-8 | SB29RDNC-C000-4 | 100W | 1,160–3,260 Hz | 98mm | ~£86 | Widest ring dome window (2,100Hz); ring dome; premium |
 | ST3 | DSA90-8 | SB26ST-C000-5 | 80W | 1,740–3,260 Hz | 82mm | ~£56 |
 | SE1 | DSA90-8 | SEAS H1406-04 | 80W | 2,340–3,260 Hz | 73mm | ~£74 |
 | RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 100W | 1,160–2,730 Hz | 113mm | ~£79 | Widest ring dome window (1,570Hz); nat. fibre mid |
@@ -213,6 +216,7 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 | STC2 | DS115-8 | SB26STCN-C000-4 | **120W** | 1,900–2,636 Hz | 94mm | ~£65 |
 | RST1 | DS115-8 | RST28F-4 | 80W | 1,420–2,636 Hz | 110mm | ~£70 | Same price as DC1; narrower window (1,216 vs 1,376Hz); DC1 better value |
 | DC1 | DS115-8 | D2604/830000 | 100W | 1,260–2,636 Hz | 110mm | ~£70 |
+| RP2 | DS115-8 | R2604/833000 | 100W | 880–2,636 Hz | 110mm | ~£80 | 1,756Hz window; ring rad + paper warmth; 100W; €12.50 over XT25TG30 but indestructible |
 | RPN1 | DS115-8 | SB29RDNC-C000-4 | 100W | 1,160–2,636 Hz | 110mm | ~£87 | Widest DS115 window (1,476Hz); ring dome; premium pick |
 
 ---

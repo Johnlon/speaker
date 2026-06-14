@@ -44,7 +44,9 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 
 | Tweeter | Min xover | FP OD mm | Sens dB | Power W |
 |---------|-----------|----------|---------|---------|
+| R2604/833000 | 880 Hz | ~104 | 92 | **100** |
 | XT25TG30-04 | 880 Hz | 104 | 91.9 | 15 |
+| R2604/832000 | 1,000 Hz | ~104 | 90 | **100** |
 | XT25BG60-04 | 1,140 Hz | 104.5 | 92.6 | 15 |
 | DX25TG59-04 | 1,180 Hz | 104 | 93.4 | 15 |
 | SB29SDAC | 1,200 Hz | ~104 | ~91 | ~30 |
@@ -185,6 +187,12 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | DMA1 | DMA105-8 | SB19ST | 1,960–2,900 | 96 | ~44 | 24V / 28V | Al neodymium | 4" dual-neo Al cone; beaming 2,900Hz (better than DS115 at 2,636); **min LP 200Hz recommended** (Fs 72Hz → 2×Fs=144Hz marginal at 150); 35W rated (better than DA115 at 20W); 940Hz window |
 | DMA2 | DMA105-8 | XT25TG30-04 | 880–2,900 | 107 | ~52 | 24V / 28V | Al + ring rad | 2,020Hz DSP window (widest DMA105 pairing); ring rad off-axis; 107mm spacing; Falcon £29.90 for twt saves ~£13; **min LP 200Hz** |
 | DMA3 | DMA105-8 | SB29RDNC-C000-4 | 1,160–2,900 | 104 | ~80 | 24V / 28V | Al + ring dome 100W | 1,740Hz window; premium 100W ring dome; 104mm spacing; compact pairing; **min LP 200Hz** |
+| RP1 | DSA90-8 | R2604/833000 | 880–3,260 | 98 | ~75 | 24V / 29V | Detailed + ring rad 100W | **Absolute window champion: 2,380Hz** (widest in catalogue); same Fs as XT25TG30 + 100W; 98mm spacing; Scan-Speak Discovery ring rad |
+| RP2 | DS115-8 | R2604/833000 | 880–2,636 | 110 | ~80 | 24V / 28V | Warm + ring rad 100W | 1,756Hz window (tied with RR1); 100W vs XT25TG30 15W; same price class (+€12.50); indestructible tweeter |
+| RP3 | SB12PFCR25-4 | R2604/833000 | 880–2,730 | 113 | ~70 | 24V / 28V | Warm nat. + ring rad 100W | 1,850Hz window (wider than RR2); 100W; nat. fibre + Discovery ring rad; €12.50 over RR2 |
+| RP4 | DSA90-8 | R2604/832000 | 1,000–3,260 | 98 | ~63 | 24V / 29V | Detailed + ring rad 100W | 2,260Hz window; cheaper (€52.95 vs €62.45); 2dB less sens than RP1; 120Hz narrower than RP1 |
+| RP5 | DS115-8 | R2604/832000 | 1,000–2,636 | 110 | ~66 | 24V / 28V | Warm + ring rad 100W | 1,636Hz window; budget Discovery 100W ring rad; ~£3 premium over XT25TG30 |
+| RP6 | SB12PFCR25-4 | R2604/832000 | 1,000–2,730 | 113 | ~56 | 24V / 28V | Warm nat. + ring rad 100W | 1,730Hz window; cheapest 100W ring rad + nat. fibre; best value in RP series |
 
 ---
 

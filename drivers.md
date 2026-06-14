@@ -331,6 +331,26 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Why interesting:** Scan-Speak Discovery class engineering in a 104mm faceplate with 100W power handling, Fs ~630 Hz, and widest crossover window of any dome in the candidate field. €44.95 mid-range price. 104mm OD — same footprint class as DX25TG59-04, SB29SDAC. Depth only 25.4mm (shallowest large-FP tweeter in the field).
 - **Pairing note:** At 104.2mm FP, spacing with DS115-8 (116mm OD) ≈ 110mm; with SB12PFCR25-4 (~122mm OD) ≈ 113mm — same as DA1/DA2. Centre spacing with DSA90-8 ≈ 98mm.
 
+### Scan-Speak Discovery R2604/833000 — Candidate (100W ring radiator, Fs 440 Hz — new window champion)
+- Type: **Dual Ring Radiator**, fabric diaphragm | VC: 25 mm | Faceplate OD: **~104 mm** (estimated; same Discovery family as D2604) | Impedance: 4Ω | Re: 2.9Ω | Xmax: 0.2 mm
+- Sensitivity: **92 dB @ 2.83V/1m** | Power: **100W RMS** | Fs: **440 Hz** | Wave-guide centre plug | Extended response to 40 kHz+
+- **Source:** [SoundImports](https://www.soundimports.eu/en/scan-speak-r2604-833000.html) (fetched June 2026) | Price: **€62.45** | Stock (Jun 2026): **10+**
+- **Min crossover:** 2× Fs = **880 Hz** — identical to XT25TG30-04. Same crossover flexibility as the ring radiator champion, but with 100W instead of 15W.
+- **DSP correction vs TB sub (85 dB ref):** −7.0 dB pad needed (same as D2604/830000).
+- **Power at reference (98 dB):** 4.0W (4% of 100W). At burst (101 dB): 8.0W (8%). Indestructible.
+- **Why this stands out:** Combines XT25TG30-04's crossover window depth (Fs 440 Hz) with D2604's 100W power rating. The ring radiator diaphragm gives superior off-axis dispersion vs a dome — critical for 60° kitchen listening. Only €12.50 more than XT25TG30-04. New absolute window champion with DSA90-8: **2,380 Hz window** (880–3,260 Hz) — wider than any pairing in the catalogue.
+- **Pairing note:** At ~104mm FP, spacing with DS115-8 ≈ 110mm; with SB12PFCR25-4 ≈ 113mm; with DSA90-8 ≈ 98mm. Same physical footprint as D2604/830000 and SB29RDNC-C000-4.
+
+### Scan-Speak Discovery R2604/832000 — Candidate (100W ring radiator, Fs 500 Hz)
+- Type: **Dual Ring Radiator**, fabric diaphragm | VC: 25 mm | Faceplate OD: **~104 mm** (est.) | Impedance: 4Ω | Re: 2.9Ω | Xmax: 0.2 mm
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **100W RMS** | Fs: **500 Hz** | Extended response to 40 kHz+
+- **Source:** [SoundImports](https://www.soundimports.eu/en/scan-speak-r2604-832000.html) (fetched June 2026) | Price: **€52.95** | Stock (Jun 2026): **10+**
+- **Min crossover:** 2× Fs = **1,000 Hz** — slightly higher than R2604/833000 (880 Hz) but still wider window than D2604/830000 (1,260 Hz).
+- **DSP correction vs TB sub (85 dB ref):** −5.0 dB pad needed.
+- **Power at reference (98 dB):** 6.3W (6.3% of 100W). At burst (101 dB): 12.6W (12.6%). Indestructible.
+- **Why interesting:** Budget Discovery ring radiator — 100W for only €52.95 (cheaper than SB29RDNC at €68.45, same price bracket as XT25TG30-04). Wider window than D2604/830000 despite being a ring radiator. Best budget 100W ring radiator option. Prefer R2604/833000 at +€9.50 for the 880 Hz min xover — 120 Hz extra window is meaningful for DSP flexibility.
+- **Pairing note:** At ~104mm FP, spacing with DS115-8 ≈ 110mm; with SB12PFCR25-4 ≈ 113mm; with DSA90-8 ≈ 98mm.
+
 ### Dayton Audio CF18N-4 — Candidate (compact carbon fiber 18mm dome)
 - Dome: **18 mm woven carbon fiber** | Faceplate OD: **58 mm** | Cutout: 36.9 mm | Depth: 38.3 mm | Impedance: 4Ω | Re: 3.54Ω
 - Sensitivity: **90 dB @ 2.83V/1m** | Power: **40W RMS** | Fs: **1,100 Hz** | Frequency response: 2,500–20,000 Hz
