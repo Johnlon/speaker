@@ -295,6 +295,20 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Note:** Faceplate OD not confirmed from pages found — likely ~104 mm based on Scan-Speak Discovery series mounting dimensions, but verify before ordering.
 - **Source gap:** SoundImports page URL could not be resolved after multiple attempts. Spec from manufacturer site. FP OD and confirmed power rating pending SI page fetch.
 
+### SB Acoustics SB26ST-C000-5 — Candidate (high-power compact tweeter)
+- Dome: 26 mm fine weave soft fabric | Faceplate OD: **~72 mm** (assumed — SB26 family standard; confirm from datasheet) | Impedance: 5Ω | Re: 4.4Ω
+- Sensitivity: **91 dB @ 2.83V/1m** | Power: **80W RMS** | Fs: **870 Hz** | Xmax: 0.6 mm | Sd: 6.2 cm²
+- CCAW voice coil (0.33 g moving mass) | Saturation-controlled motor | Internal pressure equalisation
+- **Source:** [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb26st-c000-5.html) | [SB Acoustics](https://sbacoustics.com/product/sb26st-c000-5/) | Price: **€30.95** | Stock (June 2026): 10+
+- **Min crossover:** 2× Fs = **1,740 Hz** — comfortable margin below 2,800 Hz project target.
+- **DSP correction vs TB sub (85 dB ref):** −6.0 dB pad needed.
+- **Power at reference (98 dB):** 5.0W (6.3% of 80W). At burst (101 dB): **10.0W** (12.5%). Effectively indestructible in this application.
+- **5Ω note:** JAB5 at 24V → ~49W into 5Ω. Massively above the 10W needed at burst.
+- **Why this matters:** 80W RMS in a ~72mm compact faceplate is the standout combination. The SB26STCN-C000-4 (same SB26 family, 72mm FP, 120W) costs €36.45; the SB26ST at €30.95 is €6 cheaper and still far exceeds any power requirement. Combines compact spacing (ST series = SB26 small-ish faceplate vs 104mm large-FP tweeters) with very high thermal robustness.
+- **FP OD caveat:** SB26STCN-C000-4 (confirmed 72mm FP) is from the same SB26 chassis family. 72mm is assumed for SB26ST-C000-5 but not confirmed from dimension drawing — verify before ordering. If confirmed 72mm: spacing with DSA90-8 (92mm OD) = **82mm**; with DS115-8 (116mm OD) = 94mm; with SB12PFCR25-4 (~122mm OD) = 97mm.
+- **vs SB26STCN-C000-4:** SB26ST costs €6 less but has 80W vs 120W and 5Ω vs 4Ω. At the power levels in this project (10W max at burst), 80W vs 120W is irrelevant. Choose SB26ST for the €6 saving.
+- **Pairings enabled:** ST1 (DS115-8 + SB26ST: 94mm spacing, 1,740–2,636 Hz window); ST2 (SB12PFCR25-4 + SB26ST: 97mm, 1,740–2,730 Hz); ST3 (DSA90-8 + SB26ST: 82mm, 1,740–3,260 Hz).
+
 ### Dayton Audio ND25FN-4 — Rejected (no faceplate — unmountable on standard baffle)
 - Dome: 25 mm treated silk | Impedance: 4Ω | Sensitivity: 90 dB | Power: 20W RMS | Fs: 1,350 Hz
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd25fn-4.html) | Price: €12.36 | Stock: 10+
@@ -555,6 +569,18 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **The engineering case:** BMR technology used in premium soundbars (Bang & Olufsen, Tectonic OEM) specifically for its wide dispersion. In a kitchen counter speaker, this could outperform a conventional mid + ring radiator for off-axis stability. The 4 dB sensitivity deficit is a manageable DSP trade-off.
 - **Concern — sensitivity:** 81 dB requires a +4 dB boost in DSP. The amp must deliver 2.5× more power to this driver than to an 85 dB mid, all else equal. At 24V into 8Ω: ~31W available. At reference (98 dB): needs 50W — **exceeds available power at 24V**. At 29V: 45W available, still 11% short. **Needs 32V or higher to reach reference level without limiting.** This is the main blocker.
 - **Status:** Keep as a curiosity for a high-voltage variant build (36V JAB5 with appropriate limiters). Not suitable at 24V or 29V for reference-level matching.
+
+### Markaudio PLUVIA-7HD (Gold) — Candidate (power-limited, zero-correction curiosity)
+- Size: 4" | Frame OD: **122.3 mm** round | Impedance: 8Ω | Cone: Mg/Al alloy | Full-range design
+- Sensitivity: **85.74 dB @ 2.83V/1m** | Power: **20W RMS** | Xmax: 4 mm | Fs: 72.5 Hz
+- **Source:** [SoundImports product page](https://www.soundimports.eu/en/markaudio-pluvia-7hd-gold.html) | Price: **€52.45** | Stock (June 2026): 10+
+- **Fs check:** 72.5 Hz → **2.07× at 150 Hz crossover** — passes 2× minimum by margin.
+- **DSP correction vs TB sub (85 dB ref):** −0.74 dB — essentially **zero correction**. Closest sensitivity match to sub of any mid candidate.
+- **Power at reference (98 dB):** 10^((98−85.74)/10) = **16.8W** (84% of 20W — close to limit). At burst (101 dB): **33.5W** — 67% over rating; driver destroyed at uncapped burst.
+- **Amp ceiling:** At 24V into 8Ω JAB5 delivers ~30.6W. Even the amp's maximum output exceeds the driver's 20W RMS rating — no safe operating point without a DSP limiter.
+- **The interesting case:** 85.74 dB is the uniquely closest sensitivity match to the 85 dB sub of any candidate — zero DSP gain/cut, maximum dynamic range, no inter-channel mismatch.
+- **Practical fix — DSP limiter at 18W:** Max mid SPL = **97.3 dB @1m**. Match sub at 37W → 97 dB. Gives a 97 dB system cap vs 98 dB reference. Acceptable for kitchen counter use at 6ft.
+- **vs DS115-8:** DS115-8 has near-identical sensitivity (85.3 dB), higher power (35W), better Fs margin (2.72× vs 2.07×), and costs €16 less (€36.95 vs €52.45). PLUVIA wins only on 0.44 dB closer sensitivity match and Mg/Al cone character.
 
 ---
 

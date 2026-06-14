@@ -47,6 +47,7 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | SB29SDAC / SB29RDNC | 1,200 Hz | ~104 | ~91 | ~30 |
 | NE25VTS-04 | 1,460 Hz | 66.3 | 91.1 | 15 |
 | SB21SDC-C000-4 | 1,440 Hz | 92 | 91 | 40 |
+| SB26ST-C000-5 | 1,740 Hz | ~72 | 91 | 80 |
 | DA25BG08-06 | 1,420 Hz | 104 | 91.6 | 15 |
 | XT25SC90-04 | 1,650 Hz | ~90 | 90.1 | 100 |
 | SB19ST | 1,960 Hz | 88 | 88.5 | 30 |
@@ -116,6 +117,12 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | R2 | RS125-4 | XT25TG30-04 | 880–2,184 | 115 | ~87 | 24V / 28V | Neutral + wide | Premium 5" + ring rad; widest window possible for 5" |
 | R3 | SB13PFCR25-4 | DX25TG59-04 | 1,180–2,080 | 117 | ~45 | 24V / 28V | Warm, nat. fibre | Cheaper 5" option vs R1 at same crossover constraint |
 | COAX2 | SB12PFC25-4-COAX | (built-in) | ~2,800 | 0 | ~48 | 24V / 28V | Warm | Nat. fibre coaxial; cheaper than B9 (£59); same SPL ceiling ~94 dB |
+| ST1 | DS115-8 | SB26ST-C000-5 | 1,740–2,636 | 94 | ~58 | 24V | Warm | 80W tweeter; ~72mm FP (assume); wide window; robust power handling |
+| ST2 | SB12PFCR25-4 | SB26ST-C000-5 | 1,740–2,730 | 97 | ~48 | 24V | Warm, nat. | Cheapest 80W tweeter pairing; nat. fibre + indestructible tweeter |
+| ST3 | DSA90-8 | SB26ST-C000-5 | 1,740–3,260 | 82 | ~56 | 24V | Detailed | 82mm spacing; 80W tweeter; widest xover window of any DSA90-8 pairing |
+| NX1 | SB12NRX25-4 | SB19ST | 1,960–2,730 | ~105 | ~65 | 24V | Warm, nat. | Premium paper NRX; acoustically identical to S2 (SB12PFCR25-4) — choose S2 on value |
+| NX2 | SB12NRX25-4 | XT25TG30-04 | 880–2,730 | ~116 | ~81 | 24V | Warm + wide | Premium NRX + ring rad; acoustically identical to RR2 — choose RR2 on value |
+| PL1 | PLUVIA-7HD Gold | SB19ST | 1,960–~2,900 | ~105 | ~58 | 24V | Warm, zero-pad | Unique zero-correction mid; system SPL capped 97 dB (DSP at 18W); Mg/Al cone |
 
 ---
 
