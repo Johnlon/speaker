@@ -30,6 +30,7 @@ Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-
 | Rank | ID | Mid | Tweeter | Price | PSU | Why |
 |------|----|-----|---------|-------|-----|-----|
 | 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£47 | 24V / ~3.8A | Ring radiator = widest controlled dispersion; nat. fibre warmth; widest xover window (880 Hz) |
+| 1b | RP3 | SB12PFCR25-4 | R2604/833000 | ~£70 | 24V / ~3.8A | 100W upgrade over RR2: identical window (880Hz), same ring rad dispersion, +£23 for burnout immunity |
 | 2 | RR4B | SB12PFCR25-4 | XT25SC90-04 | ~£39 | 24V / ~3.8A | Cheapest ring rad; same nat. fibre mid; min xover 1,650 Hz (vs 880 Hz for RR2); saves ~£8 |
 | 3 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | ~£56 | 24V / ~3.8A | Ring dome pairing; nat. fibre + annular diaphragm; SB21 smaller than SB29 |
 | 4 | XC3 | SB12PFCR25-4 | XT25SC40-04 | ~£47 | 24V / ~3.9A | Ultra-compact ring rad (83mm spacing); nat. fibre + 43.9mm ring rad |
@@ -47,7 +48,8 @@ Listener seated directly in front, 6–8 ft. Off-axis dispersion matters less; a
 | 1 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V / ~4A | Wide crossover tuning window; ring dome; controlled transients; engineering showcase |
 | 2 | RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | ~£86 | 24V / ~4A | Same mid as S3 but smaller cheaper ring dome; saves ~£6 |
 | 3 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | Warm character; best Fs margin; coherent integration |
-| 4 | DC1 | DS115-8 | D2604/830000 | ~£70 | 24V / ~3.8A | Scan-Speak 100W; widest std-dome window (1,260–2,636 Hz); indestructible tweeter |
+| 4 | RP2 | DS115-8 | R2604/833000 | ~£80 | 24V / ~3.8A | Scan-Speak ring rad 100W; 880–2,636Hz window (1,756Hz); ring rad dispersion; wider than DC1 |
+| 5 | DC1 | DS115-8 | D2604/830000 | ~£70 | 24V / ~3.8A | Scan-Speak 100W dome; widest dome window (1,260–2,636 Hz); same footprint; £10 under RP2 |
 | 5 | DA1 | DS115-8 | DA25BG08-06 | ~£65 | 24V / ~3.8A | Wide xover window (1,420–2,636 Hz); 15W adequate at ref; £5 cheaper than DC1 |
 | 6 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V / ~3.5A | True point source; zero time offset; perfect phase at crossover; SPL ceiling 94 dB |
 
