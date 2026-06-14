@@ -4,6 +4,25 @@ Curated final recommendations per scenario. A small number of justified, actiona
 
 ---
 
+## Quick Selection Guide
+
+| If your priority is… | Best pick | ID | Price |
+|----------------------|-----------|-----|-------|
+| 60° off-axis kitchen listening | SB12PFCR25-4 + XT25TG30-04 | RR2 | ~£52 |
+| Cheapest possible pair | DSA90-8 + XT25SC90-04 | RR4 | ~£37 |
+| Cheapest ring rad + natural fibre | SB12PFCR25-4 + XT25SC90-04 | RR4B | ~£39 |
+| Maximum DSP crossover flexibility | DSA90-8 + SB29RDNC-C000-4 | RPN4 | ~£86 |
+| Widest ring dome window + budget | DSA90-8 + SB21SDC-C000-4 | RD0 | ~£64 |
+| Narrowest baffle (tightest spacing) | DSA90-8 + XT25SC40-04 | XC1 | ~£55 |
+| 120W tweeter insurance (cheapest) | HiVi B4N + SB26STCN-C000-4 | B_STC | ~£50 |
+| On-axis engineering showcase | SB12MNRX2-25-4 + SB29SDAC | S3 | ~£92 |
+| True point source (zero time offset) | SB12PFC25-4-COAX (built-in tweeter) | COAX2 | ~£48 |
+| Best value paper warmth | DS115-8 + SB19ST | S1 | ~£50 |
+| Widest 5" driver window | SB13PFCR25-4 + XT25TG30-04 | SB13_TG | ~£67 |
+| DS115-8 alternative (DA115-8 on sale) | DA115-8 + SB19ST | B5 | ~£40 |
+
+---
+
 ## Scenario 1 — Kitchen 60° Off-Axis (Primary Use Case)
 
 Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-axis dispersion is the critical variable. Ring radiators and ring domes are the strongest choices; 19mm small domes are best among standard domes.
