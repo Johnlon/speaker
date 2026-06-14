@@ -115,6 +115,7 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | NR1 | DSA90-8 | NE25VTS-04 | 1,460–3,260 | 79 | ~64 | 24V / 29V | Detailed | Same spacing as B10; much lower min xover (1,460 vs 2,700 Hz) |
 | NR2 | DS115-8 | NE25VTS-04 | 1,460–2,636 | 91 | ~65 | 24V / 28V | Warm | Wide xover window; paper warmth + compact tweeter |
 | NR3 | SB12PFCR25-4 | NE25VTS-04 | 1,460–2,730 | ~94 | ~56 | 24V / 28V | Warm, natural | NR2 at lower cost with nat. fibre mid |
+| RD0 | DSA90-8 | SB21SDC-C000-4 | 1,440–3,260 | 92 | ~64 | 24V / 29V* | Detailed + ring dome | Widest ring dome window (1,820Hz!); 92mm spacing; compact detailed mid + ring dome; 29V for burst |
 | RD1 | DS115-8 | SB21SDC-C000-4 | 1,440–2,636 | 104 | ~65 | 24V / 28V | Warm + ring dome | Ring dome alt to RR6; saves ~£6; 92mm FP tighter than SB29 |
 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~56 | 24V / 28V | Warm + ring dome | Cheapest ring dome pairing; nat. fibre + smaller SB21 ring dome |
 | RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~86 | 24V / 28V | Warm + ring dome | Engineering ring dome; saves ~£6 vs S3 |
@@ -167,11 +168,11 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
 | D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
 | D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
-| SB13_TG | SB13PFCR25-4 | XT25TG30-04 | 880–2,080 | 117 | ~67 | 24V / 28V | Warm, nat. + wide | 5"; Fs=44Hz (3.4× margin); 1200Hz ring rad window; deepest low-end DSP flexibility |
-| SB13_DC | SB13PFCR25-4 | D2604/830000 | 1,260–2,080 | 117 | ~63 | 24V / 28V | Warm, nat. + 100W | 5" + Scan-Speak 100W; 820Hz window; 100W burnout immunity; wide baffle needed |
-| SB13_RPN | SB13PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,080 | 117 | ~81 | 24V / 28V | Warm nat. + ring dome | 5"; 920Hz window; 100W ring dome; expensive but engineering peak for 5" mid |
-| M_TG | HiVi M5N | XT25TG30-04 | 880–2,185 | 115 | ~68 | 24V / 28V | Warm + wide | 5"; best Fs margin (50Hz); 1305Hz window; widest M5N option; baffle ~200mm needed |
-| M_RPN | HiVi M5N | SB29RDNC-C000-4 | 1,160–2,185 | 115 | ~83 | 24V / 28V | Warm + ring dome | 5"; 1025Hz window; 100W ring dome; wide baffle needed |
+| SB13_TG | SB13PFCR25-4 | XT25TG30-04 | 880–2,080 | 117 | ~67 | 24V / 28V | Warm, nat. + wide | 5"; Fs=44Hz (3.4× margin); 1,200Hz ring rad window; deepest low-end DSP flexibility; 190mm baffle OK (vertical layout) |
+| SB13_DC | SB13PFCR25-4 | D2604/830000 | 1,260–2,080 | 117 | ~63 | 24V / 28V | Warm, nat. + 100W | 5" + Scan-Speak 100W; 820Hz window; 190mm baffle OK |
+| SB13_RPN | SB13PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,080 | 117 | ~81 | 24V / 28V | Warm nat. + ring dome | 5"; 920Hz window; 100W ring dome; engineering peak for 5" mid; 190mm baffle OK |
+| M_TG | HiVi M5N | XT25TG30-04 | 880–2,185 | 115 | ~68 | 24V / 28V | Warm + wide | 5"; best Fs margin (50Hz); 1,305Hz window; widest M5N option; 190mm baffle OK |
+| M_RPN | HiVi M5N | SB29RDNC-C000-4 | 1,160–2,185 | 115 | ~83 | 24V / 28V | Warm + ring dome | 5"; 1,025Hz window; 100W ring dome; 190mm baffle OK |
 | B_TG | HiVi B4N | XT25TG30-04 | 880–2,636 | 110 | ~62 | 24V / 28V | Warm gold + wide | Perfect sub sens match (85dB); widest B4N window (1,756Hz); ring rad; single order Falcon+SI |
 | B_STC | HiVi B4N | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~50 | 24V / 28V | Warm gold + 120W | Cheapest 120W pairing (~£50); 94mm spacing; zero DSP correction needed at 85dB |
 | B_DC | HiVi B4N | D2604/830000 | 1,260–2,636 | 110 | ~63 | 24V / 28V | Warm gold + 100W | Scan-Speak 100W; widest window for B4N standard dome (1,376Hz); DS115 replacement |

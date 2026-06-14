@@ -96,7 +96,8 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window; Falcon £29.90 or SI €49.95 |
 | RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 Hz | 106mm | ~£39 | 24V / ~3.8A | Warm + wide | Cheapest ring rad + nat. fibre; 1,080Hz window; single Falcon order |
 | S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~107mm | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
-| RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 Hz | 113mm | ~£79 | 24V / ~3.8A | Warm + ring dome 100W | Premium ring dome (RDNC = 100W, 94dB); widest ring dome xover window (1,570Hz) |
+| RD0 | DSA90-8 | SB21SDC-C000-4 | 1,440–3,260 Hz | 92mm | ~£64 | 24V / ~3.9A | Detailed + ring dome | Widest ring dome window (1,820Hz); tightest ring dome spacing (92mm); 29V for burst |
+| RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 Hz | 113mm | ~£79 | 24V / ~3.8A | Warm + ring dome 100W | Premium ring dome (100W, 94dB); widest nat. fibre + ring dome window (1,570Hz) |
 | RPN4 | DSA90-8 | SB29RDNC-C000-4 | 1,160–3,260 Hz | 98mm | ~£86 | 24V / ~3.9A | Detailed + ring dome 100W | Widest xover window of any pairing (2,100Hz); 98mm spacing; engineering pinnacle |
 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£56 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 smaller (92mm FP) than SB29; 1 in stock + 7 on 3 Jul |
 
@@ -193,6 +194,7 @@ The risk scenario is **29V PSU operation** (amp delivers 45W/8Ω, 90W/4Ω). If a
 | STC2 | DS115-8 | SB26STCN-C000-4 | **120W** | 1,900–2,636 Hz | 94mm | ~£65 |
 | RST1 | DS115-8 | RST28F-4 | 80W | 1,420–2,636 Hz | 110mm | ~£70 | Same price as DC1; narrower window (1,216 vs 1,376Hz); DC1 better value |
 | DC1 | DS115-8 | D2604/830000 | 100W | 1,260–2,636 Hz | 110mm | ~£70 |
+| RPN1 | DS115-8 | SB29RDNC-C000-4 | 100W | 1,160–2,636 Hz | 110mm | ~£87 | Widest DS115 window (1,476Hz); ring dome; premium pick |
 
 ---
 
