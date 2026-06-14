@@ -6,15 +6,15 @@ Curated final recommendations per scenario. A small number of justified, actiona
 
 ## Scenario 1 — Kitchen 60° Off-Axis (Primary Use Case)
 
-Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-axis dispersion is the critical variable. Ring radiators and small-dome tweeters are the strongest choices.
+Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-axis dispersion is the critical variable. Ring radiators and ring domes are the strongest choices; 19mm small domes are best among standard domes.
 
 | Rank | ID | Mid | Tweeter | Price | PSU | Why |
 |------|----|-----|---------|-------|-----|-----|
-| 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£52 | 24V / ~3.8A | Ring radiator = widest controlled dispersion of any tweeter; natural fibre warmth |
-| 2 | RR1 | DS115-8 | XT25TG30-04 | ~£62 | 24V / ~3.8A | Same ring radiator advantage; reference warm paper cone |
-| 3 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | 19mm dome = widest dome option; best all-round pairing |
-| 4 | RR3 | SB12MNRX2-25-4 | XT25TG30-04 | ~£83 | 24V / ~4A | Ring radiator + highest-headroom mid; engineering-first pick |
-| 5 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V / ~4A | Ring dome construction adds off-axis benefit over standard dome |
+| 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£52 | 24V / ~3.8A | Ring radiator = widest controlled dispersion; natural fibre warmth; best overall |
+| 2 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | ~£40 | 24V / ~3.8A | Cheapest ring dome pairing; nat. fibre + annular diaphragm; £12 less than RR2 |
+| 3 | XC1 | DSA90-8 | XT25SC40-04 | ~£47 | 24V / ~3.9A | Compact ring rad (68mm spacing); 100W rated; wide dispersion in smallest package |
+| 4 | RR1 | DS115-8 | XT25TG30-04 | ~£62 | 24V / ~3.8A | Ring radiator + reference paper warmth; 4 units left |
+| 5 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | 19mm dome = widest dome option; best non-ring-rad pairing for 60° |
 
 ---
 
@@ -25,10 +25,10 @@ Listener seated directly in front, 6–8 ft. Off-axis dispersion matters less; a
 | Rank | ID | Mid | Tweeter | Price | PSU | Why |
 |------|----|-----|---------|-------|-----|-----|
 | 1 | S3 | SB12MNRX2-25-4 | SB29SDAC | ~£92 | 24V / ~4A | Wide crossover tuning window; ring dome; controlled transients; engineering showcase |
-| 2 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | Warm character; best Fs margin; coherent integration |
-| 3 | A4 | DS115-8 | DX25TG59-04 | ~£60 | 24V / ~3.8A | Most flexible crossover point — dial in the optimal transition precisely |
-| 4 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V / ~3.5A | True point source; zero time offset; perfect phase at crossover |
-| 5 | A2 | SB12MNRX2-25-4 | SB19ST | ~£72 | 24V / ~3.9A | Natural fibre warmth + controlled midrange transients |
+| 2 | RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | ~£73 | 24V / ~4A | Same mid as S3 but cheaper ring dome (€5 less); 92mm vs 104mm FP — tighter spacing |
+| 3 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | Warm character; best Fs margin; coherent integration |
+| 4 | DA1 | DS115-8 | DA25BG08-06 | ~£52 | 24V / ~3.8A | Wide xover window (1,420–2,636 Hz); Peerless Fs=710Hz dome |
+| 5 | B9 | SB12PACR25-4-COAX | built-in | ~£59 | 24V / ~3.5A | True point source; zero time offset; perfect phase at crossover; SPL ceiling 94 dB |
 
 ---
 

@@ -16,16 +16,20 @@ Per-driver power requirements are in [drivers.md](drivers.md).
 
 ## Beaming Limits — Max Useful Mid/Tweeter Crossover
 
-| Mid | Beams above |
-|-----|-------------|
-| DSA90-8 | 3,260 Hz |
-| SB12PFCR/MNRX2-25-4 (4") | 2,730 Hz |
-| DS115-8 / HiVi B4N | ~2,636 Hz |
-| SPM-116/8 / Beyma 4FR40 / DA115-8 | ~2,600 Hz |
-| TCP115-8 / SIG120-4 | ~2,570 Hz |
-| HiVi M5N (5") | ~2,185 Hz |
-| SB13PFC25-8 / SDS-P830656 | ~2,080 Hz |
-| SIG150-4 (5.25") | 1,990 Hz |
+Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
+
+| Mid | Size | Sd cm² | Beams above |
+|-----|------|--------|-------------|
+| DSA90-8 | 3" | ~26 | 3,260 Hz |
+| SB12PFCR/MNRX2-25-4 | 4" | ~50 | 2,730 Hz |
+| DS115-8 / HiVi B4N | 4" | ~48 | ~2,636 Hz |
+| SPM-116/8 / Beyma 4FR40 / DA115-8 | 4" | ~46 | ~2,600 Hz |
+| TCP115-8 / SIG120-4 | 4" | ~45 | ~2,570 Hz |
+| Tang Band W4-655F | 4" (125mm OD) | ~50 | ~2,636 Hz |
+| Dayton RS125-4 | 5" | ~79 | ~2,184 Hz |
+| HiVi M5N | 5" | ~79 | ~2,185 Hz |
+| SB13PFC25-4/8 / SDS-P830656 | 5" | ~87 | ~2,080 Hz |
+| SIG150-4 (5.25") | 5.25" | ~99 | 1,990 Hz |
 
 ---
 
