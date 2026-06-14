@@ -44,7 +44,10 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | XT25TG30-04 | 880 Hz | 104 | 91.9 | 15 |
 | XT25BG60-04 | 1,140 Hz | 104.5 | 92.6 | 15 |
 | DX25TG59-04 | 1,180 Hz | 104 | 93.4 | 15 |
-| SB29SDAC / SB29RDNC | 1,200 Hz | ~104 | ~91 | ~30 |
+| SB29SDAC | 1,200 Hz | ~104 | ~91 | ~30 |
+| SB29RDNC-C000-4 | 1,160 Hz | ~104 | 94 | 100 |
+| RST28F-4 | 1,420 Hz | 104.8 | 93.5 | 80 |
+| D2606/920000 | 2,200 Hz | ~104 | 91.4 | 100 |
 | NE25VTS-04 | 1,460 Hz | 66.3 | 91.1 | 15 |
 | SB21SDC-C000-4 | 1,440 Hz | 92 | 91 | 40 |
 | SB26ST-C000-5 | 1,740 Hz | ~72 | 91 | 80 |
@@ -151,6 +154,16 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | XBG1 | DS115-8 | XT25BG60-04 | 1,140–2,636 | 110 | ~76 | 24V / 28V | Warm + wide | Ring rad; SI-stocked (vs XT25TG30 pre-order); widest window std-stock ring rad |
 | XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 | ~110 | ~66 | 24V / 28V | Warm nat. + wide | SI-stocked ring rad alt to RR2 (XT25TG30 pre-order only at SI); nat. fibre warmth |
 | XBG3 | DSA90-8 | XT25BG60-04 | 1,140–3,260 | 98 | ~67 | 24V / 29V | Detailed + wide | Widest xover window of any DSA90-8 pairing; ring rad off-axis |
+| RPN1 | DS115-8 | SB29RDNC-C000-4 | 1,160–2,636 | 110 | ~87 | 24V / 28V | Warm + ring dome 100W | Premium ring dome; 1,476Hz DSP window; 94dB → only 5W at burst; 100W = burnout impossible |
+| RPN2 | SB12PFCR25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~79 | 24V / 28V | Warm nat. + ring dome 100W | Widest ring dome window in catalogue (1,570Hz); nat. fibre + premium ring dome |
+| RPN3 | SB12MNRX2-25-4 | SB29RDNC-C000-4 | 1,160–2,730 | 113 | ~109 | 24V / 28V | Warm + ring dome 100W | Engineering flagship; Qts 0.27 mid + 100W ring dome; cost ceiling option |
+| RPN4 | DSA90-8 | SB29RDNC-C000-4 | 1,160–3,260 | 98 | ~86 | 24V / 29V | Detailed + ring dome 100W | Widest window of any DSA90-8 pairing (2,100Hz); 98mm spacing; premium compact option |
+| RST1 | DS115-8 | RST28F-4 | 1,420–2,636 | 110 | ~70 | 24V / 28V | Warm + 80W | 80W; 93.5dB → 5.6W at burst; same spacing as DC1; £0 premium over D2604 |
+| RST2 | SB12PFCR25-4 | RST28F-4 | 1,420–2,730 | 113 | ~60 | 24V / 28V | Warm nat. + 80W | 80W; wider window than STC3 (SB26STCN); lower sensitivity match (+6dB vs +7dB DSP pad) |
+| RST3 | DSA90-8 | RST28F-4 | 1,420–3,260 | 98 | ~68 | 24V / 29V | Detailed + 80W | 1,840Hz window; 98mm spacing; 80W insurance at 29V |
+| D26_1 | DSA90-8 | D2606/920000 | 2,200–3,260 | 98 | ~63 | 24V / 29V | Detailed + 100W 6Ω | 1,060Hz window; 6Ω; 100W; compact 98mm spacing |
+| D26_2 | DS115-8 | D2606/920000 | 2,200–2,636 | 110 | ~64 | 24V / 28V | Warm + 100W 6Ω | 436Hz window — tight; cross at DS115 beaming limit; 6Ω; 100W |
+| D26_3 | SB12PFCR25-4 | D2606/920000 | 2,200–2,730 | 113 | ~55 | 24V / 28V | Warm nat. + 100W 6Ω | 530Hz window; cheapest 100W 6Ω pairing; €5 under D2604 equivalent |
 
 ---
 
