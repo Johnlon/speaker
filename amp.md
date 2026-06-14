@@ -30,19 +30,7 @@ The rated 100W/ch is specified at **36V into 6Ω** (confirmed in official datash
 
 > **JAB5 datasheet note (confirmed June 2026):** The official datasheet specifies only 100W/ch at 36V into 6Ω. No per-channel figure at 24V into 8Ω is published. The ~31W into 8Ω at 24V above is derived from the standard Class D formula — it is the best available estimate and will not be superseded by a manufacturer figure. The ~31W figure is the binding constraint for the mid driver choice — see PSU Voltage section below.
 
-### Power at full volume (24V supply) — mid candidates vs sub reference
-
-| Channel | Driver | Imp | Needed at 98 dB | Available @ 24V | PSU |
-|---------|--------|-----|-----------------|-----------------|-----|
-| Sub | TB W5-1138SMF | 4Ω | 40W RMS | ~61W | 24V |
-| Mid | SIG120-4 (OOS) | 4Ω | 13.5W | ~61W | 24V |
-| Mid | DS115-8 | 8Ω | 18.6W | ~31W | 24V |
-| Mid | HiVi B4N | 8Ω | 20.0W | ~31W | 24V |
-| Mid | DSA90-8 | 8Ω | 21.4W | ~31W | 24V |
-| Mid | TCP115-8 | 8Ω | 40.7W | ~31W | **29V required** |
-| Tweeter | SB19ST | 4Ω | 17.8W | ~61W | 24V |
-
-Total DC draw at sustained full output: ~165W. The LRS-150-24 is rated 156W — tight for continuous sine-wave full power. Real music is far lower average power. Real music crest factor is 10–15 dB (rock) to 20 dB (classical); average power is typically 1/10 to 1/20 of peak.
+Per-driver power requirements (watts needed per channel at reference SPL) are in [drivers.md](drivers.md). Per-pairing PSU voltage and current figures are in [potential-solutions.md](potential-solutions.md).
 
 ---
 
@@ -61,29 +49,13 @@ Total DC draw at sustained full output: ~165W. The LRS-150-24 is rated 156W — 
 
 ## PSU Voltage — Headroom Analysis
 
-### Minimum voltage for each mid at RMS level (matched to sub at 98 dB)
+### Minimum PSU voltage formula
 
-Formula: V_min = √(P_needed × 2R / η)
+**V_min = √(P_needed × 2R / η)** where η = 0.85
 
-| Mid | P needed (8Ω) | V_min for RMS | Available @ 24V | Fine at 24V? |
-|-----|--------------|---------------|-----------------|-------------|
-| DSA90-8 | 21.4W | **20.0V** | 31W (45% headroom) | Yes |
-| TCP115-8 | 40.7W | **27.7V** | 31W (**deficit**) | **No** |
+Per-driver P_needed figures are in [drivers.md](drivers.md). The table below shows what power each voltage step makes available at each impedance:
 
-### Minimum voltage for burst headroom (matching sub at 80W burst → 101 dB)
-
-At burst, each mid must produce 2× its RMS operating power.
-
-| Mid | P at burst (8Ω) | V_min for burst | Fine at 24V? | Fine at 29V? |
-|-----|----------------|-----------------|-------------|-------------|
-| DSA90-8 | 42.7W | **28.4V** | No | Yes (44.7W @ 29V, tight) |
-| TCP115-8 | 81.3W | **39.1V** | No | No (44.7W @ 29V — still short) |
-
-**At 36V (JAB5 rated supply), all driver candidates are comfortably powered.** TCP115-8 gets 69W into 8Ω vs 40.7W needed — 70% headroom. DSP limiters are mandatory at this voltage; without them the 4Ω sub and tweeter channels see 138W, which would destroy both.
-
-**At 29V, DSA90-8 achieves near-burst parity with the sub** — adequate for all candidates except TCP115-8.
-
-> Caution: At 29V into 4Ω, the sub and tweeter channels can deliver ~89W — above the sub's 80W max and far above the tweeter's 30W rating. DSP channel limiters are **mandatory** at any voltage above 24V.
+> At 29V and above: 4Ω channels (sub, tweeter) can exceed sub's 80W max and most tweeter ratings. **DSP channel limiters are mandatory at any supply above 24V.**
 
 ---
 
@@ -160,21 +132,7 @@ A DC-DC boost module steps 24V up to 32V just for the mid channel. At 32V into 8
 
 ---
 
-### Recommended Path
-
-**Update (June 2026):** Research agent conclusions overridden. DS115-8 (dark coated paper cone — confirmed by official datasheet) and HiVi B4N (copper-tone anodising — owner-accepted) are both reinstated as candidates. Full field: SIG120-4 (OOS), DS115-8, HiVi B4N, DSA90-8, TCP115-8.
-
-**First build:** 24V PSU is adequate for all mid candidates except TCP115-8. Add cap bank for transient cleanliness regardless of driver choice.
-
-**With DS115-8 (top available candidate — paper cone, 4 units):** 24V fine (18.6W needed, 31W available). Best crossover margin (Fs 55.2 Hz, 2.72× at 150 Hz). Warm character. Recommend ordering before stock runs out.
-
-**With HiVi B4N (zero DSP correction, 10+ stock):** 24V fine (20W needed, 31W available). Perfect sensitivity match (0 dB correction). Good Fs margin. Cheapest available pairing with SB19ST (~£37).
-
-**With SIG120-4 (4Ω mid, OOS):** No PSU upgrade needed — ~61W available at 24V into 4Ω. Visually excellent. Fs 74.6 Hz gives slightly tighter crossover margin (2.01× at 150 Hz). Currently out of stock — watch SoundImports.
-
-**With DSA90-8:** 24V fine. Compact frame, but aluminium mid character is more analytical than the GHM warmth target.
-
-**With TCP115-8:** Needs 29V PSU — see Option 1 above.
+Per-driver PSU recommendations are in [drivers.md](drivers.md). Per-pairing recommendations are in [solutions.md](solutions.md).
 
 ---
 
