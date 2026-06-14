@@ -10,11 +10,12 @@ Listener frequently at the cooker, 60° off the speaker axis. The tweeter's off-
 
 | Rank | ID | Mid | Tweeter | Price | PSU | Why |
 |------|----|-----|---------|-------|-----|-----|
-| 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£47 | 24V / ~3.8A | Ring radiator = widest controlled dispersion; natural fibre warmth; best overall (Falcon XT25TG30) |
-| 2 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | ~£56 | 24V / ~3.8A | Ring dome pairing; nat. fibre + annular diaphragm; SB21 smaller than SB29 |
-| 3 | XC3 | SB12PFCR25-4 | XT25SC40-04 | ~£47 | 24V / ~3.9A | Ultra-compact ring rad (83mm spacing); nat. fibre + 43.9mm ring rad |
-| 4 | RR1 | DS115-8 | XT25TG30-04 | ~£56 | 24V / ~3.8A | Ring radiator + reference paper warmth; 4 units left |
-| 5 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | 19mm dome = widest dome option; best non-ring-rad pairing for 60° |
+| 1 | RR2 | SB12PFCR25-4 | XT25TG30-04 | ~£47 | 24V / ~3.8A | Ring radiator = widest controlled dispersion; nat. fibre warmth; widest xover window (880 Hz) |
+| 2 | RR4B | SB12PFCR25-4 | XT25SC90-04 | ~£39 | 24V / ~3.8A | Cheapest ring rad; same nat. fibre mid; min xover 1,650 Hz (vs 880 Hz for RR2); saves ~£8 |
+| 3 | RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | ~£56 | 24V / ~3.8A | Ring dome pairing; nat. fibre + annular diaphragm; SB21 smaller than SB29 |
+| 4 | XC3 | SB12PFCR25-4 | XT25SC40-04 | ~£47 | 24V / ~3.9A | Ultra-compact ring rad (83mm spacing); nat. fibre + 43.9mm ring rad |
+| 5 | RR1 | DS115-8 | XT25TG30-04 | ~£56 | 24V / ~3.8A | Ring radiator + reference paper warmth; 4 units left |
+| 6 | S1 | DS115-8 | SB19ST | ~£50 | 24V / ~3.8A | 19mm dome = widest dome option; best non-ring-rad pairing for 60° |
 
 ---
 

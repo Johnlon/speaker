@@ -98,6 +98,8 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 | 116 | ~52 | 24V / 28V | Warm + wide | Best value ring radiator |
 | RR3 | SB12MNRX2-25-4 | XT25TG30-04 | 880–2,730 | 116 | ~83 | 24V / 28V | Warm + wide | Ring radiator + highest headroom |
 | RR4 | DSA90-8 | XT25SC90-04 | 2,800 | 91 | ~37 | 24V / 29V | Detailed + wide | Cheapest ring radiator; single Falcon order |
+| RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 | 106 | ~39 | 24V / 28V | Warm + wide | Cheapest ring rad + nat. fibre; 1080Hz DSP window; £8 under RR2 |
+| RR4C | DS115-8 | XT25SC90-04 | 1,650–2,636 | 103 | ~49 | 24V / 28V | Warm + wide | Paper warmth + ring rad; cheaper than RR1 (XT25TG30) by ~£13 |
 | RR5 | SIG150-4 | XT25TG30-04 | 1,000–1,990 | 140 | ~67 | 24V / 28V | Neutral | Only tweeter that works with SIG150-4 |
 | RR6 | DS115-8 | SB29SDAC | 1,200–2,636 | ~110 | ~71 | 24V / 28V | Warm + ring dome | Ring dome + paper warmth |
 | C1 | RS100-8 | SB19ST | 2,500 | — | ~60 | 24V / 29V | Detailed | Fs 1.63× at 150 Hz — marginal; 84.6 dB → mid-limited at burst |
@@ -144,6 +146,11 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | STC1 | DSA90-8 | SB26STCN-C000-4 | 1,900–3,260 | 82 | ~63 | 24V / 29V | Detailed | 120W indestructible; 82mm spacing; 1360Hz DSP window; burnout impossible at 29V |
 | STC2 | DS115-8 | SB26STCN-C000-4 | 1,900–2,636 | 94 | ~65 | 24V / 28V | Warm | 120W + paper warmth; 736Hz window; best power safety for DS115 pairing |
 | STC3 | SB12PFCR25-4 | SB26STCN-C000-4 | 1,900–2,730 | 97 | ~55 | 24V / 28V | Warm, nat. | Best value 120W pairing; nat. fibre + indestructible tweeter; 830Hz window |
+| AL1 | DS115-8 | SB26ADC-C000-4 | 1,360–2,636 | 110 | ~79 | 24V / 28V | Warm + bright Al | 120W Al dome; same FP class as D2604; wider window (1360 vs 1260Hz min); €7 more |
+| AL2 | SB12PFCR25-4 | SB26ADC-C000-4 | 1,360–2,730 | 113 | ~69 | 24V / 28V | Warm nat. + Al | 120W Al dome + nat. fibre; warm-bright hybrid |
+| XBG1 | DS115-8 | XT25BG60-04 | 1,140–2,636 | 110 | ~76 | 24V / 28V | Warm + wide | Ring rad; SI-stocked (vs XT25TG30 pre-order); widest window std-stock ring rad |
+| XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 | ~110 | ~66 | 24V / 28V | Warm nat. + wide | SI-stocked ring rad alt to RR2 (XT25TG30 pre-order only at SI); nat. fibre warmth |
+| XBG3 | DSA90-8 | XT25BG60-04 | 1,140–3,260 | 98 | ~67 | 24V / 29V | Detailed + wide | Widest xover window of any DSA90-8 pairing; ring rad off-axis |
 
 ---
 
