@@ -65,13 +65,13 @@ Per-driver P_needed figures are in [drivers.md](drivers.md). The table below sho
 
 Swap to a Mean Well LRS-150-27, LRS-150-29, or LRS-150-30. These are the same footprint (159×97×30 mm) as the 24V version.
 
-| Supply | P into 8Ω | P into 4Ω | Net result |
-|--------|-----------|-----------|-----------|
-| 24V | 31W | 61W | Adequate for most 8Ω mids at RMS; 4Ω mid has full headroom |
-| 27V | 39W | 77W | 8Ω mid approaching burst headroom |
-| 29V | 45W | 89W | 8Ω mid has burst parity with sub; 4Ω mid very comfortable |
-| 32V | 54W | 109W | All mid impedances comfortable at RMS and burst |
-| **36V** | **69W** | **138W** | **JAB5 rated operating voltage — full spec.** DSP channel limiters mandatory (sub ≤80W, tweeter per rating). |
+| Supply | P into 8Ω | P into 6Ω | P into 4Ω | Net result |
+|--------|-----------|-----------|-----------|-----------|
+| 24V | 31W | 41W | 61W | Adequate for most 8Ω mids at RMS; 4Ω mid has full headroom |
+| 27V | 39W | 52W | 77W | 8Ω mid approaching burst headroom |
+| 29V | 45W | 60W | 89W | 8Ω mid has burst parity with sub; 4Ω mid very comfortable |
+| 32V | 54W | 73W | 109W | All mid impedances comfortable at RMS and burst |
+| **36V** | **69W** | **92W** | **138W** | **JAB5 rated operating voltage — full spec.** DSP channel limiters mandatory (sub ≤80W, tweeter per rating). |
 
 **Sweet spot: 29V** — gives burst headroom for 8Ω mids without requiring extreme DSP limiting. Cost: £15–20.
 

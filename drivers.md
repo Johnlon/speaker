@@ -952,10 +952,10 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 - **Source:** https://www.soundimports.eu/en/hivi-m5n.html | Price: €29.95 | Stock: 10+
 - Note: 87 dB near-matched to sub. Fs 50 Hz → 3.0× at 150 Hz (excellent). 5" Al/Mg — good beaming limit. 35W solid. Shielded.
 
-### Dayton Audio DMA105-8 — Catalogue (pre-order)
+### Dayton Audio DMA105-8 — Catalogue (10+ in stock)
 - Size: 4" | Imp: 8Ω | Sensitivity: 84.8 dB | Power: 35W RMS | Fs: 72 Hz | Cone: rigid aluminum | Motor: dual neodymium magnet | Frame: 8-spoke open (aluminum)
-- **Source:** https://www.soundimports.eu/en/dayton-audio-dma105-8.html | Price: €26.45 | Stock: pre-order
-- Note: Neodymium dual-magnet motor. 8-spoke open frame (circular). 84.8 dB sensitivity. Fs 72 Hz → 2.08× at 150 Hz. 35W adequate.
+- **Source:** https://www.soundimports.eu/en/dayton-audio-dma105-8.html | Price: €26.45 | Stock: 10+ (updated Jun 2026; previously pre-order)
+- Note: Neodymium dual-magnet motor. 8-spoke open frame (circular). 84.8 dB sensitivity. Fs 72 Hz → 2.08× at 150 Hz (marginal; safer to cross at 200–250 Hz LP). 35W adequate. Now in stock — viable candidate.
 
 ### Visaton KT 100 V — Catalogue
 - Size: 4" | Imp: 4Ω | Sensitivity: 83 dB | Power: 25W RMS / 40W max | Fs: 42 Hz | VC: 25mm | Freq: 32–9,500 Hz
