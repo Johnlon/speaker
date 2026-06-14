@@ -31,17 +31,24 @@ Per-driver power requirements are in [drivers.md](drivers.md).
 
 ## Tweeter Minimum Crossover (2× Fs)
 
-| Tweeter | Min xover |
-|---------|-----------|
-| XT25TG30-04 | 880 Hz |
-| DX25TG59-04 | 1,180 Hz |
-| SB29SDAC / SB29RDNC | 1,200 Hz |
-| XT25SC90-04 | 1,650 Hz |
-| SB19ST | 1,960 Hz |
-| DT-28N | 2,400 Hz |
-| ND25FA-4 | 2,700 Hz |
-| HiVi TN25 | 3,000 Hz |
-| Markaudio TW 6 | 3,400 Hz |
+| Tweeter | Min xover | FP OD mm | Sens dB | Power W |
+|---------|-----------|----------|---------|---------|
+| XT25TG30-04 | 880 Hz | 104 | 91.9 | 15 |
+| XT25BG60-04 | 1,140 Hz | 104.5 | 92.6 | 15 |
+| DX25TG59-04 | 1,180 Hz | 104 | 93.4 | 15 |
+| SB29SDAC / SB29RDNC | 1,200 Hz | ~104 | ~91 | ~30 |
+| NE25VTS-04 | 1,460 Hz | 66.3 | 91.1 | 15 |
+| SB21SDC-C000-4 | 1,440 Hz | 92 | 91 | 40 |
+| DA25BG08-06 | 1,420 Hz | 104 | 91.6 | 15 |
+| XT25SC40-04 (ring rad) | 2,036 Hz | **43.9** | 94 | 100 |
+| XT25SC90-04 | 1,650 Hz | ~90 | 90.1 | 100 |
+| SB19ST | 1,960 Hz | 88 | 88.5 | 30 |
+| SB26STCN-C000-4 | 1,900 Hz | 72 | 92 | 120 |
+| DT-28N | 2,400 Hz | ~72 | ~92 | 50 |
+| HiVi TN28-B | 2,600 Hz | **47.6** | 90 | 15 |
+| ND25FA-4 | 2,700 Hz | 66 | 90 | 20 |
+| HiVi TN25 | 3,000 Hz | 54×54sq | 91 | 20 |
+| Markaudio TW 6 | 3,400 Hz | ~90 | — | — |
 
 ---
 
@@ -82,6 +89,23 @@ Per-driver power requirements are in [drivers.md](drivers.md).
 | C2 | PA130-8 | SB19ST | 2,000 | — | ~47 | 24V | Natural | Xmax 2mm; Fs 1.8×; OD 132mm |
 | C3 | TF0510 | SB19ST | 2,200 | — | ~45 | 24V | Natural | Weakest Fs (1.42×) + Xmax (1.1mm) |
 | C4 | DSA90-8 | Markaudio TW 6 | 3,200–3,400 | — | ~69 | 24V | Detailed | Xover above mid beaming limit; poor 60° |
+| NR1 | DSA90-8 | NE25VTS-04 | 1,460–3,260 | 79 | ~44 | 24V | Detailed | Same spacing as B10; much lower min xover (1,460 vs 2,700 Hz) |
+| NR2 | DS115-8 | NE25VTS-04 | 1,460–2,636 | 91 | ~51 | 24V | Warm | Wide xover window vs SB19ST equivalent |
+| NR3 | SB12PFCR25-4 | NE25VTS-04 | 1,460–2,730 | ~94 | ~43 | 24V | Warm, natural | NR2 at lower cost with nat. fibre mid |
+| RD1 | DS115-8 | SB21SDC-C000-4 | 1,440–2,636 | 104 | ~49 | 24V | Warm + ring dome | Cheaper ring dome alt to RR6; saves ~£20 |
+| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~40 | 24V | Warm + ring dome | Cheapest ring dome pairing; 92mm FP vs 104mm SB29 |
+| RD3 | SB12MNRX2-25-4 | SB21SDC-C000-4 | 1,440–2,730 | 107 | ~73 | 24V | Warm + ring dome | Engineering: smaller ring dome; saves £5 vs S3 |
+| XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 | **68** | ~47 | 24V | Detailed + wide | ABSOLUTE MINIMUM spacing (68 mm); ring rad dispersion |
+| XC2 | DS115-8 | XT25SC40-04 | 2,036–2,636 | 80 | ~55 | 24V | Warm + wide | Paper warmth + ultra-compact ring rad; ~600 Hz xover window |
+| XC3 | SB12PFCR25-4 | XT25SC40-04 | 2,036–2,730 | 83 | ~44 | 24V | Warm + wide | Best value ultra-compact ring rad; nat. fibre + 43.9mm ring rad |
+| TN1 | DSA90-8 | HiVi TN28-B | 2,600–3,260 | 70 | ~40 | 24V | Detailed | 2nd tightest round spacing (70mm); narrow xover window |
+| TN2 | DS115-8 | HiVi TN28-B | 2,600–2,636 | 82 | ~45 | 24V | Warm | Only 36 Hz xover window — risky; confirm Fs |
+| DA1 | DS115-8 | DA25BG08-06 | 1,420–2,636 | 110 | ~52 | 24V | Warm, flexible | Peerless dome; same FP as DX25; wide xover window |
+| DA2 | SB12PFCR25-4 | DA25BG08-06 | 1,420–2,730 | 113 | ~43 | 24V | Warm, flexible | Best value wide-window pairing; cheaper than A5 (DX25) |
+| R1 | RS125-4 | DX25TG59-04 | 1,180–2,184 | 115 | ~78 | 24V | Neutral-bright | Premium 5" Al; 4Ω; needs DX25 (beams above 2184 Hz) |
+| R2 | RS125-4 | XT25TG30-04 | 880–2,184 | 115 | ~85 | 24V | Neutral + wide | Premium 5" + ring rad; widest window possible for 5" |
+| R3 | SB13PFCR25-4 | DX25TG59-04 | 1,180–2,080 | 117 | ~42 | 24V | Warm, nat. fibre | Cheaper 5" option vs R1 at same crossover constraint |
+| COAX2 | SB12PFC25-4-COAX | (built-in) | ~2,800 | 0 | ~46 | 24V | Warm | Nat. fibre coaxial; cheaper than B9; same SPL ceiling ~94 dB |
 
 ---
 

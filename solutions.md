@@ -38,13 +38,15 @@ Narrowest possible front baffle. Driven by mid frame OD and centre spacing.
 
 | Rank | ID | Mid | Tweeter | Spacing | Price | PSU | Why |
 |------|----|-----|---------|---------|-------|-----|-----|
-| 1 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | **79mm** | ~£44 | 24V / ~3.9A | Smallest combined footprint; tightest round spacing |
-| 2 | A3 | DSA90-8 (92mm OD) | SB19ST (88mm OD) | **90mm** | ~£49 | 24V / ~3.9A | Tightest spacing with best-in-class tweeter |
-| 3 | B6 | DSA90-8 (92mm OD) | TN25 (54×54mm sq) | **73mm** | ~£52 | 24V / ~3.8A | Absolute tightest spacing of any pairing; square tweeter |
-| 4 | B11 | DSA90-8 (92mm OD) | DT-28N (~72mm OD) | **~82mm** | ~£65 | 24V / ~3.8A | Compact waveguide tweeter; tight spacing |
-| 5 | B2 | ND91-4 (3.5") | SB19ST | **97mm** | ~£48 | 29V / ~4A | 3.5" mid = smallest mid frame; compact footprint |
+| 1 | XC1 | DSA90-8 (92mm OD) | XT25SC40-04 (43.9mm OD) | **68mm** | ~£47 | 24V / ~3.9A | NEW MINIMUM: ring rad at 43.9mm FP — tighter than any previous pairing AND ring rad dispersion |
+| 2 | TN1 | DSA90-8 (92mm OD) | HiVi TN28-B (47.6mm OD) | **70mm** | ~£40 | 24V / ~3.8A | 2nd tightest; compact round dome; narrow xover window (2,600 Hz min) |
+| 3 | B6 | DSA90-8 (92mm OD) | TN25 (54×54mm sq) | **73mm** | ~£52 | 24V / ~3.8A | Tightest square tweeter; contrast look |
+| 4 | NR1 | DSA90-8 (92mm OD) | NE25VTS-04 (66.3mm OD) | **79mm** | ~£44 | 24V / ~3.9A | Same spacing as B10 but much wider xover window (1,460 Hz min vs 2,700 Hz) |
+| 5 | B10 | DSA90-8 (92mm OD) | ND25FA-4 (66mm OD) | **79mm** | ~£44 | 24V / ~3.9A | Same spacing as NR1 but higher min xover (2,700 Hz); choose based on xover tuning preference |
 
 Minimum baffle width: DSA90-8 at 92mm OD is the smallest mid frame in the catalogue — any DSA90-8 pairing can run on a ~120mm wide baffle (92mm + margin).
+
+**XT25SC40-04 note:** Ring radiator with a 43.9mm faceplate. Fs=1,018 Hz (min xover 2,036 Hz) — comfortable for our 2,800 Hz target. Sensitivity 94 dB — needs large DSP pad (vs 84.7 dB DSA90-8) but the 100W power handling means there's no power headroom concern. Available from SoundImports €29.95 / 10+ stock.
 
 ---
 
@@ -79,13 +81,16 @@ Sub is large and round. A non-round mid or tweeter breaks the pattern — more e
 
 ### Ring Radiator — Circular but Visually Different
 
-Ring radiators are circular but their annular (ring-shaped) diaphragm looks distinctly different from a solid dome. Subtle variety rather than stark contrast.
+Ring radiators are circular but their annular (ring-shaped) diaphragm looks distinctly different from a solid dome. Subtle variety rather than stark contrast. Now includes ultra-compact options.
 
-| ID | Mid | Tweeter | Xover | Price | PSU | Character | Notes |
-|----|-----|---------|-------|-------|-----|-----------|-------|
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | ~£52 | 24V / ~3.8A | Warm + wide | Best value; natural fibre mid + ring radiator |
-| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator |
-| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
+| ID | Mid | Tweeter | Xover | Spacing | Price | PSU | Character | Notes |
+|----|-----|---------|-------|---------|-------|-----|-----------|-------|
+| XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,260 Hz | 68mm | ~£47 | 24V / ~3.9A | Detailed + wide | Smallest FP ring rad (43.9mm); 100W; minimum spacing champion |
+| RR4 | DSA90-8 | XT25SC90-04 | 2,800 Hz | 91mm | ~£37 | 24V / ~3.8A | Detailed + wide | Cheapest ring rad; larger FP (90mm) vs XC1 but no DSP sensitivity mismatch |
+| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 Hz | 116mm | ~£52 | 24V / ~3.8A | Warm + wide | Best value wide-window ring radiator; natural fibre mid |
+| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 Hz | 113mm | ~£62 | 24V / ~3.8A | Warm + wide | Reference warmth + ring radiator; widest window |
+| S3 | SB12MNRX2-25-4 | SB29SDAC | 1,200–2,700 Hz | ~107mm | ~£92 | 24V / ~4A | Warm-neutral | SB29 ring dome — distinctly ringed face; engineering showcase |
+| RD2 | SB12PFCR25-4 | SB21SDC-C000-4 | 1,440–2,730 Hz | 107mm | ~£40 | 24V / ~3.8A | Warm + ring dome | Cheapest ring dome pairing; SB21 is smaller (92mm FP) and cheaper (€5 less) than SB29 |
 
 ---
 
@@ -95,11 +100,11 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 
 | Rank | Pairing | Price | PSU | Character | Why |
 |------|---------|-------|-----|-----------|-----|
-| 1 | SB12PFCR25-4 + SB19ST | ~£41 | 24V / ~3.8A | Warm, natural | Best value; natural fibre warmth; 10+ stock |
-| 2 | HiVi B4N + SB19ST | ~£38 | 24V / ~3.9A | Warm | Sensitivity-matched; simplest DSP; always in stock |
-| 3 | SPM-116/8 + SB19ST | ~£37 | 24V / ~3.7A | Warm | Cheapest paper-cone pairing |
-| 4 | DSA90-8 + XT25SC90-04 | ~£37 | 24V / ~3.8A | Detailed, wide | Cheapest ring radiator; single UK order |
-| 5 | DSA90-8 + SB19ST | ~£49 | 24V / ~3.9A | Detailed | Tightest round spacing; narrowest baffle |
+| 1 | DSA90-8 + XT25SC90-04 (RR4) | ~£37 | 24V / ~3.8A | Detailed, wide | Cheapest ring radiator; single Falcon order |
+| 2 | HiVi B4N + SB19ST (A1) | ~£38 | 24V / ~3.9A | Warm | Sensitivity-matched; simplest DSP; always in stock |
+| 3 | DSA90-8 + HiVi TN28-B (TN1) | ~£40 | 24V / ~3.8A | Detailed | 70mm spacing; round compact tweeter |
+| 4 | SB12PFCR25-4 + SB19ST (S2) | ~£41 | 24V / ~3.8A | Warm, natural | Natural fibre warmth + 19mm dome; best all-round value |
+| 5 | SB12PFCR25-4 + NE25VTS-04 (NR3) | ~£43 | 24V / ~3.8A | Warm, natural | Lower min xover than SB19ST; more tuning flexibility |
 
 **Absolute minimum spend:** TCP115-8 + SB19ST at ~£31 for drivers — but 29V PSU required (+£25); total ~£56.
 
@@ -116,3 +121,7 @@ Ring radiators are circular but their annular (ring-shaped) diaphragm looks dist
 | 5 | SB12MNRX2-25-4 + SB19ST (A2) | ~£72 | 24V / ~3.9A | Warm, dynamic | Natural fibre; controlled midrange transients |
 
 **Ring radiator vs dome:** XT25TG30-04 costs ~£16 more than SB19ST. For a speaker where the listener is frequently at 60°, the ring radiator's wide dispersion is a directly audible benefit. RR2 at ~£52 is the strongest single upgrade argument in the catalogue.
+
+**New compact ring radiator (XT25SC40-04, €29.95):** Fs=1,018 Hz, 43.9mm FP, 100W, 94dB. Pairs with DSA90-8 at 68mm spacing — new minimum record, plus ring rad dispersion. High sensitivity mismatch (+9.3dB DSP pad) but well within ADAU1701 range. XC1 at ~£47 beats B6 (73mm) on spacing AND adds ring rad off-axis advantage.
+
+**New ring dome option (SB21SDC-C000-4, €39.95):** Fs=720Hz, 92mm FP, 40W, 91dB. Ring dome construction (like SB29SDAC) but smaller and cheaper (€5 less). RD2 (SB12PFCR25-4 + SB21SDC-C000-4) at ~£40 is the cheapest ring dome pairing in the catalogue. Low stock: 1 unit now + 7 expected Jul 2026.

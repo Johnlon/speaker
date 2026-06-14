@@ -21,6 +21,14 @@ Each file has a single responsibility. Do not write content into the wrong file.
 | `suppliers.md` | Supplier list with notes on UK shipping, range, and findings. | Driver evaluations |
 | `CLAUDE.md` | Narrow operational instructions for the AI assistant only. | Requirements, evaluation criteria, project context |
 
+### No data duplication
+
+Each fact is recorded in exactly one place. Do not summarise or re-list data that already exists in another file — reference it instead.
+
+- **combos.md** is a single table (one row per pairing). There is no separate "detailed entries" section that repeats the same pairings in prose form.
+- **drivers.md** is the source of truth for per-driver specs. combos.md never repeats sensitivity, Fs, Xmax, or any other per-driver figure — it records only what changes per combination.
+- **solutions.md** references pairings by ID (e.g., RR2, S1) — it does not duplicate the spec data from combos.md or drivers.md.
+
 ### File placement test — ask before writing
 
 Before writing any analysis, run through this test:

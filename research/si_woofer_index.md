@@ -32,7 +32,7 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Beyma 4FR40 | 4" | 8Ω | €30.95 | 10 | ~85–100 | ~91 | ~2 | — | ~116 | Round | ✓ (A6) — full-range; Fs unconfirmed |
 | SB13PFCR25-8 | 5" | 8Ω | €31.45 | 7 | ~44 | ~87 | 4.5 | 30 | ~130 | Round | ~ 8Ω variant of 5" PFCR |
 | SB12PAC25-4 | 4" | 4Ω | €31.45 | 4 | — | — | — | — | ~122 | Round | ? URL not found on SI (tried 2 patterns); Al cone |
-| Markaudio CHN-70 | 4" | 8Ω | €32.45 | 4 | — | — | — | — | — | — | ? need fetch (not yet attempted) |
+| Markaudio CHN-70 | 4" | 8Ω | €32.45 | 2 | 71.6 | 86.7 | 4 | 16 | 125.1 | Round | ✗ 16W rated; needs 27W at burst — underpowered |
 | SB12PACR25-4 | 4" | 4Ω | €32.45 | exp Nov 2026 | 52.5 | 87 | 5.0 | 30 | 122 | Round | ✓ — OOS Nov 2026 |
 | Visaton SC 13 | 5" | 8Ω | €32.95 | 8 | 78 | 90 | 0.75 | 40 | 162 | Round | ✗ Xmax 0.75mm fatal; OD 162mm |
 | Dayton PA130-8 | 5" | 8Ω | €33.45 | 10+ | 83.4 | 88.2 | 2.0 | 50 | 132 | Round | ✓ (C2) — Xmax 2mm; Fs 1.8× |
@@ -49,7 +49,7 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 | Tectonic TEBM65C20F-8 | 3.5" BMR | 8Ω | €49.95 | 10+ | 86 | 81 | 3.5 | 30 | 108 | Round | ~ 81dB low sens (−4dB vs sub); BMR = very wide dispersion |
 | Peerless HDS-P830870 | 4" | 8Ω | €49.95 | 10+ | 100 | 84.7 | 7.5 | 25 | 120×107 | Oval | ~ Fs 100Hz (1.5× at 150Hz); Xmax 7.5mm notable |
 | PRV Audio 4MR60-NDY-4 | 4" | 4Ω | €49.95 | 10+ | 95.6 | 91 | 1.4 | 60 | 127.5 | Round | ✗ Xmax 1.4mm + Fs 95.6Hz both fail |
-| Tang Band W4-655F | 4" | 8Ω | €49.95 | 10+ | — | — | — | — | — | — | ? need fetch (not yet attempted); FR |
+| Tang Band W4-655F | 4" | 8Ω | €49.95 | 10+ | 70 | 89 | 3 | 25 | 125 | Round | ~ full-range; Fs 2.14×; Xmax 3mm; beaming ~2636Hz OK |
 | Dayton RS100-8 | 4" | 8Ω | €48.95 | 1 | 92 | 84.6 | 3.5 | 30 | 98 | Round | ✓ (C1) — Fs 1.63×; 1 left |
 | Markaudio PLUVIA-7HD (Gold) | 4" | 8Ω | €52.45 | 10+ | — | — | — | — | — | — | ? need fetch (not yet attempted) |
 | Dayton RS100P-8 | 4" | 8Ω | €54.95 | 4+4-19Jun | 95.6 | 86.2 | 3.7 | 30 | 98 | Round | ✗ Fs 1.57× at 150Hz — too tight; paper/Kevlar |
