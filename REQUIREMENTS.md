@@ -225,7 +225,7 @@ Where f_beam = 34400 / (π × √(Sd/π)).
 | moderate | window 0.5–1 oct, floor = 3×Fs | Acceptable; limited DSP adjustment room |
 | tight | window < 0.5 oct, floor = 3×Fs | Narrow; crossover placement is critical |
 | marginal | 3×Fs > ceiling; 2×Fs ≤ ceiling | Tweeter operates above 2×Fs but below 3×Fs — moderate THD; flag in Notes |
-| INCOMPATIBLE | 2×Fs > ceiling | No safe crossing exists — exclude combo |
+| INCOMPATIBLE | 2×Fs > ceiling | No safe crossing exists — flag ⚠ INCOMPATIBLE in Notes, retain row |
 
 The ideal crossover value and window quality are computed by `scripts/ideal_crossover.py` and stored in the Best_cross column and Notes of every combo row.
 
@@ -240,6 +240,7 @@ Do not exclude any driver based on cone colour, frame shape, dome material colou
 Automatic exclusions only for:
 - Drivers designed exclusively for rear mounting with no provision for front mounting
 - Drivers with ratings that make them technically unusable (e.g., power handling far below what the amp delivers at matched SPL)
+- PA/pro audio drivers (pressed-steel chassis, PA-series naming) are not suitable for hi-fi reproduction — flag ⚠ PA-grade in Notes and retain row, but do not recommend
 
 ### Evaluation criteria (in order)
 

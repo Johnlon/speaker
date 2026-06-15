@@ -37,13 +37,15 @@ MID_BEAM: dict[str, int] = {
     "RS125P-4":         2184, "RS125P":        2184,
     "HiVi M5N":         2185,
     "SB13PFCR25-4":     2080, "SB13PFCR":      2080,
+    "SB13PFC25-8":      2080,  # Sd=87cm² (SI datasheet, same beam as SB13PFCR25-4)
     "SDS-P830656":      2080,
     "SIG150-4":         1990,
-    "PA130-8":          2000,  # 5" driver ~85cm² Sd; original combos used 2000 — verify Sd from datasheet
-    "SLS-85S25CP04-04": 3000, "SLS-85":        3000,  # 3.3" driver; original combos used 3000 — verify Sd from datasheet
-    "ND91-4":           3000,  # 4" Faital-type; original combos used 3000 — verify Sd from datasheet
+    "PA130-8":          2260,  # Dayton Audio PA series; Sd=73.9cm² (loudspeakerdatabase.com) → f_beam=2260Hz; ⚠ PA-grade driver
+    "TF0510":           2190,  # Celestion Truvox; Sd=78.5cm² (loudspeakerdatabase.com) → f_beam=2190Hz; ⚠ PA-grade driver
+    "SLS-85S25CP04-04": 3420, "SLS-85":        3420,  # Peerless; Sd=32.2cm² (SI datasheet) → f_beam=3420Hz
+    "ND91-4":           3520,  # Dayton Audio; Sd=30.4cm² (SI datasheet) → f_beam=3520Hz
     "PLUVIA-7HD Gold":  2185, "PLUVIA-7HD":    2185,
-    "RS100-8":          2900,  # 4" driver; was wrongly set to 2184 (RS125 value); original combos used 2900 — verify Sd from datasheet
+    "RS100-8":          3270,  # Dayton Audio; Sd=35.3cm² (SI datasheet) → f_beam=3270Hz
 }
 
 # ── Tweeter Fs (Hz) ───────────────────────────────────────────────────────────
@@ -91,18 +93,29 @@ TWEET_FS: dict[str, int] = {
     "D3004/602010":     425,
 }
 
-# Note suffixes to strip before appending fresh quality annotation.
-# Catches both old generic placeholders and previously-computed quality annotations.
-QUALITY_SUFFIX = re.compile(
+# Strips ALL accumulated quality annotations from notes (run repeatedly until stable).
+# Must match the full annotation including the "; tweeter at N×Fs..." tail to avoid orphaned fragments.
+QUALITY_ANYWHERE = re.compile(
     r";?\s*(?:"
     r"Wide xover window"
     r"|Tight window \(distortion risk\)"
     r"|⚠ INCOMPATIBLE[^|]*"
-    r"|(?:comfortable|moderate|tight)\s*\[\d+\.\d+ oct\][^;|]*"
-    r"|⚠ marginal\s*\[\d+\.\d+ oct\][^;|]*"
-    r")\s*$",
+    r"|(?:comfortable|moderate|tight)\s*\[\d+\.\d+ oct\](?:;\s*tweeter at [0-9.]+[×x]Fs[^;|]*)?"
+    r"|⚠ marginal\s*\[\d+\.\d+ oct\](?:;\s*tweeter at [0-9.]+[×x]Fs[^;|]*)?"
+    r"|tweeter at [0-9.]+[×x]Fs[^;|]*"
+    r")",
     re.IGNORECASE,
 )
+
+
+def strip_quality(notes: str) -> str:
+    """Remove all accumulated quality annotations from a notes field."""
+    s = notes.rstrip()
+    while True:
+        stripped = QUALITY_ANYWHERE.sub("", s).rstrip()
+        if stripped == s:
+            return s
+        s = stripped
 
 
 def compute(fs: int, beam: int) -> dict:
@@ -198,11 +211,10 @@ def process_line(line: str) -> tuple[str, bool]:
     # Update Notes (last meaningful field = parts[-2])
     notes_idx = len(parts) - 2
     old_notes = parts[notes_idx]
-    # Strip any existing quality annotation (old generic or previously-computed)
-    new_notes = QUALITY_SUFFIX.sub("", old_notes.rstrip())
-    # Always append fresh quality annotation
+    # Strip ALL accumulated quality annotations then append one fresh one
+    new_notes = strip_quality(old_notes)
     sep = "; " if new_notes.strip() else ""
-    new_notes = new_notes.rstrip() + sep + result["note"] + " "
+    new_notes = new_notes + sep + result["note"] + " "
     if old_notes.rstrip() != new_notes.rstrip():
         parts[notes_idx] = new_notes
         changed = True
