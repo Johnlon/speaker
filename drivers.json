@@ -58,7 +58,8 @@
       "brand": "SB Acoustics SB15SFCR-00 5×8\" Racetrack",
       "model": "SB Acoustics SB15SFCR-00 5×8\" Racetrack",
       "role": "pr",
-      "status": "candidate"
+      "status": "candidate",
+      "sd_cm2": 178
     },
     {
       "id": "beyma-4fr40",
@@ -109,7 +110,8 @@
         {
           "local": "research/celestion_tf0510.pdf"
         }
-      ]
+      ],
+      "sd_cm2": 78.5
     },
     {
       "id": "dayton-audio-ce78pf-4",
@@ -228,7 +230,8 @@
         {
           "local": "research/dayton_audio_dsa90-8.pdf"
         }
-      ]
+      ],
+      "xmax_mm": 2.5
     },
     {
       "id": "dayton-audio-nd90-4",
@@ -372,7 +375,8 @@
           "currency": "EUR",
           "price": 48.95
         }
-      ]
+      ],
+      "xmax_mm": 3.5
     },
     {
       "id": "dayton-audio-rs125-4",
@@ -545,7 +549,8 @@
         {
           "local": "research/dayton_audio_tcp115-8.pdf"
         }
-      ]
+      ],
+      "xmax_mm": 4.0
     },
     {
       "id": "faitalpro-3fe25-16f",
@@ -690,7 +695,8 @@
         {
           "local": "research/hivi_b4n_datasheet_2.pdf"
         }
-      ]
+      ],
+      "bl_tm": 6.22
     },
     {
       "id": "hivi-swan-dm-7500",
@@ -1667,7 +1673,9 @@
       "qes": 3.1,
       "qms": 2.0,
       "re_ohm": 3.54,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "freq_low_hz": 2500,
+      "freq_high_hz": 20000
     },
     {
       "id": "dayton-audio-cf18n-4",
@@ -1687,7 +1695,9 @@
           "currency": "EUR",
           "price": 30.54
         }
-      ]
+      ],
+      "freq_low_hz": 2500,
+      "freq_high_hz": 20000
     },
     {
       "id": "dayton-audio-dc25t-8",
@@ -1697,7 +1707,8 @@
       "status": "catalogue",
       "impedance_ohm": 8.0,
       "sensitivity_db": 93.0,
-      "power_rms_w": 50.0
+      "power_rms_w": 50.0,
+      "fs_hz": 1468
     },
     {
       "id": "dayton-audio-nd20fa-6",
@@ -1709,7 +1720,9 @@
       "impedance_ohm": 6.0,
       "sensitivity_db": 91.5,
       "power_rms_w": 15.0,
-      "fs_hz": 2005.0
+      "fs_hz": 2005.0,
+      "freq_low_hz": 2000,
+      "freq_high_hz": 20000
     },
     {
       "id": "dayton-audio-nd25fa-4",
@@ -1739,7 +1752,8 @@
       "status": "rejected",
       "impedance_ohm": 4.0,
       "sensitivity_db": 90.0,
-      "power_rms_w": 20.0
+      "power_rms_w": 20.0,
+      "fs_hz": 1350
     },
     {
       "id": "dayton-audio-nd25fw-4",
@@ -1753,8 +1767,8 @@
       "depth_mm": 40.0,
       "sensitivity_db": 94.0,
       "power_rms_w": 20.0,
-      "freq_low_hz": 4,
-      "freq_high_hz": 5,
+      "freq_low_hz": 2500,
+      "freq_high_hz": 20000,
       "fs_hz": 1350.0,
       "re_ohm": 3.2,
       "le_mh": 0.04,
@@ -1822,7 +1836,9 @@
         {
           "local": "research/dayton_audio_rst28f-4.pdf"
         }
-      ]
+      ],
+      "freq_low_hz": 1400,
+      "freq_high_hz": 20000
     },
     {
       "id": "dayton-audio-td20f-4",
@@ -1892,7 +1908,9 @@
         {
           "local": "research/hivi_tn25.pdf"
         }
-      ]
+      ],
+      "freq_low_hz": 2500,
+      "freq_high_hz": 22000
     },
     {
       "id": "markaudio-tw-6",
@@ -1944,7 +1962,9 @@
       "sensitivity_db": 95.0,
       "power_rms_w": 40.0,
       "power_max_w": 80.0,
-      "fs_hz": 1600.0
+      "fs_hz": 1600.0,
+      "freq_low_hz": 1600,
+      "freq_high_hz": 20000
     },
     {
       "id": "monacor-dt-28n",
@@ -1975,7 +1995,10 @@
       "depth_mm": 19.0,
       "sensitivity_db": 89.0,
       "power_rms_w": 80.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "fs_hz": 1000,
+      "freq_low_hz": 1800,
+      "freq_high_hz": 25000
     },
     {
       "id": "morel-mdt22t",
@@ -2551,7 +2574,7 @@
       "cutout_mm": 70.0,
       "sensitivity_db": 93.0,
       "power_rms_w": 100.0,
-      "fs_hz": 900.0
+      "fs_hz": 600
     },
     {
       "id": "sb-acoustics-sb29rdc-c000-4-sb-acoustics-sb29rdc-c000-4",
@@ -2668,7 +2691,8 @@
       "sensitivity_db": 91.0,
       "power_rms_w": 80.0,
       "power_max_w": 200.0,
-      "re_ohm": 2.7
+      "re_ohm": 2.7,
+      "fs_hz": 1170
     },
     {
       "id": "seas-prestige-27tffnc-cg-h1406-04-seas-prestige-27tffnc-cg-h1406-04",
@@ -2691,7 +2715,8 @@
           "currency": "EUR",
           "price": 40.45
         }
-      ]
+      ],
+      "fs_hz": 1170
     },
     {
       "id": "scan-speak-discovery-d2604-830000",
@@ -2888,7 +2913,8 @@
       "brand": "Dayton Audio",
       "model": "ND25FN-4",
       "role": "excl",
-      "status": "rejected"
+      "status": "rejected",
+      "fs_hz": 1350
     },
     {
       "id": "lavoce-md03-10",
