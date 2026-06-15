@@ -201,9 +201,33 @@ The Mean Well LRS-150-24 supplies 6.5A / 156W at 24V. At standard 24V combos wit
 
 - All three drivers must sum flat and in-phase at the crossover points — no audible suck-outs or brightness peaks at the transitions
 - **Sub/mid crossover:** approximately 150 Hz (LR24) — exact point derived from the sub's and mid's Fs margins, not owner-specified
-- **Mid/tweeter crossover:** no fixed target — it is defined entirely by the chosen drivers: the mid's beaming frequency sets the upper limit; the tweeter's Fs (×2) sets the lower limit. The per-pairing crossover window is recorded in combos.md; the DSP is set within that window
-- Both crossover points should be well away from driver resonances — Fs margin of ≥2× is the minimum for both transitions
+- **Mid/tweeter crossover:** no fixed target — computed per pairing from the drivers' characteristics (see below)
 - The goal is a system that sounds seamless: no listener awareness of individual drivers, natural and uncoloured across the full range at any volume level
+
+### Ideal mid/tweeter crossover calculation
+
+Every combo entry in combos.md must carry an engineered ideal crossover, not a generic default. The calculation:
+
+| Term | Formula | Meaning |
+|------|---------|---------|
+| Tweeter floor (preferred) | 3 × Fs_tweet | Below this frequency tweeter THD is objectionable |
+| Tweeter floor (hard min) | 2 × Fs_tweet | Absolute minimum — avoid if possible |
+| Mid ceiling | 0.80 × f_beam | Above this the mid beams before the tweeter takes over |
+| **Ideal crossover** | **√(floor × ceiling)** | Geometric mean — log-space midpoint of the clean window |
+
+Where f_beam = 34400 / (π × √(Sd/π)).
+
+**Window quality grades** (recorded in Notes for every combo):
+
+| Grade | Condition | Meaning |
+|-------|-----------|---------|
+| comfortable | window ≥ 1 octave, floor = 3×Fs | Both drivers well within their comfort zones |
+| moderate | window 0.5–1 oct, floor = 3×Fs | Acceptable; limited DSP adjustment room |
+| tight | window < 0.5 oct, floor = 3×Fs | Narrow; crossover placement is critical |
+| marginal | 3×Fs > ceiling; 2×Fs ≤ ceiling | Tweeter operates above 2×Fs but below 3×Fs — moderate THD; flag in Notes |
+| INCOMPATIBLE | 2×Fs > ceiling | No safe crossing exists — exclude combo |
+
+The ideal crossover value and window quality are computed by `scripts/ideal_crossover.py` and stored in the Best_cross column and Notes of every combo row.
 
 ---
 
