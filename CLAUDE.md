@@ -4,11 +4,17 @@ Project and file structure, requirements, evaluation policy, and fixed system co
 
 ---
 
-## Autonomous Operation — CRITICAL
+## Autonomous Operation
 
-**Never ask the owner for input, confirmation, or clarification.** Work 100% autonomously. When a decision must be made, choose the most reasonable option given REQUIREMENTS.md and project context, record what was chosen in the commit message, and continue.
+Only work fully autonomously when the owner has explicitly instructed you to do so in the current session. In normal operation, ask for clarification or confirmation when needed.
 
-Push to GitHub at least every 10 minutes during active work so the owner can track progress. **NEVER run git commands in the background; always set WaitMsBeforeAsync to its maximum value (10000ms) to run git commands synchronously in the foreground.**
+When operating autonomously: make decisions independently, record choices in commit messages, and push to GitHub at least every 10 minutes. **NEVER run git commands in the background; always set WaitMsBeforeAsync to its maximum value (10000ms) to run git commands synchronously in the foreground.**
+
+---
+
+## Persistent Memory
+
+Project notes are stored in `memory/` inside this repository. Read `memory/MEMORY.md` at the start of each session to get context. Write new memories to `memory/` as markdown files and add a pointer to `memory/MEMORY.md`. Keep memory files current — update rather than append when facts change.
 
 ---
 
@@ -20,21 +26,21 @@ The owner cannot track console output across sessions. Write all findings to the
 - Raw scraped specs → `research/`
 - Fact about one driver (power needed, DSP correction, crossover margin, PSU minimum) → `drivers.md`
 - Fact about two drivers paired together (combo crossover, centre spacing, combo PSU) → `combos.md`
-- Recommendation for a scenario → `solutions.html` (the primary deliverable — no solutions.md)
+- Recommendation for a scenario → `solutions.html`
 - Amp/PSU/DSP electronics → `amp.md`
 - Supplier info → `suppliers.md`
 - Calculations and formatting automation scripts → `scripts/`
 
 **Never put per-driver data in combos.md.** If a fact is true regardless of which driver the mid or tweeter is paired with, it belongs in drivers.md.
 
-When performing a supplier stock check, record findings in the relevant driver entry in drivers.md (stock and date) and update combos.md/solutions.md if a previously available driver is now out of stock.
+When performing a supplier stock check, record findings in the relevant driver entry in drivers.md (stock and date) and update combos.md/solutions.html if a previously available driver is now out of stock.
 
 ---
 
 ## Source URL Requirements
 
 Every specification quoted in project files must have a traceable source:
-1. **Manufacturer datasheet PDF** — download to `research/` and link the local path AND original URL
+1. **Manufacturer datasheet PDF** — download to `research/` and link the local path AND original URL. SoundImports product pages attach datasheets at `doc.soundimports.nl/pdf/...` — always fetch these as they contain full T/S parameters the product page omits.
 2. **Manufacturer product page**
 3. **SoundImports product page**
 4. **Parts Express, loudspeakerdatabase.com, or other reputable dealer**
@@ -46,6 +52,8 @@ Never record a spec without checking it's actually real and not a hallucination.
 ---
 
 ## Working with the Owner
+
+- **The owner has a strong technical grasp** — comfortable with T/S parameters, crossover math, power calculations, and PSU design. Go straight to the numbers; no need to explain fundamentals.
 
 - **The owner enjoys the engineering process.** When there's a choice between a pragmatic fix and an equally realistic but more interesting solution, surface BOTH. A custom capacitor bank is more satisfying than "just buy a bigger PSU". Always present the creative angle alongside the practical one.
 
