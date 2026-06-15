@@ -1,4 +1,4 @@
-# Lautsprechershop.de (LSS) Driver Index — Raw Spec Reference
+# Lautsprechershop.de (LSS) Tweeter Index — Raw Spec Reference
 Scanned June 2026 from lautsprechershop.de. **Prices are inc. 19% German VAT** (Bruttopreis); ex-VAT also shown.
 Source page: https://www.lautsprechershop.de/chassis/zy2_main_en.htm
 
@@ -6,11 +6,11 @@ Stock codes: ✓ price shown = in stock | ❓ = on request (order possible, ship
 
 **Status codes:** ★ new candidate not in other indexes | ≡ also at SI/HFC | ~ weak/concern | ✗ rejected
 
+Filter applied: dome tweeter, FP OD ≤ 104mm, min xover ≤ 3 kHz (2×Fs), 6–8Ω preferred. Min xover = 2×Fs.
+
 ---
 
 ## Tweeter Candidates
-
-Filter applied: dome tweeter, FP OD ≤ 104mm, min xover ≤ 3 kHz (2×Fs), 6–8Ω preferred. Min xover = 2×Fs.
 
 | Model | Brand | Type | Imp | Price € (inc VAT) | Price € (exc VAT) | Stock | Fs Hz | Sens dB | Pwr W | FP OD mm | Dome mm | Min Xover Hz | Notes |
 | ----- | ----- | ---- | --- | ------------------ | ------------------ | ----- | ----- | ------- | ----- | -------- | ------- | ------------ | ----- |
@@ -60,58 +60,3 @@ Filter applied: dome tweeter, FP OD ≤ 104mm, min xover ≤ 3 kHz (2×Fs), 6–
 | SC10N | Visaton | Dome (soft) | 8Ω | 23.97 | 20.14 | ✓ | 1,700 | 90 | 100/150 | 104 | 25 | 3,400 | ✗ Fs too high; min xover 3400Hz; exceeds 3kHz limit |
 | BC25TG15-04 | Peerless | Dome (soft)+MF | 4Ω | 23.50 | 19.75 | ✓ | 1,128 | 93.2 | 50 | 104 | 25 | 2,256 | ★ very budget; 93dB; FP=104mm; min xover 2256Hz; Tymphany brand |
 | DX20BF00-04 | Peerless | Dome (soft)+MF | 4Ω | 27.50 | 23.11 | ✓ | 822 | 90.1 | 60 | 66 | 19 | 1,644 | ★ budget 19mm; FP=66mm; Fs=822Hz; compact |
-
----
-
-## Midrange Candidates
-
-Filter applied: cone/dome, 3–5 inch, FP ≤ ~115mm (for desktop spacing), Fs < 200Hz preferred.
-
-| Model | Brand | Type | Imp | Price € (inc VAT) | Price € (exc VAT) | Stock | Fs Hz | Sens dB | Pwr W | FP OD mm | Cone/Dome | Min Xover Hz | Notes |
-| ----- | ----- | ---- | --- | ------------------ | ------------------ | ----- | ----- | ------- | ----- | -------- | --------- | ------------ | ----- |
-| MU10RB-SL H1658-04 | SEAS Prestige | Cone (paper) | 4Ω | 99.00 | 83.19 | ✓ | 100 | 84.7 | 40/100 | 98 | 86mm (3.4") | 200 | ★★ dedicated midrange; Fs=100Hz; FP=98mm; Sd=38.5cm²; xlin=2mm; low sens but deep Fs |
-| FU10RB-04 H1600-04 | SEAS Prestige | Cone (paper) FR | 4Ω | 89.00 | 74.79 | ✓ | 102 | 85 | 40/100 | 98 | 86mm (3.4") | 204 | ★★ fullrange used as mid; Fs=102Hz; FP=98mm; Sd=38.5cm²; sibling of H1658 |
-| FU10RB-08 H1600-08 | SEAS Prestige | Cone (paper) FR | 8Ω | 89.00 | 74.79 | ✓ | 102 | 82.1 | 40/100 | 98 | 86mm (3.4") | 204 | ★ 8Ω version; sens drops to 82.1dB — may need level matching |
-| MCA12RC H1304 | SEAS Prestige | Cone (paper) | 8Ω | 95.50 | 80.25 | ✓ | 68 | 86 | — | 120.4 | ~100mm (4.3") | 136 | ~ FP=120.4mm likely too large for desktop; Fs=68Hz excellent but needs space |
-| W3-315 | Tang Band | Cone (Al) FR | 8Ω | 39.90 | 33.53 | ✓ | 105 | 87 | 15/30 | 93 | 75mm (3") | 210 | ★ budget mid option; Al cone 8cm FR; FP=93mm; Fs=105Hz; low power 15W cont; good sens |
-| MR120BD01 | Wavecor | Cone (Kevlar/Carbon) | 4Ω | 159.00 | 133.61 | ✓ | 70 | 89 | 50 | 120 | ~100mm (4") | 140 | ~ FP=120mm; borderline for desktop; Fs=70Hz; very low min xover; HiFi grade construction |
-| MR120BD02 | Wavecor | Cone (Kevlar/Carbon) | 8Ω | 159.00 | 133.61 | ✓ | 72 | 86 | 50 | 120 | ~100mm (4") | 144 | ~ FP=120mm; 8Ω version; as MR120BD01 |
-
----
-
-## Brands with Nothing Useful (for this project)
-
-| Brand | Reason |
-| ----- | ------ |
-| OmnesAudio | All tweeters/full-ranges not available (disc); no mids |
-| Visaton | All tweeters have Fs ≥ 1500Hz; G25FFL barely makes 3kHz limit |
-| Peerless (most) | Budget options only; most have Fs > 900Hz; no mid range |
-| Tang Band (tweeters) | All tweeters not available except TW28-1582 (FP=110mm, over limit) |
-| Morel (mids) | All mids FP > 115mm or Fs too high (MDM55 Fs=380Hz) |
-| SB Acoustics (mids) | All 4" mids have FP=123mm; too large for desktop |
-| Wavecor (mids) | 11cm mids FP=120mm; borderline |
-
----
-
-## Summary
-
-**Drivers indexed:** 43 tweeters, 7 mid candidates, across Seas, Scan-Speak, Morel, SB Acoustics, Wavecor, Visaton, Peerless, Tang Band (and OmnesAudio — all unavail.).
-
-**Standout tweeters not previously indexed:**
-1. **Scan-Speak D/R3004/602010** — 26mm Illuminator with rear chamber, Fs=420–425Hz, min xover **840–850Hz**. Compact FP=61.9mm. Nowhere else in the project index. At €142–179 it undercuts anything comparable.
-2. **Wavecor TW022WA05/WA06** — 22mm dome, Fs=750Hz, FP=103.8mm. Hobby HiFi confirms 1.5kHz coupling without dynamics loss. WA05 at €78 is competitive. **8Ω not available here; all Wavecor 22mm are 4Ω.**
-3. **Morel CAT 308** — 200W, Fs=650Hz, FP=104mm, 8Ω, €97. The CAT 308 is a step up from the CAT 298 with lower Fs and much higher power rating; not in the existing HFC/SI index.
-4. **Scan-Speak D3004/660000** — Illuminator with large motor, Fs=470Hz, FP=104mm, Sens=91.5dB. Min xover ~940Hz at that Fs — extraordinary for a 26mm dome. €209.70.
-5. **SB29SDAC-C000-4** — 29mm SBA fabric dome, Fs=600Hz, 93dB, FP=103.8mm at only **€48.14 inc VAT**. Best budget-to-Fs ratio in the index.
-
-**Standout mids:**
-1. **SEAS MU10RB-SL H1658-04** — Dedicated 9cm mid, Fs=100Hz, FP=98mm. This is the purpose-built mid version of the FU10RB. Not in existing project indexes. Sens 84.7dB is low — needs level-matching check against woofer.
-2. **Tang Band W3-315** — Al cone 8cm full-range at €39.90; Fs=105Hz, FP=93mm, 87dB. Useful if a small, cheap mid is acceptable; 15W cont is the concern.
-
-**Pricing vs SI/HFC:**
-- SEAS standard models: LSS typically **5–12% pricier in EUR than HFC in GBP** at current ~1.18 EUR/GBP rate. Check shipping costs before ordering Seas from LSS unless bundling with exclusive LSS models.
-- Scan-Speak D3004/602010 and Wavecor range: **LSS appears to be the primary/only EU source** — these justify a separate LSS order.
-- Morel CAT 308: not seen at HFC/SI; LSS €97 is a new source.
-- SB Acoustics: SI is likely cheaper for standard SBA models; check before ordering.
-
-**VAT note:** All prices above are **inc 19% German VAT**. UK/EU buyers ordering from Germany pay German VAT at checkout (no reclaim unless business). Ex-VAT column provided for cross-border comparison.
