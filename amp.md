@@ -75,7 +75,7 @@ Swap to a Mean Well LRS-150-27, LRS-150-29, or LRS-150-30. These are the same fo
 
 **Sweet spot: 29V** — gives burst headroom for 8Ω mids without requiring extreme DSP limiting. Cost: £15–20.
 
-**Side effect:** At 29V, total continuous power budget is ~165W × (29/24)² = ~240W DC. The LRS-150-24 cannot supply this. Move to LRS-200-29 or LRS-200-30 (~£25) for the higher voltage option.
+**Side effect:** At 29V, total continuous power budget is ~165W × (29/24)² = ~240W DC. The LRS-150-24 cannot supply this. Move to LRS-200-29 or LRS-200-30 for the higher voltage option.
 
 #### Option 2 — Bulk capacitor bank (interesting sub-project ★)
 
@@ -98,7 +98,7 @@ A bank of 4× 10,000 µF / 35V keeps the rail above 23.2V for a 10 ms burst. Wit
 
 **Why it's interesting:** Copper bus bars, quality capacitors, measured before/after with a scope on the power rail. The kind of sub-project that makes a build feel engineered rather than assembled.
 
-**Cost:** ~£30–40 in components. Recommended regardless of PSU voltage choice.
+**Cost:** £30–40 in components. Recommended regardless of PSU voltage choice.
 
 #### Option 3 — Higher voltage + cap bank (best of both)
 

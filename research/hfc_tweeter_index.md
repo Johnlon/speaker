@@ -90,7 +90,7 @@ Specs for all candidates are in `drivers.md`.
 - **HiFi Collective (UK):** [£33.66](https://www.hificollective.co.uk/speakers/seas-h1406-27tffnc-cg-tweeter.html)
 
 ### Scan-Speak R2604/833000
-- **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
+- **SoundImports (EU):** [€62.45](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
 - **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
 - **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
 

@@ -25,12 +25,12 @@ rows_replacements = [
     # Scan-Speak R2604/833000
     ("""                <td style="font-weight: bold; color: white;">Scan-Speak R2604/833000</td>
                 <td><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">€62.45 (~£53)</a></td>
+                <td><a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">€62.45</a></td>
                 <td><a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">£46.00</a></td>
                 <td><a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">£45.95</a></td>""",
      """                <td style="font-weight: bold; color: white;">Scan-Speak R2604/833000</td>
                 <td><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">€62.45 (~£53)</a></td>
+                <td><a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">€62.45</a></td>
                 <td><a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">£46.00</a></td>
                 <td><a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">£45.95</a></td>
                 <td>—</td>"""),
@@ -51,12 +51,12 @@ rows_replacements = [
     # Peerless XT25TG30-04
     ("""                <td style="font-weight: bold; color: white;">Peerless XT25TG30-04</td>
                 <td><a href="research/peerless_xt25tg30-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">€49.95 (~£43)</a></td>
+                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">€49.95</a></td>
                 <td><a href="https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter" class="btn-badge badge-willys">£31.95</a></td>
                 <td><a href="https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html" class="btn-badge badge-falcon">£29.90</a></td>""",
      """                <td style="font-weight: bold; color: white;">Peerless XT25TG30-04</td>
                 <td><a href="research/peerless_xt25tg30-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">€49.95 (~£43)</a></td>
+                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">€49.95</a></td>
                 <td><a href="https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter" class="btn-badge badge-willys">£31.95</a></td>
                 <td><a href="https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html" class="btn-badge badge-falcon">£29.90</a></td>
                 <td>—</td>"""),

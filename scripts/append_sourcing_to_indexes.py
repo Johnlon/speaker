@@ -4,7 +4,7 @@ import os
 sourcing_db = {
     # Woofers & Midranges
     "SB Acoustics SB12PFCR25-4": {
-        "SoundImports (EU)": ("€25.95 (~£22.1)", "https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html"),
+        "SoundImports (EU)": ("€25.95", "https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html"),
         "Willys-Hifi (UK)": ("£20.58", "https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer"),
     },
     "SB Acoustics SB12PACR25-4": {
@@ -12,11 +12,11 @@ sourcing_db = {
         "Willys-Hifi (UK)": ("£23.76", "https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer"),
     },
     "SB Acoustics SB12MNRX2-25-4": {
-        "SoundImports (EU)": ("€61.95 (~£52.7)", "https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html"),
+        "SoundImports (EU)": ("€61.95", "https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html"),
         "Willys-Hifi (UK)": ("£48.10", "https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange"),
     },
     "Dayton Audio DS115-8": {
-        "SoundImports (EU)": ("€36.95 (~£31.4)", "https://www.soundimports.eu/en/dayton-audio-ds115-8.html"),
+        "SoundImports (EU)": ("€36.95", "https://www.soundimports.eu/en/dayton-audio-ds115-8.html"),
         "Willys-Hifi (UK)": ("£32.00", "https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm"),
         "Wilmslow Audio (UK)": ("(Contact for Price)", "https://wilmslowaudio.co.uk/dayton-audio-ds115-8-4-designer-series-woofer-speaker"),
     },
@@ -39,7 +39,7 @@ sourcing_db = {
     
     # Tweeters
     "Scan-Speak R2604/833000": {
-        "SoundImports (EU)": ("€62.45 (~£53)", "https://www.soundimports.eu/en/scan-speak-r2604-833000.html"),
+        "SoundImports (EU)": ("€62.45", "https://www.soundimports.eu/en/scan-speak-r2604-833000.html"),
         "Willys-Hifi (UK)": ("£46.00", "https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter"),
         "Falcon Acoustics (UK)": ("£45.95", "https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html"),
         "Wilmslow Audio (UK)": ("£63.29 (inc. VAT)", "https://www.wilmslowaudio.co.uk/scanspeak-discovery-r2604-833000"),
@@ -49,7 +49,7 @@ sourcing_db = {
         "Willys-Hifi (UK)": ("£45.60", "https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter"),
     },
     "Peerless XT25TG30-04": {
-        "SoundImports (EU)": ("€49.95 (~£43)", "https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html"),
+        "SoundImports (EU)": ("€49.95", "https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html"),
         "Willys-Hifi (UK)": ("£31.95", "https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter"),
         "Falcon Acoustics (UK)": ("£29.90", "https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-tweeter.html"),
     },
