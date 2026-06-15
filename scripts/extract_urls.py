@@ -28,12 +28,16 @@ _MD_LINK = re.compile(r"\[(?:[^\]]*)\]\((https?://[^\)\s]+)\)")
 _RAW_URL = re.compile(r"https?://[^\s\)\]\"'<>,]+")
 
 
+def _clean_url(u: str) -> str:
+    return u.rstrip(".,;)>")
+
+
 def _urls_in_text(text: str) -> list[str]:
     found = []
     for m in _MD_LINK.finditer(text):
-        found.append(m.group(1).rstrip("."))
+        found.append(_clean_url(m.group(1)))
     for m in _RAW_URL.finditer(text):
-        u = m.group(0).rstrip(".,;)")
+        u = _clean_url(m.group(0))
         if u not in found:
             found.append(u)
     return found
