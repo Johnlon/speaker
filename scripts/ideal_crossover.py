@@ -39,11 +39,11 @@ MID_BEAM: dict[str, int] = {
     "SB13PFCR25-4":     2080, "SB13PFCR":      2080,
     "SDS-P830656":      2080,
     "SIG150-4":         1990,
-    "PA130-8":          2600,
-    "SLS-85S25CP04-04": 2600, "SLS-85":        2600,
-    "ND91-4":           2600,
+    "PA130-8":          2000,  # 5" driver ~85cm² Sd; original combos used 2000 — verify Sd from datasheet
+    "SLS-85S25CP04-04": 3000, "SLS-85":        3000,  # 3.3" driver; original combos used 3000 — verify Sd from datasheet
+    "ND91-4":           3000,  # 4" Faital-type; original combos used 3000 — verify Sd from datasheet
     "PLUVIA-7HD Gold":  2185, "PLUVIA-7HD":    2185,
-    "RS100-8":          2184,
+    "RS100-8":          2900,  # 4" driver; was wrongly set to 2184 (RS125 value); original combos used 2900 — verify Sd from datasheet
 }
 
 # ── Tweeter Fs (Hz) ───────────────────────────────────────────────────────────
@@ -91,9 +91,17 @@ TWEET_FS: dict[str, int] = {
     "D3004/602010":     425,
 }
 
-# Generic note strings written by earlier scripts — replace them
-GENERIC_NOTE_PATTERNS = re.compile(
-    r";?\s*(Wide xover window|Tight window \(distortion risk\))\s*$", re.IGNORECASE
+# Note suffixes to strip before appending fresh quality annotation.
+# Catches both old generic placeholders and previously-computed quality annotations.
+QUALITY_SUFFIX = re.compile(
+    r";?\s*(?:"
+    r"Wide xover window"
+    r"|Tight window \(distortion risk\)"
+    r"|⚠ INCOMPATIBLE[^|]*"
+    r"|(?:comfortable|moderate|tight)\s*\[\d+\.\d+ oct\][^;|]*"
+    r"|⚠ marginal\s*\[\d+\.\d+ oct\][^;|]*"
+    r")\s*$",
+    re.IGNORECASE,
 )
 
 
@@ -190,16 +198,12 @@ def process_line(line: str) -> tuple[str, bool]:
     # Update Notes (last meaningful field = parts[-2])
     notes_idx = len(parts) - 2
     old_notes = parts[notes_idx]
-    # Remove generic placeholder text from earlier script
-    new_notes = GENERIC_NOTE_PATTERNS.sub("", old_notes.rstrip())
-    # Append computed quality note if not already present
-    if "×Fs" not in new_notes and "INCOMPATIBLE" not in new_notes:
-        sep = "; " if new_notes.strip() else ""
-        new_notes = new_notes.rstrip() + sep + result["note"] + " "
-        if old_notes != new_notes:
-            parts[notes_idx] = new_notes
-            changed = True
-    elif old_notes != new_notes:
+    # Strip any existing quality annotation (old generic or previously-computed)
+    new_notes = QUALITY_SUFFIX.sub("", old_notes.rstrip())
+    # Always append fresh quality annotation
+    sep = "; " if new_notes.strip() else ""
+    new_notes = new_notes.rstrip() + sep + result["note"] + " "
+    if old_notes.rstrip() != new_notes.rstrip():
         parts[notes_idx] = new_notes
         changed = True
 
