@@ -60,3 +60,26 @@ Filter applied: dome tweeter, FP OD ≤ 104mm, min xover ≤ 3 kHz (2×Fs), 6–
 | SC10N | Visaton | Dome (soft) | 8Ω | 23.97 | 20.14 | ✓ | 1,700 | 90 | 100/150 | 104 | 25 | 3,400 | ✗ Fs too high; min xover 3400Hz; exceeds 3kHz limit |
 | BC25TG15-04 | Peerless | Dome (soft)+MF | 4Ω | 23.50 | 19.75 | ✓ | 1,128 | 93.2 | 50 | 104 | 25 | 2,256 | ★ very budget; 93dB; FP=104mm; min xover 2256Hz; Tymphany brand |
 | DX20BF00-04 | Peerless | Dome (soft)+MF | 4Ω | 27.50 | 23.11 | ✓ | 822 | 90.1 | 60 | 66 | 19 | 1,644 | ★ budget 19mm; FP=66mm; Fs=822Hz; compact |
+| TWS 30/4 | Audaphon | Dome (fabric) | 4Ω | 79.00 | 66.39 | ✓ | 470 | 93 | 100 | 104 | 30 | 940 | ★★ 30mm dome; Fs=470Hz; min xover only 940Hz; 93dB; FP=104mm; metal FP; LSS house brand |
+| RS28A-4 | Dayton | Dome (fabric) | 4Ω | 89.40 | 75.13 | ✓ | 600 | 91 | 100 | 103 | 28 | 1,200 | ★ 28mm dome; Fs=600Hz; FP=103mm; 91dB; not in SI/HFC |
+| DC25T-8 | Dayton | Dome (Ti) | 8Ω | 27.10 | 22.77 | ✓ | 1,659 | 93 | 50 | 99.5 | 25 | 3,318 | ≡ SI index (€18.97); LSS €27.10 — SI cheaper |
+| ND20FA-6 | Dayton | Dome (fabric) | 6Ω | 30.90 | 25.97 | ✓ | 2,005 | 90 | 15 | 45 | 19 | 4,010 | ≡ SI index (€14.95); LSS €30.90 — SI much cheaper; min xover too high anyway |
+| RT27F | SEAS Lotus | Dome (fabric) | 6Ω | 259.00 | 217.65 | ❓ | 800 | 90 | 80/180 | 53 | 26 | 1,600 | ~ FP=53mm compact; Fs=800Hz; 90dB; expensive; min xover 1600Hz |
+| PT27F | SEAS Lotus | Dome (fabric) | 6Ω | 117.00 | 98.32 | ❓ | 1,000 | 89.5 | 80/180 | 53 | 26 | 2,000 | ~ FP=53mm compact; Fs=1000Hz; 89.5dB; min xover 2000Hz |
+
+---
+
+## Brands Checked — Nothing Useful for Tweeter
+
+Second sweep June 2026 covering brands missed in first pass.
+
+| Brand | Reason |
+| ----- | ------ |
+| SEAS Excel | All tweeters FP=110mm — over 104mm limit; T25CF001 €189, T29CF002 €393, T35C002 €337 all in stock but cannot fit |
+| SEAS Exotic | T35X3-06 only tweeter; FP=130mm — rejected |
+| SEAS Lotus | RT27F/PT27F compact FP=53mm but stock status unknown; Fs=800/1000Hz — above first-pass threshold; listed above as ~ candidates |
+| Eton | ER4 AMT only; not available |
+| Focal | TC90 TD5B and TC120 TD5 both not available |
+| Mundorf AMT | Concert series: FP=104mm (at limit) but Fs=2300Hz → min xover 4600Hz; U-series: FP ≤ 101mm but Fs ≥ 2150Hz → min xover ≥ 4300Hz; all exceed 3kHz min xover ceiling |
+| Purify | No tweeter products at LSS; mids and woofers only |
+| Fountek | Neo CD 2.0 black available (€199) but FP=164×70mm — far exceeds limit; all others OOS |

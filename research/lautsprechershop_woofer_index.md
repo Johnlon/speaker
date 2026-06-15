@@ -19,8 +19,8 @@ Sorted by quality/relevance. Fs=? means not available from search listing; need 
 
 | Model | Brand | Size | Imp | Price € inc | Price € exc | Stock | Fs Hz | Sens dB | Xmax mm | Pwr W | FP mm | Shape | Cone | Notes |
 | ----- | ----- | ---- | --- | ----------- | ----------- | ----- | ----- | ------- | ------- | ----- | ----- | ----- | ---- | ----- |
-| WF110WA02 | Wavecor | 4" | 4Ω | 46.20 | 38.82 | ✓ | ? | 88.5 | 3.5 | 50 | 110 | Round | ? | ★★ best all-round; Xmax=3.5mm; 88.5dB; sealed f3=146Hz BR f3=71Hz; 80–4000Hz; need T/S |
-| WF110WA04 | Wavecor | 4" | 8Ω | 46.20 | 38.82 | ✓ | ? | 85 | 3.5 | 50 | 110 | Round | ? | ★ 8Ω sibling; Xmax=3.5mm; 85dB (low); sealed f3=121Hz BR f3=56Hz — lower Fs implied |
+| WF110WA02 | Wavecor | 4" | 4Ω | 46.20 | 38.82 | ❓ | ? | 88.5 | 3.5 | 50 | 110 | Round | ? | ★ not on current Wavecor brand page at LSS — may be discontinued; Xmax=3.5mm; 88.5dB; BR f3=71Hz suggests low Fs; T/S unconfirmed |
+| WF110WA04 | Wavecor | 4" | 8Ω | 46.20 | 38.82 | ❓ | ? | 85 | 3.5 | 50 | 110 | Round | ? | ~ 8Ω; as WF110WA02; status uncertain |
 | WF090WA01 | Wavecor | 3.5" | 4Ω | 68.20 | 57.31 | ✓ | 109 | 86.5 | 2.75 | — | 90 | Square | ? | ★ compact 90mm sq; Fs=109Hz (from brand page); Xmax=2.75mm; 100–12000Hz; no cabinet data |
 | WF090WA02 | Wavecor | 3.5" | 8Ω | 68.20 | 57.31 | ✓ | 110 | 84 | 2.75 | — | 90 | Square | ? | ~ 8Ω; Fs=110Hz; sens 84dB low end of range |
 | WF118WA07 | Wavecor | 4.5" | 4Ω | 95.70 | 80.42 | ✓ | 56 | 87 | ±4 | 50 | 118 | Round | ? | ★★ Fs=56Hz; Xmax=4mm; FP=118mm within limit; Neo motor; best Wavecor 10cm value |
@@ -45,9 +45,9 @@ Sorted by quality/relevance. Fs=? means not available from search listing; need 
 | 12MU/8731T00 | Scan-Speak Illuminator | 4.5" | 8Ω | 306.00 | 257.14 | ✓ | 66 | 87.2 | ±3.4 | 80/150 | 101 | Round | — | ★ 8Ω Illuminator mid; Fs=66Hz; 87.2dB |
 | 12M/4631G00 | Scan-Speak Discovery | 4" | 4Ω | 292.50 | 245.80 | ✓ | 75 | 89 | ±3 | 40 | 92 | Round | — | ~ Fs=75Hz at threshold; FP=92mm very compact; expensive for Discovery line |
 | CA12RCY H1152-08 | SEAS Prestige | 4.5" | 8Ω | 94.90 | 79.75 | ✓ | 57 | 86 | ±3 | 60/200 | 120.4 | Round | Paper | ★ Fs=57Hz; Xmax=3mm; classic paper cone; FP=120.4mm within limit |
-| SPH-100C | Monacor | 4" | 8Ω | 94.71 | 79.59 | ✓ | ? | 84 | 4.0 | 30/50 | 106 | Square | Paper | ★ Xmax=4mm excellent; 84dB low; 60–6000Hz; sealed 2L/94Hz BR 7.8L/45Hz — Fs est ~50Hz |
-| SPP-110/4 | Monacor | 4" | 4Ω | 49.90 | 41.93 | ✓ | ? | 90 | 2.0 | 30/60 | 110 | Square | ? | ~ 90dB high sens; Xmax=2mm borderline; 70–8000Hz; sealed 1.7L/118Hz BR 5.8L/61Hz |
-| SPP-110/8 | Monacor | 4" | 8Ω | 49.90 | 41.93 | ✓ | ? | 87 | 2.0 | 30/60 | 110 | Square | ? | ~ 8Ω version of SPP-110/4; 87dB; same Xmax concern |
+| SPH-100C | Monacor | 4" | 8Ω | — | — | ✗ | 50 | 84 | ±4 | 30/50 | 106 | Square | Paper | ✗ OOS at LSS (confirmed June 2026); Fs=50Hz, Xmax=4mm would be excellent — watch for restock |
+| SPP-110/4 | Monacor | 4" | 4Ω | — | — | ✗ | 53 | 90 | ±2 | 30/60 | 110 | Square | — | ✗ OOS at LSS; Fs=53Hz; Xmax=2mm below threshold |
+| SPP-110/8 | Monacor | 4" | 8Ω | — | — | ✗ | 55 | 87 | ±2 | 30/60 | 110 | Square | — | ✗ OOS at LSS; Fs=55Hz; Xmax=2mm below threshold |
 | MU10RB-SL H1658-04 | SEAS Prestige | 4" | 4Ω | 83.51 | 70.17 | ✓ | 100 | 84.7 | 2.0 | 40/100 | 98 | Round | Paper | ≡ dedicated mid; Fs=100Hz known; 84.7dB; 100–20000Hz; Xmax=2mm borderline |
 
 ---
@@ -58,16 +58,18 @@ FP slightly exceeds 122mm desktop threshold but Xmax or other properties make th
 
 | Model | Brand | Size | Imp | Price € inc | Price € exc | Stock | Fs Hz | Sens dB | Xmax mm | Pwr W | FP mm | Shape | Cone | Notes |
 | ----- | ----- | ---- | --- | ----------- | ----------- | ----- | ----- | ------- | ------- | ----- | ----- | ----- | ---- | ----- |
-| SB12NRXF25-4 | SB Acoustics | 4" | 4Ω | 57.20 | 48.07 | ✓ | ? | 87 | 5.0 | 30 | 123 | Round | Flax | ~ FP=123mm (1mm over); Xmax=5mm exceptional; sealed 1.8L/105Hz BR 7.1L/49Hz — Fs est ~35Hz |
-| SB12NRX25-4 | SB Acoustics | 4" | 4Ω | 58.52 | 49.18 | ✓ | ? | 87.5 | 5.0 | 30 | 123 | Round | Fabric | ~ FP=123mm; Xmax=5mm; sealed 1.4L/113Hz BR 5.3L/57Hz |
-| SB12CACS25-4 | SB Acoustics | 4" | 4Ω | 73.70 | 61.93 | ✓ | ? | 88 | 5.0 | ? | 123 | Round | Carbon | ~ FP=123mm; Xmax=5mm; carbon cone; sealed 0.79L/136Hz BR 2.3L/75Hz |
-| SB12NRXF25-8 | SB Acoustics | 4" | 8Ω | 57.20 | 48.07 | ✓ | ? | 85 | 5.0 | ? | 123 | Round | Flax | ~ FP=123mm; 8Ω; Xmax=5mm; sealed 1.2L/124Hz BR 4.7L/61Hz |
-| SB12NRX25-8 | SB Acoustics | 4" | 8Ω | 58.52 | 49.18 | ✓ | ? | 85.5 | 5.0 | ? | 123 | Round | Fabric | ~ FP=123mm; 8Ω; Xmax=5mm |
-| SB12CACS25-8 | SB Acoustics | 4" | 8Ω | 73.70 | 61.93 | ✓ | ? | 85.5 | 5.0 | ? | 123 | Round | Carbon | ~ FP=123mm; 8Ω; Xmax=5mm; carbon |
-| SB12MNRX25-4 | SB Acoustics | 4" | 4Ω | 49.80 | 41.85 | ✓ | ? | 88.5 | 2.2 | 50 | 123 | Round | ? | ~ FP=123mm; Xmax=2.2mm (borderline); sealed 1.2L/126Hz BR 4.4L/64Hz |
-| MSH-115HQ | Monacor | 4.5" | 8Ω | 83.76 | 70.39 | ✓ | ? | 89 | 3.0 | 50/100 | 116 | Round | ? | ~ FP=116mm; Xmax=3mm; 89dB; 100–8000Hz; sealed 1.5L/133Hz BR 6L/60Hz |
-| MSH-115HQ4 | Monacor | 4.5" | 4Ω | 85.90 | 72.18 | ✓ | ? | 88 | 2.0 | 50/100 | 116 | Round | ? | ~ FP=116mm; 4Ω; Xmax=2mm; 95–8000Hz |
-| EM 428 | Morel | 4.5" | 8Ω | 134.00 | 112.61 | ✓ | ? | 87 | 3.0 | 150 | 118.5 | Round | ? | ~ FP=118.5mm; Xmax=3mm; 50–5000Hz; sealed 0.96L/137Hz BR 3.6L/68Hz; 150W |
+| SB12NRXF25-4 | SB Acoustics | 4" | 4Ω | 57.20 | 48.07 | ✓ | 61 | 87 | 5.0 | 30 | 123 | Round | Flax | ~ FP=123mm (1mm over); Fs=61Hz confirmed; Xmax=5mm exceptional |
+| SB12NRX25-4 | SB Acoustics | 4" | 4Ω | 58.52 | 49.18 | ✓ | 55 | 87.5 | 5.0 | 30 | 123 | Round | Fabric | ~ FP=123mm; Fs=55Hz confirmed; Xmax=5mm |
+| SB12CACS25-4 | SB Acoustics | 4" | 4Ω | 73.70 | 61.93 | ✓ | 51 | 88 | 5.0 | — | 123 | Round | Carbon/ceramic | ~ FP=123mm; Fs=51Hz confirmed; Xmax=5mm; ceramic cone |
+| SB12NRXF25-8 | SB Acoustics | 4" | 8Ω | 57.20 | 48.07 | ✓ | 63 | 85 | 5.0 | — | 123 | Round | Flax | ~ FP=123mm; 8Ω; Fs=63Hz; Xmax=5mm |
+| SB12NRX25-8 | SB Acoustics | 4" | 8Ω | 58.52 | 49.18 | ✓ | 57 | 85.5 | 5.0 | — | 123 | Round | Fabric | ~ FP=123mm; 8Ω; Fs=57Hz |
+| SB12CACS25-8 | SB Acoustics | 4" | 8Ω | 73.70 | 61.93 | ✓ | 51 | 85.5 | 5.0 | — | 123 | Round | Carbon/ceramic | ~ FP=123mm; 8Ω; Fs=51Hz |
+| SB12MNRX25-4 | SB Acoustics | 4" | 4Ω | 49.80 | 41.85 | ✓ | 58 | 88.5 | 2.2 | 50 | 123 | Round | — | ~ FP=123mm; Fs=58Hz confirmed; Xmax=2.2mm below threshold |
+| MSH-115HQ | Monacor | 4.5" | 8Ω | 83.76 | 70.39 | ✓ | 89 | 89 | ±3 | 50/100 | 116 | Round | — | ✗ Fs=89Hz confirmed — above 75Hz threshold; move to rejected |
+| MSH-115HQ4 | Monacor | 4.5" | 4Ω | 85.90 | 72.18 | ✓ | 95 | 88 | ±2 | 50/100 | 116 | Round | — | ✗ Fs=95Hz — above threshold; Xmax=2mm also low |
+| EM 428 | Morel | 4.5" | 8Ω | 134.00 | 112.61 | ✓ | 68 | 87 | ±3 | 150 | 118.5 | Round | — | ★ Fs=68Hz confirmed; Xmax=3mm; 150W; FP=118.5mm within limit |
+| CAW 428 | Morel | 4.5" | 8Ω | 109.00 | 91.60 | ✓ | 74 | 88 | ±4 | 150 | 118.5 | Round | — | ★ NEW — Fs=74Hz (at threshold); Xmax=4mm; 88dB; 150W; FP=118.5mm; better Xmax than EM 428 |
+| EW 428 | Morel | 4.5" | 8Ω | 153.00 | 128.57 | ✓ | 62 | 87 | ±4.5 | 150 | 118.5 | Round | — | ★★ NEW — Fs=62Hz; Xmax=4.5mm best in 428 family; 150W; FP=118.5mm; premium motor |
 | Mivoc XAW 110 HC-II Black | Mivoc | 4" | 8Ω | 45.20 | 37.98 | ✓ | ? | 86 | 3.0 | 60/150 | 124 | Round | ? | ~ FP=124mm (over); Xmax=3mm; 40–3500Hz; sealed 0.8L/133Hz BR 2.3L/74Hz; budget |
 | WF120BD01 Nomex | Wavecor | 4.5" | 4Ω | 80.00 | 67.23 | ✓ | ? | 85.5 | ? | 60 | 120.4 | Round | Nomex | ~ FP=120.4mm; Xmax unknown; Nomex cone; sealed 0.83L/117Hz BR 2.4L/65Hz |
 | WF120BD02 Nomex | Wavecor | 4.5" | 8Ω | 80.00 | 67.23 | ✓ | ? | 83 | ? | 60 | 120.5 | Round | Nomex | ~ FP=120.5mm; 8Ω; 83dB low; Xmax unknown |
@@ -117,4 +119,6 @@ FP slightly exceeds 122mm desktop threshold but Xmax or other properties make th
 
 **Wavecor WF110 vs WF090:** WF110 clearly better (Xmax+0.75mm, higher sens, cabinet data available). WF090 only wins if 90mm square footprint solves a tight spacing problem.
 
-**Priority T/S fetches still needed:** WF110WA02, WF090WA01, SPH-100C.
+**Resolved June 2026:** SB12 Fs all confirmed; EM 428 Fs/Xmax confirmed; Monacor SPH-100C/SPP-110 all OOS; MSH-115HQ Fs=89Hz → rejected; CAW 428 and EW 428 added as new Morel candidates.
+
+**Still unresolved:** WF110WA02/WA04 not on current Wavecor LSS page — may be discontinued; treat as uncertain until confirmed in stock.
