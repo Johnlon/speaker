@@ -98,7 +98,7 @@
     <nav class="tabs-nav">
       <button class="tab-btn active" onclick="showTab('offaxis')">60° Off-Axis</button>
       <button class="tab-btn" onclick="showTab('onaxis')">On-Axis / Critical</button>
-      <button class="tab-btn" onclick="showTab('compact')">Compact Baffle</button>
+      <button class="tab-btn" onclick="showTab('compact')">Narrow Spacing</button>
       <button class="tab-btn" onclick="showTab('value')">Best Value</button>
       <button class="tab-btn" onclick="showTab('visual')">Visual Interest</button>
     </nav>
@@ -417,22 +417,23 @@
 </div>
 
 <!-- ══════════════════════════════════════════════════════════
-     TAB 3 — COMPACT BAFFLE / MINIMUM WIDTH
+     TAB 3 — NARROW SPACING / CLOSE CENTRES
      ══════════════════════════════════════════════════════════ -->
 <div id="compact" class="tab-content">
   <div class="hero">
-    <h2>Compact Baffle — Minimum Width</h2>
-    <p>Baffle width is driven by centre-to-centre driver spacing + clearances. Smaller tweeter footprint plate = less spacing = narrower cabinet. All picks use DSA90-8 as the mid: its 90mm OD is the smallest mid in the catalogue, contributing ~45mm to spacing.</p>
+    <h2>Narrow Spacing — Minimum Centre-to-Centre Distance</h2>
+    <p>With drivers stacked vertically, baffle width is set by the mid's OD — the tweeter doesn't change it. What matters is the <strong>vertical centre-to-centre distance d</strong>, which controls the comb null frequency: f_null = c / (2d). The rule: d must be small enough that f_null ≥ crossover, or vertical lobing lands in the listening band.</p>
+    <p style="margin-top:8px;font-size:13px;color:#94a3b8">Examples: d=68mm → f_null=2,522Hz (above the 2,300Hz crossover ✓) · d=110mm → f_null=1,559Hz (in-band ✗). Narrower is acoustically better, not just physically smaller.</p>
   </div>
 
   <div class="note-box">
-    <strong>All five use DSA90-8 mid</strong> (90mm OD, £29.71 Willys / SI €34.95). Spacing column = centre-to-centre distance.
+    <strong>All five use DSA90-8 mid</strong> (90mm OD, £29.71 Willys / SI €34.95). Spacing column = vertical centre-to-centre distance. <strong>Critical limit:</strong> d &lt; c / (2 × f_xover) — below this, first comb null is above the crossover frequency.
   </div>
 
   <table>
     <thead>
       <tr>
-        <th>Rank</th><th>ID</th><th>Tweeter</th><th>Spacing</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+        <th>Rank</th><th>ID</th><th>Tweeter</th><th>d (v-centre)</th><th>f_null</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
       </tr>
     </thead>
     <tbody>
@@ -448,13 +449,14 @@
           </div>
         </td>
         <td><strong>68 mm</strong></td>
+        <td><span class="window comfortable">2,522 Hz ✓</span></td>
         <td>
           <div class="xover">2,036 – 3,260 Hz → <strong>2,304 Hz</strong></div>
           <div class="window marginal">marginal [0.4 oct] · 2.3×Fs</div>
         </td>
         <td><span class="price">£55</span></td>
         <td><span class="psu-cell">24V / 3.3A / 78W</span></td>
-        <td class="why"><strong>Minimum spacing record.</strong> 43.9mm ring radiator plate enables a baffle as narrow as ~115mm. 100W tweeter. Marginal crossover window (tweeter at 2.3×Fs) — set DSP crossover at 2,300 Hz and limit tweeter at 98 dB SPL ceiling.</td>
+        <td class="why"><strong>Minimum spacing record.</strong> f_null (2,522 Hz) sits above the crossover (2,304 Hz) — the only combo where comb null is out of band ✓. 43.9mm tweeter OD is what makes this possible. 100W tweeter. Marginal crossover window (tweeter at 2.3×Fs) — DSP limiter required.</td>
       </tr>
       <tr>
         <td><span class="rank">2</span></td>
@@ -467,13 +469,14 @@
           </div>
         </td>
         <td><strong>72 mm</strong></td>
+        <td><span class="window tight">2,382 Hz ⚠</span></td>
         <td>
           <div class="xover">1,540 – 3,260 Hz → <strong>2,454 Hz</strong></div>
           <div class="window tight">tight [0.2 oct] · 3.2×Fs</div>
         </td>
         <td><span class="price">£55</span></td>
         <td><span class="psu-cell">24V / 3.5A / 85W</span></td>
-        <td class="why">72mm spacing at same price as XC1. 19mm ring rad — smallest tweeter physically. Tight window but tweeter operating at a safe 3.2×Fs (no THD concern). Good balance of compactness and crossover cleanliness.</td>
+        <td class="why">72mm at same price as XC1. f_null (2,382 Hz) is marginally below the 2,454 Hz crossover — first null just inside the band. In practice a 5° vertical offset at 5ft puts the listener only ~1° from axis at 72mm, so the null is at >80° — not audible in practice. 15W tweeter; DSP limiter required.</td>
       </tr>
       <tr>
         <td><span class="rank">3</span></td>
@@ -487,13 +490,14 @@
           </div>
         </td>
         <td><strong>73 mm</strong></td>
+        <td><span class="window comfortable">2,349 Hz ✓</span></td>
         <td>
           <div class="xover">1,300 – 3,260 Hz → <strong>2,255 Hz</strong></div>
           <div class="window tight">tight [0.4 oct] · 3.5×Fs</div>
         </td>
         <td><span class="price">£77</span></td>
         <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
-        <td class="why">73mm spacing + best window quality at this spacing. Square Morel soft dome at 3.5×Fs is the cleanest-operating tweeter in the compact group. 1,960 Hz DSP window. <em>Round 3&quot; mid + square tweeter is the most visually interesting compact option.</em></td>
+        <td class="why">73mm, f_null (2,349 Hz) above the 2,255 Hz crossover ✓. Best crossover window quality in the tight-spacing group (0.4 oct, tweeter at 3.5×Fs — clean). Square dome footprint is what keeps spacing to 73mm despite an 8Ω load. <em>Round mid + square tweeter is visually distinctive.</em></td>
       </tr>
       <tr>
         <td><span class="rank">4</span></td>
@@ -506,13 +510,14 @@
           </div>
         </td>
         <td><strong>79 mm</strong></td>
+        <td><span class="window marginal">2,171 Hz ✗</span></td>
         <td>
           <div class="xover">1,460 – 3,260 Hz → <strong>2,390 Hz</strong></div>
           <div class="window tight">tight [0.3 oct] · 3.3×Fs</div>
         </td>
         <td><span class="price">£64</span></td>
         <td><span class="psu-cell">24V / 3.5A / 83W</span></td>
-        <td class="why">79mm spacing with ring radiator dispersion (not available at tighter spacings). 66mm round faceplate. Same spacing as B10 (INCOMPATIBLE) but NE25VTS Fs=730 Hz puts the crossover at a clean 3.3×Fs. Best compact + off-axis combination.</td>
+        <td class="why">79mm, f_null (2,171 Hz) below the 2,390 Hz crossover — in band at 90° vertical. At the actual listening angle (~5° vertical for a counter speaker), the effective null shifts to ~20 kHz, so it remains inaudible in practice. Ring rad gives off-axis HF. Best spacing option with ring radiator.</td>
       </tr>
       <tr>
         <td><span class="rank">5</span></td>
@@ -525,13 +530,14 @@
           </div>
         </td>
         <td><strong>~82 mm</strong></td>
+        <td><span class="window marginal">2,091 Hz ✗</span></td>
         <td>
           <div class="xover">2,400 – 3,260 Hz → <strong>2,502 Hz</strong></div>
           <div class="window marginal">marginal [0.1 oct] · 2.1×Fs</div>
         </td>
         <td><span class="price">£65</span></td>
         <td><span class="psu-cell">24V / 3.2A / 76W</span></td>
-        <td class="why">Compact waveguide DT-28N in a small FP. Marginal window — crossover at 2,500 Hz is workable but the window is very narrow (only 860 Hz). Include only if the waveguide character or appearance is a priority.</td>
+        <td class="why">82mm, f_null (2,091 Hz) well below the 2,502 Hz crossover — worst comb behaviour in this group. High Fs=900Hz forces the crossing high while the 82mm spacing pushes the null low. Include only if waveguide character is specifically wanted.</td>
       </tr>
     </tbody>
   </table>
