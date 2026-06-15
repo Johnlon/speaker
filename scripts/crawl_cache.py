@@ -25,6 +25,8 @@ import hashlib
 import json
 import re
 import sys
+import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -34,6 +36,13 @@ try:
     from bs4 import BeautifulSoup
 except ImportError:
     sys.exit("pip install aiohttp beautifulsoup4")
+
+# Per-domain minimum gap in seconds (0 = unlimited).
+# Only fill in domains that need throttling; everything else runs flat out.
+_DOMAIN_DELAY: dict[str, float] = {
+    "loudspeakerdatabase.com": 2.0,
+    "www.loudspeakerdatabase.com": 2.0,
+}
 
 ROOT = Path(__file__).parent.parent
 CACHE_DIR = ROOT / "research" / "cache"
@@ -144,6 +153,27 @@ def discover_urls(html: str, base_url: str) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Per-domain rate limiter (only for domains in _DOMAIN_DELAY)
+# ---------------------------------------------------------------------------
+
+class DomainThrottle:
+    def __init__(self):
+        self._locks: dict[str, asyncio.Lock] = defaultdict(asyncio.Lock)
+        self._last: dict[str, float] = defaultdict(float)
+
+    async def wait(self, url: str) -> None:
+        domain = urlparse(url).netloc.lower()
+        delay = _DOMAIN_DELAY.get(domain, 0.0)
+        if delay <= 0:
+            return
+        async with self._locks[domain]:
+            elapsed = time.monotonic() - self._last[domain]
+            if elapsed < delay:
+                await asyncio.sleep(delay - elapsed)
+            self._last[domain] = time.monotonic()
+
+
+# ---------------------------------------------------------------------------
 # Manifest helpers
 # ---------------------------------------------------------------------------
 
@@ -195,7 +225,9 @@ def append_to_source_urls(new_urls: list[str]) -> None:
 # Async fetch + worker
 # ---------------------------------------------------------------------------
 
-async def fetch_one(url: str, session: aiohttp.ClientSession, timeout: int):
+async def fetch_one(url: str, session: aiohttp.ClientSession, timeout: int,
+                    throttle: DomainThrottle):
+    await throttle.wait(url)
     try:
         async with session.get(url, timeout=aiohttp.ClientTimeout(total=timeout),
                                headers=HEADERS, allow_redirects=True) as r:
@@ -211,7 +243,8 @@ async def fetch_one(url: str, session: aiohttp.ClientSession, timeout: int):
 
 
 async def worker(queue: asyncio.Queue, session: aiohttp.ClientSession,
-                 timeout: int, manifest: dict, manifest_lock: asyncio.Lock,
+                 timeout: int, throttle: DomainThrottle,
+                 manifest: dict, manifest_lock: asyncio.Lock,
                  seen: set, seen_lock: asyncio.Lock,
                  discovered_lock: asyncio.Lock, discovered: list,
                  counters: dict) -> None:
@@ -221,7 +254,7 @@ async def worker(queue: asyncio.Queue, session: aiohttp.ClientSession,
             queue.task_done()
             break
 
-        status, ct, body, info = await fetch_one(url, session, timeout)
+        status, ct, body, info = await fetch_one(url, session, timeout, throttle)
         counters["total"] += 1
 
         if status == 200 and body:
@@ -286,6 +319,7 @@ async def run(args):
     discovered_lock = asyncio.Lock()
     discovered: list = []
     counters = {"total": 0, "ok": 0, "err": 0}
+    throttle = DomainThrottle()
 
     queue: asyncio.Queue = asyncio.Queue()
     for url in seeds:
@@ -295,7 +329,7 @@ async def run(args):
     async with aiohttp.ClientSession(connector=connector) as session:
         workers = [
             asyncio.create_task(worker(
-                queue, session, args.timeout, manifest,
+                queue, session, args.timeout, throttle, manifest,
                 manifest_lock, seen, seen_lock,
                 discovered_lock, discovered, counters
             ))
