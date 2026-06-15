@@ -1297,12 +1297,12 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 
 ### Dayton Audio ND91-4 — Catalogue
 - Type: full-range woofer | Size: 3.5" | Frame: **square steel** | Frame OD: **103.5 mm** | Impedance: 4Ω | Cutout: 85 mm | Depth: 63.4 mm | 4 mounting holes | Shielded: yes
-- Cone: aluminium | Rubber surround | VC wire: aluminium | Kapton/Polyimide former | Magnet: ferrite
+- Cone: black anodised aluminium alloy | Rubber surround | VC: 1" 4-layer underhung, aluminium wire, Kapton/polyimide former | Copper alloy shorting ring | Magnet: **Neodymium (Neo-Balanced, self-shielded)**
 - Sensitivity: 85.6 dB | Power: 30W RMS / 60W max | Freq: 65–17,000 Hz
 - Fs: 74 Hz | Xmax: 4.6 mm | Vd: 12.2 cm³ | Sd: 30.4 cm² | Vas: 1.4 L | Qts: 0.41 | Qes: 0.45 | Qms: 4.24
 - BL: 4.59 Tm | Re: 4.3Ω | Le: 0.83 mH | Mms: 4.8 g | Cms: 0.96 mm/N | VC: 25 mm
 - Sealed alignment: 0.01 ft³ (0.28 L), F3 = 132 Hz | Vented alignment: 0.03 ft³ (0.85 L), F3 = 73 Hz
-- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd91-4.html) (specs confirmed from SI product page, June 2026) | Price: €33.95 | Stock: 10+
+- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd91-4.html) | Datasheet: [local](research/dayton_nd91-4_datasheet.pdf) / [original](https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND91-4/pdf_dayton%20audio_ND91-4_1.pdf) (fetched June 2026) | Price: €33.95 | Stock: 10+
 - **Fs check:** 74 Hz → 2× = 148 Hz — just passes the 150 Hz crossover target.
 - **Beaming:** Sd 30.4 cm² → effective radius 31.1 mm → beaming starts ~3,520 Hz. No concern.
 - **DSP correction vs TB sub (85 dB ref):** −0.6 dB — near-perfect sensitivity match; essentially no pad needed.
@@ -1310,15 +1310,16 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 - **Note:** ND91-4 is a full-range woofer. The ND90-4 is a separate square-framed bass midwoofer from the same Dayton ND compact series — see entry below.
 
 ### Dayton Audio ND90-4 — Catalogue
-- Type: bass midwoofer | Size: 3.5" | Frame: **square** | Impedance: 4Ω | Cone: black anodised aluminium | Surround: rubber
-- Sensitivity: 82.4 dB @ 1W/1m | Power: 40W | Freq: 80–15,000 Hz
-- Fs: 90.2 Hz | Xmax: 4 mm | Sd: 31.2 cm² | Vas: 1.06 L | Qts: 0.63 | Qes: 0.72 | Qms: 5.10
-- BL: 3.47 Tm | Re: 3.6Ω | Le: 0.62 mH | Mms: 4.3 g | VC: 19 mm
-- **Source:** [loudspeakerdatabase.com](https://loudspeakerdatabase.com/Dayton/ND90-4) (fetched June 2026)
-- **Fs check:** 90.2 Hz → 2× = 180 Hz — above the 150 Hz crossover target. Fails the 2× rule; would need crossover at 180 Hz or higher.
-- **Sensitivity:** 82.4 dB — 2.6 dB below sub reference; needs DSP boost. Low relative to other candidates.
-- **Companion PR:** ND90-PR (also square frame) available at SI €14.95.
-- **vs ND91-4:** Lower sensitivity, higher Fs, lower Xmax — inferior on all key metrics. ND91-4 is the preferred driver from this family.
+- Type: full-range woofer | Size: 3.5" | Frame: **square** | Frame OD: **103.5 mm** | Impedance: 4Ω | Cutout: 85 mm | Depth: 60.8 mm | 4 mounting holes | Shielded: yes (self-shielded)
+- Cone: black anodised aluminium alloy | Rubber surround | VC: 19 mm, 4-layer underhung, copper wire, Kapton/polyimide former | Magnet: **Neodymium (Neo-Balanced)**
+- Sensitivity: **85.7 dB** @ 2.83V/1m | Power: 20W RMS / 40W max | Freq: 80–15,000 Hz
+- Fs: 90.2 Hz | Xmax: 4.0 mm | Vd: 12.5 cm³ | Sd: 31.2 cm² | Vas: 1.06 L | Qts: 0.63 | Qes: 0.72 | Qms: 5.10
+- BL: 3.47 Tm | Re: 3.6Ω | Le: 0.62 mH | Mms: 4.3 g | Cms: 0.73 mm/N
+- **Source:** [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd90-4.html) | Datasheet: [local](research/dayton_nd90-4_datasheet.pdf) / [original](https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND90-4/pdf_dayton%20audio_ND90-4_1.pdf) (fetched June 2026)
+- **Fs check:** 90.2 Hz → 2× = 180 Hz — above the 150 Hz crossover target. Fails the 2× rule.
+- **DSP correction vs TB sub (85 dB ref):** −0.7 dB — near-identical sensitivity to sub (and to ND91-4).
+- **Companion PR:** ND90-PR (also square frame) at SI €14.95.
+- **vs ND91-4:** Same sensitivity. Higher Fs (fails 2× rule), lower Xmax (4mm vs 4.6mm), lower power (20W vs 30W), smaller VC (19mm vs 25mm). ND91-4 is the better mid candidate. ND90-4 advantage: neodymium motor is more compact.
 
 ### Tectonic TEBM65C20F-8 BMR — Catalogue
 - Size: 3.5" | Imp: 8Ω | Sensitivity: 81 dB | Power: 30W RMS / 60W max | Xmax: 3.5mm | Freq: 80–20,000 Hz | Type: Balanced Mode Radiator

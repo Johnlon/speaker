@@ -75,7 +75,7 @@ Specs for all candidates are in `drivers.md`.
 | ----- | ----- | -------- | ----- | ----- |
 | Dayton DMA80-PR | 3" round | €12.95 | 6 | too small for sub |
 | Peerless SDS-P830878 | 3.5" round | €14.95 | 10+ | |
-| Dayton ND90-PR | 3.5" round | €14.95 | 10+ | |
+| Dayton ND90-PR | 3.5" square | €14.95 | 10+ | matches ND90-4 active driver (square frame family) |
 | Dayton DMA105-PR | 4" round | €14.95 | 4 | |
 | Dayton ND105-PR | 4" round | €17.45 | 10+ | |
 | SB Acoustics SB12PFCR-00 | 4" round | €18.95 | 10 | matches SB12 active woofers |
