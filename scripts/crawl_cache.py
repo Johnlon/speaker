@@ -2,51 +2,47 @@
 """
 crawl_cache.py — Durable BFS web crawler. Builds research/cache/.
 
-DURABILITY DESIGN
------------------
+DURABILITY
+----------
 Kill and restart at any time — no data is lost:
+  - Files written as <sha256>.partial, atomically renamed on completion.
+    Startup deletes any .partial left by a killed run.
+  - manifest.json written via manifest.json.tmp -> rename (never half-written).
+  - Discovered URLs appended to source_urls.md immediately per URL.
+    Restart rebuilds queue from source_urls.md minus manifest.
+  - HTTP 200  -> recorded in manifest (file + metadata). Skipped on restart.
+  - HTTP 404  -> recorded in manifest (status only, no file). Skipped on restart.
+  - HTTP 429 / timeout / other error -> NOT recorded. Retried on restart.
 
-  1. Every downloaded file is written as <sha256>.partial first, then
-     atomically renamed to its final name (<sha256>.html/.pdf/etc.).
-     A killed process leaves .partial files; startup deletes them.
+SI SEARCH FALLBACK
+------------------
+When a constructed SoundImports product URL 404s, the script automatically
+searches SI for the correct URL and adds any matching product pages to the
+queue. This handles slug mismatches (e.g. morel-mdt22t -> morel-mdt-22).
 
-  2. The manifest (manifest.json) is written via atomic rename from
-     manifest.json.tmp so it is never half-written.
-
-  3. Newly discovered URLs (PDFs found inside HTML pages) are appended
-     to source_urls.md immediately per URL (inside asyncio.Lock).
-     On restart, the BFS queue is rebuilt from source_urls.md minus
-     manifest — all discovered URLs survive a kill.
-
-RESTART BEHAVIOUR
------------------
-  source_urls.md = all URLs we know about (seeds + discovered)
-  manifest.json  = all URLs successfully downloaded (HTTP 200)
-  On restart: fetch everything in source_urls.md not in manifest.
-  429/404/errors are not recorded in the manifest, so they are
-  automatically retried on next run.
-
-PARALLELISM
------------
-No artificial delays. 200 workers by default — pure network I/O,
-saturate the pipe. If a server 429s, that URL stays out of the
-manifest and is retried next run.
+THROTTLING
+----------
+Per-domain semaphore limits concurrency for sites that rate-limit.
+_DOMAIN_SEM maps domain -> max concurrent connections.
 
 USAGE
 -----
   python scripts/crawl_cache.py
   python scripts/crawl_cache.py --workers 200 --timeout 20
-  python scripts/crawl_cache.py --force   # re-fetch everything
+  python scripts/crawl_cache.py --force   # re-fetch everything including 404s
 """
 
 import argparse
 import asyncio
 import hashlib
 import json
+import re
 import sys
+import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote_plus, urljoin, urlparse
 
 try:
     import aiohttp
@@ -73,8 +69,18 @@ _CONTENT_TYPE_EXT: dict[str, str] = {
     "application/xml":       ".xml",
 }
 
+# Max concurrent connections per domain. Everything else runs flat out.
+_DOMAIN_SEM: dict[str, int] = {
+    "loudspeakerdatabase.com":     1,
+    "www.loudspeakerdatabase.com": 1,
+}
+
+_SI_HOST = "www.soundimports.eu"
+# Matches SI product page paths: /en/some-product-slug.html
+_SI_PRODUCT_RE = re.compile(r"^/en/[a-z0-9][a-z0-9\-]+\.html$")
+
 # ---------------------------------------------------------------------------
-# Helpers
+# URL helpers
 # ---------------------------------------------------------------------------
 
 def _cache_filename(url: str, content_type: str) -> str:
@@ -91,12 +97,40 @@ def _is_pdf(url: str) -> bool:
     return url.lower().split("?")[0].endswith(".pdf")
 
 
+def _is_si_product_url(url: str) -> bool:
+    p = urlparse(url)
+    return p.netloc == _SI_HOST and bool(_SI_PRODUCT_RE.match(p.path))
+
+
+def _si_search_url(failed_url: str) -> str:
+    """Build a SI search URL from a failed product page slug."""
+    slug = urlparse(failed_url).path.rstrip("/").rsplit("/", 1)[-1].replace(".html", "")
+    # Add spaces at letter-digit transitions and replace hyphens with spaces
+    q = re.sub(r"([a-z])(\d)", r"\1 \2", slug)
+    q = re.sub(r"(\d)([a-z])", r"\1 \2", q)
+    q = q.replace("-", " ").strip()
+    return f"https://{_SI_HOST}/en/catalogsearch/result/?q={quote_plus(q)}"
+
+
+def _extract_si_product_urls(html: str) -> list[str]:
+    """Extract product page URLs from a SI search results page."""
+    soup = BeautifulSoup(html, "html.parser")
+    found = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"].split("#")[0].split("?")[0].rstrip(".,;)>")
+        p = urlparse(href)
+        # Normalise relative URLs
+        if not p.netloc:
+            href = f"https://{_SI_HOST}{href}"
+            p = urlparse(href)
+        if p.netloc == _SI_HOST and _SI_PRODUCT_RE.match(p.path):
+            found.append(href)
+    return list(dict.fromkeys(found))
+
+
 def _discover_from_html(html: str, base_url: str) -> list[str]:
-    """Extract PDF links from an HTML page — the only URLs we follow."""
-    try:
-        soup = BeautifulSoup(html, "html.parser")
-    except Exception:
-        return []
+    """Return PDF links found in an HTML page."""
+    soup = BeautifulSoup(html, "html.parser")
     results = []
     for tag in soup.find_all("a", href=True):
         href = tag["href"].strip()
@@ -129,7 +163,7 @@ def _startup_cleanup() -> None:
     if partials:
         for p in partials:
             p.unlink()
-        print(f"Cleaned {len(partials)} incomplete .partial file(s) from previous run.")
+        print(f"Cleaned {len(partials)} .partial file(s) from previous killed run.")
 
 
 def load_manifest() -> dict:
@@ -143,10 +177,11 @@ def load_manifest() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# source_urls.md
+# source_urls.md helpers
 # ---------------------------------------------------------------------------
 
 def read_pending_urls(manifest: dict, force: bool) -> list[str]:
+    """Return URLs not yet in manifest (or all if --force)."""
     if not SOURCE_URLS.exists():
         sys.exit(f"Not found: {SOURCE_URLS}\nRun scripts/extract_urls.py first.")
     urls = []
@@ -159,7 +194,8 @@ def read_pending_urls(manifest: dict, force: bool) -> list[str]:
     return list(dict.fromkeys(urls))
 
 
-async def _append_discovered(url: str, file_lock: asyncio.Lock) -> None:
+async def _append_url(url: str, file_lock: asyncio.Lock) -> None:
+    """Append a discovered URL to source_urls.md if not already present."""
     async with file_lock:
         existing = set()
         if SOURCE_URLS.exists():
@@ -171,34 +207,106 @@ async def _append_discovered(url: str, file_lock: asyncio.Lock) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Async fetch + worker
+# Progress reporter
 # ---------------------------------------------------------------------------
 
-async def fetch_one(url: str, session: aiohttp.ClientSession, timeout: int):
-    try:
-        async with session.get(url, timeout=aiohttp.ClientTimeout(total=timeout),
-                               headers=HEADERS, allow_redirects=True) as r:
-            ct = r.headers.get("Content-Type", "text/html")
-            body = await r.read()
-            return r.status, ct, body, str(r.url)
-    except asyncio.TimeoutError:
-        return 0, None, None, "timeout"
-    except aiohttp.ClientError as e:
-        return 0, None, None, str(e)
-    except Exception as e:
-        return 0, None, None, str(e)
+class Progress:
+    def __init__(self, total: int):
+        self.total = total
+        self.ok = 0
+        self.err_404 = 0
+        self.err_other = 0
+        self.discovered = 0
+        self._start = time.monotonic()
+        self._last_print = 0.0
+        self._lock = asyncio.Lock()
 
+    async def record(self, status: int, url: str = "", new_urls: int = 0) -> None:
+        async with self._lock:
+            if status == 200:
+                self.ok += 1
+            elif status == 404:
+                self.err_404 += 1
+            elif status != 0 or "429" not in url:
+                self.err_other += 1
+            self.discovered += new_urls
+            await self._print_if_due()
+
+    async def _print_if_due(self) -> None:
+        now = time.monotonic()
+        done = self.ok + self.err_404 + self.err_other
+        if done % 5 == 0 or now - self._last_print >= 20:
+            self._last_print = now
+            elapsed = now - self._start
+            rate = done / elapsed if elapsed > 1 else 0
+            remaining = self.total - done
+            eta = f"{remaining/rate:.0f}s" if rate > 0 else "?"
+            print(
+                f"  [{elapsed:5.0f}s] {done}/{self.total} done"
+                f" | ok={self.ok} 404={self.err_404} other={self.err_other}"
+                f" | +{self.discovered} discovered"
+                f" | {rate:.1f}/s eta={eta}"
+            )
+
+
+# ---------------------------------------------------------------------------
+# Per-domain semaphore pool
+# ---------------------------------------------------------------------------
+
+class DomainSemaphores:
+    def __init__(self):
+        self._sems: dict[str, asyncio.Semaphore] = {}
+
+    def get(self, url: str):
+        domain = urlparse(url).netloc.lower()
+        limit = _DOMAIN_SEM.get(domain)
+        if limit is None:
+            return asyncio.nullcontext()
+        if domain not in self._sems:
+            self._sems[domain] = asyncio.Semaphore(limit)
+        return self._sems[domain]
+
+
+# ---------------------------------------------------------------------------
+# Async fetch
+# ---------------------------------------------------------------------------
+
+async def _fetch(url: str, session: aiohttp.ClientSession, timeout: int,
+                 sems: DomainSemaphores):
+    async with sems.get(url):
+        try:
+            async with session.get(
+                url,
+                timeout=aiohttp.ClientTimeout(total=timeout),
+                headers=HEADERS,
+                allow_redirects=True,
+            ) as r:
+                ct = r.headers.get("Content-Type", "text/html")
+                body = await r.read()
+                return r.status, ct, body, str(r.url)
+        except asyncio.TimeoutError:
+            return 0, None, None, "timeout"
+        except aiohttp.ClientError as e:
+            return 0, None, None, str(e)
+        except Exception as e:
+            return 0, None, None, str(e)
+
+
+# ---------------------------------------------------------------------------
+# Worker
+# ---------------------------------------------------------------------------
 
 async def worker(
     queue: asyncio.Queue,
     session: aiohttp.ClientSession,
     timeout: int,
+    sems: DomainSemaphores,
     manifest: dict,
     manifest_lock: asyncio.Lock,
     seen: set,
     seen_lock: asyncio.Lock,
     file_lock: asyncio.Lock,
-    counters: dict,
+    progress: Progress,
 ) -> None:
     while True:
         url = await queue.get()
@@ -206,13 +314,12 @@ async def worker(
             queue.task_done()
             break
 
-        status, ct, body, info = await fetch_one(url, session, timeout)
-        counters["total"] += 1
+        status, ct, body, info = await _fetch(url, session, timeout, sems)
+        new_discovered = 0
 
         if status == 200 and body:
             fname = _cache_filename(url, ct)
             _atomic_write_bytes(CACHE_DIR / fname, body)
-
             async with manifest_lock:
                 manifest[url] = {
                     "file": fname,
@@ -223,11 +330,9 @@ async def worker(
                     "final_url": info,
                 }
                 _atomic_write_manifest(manifest)
-
-            counters["ok"] += 1
             print(f"[OK  {len(body)//1024:4d}kB] {url}")
 
-            # Follow PDF links discovered in HTML pages
+            # Follow PDF links from HTML pages
             if "html" in ct.lower() and not _is_pdf(url):
                 discovered = _discover_from_html(body.decode("utf-8", errors="replace"), url)
                 async with seen_lock:
@@ -235,13 +340,48 @@ async def worker(
                     for u in fresh:
                         seen.add(u)
                 for u in fresh:
-                    await _append_discovered(u, file_lock)
+                    await _append_url(u, file_lock)
                     await queue.put(u)
+                new_discovered = len(fresh)
+
+        elif status == 404:
+            # Record permanently so we don't retry on next run
+            async with manifest_lock:
+                manifest[url] = {
+                    "status": 404,
+                    "fetched_at": datetime.now(timezone.utc).isoformat(),
+                }
+                _atomic_write_manifest(manifest)
+            print(f"[404]  {url}")
+
+            # SI product page 404 -> search SI for the correct URL
+            if _is_si_product_url(url):
+                search_url = _si_search_url(url)
+                print(f"       searching SI: {search_url}")
+                s2, ct2, body2, _ = await _fetch(search_url, session, timeout, sems)
+                if s2 == 200 and body2:
+                    candidates = _extract_si_product_urls(
+                        body2.decode("utf-8", errors="replace")
+                    )
+                    async with seen_lock:
+                        fresh = [u for u in candidates if u not in seen]
+                        for u in fresh:
+                            seen.add(u)
+                    if fresh:
+                        print(f"       -> {len(fresh)} candidates: {', '.join(u.split('/')[-1] for u in fresh[:3])}")
+                        for u in fresh:
+                            await _append_url(u, file_lock)
+                            await queue.put(u)
+                        new_discovered += len(fresh)
+                    else:
+                        print(f"       -> no new candidates found")
+
         else:
+            # 429 / timeout / other transient error — NOT recorded, retried next run
             err = info if status == 0 else f"HTTP {status}"
-            counters["err"] += 1
             print(f"[ERR]  {url}  -> {err}")
 
+        await progress.record(status, url, new_discovered)
         queue.task_done()
 
 
@@ -257,16 +397,21 @@ async def run(args):
     pending = read_pending_urls(manifest, args.force)
 
     if not pending:
-        print("All URLs already cached. Use --force to re-fetch.")
+        print("All URLs already cached or marked 404. Use --force to retry everything.")
         return
 
-    print(f"Pending: {len(pending)}  |  Already cached: {len(manifest)}  |  Workers: {args.workers}")
+    throttled = " ".join(f"{d.split('.')[0]}={lim}conn" for d, lim in _DOMAIN_SEM.items())
+    already_done = sum(1 for v in manifest.values() if v.get("status") == 200)
+    already_404 = sum(1 for v in manifest.values() if v.get("status") == 404)
+    print(f"Pending: {len(pending)}  |  Already ok: {already_done}  |  Already 404: {already_404}  |  Workers: {args.workers}")
+    print(f"Throttled: {throttled}")
 
     seen: set = set(manifest.keys()) | set(pending)
     manifest_lock = asyncio.Lock()
     seen_lock = asyncio.Lock()
     file_lock = asyncio.Lock()
-    counters = {"total": 0, "ok": 0, "err": 0}
+    sems = DomainSemaphores()
+    progress = Progress(len(pending))
 
     queue: asyncio.Queue = asyncio.Queue()
     for url in pending:
@@ -276,10 +421,10 @@ async def run(args):
     async with aiohttp.ClientSession(connector=connector) as session:
         workers = [
             asyncio.create_task(worker(
-                queue, session, args.timeout,
+                queue, session, args.timeout, sems,
                 manifest, manifest_lock,
                 seen, seen_lock,
-                file_lock, counters,
+                file_lock, progress,
             ))
             for _ in range(args.workers)
         ]
@@ -288,19 +433,23 @@ async def run(args):
             await queue.put(None)
         await asyncio.gather(*workers)
 
-    print(f"\n{counters['ok']} fetched  |  {counters['err']} errors  |  {len(manifest)} total cached")
+    elapsed = time.monotonic() - progress._start
+    print(
+        f"\nFinished in {elapsed:.0f}s"
+        f"  |  ok={progress.ok}  404={progress.err_404}  other={progress.err_other}"
+        f"  |  +{progress.discovered} new URLs discovered"
+        f"  |  {sum(1 for v in manifest.values() if v.get('status') == 200)} total cached"
+    )
 
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Durable BFS crawler. Kill and restart safely at any time."
+        description="Durable BFS crawler. Kill/restart safely. 404s recorded, 429s retried."
     )
-    ap.add_argument("--workers", type=int, default=200,
-                    help="Parallel connections (default 200)")
-    ap.add_argument("--timeout", type=int, default=20,
-                    help="Per-request timeout seconds (default 20)")
+    ap.add_argument("--workers", type=int, default=200)
+    ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--force", action="store_true",
-                    help="Re-fetch everything, ignoring manifest")
+                    help="Re-fetch everything including recorded 404s")
     asyncio.run(run(ap.parse_args()))
 
 

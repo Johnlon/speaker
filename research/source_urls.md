@@ -3,71 +3,71 @@
 # Lines starting with # are comments. One URL per non-comment line.
 
 # drivers.json/tang-band-w5-1138smf/datasheets
-https://www.tb-speaker.com/uploads/files/cadcecac0ea8af7e07014e520d4ea00d.pdf)
+https://www.tb-speaker.com/uploads/files/cadcecac0ea8af7e07014e520d4ea00d.pdf
 
 # drivers.json/celestion-tf0510/datasheets
-https://fast-images.static-thomann.de/pics/atg/atgdata/document/specs/315585.pdf)
+https://fast-images.static-thomann.de/pics/atg/atgdata/document/specs/315585.pdf
 
 # drivers.json/dayton-audio-ds115-8/datasheets
-https://www.parts-express.com/pedocs/specs/295-424--dayton-audio-ds115-8-specifications.pdf)
+https://www.parts-express.com/pedocs/specs/295-424--dayton-audio-ds115-8-specifications.pdf
 
 # drivers.json/dayton-audio-dsa90-8/datasheets
-https://www.parts-express.com/pedocs/specs/295-522--dayton-audio-DSA90-8-specifications.pdf)
+https://www.parts-express.com/pedocs/specs/295-522--dayton-audio-DSA90-8-specifications.pdf
 
 # drivers.json/dayton-audio-nd90-4/datasheets
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND90-4/pdf_dayton%20audio_ND90-4_1.pdf)
+https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND90-4/pdf_dayton%20audio_ND90-4_1.pdf
 
 # drivers.json/dayton-audio-nd91-4/datasheets
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND91-4/pdf_dayton%20audio_ND91-4_1.pdf)
+https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND91-4/pdf_dayton%20audio_ND91-4_1.pdf
 
 # drivers.json/dayton-audio-tcp115-8/datasheets
-https://www.daytonaudio.com/images/resources/295-416--dayton-audio-tcp115-8-specification-sheet.pdf)
+https://www.daytonaudio.com/images/resources/295-416--dayton-audio-tcp115-8-specification-sheet.pdf
 
 # drivers.json/hivi-swan-b4n/datasheets
-https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_1.pdf)
-https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_2.pdf)
+https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_1.pdf
+https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_2.pdf
 
 # drivers.json/peerless-by-tymphany-sds-p830656/datasheets
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/SDS-P830656/SDS-P830656.pdf)
+https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/SDS-P830656/SDS-P830656.pdf
 
 # drivers.json/sb-acoustics-sb12pacr25-4-coax-sb-acoustics-sb12pacr25-4-coax/datasheets
-https://doc.soundimports.nl/pdf/brands/SB%20Acoustics/SB12PACR25-4-COAX/SB12PACR25-4-COAX-data.pdf)
+https://doc.soundimports.nl/pdf/brands/SB%20Acoustics/SB12PACR25-4-COAX/SB12PACR25-4-COAX-data.pdf
 
 # drivers.json/dayton-audio-nd25fw-4/datasheets
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND25FW-4/pdf_Dayton%20Audio_ND25FW-4_1.pdf)
+https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND25FW-4/pdf_Dayton%20Audio_ND25FW-4_1.pdf
 
 # drivers.json/dayton-audio-rst28f-4/datasheets
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/RST28F-4/pdf_Dayton%20Audio_RST28F-4_1.pdf)
+https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/RST28F-4/pdf_Dayton%20Audio_RST28F-4_1.pdf
 
 # drivers.json/hivi-tn25/datasheets
-https://doc.soundimports.nl/pdf/brands/HiVi/TN25/pdf_HiVi_TN25_1.pdf)
+https://doc.soundimports.nl/pdf/brands/HiVi/TN25/pdf_HiVi_TN25_1.pdf
 
 # drivers.json/morel-mdt22t/datasheets
-https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880)
+https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880
 
 # drivers.json/peerless-by-tymphany-dx25tg59-04/datasheets
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/DX25TG59-04/DX25TG59-04.pdf)
+https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/DX25TG59-04/DX25TG59-04.pdf
 
 # drivers.json/peerless-by-tymphany-xt25tg30-04/datasheets
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf)
+https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf
 
 # drivers.json/sb-acoustics-sb19st-c000-4-sb-acoustics-sb19st-c000-4/datasheets
-https://sbacoustics.com/wp-content/uploads/2020/05/SB19ST-C000-4.pdf)
+https://sbacoustics.com/wp-content/uploads/2020/05/SB19ST-C000-4.pdf
 
 # drivers.json/sb-acoustics-sb21rdc-c000-4-sb-acoustics-sb21rdc-c000-4/datasheets
-https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf)
+https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf
 
 # drivers.json/sb-acoustics-sb21rdcn-c000-4-sb-acoustics-sb21rdcn-c000-4/datasheets
-https://sbacoustics.com/wp-content/uploads/2020/04/SB21RDCN-C000-4.pdf)
+https://sbacoustics.com/wp-content/uploads/2020/04/SB21RDCN-C000-4.pdf
 
 # drivers.json/sb-acoustics-sb29rdac-c000-4-sb-acoustics-sb29rdac-c000-4/datasheets
-https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf)
+https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf
 
 # drivers.json/scan-speak-discovery-d2604-833000/datasheets
-https://www.scan-speak.dk/datasheet/pdf/d2604-833000.pdf)
+https://www.scan-speak.dk/datasheet/pdf/d2604-833000.pdf
 
 # drivers.json/tang-band-w3-315e/datasheets
-https://doc.soundimports.nl/pdf/brands/Tang%20Band/W3-315E/pdf_Tang%20Band_W3-315E_1.pdf)
+https://doc.soundimports.nl/pdf/brands/Tang%20Band/W3-315E/pdf_Tang%20Band_W3-315E_1.pdf
 
 # drivers.md/Source
 https://www.soundimports.eu/en/tang-band-w5-1138smf.html
@@ -100,24 +100,16 @@ https://www.soundimports.eu/en/sb-acoustics-sb26st-c000-5.html
 https://sbacoustics.com/product/sb26st-c000-5/
 https://www.soundimports.eu/en/dayton-audio-nd25fw-4.html
 https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter
-https://sbacoustics.com/wp-content/uploads/2020/04/SB21RDCN-C000-4.pdf
 https://willys-hifi.com/products/scanspeak-d2604-833000-tweeter
-https://www.scan-speak.dk/datasheet/pdf/d2604-833000.pdf
 https://willys-hifi.com/products/morel-mdt22-soft-dome-tweeter
-https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880
 https://willys-hifi.com/products/sb-acoustics-sb29rdac-c000-4-tweeter
-https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf
 https://willys-hifi.com/products/sb-acoustics-sb21rdc-c000-4-tweeter
-https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf
 https://www.lautsprechershop.de/chassis/zy2_main_en.htm
 https://www.soundimports.eu/en/dayton-audio-dsa90-8.html
 https://www.soundimports.eu/en/dayton-audio-tcp115-8.html
 https://www.soundimports.eu/en/dayton-audio-ds115-8.html
 https://www.daytonaudio.com/product/1054/ds115-8-4-designer-series-woofer-speaker-8-ohm
-https://www.parts-express.com/pedocs/specs/295-424--dayton-audio-ds115-8-specifications.pdf
 https://www.soundimports.eu/en/hivi-b4n.html
-https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_1.pdf
-https://doc.soundimports.nl/pdf/brands/HiVi/B4N/pdf_hiVi_B4N_2.pdf
 https://www.soundimports.eu/en/dayton-audio-rs100-8.html
 https://sbacoustics.com/product/4-sb12pacr25-4/
 https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-midwoofer
@@ -170,9 +162,7 @@ https://www.soundimports.eu/en/seas-fa8rcnds.html
 https://www.soundimports.eu/en/sica-35-f-1-cs-8.html
 https://www.soundimports.eu/en/peerless-by-tymphany-tc9fd18-08.html
 https://www.soundimports.eu/en/dayton-audio-nd91-4.html
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND91-4/pdf_dayton%20audio_ND91-4_1.pdf
 https://www.soundimports.eu/en/dayton-audio-nd90-4.html
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND90-4/pdf_dayton%20audio_ND90-4_1.pdf
 https://www.soundimports.eu/en/peerless-by-tymphany-pls-p830986.html
 https://www.soundimports.eu/en/markaudio-alpair-5-grey.html
 https://www.soundimports.eu/en/markaudio-alpair-5-gold.html
@@ -200,16 +190,10 @@ https://www.soundimports.eu/en/dayton-audio-rs125-4.html
 https://www.soundimports.eu/en/dayton-audio-rs125p-4.html
 
 # drivers.md
-https://www.tb-speaker.com/uploads/files/cadcecac0ea8af7e07014e520d4ea00d.pdf
 https://www.soundimports.eu/en/dayton-audio-nd140-pr.html
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf
-https://sbacoustics.com/wp-content/uploads/2020/05/SB19ST-C000-4.pdf
-https://doc.soundimports.nl/pdf/brands/HiVi/TN25/pdf_HiVi_TN25_1.pdf
 https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html
 https://www.soundimports.eu/en/peerless-by-tymphany-bc25sc06-04.html
 https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/RST28F-4/pdf_Dayton%20Audio_RST28F-4_1.pdf
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/DX25TG59-04/DX25TG59-04.pdf
 https://www.soundimports.eu/en/monacor-dt-25n.html
 https://www.soundimports.eu/en/peerless-by-tymphany-d27tg35-06.html
 https://www.soundimports.eu/en/dayton-audio-nd20fa-6.html
@@ -218,21 +202,14 @@ https://www.soundimports.eu/en/dayton-audio-dc25t-8.html
 https://www.soundimports.eu/en/dayton-audio-nd25fn-4.html
 https://www.soundimports.eu/en/peerless-by-tymphany-bc25tg15-04.html
 https://www.soundimports.eu/en/peerless-by-tymphany-oc25sc65-04.html
-https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND25FW-4/pdf_Dayton%20Audio_ND25FW-4_1.pdf
-https://www.parts-express.com/pedocs/specs/295-522--dayton-audio-DSA90-8-specifications.pdf
-https://www.daytonaudio.com/images/resources/295-416--dayton-audio-tcp115-8-specification-sheet.pdf
-https://doc.soundimports.nl/pdf/brands/SB%20Acoustics/SB12PACR25-4-COAX/SB12PACR25-4-COAX-data.pdf
 https://www.soundimports.eu/en/dayton-audio-pa130-8.html
 https://www.soundimports.eu/en/sb13pfcr25-4-woofer.html
 https://www.soundimports.eu/en/peerless-by-tymphany-sls-85s25cp04-04.html
-https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/SDS-P830656/SDS-P830656.pdf
 https://www.thomann.co.uk/celestion_tf0510.htm
-https://fast-images.static-thomann.de/pics/atg/atgdata/document/specs/315585.pdf
 https://www.soundimports.eu/en/scan-speak-d7608-920010.html
 https://www.soundimports.eu/en/hivi-dm-7500.html
 https://www.soundimports.eu/en/dayton-audio-rs52fn-8.html
 https://bluearan.co.uk/index.php?id=LAVMAF10300AF
-https://doc.soundimports.nl/pdf/brands/Tang%20Band/W3-315E/pdf_Tang%20Band_W3-315E_1.pdf
 
 # research/hfc_tweeter_index.md
 https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter
@@ -302,7 +279,7 @@ https://loudspeakerdatabase.com/Markaudio/Alpair-5_Gold
 https://loudspeakerdatabase.com/Markaudio/Alpair-5_Grey
 https://loudspeakerdatabase.com/Markaudio/Alpair-5G
 https://loudspeakerdatabase.com/Markaudio/CHN-70
-https://loudspeakerdatabase.com/Markaudio/PLUVIA-7HD_(Gold)
+https://loudspeakerdatabase.com/Markaudio/PLUVIA-7HD_(Gold
 https://loudspeakerdatabase.com/Monacor/MSH-115
 https://loudspeakerdatabase.com/Monacor/SP-4/60PRO
 https://loudspeakerdatabase.com/Monacor/SPM-116/8
