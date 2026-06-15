@@ -4,1348 +4,1033 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solutions — Curated Speaker Recommendations</title>
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
   <style>
     :root {
       --bg-dark: #0f111a;
       --bg-card: #181b28;
-      --bg-header: rgba(24, 27, 40, 0.7);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --text-main: #e2e8f0;
-      --text-muted: #94a3b8;
+      --bg-header: rgba(24,27,40,0.85);
+      --border: rgba(255,255,255,0.08);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
       --accent: #6366f1;
-      --accent-hover: #4f46e5;
-      
-      --color-pdf: #ef4444;
-      --color-willys: #f97316;
-      --color-si: #3b82f6;
-      --color-falcon: #10b981;
-      --color-pe: #8b5cf6;
     }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg-dark); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; padding-bottom: 60px; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    header { background: var(--bg-header); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; padding: 18px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo h1 { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; background: linear-gradient(135deg, #a5b4fc, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .logo p { font-size: 12px; color: var(--muted); }
+    .updated { font-size: 12px; color: var(--muted); }
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      padding-bottom: 60px;
-    }
+    .tabs-nav { display: flex; gap: 8px; margin-top: 28px; overflow-x: auto; padding-bottom: 4px; }
+    .tab-btn { background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--muted); padding: 9px 16px; border-radius: 8px; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 13px; white-space: nowrap; transition: all 0.2s; }
+    .tab-btn:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+    .tab-btn.active { background: var(--accent); color: white; border-color: var(--accent); box-shadow: 0 4px 12px rgba(99,102,241,0.25); }
 
-    header {
-      background: var(--bg-header);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 20px 0;
-    }
+    .tab-content { display: none; margin-top: 28px; animation: fade 0.25s ease; }
+    .tab-content.active { display: block; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .hero { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(24,27,40,0.5)); border: 1px solid var(--border); border-radius: 14px; padding: 26px 30px; margin-bottom: 24px; }
+    .hero h2 { font-family: 'Outfit', sans-serif; font-size: 24px; color: white; margin-bottom: 8px; }
+    .hero p { color: var(--muted); font-size: 15px; }
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+    thead tr { border-bottom: 2px solid rgba(99,102,241,0.3); }
+    th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 10px 12px; text-align: left; white-space: nowrap; }
+    td { padding: 12px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    tr:last-child td { border-bottom: none; }
 
-    .logo-area h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      background: linear-gradient(135deg, #a5b4fc, #6366f1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
-    }
+    .rank { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--accent); font-size: 16px; }
+    .id { font-family: monospace; font-size: 12px; color: var(--muted); }
+    .driver { font-weight: 600; color: white; font-size: 13.5px; }
+    .driver-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .xover { font-family: monospace; font-size: 12.5px; }
+    .window { font-size: 11.5px; margin-top: 2px; }
+    .window.comfortable { color: #34d399; }
+    .window.moderate { color: #60a5fa; }
+    .window.tight { color: #fbbf24; }
+    .window.marginal { color: #f97316; }
+    .price { font-weight: 700; font-size: 15px; color: white; white-space: nowrap; }
+    .psu-cell { font-family: monospace; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+    .char { font-size: 12.5px; color: var(--muted); }
+    .why { font-size: 13px; color: var(--text); }
 
-    .logo-area p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+    .badge-willys { background: rgba(249,115,22,0.18); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+    .badge-willys:hover { background: rgba(249,115,22,0.3); }
+    .badge-si { background: rgba(59,130,246,0.18); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+    .badge-si:hover { background: rgba(59,130,246,0.3); }
+    .badge-falcon { background: rgba(16,185,129,0.18); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+    .badge-falcon:hover { background: rgba(16,185,129,0.3); }
+    .badge-hfc { background: rgba(139,92,246,0.18); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+    .badge-hfc:hover { background: rgba(139,92,246,0.3); }
+    .badge-pdf { background: rgba(239,68,68,0.18); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+    .badge-pdf:hover { background: rgba(239,68,68,0.3); }
 
-    /* Tabs Layout */
-    .tabs-nav {
-      display: flex;
-      gap: 8px;
-      margin-top: 30px;
-      overflow-x: auto;
-      padding-bottom: 8px;
-      scrollbar-width: thin;
-    }
+    .note-box { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.2); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; font-size: 13px; color: var(--muted); }
+    .note-box strong { color: var(--text); }
+    .warn { color: #f97316; }
 
-    .tabs-nav::-webkit-scrollbar {
-      height: 4px;
-    }
+    .section-title { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 600; color: white; margin: 24px 0 12px; border-left: 3px solid var(--accent); padding-left: 10px; }
 
-    .tabs-nav::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-    }
-
-    .tab-btn {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      padding: 10px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .tab-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text-main);
-    }
-
-    .tab-btn.active {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
-    }
-
-    .tab-content {
-      display: none;
-      margin-top: 30px;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Cards & Layout panels */
-    .hero-card {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(24, 27, 40, 0.5) 100%);
-      border: 1px solid var(--border-color);
-      padding: 30px;
-      border-radius: 16px;
-      margin-bottom: 30px;
-    }
-
-    .hero-card h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .hero-card p {
-      color: var(--text-muted);
-      margin-bottom: 15px;
-      font-size: 16px;
-    }
-
-    .hero-card ul {
-      margin-left: 20px;
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-
-    .grid-panels {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    @media (min-width: 768px) {
-      .grid-panels {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .panel-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 24px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .panel-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .panel-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: white;
-    }
-
-    .panel-card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    /* Tables */
-    .table-container {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 14px;
-    }
-
-    th {
-      background: #1f2333;
-      color: white;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      padding: 14px 18px;
-      border-bottom: 1px solid var(--border-color);
-      white-space: nowrap;
-    }
-
-    td {
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border-color);
-      vertical-align: middle;
-      color: var(--text-main);
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    /* Badges & Buttons styling */
-    .btn-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 11px;
-      text-decoration: none;
-      margin-right: 4px;
-      margin-bottom: 4px;
-      transition: all 0.2s ease;
-    }
-
-    .btn-badge:hover {
-      filter: brightness(1.25);
-      transform: translateY(-0.5px);
-    }
-
-    .badge-pdf {
-      background: rgba(239, 68, 68, 0.12);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-
-    .badge-willys {
-      background: rgba(249, 115, 22, 0.12);
-      color: #fb923c;
-      border: 1px solid rgba(249, 115, 22, 0.3);
-    }
-
-    .badge-si {
-      background: rgba(59, 130, 246, 0.12);
-      color: #60a5fa;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .badge-falcon {
-      background: rgba(16, 185, 129, 0.12);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    .badge-pe {
-      background: rgba(139, 92, 246, 0.12);
-      color: #a78bfa;
-      border: 1px solid rgba(139, 92, 246, 0.3);
-    }
-
-    .badge-hfc {
-      background: rgba(236, 72, 153, 0.12);
-      color: #f472b6;
-      border: 1px solid rgba(236, 72, 153, 0.3);
-    }
-
-    .badge-web {
-      background: rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .id-tag {
-      background: rgba(99, 102, 241, 0.15);
-      color: #a5b4fc;
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 12px;
-      display: inline-block;
-    }
-
-    .driver-name {
-      font-weight: 600;
-      color: white;
-      margin-bottom: 4px;
-    }
-
-    .driver-desc {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 22px;
-      margin: 30px 0 15px 0;
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .price-tag {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      color: white;
-    }
-
-    .card-list {
-      list-style-type: none;
-      margin-top: 15px;
-    }
-
-    .card-list li {
-      margin-bottom: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-list li:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
+    @media (max-width: 768px) { th, td { padding: 8px; } .badges { flex-direction: column; } }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container header-content">
-      <div class="logo-area">
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
         <h1>Kitchen Counter Monitor</h1>
-        <p>Curated Driver Selection & Scenario Recommendations</p>
+        <p>3-way active · JAB5 + ADAU1701 DSP · Tang Band W5-1138SMF sub</p>
       </div>
+      <div class="updated">Updated June 2026</div>
     </div>
-  </header>
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="showTab('offaxis')">60° Off-Axis</button>
+      <button class="tab-btn" onclick="showTab('onaxis')">On-Axis / Critical</button>
+      <button class="tab-btn" onclick="showTab('compact')">Compact Baffle</button>
+      <button class="tab-btn" onclick="showTab('value')">Best Value</button>
+      <button class="tab-btn" onclick="showTab('visual')">Visual Interest</button>
+    </nav>
+  </div>
+</header>
 
-  <main class="container">
-    
-    <!-- Tab Controls -->
-    <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab(event, 'tab-overview')">Overview</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-quick')">Quick Guide</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-s1')">Scenario 1 (Off-Axis)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-s2')">Scenario 2 (On-Axis)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-s3')">Scenario 3 (Compact)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-s4')">Scenario 4 (Visuals)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-safety')">Burnout Safety</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-sourcing')">Sourcing Index</button>
-    </div>
+<div class="container">
 
-    <!-- TAB: OVERVIEW -->
-    <div id="tab-overview" class="tab-content active">
-      <div class="hero-card">
-        <h2>Curated Recommendations</h2>
-        <p>This document presents curated driver recommendations for the kitchen counter monitor speaker build. All recommendations are evaluated on acoustic alignment, electrical compatibility, and physical constraints, <strong>ignoring stock availability</strong> to target the absolute best engineering and acoustic outcomes.</p>
-        <p>The speaker is designed to play alongside a dedicated active subwoofer (crossing over at 150 Hz), with system crossover and DSP alignment handled by an Analog Devices ADAU1701 DSP and a Wuzhi JAB5 amplifier (offering four channels powered by a 24V to 29V power supply). The owner's tonal reference is the classic British sound (e.g. B&W DM4).</p>
-      </div>
+<!-- ══════════════════════════════════════════════════════════
+     TAB 1 — 60° OFF-AXIS (KITCHEN PRIMARY)
+     ══════════════════════════════════════════════════════════ -->
+<div id="offaxis" class="tab-content active">
+  <div class="hero">
+    <h2>Best for 60° Off-Axis — Kitchen Primary Use</h2>
+    <p>Listener frequently at the cooker, 5–6 ft away, 60° horizontal. Ring radiators maintain flat off-axis HF response at angles where standard domes roll off. Narrower mid (3–4") defers beaming to higher frequencies. A wide crossover window means the DSP has room to set the exact hand-off — critical when the tweeter is working off-axis.</p>
+  </div>
 
-      <h2 class="section-title">Best Overall Recommendations</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">For a compact cabinet sitting on a kitchen counter where the listener is frequently situated at 60° off-axis, the ring radiator or ring dome design is acoustically mandatory. Standard domes suffer severe high-frequency rolloff at 60°, whereas ring radiators maintain flat, controlled off-axis response much higher into the treble.</p>
+  <div class="note-box">
+    <strong>Window quality key:</strong>
+    <span class="window comfortable">comfortable ≥ 1 oct (3×Fs floor)</span> ·
+    <span class="window moderate">moderate 0.5–1 oct</span> ·
+    <span class="window tight">tight &lt; 0.5 oct</span> ·
+    <span class="window marginal">marginal (2×Fs floor, THD concern)</span>
+  </div>
 
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Priority</th>
-                <th>ID</th>
-                <th>Midrange</th>
-                <th>Tweeter</th>
-                <th>Crossover</th>
-                <th>Price</th>
-                <th>PSU</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: 600; color: white;">Best Overall (Burnproof / Performance)</td>
-                <td><span class="id-tag">RP3</span></td>
-                <td>
-                  <div class="driver-name">SB12PFCR25-4</div>
-                  <div class="driver-desc">4" paper cone</div>
-                  <a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Buy Willys £20.58</a>
-                  <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html" class="btn-badge badge-si">Buy SI €25.95</a>
-                </td>
-                <td>
-                  <div class="driver-name">R2604/833000</div>
-                  <div class="driver-desc">Dual Ring Radiator</div>
-                  <a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Buy Willys £46.00</a>
-                  <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Buy Falcon £45.95</a>
-                  <a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">Buy SI €62.45</a>
-                </td>
-                <td>880–2,730 Hz</td>
-                <td><span class="price-tag">~£68</span></td>
-                <td>24V/3.4A/82W <br> 28V/4.4A/124W</td>
-                <td>Ring radiator off-axis advantages combined with a massive crossover window (880–2,730 Hz). The 100W tweeter rating provides complete burnout immunity under full amplifier rail voltage.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">Best Overall (Premium Mid)</td>
-                <td><span class="id-tag">PACR1</span></td>
-                <td>
-                  <div class="driver-name">SB12PACR25-4</div>
-                  <div class="driver-desc">4" Dark Aluminium</div>
-                  <a href="research/sb_acoustics_sb12pacr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer" class="btn-badge badge-willys">Buy Willys £23.76</a>
-                  <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html" class="btn-badge badge-si">Buy SI €32.45</a>
-                </td>
-                <td>
-                  <div class="driver-name">R2604/833000</div>
-                  <div class="driver-desc">Dual Ring Radiator</div>
-                  <a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Buy Willys £46.00</a>
-                  <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Buy Falcon £45.95</a>
-                  <a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">Buy SI €62.45</a>
-                </td>
-                <td>880–2,730 Hz</td>
-                <td><span class="price-tag">~£70</span></td>
-                <td>24V/3.3A/80W <br> 28V/4.4A/122W</td>
-                <td>Upgrades the paper mid to dark anodized aluminum. Lowers midrange distortion, increases transient speed, and provides a huge 5.0 mm Xmax with Fs=52.5 Hz (2.85x safety margin at 150 Hz).</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">Best Overall (Compact spacing)</td>
-                <td><span class="id-tag">XCR3</span></td>
-                <td>
-                  <div class="driver-name">SB12PFCR25-4</div>
-                  <div class="driver-desc">4" paper cone</div>
-                  <a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Buy Willys £20.58</a>
-                  <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html" class="btn-badge badge-si">Buy SI €25.95</a>
-                </td>
-                <td>
-                  <div class="driver-name">SB21RDCN</div>
-                  <div class="driver-desc">Neodymium Ring Dome</div>
-                  <a href="research/sb_acoustics_sb21rdcn-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a>
-                  <a href="https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter" class="btn-badge badge-willys">Buy Willys £41.60</a>
-                  <a href="https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html" class="btn-badge badge-si">Buy SI €59.95</a>
-                </td>
-                <td>1,700–2,730 Hz</td>
-                <td><span class="price-tag">~£64</span></td>
-                <td>24V/3.7A/89W <br> 28V/4.7A/131W</td>
-                <td>Compact neodymium ring dome. The small 58mm round faceplate reduces driver spacing to 90mm (a 23% reduction vs RP3), significantly improving vertical lobing and integration.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th><th>ID</th><th>Mid</th><th>Tweeter</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank">1</span></td>
+        <td><span class="id">RP1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-dsa90-8.html">SI €34.95</a>
+            <a class="badge badge-pdf" href="research/dayton_audio_dsa90-8.pdf">PDF</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak ring rad, 92 dB, 100W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter">Willys £46.00</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 3,260 Hz → <strong>1,855 Hz</strong></div>
+          <div class="window comfortable">comfortable [1.0 oct] · 4.2×Fs</div>
+        </td>
+        <td><span class="price">£76</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
+        <td class="why">Absolute window champion — the only combo in the catalogue with a comfortable ≥1 oct window. 3&quot; Al mid defers beaming above 3,260 Hz; ring rad holds HF flat past 60°. 100W tweeter is burnout-proof at any realistic DSP setting.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">2</span></td>
+        <td><span class="id">RP3</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html">SI</a>
+            <a class="badge badge-pdf" href="research/sb_acoustics_sb12pfcr25-4.pdf">PDF</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak ring rad, 92 dB, 100W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter">Willys £46.00</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,730 Hz → <strong>1,698 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.9×Fs</div>
+        </td>
+        <td><span class="price">£67</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 82W</span></td>
+        <td class="why">Natural fibre warmth + Discovery ring radiator. 1,850 Hz crossover window gives generous DSP tuning room. 100W tweeter is burnout-proof. £9 cheaper than RP1 by using a 4&quot; mid instead of 3&quot;.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">3</span></td>
+        <td><span class="id">RR2</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Peerless ring rad, 91.9 dB, 15W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter">Willys</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,730 Hz → <strong>1,698 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.9×Fs</div>
+        </td>
+        <td><span class="price">£50</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 83W</span></td>
+        <td class="why">Identical acoustic window to RP3 at £17 less. Same ring radiator off-axis pattern. 15W tweeter requires a DSP level limiter — the ADAU1701 handles this natively. Best value off-axis option.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><span class="id">B_TG</span></td>
+        <td>
+          <div class="driver">HiVi B4N</div>
+          <div class="driver-sub">4&quot; treated Al, 85.0 dB, 8Ω · gold cone</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/hivi-b4n.html">SI €22.45 / £19.08</a>
+            <a class="badge badge-pdf" href="research/hivi_b4n.pdf">PDF</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Peerless ring rad, 91.9 dB, 15W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,636 Hz → <strong>1,668 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£49</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">B4N sensitivity = 85 dB, identical to sub — zero DSP correction needed at matched SPL. Wide 1,756 Hz crossover window. Ring rad off-axis. Under £50. <em>Gold cone with dark ring radiator is a striking look.</em></td>
+      </tr>
+      <tr>
+        <td><span class="rank">5</span></td>
+        <td><span class="id">XBG3</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25BG60-04</div>
+          <div class="driver-sub">Peerless ring rad, 92.6 dB, 15W, 4Ω · in stock SI</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-xt25bg60-04-tweeter">Willys £37.14</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,140 – 3,260 Hz → <strong>2,112 Hz</strong></div>
+          <div class="window moderate">moderate [0.6 oct] · 3.7×Fs</div>
+        </td>
+        <td><span class="price">£67</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">XT25TG30 alternative when ring rad is pre-order only. XT25BG is in stock at Willys. Same DSA90 3&quot; mid and ring radiator off-axis pattern. Higher minimum crossover (1,140 vs 880 Hz) is the only trade-off.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <!-- TAB: QUICK selection GUIDE -->
-    <div id="tab-quick" class="tab-content">
-      <h2 class="section-title">Quick Selection Guide</h2>
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>If your design priority is...</th>
-                <th>Best pick combo</th>
-                <th>ID</th>
-                <th>Price</th>
-                <th>Key Reason</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>60° off-axis kitchen listening</td>
-                <td>
-                  <strong>SB12PFCR25-4</strong> <a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Willys £20.58</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html" class="btn-badge badge-si">SI €25.95</a>
-                  <br>+ <strong>R2604/833000</strong> <a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Willys £46.00</a> <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Falcon £45.95</a>
-                </td>
-                <td><span class="id-tag">RP3</span></td>
-                <td><span class="price-tag">~£68</span></td>
-                <td>Wide dispersion + 100W safety + maximum crossover latitude</td>
-              </tr>
-              <tr>
-                <td>Tighter spacing + ring radiator</td>
-                <td>
-                  <strong>SB12PFCR25-4</strong> <a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Willys £20.58</a>
-                  <br>+ <strong>SB21RDCN</strong> <a href="research/sb_acoustics_sb21rdcn-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter" class="btn-badge badge-willys">Willys £41.60</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html" class="btn-badge badge-si">SI €59.95</a>
-                </td>
-                <td><span class="id-tag">XCR3</span></td>
-                <td><span class="price-tag">~£64</span></td>
-                <td>Annular ring dome in a compact 58mm flange; 90mm centre spacing</td>
-              </tr>
-              <tr>
-                <td>On-axis reference quality</td>
-                <td>
-                  <strong>SB12MNRX2-25-4</strong> <a href="research/sb_acoustics_sb12mnrx2-25-4.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange" class="btn-badge badge-willys">Willys £48.10</a>
-                  <br>+ <strong>SB29RDNC</strong> <a href="research/sb_acoustics_sb29rdnc-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter" class="btn-badge badge-willys">Willys £59.88</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb29rdnc-c000-4.html" class="btn-badge badge-si">SI €78.95</a>
-                </td>
-                <td><span class="id-tag">S3-Neo</span></td>
-                <td><span class="price-tag">~£105</span></td>
-                <td>Dedicated low-distortion midrange + premium 72mm neo ring dome</td>
-              </tr>
-              <tr>
-                <td>Classic paper warmth (British look)</td>
-                <td>
-                  <strong>DS115-8</strong> <a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-                  <br>+ <strong>H1189</strong> <a href="research/seas_27tdfc_h1189.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter" class="btn-badge badge-willys">Willys £55.00</a> <a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">Falcon £32.95</a>
-                </td>
-                <td><span class="id-tag">DS_DF</span></td>
-                <td><span class="price-tag">~£93</span></td>
-                <td>Soft paper mid + smooth chambered SEAS dome; low 1.1kHz crossover</td>
-              </tr>
-              <tr>
-                <td>Narrowest baffle / minimum width</td>
-                <td>
-                  <strong>DSA90-8</strong> <a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer" class="btn-badge badge-willys">Willys £29.90</a>
-                  <br>+ <strong>XT25SC40-04</strong> <a href="research/peerless_xt25sc40-04.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter" class="btn-badge badge-willys">Willys £24.00</a> <a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html" class="btn-badge badge-si">SI €32.95</a>
-                </td>
-                <td><span class="id-tag">XC1</span></td>
-                <td><span class="price-tag">~£55</span></td>
-                <td>3" aluminum mid + 43.9mm ring rad; record 68mm centre spacing</td>
-              </tr>
-              <tr>
-                <td>Point-source phase coherence</td>
-                <td>
-                  <strong>SB12PACR25-4-COAX</strong> <a href="research/sb_acoustics_sb12pacr25-4-coax.pdf" class="btn-badge badge-pdf">Local PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-coax-coaxial-speaker" class="btn-badge badge-willys">Willys £52.53</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4-coax.html" class="btn-badge badge-si">SI €68.45</a>
-                </td>
-                <td><span class="id-tag">B9</span></td>
-                <td><span class="price-tag">~£59</span></td>
-                <td>Coaxial design eliminates time-alignment issues entirely</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════════════════
+     TAB 2 — ON-AXIS / CRITICAL LISTENING
+     ══════════════════════════════════════════════════════════ -->
+<div id="onaxis" class="tab-content">
+  <div class="hero">
+    <h2>Best for On-Axis / Critical Listening</h2>
+    <p>Seated directly in front, 5–6 ft. Off-axis pattern matters less; priority shifts to crossover window quality (wide = easier DSP alignment), driver linearity, and tweeter resolution. Standard domes are viable here. Bigger mids can be used because the listener is on-axis where the beam is pointed.</p>
+  </div>
 
-    <!-- TAB: SCENARIO 1 -->
-    <div id="tab-s1" class="tab-content">
-      <h2 class="section-title">Scenario 1 — Kitchen 60° Off-Axis Listening</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">The primary listener is standing at the counter, cooking, or moving about, placing them ~60° off the speaker's main axis. Tweeters with wide off-axis dispersion are highly ranked. Ring radiators and ring domes are the strongest choices; 19mm small domes are best among standard domes.</p>
-      
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>ID</th>
-                <th>Midrange</th>
-                <th>Tweeter</th>
-                <th>Crossover</th>
-                <th>Price</th>
-                <th>PSU</th>
-                <th>Character</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td><span class="id-tag">RP3</span></td>
-                <td>
-                  <strong>SB12PFCR25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Willys £20.58</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html" class="btn-badge badge-si">SI €25.95</a>
-                </td>
-                <td>
-                  <strong>R2604/833000</strong>
-                  <br><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Willys £46.00</a> <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Falcon £45.95</a>
-                </td>
-                <td>880–2,730 Hz</td>
-                <td><span class="price-tag">~£68</span></td>
-                <td>24V/3.4A/82W <br> 28V/4.4A/124W</td>
-                <td>Warm + Detailed</td>
-                <td>Widest crossover window (880–2,730 Hz) for a ring radiator, 100W safety against calibration error, natural paper warmth.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><span class="id-tag">PACR1</span></td>
-                <td>
-                  <strong>SB12PACR25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12pacr25-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer" class="btn-badge badge-willys">Willys £23.76</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html" class="btn-badge badge-si">SI €32.45</a>
-                </td>
-                <td>
-                  <strong>R2604/833000</strong>
-                  <br><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Willys £46.00</a> <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Falcon £45.95</a>
-                </td>
-                <td>880–2,730 Hz</td>
-                <td><span class="price-tag">~£70</span></td>
-                <td>24V/3.3A/80W <br> 28V/4.4A/122W</td>
-                <td>Detailed + Crisp</td>
-                <td>Upgrades the midrange to an anodized aluminum cone for lower distortion, keeping the same wide-dispersion 100W tweeter.</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><span class="id-tag">XCR3</span></td>
-                <td>
-                  <strong>SB12PFCR25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">Willys £20.58</a>
-                </td>
-                <td>
-                  <strong>SB21RDCN</strong>
-                  <br><a href="research/sb_acoustics_sb21rdcn-c000-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter" class="btn-badge badge-willys">Willys £41.60</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html" class="btn-badge badge-si">SI €59.95</a>
-                </td>
-                <td>1,700–2,730 Hz</td>
-                <td><span class="price-tag">~£64</span></td>
-                <td>24V/3.7A/89W <br> 28V/4.7A/131W</td>
-                <td>Detailed + cohesive</td>
-                <td>Annular ring dome in a 58mm flange; tight 90mm spacing reduces lobing; 40W power rating.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><span class="id-tag">RR2</span></td>
-                <td>
-                  <strong>SB12PFCR25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>XT25TG30-04</strong>
-                  <br><a href="research/peerless_xt25tg30-04.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter" class="btn-badge badge-willys">Willys £31.95</a> <a href="https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html" class="btn-badge badge-falcon">Falcon £18.20</a> <a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">SI €49.95</a>
-                </td>
-                <td>880–2,730 Hz</td>
-                <td><span class="price-tag">~£50</span></td>
-                <td>24V/3.4A/83W <br> 28V/4.4A/125W</td>
-                <td>Warm + wide</td>
-                <td>Best value wide-window ring radiator. Same acoustic window as RP3 but utilizes a 15W tweeter (requires DSP limiter).</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><span class="id-tag">RD2</span></td>
-                <td>
-                  <strong>SB12PFCR25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>SB21SDC</strong>
-                  <br><a href="research/sb_acoustics_sb21sdc-c000-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb21sdc-c000-4-tweeter" class="btn-badge badge-willys">Willys £28.51</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb21sdc-c000-4.html" class="btn-badge badge-si">SI €39.95</a>
-                </td>
-                <td>1,440–2,730 Hz</td>
-                <td><span class="price-tag">~£56</span></td>
-                <td>24V/3.5A/84W <br> 28V/4.5A/126W</td>
-                <td>Warm + detailed</td>
-                <td>Annular ring dome, compact 92mm flange, low 720Hz Fs.</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td><span class="id-tag">S1</span></td>
-                <td>
-                  <strong>DS115-8</strong>
-                  <br><a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-                </td>
-                <td>
-                  <strong>SB19ST</strong>
-                  <br><a href="research/sb_acoustics_sb19st-c000-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb19st-c000-4-tweeter" class="btn-badge badge-willys">Willys £15.20</a> <a href="https://www.falconacoustics.co.uk/sb-acoustics-sb19st-c000-4-19mm-tweeter.html" class="btn-badge badge-falcon">Falcon £14.30</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb19st-c000-4.html" class="btn-badge badge-si">SI €21.45</a>
-                </td>
-                <td>1,960–2,636 Hz</td>
-                <td><span class="price-tag">~£50</span></td>
-                <td>24V/3.7A/88W <br> 28V/4.7A/130W</td>
-                <td>Warm</td>
-                <td>Small 19mm dome provides wide dispersion among standard domes. Classic paper mid.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th><th>ID</th><th>Mid</th><th>Tweeter</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank">1</span></td>
+        <td><span class="id">D6R1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-dsa90-8.html">SI €34.95</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">D2604/833000</div>
+          <div class="driver-sub">Scan-Speak Discovery dome, 89.6 dB, 100W, 4Ω · Fs=475Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/scan-speak-discovery-d2604-833000-tweeter">Willys £41.88</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">950 – 3,260 Hz → <strong>1,928 Hz</strong></div>
+          <div class="window moderate">moderate [0.9 oct] · 4.1×Fs</div>
+        </td>
+        <td><span class="price">£72</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">2,310 Hz crossover window — widest of any standard dome pairing in the catalogue. Fs=475 Hz lets the crossover floor drop to 950 Hz. Scan-Speak 100W cloth dome + DSA90 3&quot; Al: controlled, accurate, room to breathe.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">2</span></td>
+        <td><span class="id">TF1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SEAS 27TDFC H1189-06</div>
+          <div class="driver-sub">27mm rear-chambered cloth dome, 90 dB, 90W, 6Ω · Fs=550Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter">Willys £55.00</a>
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html">Falcon £56.92</a>
+            <a class="badge badge-hfc" href="https://www.hificollective.co.uk/speakers/seas-27tdfc-tweeter-h1189.html">HFC £56.92</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,100 – 3,260 Hz → <strong>2,074 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£87</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 82W</span></td>
+        <td class="why">Widest crossover window of any standard dome (2,160 Hz) — the rear chamber drops Fs to 550 Hz, uniquely enabling a crossover as low as 1.1 kHz. Prestige-class SEAS cloth dome. 90W at 6Ω — recalculate PSU for 6Ω JAB5 channel.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">3</span></td>
+        <td><span class="id">RP1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak ring rad, 92 dB, 100W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 3,260 Hz → <strong>1,855 Hz</strong></div>
+          <div class="window comfortable">comfortable [1.0 oct] · 4.2×Fs</div>
+        </td>
+        <td><span class="price">£76</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
+        <td class="why">The universally best combo. Works equally well on-axis and off-axis. Comfortable window means the DSP can move the crossover across a full octave and still be safe — maximum alignment flexibility.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><span class="id">RPN4</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SB29RDNC-C000-4</div>
+          <div class="driver-sub">29mm neodymium ring dome, 94 dB, 100W, 4Ω · Fs=580Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter">Willys £54.31</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,160 – 3,260 Hz → <strong>2,130 Hz</strong></div>
+          <div class="window moderate">moderate [0.6 oct] · 3.7×Fs</div>
+        </td>
+        <td><span class="price">£84</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 78W</span></td>
+        <td class="why">2,100 Hz crossover window — widest DSA90-8 pairing after RP1. Neodymium ring dome adds off-axis extension compared to standard domes. 100W = burnout impossible. Premium ring dome resolution for seated listening.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">5</span></td>
+        <td><span class="id">STC1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al cone, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SB26STCN-C000-4</div>
+          <div class="driver-sub">26mm neo-ferrite dome, 92 dB, 120W, 4Ω · Fs=950Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb26stcn-c000-4-tweeter">Willys £28.92</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,900 – 3,260 Hz → <strong>2,226 Hz</strong></div>
+          <div class="window marginal">marginal [0.5 oct] · 2.3×Fs</div>
+        </td>
+        <td><span class="price">£59</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
+        <td class="why">Most indestructible tweeter in the catalogue (120W). 1,360 Hz DSP window. At £59 it's the budget on-axis option. Tweeter operating at 2.3×Fs is marginal — DSP limiter essential, but system is then bullet-proof against misconfiguration.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <!-- TAB: SCENARIO 2 -->
-    <div id="tab-s2" class="tab-content">
-      <h2 class="section-title">Scenario 2 — On-Axis Listening</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">For seated, critical listening directly in front of the monitor. Off-axis roll-off is less critical; instead, midrange resolution, low distortion at the crossover point, and transient speed are prioritized.</p>
-      
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>ID</th>
-                <th>Midrange</th>
-                <th>Tweeter</th>
-                <th>Crossover</th>
-                <th>Price</th>
-                <th>PSU</th>
-                <th>Character</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td><span class="id-tag">S3-Neo</span></td>
-                <td>
-                  <strong>SB12MNRX2-25-4</strong>
-                  <br><a href="research/sb_acoustics_sb12mnrx2-25-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange" class="btn-badge badge-willys">Willys £48.10</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html" class="btn-badge badge-si">SI €61.95</a>
-                </td>
-                <td>
-                  <strong>SB29RDNC</strong>
-                  <br><a href="research/sb_acoustics_sb29rdnc-c000-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter" class="btn-badge badge-willys">Willys £59.88</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb29rdnc-c000-4.html" class="btn-badge badge-si">SI €78.95</a>
-                </td>
-                <td>1,160–2,730 Hz</td>
-                <td><span class="price-tag">~£105</span></td>
-                <td>24V/2.8A/67W <br> 28V/3.9A/109W</td>
-                <td>Detailed + neutral</td>
-                <td>Flagship monitor. Low-Qts natural-fibre midrange reproduces transients with high accuracy. Premium 72mm neo ring dome.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><span class="id-tag">DS_DF</span></td>
-                <td>
-                  <strong>DS115-8</strong>
-                  <br><a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-                </td>
-                <td>
-                  <strong>H1189</strong>
-                  <br><a href="research/seas_27tdfc_h1189.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter" class="btn-badge badge-willys">Willys £55.00</a> <a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">Falcon £32.95</a> <a href="https://www.hificollective.co.uk/speakers/seas-27tdfc-tweeter-h1189.html" class="btn-badge badge-hfc">HFC £56.92</a> <a href="https://www.soundimports.eu/en/seas-27tdfc.html" class="btn-badge badge-si">SI €71.86</a>
-                </td>
-                <td>1,100–2,636 Hz</td>
-                <td><span class="price-tag">~£93</span></td>
-                <td>24V/3.3A/79W <br> 28V/4.3A/121W</td>
-                <td>Smooth + warm</td>
-                <td>Recreates classic British hi-fi warmth. The rear-chambered SEAS tweeter has Fs=550Hz, allowing a low 1.1kHz crossover to keep the mid out of beaming.</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><span class="id-tag">B9</span></td>
-                <td colspan="2">
-                  <strong>SB12PACR25-4-COAX</strong> (Coaxial speaker)
-                  <br><a href="research/sb_acoustics_sb12pacr25-4-coax.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-coax-coaxial-speaker" class="btn-badge badge-willys">Willys £52.53</a> <a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4-coax.html" class="btn-badge badge-si">SI €68.45</a>
-                </td>
-                <td>2,600–2,730 Hz</td>
-                <td><span class="price-tag">~£59</span></td>
-                <td>24V/4.2A/100W <br> 28V/5.1A/142W</td>
-                <td>Clean + cohesive</td>
-                <td>Point-source coaxial design guarantees perfect phase integration and zero time offset. Dark aluminum cone look.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><span class="id-tag">RP2</span></td>
-                <td>
-                  <strong>DS115-8</strong>
-                  <br><a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-                </td>
-                <td>
-                  <strong>R2604/833000</strong>
-                  <br><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Willys £46.00</a> <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Falcon £45.95</a>
-                </td>
-                <td>880–2,636 Hz</td>
-                <td><span class="price-tag">~£80</span></td>
-                <td>24V/3.3A/79W <br> 28V/4.3A/121W</td>
-                <td>Warm + detailed</td>
-                <td>Combines classic paper mid warmth with a wide-window 100W ring radiator.</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><span class="id-tag">D6R2</span></td>
-                <td>
-                  <strong>DS115-8</strong>
-                  <br><a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-                </td>
-                <td>
-                  <strong>D2604/830000</strong>
-                  <br><a href="research/scanspeak_d2604-830000.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/scan-speak-discovery-d2604-830000-tweeter" class="btn-badge badge-willys">Willys £41.50</a> <a href="https://www.soundimports.eu/en/scan-speak-d2604-830000.html" class="btn-badge badge-si">SI €52.95</a>
-                </td>
-                <td>1,260–2,636 Hz</td>
-                <td><span class="price-tag">~£73</span></td>
-                <td>24V/3.2A/77W <br> 28V/4.2A/119W</td>
-                <td>Detailed</td>
-                <td>Scan-Speak 100W textile dome. Resonant frequency of 630Hz gives a wide tuning window.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════════════════
+     TAB 3 — COMPACT BAFFLE / MINIMUM WIDTH
+     ══════════════════════════════════════════════════════════ -->
+<div id="compact" class="tab-content">
+  <div class="hero">
+    <h2>Compact Baffle — Minimum Width</h2>
+    <p>Baffle width is driven by centre-to-centre driver spacing + clearances. Smaller tweeter footprint plate = less spacing = narrower cabinet. All picks use DSA90-8 as the mid: its 90mm OD is the smallest mid in the catalogue, contributing ~45mm to spacing.</p>
+  </div>
 
-    <!-- TAB: SCENARIO 3 -->
-    <div id="tab-s3" class="tab-content">
-      <h2 class="section-title">Scenario 3 — Compact Baffle / Minimum Width</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">Designed for the narrowest possible front baffle footprint. Spacing is driven by midrange outer frame diameter and tweeter faceplate diameter.</p>
-      
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>ID</th>
-                <th>Midrange</th>
-                <th>Tweeter</th>
-                <th>Spacing</th>
-                <th>Price</th>
-                <th>PSU</th>
-                <th>Character</th>
-                <th>Why</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td><span class="id-tag">XC1</span></td>
-                <td>
-                  <strong>DSA90-8</strong>
-                  <br><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer" class="btn-badge badge-willys">Willys £29.90</a> <a href="https://www.soundimports.eu/en/dayton-audio-dsa90-8.html" class="btn-badge badge-si">SI €34.95</a>
-                </td>
-                <td>
-                  <strong>XT25SC40-04</strong>
-                  <br><a href="research/peerless_xt25sc40-04.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter" class="btn-badge badge-willys">Willys £24.00</a> <a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html" class="btn-badge badge-si">SI €32.95</a>
-                </td>
-                <td style="font-weight: 600; color: white;">68 mm</td>
-                <td><span class="price-tag">~£55</span></td>
-                <td>24V/3.3A/78W <br> 29V/4.2A/121W</td>
-                <td>Detailed + wide</td>
-                <td><strong>Minimum spacing record.</strong> Utilizes a 43.9mm ring radiator, enabling a cabinet only 115mm wide.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><span class="id-tag">SE1</span></td>
-                <td>
-                  <strong>DSA90-8</strong>
-                  <br><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>H1406-04</strong> (SEAS 27TFFNC/CG)
-                  <br><a href="research/seas_h1406-04.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/seas-prestige-27tffnc-cg-h1406-04-tweeter" class="btn-badge badge-willys">Willys £33.00</a> <a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">Falcon £32.95</a> <a href="https://www.soundimports.eu/en/seas-27tffnc-cg.html" class="btn-badge badge-si">SI €42.95</a>
-                </td>
-                <td style="font-weight: 600; color: white;">73 mm</td>
-                <td><span class="price-tag">~£74</span></td>
-                <td>24V/3.5A/83W <br> 28V/4.5A/125W</td>
-                <td>Detailed</td>
-                <td>Oval faceplate (69.7 x 54 mm) mounted in portrait. Very narrow baffle footprint, 80W power safety.</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><span class="id-tag">MDT22</span></td>
-                <td>
-                  <strong>DSA90-8</strong>
-                  <br><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>MDT22T</strong>
-                  <br><a href="research/morel_mdt22t.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/morel-mdt-22-tweeter" class="btn-badge badge-willys">Willys £48.00</a> <a href="https://www.soundimports.eu/en/morel-mdt-22.html" class="btn-badge badge-si">SI €63.95</a>
-                </td>
-                <td style="font-weight: 600; color: white;">73 mm</td>
-                <td><span class="price-tag">~£78</span></td>
-                <td>24V/3.4A/81W <br> 29V/4.3A/124W</td>
-                <td>Warm</td>
-                <td>Round 3" mid paired with a square 54 x 54 mm Morel soft dome. Low Fs=650Hz, 80W safety.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><span class="id-tag">XCR1</span></td>
-                <td>
-                  <strong>DSA90-8</strong>
-                  <br><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>SB21RDCN</strong>
-                  <br><a href="research/sb_acoustics_sb21rdcn-c000-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter" class="btn-badge badge-willys">Willys £41.60</a>
-                </td>
-                <td style="font-weight: 600; color: white;">75 mm</td>
-                <td><span class="price-tag">~£76</span></td>
-                <td>24V/3.6A/88W <br> 29V/4.5A/130W</td>
-                <td>Detailed + wide</td>
-                <td>Compact neodymium ring dome. Spacing is only 75mm, with a wide crossover window (1,700–3,260 Hz).</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><span class="id-tag">B10</span></td>
-                <td>
-                  <strong>DSA90-8</strong>
-                  <br><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">PDF</a>
-                </td>
-                <td>
-                  <strong>ND25FA-4</strong>
-                  <br><a href="research/dayton_nd25fa-4.pdf" class="btn-badge badge-pdf">PDF</a> <a href="https://willys-hifi.com/collections/dayton-audio-drive-units" class="btn-badge badge-willys">Willys £17.50</a> <a href="https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html" class="btn-badge badge-si">SI €21.45</a>
-                </td>
-                <td style="font-weight: 600; color: white;">79 mm</td>
-                <td><span class="price-tag">~£44</span></td>
-                <td>24V/3.6A/86W <br> 29V/4.4A/128W</td>
-                <td>Detailed</td>
-                <td>Tightest round dome spacing. Narrow crossover window (2,700 Hz minimum).</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+  <div class="note-box">
+    <strong>All five use DSA90-8 mid</strong> (90mm OD, £29.71 Willys / SI €34.95). Spacing column = centre-to-centre distance.
+  </div>
 
-    <!-- TAB: SCENARIO 4 -->
-    <div id="tab-s4" class="tab-content">
-      <h2 class="section-title">Scenario 4 — Visual/Aesthetic Recommendations</h2>
-      
-      <div class="grid-panels">
-        <div class="panel-card">
-          <h3>Consistent Circular Theme</h3>
-          <p>Traditional, symmetrical monitor look. The subwoofer, midrange, and tweeter are all round.</p>
-          <ul class="card-list">
-            <li>
-              <strong>DSA90-8 + SB19ST (ID: A3, ~£49)</strong>
-              <div style="margin-top: 8px;">
-                <a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">DSA90-8 PDF</a>
-                <a href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer" class="btn-badge badge-willys">Willys £29.90</a>
-                <a href="https://www.soundimports.eu/en/dayton-audio-dsa90-8.html" class="btn-badge badge-si">SI €34.95</a>
-              </div>
-              <div style="margin-top: 4px;">
-                <a href="research/sb_acoustics_sb19st-c000-4.pdf" class="btn-badge badge-pdf">SB19ST PDF</a>
-                <a href="https://willys-hifi.com/products/sb-acoustics-sb19st-c000-4-tweeter" class="btn-badge badge-willys">Willys £15.20</a>
-                <a href="https://www.falconacoustics.co.uk/sb-acoustics-sb19st-c000-4-19mm-tweeter.html" class="btn-badge badge-falcon">Falcon £14.30</a>
-              </div>
-              <p style="margin-top: 8px; font-size: 13px;">90mm centre spacing. Extremely neat circular alignment.</p>
-            </li>
-            <li>
-              <strong>DS115-8 + SB19ST (ID: S1, ~£50)</strong>
-              <div style="margin-top: 8px;">
-                <a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">DS115-8 PDF</a>
-                <a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">Willys £32.00</a>
-              </div>
-              <p style="margin-top: 8px; font-size: 13px;">Classic warm paper midwoofer paired with a round 19mm fabric dome. Looks like a mini-monitor from the golden era of hi-fi.</p>
-            </li>
-          </ul>
-        </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th><th>ID</th><th>Tweeter</th><th>Spacing</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank">1</span></td>
+        <td><span class="id">XC1</span></td>
+        <td>
+          <div class="driver">XT25SC40-04</div>
+          <div class="driver-sub">Peerless 43.9mm ring rad, 94 dB, 100W, 4Ω · Fs=1,018Hz</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html">SI €29.95 / £25.46</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter">Willys</a>
+          </div>
+        </td>
+        <td><strong>68 mm</strong></td>
+        <td>
+          <div class="xover">2,036 – 3,260 Hz → <strong>2,304 Hz</strong></div>
+          <div class="window marginal">marginal [0.4 oct] · 2.3×Fs</div>
+        </td>
+        <td><span class="price">£55</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 78W</span></td>
+        <td class="why"><strong>Minimum spacing record.</strong> 43.9mm ring radiator plate enables a baffle as narrow as ~115mm. 100W tweeter. Marginal crossover window (tweeter at 2.3×Fs) — set DSP crossover at 2,300 Hz and limit tweeter at 98 dB SPL ceiling.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">2</span></td>
+        <td><span class="id">X14</span></td>
+        <td>
+          <div class="driver">NE19VTS-04</div>
+          <div class="driver-sub">Peerless 19mm ring rad, 88.9 dB, 15W, 4Ω · Fs=770Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-ne19vts-04-tweeter">Willys £25.20</a>
+          </div>
+        </td>
+        <td><strong>72 mm</strong></td>
+        <td>
+          <div class="xover">1,540 – 3,260 Hz → <strong>2,454 Hz</strong></div>
+          <div class="window tight">tight [0.2 oct] · 3.2×Fs</div>
+        </td>
+        <td><span class="price">£55</span></td>
+        <td><span class="psu-cell">24V / 3.5A / 85W</span></td>
+        <td class="why">72mm spacing at same price as XC1. 19mm ring rad — smallest tweeter physically. Tight window but tweeter operating at a safe 3.2×Fs (no THD concern). Good balance of compactness and crossover cleanliness.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">3</span></td>
+        <td><span class="id">MDT22_1</span></td>
+        <td>
+          <div class="driver">Morel MDT22T</div>
+          <div class="driver-sub">22mm square dome, 8Ω · 55×55mm FP · Fs=650Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">Willys £47.55</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/morel-mdt-22.html">SI</a>
+          </div>
+        </td>
+        <td><strong>73 mm</strong></td>
+        <td>
+          <div class="xover">1,300 – 3,260 Hz → <strong>2,255 Hz</strong></div>
+          <div class="window tight">tight [0.4 oct] · 3.5×Fs</div>
+        </td>
+        <td><span class="price">£77</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
+        <td class="why">73mm spacing + best window quality at this spacing. Square Morel soft dome at 3.5×Fs is the cleanest-operating tweeter in the compact group. 1,960 Hz DSP window. <em>Round 3&quot; mid + square tweeter is the most visually interesting compact option.</em></td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><span class="id">NR1</span></td>
+        <td>
+          <div class="driver">NE25VTS-04</div>
+          <div class="driver-sub">25mm ring rad, 91.1 dB, 15W, 4Ω · 66mm FP · Fs=730Hz</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-ne25vts-04.html">SI €39.95 / £33.96</a>
+          </div>
+        </td>
+        <td><strong>79 mm</strong></td>
+        <td>
+          <div class="xover">1,460 – 3,260 Hz → <strong>2,390 Hz</strong></div>
+          <div class="window tight">tight [0.3 oct] · 3.3×Fs</div>
+        </td>
+        <td><span class="price">£64</span></td>
+        <td><span class="psu-cell">24V / 3.5A / 83W</span></td>
+        <td class="why">79mm spacing with ring radiator dispersion (not available at tighter spacings). 66mm round faceplate. Same spacing as B10 (INCOMPATIBLE) but NE25VTS Fs=730 Hz puts the crossover at a clean 3.3×Fs. Best compact + off-axis combination.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">5</span></td>
+        <td><span class="id">B11</span></td>
+        <td>
+          <div class="driver">DT-28N</div>
+          <div class="driver-sub">28mm waveguide dome, 92 dB, 50W, 4Ω · ~72mm FP · Fs=900Hz</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-dt28n-4.html">SI €40.95 / £34.81</a>
+          </div>
+        </td>
+        <td><strong>~82 mm</strong></td>
+        <td>
+          <div class="xover">2,400 – 3,260 Hz → <strong>2,502 Hz</strong></div>
+          <div class="window marginal">marginal [0.1 oct] · 2.1×Fs</div>
+        </td>
+        <td><span class="price">£65</span></td>
+        <td><span class="psu-cell">24V / 3.2A / 76W</span></td>
+        <td class="why">Compact waveguide DT-28N in a small FP. Marginal window — crossover at 2,500 Hz is workable but the window is very narrow (only 860 Hz). Include only if the waveguide character or appearance is a priority.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-        <div class="panel-card">
-          <h3>Square / Non-Round Contrast</h3>
-          <p>Breaks the standard circular pattern by placing a non-round driver on the baffle to contrast with the round subwoofer.</p>
-          <ul class="card-list">
-            <li>
-              <strong>DSA90-8 + MDT22T (ID: MDT22, ~£78)</strong>
-              <div style="margin-top: 8px;">
-                <a href="research/morel_mdt22t.pdf" class="btn-badge badge-pdf">MDT22T PDF</a>
-                <a href="https://willys-hifi.com/products/morel-mdt-22-tweeter" class="btn-badge badge-willys">Willys £48.00</a>
-                <a href="https://www.soundimports.eu/en/morel-mdt-22.html" class="btn-badge badge-si">SI €63.95</a>
-              </div>
-              <p style="margin-top: 8px; font-size: 13px;">Square faceplate (54 x 54 mm) tweeter placed directly above a round 3" midwoofer. Clean lines, geometric contrast, 73mm spacing.</p>
-            </li>
-            <li>
-              <strong>SLS-85S25 + DT-28N (ID: B12, ~£61)</strong>
-              <div style="margin-top: 8px;">
-                <a href="https://www.parts-express.com/pedocs/specs/264-1148--tymphany-sls-85s25cp04-04-specifications.pdf" class="btn-badge badge-web">SLS-85S25 Spec</a>
-                <a href="https://www.soundimports.eu/en/tymphany-sls-85s25cp04-04.html" class="btn-badge badge-si">SI €24.95</a>
-                <a href="https://www.parts-express.com/Tymphany-SLS-85S25CP04-04-3-Paper-Cone-Woofer-4-Ohm-264-1148" class="btn-badge badge-pe">PE $22.99</a>
-              </div>
-              <div style="margin-top: 4px;">
-                <a href="research/monacor_dt-28n.pdf" class="btn-badge badge-pdf">DT-28N PDF</a>
-                <a href="https://willys-hifi.com/products/monacor-dt-28n-neodymium-dome-tweeter" class="btn-badge badge-willys">Willys £32.50</a>
-              </div>
-              <p style="margin-top: 8px; font-size: 13px;">An oval midrange driver (105 x 91 mm) paired with a circular waveguide tweeter. Breaks up standard rectangular grids. Massive 10.2 mm midrange Xmax.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════════════════
+     TAB 4 — BEST VALUE
+     ══════════════════════════════════════════════════════════ -->
+<div id="value" class="tab-content">
+  <div class="hero">
+    <h2>Best Value</h2>
+    <p>Combos ranked by engineering quality per pound. Under-£50 and under-£100 tiers. All prices include both drivers, both from UK or EU stock.</p>
+  </div>
 
-    <!-- TAB: SAFETY -->
-    <div id="tab-safety" class="tab-content">
-      <div class="hero-card">
-        <h2>High-Power Tweeter Comparison & Burnout Safety</h2>
-        <p><strong>Why Tweeter Power Handling Matters:</strong> Under normal matching conditions, tweeters receive very little power. At a continuous reference level of 98 dB SPL, the tweeter receives only 5–12 W because its high sensitivity must be padded down in the DSP. At a burst SPL of 101 dB, power demands double to 10–24 W.</p>
-        <p>However, the JAB5 amplifier powered by a 28V or 29V PSU is capable of delivering <strong>45 W RMS into 8Ω and 90 W RMS into 4Ω</strong> per channel. If a DSP volume limiter is not set correctly, or if there is a transient calibration surge, a standard 15W tweeter (such as the XT25TG30-04) can instantly burn out. Choosing a high-power tweeter (≥ 80 W RMS) provides complete hardware protection against DSP configuration errors.</p>
-      </div>
+  <div class="section-title">Under £50</div>
 
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Power (RMS)</th>
-                <th>Flange OD</th>
-                <th>Sensitivity</th>
-                <th>Res. Freq (Fs)</th>
-                <th>Min Crossover</th>
-                <th>Price</th>
-                <th>Key Features</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: 600; color: white;">
-                  SB Acoustics SB26STCN-C000-4
-                  <br>
-                  <a href="research/sb_acoustics_sb26stcn-c000-4.pdf" class="btn-badge badge-pdf">PDF</a>
-                  <a href="https://willys-hifi.com/products/sb-acoustics-sb26stcn-c000-4-tweeter" class="btn-badge badge-willys">Willys £29.40</a>
-                  <a href="https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html" class="btn-badge badge-si">SI €39.95</a>
-                </td>
-                <td style="font-weight: bold; color: #f87171;">120 W</td>
-                <td>72 mm</td>
-                <td>92.0 dB</td>
-                <td>950 Hz</td>
-                <td>1,900 Hz</td>
-                <td><span class="price-tag">~£29</span></td>
-                <td>Neodymium magnet, compact 72mm round flange. Indestructible on 24V rails.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">
-                  Scan-Speak R2604/833000
-                  <br>
-                  <a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">PDF</a>
-                  <a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">Willys £46.00</a>
-                  <a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">Falcon £45.95</a>
-                </td>
-                <td style="font-weight: bold; color: #fb923c;">100 W</td>
-                <td>104 mm</td>
-                <td>92.0 dB</td>
-                <td>440 Hz</td>
-                <td>880 Hz</td>
-                <td><span class="price-tag">~£46</span></td>
-                <td>Discovery dual-ring radiator. <strong>Widest crossover window</strong> (880 Hz minimum). Annular dispersion.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">
-                  Peerless XT25SC40-04
-                  <br>
-                  <a href="research/peerless_xt25sc40-04.pdf" class="btn-badge badge-pdf">PDF</a>
-                  <a href="https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter" class="btn-badge badge-willys">Willys £24.00</a>
-                  <a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html" class="btn-badge badge-si">SI €32.95</a>
-                </td>
-                <td style="font-weight: bold; color: #fb923c;">100 W</td>
-                <td>43.9 mm</td>
-                <td>94.0 dB</td>
-                <td>1,018 Hz</td>
-                <td>2,036 Hz</td>
-                <td><span class="price-tag">~€30</span></td>
-                <td>Smallest ring radiator faceplate in the field. Ideal for tight spaces.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">
-                  SEAS 27TFFNC/CG H1406-04
-                  <br>
-                  <a href="research/seas_h1406-04.pdf" class="btn-badge badge-pdf">PDF</a>
-                  <a href="https://willys-hifi.com/products/seas-prestige-27tffnc-cg-h1406-04-tweeter" class="btn-badge badge-willys">Willys £33.00</a>
-                  <a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">Falcon £32.95</a>
-                </td>
-                <td style="font-weight: bold; color: #fb7185;">80 W</td>
-                <td>69.7×54 mm</td>
-                <td>91.0 dB</td>
-                <td>1,170 Hz</td>
-                <td>2,340 Hz</td>
-                <td><span class="price-tag">~£34</span></td>
-                <td>Oval faceplate, ultra-shallow (21.5 mm deep). Portrait spacing champion.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 600; color: white;">
-                  Morel MDT22T
-                  <br>
-                  <a href="research/morel_mdt22t.pdf" class="btn-badge badge-pdf">PDF</a>
-                  <a href="https://willys-hifi.com/products/morel-mdt-22-tweeter" class="btn-badge badge-willys">Willys £48.00</a>
-                  <a href="https://www.soundimports.eu/en/morel-mdt-22.html" class="btn-badge badge-si">SI €63.95</a>
-                </td>
-                <td style="font-weight: bold; color: #fb7185;">80 W</td>
-                <td>54×54 mm</td>
-                <td>89.0 dB</td>
-                <td>650 Hz</td>
-                <td>1,300 Hz</td>
-                <td><span class="price-tag">~£48</span></td>
-                <td>Square faceplate, large rear chamber, low resonant frequency. Vented magnet.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th><th>ID</th><th>Mid</th><th>Tweeter</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank">1</span></td>
+        <td><span class="id">RR2</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Peerless ring rad, 91.9 dB, 15W</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,730 Hz → <strong>1,698 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.9×Fs</div>
+        </td>
+        <td><span class="price">£50</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 83W</span></td>
+        <td class="why">Best window quality (moderate, 0.7 oct) available under £50. Ring rad off-axis. Natural fibre warmth. Tweeter at 3.9×Fs — absolutely clean. DSP limiter protects the 15W tweeter.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">2</span></td>
+        <td><span class="id">B_TG</span></td>
+        <td>
+          <div class="driver">HiVi B4N</div>
+          <div class="driver-sub">4&quot; treated Al, 85.0 dB, 8Ω · gold cone</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/hivi-b4n.html">SI €22.45 / £19.08</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Peerless ring rad, 91.9 dB, 15W</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,636 Hz → <strong>1,668 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£49</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">Zero DSP level correction (85 dB mid matches sub perfectly). Moderate 0.7 oct window. £1 cheaper than RR2 with different sonic character — more revealing Al cone vs. warm fibre. Gold cone look is unique under £50.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">3</span></td>
+        <td><span class="id">XC3</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25SC40-04</div>
+          <div class="driver-sub">Peerless 43.9mm ring rad, 94 dB, 100W · Fs=1,018Hz</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html">SI €29.95 / £25.46</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">2,036 – 2,730 Hz → <strong>2,109 Hz</strong></div>
+          <div class="window marginal">marginal [0.1 oct] · 2.1×Fs</div>
+        </td>
+        <td><span class="price">£46</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 79W</span></td>
+        <td class="why">Compact option under £50: 83mm spacing, ultra-compact 43.9mm ring rad, 100W tweeter. Narrow window (only 694 Hz) — set crossover at exactly 2,100 Hz, DSP limiter on. Best value compact build.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><span class="id">A5</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">DX25TG59-04</div>
+          <div class="driver-sub">Vifa/Peerless dome, 93.4 dB, 15W, 4Ω · Fs=590Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-dx25tg59-04-tweeter">Willys £18.44</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,180 – 2,730 Hz → <strong>1,966 Hz</strong></div>
+          <div class="window tight">tight [0.3 oct] · 3.3×Fs</div>
+        </td>
+        <td><span class="price">£39</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">Cheapest pairing with a clean crossover (tweeter at 3.3×Fs). Standard dome — off-axis is standard. Tight window means crossover placement is critical but not marginal. Both drivers from Willys, single order.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">5</span></td>
+        <td><span class="id">S2</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SB19ST-C000-4</div>
+          <div class="driver-sub">19mm dome, 88.5 dB, 30W, 4Ω · Fs=980Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb19st-c000-4-tweeter">Willys £20.14</a>
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/sb-acoustics-sb19st-c000-4-19mm-tweeter.html">Falcon £14.30</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,960 – 2,730 Hz → <strong>2,069 Hz</strong></div>
+          <div class="window marginal">marginal [0.2 oct] · 2.1×Fs — THD concern</div>
+        </td>
+        <td><span class="price">£35</span></td>
+        <td><span class="psu-cell">24V / 3.8A / 92W</span></td>
+        <td class="why">Cheapest option in catalogue at £35. Marginal crossover (tweeter at 2.1×Fs) — audible HF distortion at high volume. Workable with DSP limiting but A5 (£39) is strictly better acoustically for just £4 more.</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- TAB: SOURCING -->
-    <div id="tab-sourcing" class="tab-content">
-      <h2 class="section-title">Sourcing & Vendor Pricing Reference</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">This table provides a complete centralized lookup of all recommended drivers, direct links to specifications, and the exact pricing we have researched across vendors.</p>
+  <div class="section-title">Under £100</div>
 
-      <h3 style="color: white; margin: 20px 0 10px 0;">Midranges & Subwoofers</h3>
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Datasheet</th>
-                <th>SoundImports (EU)</th>
-                <th>Willys-Hifi (UK)</th>
-                <th>Parts Express / Other</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB12PFCR25-4</td>
-                <td><a href="research/sb_acoustics_sb12pfcr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html" class="btn-badge badge-si">€25.95 (~£22.1)</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer" class="btn-badge badge-willys">£20.58</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB12PACR25-4</td>
-                <td><a href="research/sb_acoustics_sb12pacr25-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html" class="btn-badge badge-si">€32.45 (OOS)</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer" class="btn-badge badge-willys">£23.76</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB12MNRX2-25-4</td>
-                <td><a href="research/sb_acoustics_sb12mnrx2-25-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html" class="btn-badge badge-si">€61.95 (~£52.7)</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange" class="btn-badge badge-willys">£48.10</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Dayton Audio DS115-8</td>
-                <td><a href="research/dayton_ds115-8_specifications.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/dayton-audio-ds115-8.html" class="btn-badge badge-si">€36.95 (~£31.4)</a></td>
-                <td><a href="https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm" class="btn-badge badge-willys">£32.00</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Dayton Audio DSA90-8</td>
-                <td><a href="research/dayton_audio_dsa90-8.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/dayton-audio-dsa90-8.html" class="btn-badge badge-si">€34.95</a></td>
-                <td><a href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer" class="btn-badge badge-willys">£29.90</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB12PACR25-4-COAX</td>
-                <td><a href="research/sb_acoustics_sb12pacr25-4-coax.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4-coax.html" class="btn-badge badge-si">€68.45</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-coax-coaxial-speaker" class="btn-badge badge-willys">£52.53</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Tymphany SLS-85S25</td>
-                <td><a href="https://www.parts-express.com/pedocs/specs/264-1148--tymphany-sls-85s25cp04-04-specifications.pdf" class="btn-badge badge-web">Web PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/tymphany-sls-85s25cp04-04.html" class="btn-badge badge-si">€24.95</a></td>
-                <td>—</td>
-                <td><a href="https://www.parts-express.com/Tymphany-SLS-85S25CP04-04-3-Paper-Cone-Woofer-4-Ohm-264-1148" class="btn-badge badge-pe">$22.99 (PE)</a></td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Tang Band W5-1138SMF (Subwoofer)</td>
-                <td><a href="research/tang_band_w5-1138smf.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/tang-band-w5-1138smf.html" class="btn-badge badge-si">€54.95</a></td>
-                <td>—</td>
-                <td><a href="https://www.parts-express.com/Tang-Band-W5-1138SMF-5-1-4-Paper-Cone-Subwoofer-Speaker-264-831" class="btn-badge badge-pe">$56.98 (PE)</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th><th>ID</th><th>Mid</th><th>Tweeter</th><th>Xover / Window</th><th>Price</th><th>PSU (RMS)</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank">1</span></td>
+        <td><span class="id">RP1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak ring rad, 100W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 3,260 Hz → <strong>1,855 Hz</strong></div>
+          <div class="window comfortable">comfortable [1.0 oct] · 4.2×Fs</div>
+        </td>
+        <td><span class="price">£76</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 81W</span></td>
+        <td class="why">Best combo in the catalogue regardless of budget. Comfortable window = maximum DSP flexibility. Ring rad + 3&quot; mid = best off-axis. 100W = burnout-proof. £76.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">2</span></td>
+        <td><span class="id">D6R1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">D2604/833000</div>
+          <div class="driver-sub">Scan-Speak Discovery dome, 100W, 4Ω · Fs=475Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/scan-speak-discovery-d2604-833000-tweeter">Willys £41.88</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">950 – 3,260 Hz → <strong>1,928 Hz</strong></div>
+          <div class="window moderate">moderate [0.9 oct] · 4.1×Fs</div>
+        </td>
+        <td><span class="price">£72</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 80W</span></td>
+        <td class="why">Widest standard dome window (2,310 Hz). Fs=475Hz gives 950 Hz crossover floor — better low-end integration than most. Scan-Speak 100W cloth dome. £4 cheaper than RP1 with slightly less off-axis performance.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">3</span></td>
+        <td><span class="id">RP3</span></td>
+        <td>
+          <div class="driver">SB12PFCR25-4</div>
+          <div class="driver-sub">4&quot; paper/fibre, 87.5 dB, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">Willys £20.58</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak ring rad, 100W, 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">880 – 2,730 Hz → <strong>1,698 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.9×Fs</div>
+        </td>
+        <td><span class="price">£67</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 82W</span></td>
+        <td class="why">Natural fibre warmth + 100W ring rad at £67. Cheapest 100W wide-window pairing. The "safe" choice if you want ring radiator off-axis and don't want to go above £70.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><span class="id">TF1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SEAS 27TDFC H1189-06</div>
+          <div class="driver-sub">Rear-chambered cloth dome, 90W, 6Ω · Fs=550Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter">Willys £55.00</a>
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html">Falcon £56.92</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,100 – 3,260 Hz → <strong>2,074 Hz</strong></div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£87</span></td>
+        <td><span class="psu-cell">24V / 3.4A / 82W</span></td>
+        <td class="why">Widest standard dome window in catalogue (2,160 Hz). SEAS Prestige rear-chamber dome has Fs=550Hz — only tweeter that lets you cross as low as 1.1 kHz. Classic warm cloth-dome character.</td>
+      </tr>
+      <tr>
+        <td><span class="rank">5</span></td>
+        <td><span class="id">RPN4</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al, 84.7 dB, 8Ω</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SB29RDNC-C000-4</div>
+          <div class="driver-sub">29mm neo ring dome, 94 dB, 100W, 4Ω · Fs=580Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter">Willys £54.31</a>
+          </div>
+        </td>
+        <td>
+          <div class="xover">1,160 – 3,260 Hz → <strong>2,130 Hz</strong></div>
+          <div class="window moderate">moderate [0.6 oct] · 3.7×Fs</div>
+        </td>
+        <td><span class="price">£84</span></td>
+        <td><span class="psu-cell">24V / 3.3A / 78W</span></td>
+        <td class="why">Premium ring dome + 3&quot; Al mid. 100W. 2,100 Hz window. Off-axis ring dome behaviour better than standard domes. If RP1 is sold out or ring rad is pre-order, this is the next-best wide-window option.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-      <h3 style="color: white; margin: 30px 0 10px 0;">Tweeters</h3>
-      <div class="table-container">
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Datasheet</th>
-                <th>SoundImports (EU)</th>
-                <th>Willys-Hifi (UK)</th>
-                <th>Falcon Acoustics (UK)</th>
-                <th>HiFi Collective (UK)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: bold; color: white;">Scan-Speak R2604/833000</td>
-                <td><a href="research/scanspeak_r2604-833000.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html" class="btn-badge badge-si">€62.45 (~£53)</a></td>
-                <td><a href="https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter" class="btn-badge badge-willys">£46.00</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html" class="btn-badge badge-falcon">£45.95</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB21RDCN</td>
-                <td><a href="research/sb_acoustics_sb21rdcn-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html" class="btn-badge badge-si">€59.95</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter" class="btn-badge badge-willys">£45.60</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Peerless XT25TG30-04</td>
-                <td><a href="research/peerless_xt25tg30-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html" class="btn-badge badge-si">€49.95 (~£43)</a></td>
-                <td><a href="https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter" class="btn-badge badge-willys">£31.95</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html" class="btn-badge badge-falcon">£29.90</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB21SDC</td>
-                <td><a href="research/sb_acoustics_sb21sdc-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb21sdc-c000-4.html" class="btn-badge badge-si">€39.95</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb21sdc-c000-4-tweeter" class="btn-badge badge-willys">£30.24</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB19ST</td>
-                <td><a href="research/sb_acoustics_sb19st-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb19st-c000-4.html" class="btn-badge badge-si">€21.45</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb19st-c000-4-tweeter" class="btn-badge badge-willys">£15.20</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/sb-acoustics-sb19st-c000-4-19mm-tweeter.html" class="btn-badge badge-falcon">£14.30</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB29RDNC</td>
-                <td><a href="research/sb_acoustics_sb29rdnc-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb29rdnc-c000-4.html" class="btn-badge badge-si">€78.95</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter" class="btn-badge badge-willys">£59.88</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SEAS 27TDFC H1189</td>
-                <td><a href="research/seas_27tdfc_h1189.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/seas-27tdfc.html" class="btn-badge badge-si">€71.86</a></td>
-                <td><a href="https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter" class="btn-badge badge-willys">£55.00</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">£56.92</a></td>
-                <td><a href="https://www.hificollective.co.uk/speakers/seas-27tdfc-tweeter-h1189.html" class="btn-badge badge-hfc">£56.92</a></td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Scan-Speak D2604/830000</td>
-                <td><a href="research/scanspeak_d2604-830000.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/scan-speak-d2604-830000.html" class="btn-badge badge-si">€52.95</a></td>
-                <td><a href="https://willys-hifi.com/products/scan-speak-discovery-d2604-830000-tweeter" class="btn-badge badge-willys">£41.50</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Peerless XT25SC40-04</td>
-                <td><a href="research/peerless_xt25sc40-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html" class="btn-badge badge-si">€32.95</a></td>
-                <td><a href="https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter" class="btn-badge badge-willys">£24.00</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SEAS 27TFFNC/CG H1406-04</td>
-                <td><a href="research/seas_h1406-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/seas-27tffnc-cg.html" class="btn-badge badge-si">€42.95</a></td>
-                <td><a href="https://willys-hifi.com/products/seas-prestige-27tffnc-cg-h1406-04-tweeter" class="btn-badge badge-willys">£33.00</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html" class="btn-badge badge-falcon">£32.95</a></td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Morel MDT22T</td>
-                <td><a href="research/morel_mdt22t.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/morel-mdt-22.html" class="btn-badge badge-si">€63.95</a></td>
-                <td><a href="https://willys-hifi.com/products/morel-mdt-22-tweeter" class="btn-badge badge-willys">£48.00</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Dayton Audio ND25FA-4</td>
-                <td><a href="research/dayton_nd25fa-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html" class="btn-badge badge-si">€21.45</a></td>
-                <td><a href="https://willys-hifi.com/collections/dayton-audio-drive-units" class="btn-badge badge-willys">£17.50</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Peerless XT25SC90-04</td>
-                <td><a href="research/peerless_xt25sc90-04.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td>—</td>
-                <td><a href="https://willys-hifi.com/products/vifa-xt25sc90-04-tweeter" class="btn-badge badge-willys">£19.52</a></td>
-                <td><a href="https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html" class="btn-badge badge-falcon">£18.20</a></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">Monacor DT-28N</td>
-                <td><a href="research/monacor_dt-28n.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/monacor-dt-28n.html" class="btn-badge badge-si">€40.95</a></td>
-                <td><a href="https://willys-hifi.com/products/monacor-dt-28n-neodymium-dome-tweeter" class="btn-badge badge-willys">£32.50</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold; color: white;">SB Acoustics SB26STCN-C000-4</td>
-                <td><a href="research/sb_acoustics_sb26stcn-c000-4.pdf" class="btn-badge badge-pdf">Local PDF</a></td>
-                <td><a href="https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html" class="btn-badge badge-si">€39.95</a></td>
-                <td><a href="https://willys-hifi.com/products/sb-acoustics-sb26stcn-c000-4-tweeter" class="btn-badge badge-willys">£29.40</a></td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════════════════
+     TAB 5 — VISUAL INTEREST
+     ══════════════════════════════════════════════════════════ -->
+<div id="visual" class="tab-content">
+  <div class="hero">
+    <h2>Visual Interest — Shape &amp; Appearance</h2>
+    <p>All picks here are acoustically valid — appearance is the tie-breaker, not the reason for inclusion. Grouped by driver shape character.</p>
+  </div>
 
-  </main>
+  <div class="section-title">Round — All circular (classic)</div>
 
-  <script>
-    function switchTab(evt, tabId) {
-      // Hide all content panels
-      var contents = document.getElementsByClassName("tab-content");
-      for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.remove("active");
-      }
-      
-      // Deactivate all buttons
-      var buttons = document.getElementsByClassName("tab-btn");
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-      }
-      
-      // Show targeted panel and activate clicked button
-      document.getElementById(tabId).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-  </script>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Mid</th><th>Tweeter</th><th>Look</th><th>Xover / Window</th><th>Price</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="id">RP1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; anodized Al cone, silver/grey</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">R2604/833000</div>
+          <div class="driver-sub">Scan-Speak dual-ring radiator, silver alloy FP</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html">Falcon £45.95</a>
+          </div>
+        </td>
+        <td>Industrial silver. Two concentric ring radiator grooves above a small rippled Al cone.</td>
+        <td>
+          <div class="xover">880–3,260 → 1,855 Hz</div>
+          <div class="window comfortable">comfortable [1.0 oct]</div>
+        </td>
+        <td><span class="price">£76</span></td>
+        <td class="why">Visually clean, matching aluminium family. Also the best-performing combo in the catalogue.</td>
+      </tr>
+      <tr>
+        <td><span class="id">RPN4</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; anodized Al, silver</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">SB29RDNC-C000-4</div>
+          <div class="driver-sub">29mm neodymium ring dome, dark FP</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter">Willys £54.31</a>
+          </div>
+        </td>
+        <td>Silver 3&quot; mid + dark neo ring dome. Contrast between light and dark.</td>
+        <td>
+          <div class="xover">1,160–3,260 → 2,130 Hz</div>
+          <div class="window moderate">moderate [0.6 oct]</div>
+        </td>
+        <td><span class="price">£84</span></td>
+        <td class="why">High contrast silver/dark pairing. Both round, but the ring dome adds subtle visual texture.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Non-round / Square tweeter</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Mid</th><th>Tweeter</th><th>Look</th><th>Xover / Window</th><th>Price</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="id">MDT22_1</span></td>
+        <td>
+          <div class="driver">DSA90-8</div>
+          <div class="driver-sub">3&quot; Al, round</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer">Willys £29.71</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">Morel MDT22T</div>
+          <div class="driver-sub">22mm dome, square 55×55mm faceplate, Fs=650Hz</div>
+          <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">Willys £47.55</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/morel-mdt-22.html">SI</a>
+          </div>
+        </td>
+        <td>Round mid + square tweeter — the most distinctive visual contrast available. 73mm centre spacing.</td>
+        <td>
+          <div class="xover">1,300–3,260 → 2,255 Hz</div>
+          <div class="window tight">tight [0.4 oct] · 3.5×Fs</div>
+        </td>
+        <td><span class="price">£77</span></td>
+        <td class="why">Only square tweeter option in the catalogue with a viable crossover window. Also the 2nd tightest spacing option (73mm). Morel soft dome is warm and clean.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Gold / warm metallic cone</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Mid</th><th>Tweeter</th><th>Look</th><th>Xover / Window</th><th>Price</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="id">B_TG</span></td>
+        <td>
+          <div class="driver">HiVi B4N</div>
+          <div class="driver-sub">4&quot; treated Al, gold/copper anodized cone · 85 dB</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/hivi-b4n.html">SI €22.45 / £19.08</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Ring radiator, silver/grey FP</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+          </div>
+        </td>
+        <td>Warm gold cone + neutral ring radiator. The gold B4N is striking on a dark baffle.</td>
+        <td>
+          <div class="xover">880–2,636 → 1,668 Hz</div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£49</span></td>
+        <td class="why">Zero DSP correction needed (85 dB perfectly matches sub). Moderate window. Ring rad off-axis. Under £50. Best value visual standout.</td>
+      </tr>
+      <tr>
+        <td><span class="id">DA_TG</span></td>
+        <td>
+          <div class="driver">DA115-8</div>
+          <div class="driver-sub">4&quot; anodized Al cone, dark charcoal · 84.9 dB · <span class="warn">3 left</span></div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-da115-8.html">SI €24.75 / £21.04</a>
+          </div>
+        </td>
+        <td>
+          <div class="driver">XT25TG30-04</div>
+          <div class="driver-sub">Ring radiator</div>
+          <div class="badges">
+            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon £29.90</a>
+          </div>
+        </td>
+        <td>Dark charcoal Al cone + ring radiator. All-aluminium family in a darker palette.</td>
+        <td>
+          <div class="xover">880–2,636 → 1,657 Hz</div>
+          <div class="window moderate">moderate [0.7 oct] · 3.8×Fs</div>
+        </td>
+        <td><span class="price">£51</span></td>
+        <td class="why">Same moderate window as B_TG and RR2. Darker look than HiVi. <span class="warn">Only 3 units left at SI — order now if interested.</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Point source — coaxial</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Driver</th><th>Look</th><th>Xover</th><th>Price</th><th>SPL ceiling</th><th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="id">COAX2</span></td>
+        <td>
+          <div class="driver">SB12PFC25-4-COAX</div>
+          <div class="driver-sub">4&quot; coaxial · paper cone + built-in tweeter · 4Ω</div>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/sb-acoustics-sb12pfc25-4-coax.html">SI €56.95 / £48.41</a>
+          </div>
+        </td>
+        <td>Single round driver — mid and tweeter share one axis. Zero visual gap between mid and tweeter.</td>
+        <td>
+          <div class="xover">2,600–2,730 Hz · fixed crossover</div>
+          <div class="driver-sub">Best_cross 2,665 Hz (internal)</div>
+        </td>
+        <td><span class="price">£48</span></td>
+        <td class="why"><strong>~94 dB SPL ceiling</strong> — sub must be limited to match. Perfect acoustic phase integration (true point source). Simplest build: one hole, no tweeter alignment. Natural fibre cone.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note-box" style="margin-top:12px">
+    <strong>Coaxial SPL note:</strong> The SB12PFC25-4-COAX has a combined sensitivity around 85–87 dB. At matched SPL with the sub (98 dB RMS / 101 dB burst), the coaxial draws ~40–97W at 28V into 4Ω. The tweeter's rated power becomes the ceiling — this limits the sub to ~40W (94 dB), not 80W burst. Sub must be DSP-limited to match.
+  </div>
+</div>
+
+</div><!-- .container -->
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
 </body>
 </html>
