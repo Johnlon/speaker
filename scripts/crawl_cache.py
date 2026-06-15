@@ -14,26 +14,28 @@ Kill and restart at any time — no data is lost:
      manifest.json.tmp so it is never half-written.
 
   3. Newly discovered URLs (PDFs found inside HTML pages) are appended
-     to source_urls.md immediately and individually (file-append is
-     atomic for small writes). On restart, the BFS queue is rebuilt
-     from source_urls.md minus manifest — all discovered URLs survive.
+     to source_urls.md immediately per URL (inside asyncio.Lock).
+     On restart, the BFS queue is rebuilt from source_urls.md minus
+     manifest — all discovered URLs survive a kill.
 
 RESTART BEHAVIOUR
 -----------------
-  - source_urls.md  : all URLs we know about (seeds + discovered)
-  - manifest.json   : all URLs successfully downloaded
-  - On restart: fetch everything in source_urls.md not in manifest.
-    The in-memory BFS queue is lost but source_urls.md is the durable
-    equivalent, so nothing is skipped.
+  source_urls.md = all URLs we know about (seeds + discovered)
+  manifest.json  = all URLs successfully downloaded (HTTP 200)
+  On restart: fetch everything in source_urls.md not in manifest.
+  429/404/errors are not recorded in the manifest, so they are
+  automatically retried on next run.
 
-RATE LIMITING
--------------
-Full 50-worker parallelism everywhere except sites that 429 us.
-Add entries to _DOMAIN_DELAY to throttle specific domains.
+PARALLELISM
+-----------
+No artificial delays. 200 workers by default — pure network I/O,
+saturate the pipe. If a server 429s, that URL stays out of the
+manifest and is retried next run.
 
 USAGE
 -----
-  python scripts/crawl_cache.py [--workers 50] [--timeout 20] [--force]
+  python scripts/crawl_cache.py
+  python scripts/crawl_cache.py --workers 200 --timeout 20
   python scripts/crawl_cache.py --force   # re-fetch everything
 """
 
@@ -42,8 +44,6 @@ import asyncio
 import hashlib
 import json
 import sys
-import time
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -53,12 +53,6 @@ try:
     from bs4 import BeautifulSoup
 except ImportError:
     sys.exit("pip install aiohttp beautifulsoup4")
-
-# Per-domain minimum gap in seconds (0 = no limit).
-_DOMAIN_DELAY: dict[str, float] = {
-    "loudspeakerdatabase.com":     5.0,
-    "www.loudspeakerdatabase.com": 5.0,
-}
 
 ROOT = Path(__file__).parent.parent
 CACHE_DIR = ROOT / "research" / "cache"
@@ -79,25 +73,6 @@ _CONTENT_TYPE_EXT: dict[str, str] = {
     "application/xml":       ".xml",
 }
 
-# PDF links on product pages are followed automatically.
-# HTML links are never followed (we don't want to crawl the whole internet).
-_PDF_FOLLOW_DOMAINS = {
-    "doc.soundimports.nl",
-    "sbacoustics.com", "www.sbacoustics.com",
-    "seas.no", "www.seas.no",
-    "scan-speak.dk", "www.scan-speak.dk",
-    "daytonaudio.com", "www.daytonaudio.com",
-    "visaton.de", "www.visaton.de",
-    "beyma.com", "www.beyma.com",
-    "morel.co.il", "www.morel.co.il",
-    "wavecor.com", "www.wavecor.com",
-    "fast-images.static-thomann.de",
-    "cdn.shopify.com",
-    "www.parts-express.com",
-    "www.falconacoustics.co.uk",
-    "www.hificollective.co.uk",
-}
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -116,22 +91,8 @@ def _is_pdf(url: str) -> bool:
     return url.lower().split("?")[0].endswith(".pdf")
 
 
-def _should_follow(url: str) -> bool:
-    """Return True if this URL should be added to the BFS queue."""
-    try:
-        p = urlparse(url)
-    except Exception:
-        return False
-    if not p.path.lower().endswith(".pdf"):
-        return False
-    domain = p.netloc.lower()
-    # Allow any PDF from trusted PDF domains, and any PDF from the same
-    # product-page domains (many shops host datasheets on their own CDN).
-    return True  # follow all PDFs — they'll 404 if they don't exist
-
-
 def _discover_from_html(html: str, base_url: str) -> list[str]:
-    """Extract followable URLs from an HTML page (PDFs only)."""
+    """Extract PDF links from an HTML page — the only URLs we follow."""
     try:
         soup = BeautifulSoup(html, "html.parser")
     except Exception:
@@ -141,10 +102,8 @@ def _discover_from_html(html: str, base_url: str) -> list[str]:
         href = tag["href"].strip()
         if not href or href.startswith(("#", "javascript:", "mailto:")):
             continue
-        abs_url = urljoin(base_url, href).split("#")[0]
-        # Strip trailing ) from malformed markdown-derived URLs
-        abs_url = abs_url.rstrip(".,;)>")
-        if abs_url.startswith("http") and _should_follow(abs_url):
+        abs_url = urljoin(base_url, href).split("#")[0].rstrip(".,;)>")
+        if abs_url.startswith("http") and _is_pdf(abs_url):
             results.append(abs_url)
     return list(dict.fromkeys(results))
 
@@ -154,26 +113,23 @@ def _discover_from_html(html: str, base_url: str) -> list[str]:
 # ---------------------------------------------------------------------------
 
 def _atomic_write_bytes(path: Path, data: bytes) -> None:
-    """Write bytes atomically: write to .partial then rename."""
     partial = path.with_suffix(path.suffix + ".partial")
     partial.write_bytes(data)
-    partial.replace(path)  # os.replace() — atomic on Windows + POSIX
+    partial.replace(path)
 
 
 def _atomic_write_manifest(manifest: dict) -> None:
-    """Write manifest atomically via temp file."""
     tmp = MANIFEST_PATH.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     tmp.replace(MANIFEST_PATH)
 
 
 def _startup_cleanup() -> None:
-    """Delete any .partial files left by a previous killed run."""
     partials = list(CACHE_DIR.glob("*.partial"))
     if partials:
         for p in partials:
             p.unlink()
-        print(f"Cleaned up {len(partials)} incomplete .partial file(s) from previous run.")
+        print(f"Cleaned {len(partials)} incomplete .partial file(s) from previous run.")
 
 
 def load_manifest() -> dict:
@@ -181,13 +137,13 @@ def load_manifest() -> dict:
         try:
             return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
-            print("Warning: manifest.json is corrupt — starting fresh.")
+            print("Warning: manifest.json corrupt — starting fresh.")
             return {}
     return {}
 
 
 # ---------------------------------------------------------------------------
-# source_urls.md helpers
+# source_urls.md
 # ---------------------------------------------------------------------------
 
 def read_pending_urls(manifest: dict, force: bool) -> list[str]:
@@ -203,8 +159,7 @@ def read_pending_urls(manifest: dict, force: bool) -> list[str]:
     return list(dict.fromkeys(urls))
 
 
-async def _persist_discovered_url(url: str, file_lock: asyncio.Lock) -> None:
-    """Append a single discovered URL to source_urls.md immediately."""
+async def _append_discovered(url: str, file_lock: asyncio.Lock) -> None:
     async with file_lock:
         existing = set()
         if SOURCE_URLS.exists():
@@ -216,33 +171,10 @@ async def _persist_discovered_url(url: str, file_lock: asyncio.Lock) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Per-domain rate limiter
+# Async fetch + worker
 # ---------------------------------------------------------------------------
 
-class DomainThrottle:
-    def __init__(self):
-        self._locks: dict[str, asyncio.Lock] = defaultdict(asyncio.Lock)
-        self._last: dict[str, float] = defaultdict(float)
-
-    async def wait(self, url: str) -> None:
-        domain = urlparse(url).netloc.lower()
-        delay = _DOMAIN_DELAY.get(domain, 0.0)
-        if delay <= 0:
-            return
-        async with self._locks[domain]:
-            elapsed = time.monotonic() - self._last[domain]
-            if elapsed < delay:
-                await asyncio.sleep(delay - elapsed)
-            self._last[domain] = time.monotonic()
-
-
-# ---------------------------------------------------------------------------
-# Async worker
-# ---------------------------------------------------------------------------
-
-async def fetch_one(url: str, session: aiohttp.ClientSession,
-                    timeout: int, throttle: DomainThrottle):
-    await throttle.wait(url)
+async def fetch_one(url: str, session: aiohttp.ClientSession, timeout: int):
     try:
         async with session.get(url, timeout=aiohttp.ClientTimeout(total=timeout),
                                headers=HEADERS, allow_redirects=True) as r:
@@ -261,7 +193,6 @@ async def worker(
     queue: asyncio.Queue,
     session: aiohttp.ClientSession,
     timeout: int,
-    throttle: DomainThrottle,
     manifest: dict,
     manifest_lock: asyncio.Lock,
     seen: set,
@@ -275,31 +206,28 @@ async def worker(
             queue.task_done()
             break
 
-        status, ct, body, info = await fetch_one(url, session, timeout, throttle)
+        status, ct, body, info = await fetch_one(url, session, timeout)
         counters["total"] += 1
 
         if status == 200 and body:
             fname = _cache_filename(url, ct)
-            # Atomic write: .partial → final
             _atomic_write_bytes(CACHE_DIR / fname, body)
 
-            entry = {
-                "file": fname,
-                "content_type": ct,
-                "status": 200,
-                "size_bytes": len(body),
-                "fetched_at": datetime.now(timezone.utc).isoformat(),
-                "final_url": info,
-            }
-            # Atomic manifest update
             async with manifest_lock:
-                manifest[url] = entry
+                manifest[url] = {
+                    "file": fname,
+                    "content_type": ct,
+                    "status": 200,
+                    "size_bytes": len(body),
+                    "fetched_at": datetime.now(timezone.utc).isoformat(),
+                    "final_url": info,
+                }
                 _atomic_write_manifest(manifest)
 
             counters["ok"] += 1
             print(f"[OK  {len(body)//1024:4d}kB] {url}")
 
-            # Discover PDF links from HTML pages and add to queue
+            # Follow PDF links discovered in HTML pages
             if "html" in ct.lower() and not _is_pdf(url):
                 discovered = _discover_from_html(body.decode("utf-8", errors="replace"), url)
                 async with seen_lock:
@@ -307,8 +235,7 @@ async def worker(
                     for u in fresh:
                         seen.add(u)
                 for u in fresh:
-                    # Persist to source_urls.md immediately (survives kill)
-                    await _persist_discovered_url(u, file_lock)
+                    await _append_discovered(u, file_lock)
                     await queue.put(u)
         else:
             err = info if status == 0 else f"HTTP {status}"
@@ -330,20 +257,16 @@ async def run(args):
     pending = read_pending_urls(manifest, args.force)
 
     if not pending:
-        print("Nothing to fetch — all seed URLs already cached.")
-        print("Use --force to re-fetch, or run extract_urls.py to find new URLs.")
+        print("All URLs already cached. Use --force to re-fetch.")
         return
 
-    print(f"Pending: {len(pending)} URLs | Workers: {args.workers} | Cache: {len(manifest)} already done")
+    print(f"Pending: {len(pending)}  |  Already cached: {len(manifest)}  |  Workers: {args.workers}")
 
-    seen: set = set(manifest.keys())
-    seen.update(pending)
-
+    seen: set = set(manifest.keys()) | set(pending)
     manifest_lock = asyncio.Lock()
     seen_lock = asyncio.Lock()
     file_lock = asyncio.Lock()
     counters = {"total": 0, "ok": 0, "err": 0}
-    throttle = DomainThrottle()
 
     queue: asyncio.Queue = asyncio.Queue()
     for url in pending:
@@ -353,7 +276,7 @@ async def run(args):
     async with aiohttp.ClientSession(connector=connector) as session:
         workers = [
             asyncio.create_task(worker(
-                queue, session, args.timeout, throttle,
+                queue, session, args.timeout,
                 manifest, manifest_lock,
                 seen, seen_lock,
                 file_lock, counters,
@@ -365,7 +288,7 @@ async def run(args):
             await queue.put(None)
         await asyncio.gather(*workers)
 
-    print(f"\n{counters['ok']} fetched  |  {counters['err']} errors  |  {len(manifest)} total in cache")
+    print(f"\n{counters['ok']} fetched  |  {counters['err']} errors  |  {len(manifest)} total cached")
 
 
 def main():
@@ -373,7 +296,7 @@ def main():
         description="Durable BFS crawler. Kill and restart safely at any time."
     )
     ap.add_argument("--workers", type=int, default=200,
-                    help="Parallel connections (default 200 — pure network I/O)")
+                    help="Parallel connections (default 200)")
     ap.add_argument("--timeout", type=int, default=20,
                     help="Per-request timeout seconds (default 20)")
     ap.add_argument("--force", action="store_true",
