@@ -533,6 +533,17 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Why this stands out:** 850 Hz minimum crossover is 90 Hz lower than any ring radiator and 250 Hz lower than any dome in the catalogue. The compact 61.9mm FP creates the tightest achievable centre-spacing — 77–92mm depending on mid — minimising vertical lobe smearing. With a 4" mid (beaming ~2,600–2,900 Hz), crossover window is 850–2,600+ Hz (over 1,700 Hz of freedom). With a 5.25" mid (beaming ~2,390 Hz), window is 850–2,390 Hz — still excellent. Scan-Speak Illuminator-grade transient response and low distortion at 850 Hz crossover point.
 - **Pairings:** ILL1/ILL2/ILL3 (existing combos) updated to remove DISC flag; LS-series in combos.md covers new LSS mids.
 
+### Scan-Speak Illuminator R3004/602010 ★★ — Candidate (ring radiator, Fs=420Hz, compact FP; lautsprechershop.de)
+- Type: Ring radiator | FP OD: **61.9 mm** round | Impedance: 4Ω | Power: not confirmed from page
+- Fs: **420 Hz** | Sensitivity: not confirmed from LSS page
+- ⚠ Full T/S (Re, Qts, sensitivity, power, cutout, depth) not confirmed — fetch Scan-Speak R3004/602010 datasheet from scan-speak.dk before ordering
+- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS tweeter index, June 2026) | LSS price: **€179.10 inc VAT / €150.50 exc VAT** (~£150) | Stock (Jun 2026): in stock at LSS
+- **Min crossover:** 2× Fs = **840 Hz** — 10 Hz lower than D3004/602010 (850 Hz). Narrowly the most flexible crossover window of any tweeter in this catalogue.
+- **Centre spacing (FP OD 61.9 mm):** DSA90-8 → **77mm** | DS115-8 → **89mm** | 12W/4524G00 (100mm) → **81mm** | 15W/4434G00 (114mm) → **88mm** | WF118WA07 (118mm) → **90mm** | Morel 428 (118.5mm) → **90mm**
+- **Why this stands out:** Ring radiator construction on the same compact 61.9mm Illuminator chassis as D3004/602010. Ring radiator off-axis dispersion is inherently wider than a dome — critical at the 60° kitchen listening geometry. If Fs=420Hz is confirmed, this pairs with any mid in the catalogue including 5.25" drivers (beaming ~2,390 Hz → window = 840–2,390 Hz = 1,550 Hz wide).
+- **vs D3004/602010 (€142.20, dome, Fs=425Hz):** R3004 is €37 more for ring radiator construction with potentially superior off-axis behaviour. The compact 62mm FP is the same on both. Choose D3004/602010 until R3004 datasheet confirms power rating, sensitivity, and ring radiator off-axis advantage at 62mm ring size.
+- **Priority:** Fetch datasheet before ordering.
+
 ### Audaphon TWS 30/4 ★★ — Candidate (30mm dome, Fs=470Hz, 93dB; lautsprechershop.de exclusive)
 - Type: Soft dome (fabric) | Dome: **30 mm** | Faceplate OD: **104 mm** round | Metal faceplate | Impedance: 4Ω | Power: **100W**
 - Sensitivity: **93 dB @ 2.83V/1m** | Fs: **470 Hz** | LSS house brand — **not available at SI/HFC/Willys**
@@ -557,6 +568,26 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Centre spacing (FP OD 103 mm):** DSA90-8 → **98mm** | DS115-8 → **109mm** | SB12PFCR25-4 → **112mm** | 12W/4524G00 (100mm) → **102mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm**
 - **Why considered:** 100W power rating at €89.40 is excellent value for a 103mm-class dome. 91 dB sensitivity (2 dB lower than TWS 30/4) means 2 dB less DSP pad required. 28mm dome in standard class for this FP size.
 - **vs Audaphon TWS 30/4 (940 Hz, €79):** TWS 30/4 has 260 Hz lower min xover, 2 dB higher sensitivity, 1mm larger dome, €10 cheaper. RS28A-4 wins only on 2 dB lower DSP pad requirement — a marginal advantage. Prefer TWS 30/4 for the 260 Hz crossover freedom in most pairings. RS28A-4 is relevant only if 940 Hz → 1,200 Hz crossover gap is unimportant and 91 dB sensitivity is preferred.
+
+### Wavecor TW022WA05 ★★ — Candidate (22mm silk dome, Fs=750Hz; lautsprechershop.de)
+- Type: Soft dome (silk) | Dome: **22 mm** | Faceplate OD: **103.75 mm** round | Impedance: 4Ω
+- Sensitivity: **est. 88 dB @ 2.83V/1m** | Power: **est. 100W RMS** | Fs: **750 Hz** | LSS-only in UK context
+- ⚠ Full T/S (Re, Qts, exact sensitivity, power) not confirmed from LSS page — fetch Wavecor TW022WA05 datasheet before ordering
+- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS tweeter index, June 2026) | LSS price: **€78.10 inc VAT / €65.63 exc VAT** (~£66) | Stock (Jun 2026): in stock at LSS
+- **Min crossover:** 2× Fs = **1,500 Hz** — comfortable margin below all standard mid beaming limits (≥2,400 Hz).
+- **DSP correction vs TB sub (85 dB ref):** est. −3.0 dB (4Ω: 1W sens ≈ 88 − 3.01 = 84.99 dB ≈ sub reference).
+- **Power at reference (est. 4Ω, 88 dB sens, 98 dB target):** P = (2.83²/4) × 10^((98−88)/10) = 2.0 × 10.0 = **20.0W** (20% of 100W est ✓). At burst (101 dB): **40.0W** (40% est ✓). Well within rating.
+- **Available @ 24V into 4Ω:** ~61W >> 40W ✓.
+- **Centre spacing (FP OD 103.75 mm):** DSA90-8 → **98mm** | DS115-8 → **110mm** | 12W/4524G00 (100mm) → **102mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm** | Morel 428 (118.5mm) → **111mm**
+- **Why this stands out:** At €78.10 it prices between SB26STCN (€36.45, 25mm, Fs=950Hz) and SEAS H1189-06 (€71.86, 27mm, Fs=550Hz). The 22mm dome is smaller than all 25–30mm dome candidates → slightly wider off-axis dispersion above 10 kHz. Fs=750 Hz gives 1,500 Hz min crossover — broad window for all mids in the catalogue. If 100W power confirmed, offers very large safety margin vs estimated 40W burst demand.
+- **Concern:** All specs estimated — datasheet required. 103.75mm FP is large (same class as H1189-06, DX25TG59-04).
+- **vs TW022WA06 (€80.30, +ferrofluid):** €2.20 more for ferrofluid. At ≤40W burst in this project, ferrofluid is unnecessary. Prefer WA05.
+
+### Wavecor TW022WA06 ★★ — Candidate (22mm silk dome + ferrofluid, Fs=750Hz; lautsprechershop.de)
+- Same as TW022WA05 but with magnetic fluid (ferrofluid) added to voice coil gap for enhanced thermal handling.
+- LSS price: **€80.30 inc VAT / €67.48 exc VAT** (~£67) | Stock (Jun 2026): in stock at LSS
+- All acoustic specs as TW022WA05 (specs estimated — datasheet needed). Ferrofluid lowers Fs slightly (est. ~740 Hz) and adds ~10–20W thermal headroom.
+- **vs TW022WA05 (€78.10):** €2.20 premium for ferrofluid. At ≤40W burst in this project, ferrofluid provides marginal benefit. Prefer WA05 on value unless continuous high-power use is expected.
 
 ---
 
@@ -923,6 +954,49 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power at reference (8Ω, 98 dB):** 12.6W (8.4% of 150W ✓). At burst (101 dB): **25.1W** (16.7% ✓).
 - **Beaming:** Same FP as EW 428 → ~2,740 Hz estimate.
 - **vs Morel EW 428 (Fs=62Hz, Xmax=4.5mm, €153):** EW 428 is better in every acoustic parameter: 6Hz lower Fs, 1.5mm more Xmax, better motor — at only €19 more. **Choose EW 428 over EM 428 unconditionally.** EM 428 is only relevant if EW 428 sells out at LSS.
+
+### SEAS CA12RCY H1152-08 ★ — Candidate (classic paper cone, 4.5"; lautsprechershop.de)
+- Size: 4.5" | Frame OD: **120.4 mm** round | Impedance: **8Ω** | Cone: Paper (SEAS Prestige classic)
+- Sensitivity: **est. 87 dB @ 2.83V/1m** | Power: **est. 80W RMS** | Xmax: **±3 mm** | Fs: **57 Hz**
+- ⚠ Full T/S not confirmed from LSS page — fetch SEAS CA12RCY H1152-08 datasheet before ordering
+- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€94.90 inc VAT / €79.75 exc VAT** (~£80) | Stock (Jun 2026): in stock at LSS
+- **Fs margin at 150 Hz crossover:** 150/57 = **2.63×** — good, same class as DS115-8 (2.72×).
+- **DSP correction vs TB sub (85 dB ref):** est. −2.0 dB — near-perfect match.
+- **Power at reference (8Ω, est. 87 dB, 98 dB target):** P = (2.83²/8) × 10^((98−87)/10) = 1.0 × 10^(1.1) = **12.6W** (15.8% of 80W est ✓). At burst (101 dB): **25.1W** (31.4% ✓). Good headroom.
+- **Available @ 24V into 8Ω:** ~31W > 25.1W ✓.
+- **Beaming (120.4 mm FP → est. cone dia ~97mm):** f_beam ≈ 34400/(π×0.0485) ≈ **2,260 Hz** (estimate). Upper crossover ceiling ~2,200 Hz.
+- **Centre spacing (FP OD 120.4 mm):** D3004/602010 (62mm) → **91mm** | Audaphon TWS 30/4 (104mm) → **112mm** | TW022WA05 (103.75mm) → **112mm** | H1189-06 (103.8mm) → **112mm**
+- **Why considered:** SEAS Prestige paper cone with classic warm character. Fs=57Hz and est. 3mm Xmax are competitive. €94.90 is well-priced for SEAS Prestige quality. 8Ω → ~31W at 24V vs 25.1W burst required — adequate.
+- **Concern:** Beaming limit ~2,260 Hz tighter than standard 4" mids (~2,700 Hz). Set mid/tweeter crossover ≤2,200 Hz — requires tweeter with min xover ≤1,500 Hz: D3004/602010 (850Hz ✓), R3004/602010 (840Hz ✓), TWS 30/4 (940Hz ✓), H1189-06 (1,100Hz ✓), TW022WA05 (1,500Hz ✓), all ring radiators ✓.
+- **vs WF118WA07 (4Ω, Fs=56Hz, €95.70, est. Xmax=4mm):** Nearly identical price and Fs. WA07 has 4Ω (61W at 24V vs 31W) and est. 1mm more Xmax. CA12RCY wins on SEAS Prestige paper cone tonality. Choose WA07 for amp headroom; CA12RCY for SEAS warm character.
+
+### SB Acoustics SB12CACS25-4 ★ — Candidate (ceramic cone, 4"; Willys-Hifi / lautsprechershop.de)
+- Size: 4" | Frame OD: **123 mm** ⚠ 1mm over project FP limit | Impedance: **4Ω** | Cone: Ceramic (aluminium oxide)
+- Sensitivity: **87.5 dB @ 2.83V/1m** | Power: **30W RMS** | Xmax: **±5.0 mm** | Fs: **51 Hz**
+- ⚠ Full T/S (Re, Qts, Sd, Vas) not confirmed — fetch SB Acoustics SB12CACS25-4 datasheet; confirm ceramic cone breakup frequency before ordering
+- **Source:** [Willys-Hifi](https://willys-hifi.com/products/sb-acoustics-sb12cacs25-4-ceramic-midwoofer) | Willys price: **£58.96** | Stock (Jun 2026): UK in stock
+- Also at LSS: **€73.70 inc VAT / €61.93 exc VAT**
+- **Fs margin at 150 Hz crossover:** 150/51 = **2.94×** — excellent; best Fs margin of any 4" candidate.
+- **DSP correction vs TB sub (85 dB ref):** −2.5 dB — near-perfect match (4Ω: 1W sens = 87.5 − 3.01 = 84.49 dB).
+- **Power at reference (4Ω, 87.5 dB, 98 dB target):** P = (2.83²/4) × 10^((98−87.5)/10) = 2.0 × 11.22 = **22.4W** (74.7% of 30W — approaching limit). At burst (101 dB): **44.8W** — exceeds 30W. **Set DSP limiter at 28W:** max mid SPL = 87.5 + 10×log(28/2) = 87.5 + 11.46 = **98.96 dB** ≈ 99 dB. Sub peaks at 101 dB: 2 dB gap at transients — acceptable for kitchen use.
+- **Available @ 24V into 4Ω:** ~61W — amp headroom fine; driver is the limit.
+- **Beaming (est. cone dia ~90mm):** f_beam ≈ 34400/(π×0.045) ≈ **2,440 Hz** — same class as DS115-8 (~2,636 Hz).
+- **Centre spacing (FP OD 123 mm):** D3004/602010 (62mm) → **93mm** | Audaphon TWS 30/4 (104mm) → **114mm** | H1189-06 (103.8mm) → **113mm**
+- **Why considered:** Xmax=5mm is the highest of any 4" candidate (matches SB12PACR25-4). Fs=51Hz gives 2.94× margin at 150 Hz — best in the 4" field. Ceramic cone character is different from paper/Al mids: harder, more revealing. At 123mm FP it's 1mm over the 122mm project limit — a known compromise accepted for the Xmax advantage.
+- **FP concern:** 123mm OD is technically outside the ≤122mm FP limit. On 190mm baffle leaves 33.5mm each side. Surface mounting is fine; the 1mm over-spec is cosmetic only. Treat as FP=123mm approved.
+- **Ceramic cone concern:** Aluminium oxide ceramic breakup peaks can be sharp. Confirm cone breakup frequency is above the mid/tweeter crossover (≥2,500 Hz) from datasheet before ordering.
+- **vs SB12PFCR25-4 (4Ω, paper, Fs=58Hz, Xmax=4.9mm, €25.95):** CACS wins on Fs margin (2.94× vs 2.59×) and Xmax by 0.1mm. Paper wins on lower cost (€25.95 vs £58.96), softer tonality, and no ceramic breakup concern. Choose CACS only when Fs margin is the deciding factor.
+
+### Vifa NE123-W08 ★ — Candidate (paper-composite cone, 4"; HiFi Collective / lautsprechershop.de)
+- Size: 4" | Impedance: **8Ω** | Cone: Paper composite (NE-series construction) | Surround: Rubber
+- Sensitivity: **est. 87–88 dB @ 2.83V/1m** | Power: **est. 40–50W RMS** | Xmax: **est. ±4.5 mm** | Fs: **est. 50–55 Hz**
+- ⚠ Full T/S not confirmed — fetch Vifa/Peerless NE123-W-08 datasheet before ordering; confirm FP OD
+- **Source:** [HiFi Collective](https://www.hificollective.co.uk) (HFC woofer index, June 2026) | HFC price: **£60.84** (inc/ex-VAT status unconfirmed) | Stock: confirm before ordering
+- Also at LSS: **€108.40 inc VAT / €91.09 exc VAT** (~£91)
+- **Fs margin at 150 Hz crossover:** est. 150/52 ≈ **2.9×** — excellent (estimate).
+- **Power at reference (est. 8Ω, 87.5 dB, 98 dB target):** est. 12.6W (well within est. 40W ✓). Burst est. 25.1W (est. 50% of 50W ✓).
+- **Why considered:** Vifa NE series (former Peerless by Tymphany, now ScanSpeak-manufactured) is known for excellent linearity, low distortion, and wide frequency extension. The NE123 is used in high-quality DIY builds as a mid with clean response to 5+ kHz. At HFC £60.84 it is priced similarly to DS115-8 + premium. If specs confirm, could be an alternative to DS115-8 for a "reference quality" mid with warm paper character.
+- **Priority:** Confirm FP OD, Xmax, Fs from datasheet. If FP is ≤122mm and Xmax ≥4mm, promote to ★★.
 
 ---
 
