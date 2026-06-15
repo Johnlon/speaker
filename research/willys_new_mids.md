@@ -82,6 +82,8 @@ These are full-range woofer class; crossover to tweeter would need to be below 1
 
 ---
 
+---
+
 ## Seller Purchase Links & Pricing Reference
 
 Direct links to purchase recommended drivers featured in this catalog:

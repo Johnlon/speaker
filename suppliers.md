@@ -71,25 +71,49 @@ Researched June 2026. All URLs fetched via WebFetch.
 ## 4. Wilmslow Audio (wilmslowaudio.co.uk)
 
 - **Website:** https://www.wilmslowaudio.co.uk/
-- **Ships to UK:** Yes — UK-based supplier (Hinckley, Leicestershire).
+- **Ships to UK:** Yes — UK-based, 50+ years in trade. Demonstration room available by appointment.
 - **Contact:** 01455 286603 | sales@wilmslow-audio.co.uk
-- **Catalogue:** Good range of Hi-Fi DIY brands: Dayton Audio, Monacor, Scanspeak, Vifa, Morel, Fostex, Fountek, Coles, Visaton (tweeters); Volt, Scanspeak, Morel (midrange). Also stocks Hypex Fusion amplifiers.
-- **Pricing found:**
-  - Dayton Audio TCP115-4: £24.00 inc. VAT
-  - Dayton Audio DS115-8: listed but exact price not confirmed (URL routing failed)
-  - Scanspeak Discovery D2606/9200.00: £40.49 (just over £40)
-  - Scanspeak Classic series: £77–£230+ (over budget)
-  - Scanspeak Illuminator/Revelator: £130–£507 (way over budget)
-- **Site issue:** Product-level URL routing consistently redirected to Hypex amplifier product pages instead of the requested driver pages. Category-level pages show brand logos only without product listings. Impossible to confirm individual driver stock/pricing via WebFetch.
-- **Assessment:** Legitimate UK Hi-Fi supplier with good range. Worth calling directly (01455 286603) to confirm stock and pricing on specific Dayton Audio drivers if sourcing from UK is preferred. Note: office closed 4–14 July 2026.
+- **Catalogue:** Classic Hi-Fi DIY brands. **Does NOT stock SB Acoustics or SEAS** — so SB19ST-C000-4 (frontrunner tweeter) and DX25TG59-04 are not available here.
+  - **Tweeters:** Monacor, Scanspeak, Vifa/Peerless, Morel, Fostex, Fountek (ribbons), Coles, Visaton, Dayton Audio
+  - **Midrange:** Volt, Scanspeak, Morel
+  - **Bass-mid/bass:** Monacor, Morel, Peerless, Scanspeak, Visaton, Volt, Vifa, Fountek, Dayton Audio
+  - **Amplifiers:** Hypex Fusion, Monacor subwoofer modules
 
-**Pages fetched:**
-- https://www.wilmslowaudio.co.uk/ (navigation structure)
-- https://www.wilmslowaudio.co.uk/categories/speaker-drive-units (brand logos only)
-- https://www.wilmslowaudio.co.uk/treble-units (brand logos only)
-- https://www.wilmslowaudio.co.uk/treble-units/scanspeak (full Scanspeak listing retrieved — see pricing above)
-- https://www.wilmslowaudio.co.uk/bass-mid-bass-units/dayton-audio/ (product list loaded but showed woofers)
-- Multiple product-level URLs (all redirected incorrectly to amplifier pages)
+**Confirmed prices (June 2026, inc. VAT):**
+
+| Driver | Category | Price | Notes |
+|--------|----------|-------|-------|
+| Vifa XT25TG-30-04 | Tweeter | **£42.60** | 104mm face — vs Willys-Hifi £31.95 (33% more expensive) |
+| Vifa D27TG-35-06 | Tweeter | **£38.40** | 104mm face — vs Falcon £28.35, Willys £27.52 (£10+ more) |
+| Scanspeak D2606/9200.00 | Tweeter | **£40.49** | Discovery — vs Falcon £29.35 (£11 more) |
+| Scanspeak D2604/8330.00 | Tweeter | **£54.68** | Discovery |
+| Scanspeak R2604/8320.00 | Tweeter | **£56.60** | Discovery ring radiator |
+| Scanspeak D2905/9300.00 | Tweeter | **£138.91** | Classic — over budget |
+| Scanspeak Illuminator/Revelator | Tweeter | £131–£507 | Way over budget |
+| Fountek NeoCD 1.0 | Ribbon tweeter | **£100.80** | 100mm face — over budget but noted for future |
+| Fountek NeoX 1.0 | Ribbon tweeter | **£124.80** | 98×70mm — over budget |
+| Coles CE4001K | Super tweeter | **£78.00** | 7Ω — niche BBC monitor item, over budget |
+| Coles CE4001G | Super tweeter | **£78.00** | 16Ω — niche, over budget |
+| Morel CAT298 | Tweeter | **£81.05** | Cheapest Morel; 104mm — over budget |
+| Morel Supreme/Elite | Tweeter | £157–£710 | Matched pairs — way over budget |
+| Dayton Audio TCP115-4 | 4" mid (4Ω) | **£24.00** | In stock |
+| Dayton Audio DS115-8 | 4" mid (8Ω) | **£50.40** | In stock — expensive vs SoundImports |
+| Volt VM527 | 50mm dome mid | **£282.00** | Prestige — way over budget |
+
+**Assessment:** Prices for Vifa/Peerless and Scanspeak tweeters are £10–15 more expensive than Falcon Acoustics or Willys-Hifi on every comparable model checked. No SB Acoustics or SEAS means none of the current shortlisted candidates (SB19ST-C000-4, DX25TG59-04, BC25SC06-04, NE19VTS-04) are stocked here. Dayton Audio DS115-8 at £50.40 is overpriced vs alternatives. **Only worth using for:** Fountek ribbons or Coles super tweeters if those become relevant, or as last-resort UK fallback if Falcon/Willys are out of stock on a Vifa/Scanspeak Discovery unit.
+
+**Pages fetched (June 2026):**
+- https://wilmslowaudio.co.uk/ — site structure, contact details, 50+ years trading note
+- https://wilmslowaudio.co.uk/categories/speaker-drive-units — brand list by category
+- https://wilmslowaudio.co.uk/treble-units — tweeter brand list (9 brands confirmed)
+- https://wilmslowaudio.co.uk/treble-units/scanspeak — full 23-model Scanspeak tweeter listing
+- https://wilmslowaudio.co.uk/treble-units/vifa — 2 Vifa tweeters with prices
+- https://wilmslowaudio.co.uk/treble-units/morel — 14 Morel tweeters with prices
+- https://wilmslowaudio.co.uk/treble-units/fountek — 6 Fountek ribbon tweeters with prices
+- https://wilmslowaudio.co.uk/treble-units/coles — 2 Coles super tweeters with prices
+- https://wilmslowaudio.co.uk/midrange-units — midrange brand list (Volt, Scanspeak, Morel)
+- https://wilmslowaudio.co.uk/volt-vm527 — Volt VM527 50mm dome mid, £282 inc VAT
+- https://wilmslowaudio.co.uk/bass-mid-bass-units/dayton-audio — 10 Dayton Audio drivers with prices
 
 ---
 
@@ -213,7 +237,7 @@ Researched June 2026. All URLs fetched via WebFetch.
 | Supplier | Ships UK | Budget-friendly | Hi-Fi DIY range | Recommended |
 |----------|----------|-----------------|-----------------|-------------|
 | SoundImports (EU) | Yes | Yes (EUR, sale pricing) | Excellent | **PRIMARY** |
-| Wilmslow Audio (UK) | Yes (domestic) | Moderate | Good | Secondary (call direct) |
+| Wilmslow Audio (UK) | Yes (domestic) | No — prices 15–33% above Falcon/Willys on same drivers | Moderate (no SB Acoustics/SEAS) | Last resort UK fallback only |
 | Blue Aran (UK) | Yes (domestic) | Yes (PA-grade) | Poor (PA focus) | Not for this project |
 | HiFi Collective (UK) | Yes (domestic) | No (premium) | Very good | Over budget |
 | Falcon Acoustics (UK) | Yes (domestic) | Yes (competitive on Peerless/SB Acoustics) | Very good | **SECONDARY — use for UK orders** |

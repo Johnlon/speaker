@@ -103,6 +103,8 @@ The SEAS woofer category (H1411, H1455, H1152, H1217, H1316, H1305, H624, H1141,
 
 ---
 
+---
+
 ## Seller Purchase Links & Pricing Reference
 
 Direct links to purchase recommended drivers featured in this catalog:

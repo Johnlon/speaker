@@ -87,6 +87,8 @@ Scanned June 2026 from hificollective.co.uk. Specs pulled from individual produc
 
 ---
 
+---
+
 ## Seller Purchase Links & Pricing Reference
 
 Direct links to purchase recommended drivers featured in this catalog:
@@ -107,6 +109,7 @@ Direct links to purchase recommended drivers featured in this catalog:
 - **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
 - **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
 - **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
+- **Wilmslow Audio (UK):** [£63.29 (inc. VAT)](https://www.wilmslowaudio.co.uk/scanspeak-discovery-r2604-833000)
 
 ### Morel MDT22T
 - **SoundImports (EU):** [€63.95](https://www.soundimports.eu/en/morel-mdt-22.html)

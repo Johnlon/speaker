@@ -211,6 +211,8 @@ Known Willys errors found during this sweep:
 
 ---
 
+---
+
 ## Seller Purchase Links & Pricing Reference
 
 Direct links to purchase recommended drivers featured in this catalog:
@@ -227,6 +229,7 @@ Direct links to purchase recommended drivers featured in this catalog:
 - **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
 - **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
 - **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
+- **Wilmslow Audio (UK):** [£63.29 (inc. VAT)](https://www.wilmslowaudio.co.uk/scanspeak-discovery-r2604-833000)
 
 ### SB Acoustics SB26STCN-C000-4
 - **SoundImports (EU):** [€39.95](https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html)

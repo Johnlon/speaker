@@ -20,7 +20,7 @@ The owner cannot track console output across sessions. Write all findings to the
 - Raw scraped specs → `research/`
 - Fact about one driver (power needed, DSP correction, crossover margin, PSU minimum) → `drivers.md`
 - Fact about two drivers paired together (combo crossover, centre spacing, combo PSU) → `combos.md`
-- Recommendation for a scenario → `solutions.md`
+- Recommendation for a scenario → `solutions.html` (the primary deliverable — no solutions.md)
 - Amp/PSU/DSP electronics → `amp.md`
 - Supplier info → `suppliers.md`
 - Calculations and formatting automation scripts → `scripts/`

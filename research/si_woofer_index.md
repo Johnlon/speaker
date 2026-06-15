@@ -147,6 +147,8 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 
 ---
 
+---
+
 ## Seller Purchase Links & Pricing Reference
 
 Direct links to purchase recommended drivers featured in this catalog:
@@ -166,6 +168,7 @@ Direct links to purchase recommended drivers featured in this catalog:
 ### Dayton Audio DS115-8
 - **SoundImports (EU):** [€36.95 (~£31.4)](https://www.soundimports.eu/en/dayton-audio-ds115-8.html)
 - **Willys-Hifi (UK):** [£32.00](https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm)
+- **Wilmslow Audio (UK):** [(Contact for Price)](https://wilmslowaudio.co.uk/dayton-audio-ds115-8-4-designer-series-woofer-speaker)
 
 ### Dayton Audio DSA90-8
 - **SoundImports (EU):** [€34.95](https://www.soundimports.eu/en/dayton-audio-dsa90-8.html)
