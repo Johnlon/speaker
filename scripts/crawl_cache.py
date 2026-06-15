@@ -372,8 +372,8 @@ def main():
     ap = argparse.ArgumentParser(
         description="Durable BFS crawler. Kill and restart safely at any time."
     )
-    ap.add_argument("--workers", type=int, default=50,
-                    help="Parallel connections (default 50)")
+    ap.add_argument("--workers", type=int, default=200,
+                    help="Parallel connections (default 200 — pure network I/O)")
     ap.add_argument("--timeout", type=int, default=20,
                     help="Per-request timeout seconds (default 20)")
     ap.add_argument("--force", action="store_true",

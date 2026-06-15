@@ -66,7 +66,7 @@ status, size_bytes, fetched_at, final_url}`.
 **Run when:** After `extract_urls.py`, or whenever you want to fetch new URLs.
 
 ```
-python scripts/crawl_cache.py [--workers 50] [--timeout 20]
+python scripts/crawl_cache.py [--workers 200] [--timeout 20]
 python scripts/crawl_cache.py --force      # re-fetch everything
 ```
 
