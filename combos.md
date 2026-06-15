@@ -42,6 +42,12 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | PA130-8 | 5" (130mm OD) | 73.9 | 2,260 Hz (Sd=73.9cm², loudspeakerdatabase.com) ⚠ PA-grade pressed-steel driver |
 | Celestion TF0510 | 5" | 78.5 | 2,190 Hz (Sd=78.5cm², loudspeakerdatabase.com) ⚠ PA-grade pressed-steel driver |
 | SIG150-4 (5.25") | 5.25" | ~99 | 1,990 Hz |
+| 12W/4524G00 | 4.5" (100mm OD) | ~45 (est) | ~2,890 Hz (est — datasheet Sd needed) |
+| 15W/4434G00 | 5.25" (114mm OD) | ~66 (est) | ~2,390 Hz (est — datasheet Sd needed) |
+| 12MU/4731T00 | 4.5" (101mm OD) | ~46 (est) | ~2,860 Hz (est — datasheet Sd needed) |
+| WF118WA07 | 4.5" (118mm OD) | ~50 (est) | ~2,740 Hz (est — datasheet Sd needed) |
+| WF120BD05 | 4.5" (120mm OD) | ~52 (est) | ~2,690 Hz (est — datasheet Sd needed) |
+| Morel EW/CAW/EM 428 | 4.5" (118.5mm OD) | ~50 (est) | ~2,740 Hz (est — datasheet Sd needed) |
 
 ---
 
@@ -81,6 +87,8 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | SEAS H1318-06 | 1,900 Hz | 103.8 | 92 | 90 |
 | Morel CAT-298 | 1,800 Hz | 104 | 89 | 80 |
 | D3004/602010 | 850 Hz | 62 | 89.6 | 50 |
+| Audaphon TWS 30/4 | 940 Hz | 104 | 93 | 100 |
+| Dayton RS28A-4 | 1,200 Hz | 103 | 91 | 100 |
 
 ---
 
@@ -224,9 +232,23 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | CAT1 | DSA90-8 | Morel CAT-298 | 1,800–3,260 | 2,167 | 98 | £86 | 24V/3.4A/81W / 29V/4.3A/124W | Detailed + dome 80W | CAT-298 £55.95 (Falcon); DSA90-8 £29.71 (SI €34.95); 1,460Hz window; 28mm Acuflex replaceable dome 8Ω; 98mm; ⚠ marginal [0.5 oct]; tweeter at 2.4×Fs — THD concern |
 | CAT2 | DS115-8 | Morel CAT-298 | 1,800–2,636 | 1,948 | 110 | £87 | 24V/3.3A/79W / 28V/4.3A/121W | Warm + dome 80W | CAT-298 £55.95 (Falcon); DS115-8 £31.41 (SI €36.95); 836Hz window; Acuflex 8Ω; ⚠ marginal [0.2 oct]; tweeter at 2.2×Fs — THD concern |
 | CAT3 | SB12PFCR25-4 | Morel CAT-298 | 1,800–2,730 | 1,983 | 113 | £77 | 24V/3.4A/82W / 28V/4.4A/124W | Warm nat. + dome 80W | CAT-298 £55.95 (Falcon); SB12PFCR £20.58 (Willys); 930Hz window; nat. fibre + Acuflex; ⚠ marginal [0.3 oct]; tweeter at 2.2×Fs — THD concern |
-| ILL1 | DSA90-8 | D3004/602010 | 850–3,260 | 1,824 | 77 | £145 | 24V/3.6A/87W / 29V/4.5A/130W | Detailed + Illuminator | **⚠ DISC** — D3004 £115.05 (Willys, last stock); DSA90-8 £29.71 (SI €34.95); 2,410Hz window; 77mm spacing; Fs=425Hz widest xover floor; comfortable [1.0 oct]; tweeter at 4.3×Fs |
-| ILL2 | DS115-8 | D3004/602010 | 850–2,636 | 1,640 | 89 | £146 | 24V/3.5A/84W / 28V/4.5A/126W | Warm + Illuminator | **⚠ DISC** — D3004 £115.05 (Willys); DS115-8 £31.41 (SI €36.95); 1,786Hz window; moderate [0.7 oct]; tweeter at 3.9×Fs |
-| ILL3 | SB12PFCR25-4 | D3004/602010 | 850–2,730 | 1,669 | 92 | £136 | 24V/3.7A/88W / 28V/4.7A/130W | Warm nat. + Illuminator | **⚠ DISC** — D3004 £115.05 (Willys); SB12PFCR £20.58 (Willys); 1,880Hz window; nat. fibre + Illuminator; moderate [0.8 oct]; tweeter at 3.9×Fs |
+| ILL1 | DSA90-8 | D3004/602010 | 850–3,260 | 1,824 | 77 | £149 | 24V/3.6A/87W / 29V/4.5A/130W | Detailed + Illuminator | D3004 £119 (LSS €142.20, in stock Jun 2026); DSA90-8 £29.71 (SI €34.95); 2,410Hz window; 77mm spacing; Fs=425Hz widest xover floor; comfortable [1.0 oct]; tweeter at 4.3×Fs |
+| ILL2 | DS115-8 | D3004/602010 | 850–2,636 | 1,640 | 89 | £150 | 24V/3.5A/84W / 28V/4.5A/126W | Warm + Illuminator | D3004 £119 (LSS €142.20, in stock Jun 2026); DS115-8 £31.41 (SI €36.95); 1,786Hz window; moderate [0.7 oct]; tweeter at 3.9×Fs |
+| ILL3 | SB12PFCR25-4 | D3004/602010 | 850–2,730 | 1,669 | 92 | £140 | 24V/3.7A/88W / 28V/4.7A/130W | Warm nat. + Illuminator | D3004 £119 (LSS €142.20, in stock Jun 2026); SB12PFCR £20.58 (Willys); 1,880Hz window; nat. fibre + Illuminator; moderate [0.8 oct]; tweeter at 3.9×Fs |
+| ILL4 | 12W/4524G00 | D3004/602010 | 850–2,890 (est) | ~1,567 | 81 | £169 | 24V/2.9A/71W / 28V/5.0A/141W | Compact 4.5" + Illuminator | D3004 £119 (LSS); 12W/4524G00 £50 (LSS €59.40); 81mm compact spacing; 2,040Hz window (est); comfortable [0.9 oct]; tweeter at 4.3×Fs; Sd/beaming est — confirm datasheet |
+| ILL5 | 15W/4434G00 | D3004/602010 | 850–2,390 (est) | ~1,425 | 88 | £176 | 24V/2.8A/67W / 28V/4.8A/135W | 5.25" best-Fs + Illuminator | D3004 £119 (LSS); 15W/4434G00 £57 (LSS €68.40); Fs=43Hz → 3.49× margin at 150Hz xover; 1,540Hz window (est); moderate [0.7 oct]; tweeter at 4.2×Fs; beaming est |
+| ILL6 | WF118WA07 | D3004/602010 | 850–2,740 (est) | ~1,526 | 90 | £199 | 24V/3.3A/79W / 28V/5.7A/158W | Neo mid + Illuminator | D3004 £119 (LSS); WF118WA07 £80 (LSS €95.70); ⚠ WF118WA07 burst at 50W rating — DSP limiter at 45W; 1,890Hz window (est); moderate [0.8 oct]; tweeter at 4.2×Fs; beaming est |
+| ILL7 | Morel EW 428 | D3004/602010 | 850–2,740 (est) | ~1,526 | 90 | £248 | 24V/2.8A/67W / 28V/4.8A/133W | 150W mid + Illuminator flagship | D3004 £119 (LSS); EW 428 £129 (LSS €153); 150W burst ceiling; Xmax=4.5mm; 1,890Hz window (est); moderate [0.8 oct]; tweeter at 4.2×Fs; beaming est |
+| TWS1 | DSA90-8 | Audaphon TWS 30/4 | 940–3,260 | ~1,750 | 98 | £96 | 24V/2.8A/68W / 29V/4.7A/135W | Detailed + 93dB dome | TWS 30/4 £66 (LSS €79); DSA90-8 £29.71 (SI €34.95); 2,320Hz window; 98mm spacing; 93dB→−8dB DSP pad; comfortable [0.9 oct]; tweeter at 4.6×Fs |
+| TWS2 | DS115-8 | Audaphon TWS 30/4 | 940–2,636 | ~1,574 | 110 | £97 | 24V/2.7A/65W / 28V/4.6A/130W | Warm + 93dB dome | TWS 30/4 £66 (LSS €79); DS115-8 £31.41 (SI €36.95); 1,696Hz window; 110mm spacing; paper warmth + wide xover window; moderate [0.7 oct]; tweeter at 4.2×Fs |
+| TWS3 | SB12PFCR25-4 | Audaphon TWS 30/4 | 940–2,730 | ~1,602 | 113 | £87 | 24V/2.9A/69W / 28V/4.9A/137W | Warm nat. + 93dB dome | TWS 30/4 £66 (LSS €79); SB12PFCR £20.58 (Willys); 1,790Hz window; 113mm spacing; most affordable TWS pairing with SI-stock mid; moderate [0.8 oct]; tweeter at 4.2×Fs |
+| TWS4 | 12W/4524G00 | Audaphon TWS 30/4 | 940–2,890 (est) | ~1,648 | 102 | £116 | 24V/2.6A/63W / 28V/4.5A/126W | Compact + 93dB dome | TWS 30/4 £66 (LSS €79); 12W/4524G00 £50 (LSS €59.40); 102mm compact spacing; all-LSS pairing; Fs=50Hz (3.0×); moderate [0.8 oct]; tweeter at 4.7×Fs; beaming est |
+| TWS5 | 15W/4434G00 | Audaphon TWS 30/4 | 940–2,390 (est) | ~1,499 | 109 | £123 | 24V/2.5A/60W / 28V/4.3A/120W | Best-Fs 5.25" + 93dB dome | TWS 30/4 £66 (LSS €79); 15W/4434G00 £57 (LSS €68.40); Fs=43Hz outstanding; 1,450Hz window (est); moderate [0.7 oct]; tweeter at 4.7×Fs; beaming est |
+| TWS6 | WF118WA07 | Audaphon TWS 30/4 | 940–2,740 (est) | ~1,605 | 111 | £146 | 24V/3.0A/72W / 28V/5.1A/143W | Neo mid + 93dB dome | TWS 30/4 £66 (LSS €79); WF118WA07 £80 (LSS €95.70); ⚠ WF118WA07 burst at 50W limit — DSP limiter at 45W; 1,800Hz window (est); moderate [0.8 oct]; tweeter at 4.7×Fs; beaming est |
+| TWS7 | Morel EW 428 | Audaphon TWS 30/4 | 940–2,740 (est) | ~1,605 | 111 | £195 | 24V/2.5A/59W / 28V/4.2A/118W | 150W mid + 93dB dome | TWS 30/4 £66 (LSS €79); EW 428 £129 (LSS €153); 150W ceiling → burst entirely stress-free; 1,800Hz window (est); moderate [0.8 oct]; tweeter at 4.7×Fs; beaming est |
+| RS1 | DSA90-8 | Dayton RS28A-4 | 1,200–3,260 | ~1,978 | 98 | £105 | 24V/3.0A/72W / 29V/4.9A/143W | Detailed + 100W dome | RS28A-4 £75 (LSS €89.40); DSA90-8 £29.71 (SI €34.95); 2,060Hz window; 98mm spacing; 100W ceiling; moderate [0.7 oct]; tweeter at 3.3×Fs |
+| RS2 | DS115-8 | Dayton RS28A-4 | 1,200–2,636 | ~1,778 | 109 | £106 | 24V/2.9A/69W / 28V/4.9A/137W | Warm + 100W dome | RS28A-4 £75 (LSS €89.40); DS115-8 £31.41 (SI €36.95); 1,436Hz window; 109mm spacing; tight [0.6 oct]; tweeter at 3.3×Fs |
+| RS3 | SB12PFCR25-4 | Dayton RS28A-4 | 1,200–2,730 | ~1,810 | 112 | £96 | 24V/3.0A/72W / 28V/5.2A/145W | Warm nat. + 100W dome | RS28A-4 £75 (LSS €89.40); SB12PFCR £20.58 (Willys); 1,530Hz window; 112mm spacing; cheapest 100W dome + nat. fibre option; tight [0.6 oct]; tweeter at 3.3×Fs |
 | X1 | DSA90-8 | XT25TG | 880–3260 | 1,855 | 98 | £60 | 24V/3.4A/82W / 28V/4.4A/124W | Aluminium detail + Ring rad detail | DSA90-8 £29.71 (SI €34.95); XT25TG £29.90 (Falcon); moderate [1.0 oct]; tweeter at 4.2×Fs |
 | X2 | DSA90-8 | XT25BG | 1140–3260 | 2,112 | 98 | £67 | 24V/3.3A/80W / 28V/4.4A/122W | Aluminium detail + Ring rad detail | DSA90-8 £29.71 (SI €34.95); XT25BG £37.14 (Willys); moderate [0.6 oct]; tweeter at 3.7×Fs |
 | X3 | DSA90-8 | SB26ADC | 1360–3260 | 2,307 | 98 | £71 | 24V/3.6A/86W / 28V/4.6A/128W | Aluminium detail + Dome warmth | DSA90-8 £29.71 (SI €34.95); SB26ADC £41.60 (Willys); tight [0.4 oct]; tweeter at 3.4×Fs |
