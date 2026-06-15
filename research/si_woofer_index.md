@@ -144,3 +144,42 @@ Key thresholds: Fs ≤75Hz for 2× margin at 150Hz; Xmax ≥2.5mm; sensitivity 8
 - **Power at ref (98dB):** P = 10^((98 − Sens) / 10) watts
 
 *Sources: SoundImports product pages (fetched June 2026), drivers.md entries, research/ datasheets*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### SB Acoustics SB12PFCR25-4
+- **SoundImports (EU):** [€25.95 (~£22.1)](https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html)
+- **Willys-Hifi (UK):** [£20.58](https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer)
+
+### SB Acoustics SB12PACR25-4
+- **SoundImports (EU):** [€32.45 (OOS)](https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html)
+- **Willys-Hifi (UK):** [£23.76](https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer)
+
+### SB Acoustics SB12MNRX2-25-4
+- **SoundImports (EU):** [€61.95 (~£52.7)](https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html)
+- **Willys-Hifi (UK):** [£48.10](https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange)
+
+### Dayton Audio DS115-8
+- **SoundImports (EU):** [€36.95 (~£31.4)](https://www.soundimports.eu/en/dayton-audio-ds115-8.html)
+- **Willys-Hifi (UK):** [£32.00](https://willys-hifi.com/products/dayton-audio-ds115-8-4-designer-series-woofer-8-ohm)
+
+### Dayton Audio DSA90-8
+- **SoundImports (EU):** [€34.95](https://www.soundimports.eu/en/dayton-audio-dsa90-8.html)
+- **Willys-Hifi (UK):** [£29.90](https://willys-hifi.com/products/dayton-audio-dsa90-8-3-aluminum-cone-woofer)
+
+### SB Acoustics SB12PACR25-4-COAX
+- **SoundImports (EU):** [€68.45](https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4-coax.html)
+- **Willys-Hifi (UK):** [£52.53](https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-coax-coaxial-speaker)
+
+### Tymphany SLS-85S25
+- **SoundImports (EU):** [€24.95](https://www.soundimports.eu/en/tymphany-sls-85s25cp04-04.html)
+- **Parts Express (US):** [$22.99](https://www.parts-express.com/Tymphany-SLS-85S25CP04-04-3-Paper-Cone-Woofer-4-Ohm-264-1148)
+
+### Tang Band W5-1138SMF
+- **SoundImports (EU):** [€54.95](https://www.soundimports.eu/en/tang-band-w5-1138smf.html)
+- **Parts Express (US):** [$56.98](https://www.parts-express.com/Tang-Band-W5-1138SMF-5-1-4-Paper-Cone-Subwoofer-Speaker-264-831)
+

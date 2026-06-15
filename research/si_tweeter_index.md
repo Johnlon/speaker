@@ -112,3 +112,69 @@ Pages 4–6 scanned June 2026. Specs populated June 2026 from SI product pages, 
 - **FP OD drives centre spacing:** spacing = (mid_OD + tweet_OD) / 2
 
 *Sources: SoundImports product pages (fetched June 2026), drivers.md entries, research/ datasheets*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### Dayton Audio ND25FA-4
+- **SoundImports (EU):** [€21.45](https://www.soundimports.eu/en/dayton-audio-nd25fa-4.html)
+- **Willys-Hifi (UK):** [£17.50](https://willys-hifi.com/collections/dayton-audio-drive-units)
+
+### SB Acoustics SB19ST
+- **SoundImports (EU):** [€21.45](https://www.soundimports.eu/en/sb-acoustics-sb19st-c000-4.html)
+- **Willys-Hifi (UK):** [£15.20](https://willys-hifi.com/products/sb-acoustics-sb19st-c000-4-tweeter)
+- **Falcon Acoustics (UK):** [£14.30](https://www.falconacoustics.co.uk/sb-acoustics-sb19st-c000-4-19mm-tweeter.html)
+
+### Peerless XT25SC90-04
+- **Willys-Hifi (UK):** [£19.52](https://willys-hifi.com/products/vifa-xt25sc90-04-tweeter)
+- **Falcon Acoustics (UK):** [£18.20](https://www.falconacoustics.co.uk/peerless-vifa-xt25sc90-04-tweeter-pair.html)
+
+### Peerless XT25SC40-04
+- **SoundImports (EU):** [€32.95](https://www.soundimports.eu/en/peerless-by-tymphany-xt25sc40-04.html)
+- **Willys-Hifi (UK):** [£24.00](https://willys-hifi.com/products/vifa-xt25sc40-04-tweeter)
+
+### Peerless XT25TG30-04
+- **SoundImports (EU):** [€49.95 (~£43)](https://www.soundimports.eu/en/peerless-by-tymphany-xt25tg30-04.html)
+- **Willys-Hifi (UK):** [£31.95](https://willys-hifi.com/products/vifa-xt25tg30-04-tweeter)
+- **Falcon Acoustics (UK):** [£29.90](https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-tweeter.html)
+
+### SB Acoustics SB26STCN-C000-4
+- **SoundImports (EU):** [€39.95](https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html)
+- **Willys-Hifi (UK):** [£29.40](https://willys-hifi.com/products/sb-acoustics-sb26stcn-c000-4-tweeter)
+
+### SB Acoustics SB21SDC
+- **SoundImports (EU):** [€39.95](https://www.soundimports.eu/en/sb-acoustics-sb21sdc-c000-4.html)
+- **Willys-Hifi (UK):** [£30.24](https://willys-hifi.com/products/sb-acoustics-sb21sdc-c000-4-tweeter)
+
+### SB Acoustics SB29RDNC
+- **SoundImports (EU):** [€78.95](https://www.soundimports.eu/en/sb-acoustics-sb29rdnc-c000-4.html)
+- **Willys-Hifi (UK):** [£59.88](https://willys-hifi.com/products/sb-acoustics-sb29rdnc-c000-4-tweeter)
+
+### SB Acoustics SB21RDCN
+- **SoundImports (EU):** [€59.95](https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html)
+- **Willys-Hifi (UK):** [£45.60](https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter)
+
+### Morel MDT22T
+- **SoundImports (EU):** [€63.95](https://www.soundimports.eu/en/morel-mdt-22.html)
+- **Willys-Hifi (UK):** [£48.00](https://willys-hifi.com/products/morel-mdt-22-tweeter)
+
+### Scan-Speak R2604/833000
+- **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
+- **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
+- **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
+
+### SEAS 27TDFC H1189
+- **SoundImports (EU):** [€71.86](https://www.soundimports.eu/en/seas-27tdfc.html)
+- **Willys-Hifi (UK):** [£55.00](https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter)
+- **Falcon Acoustics (UK):** [£56.92](https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html)
+- **HiFi Collective (UK):** [£56.92](https://www.hificollective.co.uk/speakers/seas-27tdfc-tweeter-h1189.html)
+
+### SEAS 27TFFNC/CG H1406-04
+- **SoundImports (EU):** [€42.95](https://www.soundimports.eu/en/seas-27tffnc-cg.html)
+- **Willys-Hifi (UK):** [£33.00](https://willys-hifi.com/products/seas-prestige-27tffnc-cg-h1406-04-tweeter)
+- **Falcon Acoustics (UK):** [£32.95](https://www.falconacoustics.co.uk/drive-units-1/seas-drive-units/seas-speakers-tweeters-drive-units.html)
+- **HiFi Collective (UK):** [£33.66](https://www.hificollective.co.uk/speakers/seas-h1406-27tffnc-cg-tweeter.html)
+

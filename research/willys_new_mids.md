@@ -79,3 +79,22 @@ These are full-range woofer class; crossover to tweeter would need to be below 1
 
 *Sources: willys-hifi.com product pages fetched June 2026*
  product pages fetched June 2026*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### SB Acoustics SB12PFCR25-4
+- **SoundImports (EU):** [€25.95 (~£22.1)](https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html)
+- **Willys-Hifi (UK):** [£20.58](https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer)
+
+### SB Acoustics SB12PACR25-4
+- **SoundImports (EU):** [€32.45 (OOS)](https://www.soundimports.eu/en/sb-acoustics-sb12pacr25-4.html)
+- **Willys-Hifi (UK):** [£23.76](https://willys-hifi.com/products/sb-acoustics-sb12pacr25-4-mid-woofer)
+
+### SB Acoustics SB12MNRX2-25-4
+- **SoundImports (EU):** [€61.95 (~£52.7)](https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html)
+- **Willys-Hifi (UK):** [£48.10](https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange)
+

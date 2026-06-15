@@ -84,3 +84,31 @@ Scanned June 2026 from hificollective.co.uk. Specs pulled from individual produc
 - **6Ω drivers** are non-standard but JAB5 amp table covers 6Ω; re-check PSU calc
 
 *Sources: hificollective.co.uk product pages and shop listings, fetched June 2026*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### SEAS 27TDFC H1189
+- **SoundImports (EU):** [€71.86](https://www.soundimports.eu/en/seas-27tdfc.html)
+- **Willys-Hifi (UK):** [£55.00](https://willys-hifi.com/products/seas-prestige-27tdfc-h1189-06-tweeter)
+- **Falcon Acoustics (UK):** [£56.92](https://www.falconacoustics.co.uk/seas-27tdfc-prestige-tweeter.html)
+- **HiFi Collective (UK):** [£56.92](https://www.hificollective.co.uk/speakers/seas-27tdfc-tweeter-h1189.html)
+
+### SEAS 27TFFNC/CG H1406-04
+- **SoundImports (EU):** [€42.95](https://www.soundimports.eu/en/seas-27tffnc-cg.html)
+- **Willys-Hifi (UK):** [£33.00](https://willys-hifi.com/products/seas-prestige-27tffnc-cg-h1406-04-tweeter)
+- **Falcon Acoustics (UK):** [£32.95](https://www.falconacoustics.co.uk/drive-units-1/seas-drive-units/seas-speakers-tweeters-drive-units.html)
+- **HiFi Collective (UK):** [£33.66](https://www.hificollective.co.uk/speakers/seas-h1406-27tffnc-cg-tweeter.html)
+
+### Scan-Speak R2604/833000
+- **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
+- **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
+- **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
+
+### Morel MDT22T
+- **SoundImports (EU):** [€63.95](https://www.soundimports.eu/en/morel-mdt-22.html)
+- **Willys-Hifi (UK):** [£48.00](https://willys-hifi.com/products/morel-mdt-22-tweeter)
+

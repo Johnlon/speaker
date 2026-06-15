@@ -100,3 +100,18 @@ The SEAS woofer category (H1411, H1455, H1152, H1217, H1316, H1305, H624, H1141,
 - Scanspeak model naming: **12W = 12 cm = 4.7"**, **18W = 18 cm = 7"** (too large)
 
 *Sources: hificollective.co.uk product pages and shop listings, fetched June 2026*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### SB Acoustics SB12PFCR25-4
+- **SoundImports (EU):** [€25.95 (~£22.1)](https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html)
+- **Willys-Hifi (UK):** [£20.58](https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer)
+
+### SB Acoustics SB12MNRX2-25-4
+- **SoundImports (EU):** [€61.95 (~£52.7)](https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html)
+- **Willys-Hifi (UK):** [£48.10](https://willys-hifi.com/products/sb-acoustics-sb12mnrx2-25-4-midrange)
+

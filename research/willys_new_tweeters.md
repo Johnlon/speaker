@@ -208,3 +208,27 @@ Known Willys errors found during this sweep:
 | morel_mdt22t.pdf | MDT22T | cdn.shopify.com/…/MOREL_MDT22_DATASHEET.pdf |
 
 *Sources: willys-hifi.com + manufacturer datasheets, fetched June 2026*
+
+---
+
+## Seller Purchase Links & Pricing Reference
+
+Direct links to purchase recommended drivers featured in this catalog:
+
+### SB Acoustics SB21RDCN
+- **SoundImports (EU):** [€59.95](https://www.soundimports.eu/en/sb-acoustics-sb21rdcn-c000-4.html)
+- **Willys-Hifi (UK):** [£45.60](https://willys-hifi.com/products/sb-acoustics-sb21rdcn-c000-4-tweeter)
+
+### Morel MDT22T
+- **SoundImports (EU):** [€63.95](https://www.soundimports.eu/en/morel-mdt-22.html)
+- **Willys-Hifi (UK):** [£48.00](https://willys-hifi.com/products/morel-mdt-22-tweeter)
+
+### Scan-Speak R2604/833000
+- **SoundImports (EU):** [€62.45 (~£53)](https://www.soundimports.eu/en/scan-speak-r2604-833000.html)
+- **Willys-Hifi (UK):** [£46.00](https://willys-hifi.com/products/scan-speak-discovery-r2604-833000-dual-ring-tweeter)
+- **Falcon Acoustics (UK):** [£45.95](https://www.falconacoustics.co.uk/scanspeak-r2604-833000-tweeter-discovery-range.html)
+
+### SB Acoustics SB26STCN-C000-4
+- **SoundImports (EU):** [€39.95](https://www.soundimports.eu/en/sb-acoustics-sb26stcn-c000-4.html)
+- **Willys-Hifi (UK):** [£29.40](https://willys-hifi.com/products/sb-acoustics-sb26stcn-c000-4-tweeter)
+
