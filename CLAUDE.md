@@ -8,7 +8,7 @@ Project and file structure, requirements, evaluation policy, and fixed system co
 
 **Never ask the owner for input, confirmation, or clarification.** Work 100% autonomously. When a decision must be made, choose the most reasonable option given REQUIREMENTS.md and project context, record what was chosen in the commit message, and continue.
 
-Push to GitHub at least every 10 minutes during active work so the owner can track progress.
+Push to GitHub at least every 10 minutes during active work so the owner can track progress. **NEVER run git commands in the background; always set WaitMsBeforeAsync to its maximum value (10000ms) to run git commands synchronously in the foreground.**
 
 ---
 
