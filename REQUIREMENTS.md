@@ -28,7 +28,7 @@ Each fact is recorded in exactly one place. Do not summarise or re-list data tha
 
 - **combos.md** is a single table (one row per pairing). There is no separate "detailed entries" section that repeats the same pairings in prose form.
 - **drivers.md** is the source of truth for per-driver specs. combos.md never repeats sensitivity, Fs, Xmax, or any other per-driver figure — it records only what changes per combination.
-- **solutions.md** references pairings by ID (e.g., RR2, S1) — it does not duplicate the spec data from combos.md or drivers.md.
+- **solutions.html** references pairings by ID (e.g., RR2, S1) — it does not duplicate the spec data from combos.md or drivers.md.
 
 ### File placement test — ask before writing
 
@@ -193,7 +193,6 @@ The Mean Well LRS-150-24 supplies 6.5A / 156W at 24V. At standard 24V combos wit
 ## Off-Axis Stability
 
 - Tonal balance must remain stable across the full 60° horizontal sweep
-- Tweeter dome ≤19 mm preferred (wider HF dispersion above crossover)
 - Mild toe-in (10–15°) is possible but the design must not depend on it
 
 ---
@@ -212,7 +211,7 @@ The Mean Well LRS-150-24 supplies 6.5A / 156W at 24V. At standard 24V combos wit
 
 ### No Visual Exclusions
 
-Visual constraints removed by owner instruction (June 2026). Do not exclude any driver based on cone colour, frame shape, dome material colour, phase plug colour, or any other visual attribute. Record appearance as a note and move on.
+Do not exclude any driver based on cone colour, frame shape, dome material colour, phase plug colour, or any other visual attribute. Record appearance as a note and move on.
 
 Automatic exclusions only for:
 - Drivers designed exclusively for rear mounting with no provision for front mounting
@@ -272,4 +271,3 @@ Additional columns permitted only where the value has direct and significant bea
 - All drivers surface-mounted — proud of the baffle, not flush-recessed
 - No wiring or connectors visible on front or top face
 - Compact — Google Home Max footprint is the size reference; up to ~5 cm taller is acceptable
-- Classic look — I like B&W DM4 and similar wooden speaker designs, but I also like the idea of an ultra compact speaker with great bass and lovely mids and highs
