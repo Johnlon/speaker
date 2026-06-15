@@ -149,20 +149,27 @@ def find_json(md_key, md_name):
 tol_map = {json_key: tol for json_key, tol, _ in FIELDS}
 tol_map.update({"freq_low_hz": 1.0, "freq_high_hz": 1.0})
 
-mismatches  = []
-missing_fld = []
-not_matched = []
+mismatches   = []
+missing_fld  = []
+not_matched  = []
+json_orphans = []   # JSON entries with no MD counterpart
+
+# Build set of JSON IDs that were successfully matched from MD side
+matched_json_ids = set()
 
 for md_key, entry in sorted(md_drivers.items()):
     name   = entry['name']
     fields = entry['fields']
-    if not fields:
-        continue
 
     j = find_json(md_key, name)
     if j is None:
         not_matched.append(name)
         continue
+
+    matched_json_ids.add(j['id'])
+
+    if not fields:
+        continue   # matched but no numeric specs to compare (excluded/sparse entries)
 
     for jfield, md_val in fields.items():
         j_val = j.get(jfield)
@@ -174,6 +181,11 @@ for md_key, entry in sorted(md_drivers.items()):
             mismatches.append({'driver': name, 'field': jfield,
                                 'md': md_val, 'json': j_val,
                                 'json_id': j.get('id', '?')})
+
+# ── reverse check: JSON entries with no MD match ─────────────────────────────
+for did, d in json_by_id.items():
+    if did not in matched_json_ids:
+        json_orphans.append((did, d.get('brand',''), d.get('model','')))
 
 # ── report ────────────────────────────────────────────────────────────────────
 
@@ -204,5 +216,11 @@ if missing_fld:
         print("    %-18s md=%s" % (m['field'], m['md_val']))
     print()
 
-if not mismatches and not missing_fld and not not_matched:
-    print("All MD values are present and correct in drivers.json.")
+if json_orphans:
+    print("=== JSON ENTRIES WITH NO MD COUNTERPART ===")
+    for did, brand, model in sorted(json_orphans):
+        print("  [%s]  %s %s" % (did, brand, model))
+    print()
+
+if not mismatches and not missing_fld and not not_matched and not json_orphans:
+    print("Perfect 1:1 correlation - MD and JSON are fully in sync.")
