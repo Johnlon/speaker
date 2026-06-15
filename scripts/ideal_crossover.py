@@ -20,7 +20,7 @@ import re
 # ── Mid beaming frequencies (Hz) ─────────────────────────────────────────────
 # f_beam = 34400 / (π × √(Sd/π));  values confirmed from combos.md beaming table
 MID_BEAM: dict[str, int] = {
-    "DSA90-8":          3260,
+    "DSA90-8":          3475,  # Sd=31.2cm² (SI datasheet) → f_beam=3,475 Hz
     "DS115-8":          2636,
     "HiVi B4N":         2636,
     "SB12PFCR25-4":     2730, "SB12PFCR":     2730,
