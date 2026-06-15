@@ -76,8 +76,10 @@ _DOMAIN_SEM: dict[str, int] = {
 }
 
 _SI_HOST = "www.soundimports.eu"
-# Matches SI product page paths: /en/some-product-slug.html
 _SI_PRODUCT_RE = re.compile(r"^/en/[a-z0-9][a-z0-9\-]+\.html$")
+
+_WILLYS_HOST = "willys-hifi.com"
+_WILLYS_PRODUCT_RE = re.compile(r"^/products/[a-z0-9][a-z0-9\-]+$")
 
 # ---------------------------------------------------------------------------
 # URL helpers
@@ -97,33 +99,70 @@ def _is_pdf(url: str) -> bool:
     return url.lower().split("?")[0].endswith(".pdf")
 
 
+def _slug_to_query(slug: str) -> str:
+    """Convert a URL slug to a natural-language search query.
+    'sb-acoustics-sb12pacr25-4-mid-woofer' -> 'sb acoustics sb12pacr25 4 mid woofer'
+    Adds spaces at letter-digit transitions, replaces hyphens with spaces.
+    """
+    q = re.sub(r"([a-z])(\d)", r"\1 \2", slug)
+    q = re.sub(r"(\d)([a-z])", r"\1 \2", q)
+    return q.replace("-", " ").strip()
+
+
+# --- SoundImports (Magento) ---
+
 def _is_si_product_url(url: str) -> bool:
     p = urlparse(url)
     return p.netloc == _SI_HOST and bool(_SI_PRODUCT_RE.match(p.path))
 
 
 def _si_search_url(failed_url: str) -> str:
-    """Build a SI search URL from a failed product page slug."""
     slug = urlparse(failed_url).path.rstrip("/").rsplit("/", 1)[-1].replace(".html", "")
-    # Add spaces at letter-digit transitions and replace hyphens with spaces
-    q = re.sub(r"([a-z])(\d)", r"\1 \2", slug)
-    q = re.sub(r"(\d)([a-z])", r"\1 \2", q)
-    q = q.replace("-", " ").strip()
+    q = _slug_to_query(slug)
     return f"https://{_SI_HOST}/en/catalogsearch/result/?q={quote_plus(q)}"
 
 
 def _extract_si_product_urls(html: str) -> list[str]:
-    """Extract product page URLs from a SI search results page."""
     soup = BeautifulSoup(html, "html.parser")
     found = []
     for a in soup.find_all("a", href=True):
         href = a["href"].split("#")[0].split("?")[0].rstrip(".,;)>")
         p = urlparse(href)
-        # Normalise relative URLs
         if not p.netloc:
             href = f"https://{_SI_HOST}{href}"
             p = urlparse(href)
         if p.netloc == _SI_HOST and _SI_PRODUCT_RE.match(p.path):
+            found.append(href)
+    return list(dict.fromkeys(found))
+
+
+# --- Willys-Hifi (Shopify, /a/search HTML endpoint) ---
+
+def _is_willys_product_url(url: str) -> bool:
+    p = urlparse(url)
+    return p.netloc == _WILLYS_HOST and bool(_WILLYS_PRODUCT_RE.match(p.path))
+
+
+def _willys_search_url(failed_url: str) -> str:
+    """Build a Willys search URL from a failed product slug.
+    Uses the full slug as the query — the search engine handles partial matches.
+    e.g. sb-acoustics-sb12pacr25-4-mid-woofer -> /a/search?q=sb-acoustics-sb12pacr25-4-mid-woofer
+    """
+    slug = urlparse(failed_url).path.rstrip("/").rsplit("/", 1)[-1]
+    return f"https://{_WILLYS_HOST}/a/search?q={quote_plus(slug)}"
+
+
+def _extract_willys_product_urls(html: str) -> list[str]:
+    """Parse Willys /a/search HTML results page for /products/ links."""
+    soup = BeautifulSoup(html, "html.parser")
+    found = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"].split("?")[0].split("#")[0].rstrip(".,;)>")
+        p = urlparse(href)
+        if not p.netloc:
+            href = f"https://{_WILLYS_HOST}{href}"
+            p = urlparse(href)
+        if p.netloc == _WILLYS_HOST and _WILLYS_PRODUCT_RE.match(p.path):
             found.append(href)
     return list(dict.fromkeys(found))
 
@@ -354,27 +393,44 @@ async def worker(
                 _atomic_write_manifest(manifest)
             print(f"[404]  {url}")
 
-            # SI product page 404 -> search SI for the correct URL
+            # On 404, try site-specific search to find the canonical URL
             if _is_si_product_url(url):
                 search_url = _si_search_url(url)
-                print(f"       searching SI: {search_url}")
+                print(f"       SI search: {search_url}")
                 s2, ct2, body2, _ = await _fetch(search_url, session, timeout, sems)
                 if s2 == 200 and body2:
-                    candidates = _extract_si_product_urls(
-                        body2.decode("utf-8", errors="replace")
-                    )
+                    candidates = _extract_si_product_urls(body2.decode("utf-8", errors="replace"))
                     async with seen_lock:
                         fresh = [u for u in candidates if u not in seen]
                         for u in fresh:
                             seen.add(u)
                     if fresh:
-                        print(f"       -> {len(fresh)} candidates: {', '.join(u.split('/')[-1] for u in fresh[:3])}")
+                        print(f"       -> {len(fresh)} candidate(s): {', '.join(u.split('/')[-1] for u in fresh[:3])}")
                         for u in fresh:
                             await _append_url(u, file_lock)
                             await queue.put(u)
                         new_discovered += len(fresh)
                     else:
-                        print(f"       -> no new candidates found")
+                        print(f"       -> no results")
+
+            elif _is_willys_product_url(url):
+                search_url = _willys_search_url(url)
+                 print(f"       Willys search: {search_url}")
+                s2, ct2, body2, _ = await _fetch(search_url, session, timeout, sems)
+                if s2 == 200 and body2:
+                    candidates = _extract_willys_product_urls(body2.decode("utf-8", errors="replace"))  # HTML
+                    async with seen_lock:
+                        fresh = [u for u in candidates if u not in seen]
+                        for u in fresh:
+                            seen.add(u)
+                    if fresh:
+                        print(f"       -> {len(fresh)} candidate(s): {', '.join(u.split('/')[-1] for u in fresh[:3])}")
+                        for u in fresh:
+                            await _append_url(u, file_lock)
+                            await queue.put(u)
+                        new_discovered += len(fresh)
+                    else:
+                        print(f"       -> no results")
 
         else:
             # 429 / timeout / other transient error — NOT recorded, retried next run
