@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-15",
-  "driver_count": 164,
+  "generated": "2026-06-16",
+  "driver_count": 146,
   "drivers": [
     {
       "id": "tang-band-w5-1138smf",
@@ -36,7 +36,19 @@
         {
           "local": "research/tang_band_w5-1138smf.pdf"
         }
-      ]
+      ],
+      "vc_mm": 1.25,
+      "le_mh": 0.34,
+      "qms": 3.56,
+      "qes": 0.57,
+      "mms_g": 28.81,
+      "cms_mm_n": 0.37,
+      "bl_tm": 7.17,
+      "vas_l": 0.17,
+      "surround_material": "Rubber",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "depth_mm": 3.67
     },
     {
       "id": "dayton-audio-nd140-pr",
@@ -51,7 +63,12 @@
       "sd_cm2": 86.6,
       "vas_l": 8.4,
       "mms_g": 16.4,
-      "cms_mm_n": 0.79
+      "cms_mm_n": 0.79,
+      "surround_material": "Rubber",
+      "frame_material": "Steel",
+      "frame_od_mm": 5.5,
+      "depth_mm": 2.5,
+      "qts": 0.79
     },
     {
       "id": "sb-acoustics-sb15sfcr-00-5-8-racetrack-sb-acoustics-sb15sfcr-00-5-8-racetrack",
@@ -59,7 +76,32 @@
       "model": "SB Acoustics SB15SFCR-00 5×8\" Racetrack",
       "role": "pr",
       "status": "candidate",
-      "sd_cm2": 178
+      "sd_cm2": 178,
+      "fs_hz": 21.0,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "power_rms_w": 30.0,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 88.5,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "beyma-4fr40",
@@ -73,7 +115,24 @@
       "sensitivity_db": 87.0,
       "freq_low_hz": 100,
       "freq_high_hz": 20000,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "power_rms_w": 40.0,
+      "vc_mm": 0.8,
+      "re_ohm": 6.4,
+      "le_mh": 0.2,
+      "fs_hz": 92.0,
+      "qms": 11.3,
+      "qes": 0.96,
+      "qts": 0.88,
+      "mms_g": 0.0044,
+      "cms_mm_n": 0.668,
+      "sd_cm2": 0.0055,
+      "bl_tm": 4.2,
+      "vas_l": 2.8,
+      "xmax_mm": 3.0,
+      "magnet": "Ceramic",
+      "depth_mm": 60.0,
+      "power_max_w": 80.0
     },
     {
       "id": "celestion-tf0510",
@@ -111,7 +170,8 @@
           "local": "research/celestion_tf0510.pdf"
         }
       ],
-      "sd_cm2": 78.5
+      "sd_cm2": 78.5,
+      "power_max_w": 60.0
     },
     {
       "id": "dayton-audio-ce78pf-4",
@@ -126,7 +186,21 @@
       "power_rms_w": 10.0,
       "power_max_w": 20.0,
       "fs_hz": 100.0,
-      "xmax_mm": 1.4
+      "xmax_mm": 1.4,
+      "freq_low_hz": 200.0,
+      "freq_high_hz": 18.0,
+      "vc_mm": 20.0,
+      "re_ohm": 3.7,
+      "le_mh": 0.17,
+      "qms": 3.9,
+      "qes": 1.34,
+      "qts": 0.99,
+      "mms_g": 2.8,
+      "cms_mm_n": 0.887,
+      "sd_cm2": 30.2,
+      "bl_tm": 2.22,
+      "vas_l": 1.14,
+      "depth_mm": 42.1
     },
     {
       "id": "dayton-audio-da115-8",
@@ -141,7 +215,26 @@
       "power_max_w": 40.0,
       "fs_hz": 60.0,
       "vc_mm": 25.0,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "freq_low_hz": 60.0,
+      "freq_high_hz": 15.0,
+      "re_ohm": 6.4,
+      "le_mh": 0.7,
+      "qms": 2.6,
+      "qes": 0.49,
+      "qts": 0.41,
+      "mms_g": 6.6,
+      "cms_mm_n": 1.1,
+      "sd_cm2": 53.1,
+      "bl_tm": 5.7,
+      "vas_l": 4.4,
+      "xmax_mm": 2.5,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 115.6,
+      "depth_mm": 57.3
     },
     {
       "id": "dayton-audio-dma105-8",
@@ -155,7 +248,27 @@
       "power_rms_w": 35.0,
       "fs_hz": 72.0,
       "magnet": "neodymium",
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "power_max_w": 70.0,
+      "freq_low_hz": 70.0,
+      "freq_high_hz": 20.0,
+      "vc_mm": 1.0,
+      "re_ohm": 7.5,
+      "le_mh": 0.6,
+      "qms": 2.64,
+      "qes": 0.83,
+      "qts": 0.63,
+      "mms_g": 4.9,
+      "cms_mm_n": 1.0,
+      "sd_cm2": 54.1,
+      "bl_tm": 4.47,
+      "vas_l": 0.15,
+      "xmax_mm": 2.5,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Polymer",
+      "frame_od_mm": 4.1,
+      "depth_mm": 1.86
     },
     {
       "id": "dayton-audio-ds115-8",
@@ -199,7 +312,15 @@
         {
           "local": "research/dayton_ds115-8_specifications.pdf"
         }
-      ]
+      ],
+      "power_max_w": 70.0,
+      "freq_low_hz": 60.0,
+      "freq_high_hz": 8.0,
+      "vc_mm": 25.4,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Steel",
+      "magnet": "ferrite"
     },
     {
       "id": "dayton-audio-dsa90-8",
@@ -231,7 +352,25 @@
           "local": "research/dayton_audio_dsa90-8.pdf"
         }
       ],
-      "xmax_mm": 2.5
+      "xmax_mm": 2.5,
+      "freq_low_hz": 66.0,
+      "freq_high_hz": 15.0,
+      "vc_mm": 20.4,
+      "re_ohm": 6.6,
+      "le_mh": 0.53,
+      "qms": 2.15,
+      "qes": 0.45,
+      "qts": 0.37,
+      "mms_g": 3.5,
+      "cms_mm_n": 1.64,
+      "sd_cm2": 31.2,
+      "bl_tm": 4.61,
+      "vas_l": 2.27,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "depth_mm": 44.6
     },
     {
       "id": "dayton-audio-nd90-4",
@@ -275,7 +414,9 @@
           "local": "research/dayton_nd90-4_datasheet.pdf",
           "url": "https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND90-4/pdf_dayton%20audio_ND90-4_1.pdf)"
         }
-      ]
+      ],
+      "vc_wire": "Copper",
+      "frame_material": "Steel"
     },
     {
       "id": "dayton-audio-nd91-4",
@@ -320,7 +461,9 @@
           "local": "research/dayton_nd91-4_datasheet.pdf",
           "url": "https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND91-4/pdf_dayton%20audio_ND91-4_1.pdf)"
         }
-      ]
+      ],
+      "vc_wire": "Aluminum",
+      "frame_material": "Steel"
     },
     {
       "id": "dayton-audio-pa130-8",
@@ -338,7 +481,23 @@
       "qts": 0.51,
       "xmax_mm": 2.0,
       "vas_l": 3.95,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 15.0,
+      "vc_mm": 25.0,
+      "re_ohm": 7.1,
+      "le_mh": 0.71,
+      "qms": 3.21,
+      "qes": 0.6,
+      "mms_g": 6.8,
+      "cms_mm_n": 0.54,
+      "sd_cm2": 73.9,
+      "bl_tm": 6.44,
+      "surround_material": "Cloth",
+      "vc_wire": "Copper",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "depth_mm": 67.5
     },
     {
       "id": "dayton-audio-pc83-4",
@@ -353,7 +512,26 @@
       "power_max_w": 60.0,
       "freq_low_hz": 80,
       "freq_high_hz": 20000,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 1.0,
+      "re_ohm": 3.9,
+      "le_mh": 0.38,
+      "fs_hz": 80.0,
+      "qms": 3.41,
+      "qes": 0.64,
+      "qts": 0.54,
+      "mms_g": 2.7,
+      "cms_mm_n": 1.47,
+      "sd_cm2": 30.2,
+      "bl_tm": 2.9,
+      "vas_l": 0.07,
+      "xmax_mm": 2.0,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Stamped Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 83.0,
+      "depth_mm": 50.0
     },
     {
       "id": "dayton-audio-rs100-8",
@@ -376,7 +554,25 @@
           "price": 48.95
         }
       ],
-      "xmax_mm": 3.5
+      "xmax_mm": 3.5,
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 20.0,
+      "vc_mm": 25.0,
+      "re_ohm": 6.4,
+      "le_mh": 0.5,
+      "qms": 2.37,
+      "qes": 0.76,
+      "qts": 0.58,
+      "mms_g": 3.63,
+      "cms_mm_n": 0.82,
+      "sd_cm2": 35.3,
+      "bl_tm": 4.2,
+      "vas_l": 1.43,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "depth_mm": 51.0
     },
     {
       "id": "dayton-audio-rs125-4",
@@ -394,7 +590,24 @@
       "fs_hz": 57.2,
       "xmax_mm": 4.0,
       "cone_material": "aluminium",
-      "surround_material": "rubber"
+      "surround_material": "rubber",
+      "power_max_w": 60.0,
+      "vc_mm": 25.0,
+      "re_ohm": 2.9,
+      "le_mh": 0.28,
+      "qms": 2.04,
+      "qes": 0.45,
+      "qts": 0.37,
+      "mms_g": 5.7,
+      "cms_mm_n": 1.35,
+      "sd_cm2": 52.8,
+      "bl_tm": 3.63,
+      "vas_l": 5.29,
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 125.5,
+      "depth_mm": 54.2
     },
     {
       "id": "dayton-audio-rs125p-4",
@@ -409,7 +622,26 @@
       "power_max_w": 45.0,
       "fs_hz": 70.0,
       "vc_mm": 25.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "freq_low_hz": 70.0,
+      "freq_high_hz": 12.0,
+      "re_ohm": 3.1,
+      "le_mh": 0.32,
+      "qms": 3.19,
+      "qes": 0.57,
+      "qts": 0.48,
+      "mms_g": 5.1,
+      "cms_mm_n": 1.02,
+      "sd_cm2": 52.8,
+      "bl_tm": 5.08,
+      "vas_l": 3.98,
+      "xmax_mm": 4.0,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 125.5,
+      "depth_mm": 55.0
     },
     {
       "id": "dayton-audio-rs52fn-8",
@@ -426,7 +658,19 @@
       "fs_hz": 394.0,
       "qts": 1.05,
       "xmax_mm": 1.0,
-      "sd_cm2": 26.4
+      "sd_cm2": 26.4,
+      "freq_low_hz": 500.0,
+      "freq_high_hz": 8.5,
+      "vc_mm": 2.0,
+      "re_ohm": 5.7,
+      "le_mh": 0.12,
+      "qms": 4.27,
+      "qes": 1.39,
+      "surround_material": "Cloth",
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "neodymium",
+      "depth_mm": 2.24
     },
     {
       "id": "dayton-audio-rs75t-8",
@@ -440,7 +684,27 @@
       "power_rms_w": 15.0,
       "power_max_w": 30.0,
       "fs_hz": 189.0,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "freq_low_hz": 170.0,
+      "freq_high_hz": 20.0,
+      "vc_mm": 16.0,
+      "re_ohm": 6.1,
+      "le_mh": 0.32,
+      "qms": 5.84,
+      "qes": 1.13,
+      "qts": 0.95,
+      "mms_g": 1.0,
+      "cms_mm_n": 0.69,
+      "sd_cm2": 12.0,
+      "bl_tm": 2.58,
+      "vas_l": 0.22,
+      "xmax_mm": 1.3,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 72.0,
+      "depth_mm": 38.5
     },
     {
       "id": "dayton-audio-sig120-4",
@@ -475,7 +739,11 @@
           "currency": "EUR",
           "price": 34.95
         }
-      ]
+      ],
+      "vc_mm": 1.0,
+      "vas_l": 0.109,
+      "surround_material": "Rubber",
+      "frame_material": "Cast Aluminum"
     },
     {
       "id": "dayton-audio-sig150-4",
@@ -518,7 +786,11 @@
           "currency": "EUR",
           "price": 44.95
         }
-      ]
+      ],
+      "cms_mm_n": 0.66,
+      "vc_wire": "Copper",
+      "surround_material": "Rubber",
+      "magnet": "Ferrite"
     },
     {
       "id": "dayton-audio-tcp115-8",
@@ -550,7 +822,25 @@
           "local": "research/dayton_audio_tcp115-8.pdf"
         }
       ],
-      "xmax_mm": 4.0
+      "xmax_mm": 4.0,
+      "freq_low_hz": 55.0,
+      "freq_high_hz": 6.0,
+      "vc_mm": 1.0,
+      "re_ohm": 7.8,
+      "le_mh": 1.9,
+      "qms": 2.3,
+      "qes": 0.54,
+      "qts": 0.43,
+      "mms_g": 10.16,
+      "cms_mm_n": 0.71,
+      "sd_cm2": 50.0,
+      "bl_tm": 7.4,
+      "vas_l": 0.09,
+      "surround_material": "Rubber",
+      "vc_wire": "CCA",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "depth_mm": 2.32
     },
     {
       "id": "faitalpro-3fe25-16f",
@@ -566,7 +856,24 @@
       "freq_low_hz": 100,
       "freq_high_hz": 20000,
       "fs_hz": 110.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 19.0,
+      "re_ohm": 6.2,
+      "le_mh": 0.07,
+      "qms": 4.1,
+      "qes": 0.79,
+      "qts": 0.66,
+      "mms_g": 2.4,
+      "cms_mm_n": 0.87,
+      "sd_cm2": 33.0,
+      "bl_tm": 3.6,
+      "vas_l": 1.3,
+      "xmax_mm": 1.83,
+      "vc_wire": "Aluminium",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 105.6,
+      "depth_mm": 54.5
     },
     {
       "id": "faitalpro-3fe25-4f",
@@ -583,7 +890,22 @@
       "freq_high_hz": 20000,
       "fs_hz": 110.0,
       "vc_mm": 19.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "re_ohm": 6.2,
+      "le_mh": 0.07,
+      "qms": 4.1,
+      "qts": 0.66,
+      "mms_g": 2.4,
+      "cms_mm_n": 0.87,
+      "sd_cm2": 33.0,
+      "bl_tm": 3.6,
+      "vas_l": 1.3,
+      "xmax_mm": 1.83,
+      "vc_wire": "Aluminium",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 105.6,
+      "depth_mm": 54.5
     },
     {
       "id": "faitalpro-3fe25-8f",
@@ -600,7 +922,23 @@
       "freq_high_hz": 20000,
       "fs_hz": 110.0,
       "re_ohm": 6.2,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 19.0,
+      "le_mh": 0.07,
+      "qms": 4.1,
+      "qes": 0.79,
+      "qts": 0.66,
+      "mms_g": 2.4,
+      "cms_mm_n": 0.87,
+      "sd_cm2": 33.0,
+      "bl_tm": 3.6,
+      "vas_l": 1.3,
+      "xmax_mm": 1.83,
+      "vc_wire": "Aluminium",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 105.6,
+      "depth_mm": 54.5
     },
     {
       "id": "faitalpro-4fe35-4f",
@@ -618,7 +956,22 @@
       "qts": 0.73,
       "xmax_mm": 1.73,
       "vas_l": 2.4,
-      "vc_mm": 19.0
+      "vc_mm": 19.0,
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 20.0,
+      "re_ohm": 3.3,
+      "le_mh": 0.04,
+      "qms": 3.9,
+      "qes": 0.9,
+      "mms_g": 3.9,
+      "cms_mm_n": 0.65,
+      "sd_cm2": 51.9,
+      "bl_tm": 3.0,
+      "vc_wire": "Aluminium",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 129.9,
+      "depth_mm": 49.8
     },
     {
       "id": "grs-4pf-8-grs-4pf-8",
@@ -632,7 +985,21 @@
       "power_rms_w": 40.0,
       "power_max_w": 70.0,
       "fs_hz": 137.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "freq_low_hz": 100.0,
+      "freq_high_hz": 10.0,
+      "vc_mm": 1.0,
+      "re_ohm": 6.8,
+      "le_mh": 0.5,
+      "qms": 5.81,
+      "qts": 1.94,
+      "cms_mm_n": 0.28,
+      "sd_cm2": 55.2,
+      "bl_tm": 3.1,
+      "vas_l": 1.2,
+      "xmax_mm": 1.5,
+      "frame_od_mm": 114.0,
+      "depth_mm": 54.0
     },
     {
       "id": "hivi-swan-b3s",
@@ -709,7 +1076,10 @@
       "sensitivity_db": 94.0,
       "power_rms_w": 20.0,
       "power_max_w": 120.0,
-      "fs_hz": 300.0
+      "fs_hz": 300.0,
+      "re_ohm": 4.1,
+      "vc_wire": "High temperature copper clad aluminum wire",
+      "magnet": "High performance NdFeB"
     },
     {
       "id": "hivi-swan-m3n-b",
@@ -724,7 +1094,17 @@
       "power_rms_w": 15.0,
       "fs_hz": 91.0,
       "xmax_mm": 3.0,
-      "vc_mm": 20.0
+      "vc_mm": 20.0,
+      "re_ohm": 6.5,
+      "qms": 3.57,
+      "qes": 1.03,
+      "qts": 0.8,
+      "mms_g": 2.6,
+      "bl_tm": 3.0,
+      "vas_l": 1.5,
+      "frame_material": "Kapton",
+      "frame_od_mm": 90.0,
+      "depth_mm": 57.4
     },
     {
       "id": "hivi-swan-m4n",
@@ -753,7 +1133,16 @@
       "qts": 1.08,
       "xmax_mm": 3.0,
       "vas_l": 4.3,
-      "re_ohm": 6.5
+      "re_ohm": 6.5,
+      "vc_mm": 20.0,
+      "qms": 5.39,
+      "qes": 1.35,
+      "mms_g": 4.8,
+      "cms_mm_n": 1.08,
+      "bl_tm": 3.1,
+      "magnet": "ferrite",
+      "frame_od_mm": 108.0,
+      "depth_mm": 67.0
     },
     {
       "id": "hivi-swan-m5n",
@@ -783,7 +1172,23 @@
       "qts": 0.5,
       "xmax_mm": 3.0,
       "vas_l": 1.78,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 25000.0,
+      "vc_mm": 1.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.39,
+      "qms": 2.301,
+      "qes": 0.6366,
+      "mms_g": 1.93,
+      "cms_mm_n": 1.6,
+      "sd_cm2": 28.27,
+      "bl_tm": 2.49,
+      "surround_material": "Rubber",
+      "frame_material": "Glass-Fibre",
+      "magnet": "ferrite",
+      "frame_od_mm": 100.0,
+      "depth_mm": 39.0
     },
     {
       "id": "markaudio-alpair-5-grey",
@@ -796,7 +1201,25 @@
       "sensitivity_db": 85.45,
       "power_rms_w": 5.0,
       "freq_low_hz": 90,
-      "freq_high_hz": 25000
+      "freq_high_hz": 25000,
+      "vc_mm": 1.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.39,
+      "fs_hz": 94.54,
+      "qms": 2.301,
+      "qes": 0.6366,
+      "qts": 0.4986,
+      "mms_g": 1.93,
+      "cms_mm_n": 1.6,
+      "sd_cm2": 28.27,
+      "bl_tm": 2.49,
+      "vas_l": 1.7845,
+      "xmax_mm": 3.0,
+      "surround_material": "Rubber",
+      "frame_material": "Glass-Fibre",
+      "magnet": "ferrite",
+      "frame_od_mm": 100.0,
+      "depth_mm": 39.0
     },
     {
       "id": "markaudio-alpair-5g",
@@ -807,7 +1230,27 @@
       "nominal_size_inch": 3.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 88.53,
-      "power_rms_w": 7.0
+      "power_rms_w": 7.0,
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 25000.0,
+      "vc_mm": 1.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.39,
+      "fs_hz": 94.54,
+      "qms": 2.301,
+      "qes": 0.6366,
+      "qts": 0.4986,
+      "mms_g": 1.93,
+      "cms_mm_n": 1.6,
+      "sd_cm2": 28.27,
+      "bl_tm": 2.49,
+      "vas_l": 1.7845,
+      "xmax_mm": 3.0,
+      "surround_material": "Rubber",
+      "frame_material": "Glass-Fibre",
+      "magnet": "ferrite",
+      "frame_od_mm": 100.0,
+      "depth_mm": 39.0
     },
     {
       "id": "markaudio-chn-70",
@@ -821,21 +1264,23 @@
       "power_max_w": 50.0,
       "fs_hz": 71.6,
       "xmax_mm": 4.0,
-      "cone_material": "paper"
-    },
-    {
-      "id": "markaudio-chn-70",
-      "brand": "Markaudio",
-      "model": "CHN-70",
-      "role": "mid",
-      "status": "catalogue",
-      "impedance_ohm": 8.0,
-      "sensitivity_db": 86.7,
-      "power_rms_w": 16.0,
-      "power_max_w": 50.0,
-      "fs_hz": 71.6,
-      "xmax_mm": 4.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 20.0,
+      "vc_mm": 1.0,
+      "re_ohm": 5.0,
+      "le_mh": 0.17,
+      "qms": 1.85,
+      "qes": 0.65,
+      "qts": 0.48,
+      "mms_g": 3.4,
+      "sd_cm2": 50.27,
+      "bl_tm": 3.4,
+      "vas_l": 0.188,
+      "surround_material": "Rubber",
+      "frame_material": "Glass-Fibre",
+      "magnet": "ferrite",
+      "frame_od_mm": 4.92
     },
     {
       "id": "markaudio-pluvia-7hd-gold",
@@ -849,7 +1294,23 @@
       "sensitivity_db": 85.74,
       "power_rms_w": 20.0,
       "fs_hz": 72.5,
-      "xmax_mm": 4.0
+      "xmax_mm": 4.0,
+      "freq_low_hz": 20.0,
+      "freq_high_hz": 40.0,
+      "re_ohm": 5.4,
+      "le_mh": 0.1652,
+      "qms": 3.1446,
+      "qes": 0.7173,
+      "qts": 0.584,
+      "mms_g": 3.839,
+      "cms_mm_n": 1.2536,
+      "sd_cm2": 0.005,
+      "bl_tm": 3.6297,
+      "vas_l": 4.4227,
+      "surround_material": "Rubber",
+      "frame_material": "Polymer",
+      "magnet": "ferrite",
+      "depth_mm": 71.5
     },
     {
       "id": "monacor-msh-115",
@@ -863,7 +1324,20 @@
       "power_rms_w": 50.0,
       "power_max_w": 120.0,
       "fs_hz": 85.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 25.0,
+      "re_ohm": 6.3,
+      "le_mh": 0.3,
+      "qms": 1.98,
+      "qes": 0.55,
+      "qts": 0.43,
+      "mms_g": 4.5,
+      "cms_mm_n": 0.8,
+      "sd_cm2": 55.0,
+      "bl_tm": 4.8,
+      "vas_l": 4.0,
+      "xmax_mm": 1.5,
+      "depth_mm": 55.0
     },
     {
       "id": "monacor-sp-4-60pro",
@@ -878,7 +1352,24 @@
       "power_max_w": 60.0,
       "fs_hz": 92.0,
       "qts": 0.6,
-      "xmax_mm": 2.3
+      "xmax_mm": 2.3,
+      "freq_low_hz": 90.0,
+      "freq_high_hz": 10.0,
+      "vc_mm": 1.0,
+      "re_ohm": 6.76,
+      "le_mh": 0.3,
+      "qms": 5.35,
+      "qes": 0.67,
+      "mms_g": 6.3,
+      "cms_mm_n": 0.47,
+      "sd_cm2": 68.0,
+      "bl_tm": 5.85,
+      "vas_l": 3.0,
+      "surround_material": "Foam",
+      "frame_material": "Stamped steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 113.0,
+      "depth_mm": 63.0
     },
     {
       "id": "monacor-spm-116-8",
@@ -894,7 +1385,21 @@
       "freq_low_hz": 75,
       "freq_high_hz": 18000,
       "fs_hz": 75.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 8.1,
+      "re_ohm": 7.2,
+      "le_mh": 0.4,
+      "qms": 1.9,
+      "qes": 0.81,
+      "qts": 0.57,
+      "mms_g": 3.8,
+      "cms_mm_n": 0.98,
+      "sd_cm2": 57.0,
+      "bl_tm": 4.2,
+      "vas_l": 1.6,
+      "xmax_mm": 1.5,
+      "frame_od_mm": 115.0,
+      "depth_mm": 60.0
     },
     {
       "id": "monacor-spx-32m",
@@ -910,7 +1415,25 @@
       "freq_low_hz": 100,
       "freq_high_hz": 22000,
       "fs_hz": 110.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 20.0,
+      "re_ohm": 6.6,
+      "le_mh": 0.18,
+      "qms": 7.66,
+      "qes": 0.6,
+      "qts": 0.56,
+      "mms_g": 1.7,
+      "cms_mm_n": 1.11,
+      "sd_cm2": 32.0,
+      "bl_tm": 3.69,
+      "vas_l": 1.6,
+      "xmax_mm": 1.1,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Stamped steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 93.0,
+      "depth_mm": 55.0
     },
     {
       "id": "morel-caw-428",
@@ -922,7 +1445,11 @@
       "frame_od_mm": 118.5,
       "impedance_ohm": 8.0,
       "sensitivity_db": 88.0,
-      "fs_hz": 74.0
+      "fs_hz": 74.0,
+      "xmax_mm": 4.0,
+      "power_max_w": 300.0,
+      "sd_cm2": 57.0,
+      "qts": 0.38
     },
     {
       "id": "morel-em-428",
@@ -934,7 +1461,28 @@
       "frame_od_mm": 118.5,
       "impedance_ohm": 8.0,
       "sensitivity_db": 87.0,
-      "fs_hz": 68.0
+      "fs_hz": 68.0,
+      "power_rms_w": 150.0,
+      "power_max_w": 210.0,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 5.0,
+      "vc_mm": 2.125,
+      "re_ohm": 5.4,
+      "le_mh": 0.36,
+      "qms": 3.03,
+      "qes": 0.48,
+      "qts": 0.41,
+      "mms_g": 6.55,
+      "cms_mm_n": 0.88,
+      "sd_cm2": 57.0,
+      "bl_tm": 5.4,
+      "vas_l": 0.12,
+      "xmax_mm": 3.0,
+      "surround_material": "Rubber",
+      "vc_wire": "Aluminum",
+      "frame_material": "Steel",
+      "magnet": "neodymium",
+      "depth_mm": 2.2
     },
     {
       "id": "morel-ew-428",
@@ -946,7 +1494,28 @@
       "frame_od_mm": 118.5,
       "impedance_ohm": 8.0,
       "sensitivity_db": 87.0,
-      "fs_hz": 62.0
+      "fs_hz": 62.0,
+      "power_rms_w": 150.0,
+      "power_max_w": 800.0,
+      "freq_low_hz": 55.0,
+      "freq_high_hz": 5.5,
+      "vc_mm": 2.125,
+      "re_ohm": 6.3,
+      "le_mh": 0.44,
+      "qms": 2.36,
+      "qes": 0.41,
+      "qts": 0.35,
+      "mms_g": 6.16,
+      "cms_mm_n": 1.05,
+      "sd_cm2": 57.0,
+      "bl_tm": 6.1,
+      "vas_l": 0.17,
+      "xmax_mm": 4.5,
+      "surround_material": "Rubber",
+      "vc_wire": "Aluminum",
+      "frame_material": "Steel",
+      "magnet": "neodymium",
+      "depth_mm": 2.21
     },
     {
       "id": "prv-audio-4mr60-4-prv-audio-4mr60-4",
@@ -962,7 +1531,23 @@
       "freq_high_hz": 15000,
       "bl_tm": 3.42,
       "vc_mm": 20.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "re_ohm": 3.3,
+      "le_mh": 0.051,
+      "fs_hz": 95.6,
+      "qms": 4.74,
+      "qes": 1.04,
+      "qts": 0.85,
+      "mms_g": 4.17,
+      "sd_cm2": 55.4,
+      "vas_l": 2.85,
+      "xmax_mm": 1.4,
+      "surround_material": "Rubber",
+      "vc_wire": "CCAW",
+      "frame_material": "Stamped Steel",
+      "magnet": "neodymium",
+      "frame_od_mm": 127.5,
+      "depth_mm": 50.0
     },
     {
       "id": "prv-audio-4mr60-ndy-4-prv-audio-4mr60-ndy-4",
@@ -978,7 +1563,24 @@
       "freq_low_hz": 90,
       "freq_high_hz": 20000,
       "magnet": "neodymium",
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 19.0,
+      "re_ohm": 3.3,
+      "le_mh": 0.051,
+      "fs_hz": 95.6,
+      "qms": 4.74,
+      "qes": 1.04,
+      "qts": 0.85,
+      "mms_g": 4.17,
+      "sd_cm2": 55.4,
+      "bl_tm": 2.82,
+      "vas_l": 2.85,
+      "xmax_mm": 1.4,
+      "surround_material": "Rubber",
+      "vc_wire": "CCAW",
+      "frame_material": "Stamped Steel",
+      "frame_od_mm": 127.5,
+      "depth_mm": 50.0
     },
     {
       "id": "peerless-by-tymphany-hds-p830870",
@@ -987,7 +1589,30 @@
       "role": "mid",
       "status": "catalogue",
       "nominal_size_inch": 4.0,
-      "impedance_ohm": 8.0
+      "impedance_ohm": 8.0,
+      "power_rms_w": 25.0,
+      "sensitivity_db": 84.7,
+      "freq_low_hz": 100.0,
+      "freq_high_hz": 4000.0,
+      "vc_mm": 25.7,
+      "re_ohm": 5.3,
+      "le_mh": 0.198,
+      "fs_hz": 100.0,
+      "qms": 1.92,
+      "qes": 0.871,
+      "qts": 0.6,
+      "mms_g": 6.08,
+      "cms_mm_n": 380.0,
+      "sd_cm2": 56.8,
+      "bl_tm": 4.93,
+      "vas_l": 1.73,
+      "xmax_mm": 7.5,
+      "surround_material": "Rubber",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 120.4,
+      "depth_mm": 55.0,
+      "power_max_w": 50.0
     },
     {
       "id": "peerless-by-tymphany-pls-p830986",
@@ -1003,7 +1628,24 @@
       "xmax_mm": 4.35,
       "vc_mm": 25.7,
       "magnet": "neodymium",
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "freq_low_hz": 100.0,
+      "freq_high_hz": 12000.0,
+      "re_ohm": 6.2,
+      "le_mh": 0.119,
+      "qms": 6.74,
+      "qes": 1.22,
+      "qts": 1.0,
+      "mms_g": 2.49,
+      "cms_mm_n": 850.0,
+      "sd_cm2": 27.3,
+      "bl_tm": 2.97,
+      "vas_l": 0.99,
+      "surround_material": "Rubber",
+      "frame_material": "Polymer",
+      "frame_od_mm": 78.0,
+      "depth_mm": 51.0,
+      "power_max_w": 50.0
     },
     {
       "id": "peerless-by-tymphany-sds-p830656",
@@ -1045,7 +1687,15 @@
         {
           "local": "research/peerless_sds-p830656.pdf"
         }
-      ]
+      ],
+      "vc_mm": 25.8,
+      "le_mh": 0.493,
+      "cms_mm_n": 620.0,
+      "surround_material": "Rubber",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 152.0,
+      "power_max_w": 120.0
     },
     {
       "id": "peerless-by-tymphany-sls-85s25cp04-04",
@@ -1061,7 +1711,24 @@
       "qts": 0.36,
       "xmax_mm": 10.2,
       "vas_l": 1.43,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "freq_low_hz": 200.0,
+      "freq_high_hz": 2000.0,
+      "vc_mm": 25.7,
+      "re_ohm": 3.2,
+      "le_mh": 0.169,
+      "qms": 5.41,
+      "qes": 0.386,
+      "mms_g": 4.86,
+      "cms_mm_n": 970.0,
+      "sd_cm2": 32.2,
+      "bl_tm": 4.3,
+      "surround_material": "Rubber",
+      "frame_material": "Steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 105.0,
+      "depth_mm": 76.1,
+      "power_max_w": 60.0
     },
     {
       "id": "peerless-by-tymphany-tc9fd18-08",
@@ -1078,7 +1745,24 @@
       "freq_high_hz": 20000,
       "fs_hz": 130.0,
       "qts": 0.97,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 19.4,
+      "re_ohm": 6.2,
+      "le_mh": 0.108,
+      "qms": 2.97,
+      "qes": 1.44,
+      "mms_g": 2.67,
+      "cms_mm_n": 520.0,
+      "sd_cm2": 36.3,
+      "bl_tm": 3.01,
+      "vas_l": 0.04,
+      "xmax_mm": 3.88,
+      "surround_material": "Rubber",
+      "frame_material": "Polymer",
+      "magnet": "ferrite",
+      "frame_od_mm": 98.0,
+      "depth_mm": 43.0,
+      "power_max_w": 60.0
     },
     {
       "id": "sb-acoustics-sb10pgc21-4-sb-acoustics-sb10pgc21-4",
@@ -1092,7 +1776,27 @@
       "power_rms_w": 20.0,
       "freq_low_hz": 90,
       "freq_high_hz": 20000,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "fs_hz": 21.0,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12cacs25-4-sb-acoustics-sb12cacs25-4",
@@ -1106,7 +1810,27 @@
       "sensitivity_db": 87.5,
       "power_rms_w": 30.0,
       "fs_hz": 51.0,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12mnrx2-25-4-sb-acoustics-sb12mnrx2-25-4",
@@ -1127,7 +1851,20 @@
       "bl_tm": 4.1,
       "re_ohm": 3.2,
       "vc_mm": 25.4,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "le_mh": 0.07,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12mnrx25-4-sb-acoustics-sb12mnrx25-4",
@@ -1141,25 +1878,27 @@
       "power_rms_w": 30.0,
       "fs_hz": 58.0,
       "xmax_mm": 2.3,
-      "cone_material": "paper"
-    },
-    {
-      "id": "sb-acoustics-sb12nrx25-4-sb-acoustics-sb12nrx25-4",
-      "brand": "SB Acoustics SB12NRX25-4",
-      "model": "SB Acoustics SB12NRX25-4",
-      "role": "mid",
-      "status": "candidate",
-      "nominal_size_inch": 4.0,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 87.5,
-      "power_rms_w": 30.0,
-      "fs_hz": 55.0,
-      "qts": 0.4,
-      "xmax_mm": 5.0,
-      "sd_cm2": 50.0,
-      "re_ohm": 3.1,
-      "beaming_limit_hz": 2730,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12nrx25-4-sb-acoustics-sb12nrx25-4",
@@ -1175,7 +1914,26 @@
       "freq_high_hz": 2000,
       "fs_hz": 55.0,
       "xmax_mm": 5.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-",
+      "beaming_limit_hz": 2730
     },
     {
       "id": "sb-acoustics-sb12nrxf25-4-sb-acoustics-sb12nrxf25-4",
@@ -1191,7 +1949,24 @@
       "freq_high_hz": 2000,
       "fs_hz": 61.0,
       "xmax_mm": 5.0,
-      "vc_mm": 25.4
+      "vc_mm": 25.4,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12pac25-4-sb-acoustics-sb12pac25-4",
@@ -1206,7 +1981,26 @@
       "fs_hz": 52.5,
       "qts": 0.31,
       "xmax_mm": 5.0,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12pacr25-4-sb-acoustics-sb12pacr25-4",
@@ -1231,7 +2025,17 @@
       "le_mh": 0.25,
       "mms_g": 6.1,
       "beaming_limit_hz": 2730,
-      "cone_material": "aluminium"
+      "cone_material": "aluminium",
+      "cms_mm_n": 0.93,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12pacr25-4-coax-sb-acoustics-sb12pacr25-4-coax",
@@ -1262,7 +2066,18 @@
         {
           "local": "research/sb_acoustics_sb12pacr25-4-coax.pdf"
         }
-      ]
+      ],
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "power_rms_w": 30.0,
+      "sensitivity_db": 88.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "frame_material": "Vented reinforced plastic",
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12pfc25-4-sb-acoustics-sb12pfc25-4",
@@ -1278,7 +2093,25 @@
       "qts": 0.43,
       "xmax_mm": 5.0,
       "vas_l": 5.1,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb12pfcr25-4-sb-acoustics-sb12pfcr25-4",
@@ -1302,7 +2135,18 @@
       "le_mh": 0.26,
       "mms_g": 5.3,
       "beaming_limit_hz": 2730,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "cms_mm_n": 0.93,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb13pfc25-4-sb-acoustics-sb13pfc25-4",
@@ -1317,7 +2161,26 @@
       "fs_hz": 44.0,
       "qts": 0.29,
       "xmax_mm": 4.5,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb13pfc25-8-sb-acoustics-sb13pfc25-8",
@@ -1330,7 +2193,28 @@
       "sensitivity_db": 87.0,
       "power_rms_w": 40.0,
       "fs_hz": 45.0,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb13pfcr25-4-sb-acoustics-sb13pfcr25-4",
@@ -1347,7 +2231,24 @@
       "xmax_mm": 4.5,
       "sd_cm2": 87.0,
       "vas_l": 13.4,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "seas-ca12rcy-h1152-08-seas-ca12rcy-h1152-08",
@@ -1376,7 +2277,20 @@
       "fs_hz": 72.0,
       "xmax_mm": 4.0,
       "vc_mm": 25.5,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "re_ohm": 3.4,
+      "le_mh": 0.14,
+      "qms": 4.25,
+      "qes": 0.39,
+      "qts": 0.36,
+      "mms_g": 2.8,
+      "cms_mm_n": 1.77,
+      "sd_cm2": 23.8,
+      "bl_tm": 3.3,
+      "vas_l": 1.4,
+      "frame_material": "Steel",
+      "frame_od_mm": 48.0,
+      "depth_mm": 35.1
     },
     {
       "id": "sica-3-5-f-1-cs-8-sica-3-5-f-1-cs-8",
@@ -1390,7 +2304,27 @@
       "sensitivity_db": 88.5,
       "freq_low_hz": 110,
       "freq_high_hz": 12000,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "power_rms_w": 45.0,
+      "power_max_w": 90.0,
+      "vc_mm": 25.0,
+      "re_ohm": 5.0,
+      "le_mh": 0.21,
+      "fs_hz": 107.0,
+      "qms": 6.52,
+      "qes": 0.63,
+      "qts": 0.57,
+      "mms_g": 3.3,
+      "cms_mm_n": 0.67,
+      "sd_cm2": 38.5,
+      "bl_tm": 4.2,
+      "vas_l": 1.4,
+      "xmax_mm": 1.5,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Nylon Fiberglass Doped",
+      "magnet": "ferrite",
+      "depth_mm": 44.7
     },
     {
       "id": "scan-speak-discovery-12w-4524g00",
@@ -1434,7 +2368,17 @@
       "power_rms_w": 80.0,
       "fs_hz": 300.0,
       "qts": 1.73,
-      "xmax_mm": 0.4
+      "xmax_mm": 0.4,
+      "vc_mm": 2.99,
+      "re_ohm": 5.7,
+      "le_mh": 0.13,
+      "qms": 7.75,
+      "qes": 2.22,
+      "mms_g": 3.3,
+      "cms_mm_n": 0.09,
+      "sd_cm2": 55.0,
+      "bl_tm": 4.7,
+      "vas_l": 0.01
     },
     {
       "id": "scan-speak-illuminator-12mu-4731t00",
@@ -1464,26 +2408,18 @@
       "power_max_w": 50.0,
       "freq_low_hz": 70,
       "freq_high_hz": 14000,
-      "xmax_mm": 3.0
-    },
-    {
-      "id": "tectonic-tebm65c20f-8-bmr",
-      "brand": "Tectonic",
-      "model": "TEBM65C20F-8 BMR",
-      "role": "mid",
-      "status": "candidate",
-      "nominal_size_inch": 3.5,
-      "frame_od_mm": 108.0,
-      "impedance_ohm": 8.0,
-      "depth_mm": 56.8,
-      "sensitivity_db": 81.0,
-      "power_rms_w": 30.0,
-      "power_max_w": 60.0,
-      "freq_low_hz": 80,
-      "freq_high_hz": 20000,
-      "fs_hz": 86.0,
-      "qts": 0.89,
-      "xmax_mm": 3.5
+      "xmax_mm": 3.0,
+      "vc_mm": 25.0,
+      "re_ohm": 6.0,
+      "le_mh": 0.43,
+      "fs_hz": 70.0,
+      "qms": 4.35,
+      "qes": 0.35,
+      "qts": 0.33,
+      "cms_mm_n": 1104.0,
+      "sd_cm2": 0.0057,
+      "bl_tm": 5.73,
+      "depth_mm": 89.0
     },
     {
       "id": "tectonic-tebm65c20f-8-bmr",
@@ -1499,7 +2435,21 @@
       "power_max_w": 60.0,
       "freq_low_hz": 80,
       "freq_high_hz": 20000,
-      "xmax_mm": 3.5
+      "xmax_mm": 3.5,
+      "vc_mm": 1.0,
+      "re_ohm": 7.2,
+      "le_mh": 0.055,
+      "fs_hz": 86.0,
+      "qms": 4.9,
+      "qes": 1.09,
+      "qts": 0.89,
+      "mms_g": 5.25,
+      "cms_mm_n": 0.65,
+      "bl_tm": 4.33,
+      "vas_l": 1.01,
+      "magnet": "ferrite",
+      "frame_od_mm": 108.0,
+      "depth_mm": 56.8
     },
     {
       "id": "vifa-ne123-w08",
@@ -1526,7 +2476,20 @@
       "freq_high_hz": 9500,
       "fs_hz": 42.0,
       "vc_mm": 25.0,
-      "surround_material": "rubber"
+      "surround_material": "rubber",
+      "re_ohm": 3.7,
+      "le_mh": 0.3,
+      "qms": 2.94,
+      "qes": 0.69,
+      "qts": 0.56,
+      "mms_g": 7.5,
+      "cms_mm_n": 2.361,
+      "sd_cm2": 51.4,
+      "bl_tm": 3.43,
+      "vas_l": 7.5,
+      "xmax_mm": 2.0,
+      "frame_od_mm": 99.0,
+      "depth_mm": 51.4
     },
     {
       "id": "visaton-sc-13",
@@ -1545,7 +2508,18 @@
       "xmax_mm": 0.75,
       "vas_l": 7.4,
       "bl_tm": 4.2,
-      "vc_mm": 20.0
+      "vc_mm": 20.0,
+      "freq_low_hz": 78.0,
+      "freq_high_hz": 13.0,
+      "re_ohm": 7.2,
+      "le_mh": 0.7,
+      "qms": 2.95,
+      "qes": 0.94,
+      "qts": 0.71,
+      "mms_g": 4.8,
+      "cms_mm_n": 0.836,
+      "sd_cm2": 79.0,
+      "surround_material": "Rubber"
     },
     {
       "id": "visaton-ws-13-e",
@@ -1563,7 +2537,20 @@
       "fs_hz": 83.0,
       "xmax_mm": 0.75,
       "vas_l": 7.4,
-      "cone_material": "paper"
+      "cone_material": "paper",
+      "vc_mm": 20.0,
+      "re_ohm": 7.7,
+      "le_mh": 0.8,
+      "qms": 3.52,
+      "qes": 1.56,
+      "qts": 1.08,
+      "mms_g": 5.1,
+      "cms_mm_n": 0.726,
+      "sd_cm2": 86.5,
+      "bl_tm": 3.6,
+      "surround_material": "Rubber",
+      "frame_od_mm": 162.0,
+      "depth_mm": 52.0
     },
     {
       "id": "wavecor-wf118wa07",
@@ -1576,7 +2563,11 @@
       "impedance_ohm": 4.0,
       "sensitivity_db": 87.0,
       "fs_hz": 56.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "xmax_mm": 4.0,
+      "power_max_w": 100.0,
+      "sd_cm2": 52.8,
+      "qts": 0.37
     },
     {
       "id": "wavecor-wf120bd05",
@@ -1588,7 +2579,11 @@
       "frame_od_mm": 120.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 87.0,
-      "fs_hz": 48.0
+      "fs_hz": 48.0,
+      "xmax_mm": 4.0,
+      "power_max_w": 120.0,
+      "sd_cm2": 54.0,
+      "qts": 0.44
     },
     {
       "id": "audaphon-tws-30-4",
@@ -1613,7 +2608,16 @@
       "sensitivity_db": 88.0,
       "power_rms_w": 15.0,
       "freq_low_hz": 3500,
-      "freq_high_hz": 40000
+      "freq_high_hz": 40000,
+      "re_ohm": 7.92,
+      "qms": 1.86,
+      "qts": 1.84,
+      "frame_od_mm": 2.25,
+      "cutout_mm": 1.59,
+      "depth_mm": 0.91,
+      "fs_hz": 88.0,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-cf120-4",
@@ -1655,27 +2659,21 @@
           "currency": "EUR",
           "price": 49.92
         }
-      ]
-    },
-    {
-      "id": "dayton-audio-cf18n-4",
-      "brand": "Dayton Audio",
-      "model": "CF18N-4",
-      "role": "high",
-      "status": "candidate",
-      "frame_od_mm": 58.0,
-      "impedance_ohm": 4.0,
-      "cutout_mm": 36.9,
-      "depth_mm": 38.3,
-      "sensitivity_db": 90.0,
-      "power_rms_w": 40.0,
-      "qts": 1.2,
-      "qes": 3.1,
-      "qms": 2.0,
-      "re_ohm": 3.54,
-      "magnet": "neodymium",
-      "freq_low_hz": 2500,
-      "freq_high_hz": 20000
+      ],
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 15.0,
+      "vc_mm": 25.4,
+      "re_ohm": 3.4,
+      "le_mh": 0.45,
+      "mms_g": 6.9,
+      "cms_mm_n": 1.31,
+      "bl_tm": 4.94,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 5.0,
+      "depth_mm": 2.25
     },
     {
       "id": "dayton-audio-cf18n-4",
@@ -1697,7 +2695,19 @@
         }
       ],
       "freq_low_hz": 2500,
-      "freq_high_hz": 20000
+      "freq_high_hz": 20000,
+      "nominal_size_inch": 0.709,
+      "re_ohm": 3.54,
+      "le_mh": 0.11,
+      "qms": 2.0,
+      "qes": 3.1,
+      "qts": 1.2,
+      "frame_od_mm": 58.0,
+      "cutout_mm": 36.9,
+      "depth_mm": 38.3,
+      "cone_material": "Woven Carbon Fiber",
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-dc25t-8",
@@ -1708,7 +2718,20 @@
       "impedance_ohm": 8.0,
       "sensitivity_db": 93.0,
       "power_rms_w": 50.0,
-      "fs_hz": 1468
+      "fs_hz": 1468,
+      "nominal_size_inch": 1.0,
+      "freq_low_hz": 3.0,
+      "freq_high_hz": 20.0,
+      "re_ohm": 7.7,
+      "le_mh": 0.59,
+      "qms": 0.58,
+      "qes": 2.55,
+      "qts": 0.47,
+      "frame_od_mm": 3.92,
+      "cutout_mm": 2.76,
+      "depth_mm": 1.08,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-nd20fa-6",
@@ -1722,7 +2745,17 @@
       "power_rms_w": 15.0,
       "fs_hz": 2005.0,
       "freq_low_hz": 2000,
-      "freq_high_hz": 20000
+      "freq_high_hz": 20000,
+      "nominal_size_inch": 4.0,
+      "re_ohm": 5.2,
+      "le_mh": 0.05,
+      "qms": 1.52,
+      "qes": 2.88,
+      "qts": 0.99,
+      "cutout_mm": 1.3,
+      "depth_mm": 0.59,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-nd25fa-4",
@@ -1742,18 +2775,34 @@
       "qms": 3.87,
       "re_ohm": 3.2,
       "le_mh": 0.48,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "nominal_size_inch": 1.0,
+      "freq_low_hz": 2.5,
+      "freq_high_hz": 20.0,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-nd25fn-4",
       "brand": "Dayton Audio",
       "model": "ND25FN-4",
-      "role": "high",
+      "role": "excl",
       "status": "rejected",
+      "fs_hz": 1350,
+      "nominal_size_inch": 1.0,
+      "power_rms_w": 20.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 90.0,
-      "power_rms_w": 20.0,
-      "fs_hz": 1350
+      "re_ohm": 3.2,
+      "le_mh": 0.04,
+      "qms": 3.87,
+      "qes": 2.61,
+      "qts": 1.56,
+      "frame_od_mm": 1.61,
+      "cutout_mm": 1.34,
+      "depth_mm": 0.83,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-nd25fw-4",
@@ -1792,7 +2841,11 @@
         {
           "local": "research/dayton_audio_nd25fw-4.pdf"
         }
-      ]
+      ],
+      "nominal_size_inch": 1.0,
+      "sd_cm2": 51.5,
+      "qts": 0.79,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-rs28a-4",
@@ -1804,7 +2857,10 @@
       "frame_od_mm": 103.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 91.0,
-      "fs_hz": 600.0
+      "fs_hz": 600.0,
+      "sd_cm2": 51.5,
+      "qts": 0.79,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-rst28f-4",
@@ -1838,7 +2894,13 @@
         }
       ],
       "freq_low_hz": 1400,
-      "freq_high_hz": 20000
+      "freq_high_hz": 20000,
+      "nominal_size_inch": 1.0,
+      "frame_od_mm": 4.125,
+      "cutout_mm": 2.875,
+      "depth_mm": 1.75,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-td20f-4",
@@ -1850,7 +2912,19 @@
       "impedance_ohm": 4.0,
       "sensitivity_db": 90.0,
       "power_rms_w": 20.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "nominal_size_inch": 4.0,
+      "freq_low_hz": 3.0,
+      "freq_high_hz": 20.0,
+      "fs_hz": 1696.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.03,
+      "qts": 1.38,
+      "frame_od_mm": 2.56,
+      "cutout_mm": 1.5,
+      "depth_mm": 0.59,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "dayton-audio-td25f-4",
@@ -1863,7 +2937,19 @@
       "impedance_ohm": 4.0,
       "sensitivity_db": 91.0,
       "power_rms_w": 20.0,
-      "fs_hz": 900.0
+      "fs_hz": 900.0,
+      "freq_low_hz": 2.0,
+      "freq_high_hz": 20.0,
+      "re_ohm": 3.5,
+      "le_mh": 0.04,
+      "qms": 2.22,
+      "qes": 1.62,
+      "qts": 0.94,
+      "frame_od_mm": 3.68,
+      "cutout_mm": 2.75,
+      "depth_mm": 1.25,
+      "sd_cm2": 51.5,
+      "xmax_mm": 2.8
     },
     {
       "id": "grs-a25-2t-grs-a25-2t",
@@ -1878,7 +2964,12 @@
       "power_rms_w": 30.0,
       "freq_low_hz": 1500,
       "freq_high_hz": 16000,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "fs_hz": 730.0,
+      "re_ohm": 5.4,
+      "le_mh": 0.08,
+      "frame_od_mm": 100.0,
+      "cutout_mm": 65.2
     },
     {
       "id": "hivi-tn25",
@@ -1910,7 +3001,9 @@
         }
       ],
       "freq_low_hz": 2500,
-      "freq_high_hz": 22000
+      "freq_high_hz": 22000,
+      "nominal_size_inch": 1.0,
+      "frame_od_mm": 2.13
     },
     {
       "id": "markaudio-tw-6",
@@ -1949,7 +3042,11 @@
       "sensitivity_db": 92.0,
       "power_rms_w": 30.0,
       "power_max_w": 60.0,
-      "fs_hz": 1500.0
+      "fs_hz": 1500.0,
+      "freq_low_hz": 1.5,
+      "freq_high_hz": 18.0,
+      "frame_od_mm": 80.0,
+      "depth_mm": 27.0
     },
     {
       "id": "monacor-dt-25n",
@@ -1964,7 +3061,11 @@
       "power_max_w": 80.0,
       "fs_hz": 1600.0,
       "freq_low_hz": 1600,
-      "freq_high_hz": 20000
+      "freq_high_hz": 20000,
+      "nominal_size_inch": 1.0,
+      "cutout_mm": 50.0,
+      "depth_mm": 21.0,
+      "cone_material": "Silk"
     },
     {
       "id": "monacor-dt-28n",
@@ -1982,7 +3083,10 @@
       "freq_low_hz": 2000,
       "freq_high_hz": 20000,
       "fs_hz": 1200.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "nominal_size_inch": 1.0,
+      "frame_od_mm": 55.0,
+      "cone_material": "Silk"
     },
     {
       "id": "morel-mdt12",
@@ -1998,7 +3102,10 @@
       "magnet": "neodymium",
       "fs_hz": 1000,
       "freq_low_hz": 1800,
-      "freq_high_hz": 25000
+      "freq_high_hz": 25000,
+      "nominal_size_inch": 1.125,
+      "re_ohm": 5.2,
+      "cutout_mm": 1.75
     },
     {
       "id": "morel-mdt22t",
@@ -2036,19 +3143,44 @@
       "sensitivity_db": 95.4,
       "power_rms_w": 50.0,
       "fs_hz": 1350.0,
-      "qts": 1.26
+      "qts": 1.26,
+      "nominal_size_inch": 1.0,
+      "re_ohm": 2.9,
+      "le_mh": 0.02,
+      "qms": 2.8,
+      "qes": 2.3,
+      "frame_od_mm": 2.75,
+      "cutout_mm": 1.7,
+      "depth_mm": 1.25
     },
     {
       "id": "peerless-by-tymphany-bc25tg15-04",
       "brand": "Peerless by Tymphany",
       "model": "BC25TG15-04",
-      "role": "high",
+      "role": "excl",
       "status": "rejected",
-      "frame_od_mm": 104.0,
-      "impedance_ohm": 4.0,
       "sensitivity_db": 93.9,
       "power_rms_w": 7.0,
-      "fs_hz": 1100.0
+      "nominal_size_inch": 1.0,
+      "impedance_ohm": 4.0,
+      "freq_low_hz": 1500.0,
+      "freq_high_hz": 20.0,
+      "fs_hz": 1100.0,
+      "re_ohm": 3.2,
+      "le_mh": 0.029,
+      "qms": 2.75,
+      "qes": 1.53,
+      "qts": 0.98,
+      "frame_od_mm": 104.0,
+      "cutout_mm": 72.0,
+      "depth_mm": 32.55,
+      "cone_material": "Silk",
+      "mms_g": 0.347,
+      "cms_mm_n": 58.0,
+      "sd_cm2": 6.16,
+      "vas_l": 0.003,
+      "bl_tm": 2.24,
+      "xmax_mm": 1.17
     },
     {
       "id": "peerless-by-tymphany-d26nc56-06",
@@ -2058,7 +3190,21 @@
       "status": "catalogue",
       "driver_type": "Dome",
       "nominal_size_inch": 1.0,
-      "impedance_ohm": 6.0
+      "impedance_ohm": 6.0,
+      "power_rms_w": 15.0,
+      "sensitivity_db": 90.7,
+      "freq_low_hz": 1500.0,
+      "freq_high_hz": 20.0,
+      "fs_hz": 1625.0,
+      "re_ohm": 4.7,
+      "le_mh": 0.033,
+      "qms": 1.36,
+      "qes": 3.75,
+      "qts": 1.0,
+      "frame_od_mm": 70.0,
+      "cutout_mm": 46.0,
+      "depth_mm": 28.0,
+      "cone_material": "Silk"
     },
     {
       "id": "peerless-by-tymphany-d27tg35-06",
@@ -2070,7 +3216,23 @@
       "impedance_ohm": 6.0,
       "sensitivity_db": 91.8,
       "power_rms_w": 15.0,
-      "fs_hz": 900.0
+      "fs_hz": 900.0,
+      "nominal_size_inch": 1.0,
+      "freq_low_hz": 1500.0,
+      "freq_high_hz": 20000.0,
+      "re_ohm": 4.9,
+      "le_mh": 0.039,
+      "qms": 1.13,
+      "qes": 1.03,
+      "qts": 0.54,
+      "cutout_mm": 72.0,
+      "depth_mm": 43.0,
+      "mms_g": 0.299,
+      "cms_mm_n": 100.0,
+      "sd_cm2": 7.07,
+      "vas_l": 0.007,
+      "bl_tm": 2.83,
+      "xmax_mm": 0.967
     },
     {
       "id": "peerless-by-tymphany-da25bg08-06",
@@ -2084,7 +3246,18 @@
       "sensitivity_db": 91.6,
       "power_rms_w": 15.0,
       "fs_hz": 710.0,
-      "magnet": "ferrite"
+      "magnet": "ferrite",
+      "freq_low_hz": 1000.0,
+      "freq_high_hz": 20.0,
+      "re_ohm": 5.2,
+      "le_mh": 0.024,
+      "qms": 1.78,
+      "qes": 0.704,
+      "qts": 0.51,
+      "frame_od_mm": 104.0,
+      "cutout_mm": 88.0,
+      "depth_mm": 44.0,
+      "cone_material": "Aluminum"
     },
     {
       "id": "peerless-by-tymphany-dx20bf00-04",
@@ -2093,7 +3266,22 @@
       "role": "high",
       "status": "catalogue",
       "driver_type": "Dome",
-      "impedance_ohm": 4.0
+      "impedance_ohm": 4.0,
+      "nominal_size_inch": 4.0,
+      "power_rms_w": 10.0,
+      "sensitivity_db": 88.0,
+      "freq_low_hz": 800.0,
+      "freq_high_hz": 20.0,
+      "fs_hz": 840.0,
+      "re_ohm": 3.0,
+      "le_mh": 0.012,
+      "qms": 3.05,
+      "qes": 2.92,
+      "qts": 1.5,
+      "frame_od_mm": 66.0,
+      "cutout_mm": 49.0,
+      "depth_mm": 38.0,
+      "cone_material": "Silk"
     },
     {
       "id": "peerless-by-tymphany-dx25tg59-04",
@@ -2130,7 +3318,15 @@
         {
           "local": "research/peerless_dx25tg59-04.pdf"
         }
-      ]
+      ],
+      "nominal_size_inch": 1.0,
+      "cone_material": "Silk",
+      "mms_g": 0.333,
+      "cms_mm_n": 220.0,
+      "sd_cm2": 6.61,
+      "vas_l": 0.013,
+      "bl_tm": 2.48,
+      "xmax_mm": 0.883
     },
     {
       "id": "peerless-by-tymphany-ne19vts-04",
@@ -2159,22 +3355,14 @@
           "currency": "EUR",
           "price": 29.95
         }
-      ]
-    },
-    {
-      "id": "peerless-by-tymphany-ne25vts-04",
-      "brand": "Peerless by Tymphany",
-      "model": "NE25VTS-04",
-      "role": "high",
-      "status": "candidate",
-      "frame_od_mm": 66.3,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 91.1,
-      "power_rms_w": 15.0,
-      "freq_low_hz": 700,
-      "freq_high_hz": 20000,
-      "fs_hz": 730.0,
-      "magnet": "neodymium"
+      ],
+      "nominal_size_inch": 4.0,
+      "re_ohm": 2.8,
+      "le_mh": 0.014,
+      "qms": 3.71,
+      "qes": 1.57,
+      "qts": 1.1,
+      "cone_material": "Fabric"
     },
     {
       "id": "peerless-by-tymphany-ne25vts-04",
@@ -2188,19 +3376,46 @@
       "sensitivity_db": 91.1,
       "power_rms_w": 15.0,
       "fs_hz": 730.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "freq_low_hz": 700.0,
+      "freq_high_hz": 20000.0,
+      "re_ohm": 3.2,
+      "le_mh": 0.019,
+      "qms": 2.71,
+      "qes": 1.08,
+      "qts": 0.77,
+      "frame_od_mm": 66.3,
+      "cutout_mm": 49.0,
+      "depth_mm": 41.0,
+      "cone_material": "Fabric"
     },
     {
       "id": "peerless-by-tymphany-oc25sc65-04",
       "brand": "Peerless by Tymphany",
       "model": "OC25SC65-04",
-      "role": "high",
+      "role": "excl",
       "status": "rejected",
-      "frame_od_mm": 41.0,
-      "impedance_ohm": 4.0,
       "sensitivity_db": 92.3,
       "power_rms_w": 12.0,
-      "fs_hz": 1400.0
+      "nominal_size_inch": 1.0,
+      "impedance_ohm": 4.0,
+      "freq_low_hz": 2000.0,
+      "freq_high_hz": 20000.0,
+      "fs_hz": 1400.0,
+      "re_ohm": 3.0,
+      "le_mh": 0.02,
+      "qms": 3.58,
+      "qes": 1.83,
+      "qts": 1.2,
+      "frame_od_mm": 41.3,
+      "cutout_mm": 32.5,
+      "depth_mm": 25.5,
+      "mms_g": 0.289,
+      "cms_mm_n": 46.0,
+      "sd_cm2": 6.93,
+      "vas_l": 0.003,
+      "bl_tm": 2.02,
+      "xmax_mm": 0.667
     },
     {
       "id": "peerless-by-tymphany-xt19td00-04",
@@ -2217,7 +3432,15 @@
       "power_rms_w": 20.0,
       "freq_low_hz": 800,
       "freq_high_hz": 20000,
-      "vc_mm": 19.0
+      "vc_mm": 19.0,
+      "nominal_size_inch": 4.0,
+      "fs_hz": 730.0,
+      "re_ohm": 2.9,
+      "le_mh": 0.014,
+      "qms": 3.1,
+      "qes": 0.888,
+      "qts": 0.69,
+      "cone_material": "Fabric"
     },
     {
       "id": "peerless-by-tymphany-xt25bg60-04",
@@ -2234,20 +3457,16 @@
       "power_rms_w": 15.0,
       "fs_hz": 570.0,
       "vc_mm": 25.0,
-      "magnet": "ferrite"
-    },
-    {
-      "id": "peerless-by-tymphany-xt25sc40-04",
-      "brand": "Peerless by Tymphany",
-      "model": "XT25SC40-04",
-      "role": "high",
-      "status": "candidate",
-      "driver_type": "Ring radiator",
-      "frame_od_mm": 43.9,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 94.0,
-      "power_rms_w": 100.0,
-      "vc_mm": 25.0
+      "magnet": "ferrite",
+      "nominal_size_inch": 1.0,
+      "freq_low_hz": 1000.0,
+      "freq_high_hz": 20000.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.016,
+      "qms": 2.67,
+      "qes": 0.502,
+      "qts": 0.42,
+      "cone_material": "Fabric"
     },
     {
       "id": "peerless-by-tymphany-xt25sc40-04",
@@ -2261,7 +3480,25 @@
       "sensitivity_db": 94.0,
       "power_rms_w": 100.0,
       "fs_hz": 1018.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "freq_low_hz": 2500.0,
+      "freq_high_hz": 20.0,
+      "re_ohm": 3.2,
+      "le_mh": 0.01,
+      "qms": 2.53,
+      "qes": 0.83,
+      "qts": 0.63,
+      "frame_od_mm": 1.73,
+      "cutout_mm": 1.73,
+      "depth_mm": 0.79,
+      "cone_material": "Fabric",
+      "mms_g": 0.359,
+      "cms_mm_n": 100.0,
+      "sd_cm2": 7.07,
+      "vas_l": 0.007,
+      "bl_tm": 2.27,
+      "xmax_mm": 0.867,
+      "vc_mm": 25.0
     },
     {
       "id": "peerless-by-tymphany-xt25sc90-04",
@@ -2278,7 +3515,21 @@
       "qes": 1.007,
       "qms": 7.2,
       "re_ohm": 3.2,
-      "vc_mm": 25.0
+      "vc_mm": 25.0,
+      "nominal_size_inch": 1.0,
+      "freq_low_hz": 2500.0,
+      "freq_high_hz": 20.0,
+      "le_mh": 0.01,
+      "frame_od_mm": 1.73,
+      "cutout_mm": 1.73,
+      "depth_mm": 0.79,
+      "cone_material": "Fabric",
+      "mms_g": 0.359,
+      "cms_mm_n": 100.0,
+      "sd_cm2": 7.07,
+      "vas_l": 0.007,
+      "bl_tm": 2.27,
+      "xmax_mm": 0.867
     },
     {
       "id": "peerless-by-tymphany-xt25tg30-04",
@@ -2317,7 +3568,16 @@
         {
           "url": "https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf)"
         }
-      ]
+      ],
+      "nominal_size_inch": 1.0,
+      "qms": 2.36,
+      "qes": 0.539,
+      "mms_g": 0.295,
+      "cms_mm_n": 440.0,
+      "sd_cm2": 8.24,
+      "vas_l": 0.043,
+      "bl_tm": 2.15,
+      "xmax_mm": 1.13
     },
     {
       "id": "sb-acoustics-sb19st-c000-4-sb-acoustics-sb19st-c000-4",
@@ -2353,40 +3613,20 @@
         {
           "local": "research/sb_acoustics_sb19st-c000-4.pdf"
         }
-      ]
-    },
-    {
-      "id": "sb-acoustics-sb21rdc-c000-4-sb-acoustics-sb21rdc-c000-4",
-      "brand": "SB Acoustics SB21RDC-C000-4",
-      "model": "SB Acoustics SB21RDC-C000-4",
-      "role": "high",
-      "status": "candidate",
-      "driver_type": "Ring radiator",
-      "frame_od_mm": 92.0,
-      "impedance_ohm": 4.0,
-      "cutout_mm": 62.5,
-      "depth_mm": 30.6,
-      "sensitivity_db": 90.0,
-      "power_rms_w": 40.0,
-      "fs_hz": 760.0,
-      "qts": 1.0,
-      "qes": 1.64,
-      "qms": 2.54,
-      "sd_cm2": 4.6,
-      "bl_tm": 1.5,
-      "re_ohm": 3.1,
-      "le_mh": 0.04,
-      "mms_g": 0.25,
-      "magnet": "neodymium",
-      "datasheets": [
-        {
-          "local": "research/sb_acoustics_sb21rdc-c000-4.pdf",
-          "url": "https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf)"
-        },
-        {
-          "local": "research/sb_acoustics_sb21rdc-c000-4.pdf"
-        }
-      ]
+      ],
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "nominal_size_inch": 4.0,
+      "le_mh": 0.07,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb21rdc-c000-4-sb-acoustics-sb21rdc-c000-4",
@@ -2400,7 +3640,36 @@
       "power_rms_w": 40.0,
       "fs_hz": 760.0,
       "xmax_mm": 0.5,
-      "re_ohm": 3.1
+      "re_ohm": 3.1,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "nominal_size_inch": 4.0,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-",
+      "datasheets": [
+        {
+          "local": "research/sb_acoustics_sb21rdc-c000-4.pdf",
+          "url": "https://sbacoustics.com/wp-content/uploads/2020/02/SB21RDC-C000-4.pdf)"
+        },
+        {
+          "local": "research/sb_acoustics_sb21rdc-c000-4.pdf"
+        }
+      ]
     },
     {
       "id": "sb-acoustics-sb21rdcn-c000-4-sb-acoustics-sb21rdcn-c000-4",
@@ -2433,20 +3702,17 @@
         {
           "local": "research/sb_acoustics_sb21rdcn-c000-4.pdf"
         }
-      ]
-    },
-    {
-      "id": "sb-acoustics-sb21sdc-c000-4-sb-acoustics-sb21sdc-c000-4",
-      "brand": "SB Acoustics SB21SDC-C000-4",
-      "model": "SB Acoustics SB21SDC-C000-4",
-      "role": "high",
-      "status": "candidate",
-      "driver_type": "Ring dome",
-      "frame_od_mm": 92.0,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 91.0,
-      "power_rms_w": 40.0,
-      "fs_hz": 720.0
+      ],
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "frame_material": "Vented reinforced plastic",
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber"
     },
     {
       "id": "sb-acoustics-sb21sdc-c000-4-sb-acoustics-sb21sdc-c000-4",
@@ -2459,7 +3725,28 @@
       "sensitivity_db": 91.0,
       "power_rms_w": 40.0,
       "fs_hz": 720.0,
-      "qts": 0.95
+      "qts": 0.95,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "frame_od_mm": 3.62,
+      "depth_mm": 1.24,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb26adc-c000-4-sb-acoustics-sb26adc-c000-4",
@@ -2484,22 +3771,22 @@
           "currency": "EUR",
           "price": 52.45
         }
-      ]
-    },
-    {
-      "id": "sb-acoustics-sb26st-c000-5-sb-acoustics-sb26st-c000-5",
-      "brand": "SB Acoustics SB26ST-C000-5",
-      "model": "SB Acoustics SB26ST-C000-5",
-      "role": "high",
-      "status": "candidate",
-      "frame_od_mm": 72.0,
-      "impedance_ohm": 5.0,
-      "sensitivity_db": 91.0,
-      "power_rms_w": 80.0,
-      "fs_hz": 870.0,
-      "xmax_mm": 0.6,
-      "sd_cm2": 6.2,
-      "re_ohm": 4.4
+      ],
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "nominal_size_inch": 4.0,
+      "le_mh": 0.07,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb26st-c000-5-sb-acoustics-sb26st-c000-5",
@@ -2513,7 +3800,27 @@
       "sensitivity_db": 91.0,
       "power_rms_w": 80.0,
       "fs_hz": 870.0,
-      "xmax_mm": 0.6
+      "xmax_mm": 0.6,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb26stcn-c000-4-sb-acoustics-sb26stcn-c000-4",
@@ -2528,39 +3835,25 @@
       "fs_hz": 950.0,
       "re_ohm": 3.2,
       "le_mh": 0.04,
-      "magnet": "neodymium"
-    },
-    {
-      "id": "sb-acoustics-sb29rdac-c000-4-sb-acoustics-sb29rdac-c000-4",
-      "brand": "SB Acoustics SB29RDAC-C000-4",
-      "model": "SB Acoustics SB29RDAC-C000-4",
-      "role": "high",
-      "status": "candidate",
-      "driver_type": "Ring dome",
-      "frame_od_mm": 103.8,
-      "impedance_ohm": 4.0,
-      "cutout_mm": 70.0,
-      "depth_mm": 37.25,
-      "sensitivity_db": 93.0,
-      "fs_hz": 600.0,
-      "qts": 0.64,
-      "qes": 0.9,
-      "qms": 2.2,
-      "sd_cm2": 9.6,
-      "bl_tm": 2.4,
-      "re_ohm": 3.0,
-      "le_mh": 0.05,
-      "mms_g": 0.45,
       "magnet": "neodymium",
-      "datasheets": [
-        {
-          "local": "research/sb_acoustics_sb29rdac-c000-4.pdf",
-          "url": "https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf)"
-        },
-        {
-          "local": "research/sb_acoustics_sb29rdac-c000-4.pdf"
-        }
-      ]
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber"
     },
     {
       "id": "sb-acoustics-sb29rdac-c000-4-sb-acoustics-sb29rdac-c000-4",
@@ -2574,7 +3867,36 @@
       "cutout_mm": 70.0,
       "sensitivity_db": 93.0,
       "power_rms_w": 100.0,
-      "fs_hz": 600
+      "fs_hz": 600,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-",
+      "datasheets": [
+        {
+          "local": "research/sb_acoustics_sb29rdac-c000-4.pdf",
+          "url": "https://sbacoustics.com/wp-content/uploads/2025/03/SB29RDAC-C000-4.pdf)"
+        },
+        {
+          "local": "research/sb_acoustics_sb29rdac-c000-4.pdf"
+        }
+      ]
     },
     {
       "id": "sb-acoustics-sb29rdc-c000-4-sb-acoustics-sb29rdc-c000-4",
@@ -2588,7 +3910,27 @@
       "power_rms_w": 100.0,
       "fs_hz": 600.0,
       "qts": 0.65,
-      "xmax_mm": 0.25
+      "xmax_mm": 0.25,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "nominal_size_inch": 4.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb29rdnc-c000-4-sb-acoustics-sb29rdnc-c000-4",
@@ -2602,7 +3944,27 @@
       "power_rms_w": 100.0,
       "fs_hz": 580.0,
       "re_ohm": 3.0,
-      "magnet": "neodymium"
+      "magnet": "neodymium",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber"
     },
     {
       "id": "sb-acoustics-sb29sdac-c000-4-sb-acoustics-sb29sdac-c000-4",
@@ -2616,7 +3978,27 @@
       "power_rms_w": 60.0,
       "fs_hz": 600.0,
       "qts": 0.8,
-      "xmax_mm": 0.25
+      "xmax_mm": 0.25,
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "sd_cm2": 178.0,
+      "vas_l": 1.47,
+      "nominal_size_inch": 4.0,
+      "re_ohm": 3.4,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "frame_od_mm": 122.0,
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber",
+      "magnet": "-"
     },
     {
       "id": "sb-acoustics-sb29sdnc-c000-4-sb-acoustics-sb29sdnc-c000-4",
@@ -2631,29 +4013,25 @@
       "fs_hz": 630.0,
       "sd_cm2": 9.6,
       "re_ohm": 3.0,
-      "magnet": "neodymium"
-    },
-    {
-      "id": "seas-27tdfc-h1189-06-seas-27tdfc-h1189-06",
-      "brand": "SEAS 27TDFC H1189-06",
-      "model": "SEAS 27TDFC H1189-06",
-      "role": "high",
-      "status": "candidate",
-      "frame_od_mm": 103.8,
-      "impedance_ohm": 6.0,
-      "cutout_mm": 73.0,
-      "depth_mm": 39.0,
-      "sensitivity_db": 90.0,
-      "power_rms_w": 90.0,
-      "power_max_w": 220.0,
-      "fs_hz": 550.0,
-      "prices": [
-        {
-          "source": "stock",
-          "currency": "GBP",
-          "price": 56.92
-        }
-      ]
+      "magnet": "neodymium",
+      "qms": 2.7,
+      "mms_g": 62.0,
+      "cms_mm_n": 0.93,
+      "vas_l": 1.47,
+      "xmax_mm": 11.0,
+      "nominal_size_inch": 4.0,
+      "le_mh": 0.07,
+      "qes": 1.5,
+      "qts": 1.22,
+      "freq_low_hz": 50.0,
+      "freq_high_hz": 4.0,
+      "vc_mm": 25.4,
+      "bl_tm": 3.5,
+      "frame_material": "Vented reinforced plastic",
+      "depth_mm": 71.3,
+      "cutout_mm": 70.0,
+      "vc_wire": "Copper-clad aluminum",
+      "surround_material": "Butyl Rubber"
     },
     {
       "id": "seas-27tdfc-h1189-06-seas-27tdfc-h1189-06",
@@ -2676,23 +4054,18 @@
           "source": "sale",
           "currency": "EUR",
           "price": 71.86
+        },
+        {
+          "source": "stock",
+          "currency": "GBP",
+          "price": 56.92
         }
-      ]
-    },
-    {
-      "id": "seas-prestige-27tffnc-cg-h1406-04-seas-prestige-27tffnc-cg-h1406-04",
-      "brand": "SEAS Prestige 27TFFNC/CG H1406-04",
-      "model": "SEAS Prestige 27TFFNC/CG H1406-04",
-      "role": "high",
-      "status": "candidate",
-      "impedance_ohm": 4.0,
-      "cutout_mm": 46.0,
-      "depth_mm": 21.5,
-      "sensitivity_db": 91.0,
-      "power_rms_w": 80.0,
-      "power_max_w": 200.0,
-      "re_ohm": 2.7,
-      "fs_hz": 1170
+      ],
+      "freq_low_hz": 1500.0,
+      "freq_high_hz": 25000.0,
+      "re_ohm": 4.8,
+      "le_mh": 0.05,
+      "cone_material": "Fabric"
     },
     {
       "id": "seas-prestige-27tffnc-cg-h1406-04-seas-prestige-27tffnc-cg-h1406-04",
@@ -2716,25 +4089,13 @@
           "price": 40.45
         }
       ],
-      "fs_hz": 1170
-    },
-    {
-      "id": "scan-speak-discovery-d2604-830000",
-      "brand": "Scan-Speak Discovery",
-      "model": "D2604/830000",
-      "role": "high",
-      "status": "candidate",
-      "frame_od_mm": 104.2,
-      "impedance_ohm": 4.0,
-      "cutout_mm": 75.0,
-      "depth_mm": 25.4,
-      "sensitivity_db": 92.0,
-      "power_rms_w": 100.0,
-      "power_max_w": 240.0,
-      "qts": 0.79,
-      "qes": 1.02,
-      "qms": 3.46,
-      "re_ohm": 2.8
+      "fs_hz": 1170,
+      "re_ohm": 2.7,
+      "le_mh": 0.03,
+      "frame_od_mm": 69.7,
+      "cutout_mm": 46.0,
+      "depth_mm": 21.5,
+      "cone_material": "Fabric"
     },
     {
       "id": "scan-speak-discovery-d2604-830000",
@@ -2752,7 +4113,16 @@
       "power_max_w": 240.0,
       "qts": 0.79,
       "qes": 1.02,
-      "qms": 3.46
+      "qms": 3.46,
+      "freq_low_hz": 1000.0,
+      "freq_high_hz": 30000.0,
+      "re_ohm": 2.8,
+      "le_mh": 0.04,
+      "frame_od_mm": 104.2,
+      "fs_hz": 475.0,
+      "vas_l": 0.01,
+      "sd_cm2": 8.0,
+      "bl_tm": 2.2
     },
     {
       "id": "scan-speak-discovery-d2604-833000",
@@ -2784,7 +4154,13 @@
         {
           "local": "research/scanspeak_d2604-833000.pdf"
         }
-      ]
+      ],
+      "nominal_size_inch": 1.024,
+      "power_rms_w": 100.0,
+      "power_max_w": 240.0,
+      "freq_low_hz": 1000.0,
+      "freq_high_hz": 30000.0,
+      "depth_mm": 25.4
     },
     {
       "id": "scan-speak-discovery-d2606-920000",
@@ -2796,21 +4172,42 @@
       "sensitivity_db": 91.4,
       "power_rms_w": 100.0,
       "power_max_w": 200.0,
-      "fs_hz": 1100.0
+      "fs_hz": 1100.0,
+      "nominal_size_inch": 1.0,
+      "re_ohm": 4.6,
+      "le_mh": 0.04,
+      "qms": 2.36,
+      "qes": 1.31,
+      "qts": 0.84,
+      "mms_g": 0.3,
+      "cms_mm_n": 0.07,
+      "sd_cm2": 7.1,
+      "vas_l": 0.01,
+      "bl_tm": 2.7
     },
     {
       "id": "scan-speak-discovery-r2604-832000",
       "brand": "Scan-Speak Discovery",
       "model": "R2604/832000",
       "role": "high",
-      "status": "candidate",
-      "driver_type": "Dual Ring Radiator",
+      "status": "catalogue",
+      "driver_type": "Ring Radiator (dual)",
+      "nominal_size_inch": 1.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 90.0,
       "power_rms_w": 100.0,
       "fs_hz": 500.0,
       "xmax_mm": 0.2,
       "re_ohm": 2.9,
+      "le_mh": 0.02,
+      "qms": 2.18,
+      "qes": 0.46,
+      "qts": 0.38,
+      "mms_g": 0.34,
+      "cms_mm_n": 0.444,
+      "sd_cm2": 5.44,
+      "vas_l": 0.024,
+      "bl_tm": 2.34,
       "vc_mm": 25.0,
       "prices": [
         {
@@ -2821,49 +4218,29 @@
       ]
     },
     {
-      "id": "scan-speak-discovery-r2604-832000",
-      "brand": "Scan-Speak Discovery",
-      "model": "R2604/832000",
-      "role": "high",
-      "status": "catalogue",
-      "driver_type": "Ring Radiator (dual)",
-      "nominal_size_inch": 1.0,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 90.0,
-      "power_rms_w": 100.0,
-      "fs_hz": 500.0,
-      "xmax_mm": 0.2,
-      "re_ohm": 2.9
-    },
-    {
       "id": "scan-speak-discovery-r2604-833000",
       "brand": "Scan-Speak Discovery",
       "model": "R2604/833000",
       "role": "high",
-      "status": "candidate",
-      "driver_type": "Dual Ring Radiator",
+      "status": "catalogue",
+      "driver_type": "Ring Radiator (dual)",
+      "nominal_size_inch": 1.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 92.0,
       "power_rms_w": 100.0,
       "fs_hz": 440.0,
       "xmax_mm": 0.2,
       "re_ohm": 2.9,
+      "le_mh": 0.02,
+      "qms": 2.18,
+      "qes": 0.46,
+      "qts": 0.38,
+      "mms_g": 0.34,
+      "cms_mm_n": 0.444,
+      "sd_cm2": 5.44,
+      "vas_l": 0.024,
+      "bl_tm": 2.34,
       "vc_mm": 25.0
-    },
-    {
-      "id": "scan-speak-discovery-r2604-833000",
-      "brand": "Scan-Speak Discovery",
-      "model": "R2604/833000",
-      "role": "high",
-      "status": "catalogue",
-      "driver_type": "Ring Radiator (dual)",
-      "nominal_size_inch": 1.0,
-      "impedance_ohm": 4.0,
-      "sensitivity_db": 92.0,
-      "power_rms_w": 100.0,
-      "fs_hz": 440.0,
-      "xmax_mm": 0.2,
-      "re_ohm": 2.9
     },
     {
       "id": "scan-speak-illuminator-d3004-602010",
@@ -2909,14 +4286,6 @@
       "status": "candidate"
     },
     {
-      "id": "dayton-audio-nd25fn-4",
-      "brand": "Dayton Audio",
-      "model": "ND25FN-4",
-      "role": "excl",
-      "status": "rejected",
-      "fs_hz": 1350
-    },
-    {
       "id": "lavoce-md03-10",
       "brand": "Lavoce",
       "model": "MD03.10",
@@ -2928,25 +4297,32 @@
       "brand": "Monacor",
       "model": "SPX-31M",
       "role": "excl",
-      "status": "rejected"
-    },
-    {
-      "id": "peerless-by-tymphany-bc25tg15-04",
-      "brand": "Peerless by Tymphany",
-      "model": "BC25TG15-04",
-      "role": "excl",
       "status": "rejected",
-      "sensitivity_db": 93.9,
-      "power_rms_w": 7.0
-    },
-    {
-      "id": "peerless-by-tymphany-oc25sc65-04",
-      "brand": "Peerless by Tymphany",
-      "model": "OC25SC65-04",
-      "role": "excl",
-      "status": "rejected",
-      "sensitivity_db": 92.3,
-      "power_rms_w": 12.0
+      "power_rms_w": 20.0,
+      "power_max_w": 40.0,
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 86.0,
+      "freq_low_hz": 100.0,
+      "freq_high_hz": 22.0,
+      "vc_mm": 20.0,
+      "re_ohm": 6.4,
+      "le_mh": 0.18,
+      "fs_hz": 110.0,
+      "qms": 3.707,
+      "qes": 0.69,
+      "qts": 0.58,
+      "mms_g": 1.9,
+      "cms_mm_n": 0.92,
+      "sd_cm2": 32.0,
+      "bl_tm": 3.64,
+      "vas_l": 1.3,
+      "xmax_mm": 1.1,
+      "surround_material": "Rubber",
+      "vc_wire": "Copper",
+      "frame_material": "Stamped steel",
+      "magnet": "ferrite",
+      "frame_od_mm": 93.0,
+      "depth_mm": 55.0
     },
     {
       "id": "peerless-by-tymphany-pls-p830987",
@@ -2960,7 +4336,25 @@
       "power_rms_w": 25.0,
       "fs_hz": 110.0,
       "qts": 1.0,
-      "xmax_mm": 5.4
+      "xmax_mm": 5.4,
+      "freq_low_hz": 100.0,
+      "freq_high_hz": 12000.0,
+      "vc_mm": 25.7,
+      "re_ohm": 6.2,
+      "le_mh": 0.119,
+      "qms": 6.74,
+      "qes": 1.22,
+      "mms_g": 2.49,
+      "cms_mm_n": 850.0,
+      "sd_cm2": 27.3,
+      "bl_tm": 2.97,
+      "vas_l": 0.99,
+      "surround_material": "Rubber",
+      "frame_material": "Polymer",
+      "magnet": "neodymium",
+      "frame_od_mm": 78.0,
+      "depth_mm": 51.0,
+      "power_max_w": 50.0
     },
     {
       "id": "tang-band-w3-315e",
@@ -2989,7 +4383,20 @@
         {
           "local": "research/tang_band_w3-315e.pdf"
         }
-      ]
+      ],
+      "vc_mm": 0.8,
+      "le_mh": 0.2,
+      "qms": 5.51,
+      "qes": 0.57,
+      "cms_mm_n": 1.15,
+      "bl_tm": 3.89,
+      "vas_l": 0.06,
+      "surround_material": "Santoprene®",
+      "vc_wire": "CCA",
+      "frame_material": "Cast Aluminum",
+      "magnet": "ferrite",
+      "frame_od_mm": 3.66,
+      "depth_mm": 2.13
     }
   ]
 }

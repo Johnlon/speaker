@@ -23,7 +23,7 @@ queue. This handles slug mismatches (e.g. morel-mdt22t -> morel-mdt-22).
 THROTTLING
 ----------
 Per-domain semaphore limits concurrency for sites that rate-limit.
-_DOMAIN_SEM maps domain -> max concurrent connections.
+_DOMAIN_THROTTLE maps domain -> (max_concurrent, inter_request_delay_s).
 
 USAGE
 -----
@@ -56,7 +56,7 @@ MANIFEST_PATH = CACHE_DIR / "manifest.json"
 SOURCE_URLS = ROOT / "research" / "source_urls.md"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; SpeakerResearchBot/1.0)",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
     "Accept-Language": "en-GB,en;q=0.9",
 }
 
@@ -69,11 +69,10 @@ _CONTENT_TYPE_EXT: dict[str, str] = {
     "application/xml":       ".xml",
 }
 
-# Max concurrent connections per domain. Everything else runs flat out.
-_DOMAIN_SEM: dict[str, int] = {
-    "loudspeakerdatabase.com":     1,
-    "www.loudspeakerdatabase.com": 1,
-}
+_DOMAIN_THROTTLE: dict[str, tuple[int, float]] = {}
+
+# LDB is skipped entirely — too unreliable; use manual WinISD downloads instead.
+_LDB_HOSTS = {"loudspeakerdatabase.com", "www.loudspeakerdatabase.com"}
 
 _SI_HOST = "www.soundimports.eu"
 _SI_PRODUCT_RE = re.compile(r"^/en/[a-z0-9][a-z0-9\-]+\.html$")
@@ -145,11 +144,12 @@ def _is_willys_product_url(url: str) -> bool:
 
 def _willys_search_url(failed_url: str) -> str:
     """Build a Willys search URL from a failed product slug.
-    Uses the full slug as the query — the search engine handles partial matches.
-    e.g. sb-acoustics-sb12pacr25-4-mid-woofer -> /a/search?q=sb-acoustics-sb12pacr25-4-mid-woofer
+    Converts slug to space-separated words for better fuzzy matching.
+    e.g. sb-acoustics-sb12pacr25-4-mid-woofer -> /a/search?q=sb+acoustics+sb12pacr25+4+mid+woofer
     """
     slug = urlparse(failed_url).path.rstrip("/").rsplit("/", 1)[-1]
-    return f"https://{_WILLYS_HOST}/a/search?q={quote_plus(slug)}"
+    q = _slug_to_query(slug)
+    return f"https://{_WILLYS_HOST}/a/search?q={quote_plus(q)}"
 
 
 def _extract_willys_product_urls(html: str) -> list[str]:
@@ -289,21 +289,42 @@ class Progress:
 
 
 # ---------------------------------------------------------------------------
-# Per-domain semaphore pool
+# Per-domain serial gate (semaphore + inter-request delay)
 # ---------------------------------------------------------------------------
+
+class _DomainGate:
+    """Holds a semaphore for the duration of a request plus a fixed post-request sleep.
+    Ensures throttled domains are accessed serially with a minimum gap between requests.
+    """
+    def __init__(self, sem: asyncio.Semaphore | None, delay: float):
+        self._sem = sem
+        self._delay = delay
+
+    async def __aenter__(self):
+        if self._sem:
+            await self._sem.acquire()
+        return self
+
+    async def __aexit__(self, *_):
+        if self._delay:
+            await asyncio.sleep(self._delay)
+        if self._sem:
+            self._sem.release()
+
 
 class DomainSemaphores:
     def __init__(self):
         self._sems: dict[str, asyncio.Semaphore] = {}
 
-    def get(self, url: str):
+    def get(self, url: str) -> "_DomainGate":
         domain = urlparse(url).netloc.lower()
-        limit = _DOMAIN_SEM.get(domain)
-        if limit is None:
-            return asyncio.nullcontext()
+        cfg = _DOMAIN_THROTTLE.get(domain)
+        if cfg is None:
+            return _DomainGate(None, 0.0)
+        limit, delay = cfg
         if domain not in self._sems:
             self._sems[domain] = asyncio.Semaphore(limit)
-        return self._sems[domain]
+        return _DomainGate(self._sems[domain], delay)
 
 
 # ---------------------------------------------------------------------------
@@ -313,22 +334,29 @@ class DomainSemaphores:
 async def _fetch(url: str, session: aiohttp.ClientSession, timeout: int,
                  sems: DomainSemaphores):
     async with sems.get(url):
-        try:
-            async with session.get(
-                url,
-                timeout=aiohttp.ClientTimeout(total=timeout),
-                headers=HEADERS,
-                allow_redirects=True,
-            ) as r:
-                ct = r.headers.get("Content-Type", "text/html")
-                body = await r.read()
-                return r.status, ct, body, str(r.url)
-        except asyncio.TimeoutError:
-            return 0, None, None, "timeout"
-        except aiohttp.ClientError as e:
-            return 0, None, None, str(e)
-        except Exception as e:
-            return 0, None, None, str(e)
+        for attempt in range(5):
+            try:
+                async with session.get(
+                    url,
+                    timeout=aiohttp.ClientTimeout(total=timeout),
+                    headers=HEADERS,
+                    allow_redirects=True,
+                ) as r:
+                    if r.status == 429 and attempt < 4:
+                        print(f"[429]  {url}  -> retry {attempt + 1}/4 in 15s")
+                        # response context closed here before sleep
+                    else:
+                        ct = r.headers.get("Content-Type", "text/html")
+                        body = await r.read()
+                        return r.status, ct, body, str(r.url)
+            except asyncio.TimeoutError:
+                return 0, None, None, "timeout"
+            except aiohttp.ClientError as e:
+                return 0, None, None, str(e)
+            except Exception as e:
+                return 0, None, None, str(e)
+            await asyncio.sleep(15)
+        return 429, None, None, "429 after 4 retries"
 
 
 # ---------------------------------------------------------------------------
@@ -352,6 +380,11 @@ async def worker(
         if url is None:
             queue.task_done()
             break
+
+        if urlparse(url).netloc.lower() in _LDB_HOSTS:
+            print(f"[SKIP] {url}  (LDB — use manual WinISD download)")
+            queue.task_done()
+            continue
 
         status, ct, body, info = await _fetch(url, session, timeout, sems)
         new_discovered = 0
@@ -415,7 +448,7 @@ async def worker(
 
             elif _is_willys_product_url(url):
                 search_url = _willys_search_url(url)
-                 print(f"       Willys search: {search_url}")
+                print(f"       Willys search: {search_url}")
                 s2, ct2, body2, _ = await _fetch(search_url, session, timeout, sems)
                 if s2 == 200 and body2:
                     candidates = _extract_willys_product_urls(body2.decode("utf-8", errors="replace"))  # HTML
@@ -456,19 +489,17 @@ async def run(args):
         print("All URLs already cached or marked 404. Use --force to retry everything.")
         return
 
-    throttled = " ".join(f"{d.split('.')[0]}={lim}conn" for d, lim in _DOMAIN_SEM.items())
     already_done = sum(1 for v in manifest.values() if v.get("status") == 200)
     already_404 = sum(1 for v in manifest.values() if v.get("status") == 404)
     print(f"Pending: {len(pending)}  |  Already ok: {already_done}  |  Already 404: {already_404}  |  Workers: {args.workers}")
-    print(f"Throttled: {throttled}")
 
     seen: set = set(manifest.keys()) | set(pending)
     manifest_lock = asyncio.Lock()
     seen_lock = asyncio.Lock()
     file_lock = asyncio.Lock()
     sems = DomainSemaphores()
-    progress = Progress(len(pending))
 
+    progress = Progress(len(pending))
     queue: asyncio.Queue = asyncio.Queue()
     for url in pending:
         await queue.put(url)

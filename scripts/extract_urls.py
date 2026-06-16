@@ -81,12 +81,12 @@ _LDB_BRAND = {
     "sica":          "SICA",
     "markaudio":     "Markaudio",
     "hivi":          "HiVi",
-    "tangband":      "Tang-Band",
+    "tangband":      "TangBand",
     "tectonic":      "Tectonic",
     "faital":        "FaitalPRO",
     "wavecor":       "Wavecor",
     "celestion":     "Celestion",
-    "monacor":       "Monacor",
+    "monacor":       "MONACOR",
 }
 
 
