@@ -3441,13 +3441,21 @@
       "datasheets": [
         {
           "local": "research/morel_mdt22t.pdf",
-          "url": "https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880)"
-        },
-        {
-          "local": "research/morel_mdt22t.pdf"
+          "url": "https://doc.soundimports.nl/pdf/brands/Morel/MDT22/MDT-22-specs.pdf"
         }
       ],
-      "frame_shape": "square_54x54mm"
+      "frame_shape": "square_54x54mm",
+      "bl_tm": 2.8,
+      "b_flux_t": 1.4,
+      "cutout_mm": 44.0,
+      "depth_mm": 55.0,
+      "vc_mm": 28.0,
+      "power_transient_w": 500,
+      "freq_response_hz": [
+        1800,
+        25000
+      ],
+      "notes": "Confirmed datasheet: face plate 54x54mm square. Fs=650 Hz. Freq response 1800-25000 Hz — manufacturer lower limit is 2.77xFs (not 3xFs), giving slightly more window than our conservative 3xFs=1950 Hz estimate. With ND91-4 (beam=2816 Hz) using 1800 Hz floor: 0.65 oct comfortable. With ND105-4 (beam=2164 Hz) using 1800 Hz floor: 0.27 oct tight. ND140-4 still INCOMPATIBLE (beam=1668 < 1800 Hz). DISCONTINUED at HFC. SI €59.95 backorder. Willys £47.55. Only non-round tweeter in catalogue compatible with square-frame mids."
     },
     {
       "id": "peerless-by-tymphany-bc25sc06-04",
