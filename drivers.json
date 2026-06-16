@@ -3066,6 +3066,16 @@
       "freq_high_hz": 20000,
       "sources": [
         "https://www.daytonaudio.com/product/1565/rst28a-4-1-1-8-reference-series-aluminum-dome-tweeter-4-ohm"
+      ],
+      "datasheets": [
+        "https://www.daytonaudio.com/images/resources/275-131--dayton-audio-rst28a-4-specification-sheet.pdf"
+      ],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 58.99
+        }
       ]
     },
     {
