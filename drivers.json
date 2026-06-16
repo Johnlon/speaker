@@ -2780,7 +2780,20 @@
       "frame_od_mm": 104.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 93.0,
-      "fs_hz": 470.0
+      "fs_hz": 470.0,
+      "power_rms_w": 100.0,
+      "re_ohm": 3.2,
+      "sd_cm2": 10.3,
+      "qts": 0.7,
+      "qms": 3.2,
+      "qes": 0.89,
+      "vc_mm": 30.0,
+      "xmax_mm": 0.4,
+      "cutout_mm": 81.0,
+      "depth_mm": 44.2,
+      "freq_low_hz": 300,
+      "freq_high_hz": 30000,
+      "cone_material": "Fabric dome"
     },
     {
       "id": "dayton-audio-amt-mini-8",
@@ -3212,7 +3225,20 @@
       "status": "catalogue",
       "driver_type": "Dome",
       "nominal_size_inch": 0.8,
-      "impedance_ohm": 8.0
+      "impedance_ohm": 8.0,
+      "fs_hz": 1900.0,
+      "sensitivity_db": 90.0,
+      "power_rms_w": 70.0,
+      "power_max_w": 100.0,
+      "re_ohm": 6.7,
+      "le_mh": 0.12,
+      "frame_od_mm": 94.0,
+      "cutout_mm": 64.0,
+      "depth_mm": 23.0,
+      "freq_low_hz": 1200,
+      "freq_high_hz": 22000,
+      "cone_material": "Polycarbonate dome",
+      "vc_mm": 20.0
     },
     {
       "id": "monacor-dt-100",
