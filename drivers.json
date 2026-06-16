@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-16",
-  "driver_count": 146,
+  "driver_count": 155,
   "drivers": [
     {
       "id": "tang-band-w5-1138smf",
@@ -511,16 +511,16 @@
       "brand": "Dayton Audio",
       "model": "PC83-4",
       "role": "mid",
-      "status": "catalogue",
+      "status": "rejected",
       "nominal_size_inch": 3.0,
       "impedance_ohm": 4.0,
-      "sensitivity_db": 86.8,
+      "sensitivity_db": 83.6,
       "power_rms_w": 30.0,
       "power_max_w": 60.0,
       "freq_low_hz": 80,
       "freq_high_hz": 20000,
       "cone_material": "paper",
-      "vc_mm": 1.0,
+      "vc_mm": 25.4,
       "re_ohm": 3.9,
       "le_mh": 0.38,
       "fs_hz": 80.0,
@@ -531,7 +531,7 @@
       "cms_mm_n": 1.47,
       "sd_cm2": 30.2,
       "bl_tm": 2.9,
-      "vas_l": 0.07,
+      "vas_l": 1.98,
       "xmax_mm": 2.0,
       "surround_material": "Rubber",
       "vc_wire": "Copper",
@@ -539,7 +539,8 @@
       "magnet": "ferrite",
       "frame_od_mm": 83.0,
       "depth_mm": 50.0,
-      "datasheets": []
+      "datasheets": [],
+      "rejection_reason": "Power check fail: at 83.6 dB/2.83V/4ohm needs 55W at 98 dB RMS (rated 30W) and 110W at 101 dB burst (max 60W). Too low sensitivity for system SPL targets. DB had wrong sensitivity (86.8 dB)."
     },
     {
       "id": "dayton-audio-rs100-8",
@@ -3414,7 +3415,8 @@
       "nominal_size_inch": 1.125,
       "re_ohm": 5.2,
       "cutout_mm": 1.75,
-      "datasheets": []
+      "datasheets": [],
+      "frame_shape": "square_54x54mm"
     },
     {
       "id": "morel-mdt22t",
@@ -3440,7 +3442,8 @@
         {
           "local": "research/morel_mdt22t.pdf"
         }
-      ]
+      ],
+      "frame_shape": "square_54x54mm"
     },
     {
       "id": "peerless-by-tymphany-bc25sc06-04",
@@ -4576,7 +4579,21 @@
       "vas_l": 0.024,
       "bl_tm": 2.34,
       "vc_mm": 25.0,
-      "datasheets": []
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "willys",
+          "currency": "GBP",
+          "price": 47.79,
+          "url": "https://willys-hifi.com/products/scanspeak-r2604-833000-tweeter"
+        },
+        {
+          "source": "soundimports",
+          "currency": "GBP",
+          "price": 62.0,
+          "url": "https://www.soundimports.eu/en/scan-speak-r2604-833000.html"
+        }
+      ]
     },
     {
       "id": "scan-speak-illuminator-d3004-602010",
@@ -4777,6 +4794,307 @@
       "magnet": "ferrite",
       "frame_od_mm": 3.66,
       "depth_mm": 2.13
+    },
+    {
+      "id": "dayton-audio-nd105-4",
+      "brand": "Dayton Audio",
+      "model": "ND105-4",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 86.8,
+      "power_rms_w": 30.0,
+      "power_max_w": 60.0,
+      "fs_hz": 78.7,
+      "qts": 0.61,
+      "qes": 0.66,
+      "qms": 7.42,
+      "vas_l": 1.97,
+      "sd_cm2": 51.5,
+      "xmax_mm": 4.0,
+      "bl_tm": 4.52,
+      "re_ohm": 3.7,
+      "le_mh": 0.76,
+      "mms_g": 7.4,
+      "frame_od_mm": 105.0,
+      "cutout_mm": 93.0,
+      "depth_mm": 67.0,
+      "frame_shape": "square",
+      "frame_material": "stamped steel",
+      "cone_material": "anodised aluminium",
+      "vc_mm": 25.0,
+      "notes": "User confirms square frame; Dayton website lists as round but ND105 physical form is square-ish like ND91 series",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 42.99,
+          "url": "https://www.daytonaudio.com/product/55/nd105-4-4-aluminum-cone-midbass-driver-4-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-pc105-4",
+      "brand": "Dayton Audio",
+      "model": "PC105-4",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 90.3,
+      "power_rms_w": 40.0,
+      "power_max_w": 80.0,
+      "fs_hz": 81.4,
+      "qts": 0.51,
+      "qes": 0.67,
+      "qms": 2.17,
+      "vas_l": 3.68121,
+      "sd_cm2": 52.8,
+      "xmax_mm": 2.0,
+      "re_ohm": 3.3,
+      "le_mh": 0.32,
+      "mms_g": 4.2,
+      "frame_od_mm": 107.0,
+      "cutout_mm": 60.0,
+      "depth_mm": 102.0,
+      "frame_shape": "round",
+      "frame_material": "stamped steel",
+      "cone_material": "poly composite",
+      "vc_mm": 25.4,
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 23.99,
+          "url": "https://www.daytonaudio.com/product/1542/pc105-4-4-paper-cone-full-range-driver-4-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-pc105-8",
+      "brand": "Dayton Audio",
+      "model": "PC105-8",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 86.3,
+      "power_rms_w": 40.0,
+      "power_max_w": 80.0,
+      "fs_hz": 84.8,
+      "qts": 0.64,
+      "qes": 0.88,
+      "qms": 2.29,
+      "vas_l": 3.39804,
+      "sd_cm2": 52.8,
+      "xmax_mm": 2.0,
+      "bl_tm": 4.1,
+      "re_ohm": 6.7,
+      "le_mh": 0.54,
+      "mms_g": 4.2,
+      "frame_od_mm": 107.0,
+      "cutout_mm": 60.0,
+      "depth_mm": 102.0,
+      "frame_shape": "round",
+      "frame_material": "stamped steel",
+      "cone_material": "poly damped woven glass fibre",
+      "vc_mm": 25.4,
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 23.99,
+          "url": "https://www.daytonaudio.com/product/1543/pc105-8-4-paper-cone-full-range-driver-8-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-dma105-4",
+      "brand": "Dayton Audio",
+      "model": "DMA105-4",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 89.8,
+      "power_rms_w": 35.0,
+      "power_max_w": 70.0,
+      "fs_hz": 72.7,
+      "sd_cm2": 54.1,
+      "frame_shape": "round",
+      "cone_material": "aluminium",
+      "notes": "12-spoke open frame design; not square",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 25.99,
+          "url": "https://www.daytonaudio.com/product/1622/dma105-4-4-dual-motor-array-full-range-driver-4-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-rs100p-4",
+      "brand": "Dayton Audio",
+      "model": "RS100P-4",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 88.5,
+      "power_rms_w": 30.0,
+      "power_max_w": 45.0,
+      "fs_hz": 84.8,
+      "qts": 0.54,
+      "qes": 0.67,
+      "qms": 2.67,
+      "vas_l": 1.86,
+      "sd_cm2": 36.3,
+      "xmax_mm": 4.0,
+      "bl_tm": 2.95,
+      "re_ohm": 3.0,
+      "le_mh": 0.26,
+      "mms_g": 3.7,
+      "frame_od_mm": 98.0,
+      "cutout_mm": 77.2,
+      "depth_mm": 51.0,
+      "frame_shape": "round",
+      "frame_material": "cast aluminium",
+      "cone_material": "paper/Kevlar/glass composite",
+      "vc_mm": 25.0,
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 48.99,
+          "url": "https://www.daytonaudio.com/product/1222/rs100p-4-4-reference-paper-woofer-4-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-nd105-8",
+      "brand": "Dayton Audio",
+      "model": "ND105-8",
+      "role": "mid",
+      "status": "rejected",
+      "rejection_reason": "Power check fail: 8ohm variant sens 82.7 dB needs 33.9W RMS (rated 30W) and 67.7W burst (max 60W) to match sub at 98/101 dB. ND105-4 (square, 4ohm) is the preferred square variant — it passes.",
+      "nominal_size_inch": 4.0,
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 82.7,
+      "power_rms_w": 30.0,
+      "power_max_w": 60.0,
+      "fs_hz": 78.7,
+      "sd_cm2": 51.5,
+      "frame_od_mm": 105.0,
+      "cutout_mm": 93.0,
+      "depth_mm": 67.0,
+      "frame_shape": "square",
+      "cone_material": "anodised aluminium",
+      "notes": "Same square frame family as ND105-4. Fails power at 8ohm due to lower sensitivity. Use ND105-4 instead.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 42.99,
+          "url": "https://www.daytonaudio.com/product/56/nd105-8-4-aluminum-cone-midbass-driver-8-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-nd91-8",
+      "brand": "Dayton Audio",
+      "model": "ND91-8",
+      "role": "mid",
+      "status": "rejected",
+      "rejection_reason": "Power check fail: 8ohm variant sens 82.1 dB needs 38.9W RMS (rated 30W) and 77.6W burst (max 60W). Use ND105-4 (square, 4ohm) instead for square-frame mid requirement.",
+      "nominal_size_inch": 3.5,
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 82.1,
+      "power_rms_w": 30.0,
+      "power_max_w": 60.0,
+      "fs_hz": 70.7,
+      "sd_cm2": 30.4,
+      "xmax_mm": 4.6,
+      "frame_od_mm": 103.5,
+      "cutout_mm": 85.0,
+      "frame_shape": "square",
+      "cone_material": "anodised aluminium",
+      "notes": "Same square frame family as ND91-4. 8ohm version has lower sensitivity, fails power check more severely than -4 version.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 37.99,
+          "url": "https://www.daytonaudio.com/product/52/nd91-8-3-1-2-aluminum-cone-full-range-driver-8-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-nd140-4",
+      "brand": "Dayton Audio",
+      "model": "ND140-4",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 5.25,
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 88.4,
+      "power_rms_w": 40.0,
+      "power_max_w": 80.0,
+      "fs_hz": 60.7,
+      "sd_cm2": 86.6,
+      "xmax_mm": 4.0,
+      "frame_od_mm": 138.0,
+      "cutout_mm": 120.0,
+      "frame_shape": "square",
+      "cone_material": "anodised aluminium",
+      "notes": "Square frame, 138mm OD. Beam ceiling 1669 Hz. Pairs well with low-Fs tweeters: R2604/833000 (Fs=440, 3xFs=1320, window=0.34 oct tight, xover=1485 Hz) or D2604/833000 (Fs=475, 3xFs=1425, window=0.23 oct tight, xover=1542 Hz). MDT22T INCOMPATIBLE (3xFs=1950 > beam 1669). For both-square: ND91-4 or ND105-4 have higher beam ceilings that work with MDT22T.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 45.99,
+          "url": "https://www.daytonaudio.com/product/57/nd140-4-5-1-4-aluminum-cone-midbass-driver-4-ohm"
+        }
+      ]
+    },
+    {
+      "id": "dayton-audio-nd140-8",
+      "brand": "Dayton Audio",
+      "model": "ND140-8",
+      "role": "mid",
+      "status": "candidate",
+      "nominal_size_inch": 5.25,
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 84.5,
+      "power_rms_w": 40.0,
+      "power_max_w": 80.0,
+      "fs_hz": 56.5,
+      "qts": 0.68,
+      "sd_cm2": 86.6,
+      "xmax_mm": 4.0,
+      "frame_od_mm": 138.0,
+      "cutout_mm": 120.0,
+      "frame_shape": "square",
+      "cone_material": "anodised aluminium",
+      "notes": "Square frame, 138mm OD. Same beam ceiling as ND140-4 (1669 Hz). Same tweeter compatibility as ND140-4: works with R2604 / D2604, not with MDT22T or XT25-family. 8ohm sensitivity lower but still passes power check.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "daytonaudio",
+          "currency": "USD",
+          "price": 45.99,
+          "url": "https://www.daytonaudio.com/product/58/nd140-8-5-1-4-aluminum-cone-midbass-driver-8-ohm"
+        }
+      ]
     }
   ]
 }
