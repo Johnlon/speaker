@@ -127,7 +127,7 @@
 <div id="tab-summary" class="tab-panel active">
 
   <div class="note-box" style="margin-top:24px">
-    <strong>How these are derived:</strong> drivers.json (155 entries) × REQUIREMENTS.md only.
+    <strong>How these are derived:</strong> drivers.json (160 entries) × REQUIREMENTS.md only.
     Crossover window = log₂(beam-80% / 3×Fs). Ideal xover = √(3×Fs × beam-80%).
     Power check: P = 10<sup>(SPL − sens<sub>1W</sub>)/10</sup> where sens<sub>1W</sub> = sens<sub>2.83V</sub> − 10·log₁₀(2.83²/R).
     PSU floor set by sub burst: 80W/4Ω → 28V minimum → <strong>29V recommended</strong> (LRS-150-29 or LRS-200-29).
@@ -434,9 +434,9 @@
 <div id="tab-visual" class="tab-panel">
   <div class="section-title">Visual interest — by shape class</div>
   <div class="section-sub">
-    Five shape-class rows. Shape class is the differentiator — engineering ranks are within each class only.
-    SQUARE ACCENT = round mid + square tweeter. BOTH SQUARE = square-frame mid + square tweeter.
-    <br><em style="font-size:12px">Note: ND140-4 (square, 138mm) is the highest-SPL square mid (+3.4 dB over target) but its low beam ceiling (1,668 Hz) makes it incompatible with both square tweeters in catalogue (MDT22T Fs=650 Hz and MDT12 Fs=1,000 Hz — both 3×Fs exceed ceiling). ND140-4 is excellent with round tweeters (R2604/833000: 0.34 oct tight at 1,484 Hz).</em>
+    "Square/non-round" means any non-circular face: square, rectangular, or squarish — the terms are interchangeable here.
+    SQUARE ACCENT = round mid + non-round tweeter. BOTH SQUARE = non-round mid + non-round tweeter.
+    <br><em style="font-size:12px">Non-round tweeters surveyed: MDT22T (Fs=650), MDT12 (Fs=1,000), DT-28N (Fs=1,200, 55×55mm), BC25SC55-04 (Fs=1,400), D26NC56-06 (Fs=1,625), SC 5 (Fs=2,000). Of these, <strong>MDT22T is the only one that achieves a viable crossover window with any square-frame mid</strong> — every other non-round tweeter has Fs too high. DT-28N (same 55mm format as MDT22T) is the closest alternative but fails at 3×Fs=3,600 Hz even against ND91-4's 2,816 Hz beam ceiling. ND140-4 (square, 138mm, +3.4 dB SPL headroom) pairs well with round tweeters (R2604: 0.34 oct tight at 1,484 Hz) but has no compatible non-round tweeter in catalogue.</em>
   </div>
 
   <table>
@@ -555,7 +555,7 @@
         </td>
         <td><span class="ok" style="font-size:11px">Tweet max SPL well above target — comfortable</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
-        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Only both-square option with a comfortable crossover.</strong> Smaller cone (Sd=30.4cm²) → high beam ceiling (2,820 Hz) → 0.53 oct moderate window with MDT22T. SPL ceiling is 0.6 dB under target — inaudible in practice, but needs DSP limiter. Best choice if crossover alignment matters most.</td>
+        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Best both-non-round crossover in catalogue.</strong> MDT22T is the only non-round tweeter with Fs low enough to pair with any square mid — 6 other non-round tweeters surveyed all have Fs too high. Small cone (Sd=30.4cm²) → high beam ceiling (2,820 Hz) → 0.53 oct moderate window. SPL ceiling 0.6 dB under target — DSP limiter keeps it safe.</td>
         <td>
           <div class="badges">
             <a class="badge badge-pdf" href="research/morel_mdt22t.pdf">MDT22T datasheet</a>
