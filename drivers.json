@@ -3048,17 +3048,25 @@
     {
       "id": "dayton-audio-rs28a-4",
       "brand": "Dayton Audio",
-      "model": "RS28A-4",
+      "model": "RST28A-4",
       "role": "high",
       "status": "candidate",
       "driver_type": "Soft dome (fabric)",
-      "frame_od_mm": 103.0,
       "impedance_ohm": 4.0,
-      "sensitivity_db": 91.0,
-      "fs_hz": 600.0,
-      "sd_cm2": 51.5,
-      "qts": 0.79,
-      "xmax_mm": 2.8
+      "sensitivity_db": 92.5,
+      "fs_hz": 775.0,
+      "sd_cm2": 6.6,
+      "qts": 0.93,
+      "qes": 1.65,
+      "qms": 2.15,
+      "re_ohm": 3.0,
+      "le_mh": 0.03,
+      "power_rms_w": 80.0,
+      "freq_low_hz": 1500,
+      "freq_high_hz": 20000,
+      "sources": [
+        "https://www.daytonaudio.com/product/1565/rst28a-4-1-1-8-reference-series-aluminum-dome-tweeter-4-ohm"
+      ]
     },
     {
       "id": "dayton-audio-rst28f-4",
@@ -3094,10 +3102,10 @@
       "freq_low_hz": 1400,
       "freq_high_hz": 20000,
       "nominal_size_inch": 1.0,
-      "frame_od_mm": 4.125,
-      "cutout_mm": 2.875,
-      "depth_mm": 1.75,
-      "sd_cm2": 51.5,
+      "frame_od_mm": 104.8,
+      "cutout_mm": 73.0,
+      "depth_mm": 44.4,
+      "sd_cm2": 6.6,
       "xmax_mm": 2.8
     },
     {
