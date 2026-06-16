@@ -4571,9 +4571,15 @@
       "vc_mm": 25.0,
       "prices": [
         {
-          "source": "cheaper",
+          "source": "soundimports",
           "currency": "EUR",
           "price": 52.95
+        },
+        {
+          "source": "willys",
+          "currency": "GBP",
+          "price": 42.0,
+          "url": "https://willys-hifi.com/products/scanspeak-r2604-832000-tweeter"
         }
       ],
       "datasheets": []
@@ -4612,8 +4618,8 @@
         },
         {
           "source": "soundimports",
-          "currency": "GBP",
-          "price": 62.0,
+          "currency": "EUR",
+          "price": 62.45,
           "url": "https://www.soundimports.eu/en/scan-speak-r2604-833000.html"
         }
       ]
