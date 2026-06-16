@@ -2634,8 +2634,19 @@
       "magnet": "neodymium",
       "xmax_mm": 4.0,
       "power_max_w": 100.0,
-      "sd_cm2": 52.8,
-      "qts": 0.37
+      "sd_cm2": 54.0,
+      "qts": 0.36,
+      "power_rms_w": 80.0,
+      "re_ohm": 3.2,
+      "le_mh": 0.22,
+      "vc_mm": 26.0,
+      "qms": 7.8,
+      "qes": 0.38,
+      "mms_g": 6.9,
+      "cms_mm_n": 1.18,
+      "vas_l": 4.9,
+      "bl_tm": 4.5,
+      "vc_height_mm": 12.0
     },
     {
       "id": "wavecor-wf120bd05",
