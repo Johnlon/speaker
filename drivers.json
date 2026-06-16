@@ -1191,7 +1191,9 @@
         "https://doc.soundimports.nl/pdf/brands/HiVi/M4N-B/M4N-B-manual.pdf"
       ],
       "vc_wire": "Kapton former",
-      "mounting_holes": 4
+      "mounting_holes": 4,
+      "sensitivity_db": 82.0,
+      "power_max_w": 30.0
     },
     {
       "id": "hivi-swan-m5n",
