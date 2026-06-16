@@ -5265,7 +5265,7 @@
       "depth_mm": 71.3,
       "vc_mm": 25.4,
       "impedance_ohm": 4.0,
-      "sensitivity_db": 87.0,
+      "sensitivity_db": 87.5,
       "power_rms_w": 30.0,
       "fs_hz": 58.0,
       "qts": 0.43,
@@ -5282,10 +5282,10 @@
         4000
       ],
       "status": "candidate",
-      "notes": "Round frame 122mm OD. Fs=58 Hz (2xFs=116 Hz, well below 150 Hz crossover). Beam ceiling 2196 Hz. SPL ceiling @30W RMS: 98.8 dB (target 98 dB — passes; peak power unconfirmed, assume 60W → ~101.8 dB burst). SI £25 / €25.95. Scenarios.md OA-3: pairs with XT25BG60-04 at 1938 Hz tight.",
+      "notes": "Round frame 122mm OD, cutout 111.5mm. Fs=58Hz (2xFs=116Hz, well below 150Hz xover). Beam ceiling 2196Hz. Sensitivity 87.5dB (datasheet; SI shows 87.0). SPL ceiling @30W RMS: 99.3dB — passes 98dB target. Rated 30W IEC 268-5 (no separate peak). Burst ceiling 99.25dB — 1.75dB under 101dB burst target; DSP limiter needed at burst. Xmax=5mm (10mm p-p). £25/€25.95 SI. Pairs with XT25BG60-04 (OA-3), DX25TG59-04, XT25TG30-04 — all give moderate-tight windows.",
       "datasheets": [
         {
-          "local": null,
+          "local": "research/sb_acoustics_sb12pfcr25-4.pdf",
           "url": "https://doc.soundimports.nl/pdf/brands/SB%20Acoustics/SB12PFCR25-4/SB12PFCR25-4-data-sheet.pdf"
         }
       ],
@@ -5303,7 +5303,13 @@
           "price": 25.0,
           "note": "owner quote Jun 2026"
         }
-      ]
+      ],
+      "xmax_mm": 5.0,
+      "cutout_mm": 111.5,
+      "vc_height_mm": 15.0,
+      "air_gap_mm": 5.0,
+      "b_flux_t": 0.84,
+      "magnet_kg": 0.32
     }
   ]
 }
