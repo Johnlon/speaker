@@ -265,6 +265,7 @@ The only question that matters: can the driver handle the power the amp actually
 Recommendations must cover best pairings for the scenarios defined in this file, including (at minimum):
 - Best for visual interest
   - by shape class — round, square/non-round, mixed
+  - "Square/non-round" means any non-circular face: square, rectangular, or squarish — the terms are interchangeable in this context
   - The square/non-round class **must** include an option where **both** the mid and tweeter have square or non-round frames — not just one driver with a square face
 - Best overall for kitchen 60° off-axis listening
 - Best for on-axis listening (direct, centred)

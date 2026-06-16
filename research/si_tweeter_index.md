@@ -16,7 +16,8 @@ Specs for all candidates are in `drivers.md`.
 | DC25T-8 | 8Ω | €18.97 | £15.10 Willys | 10+ | ≡ | see drivers.md |
 | SB19ST-C000-4 | 4Ω | €21.45 | £20.14 Willys / £14.30 Falcon | 10+ | ≡ | see drivers.md; Falcon cheapest |
 | BC25SC06-04 | 4Ω | €24.95 | £16.78 Willys | 10+ | ≡ | see drivers.md |
-| BC25SC55-04 | 4Ω | — | £16.65 Willys | UK stock | ~ | truncated FP; see drivers.md |
+| BC25SC55-04 | 4Ω | — | £16.65 Willys | UK stock | ✗ | **square face 70×55mm**; Fs=1400 Hz INCOMPATIBLE; 7W power fatal; see drivers.md |
+| D26NC56-06 | 8Ω | €? | — | check SI | ✗ | **square face 70×54mm**; Fs=1625 Hz INCOMPATIBLE (3×Fs=4875 Hz); see drivers.md |
 | HiVi TN25 | 5Ω | €25.45 | — | 5 | ≡ | see drivers.md |
 | XT25SC90-04 | 4Ω | — | £19.52 Willys / £18.20 Falcon | 10+ | ≡ | Falcon cheapest; see drivers.md |
 | OC25SC65-04 | 4Ω | €26.95 | — | 10+ | ✗ | no faceplate |
@@ -45,7 +46,8 @@ Specs for all candidates are in `drivers.md`.
 | SB21SDC-C000-4 | 4Ω | €39.95 | £28.51 Willys | 1 + restock 7-Jul | ★ | ring dome; see drivers.md |
 | NE19VTS-04 | 4Ω | OOS at SI | £25.20 Willys | Willys UK stock | ★ | 2nd smallest FP; Willys only; see drivers.md |
 | XT25TG30-04 | 4Ω | €49.95 | £31.95 Willys / £29.90 Falcon | 10+ | ≡ | Falcon cheapest; see drivers.md |
-| DT-28N | 8Ω | €40.95 | — | 5 | ≡ | see drivers.md |
+| DT-28N | 8Ω | €40.95 | — | 5 | ✗ | **square face 55×55mm**; Fs=1200 Hz MARGINAL (2×Fs ok, 3×Fs exceeds ND91-4 beam); 94 dB 50W; see drivers.md |
+| Visaton SC 5 | 8Ω | see SI | — | check SI | ✗ | **square face** (owner confirmed); Fs=2000 Hz INCOMPATIBLE; 90 dB 60W/100W; see drivers.md |
 | SB29SDAC-C000-4 | 4Ω | €44.95 | £34.30 Willys | 10 | ≡ | see drivers.md |
 | Discovery D2604/830000 | 4Ω | €44.95 | £35.65 Willys | 10+ | ≡ | see drivers.md |
 | Discovery R2604/832000 | 4Ω | €52.95 | — | 10+ | ★ | see drivers.md |

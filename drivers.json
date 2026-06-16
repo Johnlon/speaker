@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-16",
-  "driver_count": 155,
+  "driver_count": 160,
   "drivers": [
     {
       "id": "tang-band-w5-1138smf",
@@ -3353,7 +3353,9 @@
       "freq_high_hz": 18.0,
       "frame_od_mm": 80.0,
       "depth_mm": 27.0,
-      "datasheets": []
+      "datasheets": [],
+      "frame_shape": "rectangular_116x80mm",
+      "notes": "116x80mm rectangular face (\"classic rectangular size\" per Monacor). Fs=1500 Hz — INCOMPATIBLE with all mid candidates in catalogue at 3xFs floor."
     },
     {
       "id": "monacor-dt-25n",
@@ -3395,7 +3397,9 @@
       "nominal_size_inch": 1.0,
       "frame_od_mm": 55.0,
       "cone_material": "Silk",
-      "datasheets": []
+      "datasheets": [],
+      "frame_shape": "square_55x55mm",
+      "notes": "55x55mm square face — same format as MDT22T (54x54mm). Fs=1200 Hz; MARGINAL with ND91-4 (2xFs=2400 Hz fits inside 2816 Hz beam ceiling but preferred 3xFs=3600 Hz exceeds it). MDT22T is strictly better for any square pairing due to lower Fs."
     },
     {
       "id": "morel-mdt12",
@@ -3501,7 +3505,7 @@
       "brand": "Peerless by Tymphany",
       "model": "D26NC56-06",
       "role": "high",
-      "status": "catalogue",
+      "status": "rejected",
       "driver_type": "Dome",
       "nominal_size_inch": 1.0,
       "impedance_ohm": 6.0,
@@ -3519,7 +3523,10 @@
       "cutout_mm": 46.0,
       "depth_mm": 28.0,
       "cone_material": "Silk",
-      "datasheets": []
+      "datasheets": [],
+      "frame_shape": "square_70x54mm",
+      "notes": "70x54mm OD square face (confirmed by owner). Fs=1625 Hz — INCOMPATIBLE with all mid candidates (3xFs=4875 Hz exceeds every mid beam ceiling in catalogue).",
+      "rejection_reason": "Fs=1625 Hz — INCOMPATIBLE at 3xFs (4875 Hz) with all mids."
     },
     {
       "id": "peerless-by-tymphany-d27tg35-06",
@@ -5093,6 +5100,143 @@
           "currency": "USD",
           "price": 45.99,
           "url": "https://www.daytonaudio.com/product/58/nd140-8-5-1-4-aluminum-cone-midbass-driver-8-ohm"
+        }
+      ]
+    },
+    {
+      "id": "visaton-sc-5",
+      "brand": "Visaton",
+      "model": "SC 5",
+      "role": "high",
+      "status": "rejected",
+      "rejection_reason": "Fs=2000 Hz — INCOMPATIBLE with all mid candidates (3xFs=6000 Hz). Recommended xover >4000 Hz.",
+      "impedance_ohm": 8.0,
+      "sensitivity_db": 90.0,
+      "power_rms_w": 60.0,
+      "power_max_w": 100.0,
+      "fs_hz": 2000.0,
+      "cutout_mm": 48.0,
+      "depth_mm": 25.2,
+      "vc_mm": 13.0,
+      "frame_shape": "square",
+      "cone_material": "polycarbonate",
+      "notes": "Square face confirmed by owner. Cutout is circular 48mm. Outer plate dims not published — visually square.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "soundimports",
+          "currency": "EUR",
+          "price": null,
+          "url": "https://www.soundimports.eu/en/visaton-sc-5.html"
+        }
+      ]
+    },
+    {
+      "id": "peerless-bc25sc55-04",
+      "brand": "Peerless by Tymphany",
+      "model": "BC25SC55-04",
+      "role": "high",
+      "status": "rejected",
+      "rejection_reason": "Fs=1400 Hz — INCOMPATIBLE at 3xFs (4200 Hz) with all mids. Power rating only 7W — far below burst demand.",
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 93.2,
+      "power_rms_w": 7.0,
+      "power_max_w": 7.0,
+      "fs_hz": 1400.0,
+      "re_ohm": 3.0,
+      "le_mh": 0.026,
+      "qms": 3.6,
+      "qes": 2.07,
+      "qts": 1.3,
+      "cutout_mm": 47.0,
+      "depth_mm": 29.55,
+      "vc_mm": 25.0,
+      "frame_shape": "square_70x55mm",
+      "cone_material": "silk",
+      "notes": "Square face confirmed by owner. OD 70x55mm — marginally non-square but visually presented as square face.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "soundimports",
+          "currency": "EUR",
+          "price": null,
+          "url": "https://www.soundimports.eu/en/peerless-by-tymphany-bc25sc55-04.html"
+        }
+      ]
+    },
+    {
+      "id": "qtx-25sq",
+      "brand": "QTX",
+      "model": "2.25\" Square Dome Tweeter",
+      "role": "high",
+      "status": "rejected",
+      "rejection_reason": "PA/budget grade at £2.99 — no Fs specified, not suitable for hi-fi reproduction. Flag: PA-grade.",
+      "impedance_ohm": 8.0,
+      "sensitivity_db": null,
+      "power_rms_w": 20.0,
+      "power_max_w": null,
+      "fs_hz": null,
+      "frame_shape": "square",
+      "notes": "2.25 inch square dome. PA/event speaker tweeter. No Fs or T/S parameters published. £2.99 retail — confirms PA-grade positioning.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "djkit",
+          "currency": "GBP",
+          "price": 2.99,
+          "url": "https://www.djkit.com/products/qtx-square-dome-tweeter-225-20w-rms-8-ohm"
+        }
+      ]
+    },
+    {
+      "id": "monacor-airmt-130",
+      "brand": "Monacor",
+      "model": "AIRMT-130",
+      "role": "high",
+      "status": "rejected",
+      "rejection_reason": "AMT driver, recommended xover >3000 Hz — INCOMPATIBLE with all mids (ND91-4 beam ceiling 2816 Hz is the highest in catalogue). Fs not published.",
+      "impedance_ohm": 8.0,
+      "re_ohm": 5.2,
+      "sensitivity_db": 98.0,
+      "power_rms_w": 60.0,
+      "power_max_w": 120.0,
+      "fs_hz": null,
+      "frame_shape": "rectangular_90x130mm",
+      "cone_material": "Kapton/aluminium folded (AMT)",
+      "notes": "90x130mm rectangular face. AMT design. No Fs published — typical for AMT. Recommended xover >3000 Hz (12 dB/oct). Mounting cutout 71x111mm.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "monacor",
+          "currency": "EUR",
+          "price": null,
+          "url": "https://www.monacor.com/products/components/speaker-components/tweeters/airmt-130/"
+        }
+      ]
+    },
+    {
+      "id": "monacor-airmt-85",
+      "brand": "Monacor",
+      "model": "AIRMT-85",
+      "role": "high",
+      "status": "rejected",
+      "rejection_reason": "Round frame. Recommended xover >2500 Hz — INCOMPATIBLE with all mids. Fs not published.",
+      "impedance_ohm": 4.0,
+      "sensitivity_db": 92.0,
+      "power_rms_w": 20.0,
+      "power_max_w": 40.0,
+      "fs_hz": null,
+      "frame_od_mm": 85.0,
+      "frame_shape": "round",
+      "cone_material": "Kapton/aluminium folded (AMT)",
+      "notes": "Round 85mm AMT. No Fs published. Recommended xover >2500 Hz.",
+      "datasheets": [],
+      "prices": [
+        {
+          "source": "monacor",
+          "currency": "EUR",
+          "price": null,
+          "url": "https://www.monacor.com/products/components/speaker-components/tweeters/airmt-85/"
         }
       ]
     }
