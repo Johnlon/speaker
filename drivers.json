@@ -1014,7 +1014,27 @@
       "power_rms_w": 15.0,
       "power_max_w": 30.0,
       "fs_hz": 100.0,
-      "xmax_mm": 3.0
+      "xmax_mm": 3.0,
+      "qts": 0.88,
+      "qes": 1.15,
+      "qms": 3.75,
+      "re_ohm": 6.5,
+      "mms_g": 2.6,
+      "cms_mm_n": 0.99,
+      "sd_cm2": 30.0,
+      "vas_l": 1.13,
+      "bl_tm": 3.06,
+      "freq_low_hz": 100,
+      "freq_high_hz": 10000,
+      "frame_od_mm": 76.2,
+      "cutout_mm": 69.85,
+      "depth_mm": 54.1,
+      "sources": [
+        "https://www.soundimports.eu/en/hivi-b3s.html"
+      ],
+      "datasheets": [
+        "https://doc.soundimports.nl/pdf/brands/HiVi/B3S/pdf_HiVi_B3S_1.pdf"
+      ]
     },
     {
       "id": "hivi-swan-b4n",
@@ -1079,7 +1099,10 @@
       "fs_hz": 300.0,
       "re_ohm": 4.1,
       "vc_wire": "High temperature copper clad aluminum wire",
-      "magnet": "High performance NdFeB"
+      "magnet": "High performance NdFeB",
+      "sources": [
+        "https://www.soundimports.eu/en/hivi-dm-7500.html"
+      ]
     },
     {
       "id": "hivi-swan-m3n-b",
@@ -1118,7 +1141,24 @@
       "power_rms_w": 15.0,
       "power_max_w": 30.0,
       "fs_hz": 69.0,
-      "vc_mm": 22.0
+      "vc_mm": 22.0,
+      "re_ohm": 6.5,
+      "qms": 5.9,
+      "qes": 1.35,
+      "qts": 1.08,
+      "mms_g": 4.8,
+      "cms_mm_n": 1.28,
+      "xmax_mm": 3.0,
+      "sd_cm2": 53.0,
+      "vas_l": 4.53,
+      "freq_low_hz": 69,
+      "freq_high_hz": 8000,
+      "frame_od_mm": 115.6,
+      "cutout_mm": 100.0,
+      "depth_mm": 64.8,
+      "sources": [
+        "https://www.soundimports.eu/en/hivi-m4n.html"
+      ]
     },
     {
       "id": "hivi-swan-m4n-b",
@@ -1142,7 +1182,14 @@
       "bl_tm": 3.1,
       "magnet": "ferrite",
       "frame_od_mm": 108.0,
-      "depth_mm": 67.0
+      "depth_mm": 67.0,
+      "cutout_mm": 93.0,
+      "sources": [
+        "https://www.soundimports.eu/en/hivi-m4n-b.html"
+      ],
+      "datasheets": [
+        "https://doc.soundimports.nl/pdf/brands/HiVi/M4N-B/M4N-B-manual.pdf"
+      ]
     },
     {
       "id": "hivi-swan-m5n",
