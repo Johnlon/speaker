@@ -2697,7 +2697,8 @@
       "cutout_mm": 100.0,
       "depth_mm": 67.0,
       "frame_material": "Die cast aluminium",
-      "cone_material": "Paper/glass fiber"
+      "cone_material": "Paper/glass fiber",
+      "power_rms_w": 60.0
     },
     {
       "id": "audaphon-tws-30-4",
