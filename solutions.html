@@ -104,7 +104,7 @@
     <div class="header-content">
       <div class="logo">
         <h1>Kitchen Counter Monitor — Pairings</h1>
-        <p>3-way active · JAB5 + ADAU1701 DSP · Tang Band W5-1138SMF sub (4Ω 85 dB) · Targets: 98 dB RMS / 101 dB burst · PSU: 29V</p>
+        <p>3-way active · JAB5 + ADAU1701 DSP · Tang Band W5-1138SMF sub (4&#937; 85 dB) · Targets: 98 dB RMS / 101 dB burst · PSU: 29V</p>
       </div>
       <div class="updated">June 2026</div>
     </div>
@@ -127,74 +127,75 @@
 <div id="tab-summary" class="tab-panel active">
 
   <div class="note-box" style="margin-top:24px">
-    <strong>How these are derived:</strong> drivers.json (160 entries) × REQUIREMENTS.md only.
-    Crossover window = log₂(beam-80% / 3×Fs). Ideal xover = √(3×Fs × beam-80%).
-    Power check: P = 10<sup>(SPL − sens<sub>1W</sub>)/10</sup> where sens<sub>1W</sub> = sens<sub>2.83V</sub> − 10·log₁₀(2.83²/R).
-    PSU floor set by sub burst: 80W/4Ω → 28V minimum → <strong>29V recommended</strong> (LRS-150-29 or LRS-200-29).
+    <strong>How these are derived:</strong> drivers.json (161 entries) &times; REQUIREMENTS.md only.
+    Crossover window = log&#8322;(beam-80% / tweeter floor). Beam-80% = 0.8 &times; 34400 / (&#960; &times; &#8730;(Sd/&#960;)).
+    Tweeter floor = 3&times;Fs for catalogue drivers; manufacturer FR lower limit where datasheet confirms lower (MDT22T: 1,800 Hz = 2.77&times;Fs).
+    Ideal xover = &#8730;(floor &times; beam). Power check: P = 10<sup>(SPL &minus; sens<sub>1W</sub>)/10</sup>.
+    PSU floor set by sub burst: 80W/4&#937; &rarr; 28V minimum &rarr; <strong>29V recommended</strong> (Mean Well LRS-150-29 or LRS-200-29).
   </div>
 
   <div class="summary-grid">
 
     <div class="summary-card">
-      <h3>60° Off-axis — Top Pick</h3>
+      <h3>60&#176; Off-axis — Top Pick</h3>
       <div class="pick">DS115-8 + R2604/833000</div>
-      <div class="detail">Ring rad · 100W · no limiter ever · moderate window 0.68 oct · 1,670 Hz xover</div>
+      <div class="detail">Ring rad &middot; 100W &middot; no limiter ever &middot; moderate 0.68 oct window &middot; 1,670 Hz xover</div>
       <div class="total">£80 <span style="font-size:13px;color:var(--muted)">(Willys)</span></div>
     </div>
 
     <div class="summary-card">
       <h3>On-axis Quality — Top Pick</h3>
       <div class="pick">DS115-8 + D2604/833000</div>
-      <div class="detail">100W dome · moderate window 0.57 oct · 1,735 Hz xover · paper warmth + Scan-Speak detail</div>
+      <div class="detail">100W dome &middot; moderate 0.57 oct window &middot; 1,735 Hz xover &middot; paper warmth + Scan-Speak detail</div>
       <div class="total" style="color:var(--muted);font-size:14px">£32 + TBD</div>
     </div>
 
     <div class="summary-card">
       <h3>Visual — Round</h3>
       <div class="pick">DS115-8 + XT25TG30-04</div>
-      <div class="detail">Both round · ring rad · moderate window · DSP limiter at burst (0.4 dB margin)</div>
+      <div class="detail">Both round &middot; ring rad &middot; moderate 0.68 oct window &middot; DSP limiter at burst (0.4 dB margin)</div>
       <div class="total">£75</div>
     </div>
 
     <div class="summary-card">
       <h3>Visual — Square Accent</h3>
       <div class="pick">DS115-8 + MDT22T</div>
-      <div class="detail">Round mid + square 54×54mm tweeter · 85mm spacing · tight 0.23 oct window — measure and iterate</div>
+      <div class="detail">Round mid + square 54&times;54mm tweeter &middot; 85mm spacing &middot; tight 0.23 oct window</div>
       <div class="total" style="color:var(--muted);font-size:14px">£32 + TBD</div>
     </div>
 
     <div class="summary-card">
       <h3>Visual — Both Square (A)</h3>
       <div class="pick">ND91-4 + MDT22T</div>
-      <div class="detail">Both square frames · 0.65 oct moderate window · mid reaches 97.4/100.4 dB (0.6 dB under, DSP limiter)</div>
+      <div class="detail">Both square frames &middot; 0.65 oct moderate window &middot; 97.4/100.4 dB ceiling (DSP limiter)</div>
       <div class="total" style="color:var(--muted);font-size:14px">TBD + TBD</div>
     </div>
 
     <div class="summary-card">
       <h3>Visual — Both Square (B)</h3>
       <div class="pick">ND105-4 + MDT22T</div>
-      <div class="detail">Both square · full 101.6 dB burst · tight 0.27 oct window — crossover placement critical</div>
+      <div class="detail">Both square &middot; full 98.6/101.6 dB &middot; tight 0.27 oct window — measure and iterate</div>
       <div class="total" style="color:var(--muted);font-size:14px">TBD + TBD</div>
     </div>
 
     <div class="summary-card">
       <h3>Compact Baffle</h3>
       <div class="pick">DS115-8 + MDT22T</div>
-      <div class="detail">85mm centre spacing (tightest viable pair) · tight 0.23 oct window · 80W tweeter rating</div>
+      <div class="detail">85mm centre spacing (tightest viable pair) &middot; tight 0.23 oct window &middot; 80W tweeter</div>
       <div class="total" style="color:var(--muted);font-size:14px">£32 + TBD</div>
     </div>
 
     <div class="summary-card">
       <h3>Best Value</h3>
-      <div class="pick">DS115-8 + DX25TG59-04</div>
-      <div class="detail">Cheapest confirmed pair · dome · safe at burst (no limiter) · tight window</div>
-      <div class="total">£60</div>
+      <div class="pick">SB12PFCR25-4 + DX25TG59-04</div>
+      <div class="detail">Cheapest confirmed pair &middot; dome safe at burst &middot; tight 0.31 oct window &middot; natural fibre cone</div>
+      <div class="total">£53</div>
     </div>
 
     <div class="summary-card">
       <h3>Best Value — Ring Rad</h3>
       <div class="pick">DS115-8 + R2604/833000</div>
-      <div class="detail">Ring rad · 100W · no limiter · moderate window · only £5 over XT25TG30-04</div>
+      <div class="detail">Ring rad &middot; 100W &middot; no limiter &middot; moderate 0.68 oct window</div>
       <div class="total">£80 <span style="font-size:13px;color:var(--muted)">(Willys)</span></div>
     </div>
 
@@ -205,10 +206,10 @@
      OFF-AXIS
      ══════════════════════════════════════════════════ -->
 <div id="tab-offaxis" class="tab-panel">
-  <div class="section-title">Best for 60° off-axis — kitchen / cooker</div>
+  <div class="section-title">Best for 60&#176; off-axis — kitchen / cooker</div>
   <div class="section-sub">
     Ring radiator tweeter is mandatory here — maintains HF dispersion at wide angles where a dome rolls off sharply.
-    Ranked: off-axis coverage → crossover window width → power headroom.
+    Ranked: off-axis coverage &rarr; crossover window width &rarr; power headroom.
   </div>
 
   <table>
@@ -232,18 +233,18 @@
         <td><span class="ok">1</span></td>
         <td>
           <div class="driver">DS115-8 <span class="best">TOP PICK</span></div>
-          <div class="driver-sub">4" paper cone · 8Ω · 85.3 dB · 116mm OD · 35W/70W rated</div>
+          <div class="driver-sub">4" paper cone &middot; 8&#937; &middot; 85.3 dB &middot; 116mm OD &middot; 35W/70W rated</div>
         </td>
         <td>
           <div class="driver">R2604/833000</div>
-          <div class="driver-sub">Scan-Speak ring rad · 4Ω · 92 dB · 100W rated · Fs=440 Hz</div>
+          <div class="driver-sub">Scan-Speak ring rad &middot; 4&#937; &middot; 92 dB &middot; 100W rated &middot; Fs=440 Hz</div>
         </td>
         <td>
           <div class="mono">1,670 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
         </td>
-        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">8.0W RMS / 15.9W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (100W rated)</span></td>
+        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
+        <td><span class="mono">8.0W RMS / 15.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (100W rated)</span></td>
         <td><span class="price">£80</span><br><span class="driver-sub">£32 + £48</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm + airy</td>
@@ -261,18 +262,18 @@
         <td><span class="warn">2</span></td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper cone · 8Ω · 85.3 dB · 116mm OD · 35W/70W rated</div>
+          <div class="driver-sub">4" paper cone &middot; 8&#937; &middot; 85.3 dB &middot; 116mm OD &middot; 35W/70W rated</div>
         </td>
         <td>
           <div class="driver">XT25TG30-04</div>
-          <div class="driver-sub">Peerless ring rad · 4Ω · 91.9 dB · 15W rated · Fs=440 Hz</div>
+          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 91.9 dB &middot; 15W rated &middot; Fs=440 Hz</div>
         </td>
         <td>
           <div class="mono">1,670 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
         </td>
-        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">8.2W RMS / 16.3W burst</span><br><span class="warn" style="font-size:11px">⚠ limiter needed (16.3W vs 15W)</span></td>
+        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
+        <td><span class="mono">8.2W RMS / 16.3W burst</span><br><span class="warn" style="font-size:11px">&#9888; limiter needed (16.3W vs 15W)</span></td>
         <td><span class="price">£75</span><br><span class="driver-sub">£32 + £43</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm + airy</td>
@@ -289,25 +290,26 @@
         <td>3</td>
         <td>
           <div class="driver">SB12PFCR25-4</div>
-          <div class="driver-sub">4" natural fibre cone · 4Ω · 87.5 dB · 122mm OD · 30W/60W rated</div>
+          <div class="driver-sub">4" natural fibre cone &middot; 4&#937; &middot; 87.5 dB &middot; 122mm OD &middot; 30W rated</div>
         </td>
         <td>
           <div class="driver">XT25BG60-04</div>
-          <div class="driver-sub">Peerless ring rad · 4Ω · 92.6 dB · 15W rated · Fs=570 Hz</div>
+          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 92.6 dB &middot; 15W rated &middot; Fs=570 Hz</div>
         </td>
         <td>
           <div class="mono">1,938 Hz</div>
           <div class="driver-sub mono"><span class="warn">0.36 oct — tight</span></div>
         </td>
-        <td><span class="mono">22.5W RMS / 44.8W burst</span><br><span class="warn" style="font-size:11px">⚠ burst &gt; 30W rated — transient only, SPL limiter covers</span></td>
-        <td><span class="mono">6.9W RMS / 13.9W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (13.9W vs 15W rated)</span></td>
-        <td><span class="price-tbd">TBD</span><br><span class="driver-sub">~£21 + ?</span></td>
+        <td><span class="mono">22.5W RMS / 44.8W burst</span><br><span class="warn" style="font-size:11px">&#9888; burst &gt; 30W rated — SPL ceiling 99.3 dB, DSP limiter</span></td>
+        <td><span class="mono">6.9W RMS / 13.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (13.9W vs 15W)</span></td>
+        <td><span class="price">£25</span><br><span class="driver-sub">£25 + TBD</span></td>
         <td class="mono">29V / 4.8A</td>
         <td>Natural + open</td>
-        <td style="font-size:12px;color:var(--muted)"><strong style="color:#34d399">Only ring rad pair fully safe at burst without any limiter.</strong> Natural fibre cone. Tighter window needs precise DSP — ADAU1701 is adequate. Mid burst transient covered by SPL limiter.</td>
+        <td style="font-size:12px;color:var(--muted)"><strong style="color:#34d399">Tweeter fully safe at burst without limiter.</strong> Natural fibre cone, vented motor. Mid burst ceiling 99.3 dB — set DSP limiter 1.7 dB below full burst target. Tighter window than OA-1/2 — measure and iterate in ADAU1701.</td>
         <td>
           <div class="badges">
-            <a class="badge badge-willys" href="https://willys-hifi.com/products/sb-acoustics-sb12pfcr25-4-paper-midwoofer">SB12 Willys ~£21</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html">SB12 SI €25.95</a>
+            <a class="badge badge-pdf" href="research/sb_acoustics_sb12pfcr25-4.pdf">SB12 datasheet</a>
             <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-xt25bg60-04-tweeter">XT25BG60 Willys</a>
           </div>
         </td>
@@ -323,7 +325,7 @@
   <div class="section-title">Best for on-axis listening — direct, centred</div>
   <div class="section-sub">
     Dome tweeter preferred — dispersion less critical, quality and headroom are the focus.
-    Ranked: crossover window width → power headroom → resolution.
+    Ranked: crossover window width &rarr; power headroom &rarr; resolution.
   </div>
 
   <table>
@@ -347,18 +349,18 @@
         <td><span class="ok">1</span></td>
         <td>
           <div class="driver">DS115-8 <span class="best">TOP PICK</span></div>
-          <div class="driver-sub">4" paper cone · 8Ω · 85.3 dB · 116mm OD · 35W/70W rated</div>
+          <div class="driver-sub">4" paper cone &middot; 8&#937; &middot; 85.3 dB &middot; 116mm OD &middot; 35W/70W rated</div>
         </td>
         <td>
           <div class="driver">D2604/833000</div>
-          <div class="driver-sub">Scan-Speak Discovery dome · 4Ω · 93 dB · 100W rated · Fs=475 Hz</div>
+          <div class="driver-sub">Scan-Speak Discovery dome &middot; 4&#937; &middot; 93 dB &middot; 100W rated &middot; Fs=475 Hz</div>
         </td>
         <td>
           <div class="mono">1,735 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.57 oct — moderate</span></div>
         </td>
-        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (100W rated)</span></td>
+        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
+        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (100W rated)</span></td>
         <td><span class="price-tbd">£32 + TBD</span></td>
         <td class="mono">29V / 4.5A</td>
         <td>Warm + detailed</td>
@@ -376,22 +378,22 @@
         <td>2</td>
         <td>
           <div class="driver">SEAS CA12RCY</div>
-          <div class="driver-sub">4" Excel cone · 8Ω · 86 dB · 124mm OD · 60W rated</div>
+          <div class="driver-sub">4" Excel cone &middot; 8&#937; &middot; 86 dB &middot; 124mm OD &middot; 60W rated</div>
         </td>
         <td>
           <div class="driver">D2604/833000</div>
-          <div class="driver-sub">Scan-Speak Discovery dome · 4Ω · 93 dB · 100W rated · Fs=475 Hz</div>
+          <div class="driver-sub">Scan-Speak Discovery dome &middot; 4&#937; &middot; 93 dB &middot; 100W rated &middot; Fs=475 Hz</div>
         </td>
         <td>
           <div class="mono">1,727 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.55 oct — moderate</span></div>
         </td>
-        <td><span class="mono">15.9W RMS / 31.7W burst</span><br><span class="ok" style="font-size:11px">✓ 2× headroom vs 60W rated</span></td>
-        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter</span></td>
+        <td><span class="mono">15.9W RMS / 31.7W burst</span><br><span class="ok" style="font-size:11px">&#10003; 2&times; headroom vs 60W</span></td>
+        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
         <td class="mono">29V / 4.3A</td>
         <td>Natural + refined</td>
-        <td style="font-size:12px;color:var(--muted)">Both drivers in the same premium tier. SEAS mid has 2× headroom at burst — very comfortable margins. Near-identical crossover to #1. Step up in mid quality if budget allows.</td>
+        <td style="font-size:12px;color:var(--muted)">Both drivers in the same premium tier. SEAS mid has 2&times; headroom at burst — very comfortable margins. Near-identical crossover to #1. Step up in mid quality if budget allows.</td>
         <td>
           <div class="badges">
             <a class="badge badge-pdf" href="research/scan_speak_d2604-833000.pdf">D2604 datasheet</a>
@@ -402,22 +404,22 @@
         <td>3</td>
         <td>
           <div class="driver">12MU/4731T00</div>
-          <div class="driver-sub">Scan-Speak Illuminator · 4Ω · 90 dB · 101mm OD · 80W rated</div>
+          <div class="driver-sub">Scan-Speak Illuminator &middot; 4&#937; &middot; 90 dB &middot; 101mm OD &middot; 80W rated</div>
         </td>
         <td>
           <div class="driver">D2604/833000</div>
-          <div class="driver-sub">Scan-Speak Discovery dome · 4Ω · 93 dB · 100W rated · Fs=475 Hz</div>
+          <div class="driver-sub">Scan-Speak Discovery dome &middot; 4&#937; &middot; 93 dB &middot; 100W rated &middot; Fs=475 Hz</div>
         </td>
         <td>
           <div class="mono">1,705 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.52 oct — moderate</span></div>
         </td>
-        <td><span class="mono">12.6W RMS / 25.2W burst</span><br><span class="ok" style="font-size:11px">✓ 3× headroom vs 80W rated</span></td>
-        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter</span></td>
+        <td><span class="mono">12.6W RMS / 25.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; 3&times; headroom vs 80W</span></td>
+        <td><span class="mono">6.3W RMS / 12.6W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
         <td class="mono">29V / 4.0A</td>
         <td>Transparent + detailed</td>
-        <td style="font-size:12px;color:var(--muted)">All Scan-Speak. Illuminator is the lowest-colouration mid in the candidate set. Maximum resolution on-axis. 101mm OD is the smallest eligible mid. 3× power headroom.</td>
+        <td style="font-size:12px;color:var(--muted)">All Scan-Speak. Illuminator is the lowest-colouration mid in the candidate set. Maximum resolution on-axis. 101mm OD is the smallest eligible mid. 3&times; power headroom.</td>
         <td>
           <div class="badges">
             <a class="badge badge-pdf" href="research/scan_speak_d2604-833000.pdf">D2604 datasheet</a>
@@ -436,7 +438,7 @@
   <div class="section-sub">
     "Square/non-round" means any non-circular face: square, rectangular, or squarish — the terms are interchangeable here.
     SQUARE ACCENT = round mid + non-round tweeter. BOTH SQUARE = non-round mid + non-round tweeter.
-    <br><em style="font-size:12px">Non-round tweeters surveyed: MDT22T (Fs=650), MDT12 (Fs=1,000), DT-28N (Fs=1,200, 55×55mm), BC25SC55-04 (Fs=1,400), D26NC56-06 (Fs=1,625), SC 5 (Fs=2,000). Of these, <strong>MDT22T is the only one that achieves a viable crossover window with any square-frame mid</strong> — every other non-round tweeter has Fs too high. DT-28N (same 55mm format as MDT22T) is the closest alternative but fails at 3×Fs=3,600 Hz even against ND91-4's 2,816 Hz beam ceiling. ND140-4 (square, 138mm, +3.4 dB SPL headroom) pairs well with round tweeters (R2604: 0.34 oct tight at 1,484 Hz) but has no compatible non-round tweeter in catalogue.</em>
+    <br><em style="font-size:12px">Non-round tweeters surveyed: MDT22T (Fs=650 Hz), MDT12 (Fs=1,000 Hz), DT-28N (Fs=1,200 Hz, 55&times;55mm), BC25SC55-04 (Fs=1,400 Hz), D26NC56-06 (Fs=1,625 Hz), SC 5 (Fs=2,000 Hz). <strong>MDT22T is the only one that achieves a viable crossover with any square-frame mid</strong> — every other non-round tweeter has Fs too high. ND140-4 (square, 138mm) has excellent SPL headroom but no compatible non-round tweeter — its beam ceiling (1,668 Hz) falls below the MDT22T's 1,800 Hz FR floor.</em>
   </div>
 
   <table>
@@ -459,21 +461,21 @@
         <td><span style="color:#a5b4fc;font-weight:600">ROUND</span></td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 116mm round frame</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 116mm round frame</div>
         </td>
         <td>
           <div class="driver">XT25TG30-04</div>
-          <div class="driver-sub">Peerless ring rad · 4Ω · 104mm round · Fs=440 Hz</div>
+          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 104mm round &middot; Fs=440 Hz</div>
         </td>
         <td>
           <div class="mono">1,670 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
         </td>
         <td class="mono">110mm</td>
-        <td><span class="ok" style="font-size:11px">Ceiling: <strong>100.7 dB RMS / 103.7 dB burst</strong> — well above target</span></td>
-        <td><span class="warn" style="font-size:11px">XT25 ceiling: 100.6 dB burst (tweet needs DSP limiter 0.4 dB below burst)</span></td>
+        <td><span class="ok" style="font-size:11px">Ceiling: <strong>100.7/103.7 dB</strong> — well above target</span></td>
+        <td><span class="warn" style="font-size:11px">XT25 ceiling 100.6 dB burst — DSP limiter 0.4 dB below burst</span></td>
         <td><span class="price">£75</span><br><span class="driver-sub">£32 + £43</span></td>
-        <td style="font-size:12px;color:var(--muted)">Both round frames — clean matched aesthetic. Ring rad for off-axis coverage. Best crossover window (0.68 oct) of all visual options. Both prices confirmed.</td>
+        <td style="font-size:12px;color:var(--muted)">Both round frames — clean matched aesthetic. Ring rad for off-axis coverage. Best crossover window of all visual options. Both prices confirmed.</td>
         <td>
           <div class="badges">
             <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-xt25tg30-04.html">XT25 SI £43</a>
@@ -487,11 +489,11 @@
         <td><span style="color:#a78bfa;font-weight:600">SQUARE ACCENT</span><br><span style="font-size:11px;color:var(--muted)">round mid + square tweet</span></td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 116mm round frame</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 116mm round frame</div>
         </td>
         <td>
           <div class="driver">MDT22T</div>
-          <div class="driver-sub">Morel dome · 8Ω · 89 dB · <strong style="color:#a78bfa">54×54mm square face</strong> · 80W rated · Fs=650 Hz</div>
+          <div class="driver-sub">Morel dome &middot; 8&#937; &middot; 89 dB &middot; <strong style="color:#a78bfa">54&times;54mm square face</strong> &middot; 80W &middot; Fs=650 Hz</div>
         </td>
         <td>
           <div class="mono">1,949 Hz</div>
@@ -499,26 +501,27 @@
         </td>
         <td class="mono"><span class="ok">85mm</span></td>
         <td><span class="ok" style="font-size:11px">Mid ceiling: <strong>100.7/103.7 dB</strong> — above target</span></td>
-        <td><span class="ok" style="font-size:11px">MDT22T ceiling: 95.5/98.5 dB (tweeter well within limits)</span></td>
+        <td><span class="ok" style="font-size:11px">MDT22T: FR 1,800–25,000 Hz &middot; 80W rated &middot; well within limits</span></td>
         <td><span class="price-tbd">£32 + TBD</span></td>
-        <td style="font-size:12px;color:var(--muted)">Only viable square-face tweeter in catalogue. Round paper cone + small square dome — striking visual contrast. Tightest centre spacing of all options (85mm). Tight crossover window — datasheet FR floor 1,800 Hz used.</td>
+        <td style="font-size:12px;color:var(--muted)">Only viable square-face tweeter in catalogue. Round paper cone + small square dome — striking visual contrast. Tightest centre spacing of all options (85mm). Tight window — measure and iterate; 1,800 Hz datasheet FR floor used.</td>
         <td>
           <div class="badges">
+            <a class="badge badge-hfc" href="https://www.hificollective.co.uk/components/morel-mdt-22-neodymium-tweeter.html">HFC (discontinued)</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/morel-mdt-22.html">SI €59.95 backorder</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">Willys £47.55</a>
             <a class="badge badge-pdf" href="research/morel_mdt22t.pdf">MDT22T datasheet</a>
-            <a class="badge badge-pdf" href="https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880">MDT22T Morel</a>
-            <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
           </div>
         </td>
       </tr>
       <tr class="rank3">
-        <td><span style="color:#34d399;font-weight:600">MIXED</span><br><span style="font-size:11px;color:var(--muted)">round + small round</span></td>
+        <td><span style="color:#34d399;font-weight:600">MIXED</span><br><span style="font-size:11px;color:var(--muted)">round + small round dome</span></td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 116mm round frame</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 116mm round frame</div>
         </td>
         <td>
           <div class="driver">SB29SDNC</div>
-          <div class="driver-sub">SB Acoustics ring dome · 4Ω · 95.5 dB · <strong style="color:#34d399">72mm OD</strong> · 80W rated · Fs=630 Hz</div>
+          <div class="driver-sub">SB Acoustics ring dome &middot; 4&#937; &middot; 95.5 dB &middot; <strong style="color:#34d399">72mm OD</strong> &middot; 80W &middot; Fs=630 Hz</div>
         </td>
         <td>
           <div class="mono">1,969 Hz</div>
@@ -526,9 +529,9 @@
         </td>
         <td class="mono">94mm</td>
         <td><span class="ok" style="font-size:11px">Mid ceiling: <strong>100.7/103.7 dB</strong> — above target</span></td>
-        <td><span class="ok" style="font-size:11px">SB29SDNC ceiling far above target — no constraints</span></td>
+        <td><span class="ok" style="font-size:11px">SB29SDNC: 95.5 dB &middot; 80W &middot; easily driven</span></td>
         <td><span class="price-tbd">£32 + TBD</span></td>
-        <td style="font-size:12px;color:var(--muted)">Large round cone + noticeably small 72mm tweeter — industrial minimalist contrast. Very tight crossover window. High-sensitivity tweeter at 95.5 dB is easily driven.</td>
+        <td style="font-size:12px;color:var(--muted)">Large round cone + noticeably small 72mm tweeter — industrial minimalist contrast. Very tight crossover window — precise DSP required.</td>
         <td>
           <div class="badges">
             <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
@@ -539,55 +542,53 @@
         <td><span style="color:#f472b6;font-weight:600">BOTH SQUARE</span><br><span style="font-size:11px;color:var(--muted)">Option A — wider window</span></td>
         <td>
           <div class="driver">ND91-4</div>
-          <div class="driver-sub">Dayton · <strong style="color:#f472b6">square frame</strong> · 103.5mm OD · 4Ω · 85.6 dB · Fs=74 Hz</div>
+          <div class="driver-sub">Dayton &middot; <strong style="color:#f472b6">square frame</strong> &middot; 103.5mm OD &middot; 4&#937; &middot; 85.6 dB &middot; Fs=74 Hz</div>
         </td>
         <td>
           <div class="driver">MDT22T</div>
-          <div class="driver-sub">Morel · <strong style="color:#f472b6">54×54mm square face</strong> · 8Ω · 89 dB · 80W · Fs=650 Hz</div>
+          <div class="driver-sub">Morel &middot; <strong style="color:#f472b6">54&times;54mm square face</strong> &middot; 8&#937; &middot; 89 dB &middot; 80W &middot; Fs=650 Hz</div>
         </td>
         <td>
           <div class="mono">2,252 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.65 oct — moderate</span></div>
         </td>
         <td class="mono">79mm</td>
-        <td>
-          <span class="warn" style="font-size:11px">Mid ceiling: <strong>97.4 dB RMS / 100.4 dB burst</strong> (0.6 dB under target — DSP limiter keeps it safe)</span>
-        </td>
-        <td><span class="ok" style="font-size:11px">Tweet max SPL well above target — comfortable</span></td>
+        <td><span class="warn" style="font-size:11px">Mid ceiling: <strong>97.4/100.4 dB</strong> — 0.6 dB under target, DSP limiter</span></td>
+        <td><span class="ok" style="font-size:11px">MDT22T 80W rated &middot; well within limits</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
-        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Best both-non-round crossover in catalogue.</strong> MDT22T is the only non-round tweeter with Fs low enough to pair with any square mid — 6 other non-round tweeters surveyed all have Fs too high. Small cone (Sd=30.4cm²) → high beam ceiling (2,820 Hz) → 0.65 oct moderate window (using datasheet FR floor 1,800 Hz = 2.77×Fs). SPL ceiling 0.6 dB under target — DSP limiter keeps it safe.</td>
+        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Best both-non-round crossover in catalogue.</strong> Small cone (Sd=30.4 cm²) &rarr; high beam ceiling (2,820 Hz) &rarr; 0.65 oct moderate window (1,800 Hz datasheet floor). MDT22T is the only non-round tweeter compatible with any square mid — 6 others surveyed all have Fs too high. SPL 0.6 dB under target — DSP limiter.</td>
         <td>
           <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/morel-mdt-22.html">SI €59.95 backorder</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">Willys £47.55</a>
             <a class="badge badge-pdf" href="research/morel_mdt22t.pdf">MDT22T datasheet</a>
-            <a class="badge badge-pdf" href="https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880">MDT22T Morel</a>
           </div>
         </td>
       </tr>
       <tr>
-        <td><span style="color:#f472b6;font-weight:600">BOTH SQUARE</span><br><span style="font-size:11px;color:var(--muted)">Option B — full SPL target</span></td>
+        <td><span style="color:#f472b6;font-weight:600">BOTH SQUARE</span><br><span style="font-size:11px;color:var(--muted)">Option B — full SPL</span></td>
         <td>
           <div class="driver">ND105-4</div>
-          <div class="driver-sub">Dayton · <strong style="color:#f472b6">square frame</strong> · 105mm OD · 4Ω · 86.8 dB · Fs=79 Hz</div>
+          <div class="driver-sub">Dayton &middot; <strong style="color:#f472b6">square frame</strong> &middot; 105mm OD &middot; 4&#937; &middot; 86.8 dB &middot; Fs=79 Hz</div>
         </td>
         <td>
           <div class="driver">MDT22T</div>
-          <div class="driver-sub">Morel · <strong style="color:#f472b6">54×54mm square face</strong> · 8Ω · 89 dB · 80W · Fs=650 Hz</div>
+          <div class="driver-sub">Morel &middot; <strong style="color:#f472b6">54&times;54mm square face</strong> &middot; 8&#937; &middot; 89 dB &middot; 80W &middot; Fs=650 Hz</div>
         </td>
         <td>
           <div class="mono">1,974 Hz</div>
           <div class="driver-sub mono"><span class="warn">0.27 oct — tight</span></div>
         </td>
         <td class="mono">80mm</td>
-        <td>
-          <span class="ok" style="font-size:11px">Mid ceiling: <strong>98.6 dB RMS / 101.6 dB burst</strong> — meets targets with headroom</span>
-        </td>
-        <td><span class="ok" style="font-size:11px">Tweet max SPL well above target — comfortable</span></td>
+        <td><span class="ok" style="font-size:11px">Mid ceiling: <strong>98.6/101.6 dB</strong> — meets targets</span></td>
+        <td><span class="ok" style="font-size:11px">MDT22T 80W rated &middot; well within limits</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
-        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Meets full 98/101 dB targets.</strong> Larger cone (Sd=51.5cm²) → lower beam ceiling (2,164 Hz) → 0.27 oct tight window with MDT22T (using datasheet FR floor 1,800 Hz). No DSP limiter needed. Crossover placement is critical — measure and iterate. Trade: full SPL at the cost of a tight crossover window.</td>
+        <td style="font-size:12px;color:var(--muted)"><strong style="color:#f472b6">Meets full 98/101 dB targets.</strong> Larger cone (Sd=51.5 cm²) &rarr; lower beam ceiling (2,164 Hz) &rarr; 0.27 oct tight window (1,800 Hz floor). No DSP limiter needed. Measure and iterate — crossover placement is critical. Trade: full SPL, tight window.</td>
         <td>
           <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/morel-mdt-22.html">SI €59.95 backorder</a>
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">Willys £47.55</a>
             <a class="badge badge-pdf" href="research/morel_mdt22t.pdf">MDT22T datasheet</a>
-            <a class="badge badge-pdf" href="https://cdn.shopify.com/s/files/1/0809/2387/files/MOREL_MDT22_DATASHEET.pdf?v=1686654880">MDT22T Morel</a>
           </div>
         </td>
       </tr>
@@ -602,7 +603,7 @@
   <div class="section-title">Compact baffle — minimum centre-to-centre spacing</div>
   <div class="section-sub">
     Ranked by mid-to-tweeter centre spacing = (mid OD + tweeter OD) / 2.
-    Smaller spacing → shorter baffle height → closer to Google Home Max footprint target.
+    Smaller spacing &rarr; shorter baffle height &rarr; closer to Google Home Max footprint target.
   </div>
 
   <table>
@@ -626,24 +627,25 @@
         <td><span class="ok">1 — tightest</span></td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">116mm OD · 8Ω · 85.3 dB · 35W/70W</div>
+          <div class="driver-sub">116mm OD &middot; 8&#937; &middot; 85.3 dB &middot; 35W/70W</div>
         </td>
         <td>
           <div class="driver">MDT22T <span class="best">TIGHTEST</span></div>
-          <div class="driver-sub">54mm sq · 8Ω · 89 dB · 80W · Fs=650 Hz</div>
+          <div class="driver-sub">54mm sq &middot; 8&#937; &middot; 89 dB &middot; 80W &middot; Fs=650 Hz</div>
         </td>
         <td><span class="price">85mm</span></td>
         <td>
           <div class="mono">1,949 Hz</div>
           <div class="driver-sub mono"><span class="warn">0.23 oct — tight</span></div>
         </td>
-        <td><span class="mono">37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 70W</span></td>
-        <td><span class="mono">15.9W burst</span><br><span class="ok" style="font-size:11px">✓ within 80W</span></td>
+        <td><span class="mono">37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 70W</span></td>
+        <td><span class="mono">15.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 80W — no limiter</span></td>
         <td><span class="price-tbd">£32 + TBD</span></td>
         <td class="mono">29V / 4.1A</td>
-        <td style="font-size:12px;color:var(--muted)">Tightest spacing of any viable pair. Square tweeter face is visual bonus. Both drivers safe at burst — no limiter. <strong style="color:#fb923c">DSP placement must be exact.</strong></td>
+        <td style="font-size:12px;color:var(--muted)">Tightest spacing of any viable pair. Square tweeter face is visual bonus. Both drivers safe at burst — no limiter. <strong style="color:#fb923c">DSP placement must be exact — measure and iterate.</strong></td>
         <td>
           <div class="badges">
+            <a class="badge badge-willys" href="https://willys-hifi.com/products/morel-mdt-22-tweeter">MDT22T Willys £47.55</a>
             <a class="badge badge-pdf" href="research/morel_mdt22t.pdf">MDT22T datasheet</a>
             <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
           </div>
@@ -653,19 +655,19 @@
         <td>2</td>
         <td>
           <div class="driver">12MU/4731T00</div>
-          <div class="driver-sub">101mm OD · 4Ω · 90 dB · 80W · Scan-Speak Illuminator</div>
+          <div class="driver-sub">101mm OD &middot; 4&#937; &middot; 90 dB &middot; 80W &middot; Scan-Speak Illuminator</div>
         </td>
         <td>
           <div class="driver">D2604/833000</div>
-          <div class="driver-sub">104mm OD · 4Ω · 93 dB · 100W · Fs=475 Hz</div>
+          <div class="driver-sub">104mm OD &middot; 4&#937; &middot; 93 dB &middot; 100W &middot; Fs=475 Hz</div>
         </td>
         <td class="mono">103mm</td>
         <td>
           <div class="mono">1,705 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.52 oct — moderate</span></div>
         </td>
-        <td><span class="mono">25.2W burst</span><br><span class="ok" style="font-size:11px">✓ 3× headroom vs 80W</span></td>
-        <td><span class="mono">12.6W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (100W)</span></td>
+        <td><span class="mono">25.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; 3&times; headroom vs 80W</span></td>
+        <td><span class="mono">12.6W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (100W)</span></td>
         <td><span class="price-tbd">TBD + TBD</span></td>
         <td class="mono">29V / 4.0A</td>
         <td style="font-size:12px;color:var(--muted)">103mm spacing with a <strong style="color:#34d399">moderate window</strong> — best compact pick if you want DSP breathing room. Smallest eligible mid (101mm OD). All Scan-Speak quality.</td>
@@ -679,22 +681,22 @@
         <td>3</td>
         <td>
           <div class="driver">12MU/4731T00</div>
-          <div class="driver-sub">101mm OD · 4Ω · 90 dB · 80W · Scan-Speak Illuminator</div>
+          <div class="driver-sub">101mm OD &middot; 4&#937; &middot; 90 dB &middot; 80W &middot; Scan-Speak Illuminator</div>
         </td>
         <td>
           <div class="driver">DX25TG59-04</div>
-          <div class="driver-sub">104mm OD · 4Ω · 93.4 dB · 15W · Fs=590 Hz</div>
+          <div class="driver-sub">104mm OD &middot; 4&#937; &middot; 93.4 dB &middot; 15W &middot; Fs=590 Hz</div>
         </td>
         <td class="mono">103mm</td>
         <td>
           <div class="mono">1,900 Hz</div>
           <div class="driver-sub mono"><span class="warn">0.20 oct — tight</span></div>
         </td>
-        <td><span class="mono">25.2W burst</span><br><span class="ok" style="font-size:11px">✓ 3× headroom vs 80W</span></td>
-        <td><span class="mono">11.5W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (11.5W vs 15W)</span></td>
+        <td><span class="mono">25.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; 3&times; headroom vs 80W</span></td>
+        <td><span class="mono">11.5W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (11.5W vs 15W)</span></td>
         <td><span class="price-tbd">TBD + £28</span></td>
         <td class="mono">29V / 3.9A</td>
-        <td style="font-size:12px;color:var(--muted)">Same spacing as #2, confirmed £28 tweeter price. Tweeter safe at burst without limiter. Tighter window than #2 — precise DSP needed. Good budget compact option.</td>
+        <td style="font-size:12px;color:var(--muted)">Same spacing as #2, confirmed £28 tweeter price. Tweeter safe at burst without limiter. Tighter window — precise DSP needed. Good budget compact option.</td>
         <td>
           <div class="badges">
             <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-dx25tg59-04.html">DX25 SI £28</a>
@@ -712,12 +714,12 @@
 <div id="tab-value" class="tab-panel">
   <div class="section-title">Best value</div>
   <div class="section-sub">
-    Only pairs with at least one confirmed GBP price are included.
-    Under £50 combined is not achievable with currently confirmed prices — cheapest confirmed pair is £60.
+    Only pairs with at least one confirmed GBP price included. Prices in GBP from SI or Willys unless noted.
   </div>
 
   <div class="note-box">
-    <strong>Under £50 note:</strong> SB12PFCR25-4 at ~£20.58 (Willys, unconfirmed in drivers.json) + DX25TG59-04 at £28 = ~£49 would be under £50, but the SB12 price is from the old solutions.html and should be verified before ordering.
+    <strong>Under £50:</strong> No confirmed pair achieves under £50. Cheapest confirmed pair: SB12PFCR25-4 + DX25TG59-04 = <strong>£53</strong>.
+    <strong>VAT note:</strong> SI prices are shown in EUR ex-VAT. UK buyers may pay import VAT (20%) on delivery — actual GBP cost will be higher than the EUR figure suggests. Willys (UK) prices are VAT-inclusive.
   </div>
 
   <table>
@@ -740,23 +742,52 @@
       <tr class="rank1">
         <td><span class="ok">1 — cheapest</span></td>
         <td>
-          <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 35W/70W</div>
+          <div class="driver">SB12PFCR25-4 <span class="best">CHEAPEST</span></div>
+          <div class="driver-sub">4" natural fibre &middot; 4&#937; &middot; 87.5 dB &middot; 30W rated</div>
         </td>
         <td>
-          <div class="driver">DX25TG59-04 <span class="best">CHEAPEST</span></div>
-          <div class="driver-sub">Peerless dome · 4Ω · 93.4 dB · 15W · Fs=590 Hz</div>
+          <div class="driver">DX25TG59-04</div>
+          <div class="driver-sub">Peerless dome &middot; 4&#937; &middot; 93.4 dB &middot; 15W &middot; Fs=590 Hz</div>
+        </td>
+        <td>
+          <div class="mono">1,971 Hz</div>
+          <div class="driver-sub mono"><span class="warn">0.31 oct — tight</span></div>
+        </td>
+        <td><span class="mono">22.5W / 44.8W burst</span><br><span class="warn" style="font-size:11px">&#9888; burst &gt; 30W — ceiling 99.3 dB, DSP limiter</span></td>
+        <td><span class="mono">5.8W / 11.5W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (11.5W vs 15W)</span></td>
+        <td><span class="price">£53</span><br><span class="driver-sub">£25 + £28</span></td>
+        <td class="mono">29V / 3.6A</td>
+        <td>Natural</td>
+        <td style="font-size:12px;color:var(--muted)">Cheapest confirmed pair. Natural fibre cone. Tweeter safe at burst. Mid burst ceiling 99.3 dB — set DSP limiter (1.7 dB below 101 dB target). Slightly wider crossover window than #2 (0.31 vs 0.25 oct).</td>
+        <td>
+          <div class="badges">
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html">SB12 SI €25.95</a>
+            <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-dx25tg59-04.html">DX25 SI £28</a>
+            <a class="badge badge-pdf" href="research/sb_acoustics_sb12pfcr25-4.pdf">SB12 datasheet</a>
+            <a class="badge badge-pdf" href="research/peerless_dx25tg59-04.pdf">DX25 datasheet</a>
+          </div>
+        </td>
+      </tr>
+      <tr class="rank2">
+        <td>2</td>
+        <td>
+          <div class="driver">DS115-8</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 35W/70W</div>
+        </td>
+        <td>
+          <div class="driver">DX25TG59-04</div>
+          <div class="driver-sub">Peerless dome &middot; 4&#937; &middot; 93.4 dB &middot; 15W &middot; Fs=590 Hz</div>
         </td>
         <td>
           <div class="mono">1,933 Hz</div>
           <div class="driver-sub mono"><span class="warn">0.25 oct — tight</span></div>
         </td>
-        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">5.8W / 11.5W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter (11.5W vs 15W)</span></td>
+        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W — no limiter</span></td>
+        <td><span class="mono">5.8W / 11.5W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (11.5W vs 15W)</span></td>
         <td><span class="price">£60</span><br><span class="driver-sub">£32 + £28</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm</td>
-        <td style="font-size:12px;color:var(--muted)">Cheapest confirmed pair. Both prices verified in drivers.json. Dome is safe at burst without limiter. Tight window — set DSP carefully. Good first build option.</td>
+        <td style="font-size:12px;color:var(--muted)">£7 more than #1 but <strong style="color:var(--text)">full 103.7 dB burst ceiling</strong> — no limiter needed. Paper cone warmth. Tighter window (0.25 vs 0.31 oct) but still manageable with ADAU1701.</td>
         <td>
           <div class="badges">
             <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-ds115-8.html">DS115-8 SI £32</a>
@@ -766,55 +797,54 @@
           </div>
         </td>
       </tr>
-      <tr class="rank2">
-        <td>2</td>
+      <tr class="rank3">
+        <td>3</td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 35W/70W</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 35W/70W</div>
         </td>
         <td>
           <div class="driver">XT25TG30-04</div>
-          <div class="driver-sub">Peerless ring rad · 4Ω · 91.9 dB · 15W · Fs=440 Hz</div>
+          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 91.9 dB &middot; 15W &middot; Fs=440 Hz</div>
         </td>
         <td>
           <div class="mono">1,670 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
         </td>
-        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">8.2W / 16.3W burst</span><br><span class="warn" style="font-size:11px">⚠ limiter (0.4 dB margin)</span></td>
+        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
+        <td><span class="mono">8.2W / 16.3W burst</span><br><span class="warn" style="font-size:11px">&#9888; limiter (0.4 dB margin)</span></td>
         <td><span class="price">£75</span><br><span class="driver-sub">£32 + £43</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm + airy</td>
-        <td style="font-size:12px;color:var(--muted)">Ring rad for £15 more. <strong style="color:var(--text)">Moderate window = much easier DSP alignment.</strong> Wide off-axis coverage. DSP limiter at 100.6 dB — trivial to set in ADAU1701.</td>
+        <td style="font-size:12px;color:var(--muted)">Ring rad: much wider dispersion. <strong style="color:var(--text)">Moderate window = far easier DSP alignment.</strong> DSP limiter at 100.6 dB — trivial to set. Big performance upgrade over #1/#2 for kitchen use.</td>
         <td>
           <div class="badges">
             <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-xt25tg30-04.html">XT25 SI £43</a>
             <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon</a>
             <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
-            <a class="badge badge-pdf" href="https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf">XT25 datasheet</a>
           </div>
         </td>
       </tr>
-      <tr class="rank3">
-        <td>3 — best ring rad</td>
+      <tr>
+        <td>4 — best ring rad</td>
         <td>
           <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper · 8Ω · 85.3 dB · 35W/70W</div>
+          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 35W/70W</div>
         </td>
         <td>
           <div class="driver">R2604/833000 <span class="best">NO LIMITER</span></div>
-          <div class="driver-sub">Scan-Speak ring rad · 4Ω · 92 dB · 100W rated · Fs=440 Hz</div>
+          <div class="driver-sub">Scan-Speak ring rad &middot; 4&#937; &middot; 92 dB &middot; 100W &middot; Fs=440 Hz</div>
         </td>
         <td>
           <div class="mono">1,670 Hz</div>
           <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
         </td>
-        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">✓ within 35W/70W</span></td>
-        <td><span class="mono">8.0W / 15.9W burst</span><br><span class="ok" style="font-size:11px">✓ no limiter ever (100W rated)</span></td>
+        <td><span class="mono">18.6W / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
+        <td><span class="mono">8.0W / 15.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter ever (100W rated)</span></td>
         <td><span class="price">£80</span><br><span class="driver-sub">£32 + £48 (Willys)</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm + airy</td>
-        <td style="font-size:12px;color:var(--muted)">Same window as #2, only £5 more. 100W tweeter = no limiter ever. Beats #2 on every technical metric. If budget stretches to £80, this is the one to pick.</td>
+        <td style="font-size:12px;color:var(--muted)">Same window as #3, only £5 more. 100W tweeter = no limiter ever. Beats #3 on every technical metric. If budget stretches to £80, this is the ring rad to pick.</td>
         <td>
           <div class="badges">
             <a class="badge badge-willys" href="https://willys-hifi.com/products/scanspeak-r2604-833000-tweeter">Willys £47.79</a>
