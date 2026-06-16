@@ -1,23 +1,17 @@
-# Enclosure Design — DS115-8 + R2604/833000 + W5-1138SMF + DS215-PR
+# Enclosure Design — DS115-8 + R2604/833000 + W5-1138SMF + SB15SFCR-00 PR
 
 GHM-inspired active 3-way kitchen counter monitor. Side-firing sub and PR free up the front baffle for mid + tweeter only — circles on a slim black column. JAB5 + PSU in sealed base below.
 
 ---
 
-## PR Nomenclature Note
-
-The Dayton product catalogue lists this as **DS215-PR** (Designer Series), not SD215-PR. Same driver.
-
----
-
 ## Drivers
 
-| Role | Driver | OD mm | Cutout mm | Depth mm | Fires |
-|------|--------|-------|-----------|----------|-------|
-| Sub | Tang Band W5-1138SMF | 133.3 | ~108 | ~95 total / ~86 basket | LEFT side |
-| PR | Dayton DS215-PR | 216 | 180 | 58 | RIGHT side (portrait) |
-| Mid | Dayton DS115-8 | 115.6 | 93.6 | 54.7 | Front |
-| Tweeter | Scan-Speak R2604/833000 | ~104 | ~74 | ~55 | Front |
+| Role | Driver | Frame mm | Cutout mm | Depth mm | Fires |
+|------|--------|----------|-----------|----------|-------|
+| Sub | Tang Band W5-1138SMF | 133.3 OD | ~108 | ~95 total / ~86 basket | LEFT side |
+| PR | SB Acoustics SB15SFCR-00 | 253 × 168.75 racetrack | 220 × 119.1 | 49.7 | RIGHT side (portrait) |
+| Mid | Dayton DS115-8 | 115.6 OD | 93.6 | 54.7 | Front |
+| Tweeter | Scan-Speak R2604/833000 | ~104 OD | ~74 | ~55 | Front |
 
 ---
 
@@ -46,7 +40,7 @@ The Dayton product catalogue lists this as **DS215-PR** (Designer Series), not S
 | Base height | 80 | 56 |
 | **Total height** | **350** | — |
 
-Width increase from 175→190 mm is driven by sub basket depth (~86 mm) + DS215-PR body depth (58 mm) + clearance. At 166 mm internal width the two drivers clear each other by **22 mm** — just enough.
+Width increase from 175→190 mm is driven by sub basket depth (~86 mm) + SB15SFCR-00 mounting depth (49.7 mm) + clearance. At 166 mm internal width the two drivers clear each other by **30 mm** — comfortable.
 
 ---
 
@@ -77,46 +71,50 @@ Side panel face: 215 mm deep × 270 mm tall.
 - OD span: 135 ± 66.65 mm → **68–202 mm** — fully within 270 mm ✓
 - Cutout: ~108 mm on 215 mm depth → 53 mm margin each side ✓
 
-### Right side — DS215-PR (passive radiator, portrait)
+### Right side — SB15SFCR-00 (passive radiator, portrait)
+
+The racetrack frame (253 × 168.75 mm) mounts portrait — long axis vertical.
 
 - Centre: **135 mm from acoustic floor** — symmetric with sub ✓
-- OD 216 mm in portrait (vertical axis): 135 ± 108 mm → **27–243 mm** — 27 mm margin top and bottom ✓
-- Cutout 180 mm in depth direction: 215 mm available → 17.5 mm margin each side ✓
-- Mounting depth 58 mm + sub basket 86 mm = 144 mm < 166 mm internal width → **22 mm clearance** ✓
+- Frame long axis (253 mm) in height: 135 ± 126.5 mm → **8.5–261.5 mm** — 8.5 mm margin top and bottom ⚠ tight (see construction note)
+- Frame short axis (168.75 mm) in depth: 215 mm available → 23 mm margin each side ✓
+- Cutout 220 × 119.1 mm — fully within panel face ✓
+- Mounting depth 49.7 mm + sub basket 86 mm = 135.7 mm < 166 mm internal width → **30 mm clearance** ✓
+
+**Construction note:** 8.5 mm frame-to-panel-edge margin means the top/bottom panels must attach via **dado or rabbet joints** cut into the side panels, not butt-jointed onto the outer face. This keeps the side panel outer face clear for the full 270 mm so the PR flange has unobstructed bearing. Do not run glue blocks or screws within 10 mm of the side panel top/bottom edges in the PR zone.
 
 ---
 
-## PR Tuning (DS215-PR)
+## PR Tuning (SB15SFCR-00)
 
-DS215-PR published specs: Sd = 211.2 cm², Mms_stock = 68.8 g, Fs_stock = 23.3 Hz.
+Specs from drivers.json (SB Acoustics datasheet): Sd = 178 cm², Mms_stock = 62 g, Fs_stock = 21 Hz, Xmax = 11 mm. Mass adjust boss: M6 bolt on rear.
 
-Suspension stiffness (used in accurate formula):
+Suspension stiffness:
 ```
-Kms = Mms_stock × (2π × Fs_stock)² = 0.0688 × (146.3)² = 1,472 N/m
-```
-
-Air spring in 6.0 L box:
-```
-Kair = ρ₀c² × Sd² / Vb = 142,356 × (0.02112)² / 0.006 = 10,530 N/m
+Kms = Mms_stock × (2π × Fs_stock)² = 0.062 × (131.9)² = 1,079 N/m
 ```
 
-Total system resonance:
+Air spring in 6.0 L net box:
+```
+Kair = ρ₀c² × Sd² / Vb = 142,356 × (0.0178)² / 0.006 = 7,517 N/m
+```
+
+Total (Kms not negligible at Fs = 21 Hz):
 ```
 Fb = (1/2π) × √((Kms + Kair) / Mms_total)
 ```
 
 | Target Fb | Mms total | Added mass |
 |-----------|-----------|------------|
-| 38 Hz | 217 g | **148 g** |
-| 40 Hz | 196 g | **127 g** |
-| 42 Hz | 178 g | **109 g** |
-| 45 Hz | 155 g | **86 g** |
+| 35 Hz | 178 g | **116 g** |
+| 38 Hz | 150 g | **88 g** |
+| 40 Hz | 136 g | **74 g** |
+| 42 Hz | 124 g | **62 g** |
+| 45 Hz | 107 g | **45 g** |
 
-**Recommendation: 42 Hz tuning (109 g added)** — gives F3 ≈ 38–40 Hz, realistic for this sub and suitable for a counter monitor.
+**Recommendation: 40 Hz tuning (74 g added)** — gives F3 ≈ 37 Hz, well-matched to W5-1138SMF characteristics and sufficient for a kitchen counter monitor. Mass: 74 g via M6 stud + steel washer stack on rear boss. Verify by measuring free-air Fs of loaded PR before installation.
 
-Added mass method: M8 × 20 mm steel bolt (12 g) + large steel washers stacked on DS215-PR rear mounting boss. Stack of ~9 washers (12 g each) = 108 g. Verify by measuring free-air Fs of loaded PR and confirming with final box measurement.
-
-**Sd ratio:** DS215-PR 211.2 cm² / W5-1138SMF 94 cm² = **2.25×** — excellent. The PR moves half the peak displacement of the sub for the same output level.
+**Sd ratio:** SB15SFCR-00 178 cm² / W5-1138SMF 94 cm² = **1.89×** — well above the 1.5× minimum; PR displacement per unit sub displacement is comfortably lower than Xmax allows.
 
 ---
 
@@ -209,29 +207,6 @@ Rear panel of base: removable (screwed). IEC inlet, RCA/XLR input, binding posts
 
 ---
 
-## E150HE-PR Alternative
-
-If DS215-PR side-fitting is awkward in practice, the Epique E150HE-PR is a drop-in alternative:
-
-| Spec | DS215-PR | E150HE-PR |
-|------|----------|-----------|
-| Nominal size | 8" | 5.5" |
-| OD (est.) | 216 mm | ~165 mm |
-| Sd | 211.2 cm² | ~95 cm² |
-| Sd / sub Sd ratio | **2.25×** | **1.0×** |
-| Mms stock | 68.8 g | unknown (fetch datasheet) |
-| Xmax | 11 mm | **19 mm** |
-| Fs | 23.3 Hz | 30 Hz |
-| Price | €33 | €63 |
-
-The E150HE-PR's Sd ratio of 1.0× the sub is marginal — the PR must move the same peak amplitude as the sub. Its 19 mm Xmax compensates (2× the sub's Xmax), so it won't bottom out, but system efficiency at low frequencies is reduced compared to DS215-PR.
-
-Fit: at ~165 mm OD the E150HE-PR is easier to place on any panel with comfortable margins at this enclosure size.
-
-**Verdict:** DS215-PR wins acoustically and on cost. E150HE-PR is the alternative only if DS215-PR physically won't work post-build.
-
----
-
 ## Volume Summary
 
 | Space | Gross L | Net L | Note |
@@ -248,7 +223,8 @@ Fit: at ~165 mm OD the E150HE-PR is easier to place on any panel with comfortabl
 |-------|-------|---------------|----------|
 | Front baffle | 1 | 190 × 270 | 18 mm MDF |
 | Rear panel | 1 | 190 × 270 | 12 mm MDF |
-| Side panels (sub + PR) | 2 | 215 × 270 | 12 mm MDF |
+| Side panel (sub, left) | 1 | 215 × 270 | 12 mm MDF |
+| Side panel (PR, right) | 1 | 215 × 270 | 12 mm MDF — dado/rabbet top+bottom edges |
 | Top panel | 1 | 166 × 215 | 12 mm MDF |
 | Acoustic floor (= base ceiling) | 1 | 166 × 215 | 12 mm MDF |
 | Mid inner box sides (×4) + cap | 5 | various | 9 mm MDF |
