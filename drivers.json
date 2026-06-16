@@ -1510,7 +1510,14 @@
       "xmax_mm": 4.0,
       "power_max_w": 300.0,
       "sd_cm2": 57.0,
-      "qts": 0.38
+      "qts": 0.38,
+      "power_rms_w": 150.0,
+      "re_ohm": 5.5,
+      "le_mh": 0.32,
+      "vc_mm": 54.0,
+      "depth_mm": 50.0,
+      "magnet": "Neodymium (single vented)",
+      "frame_material": "Steel"
     },
     {
       "id": "morel-em-428",
