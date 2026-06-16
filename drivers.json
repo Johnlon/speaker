@@ -1089,7 +1089,7 @@
       "id": "hivi-swan-dm-7500",
       "brand": "HiVi Swan",
       "model": "DM-7500",
-      "role": "mid",
+      "role": "high",
       "status": "candidate",
       "nominal_size_inch": 3.0,
       "impedance_ohm": 5.0,
