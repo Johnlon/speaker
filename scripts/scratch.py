@@ -1,41 +1,20 @@
-"""Sanity check drivers.json after dedup."""
+"""Add RST28A-4 datasheet URL and source to entry."""
 import json, sys
 from pathlib import Path
-from collections import Counter
-
 def p(s): sys.stdout.buffer.write((s+'\n').encode('utf-8', errors='replace'))
-
-src = json.loads(Path('drivers.json').read_text(encoding='utf-8'))
-drivers = src['drivers']
-p(f"driver_count field: {src['driver_count']}  actual: {len(drivers)}")
-
-ids = [d.get('id','') for d in drivers]
-counts = Counter(ids)
-dups = {k: v for k, v in counts.items() if v > 1}
-p(f"Remaining duplicate IDs: {len(dups)}")
-
-roles = Counter(d.get('role') for d in drivers)
-p(f"Role counts: {dict(roles)}")
-
-statuses = Counter(d.get('status') for d in drivers)
-p(f"Status counts: {dict(statuses)}")
-
-# Check critical coverage
-CRITICAL_BY_ROLE = {
-    'mid':  {'fs_hz', 'sensitivity_db', 'impedance_ohm', 'power_rms_w', 'qts', 'xmax_mm'},
-    'high': {'fs_hz', 'sensitivity_db', 'impedance_ohm', 'power_rms_w'},
-    'sub':  {'fs_hz', 'qts', 'xmax_mm', 'sensitivity_db', 'impedance_ohm'},
-    'pr':   {'fs_hz', 'qms', 'xmax_mm'},
-    'excl': {'sensitivity_db', 'impedance_ohm'},
-}
-covered = sum(
-    1 for d in drivers
-    if all(d.get(f) is not None for f in CRITICAL_BY_ROLE.get(d.get('role',''), set()))
-)
-p(f"Role-critically covered: {covered} / {len(drivers)}")
-
-# Verify the 3 excl-merged drivers kept excl role
-for did in ['dayton-audio-nd25fn-4', 'peerless-by-tymphany-bc25tg15-04', 'peerless-by-tymphany-oc25sc65-04']:
-    d = next((x for x in drivers if x['id'] == did), None)
-    if d:
-        p(f"  {did}: role={d['role']} status={d['status']}")
+path = Path('drivers.json')
+src = json.loads(path.read_text(encoding='utf-8'))
+d = next(x for x in src['drivers'] if x['id'] == 'dayton-audio-rs28a-4')
+d.setdefault('sources', [])
+d.setdefault('datasheets', [])
+d.setdefault('prices', [])
+if not any('daytonaudio' in s for s in d['sources']):
+    d['sources'].append('https://www.daytonaudio.com/product/1565/rst28a-4-1-1-8-reference-series-aluminum-dome-tweeter-4-ohm')
+if not any('rst28a' in str(s).lower() for s in d['datasheets']):
+    d['datasheets'].append('https://www.daytonaudio.com/images/resources/275-131--dayton-audio-rst28a-4-specification-sheet.pdf')
+if not any(p.get('currency') == 'USD' for p in d['prices']):
+    d['prices'].append({'source': 'daytonaudio', 'currency': 'USD', 'price': 58.99})
+path.write_text(json.dumps(src, indent=2, ensure_ascii=False), encoding='utf-8')
+p(f"Updated: {d['id']}")
+p(f"  sources: {d['sources']}")
+p(f"  prices: {d['prices']}")
