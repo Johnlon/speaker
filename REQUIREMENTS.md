@@ -56,7 +56,9 @@ These components are locked. They define the engineering envelope for all other 
 
 | Parameter | Value |
 |-----------|-------|
-| Frame OD | 133.3 mm |
+| Flange OD | 155 mm |
+| Cutout | 120 mm |
+| Basket depth | 81 mm (from back of flange) |
 | Impedance | 4Ω |
 | Sensitivity | **85 dB @ 2.83V/1m** |
 | Power | 40W RMS / 80W peak |

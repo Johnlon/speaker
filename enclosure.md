@@ -8,7 +8,7 @@ GHM-inspired active 3-way kitchen counter monitor. Side-firing sub and PR free u
 
 | Role | Driver | Frame mm | Cutout mm | Depth mm | Fires |
 |------|--------|----------|-----------|----------|-------|
-| Sub | Tang Band W5-1138SMF | 133.3 OD | ~108 | ~95 total / ~86 basket | LEFT side |
+| Sub | Tang Band W5-1138SMF | 155 OD | 120 | 81 (from back of flange) | LEFT side |
 | PR | SB Acoustics SB15SFCR-00 | 253 × 168.75 racetrack | 220 × 119.1 | 49.7 | RIGHT side (portrait) |
 | Mid | Dayton DS115-8 | 115.6 OD | 93.6 | 54.7 | Front |
 | Tweeter | Scan-Speak R2604/833000 | ~104 OD | ~74 | ~55 | Front |
@@ -40,7 +40,7 @@ GHM-inspired active 3-way kitchen counter monitor. Side-firing sub and PR free u
 | Base height | 80 | 56 |
 | **Total height** | **350** | — |
 
-Width increase from 175→190 mm is driven by sub basket depth (~86 mm) + SB15SFCR-00 mounting depth (49.7 mm) + clearance. At 166 mm internal width the two drivers clear each other by **30 mm** — comfortable.
+Width increase from 175→190 mm is driven by sub basket depth (81 mm confirmed) + SB15SFCR-00 mounting depth (49.7 mm) + clearance. At 166 mm internal width the two drivers clear each other by **35 mm** — comfortable.
 
 ---
 
@@ -53,11 +53,11 @@ Single acoustic volume — no internal shelves. Sub and PR share the full interi
 | Deduction | Volume |
 |-----------|--------|
 | Mid inner box walls + cavity | −1.13 L |
-| Sub basket protrusion | −0.35 L |
+| Sub basket protrusion | −0.51 L |
 | Tweeter body | −0.05 L |
-| **Net sub volume** | **~6.0 L** |
+| **Net sub volume** | **~5.8 L** |
 
-6.0 L net is above the W5-1138SMF's Vas (4.81 L) — correct operating range for a PR-loaded alignment.
+5.8 L net is above the W5-1138SMF's Vas (4.81 L) — correct operating range for a PR-loaded alignment.
 
 ---
 
@@ -68,8 +68,8 @@ Single acoustic volume — no internal shelves. Sub and PR share the full interi
 Side panel face: 215 mm deep × 270 mm tall.
 
 - Centre: **135 mm from acoustic floor** (external measurement)
-- OD span: 135 ± 66.65 mm → **68–202 mm** — fully within 270 mm ✓
-- Cutout: ~108 mm on 215 mm depth → 53 mm margin each side ✓
+- OD span: 135 ± 77.5 mm → **57.5–212.5 mm** — fully within 270 mm ✓
+- Cutout: 120 mm on 215 mm depth → 47.5 mm margin each side ✓
 
 ### Right side — SB15SFCR-00 (passive radiator, portrait)
 
@@ -79,7 +79,7 @@ The racetrack frame (253 × 168.75 mm) mounts portrait — long axis vertical.
 - Frame long axis (253 mm) in height: 135 ± 126.5 mm → **8.5–261.5 mm** — 8.5 mm margin top and bottom ⚠ tight (see construction note)
 - Frame short axis (168.75 mm) in depth: 215 mm available → 23 mm margin each side ✓
 - Cutout 220 × 119.1 mm — fully within panel face ✓
-- Mounting depth 49.7 mm + sub basket 86 mm = 135.7 mm < 166 mm internal width → **30 mm clearance** ✓
+- Mounting depth 49.7 mm + sub basket 81 mm = 130.7 mm < 166 mm internal width → **35 mm clearance** ✓
 
 **Construction note:** 8.5 mm frame-to-panel-edge margin means the top/bottom panels must attach via **dado or rabbet joints** cut into the side panels, not butt-jointed onto the outer face. This keeps the side panel outer face clear for the full 270 mm so the PR flange has unobstructed bearing. Do not run glue blocks or screws within 10 mm of the side panel top/bottom edges in the PR zone.
 
@@ -104,15 +104,17 @@ Total (Kms not negligible at Fs = 21 Hz):
 Fb = (1/2π) × √((Kms + Kair) / Mms_total)
 ```
 
+Calculated at Vb = 5.8 L net. M_total = (ρ₀c² × Sd²) / (4π² × Fb² × Vb).
+
 | Target Fb | Mms total | Added mass |
 |-----------|-----------|------------|
-| 35 Hz | 178 g | **116 g** |
-| 38 Hz | 150 g | **88 g** |
-| 40 Hz | 136 g | **74 g** |
-| 42 Hz | 124 g | **62 g** |
-| 45 Hz | 107 g | **45 g** |
+| 35 Hz | 183 g | **121 g** |
+| 38 Hz | 156 g | **94 g** |
+| 40 Hz | 141 g | **79 g** |
+| 42 Hz | 128 g | **66 g** |
+| 45 Hz | 112 g | **50 g** |
 
-**Recommendation: 40 Hz tuning (74 g added)** — gives F3 ≈ 37 Hz, well-matched to W5-1138SMF characteristics and sufficient for a kitchen counter monitor. Mass: 74 g via M6 stud + steel washer stack on rear boss. Verify by measuring free-air Fs of loaded PR before installation.
+**Recommendation: 40 Hz tuning (79 g added)** — gives F3 ≈ 35 Hz, well-matched to W5-1138SMF characteristics. Mass: 79 g via M6 stud + steel washer stack on rear boss. Verify by measuring free-air Fs of loaded PR before installation.
 
 **Sd ratio:** SB15SFCR-00 178 cm² / W5-1138SMF 94 cm² = **1.89×** — well above the 1.5× minimum; PR displacement per unit sub displacement is comfortably lower than Xmax allows.
 
@@ -211,7 +213,7 @@ Rear panel of base: removable (screwed). IEC inlet, RCA/XLR input, binding posts
 
 | Space | Gross L | Net L | Note |
 |-------|---------|-------|------|
-| Sub / PR chamber | 7.54 | ~6.0 | Single volume; sub + PR share it |
+| Sub / PR chamber | 7.54 | ~5.8 | Single volume; sub + PR share it |
 | Mid inner box | 0.85 | 0.85 | Isolated rear chamber for DS115-8 |
 | Base | ~1.9 | — | JAB5 + PSU |
 

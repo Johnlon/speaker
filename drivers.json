@@ -9,7 +9,7 @@
       "role": "sub",
       "status": "locked",
       "nominal_size_inch": 5.25,
-      "frame_od_mm": 133.3,
+      "frame_od_mm": 155.0,
       "impedance_ohm": 4.0,
       "sensitivity_db": 85.0,
       "power_rms_w": 40.0,
@@ -48,8 +48,9 @@
       "surround_material": "Rubber",
       "frame_material": "Steel",
       "magnet": "ferrite",
-      "depth_mm": 3.67,
-      "key": "tb:W5-1138SMF"
+      "depth_mm": 81.0,
+      "key": "tb:W5-1138SMF",
+      "cutout_mm": 120.0
     },
     {
       "id": "dayton-audio-nd140-pr",
