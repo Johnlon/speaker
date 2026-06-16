@@ -1,20 +1,46 @@
-"""Add RST28A-4 datasheet URL and source to entry."""
+"""Fix stale hivi_b4n_1 local paths in drivers.json."""
 import json, sys
 from pathlib import Path
-def p(s): sys.stdout.buffer.write((s+'\n').encode('utf-8', errors='replace'))
-path = Path('drivers.json')
-src = json.loads(path.read_text(encoding='utf-8'))
-d = next(x for x in src['drivers'] if x['id'] == 'dayton-audio-rs28a-4')
-d.setdefault('sources', [])
-d.setdefault('datasheets', [])
-d.setdefault('prices', [])
-if not any('daytonaudio' in s for s in d['sources']):
-    d['sources'].append('https://www.daytonaudio.com/product/1565/rst28a-4-1-1-8-reference-series-aluminum-dome-tweeter-4-ohm')
-if not any('rst28a' in str(s).lower() for s in d['datasheets']):
-    d['datasheets'].append('https://www.daytonaudio.com/images/resources/275-131--dayton-audio-rst28a-4-specification-sheet.pdf')
-if not any(p.get('currency') == 'USD' for p in d['prices']):
-    d['prices'].append({'source': 'daytonaudio', 'currency': 'USD', 'price': 58.99})
-path.write_text(json.dumps(src, indent=2, ensure_ascii=False), encoding='utf-8')
-p(f"Updated: {d['id']}")
-p(f"  sources: {d['sources']}")
-p(f"  prices: {d['prices']}")
+
+def p(s=''): sys.stdout.buffer.write((str(s)+'\n').encode('utf-8', errors='replace'))
+
+data = json.loads(Path('drivers.json').read_text(encoding='utf-8'))
+
+for drv in data['drivers']:
+    if drv.get('id') != 'hivi-swan-b4n':
+        continue
+    p(f"Before: {drv.get('datasheets')}")
+    # Two datasheets: first page is hivi_b4n.pdf, second is hivi_b4n_2.pdf
+    # Both source URLs were for the same driver, just two attached PDFs
+    new_sheets = []
+    seen = set()
+    for sheet in drv.get('datasheets', []):
+        if isinstance(sheet, dict):
+            local = sheet.get('local', '')
+            if 'hivi_b4n_1' in local:
+                sheet = dict(sheet, local='research/hivi_b4n.pdf')
+            elif 'hivi_b4n_2' in local or 'hivi_b4n_datasheet_2' in local:
+                sheet = dict(sheet, local='research/hivi_b4n_2.pdf')
+        # Deduplicate sheets by local path
+        key = sheet.get('local') if isinstance(sheet, dict) else sheet
+        if key not in seen:
+            seen.add(key)
+            new_sheets.append(sheet)
+    drv['datasheets'] = new_sheets
+    p(f"After:  {drv.get('datasheets')}")
+
+Path('drivers.json').write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
+
+# Final check
+data2 = json.loads(Path('drivers.json').read_text(encoding='utf-8'))
+missing = []
+for drv in data2['drivers']:
+    for sheet in drv.get('datasheets', []):
+        if isinstance(sheet, dict) and 'local' in sheet:
+            if not Path(sheet['local']).exists():
+                missing.append(f"{drv['id']}: {sheet['local']}")
+if missing:
+    p("Still MISSING:")
+    for m in missing: p(f"  {m}")
+else:
+    p("All local paths OK.")
