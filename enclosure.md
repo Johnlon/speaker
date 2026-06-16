@@ -1,235 +1,244 @@
-# Enclosure Design — DS115-8 + R2604/833000 + W5-1138SMF + SB15SFCR-00 PR
+# Enclosure Design — DS115-8 + R2604/833000 + W5-1138SMF + DS215-PR
 
-GHM-inspired active 3-way kitchen counter monitor. Slim dark column, circles only on the front baffle, JAB5 + PSU in a sealed base below the acoustic section.
+GHM-inspired active 3-way kitchen counter monitor. Side-firing sub and PR free up the front baffle for mid + tweeter only — circles on a slim black column. JAB5 + PSU in sealed base below.
+
+---
+
+## PR Nomenclature Note
+
+The Dayton product catalogue lists this as **DS215-PR** (Designer Series), not SD215-PR. Same driver.
 
 ---
 
 ## Drivers
 
-| Role | Driver | OD mm | Cutout mm | Depth mm | Notes |
+| Role | Driver | OD mm | Cutout mm | Depth mm | Fires |
 |------|--------|-------|-----------|----------|-------|
-| Sub | Tang Band W5-1138SMF | 133.3 | ~108 | ~95 | Surround protrudes 8.5 mm proud of baffle |
-| Mid | Dayton DS115-8 | 115.6 | 93.6 | 54.7 | Surface mount; no countersink |
-| Tweeter | Scan-Speak R2604/833000 | ~104 | ~74 | ~55 | Tuned rear chamber fixed — cannot shorten |
-| PR | SB Acoustics SB15SFCR-00 | — | — | — | 5×8" racetrack, Sd 178 cm² |
+| Sub | Tang Band W5-1138SMF | 133.3 | ~108 | ~95 total / ~86 basket | LEFT side |
+| PR | Dayton DS215-PR | 216 | 180 | 58 | RIGHT side (portrait) |
+| Mid | Dayton DS115-8 | 115.6 | 93.6 | 54.7 | Front |
+| Tweeter | Scan-Speak R2604/833000 | ~104 | ~74 | ~55 | Front |
 
 ---
 
 ## Overall Cabinet
 
-Two-box stack. Acoustic section sits on top of the electronics base. Both have identical footprint.
-
 ```
 ╔══════════════════╗  ─┐
 ║                  ║   │
-║  TWEETER         ║   │  Acoustic section
-║                  ║   │  175 × 220 × 460 mm external
-║  MID             ║   │  18 mm MDF front baffle
-║                  ║   │  12 mm MDF all other panels
-║  SUB             ║   │
+║  TWEETER  (front)║   │  Acoustic section
+║  MID      (front)║   │  190 × 215 × 270 mm external
+║                  ║   │  18 mm MDF front baffle
+║  ◎ sub   ◎ PR  ║   │  12 mm MDF all other panels
+║  (L side)(R side)║   │
 ╠══════════════════╣  ─┤  12 mm divider (acoustic floor)
 ║  JAB5 + PSU      ║   │  Electronics base
-╚══════════════════╝  ─┘  175 × 220 × 130 mm external
+╚══════════════════╝  ─┘  190 × 215 × 80 mm external
+                           ──────────────────
+                           Total: 190 × 215 × 350 mm
 ```
 
-| | External mm | Internal mm |
-|---|---|---|
-| Width | 175 | 151 |
-| Depth | 220 | 190 (18 mm front + 12 mm rear) |
-| Acoustic height | 460 | 436 |
-| Base height | 130 | 106 |
-| **Total height** | **602** | — |
+| Dimension | External mm | Internal mm |
+|-----------|-------------|-------------|
+| Width | 190 | 166 |
+| Depth | 215 | 185 (18 mm front + 12 mm rear) |
+| Acoustic height | 270 | 246 |
+| Base height | 80 | 56 |
+| **Total height** | **350** | — |
+
+Width increase from 175→190 mm is driven by sub basket depth (~86 mm) + DS215-PR body depth (58 mm) + clearance. At 166 mm internal width the two drivers clear each other by **22 mm** — just enough.
 
 ---
 
-## Internal Chamber Layout
+## Acoustic Volume
 
-Three isolated chambers separated by 12 mm MDF shelves with driver cutouts only where needed.
+Single acoustic volume — no internal shelves. Sub and PR share the full interior. Mid is isolated by a small sealed inner box (see below).
+
+**Gross internal volume:** 166 × 185 × 246 = **7.54 L**
+
+| Deduction | Volume |
+|-----------|--------|
+| Mid inner box walls + cavity | −1.13 L |
+| Sub basket protrusion | −0.35 L |
+| Tweeter body | −0.05 L |
+| **Net sub volume** | **~6.0 L** |
+
+6.0 L net is above the W5-1138SMF's Vas (4.81 L) — correct operating range for a PR-loaded alignment.
+
+---
+
+## Side Panel Drivers
+
+### Left side — W5-1138SMF (sub)
+
+Side panel face: 215 mm deep × 270 mm tall.
+
+- Centre: **135 mm from acoustic floor** (external measurement)
+- OD span: 135 ± 66.65 mm → **68–202 mm** — fully within 270 mm ✓
+- Cutout: ~108 mm on 215 mm depth → 53 mm margin each side ✓
+
+### Right side — DS215-PR (passive radiator, portrait)
+
+- Centre: **135 mm from acoustic floor** — symmetric with sub ✓
+- OD 216 mm in portrait (vertical axis): 135 ± 108 mm → **27–243 mm** — 27 mm margin top and bottom ✓
+- Cutout 180 mm in depth direction: 215 mm available → 17.5 mm margin each side ✓
+- Mounting depth 58 mm + sub basket 86 mm = 144 mm < 166 mm internal width → **22 mm clearance** ✓
+
+---
+
+## PR Tuning (DS215-PR)
+
+DS215-PR published specs: Sd = 211.2 cm², Mms_stock = 68.8 g, Fs_stock = 23.3 Hz.
+
+Suspension stiffness (used in accurate formula):
+```
+Kms = Mms_stock × (2π × Fs_stock)² = 0.0688 × (146.3)² = 1,472 N/m
+```
+
+Air spring in 6.0 L box:
+```
+Kair = ρ₀c² × Sd² / Vb = 142,356 × (0.02112)² / 0.006 = 10,530 N/m
+```
+
+Total system resonance:
+```
+Fb = (1/2π) × √((Kms + Kair) / Mms_total)
+```
+
+| Target Fb | Mms total | Added mass |
+|-----------|-----------|------------|
+| 38 Hz | 217 g | **148 g** |
+| 40 Hz | 196 g | **127 g** |
+| 42 Hz | 178 g | **109 g** |
+| 45 Hz | 155 g | **86 g** |
+
+**Recommendation: 42 Hz tuning (109 g added)** — gives F3 ≈ 38–40 Hz, realistic for this sub and suitable for a counter monitor.
+
+Added mass method: M8 × 20 mm steel bolt (12 g) + large steel washers stacked on DS215-PR rear mounting boss. Stack of ~9 washers (12 g each) = 108 g. Verify by measuring free-air Fs of loaded PR and confirming with final box measurement.
+
+**Sd ratio:** DS215-PR 211.2 cm² / W5-1138SMF 94 cm² = **2.25×** — excellent. The PR moves half the peak displacement of the sub for the same output level.
+
+---
+
+## Mid Inner Box
+
+The mid's rear wave must be isolated from the sub chamber. Build a small sealed box from 9 mm MDF, glued to the front baffle inner face, surrounding the DS115-8 basket.
 
 ```
-  436 mm ┬─────────────────────────────
-         │  Tweeter space    82 mm
-  354 mm ├── shelf ──────────────────── 
-         │  Mid chamber     110 mm      3.15 L gross / ~2.8 L net
-  232 mm ├── shelf ────────────────────
-         │  Sub chamber     220 mm      6.31 L gross / ~6.1 L net (see below)
-    0 mm ┴─────────────────────────────  (acoustic floor)
+Front baffle (inner face)
+    │
+    ├──── 9 mm MDF cap ────────────┐
+    │     9 mm MDF side (×4)       │  Inner box
+    │     110 mm × 110 mm × 70 mm  │  (fits DS115-8 basket 54.7 mm + 15 mm clearance)
+    └──────────────────────────────┘
+         Open face sealed to baffle around cutout by gasket + silicone
 ```
 
-### Sub chamber — 6.1 L net
+| Dimension | Value |
+|-----------|-------|
+| Inner cavity (W × D × H) | 110 × 110 × 70 mm |
+| Inner air volume | 0.85 L |
+| Wall material | 9 mm MDF |
+| Outer footprint in sub chamber | ~128 × 128 × 79 mm |
+| Volume displaced from sub | ~1.13 L |
 
-- Gross: 151 × 190 × 220 mm = **6.31 L**
-- Minus sub basket volume (est. 0.4 L): **5.91 L**
-- Plus surround recess recovery (8.5 mm protrusion × ~19 cm² annulus ≈ 160 mL): **+0.16 L**
-- **Net: ~6.1 L**
+0.85 L rear chamber for a mid crossing at 150–1,500 Hz is adequate. No tuning required.
 
-PR (SB15SFCR-00) mounts on the rear panel within this chamber (see PR section).
-
-### Mid chamber — ~2.8 L net
-
-DS115-8 basket (54.7 mm deep) extends through the shelf into this space. Volume is over-sized relative to mid requirements — for a sealed mid above 150 Hz, any volume above 0.5 L is adequate. No tuning needed.
-
-### Tweeter space — clearance only
-
-R2604/833000 has its own factory-tuned rear chamber inside the driver (~50 mm deep). This space provides the mandatory ≥50 mm clearance behind the baffle inner face. Not acoustically tuned.
+The tweeter mounts above the mid through the same baffle. The R2604/833000 has its own tuned factory rear chamber; no isolation needed in the main cavity.
 
 ---
 
 ## Front Baffle — Driver Positions
 
-All heights measured from the **external bottom face of the acoustic section**.
+All heights measured from the **external bottom of the acoustic section** (top of base).
 
 ```
-   ┌──────────────────────┐  460 mm top
-   │      38 mm margin    │
-   │   ┌──────────────┐   │  422 mm  tweeter top edge
-   │   │  R2604/833000│   │
-   │   │   ⊙  104 mm  │   │  370 mm  TWEETER CENTRE   ←── 115 mm c-t-c
-   │   └──────────────┘   │  318 mm  tweeter bottom edge
-   │      5 mm gap        │
-   │   ┌──────────────┐   │  313 mm  mid top edge
-   │   │   DS115-8    │   │
-   │   │  ⊙  115.6 mm │   │  255 mm  MID CENTRE        ←── 155 mm c-t-c
-   │   └──────────────┘   │  197 mm  mid bottom edge
-   │      30 mm gap       │
-   │  ┌────────────────┐  │  167 mm  sub top edge
-   │  │  W5-1138SMF    │  │
-   │  │  ⊙  133.3 mm   │  │  100 mm  SUB CENTRE
-   │  └────────────────┘  │   33 mm  sub bottom edge
-   │      33 mm margin    │
-   └──────────────────────┘    0 mm  acoustic floor
+   ┌────────────────────┐  270 mm top
+   │     27 mm margin   │
+   │  ┌─────────────┐   │  243 mm  tweeter top edge
+   │  │ R2604/833000│   │
+   │  │  ⊙  104 mm  │   │  185 mm  TWEETER CENTRE   ←── 115 mm c-t-c
+   │  └─────────────┘   │  133 mm  tweeter bottom edge
+   │     5 mm gap       │
+   │  ┌─────────────┐   │  128 mm  mid top edge
+   │  │   DS115-8   │   │
+   │  │  ⊙ 115.6 mm │   │   70 mm  MID CENTRE        ←── 115 mm c-t-c (same as original)
+   │  └─────────────┘   │   12 mm  mid bottom edge
+   │     12 mm margin   │
+   └────────────────────┘    0 mm  acoustic floor
 ```
 
-| Gap | Distance | c-t-c | Flange gap |
-|-----|----------|-------|------------|
-| Sub bottom to baffle edge | 33 mm | — | — |
-| Sub → Mid | 30 mm between flanges | 155 mm | 30 mm |
-| Mid → Tweeter | 5 mm between flanges | 115 mm | 5 mm |
-| Tweeter top to baffle edge | 38 mm | — | — |
+| Gap | Distance | Flange gap |
+|-----|----------|------------|
+| Mid bottom to baffle edge | 12 mm | — |
+| Mid → Tweeter | 5 mm | 5 mm |
+| Tweeter top to baffle edge | 27 mm | — |
 
-Baffle width 175 mm accommodates sub (133.3 mm OD) with 21 mm margin each side.
+Baffle width 190 mm vs mid OD 115.6 mm: 37 mm margin each side.
 
 ---
 
-## Passive Radiator
+## Crossover and Timing
 
-**Position:** Rear panel, centred horizontally, within the sub chamber section.
+Identical to prior design — DSP unchanged.
 
-The SB15SFCR-00 racetrack (5"×8" ≈ 127 mm × 203 mm) mounts portrait on the rear panel:
-- Long axis (203 mm) vertical — fits within 220 mm sub chamber height with 17 mm margin
-- Short axis (127 mm) horizontal — fits within 175 mm panel width with 24 mm margin
-- Centre: 110 mm from acoustic floor
+| Boundary | Frequency | Notes |
+|----------|-----------|-------|
+| Sub / Mid | 150 Hz | LR4; λ = 2,287 mm; side offset negligible |
+| Mid / Tweet | 1,500 Hz | LR4; ideal √(880 × 2,636) = 1,523 Hz |
 
-### PR mass for tuning
+### Side-firing sub timing
 
-Target Fb = 38 Hz (F3 ≈ 40 Hz, well-suited to music content above 35 Hz on a counter):
+At 150 Hz (λ = 2,287 mm), the sub radiates from the side panel at the listening position rather than from the front. The path difference depends on room geometry but is small (≤ 100 mm ≈ 0.04λ = 15°). Compensate with a short digital delay on the sub channel in JAB5 — measure and dial in after build.
 
-```
-Mms_total = ρ₀c² × Sd_PR² / (Vb × (2π × Fb)²)
-          = 142,356 × 0.0178² / (0.0061 × (2π × 38)²)
-          = 45.1 / 346.6
-          = 130 g total moving mass
-```
+### Mid/tweet timing
 
-SB15SFCR-00 stock Mms not confirmed — fetch datasheet. Assuming ~40–50 g stock:
-- **Added mass required: ~80–90 g** via M6-threaded rear bolt
-- Easily achieved with steel or brass M6 washers + nuts
-
-For F3 = 35 Hz (Fb ≈ 33 Hz): Mms_total ≈ 175 g → ~125–135 g added mass (also feasible, heavier bolt stack).
-
-| Target F3 | Mms total | Estimated Madd |
-|-----------|-----------|----------------|
-| 40 Hz | 130 g | ~80–90 g |
-| 35 Hz | 175 g | ~125–135 g |
-
-Sd ratio: PR 178 cm² / Sub 94 cm² = **1.89×** — slightly below the ideal ≥2× but within workable range given the PR's larger excursion capability.
-
----
-
-## Crossover
-
-| Boundary | Frequency | Filter | Window |
-|----------|-----------|--------|--------|
-| Sub / Mid | 150 Hz | LR4 (24 dB/oct) | Fs ratio: 150/55.2 = 2.72× mid, 150/45 = 3.3× sub ✓ |
-| Mid / Tweeter | **1,500 Hz** | LR4 or LR8 | Window: 880–2,636 Hz (1,756 Hz wide); ideal √(880×2636) = 1,523 Hz |
-
-Tweeter is over-engineered for this application (100W, needs ~8W burst). No power concern whatsoever.
-
-### Acoustic timing
-
-At 1,500 Hz crossover (λ = 229 mm), physical centre offset mid→tweeter = 115 mm = 0.50λ. This creates a natural 180° acoustic path difference at the crossover frequency. Compensate in JAB5 DSP by:
-
-1. **Digital delay on tweeter channel:** 115 mm ÷ 343,000 mm/s = **0.335 ms** — advance tweeter relative to mid, or equivalently add delay to mid.
-2. Alternatively use LR8 (48 dB/oct) slopes which may self-correct through their steeper phase rotation — verify by impulse measurement after build.
-
-Sub → Mid physical offset = 155 mm at 150 Hz (λ = 2,287 mm) → 0.068λ → 24° — negligible; DSP delay not required.
+Physical offset mid→tweet = 115 mm = 0.5λ at 1,500 Hz → 0.335 ms delay on tweeter channel. Same as original design.
 
 ---
 
 ## Electronics Base
 
-JAB5 (Sure TDA7498E, 3-channel) + PSU in a separate sealed bay below the acoustic section.
+190 × 215 × 80 mm external (56 mm internal height).
 
-### Recommended PSU candidates
+LRS-150-24 (159 × 97 × 30 mm) + JAB5 board (~100 × 75 × 20 mm) — stacked (50 mm combined) fits in 56 mm with 6 mm to spare. Tight; use low-profile connectors and route cables along base walls.
 
-| PSU | Voltage | Dimensions mm | Notes |
-|-----|---------|---------------|-------|
-| Mean Well LRS-150-24 | 24V / 6.3A | 159×97×30 | Confirmed in project |
-| Mean Well LRS-200-27 | 27V / 7.4A | 175×99×30 | Closer to 29V target; wider |
-| Custom linear 29V | 29V / 5A | ~150×100×60 | Toroid + rectifier; quietest; overkill |
+Alternatively use a compact 24 V SMPS brick (e.g., Mean Well GST90A24-P1M, 155 × 50 × 30 mm) to free up more clearance.
 
-At 24V/8Ω: JAB5 delivers ~31W per channel. At 27V: ~41W per channel into 8Ω. DS115-8 needs 37.2W burst — 27V PSU covers it cleanly; 24V is marginal at peak.
-
-**Recommendation: LRS-200-27** (27V) gives headroom for DS115-8 burst without custom PSU. Size 175×99 mm fits in the 175×220 mm base footprint (just — PSU oriented with 175 mm axis across the 175 mm cabinet width, 99 mm along the depth).
-
-JAB5 + LRS-200-27 stacked height estimate:
-- PSU: 30 mm
-- JAB5 + heatsink: ~50 mm
-- Clearance + wiring: 20 mm
-- Total: ~100 mm → fits in 106 mm internal base height ✓
-
-### Base access
-
-Rear panel of base: removable (screwed, no glue) for PSU access. Speaker binding posts, XLR/RCA input, and IEC power inlet mounted on rear panel of base. Wire loom from base to acoustic section through a 25 mm hole in the divider shelf.
+Rear panel of base: removable (screwed). IEC inlet, RCA/XLR input, binding posts all rear-mounted. 25 mm cable grommet through acoustic floor to acoustic section.
 
 ---
 
-## Construction Notes
+## E150HE-PR Alternative
 
-### Baffle (front panel)
-- **18 mm MDF** — sub excursion and mass demand stiff baffle
-- All three drivers surface-mount (no rebate); DS115-8 explicitly designed for front mount
-- R2604/833000 uses 5× M4 mounting holes on 92 mm PCD at 72° spacing — use template
-- Sub: 4× M5 screws into T-nuts on basket flange (or 4× M4 per Dayton spec)
+If DS215-PR side-fitting is awkward in practice, the Epique E150HE-PR is a drop-in alternative:
 
-### Internal shelves
-- Sub/mid shelf: 12 mm MDF with DS115-8 cutout (93.6 mm) and cable pass-through
-- Mid/tweeter shelf: 12 mm MDF with R2604/833000 cutout (74 mm) and cable pass-through
-- Both shelves glued and screwed to side panels with 18×18 mm triangular glue blocks
+| Spec | DS215-PR | E150HE-PR |
+|------|----------|-----------|
+| Nominal size | 8" | 5.5" |
+| OD (est.) | 216 mm | ~165 mm |
+| Sd | 211.2 cm² | ~95 cm² |
+| Sd / sub Sd ratio | **2.25×** | **1.0×** |
+| Mms stock | 68.8 g | unknown (fetch datasheet) |
+| Xmax | 11 mm | **19 mm** |
+| Fs | 23.3 Hz | 30 Hz |
+| Price | €33 | €63 |
 
-### Bracing
-- Single cross-brace (12 mm MDF dowel or 25×25 mm rectangular batten) at mid-height of sub chamber connecting front baffle to rear panel — prevents panel resonance at sub frequencies
+The E150HE-PR's Sd ratio of 1.0× the sub is marginal — the PR must move the same peak amplitude as the sub. Its 19 mm Xmax compensates (2× the sub's Xmax), so it won't bottom out, but system efficiency at low frequencies is reduced compared to DS215-PR.
 
-### Damping
-- Sub chamber: 25 mm acoustic foam on all four side walls (NOT rear — PR must be unobstructed)
-- Mid chamber: 25 mm acoustic foam on rear and side walls; leave front clear
-- Tweeter space: small piece of acoustic wool tucked at rear corners — prevents standing waves
+Fit: at ~165 mm OD the E150HE-PR is easier to place on any panel with comfortable margins at this enclosure size.
 
-### Finish
-- Baffle: 120-grit sand, prime, 3× satin black spray (enamel); drivers protrude through paint
-- Sides/top: 0.6 mm satin black vinyl wrap or spray; matching colour to baffle
-- Base: same wrap; cable entry with small rubber grommet
+**Verdict:** DS215-PR wins acoustically and on cost. E150HE-PR is the alternative only if DS215-PR physically won't work post-build.
 
 ---
 
 ## Volume Summary
 
-| Chamber | Gross L | Net L | Driver |
-|---------|---------|-------|--------|
-| Sub | 6.31 | ~6.1 | W5-1138SMF |
-| Mid | 3.15 | ~2.8 | DS115-8 |
-| Tweeter | 2.07 | clearance | R2604/833000 |
-| Base | 3.43 | — | JAB5 + PSU |
+| Space | Gross L | Net L | Note |
+|-------|---------|-------|------|
+| Sub / PR chamber | 7.54 | ~6.0 | Single volume; sub + PR share it |
+| Mid inner box | 0.85 | 0.85 | Isolated rear chamber for DS115-8 |
+| Base | ~1.9 | — | JAB5 + PSU |
 
 ---
 
@@ -237,15 +246,25 @@ Rear panel of base: removable (screwed, no glue) for PSU access. Speaker binding
 
 | Panel | Count | Dimensions mm | Material |
 |-------|-------|---------------|----------|
-| Front baffle | 1 | 175 × 460 | 18 mm MDF |
-| Rear panel | 1 | 175 × 460 | 12 mm MDF |
-| Side panels | 2 | 220 × 460 | 12 mm MDF |
-| Top panel | 1 | 151 × 220 | 12 mm MDF |
-| Acoustic floor (= base ceiling) | 1 | 151 × 220 | 12 mm MDF |
-| Sub/mid shelf | 1 | 151 × 190 | 12 mm MDF |
-| Mid/tweet shelf | 1 | 151 × 190 | 12 mm MDF |
-| Base rear (removable) | 1 | 175 × 130 | 12 mm MDF |
-| Base sides | 2 | 220 × 130 | 12 mm MDF |
-| Base front | 1 | 175 × 130 | 12 mm MDF |
+| Front baffle | 1 | 190 × 270 | 18 mm MDF |
+| Rear panel | 1 | 190 × 270 | 12 mm MDF |
+| Side panels (sub + PR) | 2 | 215 × 270 | 12 mm MDF |
+| Top panel | 1 | 166 × 215 | 12 mm MDF |
+| Acoustic floor (= base ceiling) | 1 | 166 × 215 | 12 mm MDF |
+| Mid inner box sides (×4) + cap | 5 | various | 9 mm MDF |
+| Base rear (removable) | 1 | 190 × 80 | 12 mm MDF |
+| Base sides | 2 | 215 × 80 | 12 mm MDF |
+| Base front | 1 | 190 × 80 | 12 mm MDF |
 
-Total MDF (estimate): ~0.5 m² of 18 mm + ~1.5 m² of 12 mm.
+Mid inner box panels:
+- 2 sides: 110 × 70 mm
+- 2 sides: 128 × 70 mm (includes 9 mm wall overlap)
+- 1 cap: 128 × 128 mm
+
+---
+
+## Damping
+
+- Acoustic chamber walls (all except side panels where sub/PR mount): 25 mm acoustic foam
+- Leave the two side panels bare — foam would reduce effective box volume and block driver travel
+- Mid inner box: no lining needed at 0.85 L
