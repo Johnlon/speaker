@@ -4578,8 +4578,9 @@
         {
           "source": "willys",
           "currency": "GBP",
-          "price": 42.0,
-          "url": "https://willys-hifi.com/products/scanspeak-r2604-832000-tweeter"
+          "price": 57.0,
+          "url": "https://willys-hifi.com/products/scanspeak-r2604-832000-tweeter",
+          "note": "inc VAT"
         }
       ],
       "datasheets": []
