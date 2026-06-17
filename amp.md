@@ -56,7 +56,7 @@ With the 40,000 µF cap bank (see Option 2 below), the PSU only needs to supply 
 - **Current to confirm:** ≥ 5.1A for no cap bank; ≥ 3A with cap bank
 - **Input:** 85–264V AC (verify on listing)
 
-The Mean Well LRS-150-27 (159 × 97 × 30 mm) is 7.4 mm too deep to fit the current 215 mm cabinet side-by-side. It would require increasing cabinet depth to 225 mm external.
+**Mean Well LRS-150 series does not include a 27V or 29V variant.** Available voltages: 24V, 36V, 48V. All share the same 159 × 97 × 30 mm footprint — 7.4 mm too deep for the current 215 mm cabinet (198.4 mm needed vs 191 mm available). The LRS-150-36 is within JAB5's 10–39V supply range but delivers 138W into 4Ω — DSP limiters are critical (sub rated 80W, tweeter ~25–50W). Increasing cabinet depth to 225 mm external would make any LRS-150 variant fit.
 
 **Thermal note:** PSU in a semi-sealed base at full continuous load. At ~80W output / 87% efficiency, PSU self-dissipation is ~12W. The 80 mm base (56 mm internal) has limited natural convection. A 20 mm ventilation slot on the rear panel is recommended for sustained loud use.
 

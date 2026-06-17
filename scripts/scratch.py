@@ -74,14 +74,16 @@ print(f"Total power @101dB (burst):{total_burst:.1f} W  ->  {I_burst:.2f} A at {
 
 print()
 print("=== PSU OPTIONS ===")
-# LRS-150-27 adjusted to 29V: rated 5.56A at 27V, ~5.2A at 29V (conservative)
-psu_lrs150 = 5.2
-print(f"LRS-150-27 @ 29V:  ~{psu_lrs150}A available vs {I_burst:.2f}A burst -> {(psu_lrs150-I_burst)*1000:+.0f} mA margin  (barely sufficient, no cap bank = RISKY)")
+# No LRS-150 variant at 27V/29V exists. LRS-150-36 at 36V: 154.8W / 36V = 4.3A rated.
+# RSP-150-27 (different series, larger) at 27V trimmed to 29V: ~5.17A.
+# Using RSP-150-27 trimmed as nearest Mean Well reference.
+psu_rsp150_27 = 5.17  # 150W / 29V
+print(f"RSP-150-27 @ 29V (trimmed):  ~{psu_rsp150_27}A available vs {I_burst:.2f}A burst -> {(psu_rsp150_27-I_burst)*1000:+.0f} mA margin  (barely sufficient, no cap bank = RISKY)")
 
 # With cap bank: PSU only needs to supply RMS; caps supply burst
 psu_rms_needed = I_rms
 print(f"\nWith 4x10,000 uF cap bank (40,000 uF / 35V):")
-print(f"  PSU supplies RMS:  {psu_rms_needed:.2f} A  -- LRS-150-27 rated 5.2A, margin = {(psu_lrs150 - psu_rms_needed):.2f}A  OK")
+print(f"  PSU supplies RMS:  {psu_rms_needed:.2f} A  -- RSP-150-27 @ 29V rated ~5.17A, margin = {(psu_rsp150_27 - psu_rms_needed):.2f}A  OK")
 # Cap bank supplies burst supplement
 I_cap = I_burst - I_rms
 print(f"  Caps supply extra: {I_cap:.2f} A during transient peaks")
@@ -105,7 +107,7 @@ print(f"JAB5:          {jab5_l} x {jab5_w} x {jab5_h} mm")
 print()
 
 for psu_name, psu_l, psu_w, psu_h in [
-    ("LRS-150-27 (Mean Well)",         159.0, 97.0, 30.0),
+    ("LRS-150-36 (Mean Well, no 27/29V variant exists)", 159.0, 97.0, 30.0),
     ("AliExpress 127x83x38 (pending)", 127.0, 83.0, 38.0),
 ]:
     print(f"PSU: {psu_name}  [{psu_l} x {psu_w} x {psu_h} mm]")

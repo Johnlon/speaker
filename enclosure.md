@@ -210,12 +210,12 @@ JAB5 (121.92 × 91.44 × 45.1 mm) and PSU mounted **side by side in depth**, JAB
 
 | PSU candidate | Dimensions | Depth needed | Depth available | Fits? |
 |---------------|-----------|-------------|-----------------|-------|
-| Mean Well LRS-150-27 | 159 × 97 × 30 mm | 198.4 mm | 191 mm | **NO** — 7.4 mm short |
+| Mean Well LRS-150-36 (closest available) | 159 × 97 × 30 mm | 198.4 mm | 191 mm | **NO** — 7.4 mm short (all LRS-150 variants same footprint; no 27V/29V variant exists) |
 | AliExpress SMPS (pending spec confirm) | 127 × 83 × 38 mm | 184.4 mm | 191 mm | **YES** — 6.6 mm spare |
 
 The AliExpress unit at 127 × 83 × 38 mm is the candidate PSU. **Specs to confirm before ordering:** output voltage ≥ 27.4 V (29 V target), current rating ≥ 5.1 A (or ≥ 3.0 A with cap bank — see amp.md). Both PSU height (38 mm) and JAB5 height (45.1 mm) clear the 56 mm internal height.
 
-If the AliExpress unit proves inadequate, the Mean Well LRS-150-27 requires increasing cabinet depth from 215 mm to 225 mm external (191 + 7.4 mm rounded up + rounding).
+If the AliExpress unit proves inadequate, any LRS-150 variant (no 27V/29V exists — nearest is LRS-150-36 at 36V) requires increasing cabinet depth to 225 mm external. At 36V, DSP channel limiters are mandatory (138W available vs 80W sub limit).
 
 Rear panel of base: removable (screwed). IEC inlet, RCA/XLR input, binding posts all rear-mounted. 25 mm cable grommet through acoustic floor to acoustic section.
 
