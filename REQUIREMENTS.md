@@ -102,6 +102,7 @@ Source: [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb15sfcr-00.h
 | Bluetooth | BT5.0, aptX HD |
 | THD | 0.07% (rated) |
 | Idle current | ~0.5A |
+| Board dimensions | **121.92 × 91.44 × 45.1 mm** (L × W × H, H = component height) |
 
 **Available power per channel (Class D H-bridge: P = V²/2R × 0.85):**
 
@@ -126,7 +127,7 @@ Datasheet: [research/jab5_datasheet.pdf](research/jab5_datasheet.pdf)
 | Width | ~190 mm (baffle) |
 | Depth | ~130–140 mm (Google Home Max reference) |
 | Height | Up to GHM height + ~5 cm (~270 mm maximum) |
-| Electronics vault (base) | 26 mm height allocated for PSU and wiring |
+| Electronics vault (base) | **80 mm external / 56 mm internal** (12 mm MDF floor + ceiling); houses JAB5 + PSU side by side |
 
 - All drivers surface-mounted proud of the baffle — no flush-recessing
 - Layout: Option A or Option B (see Passive Radiator above — racetrack shape constrains this)
