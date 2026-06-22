@@ -87,7 +87,7 @@ Researched June 2026. All URLs fetched via WebFetch.
 | Vifa D27TG-35-06 | Tweeter | **£38.40** | 104mm face — vs Falcon £28.35, Willys £27.52 (£10+ more) |
 | Scanspeak D2606/9200.00 | Tweeter | **£40.49** | Discovery — vs Falcon £29.35 (£11 more) |
 | Scanspeak D2604/8330.00 | Tweeter | **£54.68** | Discovery |
-| Scanspeak R2604/8320.00 | Tweeter | **£56.60** | Discovery ring radiator |
+| Scanspeak R2604/8320.00 | Tweeter | **£56.60** | Discovery ring radiator — INELIGIBLE (poor 60° off-axis) |
 | Scanspeak D2905/9300.00 | Tweeter | **£138.91** | Classic — over budget |
 | Scanspeak Illuminator/Revelator | Tweeter | £131–£507 | Way over budget |
 | Fountek NeoCD 1.0 | Ribbon tweeter | **£100.80** | 100mm face — over budget but noted for future |
@@ -150,13 +150,13 @@ Researched June 2026. All URLs fetched via WebFetch.
 | DX25TG59-04 | Tweeter candidate | **£20.85** | In stock | UK stock confirmed; Fs 622 Hz, silk dome |
 | D27TG-35-06 | Tweeter candidate | **£28.35** | In stock | 104mm face, 6Ω, silk dome, Fs 728 Hz |
 | Scanspeak D2606/920000 | Tweeter candidate | **£29.35** | In stock | Consistent with Wilmslow price |
-| XT25SC90-04 | Tweeter — ring radiator | **£18.20** | In stock | See note below |
+| XT25SC90-04 | Tweeter — ring radiator (INELIGIBLE) | **£18.20** | In stock | See note below |
 | SB26ADC-C000-4 | Tweeter | £32.95 | **Out of stock** | |
 | Peerless NE85W-04 | Mid (full range, 2.5") | £31.40 | In stock | Fs 105 Hz — marginal at 150 Hz xover |
 | Peerless NE95W-04 | Mid (full range, 3") | £43.70 | In stock | Fs 103 Hz — marginal at 150 Hz xover |
 | SEAS MCA12RC/P H1186-04 | Mid (4.7", 4Ω) | £40.55 | In stock | Prestige range — unconfirmed visual |
 
-**XT25SC90-04 note:** Ring radiator design (not fabric dome). Fs 825 Hz (min xover 1,650 Hz), 90.1 dB, 100W, 4Ω, ~90mm face. Excellent off-axis characteristics typical of ring radiators. **Visual check needed** — ring radiators have a distinctive annular appearance; face colour unknown (may be silver). Only consider if visual is acceptable.
+**XT25SC90-04 note:** Ring radiator design (not fabric dome). Fs 825 Hz (min xover 1,650 Hz), 90.1 dB, 100W, 4Ω, ~90mm face. **INELIGIBLE** — ring radiators measure horn-like at 60° off-axis (RAW-CAt Tweeter Shootout Part 6, Nov 2025), disqualifying for the 60° kitchen geometry.
 
 **Category URLs that work (use /drive-units-1/ prefix):**
 - https://www.falconacoustics.co.uk/drive-units-1/sb-acoustics/sb-acoustics-tweeters.html

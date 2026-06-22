@@ -31,7 +31,7 @@ Three shape classes, one best pick each.
 
 | ID | Mid | Tweeter | Crossover | Price | PSU | Character | Why |
 |----|-----|---------|-----------|-------|-----|-----------|-----|
-| **V-RR** | DS115-8 · 8Ω · 85.3 dB · 116mm OD | XT25TG30-04 · 4Ω · 91.9 dB · ring rad · 104mm OD | 1,670 Hz · moderate · 0.68 oct · **ROUND** | £32 + £43 = **£75** | 29V / 4.6A burst | Warm + airy | Both round frames — clean matched aesthetic. Ring rad gives wide throw. Limiter needed (16.3W vs 15W rated — 0.35 dB at burst, set in ADAU1701). |
+| ~~V-RR~~ | DS115-8 | XT25TG30-04 (ring rad) | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6).** Round-frame slot needs a round soft-dome replacement — reselection pending. |
 | **V-SQ** | DS115-8 · 8Ω · 85.3 dB · 116mm OD | MDT22T · 8Ω · 89 dB · square 54×54mm | 1,949 Hz · **tight** · 0.23 oct · **SQUARE ACCENT** | £32 + ? = TBD | 29V / 4.1A burst | Warm + punchy | Only viable square-face tweeter. Striking contrast: large round cone vs small square dome. **Tight window — measure and iterate; datasheet FR floor 1,800 Hz gives 0.23 oct.** 80W MDT22T demand is 15.9W, comfortable. 85mm centre spacing. |
 | **V-MX** | DS115-8 · 8Ω · 85.3 dB · 116mm OD | SB29SDNC · 4Ω · 95.5 dB · 72mm ring dome | 1,969 Hz · tight · 0.11 oct · **MIXED** | £32 + ? = TBD | 29V / 4.1A burst | Warm + extended | Noticeably small tweeter face vs large round cone — industrial minimalist look. 95.5 dB sens means only 7.1W at burst (zero stress). Very tight window same as V-SQ — needs precise DSP. |
 
@@ -41,13 +41,15 @@ Three shape classes, one best pick each.
 
 ## Scenario 2 — Best for 60° off-axis (kitchen / cooker)
 
-Ring radiator mandatory. Ranked by: off-axis dispersion → crossover window → headroom.
+**Small soft-dome mandatory; ring radiators are INELIGIBLE.** Measured 60° off-axis dispersion of ring radiators is horn-like — large deviation by 30°, severe HF rolloff by 60° (RAW-CAt Ultimate Tweeter Shootout Part 6, Nov 2025). Small physical dome diameter is the strongest predictor of wide off-axis dispersion. Rank by: measured 60° off-axis → crossover window → headroom.
 
-| ID | Mid | Tweeter | Crossover | Price | PSU | Character | Why |
-|----|-----|---------|-----------|-------|-----|-----------|-----|
-| **OA-1** | DS115-8 · 8Ω · 85.3 dB · 116mm OD | **R2604/833000** · 4Ω · 92 dB · ring rad · 100W | 1,670 Hz · **moderate** · 0.68 oct | £32 + £48 (Willys) = **£80** | 29V / 4.6A burst | Warm + airy | Top pick. Ring rad with 100W rating — **no DSP limiter ever needed** (15.9W burst demand). Widest crossover window of any ring rad combo. Paper cone warmth + Scan-Speak ring rad detail. Moderate window = most DSP-forgiving alignment. Willys £47.79; SI £62. |
-| **OA-2** | DS115-8 · 8Ω · 85.3 dB · 116mm OD | **XT25TG30-04** · 4Ω · 91.9 dB · ring rad · 15W | 1,670 Hz · moderate · 0.68 oct | £32 + £43 = **£75** | 29V / 4.6A burst | Warm + airy | Same crossover window as OA-1, £19 cheaper. 16.3W burst demand vs 15W rated — set DSP limiter at 100.6 dB (0.4 dB below burst ceiling, inaudible in practice). Same wide dispersion character. |
-| **OA-3** | SB12PFCR25-4 · 4Ω · 87.5 dB · 122mm OD | **XT25BG60-04** · 4Ω · 92.6 dB · ring rad · 15W | 1,938 Hz · tight · 0.36 oct | ? + ? = TBD | 29V / 4.8A burst | Natural + open | **Only ring rad pair that is fully safe at burst without any limiter** (13.9W vs 15W rated). Natural fibre cone. Tighter crossover window than OA-1/2 — precision DSP needed, but ADAU1701 is adequate. Mid burst demand (44.8W vs 30W rated) is transient-only; SPL limiter covers it. |
+> **Reselection pending.** The previous picks here (OA-1/2/3) were all ring radiators and are withdrawn — see below. This scenario must be repopulated from the 60°-validated small domes in drivers.md (e.g. SB19ST has a confirmed 60° curve at −5–6 dB @ 13 kHz; ND16FA-4 has the best measured 45° off-axis in the field). Do not substitute another ring radiator.
+
+| ID | Mid | Tweeter | Status |
+|----|-----|---------|--------|
+| ~~OA-1~~ | DS115-8 | R2604/833000 (ring rad) | **INELIGIBLE — ring radiator (poor 60° off-axis)** |
+| ~~OA-2~~ | DS115-8 | XT25TG30-04 (ring rad) | **INELIGIBLE — ring radiator (poor 60° off-axis)** |
+| ~~OA-3~~ | SB12PFCR25-4 | XT25BG60-04 (ring rad) | **INELIGIBLE — ring radiator (poor 60° off-axis)** |
 
 ---
 

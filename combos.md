@@ -2,6 +2,8 @@
 
 Exhaustive record of every evaluated mid+tweeter pairing. One row per combination. Per-driver data (sensitivity, power, Fs, etc.) is in [drivers.md](drivers.md). Curated recommendations are in [solutions.html](solutions.html).
 
+> **⛔ Ring-radiator tweeters are INELIGIBLE — every pairing that uses one is disqualified.** Measured 60° off-axis dispersion of ring radiators is horn-like (large deviation by 30°, severe HF rolloff by 60° — RAW-CAt Ultimate Tweeter Shootout Part 6, Nov 2025), which fails the 60° kitchen listening geometry. Ineligible tweeter models: **XT25TG30-04, XT25BG60-04, XT25SC90-04, XT25SC40-04, XT19TD00-04, R2604/833000, R2604/832000, R3004/602010, SB21RDC-C000-4, SB21RDCN-C000-4.** Any row below pairing one of these (RR/RP/XBG/XC/XCR/XT19 series and the X-matrix columns for those tweeters) is void regardless of its window/power figures. "Ring dome" tweeters (SB29SDAC/RDAC/RDC/RDNC, SB21SDC) are a separate construction and remain eligible, but carry no off-axis advantage.
+
 ---
 
 ## System Reference
@@ -56,11 +58,11 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 
 | Tweeter | Min xover | FP OD mm | Sens dB | Power W |
 |---------|-----------|----------|---------|---------|
-| R2604/833000 | 880 Hz | ~104 | 92 | **100** |
-| XT25TG30-04 | 880 Hz | 104 | 91.9 | 15 |
-| R2604/832000 | 1,000 Hz | ~104 | 90 | **100** |
+| ~~R2604/833000~~ | — | ~104 | 92 | 100 | **INELIGIBLE — ring radiator** |
+| ~~XT25TG30-04~~ | — | 104 | 91.9 | 15 | **INELIGIBLE — ring radiator** |
+| ~~R2604/832000~~ | — | ~104 | 90 | 100 | **INELIGIBLE — ring radiator** |
 | H1189-06 | 1,100 Hz | 103.8 | 90 | **90** |
-| XT25BG60-04 | 1,140 Hz | 104.5 | 92.6 | 15 |
+| ~~XT25BG60-04~~ | — | 104.5 | 92.6 | 15 | **INELIGIBLE — ring radiator** |
 | DX25TG59-04 | 1,180 Hz | 104 | 93.4 | 15 |
 | SB29SDAC | 1,200 Hz | ~104 | ~91 | ~30 |
 | SB29RDNC-C000-4 | 1,160 Hz | ~104 | 94 | 100 |
@@ -73,15 +75,15 @@ Beaming limit: f = 34400 / (π × √(Sd/π)) Hz, where Sd in cm².
 | CF18N-4 | 2,200 Hz | 58 | 90 | 40 |
 | TD25F-4 | 1,800 Hz | 93.5 | 91 | 20 |
 | DA25BG08-06 | 1,420 Hz | 104 | 91.6 | 15 |
-| XT25SC90-04 | 1,650 Hz | ~90 | 90.1 | 100 |
-| XT19TD00-04 | 1,640 Hz | 94 | 88.9 | 20 |
+| ~~XT25SC90-04~~ | — | ~90 | 90.1 | 100 | **INELIGIBLE — ring radiator** |
+| ~~XT19TD00-04~~ | — | 94 | 88.9 | 20 | **INELIGIBLE — ring radiator** |
 | SB19ST | 1,960 Hz | 88 | 88.5 | 30 |
 | SB26STCN-C000-4 | 1,900 Hz | 72 | 92 | 120 |
 | DT-28N | 2,400 Hz | ~72 | ~92 | 50 |
 | HiVi TN28-B | 2,600 Hz | 47.6 | 90 | 15 |
 | ND25FA-4 | 2,700 Hz | 66 | 90 | 20 |
 | HiVi TN25 | 3,000 Hz | 54×54sq | 91 | 20 |
-| XT25SC40-04 (ring rad) | 2,036 Hz | 43.9 | 94 | 100 |
+| ~~XT25SC40-04~~ | — | 43.9 | 94 | 100 | **INELIGIBLE — ring radiator** |
 | Markaudio TW 6 | 3,400 Hz | ~90 | — | — |
 | BC25SC06-04 | 2,700 Hz | ~70 | 95.4 | 50 |
 | SEAS H1211-06 | 1,800 Hz | 103.8 | 91 | 90 |
@@ -122,13 +124,13 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | B11 | DSA90-8 | DT-28N | 2,400–3,475 | 2,583 | ~82 | £65 | 24V/3.2A/76W / 29V/4.1A/118W | Detailed | DSA90-8 £29.71 (SI €34.95); DT-28N £34.81 (SI €40.95); Compact waveguide; ⚠ marginal [0.2 oct]; tweeter at 2.2×Fs — THD concern |
 | B10 | DSA90-8 | ND25FA-4 | 2,700–3,475 | 2,740 | 79 | £48 | 24V/3.6A/86W / 29V/4.4A/128W | Detailed | DSA90-8 £29.71 (SI €34.95); ND25FA-4 £18.23 (SI €21.45); Minimum round spacing; ⚠ marginal [0.0 oct]; tweeter at 2.0×Fs — THD concern |
 | B12 | SLS-85S25CP04-04 | DT-28N | 2,400–3,420 | 2,562 | ~82 | £60 | 24V/3.6A/86W / 28V/4.6A/128W | Warm | SLS-85S25CP04-04 £25.46 (SI €29.95); DT-28N £34.81 (SI €40.95); Oval mid; 86 dB → sub-limited at burst; ⚠ marginal [0.2 oct]; tweeter at 2.1×Fs — THD concern |
-| RR1 | DS115-8 | XT25TG30-04 | 880–2,636 | 1,668 | 113 | £61 | 24V/3.3A/79W / 28V/4.3A/121W | Warm + wide | DS115-8 £31.41 (SI €36.95); XT25TG30-04 £29.90 (Falcon); Best ring radiator; widest xover window; moderate [0.7 oct]; tweeter at 3.8×Fs |
-| RR2 | SB12PFCR25-4 | XT25TG30-04 | 880–2,730 | 1,698 | 116 | £50 | 24V/3.4A/83W / 28V/4.4A/125W | Warm + wide | Best value ring radiator; SB12PFCR £20.58 Willys + XT25TG30 £29.90 Falcon; moderate [0.7 oct]; tweeter at 3.9×Fs |
-| RR3 | SB12MNRX2-25-4 | XT25TG30-04 | 880–2,730 | 1,698 | 116 | £78 | 24V/2.9A/70W / 28V/4.0A/112W | Warm + wide | Ring radiator + highest headroom; MNRX2 £48.10 Willys; XT25TG30 £29.90 Falcon; moderate [0.7 oct]; tweeter at 3.9×Fs |
-| RR4 | DSA90-8 | XT25SC90-04 | 1,650–3,475 | 2,623 | 91 | £48 | 24V/3.6A/86W / 29V/4.4A/128W | Detailed + wide | Cheapest ring radiator; XT25SC90 £18.20 Falcon / £19.52 Willys; tight [0.2 oct]; tweeter at 3.2×Fs |
-| RR4B | SB12PFCR25-4 | XT25SC90-04 | 1,650–2,730 | 1,898 | 106 | £39 | 24V/3.6A/87W / 28V/4.6A/129W | Warm + wide | Cheapest ring rad + nat. fibre; SB12PFCR £20.58 + XT25SC90 £19.52 Willys; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
-| RR4C | DS115-8 | XT25SC90-04 | 1,650–2,636 | 1,865 | 103 | £50 | 24V/3.5A/83W / 28V/4.5A/125W | Warm + wide | Paper warmth + ring rad; XT25SC90 £18.20 Falcon / £19.52 Willys; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
-| RR5 | SIG150-4 | XT25TG30-04 | 880–1,990 | 1,450 | 140 | £68 | 24V/2.9A/70W / 28V/4.0A/112W | Neutral | SIG150-4 £38.21 (SI €44.95); XT25TG30-04 £29.90 (Falcon); Only tweeter that works with SIG150-4; tight [0.3 oct]; tweeter at 3.3×Fs |
+| ~~RR1~~ | DS115-8 | XT25TG30-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR2~~ | SB12PFCR25-4 | XT25TG30-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR3~~ | SB12MNRX2-25-4 | XT25TG30-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR4~~ | DSA90-8 | XT25SC90-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR4B~~ | SB12PFCR25-4 | XT25SC90-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR4C~~ | DS115-8 | XT25SC90-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~RR5~~ | SIG150-4 | XT25TG30-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
 | RR6 | DS115-8 | SB29SDAC | 1,200–2,636 | 1,948 | ~110 | £66 | 24V/3.2A/77W / 28V/4.2A/119W | Warm + ring dome | DS115-8 £31.41 (SI €36.95); SB29SDAC £34.30 (Willys); Ring dome + paper warmth; tight [0.2 oct]; tweeter at 3.2×Fs |
 | C1 | RS100-8 | SB19ST | 1,960–3270,900 | 2,264 | — | £56 | 24V/3.8A/92W / 29V/4.6A/134W | Detailed | RS100-8 £41.61 (SI €48.95); SB19ST £14.30 (Falcon); Fs 1.63× at 150 Hz — marginal; 84.6 dB → mid-limited at burst; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
 | C3 | TF0510 | SB19ST | 1,960–2,190 | 1,856 | — | ~45 | 24V/3.1A/75W / 28V/4.2A/117W | Natural | ⚠ PA-grade driver — Celestion Truvox pressed-steel; Fs=128Hz (resonates inside sub/mid passband at 150Hz xover); Sd=78.5cm²; Xmax=2.4mm; ⚠ INCOMPATIBLE — tweeter 2×Fs (1960 Hz) > mid 80% beam (1752 Hz) |
@@ -215,14 +217,14 @@ PSU = "RMS min / Burst min". `*` = mid reaches ~100.3 dB max even at 36V (JAB5 c
 | XBG1 | DS115-8 | XT25BG60-04 | 1,140–2,636 | 1,899 | 110 | £69 | 24V/3.2A/78W / 28V/4.3A/120W | Warm + wide | DS115-8 £31.41 (SI €36.95); XT25BG60-04 £37.14 (Willys); Ring rad; SI-stocked (vs XT25TG30 pre-order); widest window std-stock ring rad; tight [0.3 oct]; tweeter at 3.3×Fs |
 | XBG2 | SB12PFCR25-4 | XT25BG60-04 | 1,140–2,730 | 1,933 | ~110 | £58 | 24V/3.4A/81W / 28V/4.4A/123W | Warm nat. + wide | SB12PFCR25-4 £20.58 (Willys); XT25BG60-04 £37.14 (Willys); SI-stocked ring rad alt to RR2 (XT25TG30 pre-order only at SI); nat. fibre warmth; tight [0.4 oct]; tweeter at 3.4×Fs |
 | XBG3 | DSA90-8 | XT25BG60-04 | 1,140–3,475 | 2,180 | 98 | £67 | 24V/3.3A/80W / 29V/4.2A/123W | Detailed + wide | DSA90-8 £29.71 (SI €34.95); XT25BG60-04 £37.14 (Willys); Widest xover window of any DSA90-8 pairing; ring rad off-axis; moderate [0.7 oct]; tweeter at 3.8×Fs |
-| XC1 | DSA90-8 | XT25SC40-04 | 2,036–3,475 | 2,379 | 68 | £55 | 24V/3.3A/78W / 29V/4.2A/121W | Detailed + wide | DSA90-8 £29.71 (SI €34.95); XT25SC40-04 £25.46 (SI €29.95); Absolute minimum spacing (68 mm); ring rad dispersion; 100W; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
-| XC2 | DS115-8 | XT25SC40-04 | 2,036–2,636 | 2,072 | 80 | £57 | 24V/3.2A/76W / 28V/4.2A/118W | Warm + wide | DS115-8 £31.41 (SI €36.95); XT25SC40-04 £25.46 (SI €29.95); Paper warmth + ultra-compact ring rad; ~600 Hz xover window; ⚠ marginal [0.1 oct]; tweeter at 2.0×Fs — THD concern |
-| XC3 | SB12PFCR25-4 | XT25SC40-04 | 2,036–2,730 | 2,109 | 83 | £46 | 24V/3.3A/79W / 28V/4.3A/121W | Warm + wide | SB12PFCR25-4 £20.58 (Willys); XT25SC40-04 £25.46 (SI €29.95); Best value ultra-compact ring rad; nat. fibre + 43.9mm ring rad; ⚠ marginal [0.1 oct]; tweeter at 2.1×Fs — THD concern |
-| XCR1 | DSA90-8 | SB21RDCN-C000-4 | 1,700–3,475 | 2,663 | 75 | £71 | 24V/3.6A/88W / 29V/4.5A/130W | Detailed + ring dome | DSA90-8 £29.71 (SI €34.95); SB21RDCN-C000-4 £41.60 (Willys); 1,560Hz window; 75mm spacing; most compact ring dome; tight [0.1 oct]; tweeter at 3.1×Fs |
-| XCR2 | DS115-8 | SB21RDCN-C000-4 | 1,700–2,636 | 1,893 | 87 | £73 | 24V/3.5A/85W / 28V/4.5A/127W | Warm + ring dome | DS115-8 £31.41 (SI €36.95); SB21RDCN-C000-4 £41.60 (Willys); 936Hz window; 87mm spacing; premium compact ring dome; ⚠ marginal [0.3 oct]; tweeter at 2.2×Fs — THD concern |
-| XCR3 | SB12PFCR25-4 | SB21RDCN-C000-4 | 1,700–2,730 | 1,927 | 90 | £62 | 24V/3.7A/89W / 28V/4.7A/131W | Warm nat. + ring dome | SB12PFCR25-4 £20.58 (Willys); SB21RDCN-C000-4 £41.60 (Willys); 1,030Hz window; 90mm spacing; best value compact ring dome; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
-| XT19_1 | DSA90-8 | XT19TD00-04 | 1,640–3,475 | 2,615 | 93 | £59 | 24V/3.7A/90W / 29V/4.6A/132W* | Detailed + ring | DSA90-8 £29.71 (SI €34.95); XT19TD00-04 £29.71 (SI €34.95); 19mm ring rad; 93mm spacing; burst needs 32.4W (4Ω correction) vs 20W rated — DSP limiter at 18W caps tweeter to 98.9dB (2.1dB gap to sub burst — audible HF compression); tight [0.2 oct]; tweeter at 3.2×Fs |
-| XT19_2 | SB12PFCR25-4 | XT19TD00-04 | 1,640–2,730 | 1,893 | 108 | £50 | 24V/3.8A/91W / 28V/4.7A/133W* | Warm + ring | SB12PFCR25-4 £20.58 (Willys); XT19TD00-04 £29.71 (SI €34.95); 19mm ring; 1090Hz window; same 2.1dB HF ceiling at burst; DSP limiter essential; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
+| ~~XC1~~ | DSA90-8 | XT25SC40-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XC2~~ | DS115-8 | XT25SC40-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XC3~~ | SB12PFCR25-4 | XT25SC40-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XCR1~~ | DSA90-8 | SB21RDCN-C000-4 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XCR2~~ | DS115-8 | SB21RDCN-C000-4 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XCR3~~ | SB12PFCR25-4 | SB21RDCN-C000-4 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XT19_1~~ | DSA90-8 | XT19TD00-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
+| ~~XT19_2~~ | SB12PFCR25-4 | XT19TD00-04 | — | — | — | — | — | — | **INELIGIBLE — ring radiator (poor 60° off-axis, RAW-CAt Part 6)** |
 | XT19_3 | DS115-8 | XT19TD00-04 | 1,640–2,636 | 1,860 | 105 | £61 | 24V/3.6A/87W / 28V/4.6A/129W* | Warm + ring | DS115-8 £31.41 (SI €36.95); XT19TD00-04 £29.71 (SI €34.95); 19mm ring + paper warmth; 996Hz window; burst ceiling 98.9dB; SB19ST (100dB cap) or XT25TG30 preferred; ⚠ marginal [0.4 oct]; tweeter at 2.3×Fs — THD concern |
 | TF4 | DSA90-8 | SEAS H1211-06 | 1,800–3,475 | 2,740 | 98 | £76 | 24V/3.3A/79W / 29V/4.2A/121W | Detailed + dome 90W | **⚠ H1211 OOS (Jun 2026)** — HFC £46.70 no other UK source; DSA90-8 £29.71 (SI €34.95); 1,460Hz window; 27mm SEAS cloth 6Ω; tight [0.0 oct]; tweeter at 3.0×Fs |
 | TF5 | DS115-8 | SEAS H1211-06 | 1,800–2,636 | 1,948 | 110 | £78 | 24V/3.2A/76W / 28V/4.2A/118W | Warm + dome 90W | **⚠ H1211 OOS** — HFC £46.70; DS115-8 £31.41 (SI €36.95); 836Hz window; ⚠ marginal [0.2 oct]; tweeter at 2.2×Fs — THD concern |
