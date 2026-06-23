@@ -6,6 +6,37 @@ One entry per driver. Status: **Locked** / **Candidate** / **Rejected**.
 
 ---
 
+## ✅ SELECTED SYSTEM (June 2026)
+
+| Role | Driver | Key specs | Why |
+|------|--------|-----------|-----|
+| **Sub** | Tang Band **W5-1138SMF** | 85 dB, 40 W→98 dB / 80 W→101 dB, Fs 45, Xmax 9.25 mm, 4Ω | Locked anchor; sets the system output ceiling |
+| **PR** | SB Acoustics **SB15SFCR-00** | racetrack, Sd 178 cm² (1.9× sub) | Tunes the sealed sub box; side/rear mount |
+| **Mid** | SB Acoustics **SB12MNRX2-25-4** | **90.5 dB, 50 W, Fs 63.5, Xmax ±2.2 mm, Sd 50, 4Ω** | **Only 4" mid that matches the W5 burst** (max 104.5 dB) |
+| **Tweeter** | SB Acoustics **SB19ST-C000-4** | **88.5 dB, 30 W, Fs 980, 4Ω, Ø88/Ø60** | Best-reputation 19 mm dome; adequate 60°; cheap |
+
+**Crossovers (DSP, JAB5/ADAU1701):** sub→mid **150 Hz LR**; mid→tweeter **~2 kHz LR4 (24 dB/oct)**. Electronics: Sure JAB5 on 36 V PSU.
+
+### Justification
+
+**Governing requirement — match the W5 output** (98 dB @40 W RMS / 101 dB @80 W burst):
+- **Mid:** Max SPL = sens + 10·log₁₀(P/P_ref). SB12MNRX2-25-4 = 90.5 + 10·log₁₀(50/2) = **104.5 dB** → covers the 101 dB burst by +3.5 dB. It is the **only 4" mid that reaches burst**; SB12PFCR25-4 / SB12NRX25-4 (87.5 dB/30 W) are power-limited at **99.3 dB (−1.7 dB)**, HiVi B4N (85/25) at 99.0. MNRX2 matches via sensitivity+power; its modest ±2.2 mm Xmax is still excursion-OK at the 150 Hz crossover (~105 dB at 150 Hz).
+- **Tweeter:** SB19ST = 88.5 + 10·log₁₀(30/2) = **100.3 dB** (0.7 dB under burst — treble burst energy trivial → effectively matched).
+
+**Crossover integrity:** mid Fs 63.5 → 150 Hz = **2.36×** (≥2× safe); mid beams ~2,730 Hz, tweeter safe min 2×Fs = 1,960 Hz → clean **~2 kHz LR4** window (1,960–2,180 Hz).
+
+**Tweeter choice (SB19ST) — why over the alternatives:**
+- Eliminated: **ring radiators** (R2604/XT25/etc.) ineligible — horn-like 60° off-axis (RAW-CAt Part 6); **NE19VTS-04** out — conflicting datasheets (88.3 vs 90.4 dB, 100 vs 20 W); **SB29RDNC** out — massive 60° top-octave dropout (owner-confirmed); **SB29SDAC** cliffs at 12 kHz; **ND13/16/20FA, PTMini** crossover-blocked (Fs too high → 4+ kHz min xover above any mid's beam); **Monacor DT-100/DT-28N** no off-axis data.
+- Survivors were SB19ST / SB21SDCN / DC28FT (all fine off-axis per Zaph: 3/4" domes droop little; top-octave-at-60° is low priority). SB19ST chosen for **reputation + value** (Parts-Express test "near perfect to 30°"; "bargain"; £14–18) and owner preference; SB21SDCN is the compact runner-up (has independent HiFiCompass data).
+
+### Evidence
+- Off-axis / shootout / opinion analysis: [research/tweeter_offaxis_evidence.md](research/tweeter_offaxis_evidence.md) (UTS shootout, Zaph, HiFiCompass, datasheet polars read at 400 DPI).
+- Datasheets: `research/speakers/` (SB19ST, SB21SDCN, SB12MNRX2, W5, etc.).
+- FRD data store: `research/speakers/datafiles/` (Dayton official; SB19ST/SB21SDCN digitised).
+- Datasheet-trust caveats: SB sheets read ~15° optimistic on angle; Dayton sheets over-smoothed — see evidence file.
+
+---
+
 ## Power at Reference SPL — All Candidates
 
 Sub at 40W → 98 dB @1m (RMS reference). Sub at 80W → 101 dB @1m (burst ceiling).
@@ -31,7 +62,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 ## Subwoofer
 
 ### Tang Band W5-1138SMF — LOCKED
-- Role: **SUB** | Size: 5.25" | Frame OD: 133.3 mm (6.14" OD) | Impedance: 4Ω
+- Role: **SUB** | Size: 5.25" | Frame OD: **155.8 mm** (datasheet drawing; cutout Ø120 mm) | Impedance: 4Ω
 - Sensitivity: **85 dB @ 2.83V/1m** | Xmax: 9.25 mm | Power: 40W RMS / 80W max
 - Fs: 45 Hz | Qts: 0.49 | Vas: 0.17 ft³ (4.81 L) | Sd: 94 cm² | Re: 3.4Ω
 - Frequency range: 45–1,500 Hz | Sealed F3: 73 Hz | Vented F3: 35 Hz
@@ -117,7 +148,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power at reference:** 98 dB → 12.3W (12.3% of 100W ✓) | burst 101 dB → 24.5W (24.5% ✓). Large power headroom.
 - **Ineligible — off-axis:** Ring radiator. Strong on paper (Fs 825 Hz, 100W, cheapest-but-one at £18.20), but its 60° off-axis dispersion is horn-like (RAW-CAt Tweeter Shootout Part 6, Nov 2025) — disqualifying for the 60° kitchen geometry.
 
-### SB Acoustics SB19ST-C000-4 — Candidate
+### SB Acoustics SB19ST-C000-4 — ✅ SELECTED (tweeter) — see Selected System at top
 - Role: **HIGH** | Dome: 19 mm fine weave soft fabric | Faceplate OD: **88 mm** | Cutout: **60 mm** | Depth: **21 mm** | Bolt circle: 78 mm | 4× M4 holes | Impedance: 4Ω
 - Sensitivity: 88.5 dB @ 2.83V/1m | Power: **30W RMS** | Fs: **980 Hz** | Re: 3.4Ω | Le: 0.07 mH | Sd: 3.8 cm² | Qts: 1.22 | Qes: 1.50 | Qms: 6.45 | Bl: 1.75 Tm | Mms: 0.22 g | B: 1.24 T
 - **Source:** [SoundImports product page](https://www.soundimports.eu/en/sb-acoustics-sb19st-c000-4.html) (specs fetched June 2026)
@@ -267,6 +298,18 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Available @ 24V into 8Ω:** ~31W >> 15.9W ✓ | PSU: 24V / 28V (sub-limited).
 - **Why retain:** Unique 54mm square faceplate + 19mm depth = most compact square tweeter, zero rear-chamber concern. Fs 1,000 Hz → min xover 2,000 Hz.
 
+### Dayton Audio ND13FA-4 — Candidate (high-xover, wide dispersion) | needs a high-beaming mid OR on-axis-leaning use
+- Role: **HIGH** | Dome: 1/2" (13 mm) soft dome | **Mount: front pressfit, compact faceplate** | Impedance: 4Ω | Re: 3.07Ω | Le: 0.02 mH | Qts: 0.84 | VC: 12.7 mm
+- Sensitivity: **88.5 dB @ 2.83V/1m** | Power: **20W RMS** | **Fs: 2,832 Hz** | Usable: 4,500–20,000 Hz
+- **Source:** [Dayton datasheet (doc.soundimports.nl)](https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/ND13FA-4/pdf_Dayton%20Audio_ND13FA-4_1.pdf) (owner-supplied params, June 2026)
+- **Off-axis:** Datasheet polar shows **0°/15°/30°/45° only — no 60° curve.** Owner reads it as very even dispersion; verified even to 45° (smallest 13 mm dome → widest dispersion, as expected). 60° not on the datasheet → unverified for our 60° gate.
+- **Power check (4Ω, p_ref = 2W):** 98 dB needs **17.8W (89% of 20W — no headroom)**; burst 101 dB needs **35.6W — far exceeds 20W** → hard DSP limiter, tweeter SPL-capped. Power-marginal even before the crossover problem.
+- **Crossover:** Fs 2,832 Hz → wants a ~4.5–5 kHz crossover (datasheet usable from 4,500 Hz). That is above where a 4" mid beams, so it is only a problem for a **60°-flat-power** target — NOT on-axis.
+- **Real-world data point (DIY, [FB DIY Loudspeaker group](https://www.facebook.com/groups/DIYLoudspeakerProjecPad/posts/1871934119829083/), June 2026):** **SB12PFCR25-4 + ND13FA-4, first-order at 5 kHz, no L-pad — reported to work brilliantly.** This is an on-axis listening verdict and is consistent with the physics: the 4" is flat on-axis to 5 kHz; only the wide-angle response softens.
+- **60° off-axis status — UNVERIFIED (no measured polar; datasheet shows 0/15/30/45° only).** Rigid-piston *estimate* for the SB12PFCR25-4 mid at 60°: ~−4 dB @ 3 k, −8 dB @ 4 k, −14 dB @ 5 k — a sloping droop, not a void, and real paper cones disperse wider than the piston model (breakup decouples the cone), so true droop is likely less. Confirm with a measured 60° polar before treating the combo as 60°-validated.
+- **Net:** earlier "incompatible" label was wrong — it assumed a 60°-flat-power target. Viable and builder-proven on-axis; the open question is solely the degree of 3–5 kHz softening at a true 60°.
+- **Crossover point / slope (DSP):** datasheet "usable from 4,500 Hz" is a gentle-slope guideline; the real limit is drive at Fs (2,832 Hz). Filter math: 1st-order @ 5 kHz leaves −6 dB at Fs; 1st-order @ 4 kHz −4.8 dB; **LR4 (24 dB/oct) @ 4 kHz ≈ −13 dB; LR4 @ 4.5 kHz ≈ −16 dB.** With the JAB5/ADAU1701, an **LR4 high-pass at ~4–4.5 kHz** protects the tweeter better than the FB build's 5 kHz first-order AND keeps the mid less beamed. Do not copy the passive first-order. Filter figures are math, not a THD measurement — confirm the safe floor with a distortion sweep at level before locking.
+
 ### Dayton Audio ND16FA-4 — ⚠ INCOMPATIBLE (crossover) | Best measured 45° off-axis of all candidates
 - Role: **HIGH** | Dome: 5/8" (16mm) soft dome | Faceplate OD: **~45mm** | Cutout: **37mm pressfit** | Depth: **14.5mm total** (2.5mm protrusion, 12mm behind baffle) | Impedance: 4Ω | Re: 3.17Ω | Le: 0.03 mH
 - Sensitivity: **93 dB @ 2.83V/1m** | Power: **30W RMS** | **Fs: 2,246 Hz** | Qms: 3.71 | Qes: 3.46 | Qts: 1.79 | Sd: N/A | Usable: 4,000–20,000 Hz
@@ -276,12 +319,73 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **⚠ INCOMPATIBLE — crossover:** Fs 2,246 Hz → 2×Fs = **4,492 Hz minimum crossover**. All mids in catalogue beam before this: DSA90-8 beams at 3,260 Hz, DS115-8 at 2,636 Hz. Gap of 1.2 kHz+ where mid is beaming and tweeter isn't playing — directivity hole at 60° exactly where needed. **Cannot be used in this 3-way design.**
 - **Power check:** 30W RMS. At 98 dB: 6.3W (21% ✓). At burst 101 dB: 12.6W (42% ✓) — marginal but OK.
 
+### Dayton Audio ND16FA-6 — ⚠ INCOMPATIBLE (crossover) | 6Ω sibling of ND16FA-4, strictly weaker
+- Role: **HIGH** | Dome: 5/8" (16 mm) soft dome | **Mount: front pressfit flush-mount, NO bolt holes** | Faceplate OD: **32.5 mm (1.28")** | Cutout: **25.4 mm (1") pressfit** | Depth: **14.5 mm (0.57")** | Impedance: 6Ω | Re: 5.0Ω | Le: 0.05 mH | Qts: 2.20
+- Sensitivity: **90.5 dB @ 2.83V/1m** (≈89.3 dB @ 1W, 6Ω) | Power: **10W RMS** | **Fs: 2,283 Hz** | Usable: 3,500–27,000 Hz
+- **Source:** [Dayton datasheet PDF](https://www.daytonaudio.com/images/resources/275-025-dayton-audio-nd16fa-6-specifications-46192.pdf) | [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd16fa-6.html) (specs fetched June 2026)
+- **Mounting:** drill 25.4 mm hole, press in from front, retain with silicone/glue (no screw provision); c-t-c as tight as ~35 mm.
+- **Power check (6Ω):** 98 dB needs **7.5W** (75% of 10W); burst 101 dB needs **15.0W — exceeds the 10W rating** → DSP limiter mandatory, tweeter SPL-capped ~99.2 dB.
+- **⚠ INCOMPATIBLE — crossover:** Fs 2,283 Hz → 2×Fs = **4,566 Hz minimum crossover**, above every mid's beam limit (DS115-8 2,636 Hz, DSA90-8 3,475 Hz). Same directivity-hole block as ND16FA-4. Versus ND16FA-4 (30W, 93 dB, same dome) it is strictly weaker — no reason to choose -6.
+
 ### Dayton Audio ND20FA-6 — ⚠ INCOMPATIBLE (crossover)
 - Role: **HIGH** | Dome: 19 mm soft dome | Faceplate OD: 45 mm | Cutout: 33mm | Depth: 15mm | Impedance: 6Ω | Re: 5.2Ω | Le: 0.05 mH
 - Sensitivity: 90 dB @ 1W/1m | Power: 15W RMS / 30W max | Fs: 2,005 Hz | Qms: 1.5 | Qes: 2.88 | Qts: 0.99 | Sd: 2.8 cm²
 - Supplier: [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd20fa-6.html) | Price: €14.95 | Stock: 10+
 - **Off-axis (45° measured from data files, June 2026):** −5.5 dB at 10 kHz, −8.0 dB at 13 kHz. No 60° data.
 - **⚠ INCOMPATIBLE — crossover:** Fs 2,005 Hz → 2×Fs = 4,010 Hz minimum crossover. All mids beam below this. Same incompatibility as ND16FA-4.
+
+### Dayton Audio ND20FB-4 — ⚠ INCOMPATIBLE (crossover)
+- Role: **HIGH** | Dome: 3/4" (19/20 mm) soft textile, rear-mount | Impedance: 4Ω | Re: 3.20Ω | Le: 0.03 mH | Ferrofluid-cooled
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **15W RMS** | **Fs: 2,072 Hz** | Usable: 3,500–25,000 Hz
+- **Source:** [Dayton datasheet PDF](https://www.daytonaudio.com/images/resources/275-035-dayton-audio-nd20fb-4-specifications-46117.pdf) | [SoundImports](https://www.soundimports.eu/en/dayton-audio-nd20fb-4.html) (specs fetched June 2026)
+- **Off-axis:** Owner reports good wide dispersion / low directivity (small 19 mm dome — physically plausible). **Not yet verified — no measured 60° polar curve obtained.** Fetch measured directivity before any off-axis claim.
+- **⚠ INCOMPATIBLE — crossover:** Fs 2,072 Hz → 2×Fs = **4,144 Hz minimum crossover**. DS115-8 beams at 2,636 Hz, DSA90-8 at ~3,475 Hz — both below this, leaving a 2.6–4.1 kHz directivity hole at 60°. Same incompatibility as ND16FA-4 (4,492 Hz) and ND20FA-6 (4,010 Hz). Usable only with a mid/wideband that stays pistonic to ~4.2 kHz.
+
+### Dayton Audio PTMini-6 — ⚠ INCOMPATIBLE (crossover) | planar
+- Role: **HIGH** | Type: **Planar magnetic** (Kapton ribbon membrane, etched aluminium conductor) | Impedance: 6Ω
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **15W RMS** | **Fs: 4,461 Hz** | Usable: 2,900–25,000 Hz | **Mfr recommended crossover: ≥4,000 Hz, 12 dB/oct**
+- **Source:** [Dayton datasheet PDF](https://www.daytonaudio.com/images/resources/275-083--dayton-audio-ptmini-6-specifications.pdf) | [SoundImports](https://www.soundimports.eu/en/dayton-audio-ptmini-6.html) (specs fetched June 2026)
+- **Off-axis:** Owner reports planar gives very consistent horizontal off-axis (physically expected — narrow vertical strip radiates wide horizontally) **but narrow/lobing vertical dispersion** (tall element). Horizontal consistency suits the 60° kitchen geometry; vertical narrowness matters if listening height varies. **Not yet verified — no measured polar obtained.**
+- **⚠ INCOMPATIBLE — crossover:** manufacturer recommends ≥4,000 Hz crossover (Fs 4,461 Hz). DS115-8 beams at 2,636 Hz, DSA90-8 at ~3,475 Hz — both well below 4,000 Hz, so the mid is already beaming before the planar can take over: directivity hole at 60° across ~2.6–4 kHz. Same wall as the small domes (ND16FA-4 / ND20FA-6 / ND20FB-4). Usable only with a mid/wideband pistonic to ~4 kHz.
+
+### Peerless by Tymphany NE19VTS-04 — ❌ OUT (conflicting datasheets, unremarkable 60°)
+- **Withdrawn (June 2026):** the official Tymphany datasheet ([cdn.shopify NE19VTS-04.pdf](https://cdn.shopify.com/s/files/1/0809/2387/files/NE19VTS-04.pdf), local `research/speakers/NE19VTS-04_tymphany.pdf`) gives **88.29 dB @ 2.83V / 85.1 @ 1W, Fs 742, 100 W** — conflicting badly with the SoundImports sheet (90.4 dB, 20 W, Fs 770). Two manufacturer sheets disagreeing by 2 dB and 5× power = untrustworthy data. Real sensitivity (~88 dB) is no better than SB19ST, and the 60° off-axis is ordinary (top-octave droop + deep notch ~28–30 kHz). Loses both its claimed edges → out.
+- Role: **HIGH** | Type: 19 mm fabric dome, neodymium, cast aluminium frame | Faceplate: **Ø52 mm round, 3-bolt** | Impedance: 4Ω | Re: 2.8Ω | Zmin 3.4Ω | Le: 0.014 mH | Sd: 4.91 cm²
+- Sensitivity: **90.4 dB @ 2.83V/1m** (87.4 dB/1W) | Power: **20W (IEC 268-5)** | **Fs: 770 Hz** | Range: 700–20,000 Hz | Mms 0.197 g | Xmax 0.7 mm
+- **Source:** [Tymphany datasheet, July 2025](https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/NE19VTS-04/NE19VTS.pdf) — local copy `research/speakers/Peerless_NE19VTS-04_datasheet.pdf`
+- **Off-axis (datasheet plots 0/30/60°):** 60° tracks on-axis to ~5 kHz, then ~**−5 dB** through the top octave (ripple/notch ~12–16 kHz). Critical 2.8–10 kHz holds within a few dB at 60°. **Tymphany datasheet — NOT subject to the SB Acoustics "60° = real 45°" mislabel** (see research/tweeter_offaxis_evidence.md), so this 60° figure is the most credible of the dome shortlist.
+- **Crossover:** Fs 770 → min ~1,540 Hz; cross ~1.5–2 kHz (DSP LR4), comfortably below any mid's beam onset → cleanest window of the shortlist.
+- **Power:** max SPL ≈ **100.4 dB/1m** at 20 W (87.4 dB/1W + 13 dB). Covers 98 dB ref; 0.6 dB under the 101 dB burst → DSP limiter caps inaudibly. Non-issue. −5.4 dB DSP pad vs 85 dB sub.
+- **vs SB19ST / SB21SDCN:** lowest Fs (best crossover), most compact faceplate (Ø52 vs Ø88/Ø58), highest sensitivity (90.4), and the only one with a 60° curve from a datasheet we don't know to be mislabelled. **Current front-runner.** Confirm with an independent polar (HiFiCompass/Erin) to make it bulletproof.
+
+### Dayton Audio TD20F-4 — Candidate (3/4" silk dome, neo) | 60° UNVERIFIED, crosses high
+- Role: **HIGH** | Type: 3/4" (20 mm) silk soft dome, neodymium | Faceplate: **Ø65 mm round** | Mounting depth: 15 mm | Impedance: 4Ω | Re: 3.4Ω | Le: 0.03 mH | Ferrofluid | Qts: 1.38
+- Sensitivity: **90 dB @ 2.83V/1m** | Power: **20W RMS** | **Fs: 1,696 Hz** | Usable: 3,000–20,000 Hz
+- **Source:** [Dayton datasheet (doc.soundimports.nl)](https://doc.soundimports.nl/pdf/brands/Dayton%20Audio/TD20F-4/pdf_Dayton%20Audio_TD20F-4_1.pdf) (read June 2026)
+- **Off-axis:** datasheet polar is **0/15/30/45° only — no 60°.** At 45°: ~−3–4 dB @ 10 kHz, ~−8 dB @ 15 kHz (decent for a 20 mm dome). 60° unverified for the kitchen gate.
+- **Crossover:** Fs 1,696 → min ~3.0–3.4 kHz. Above a 4" mid's beam onset (SB12PFCR25-4 2,730, DS115-8 2,636) → small directivity gap with a 4"; pairs cleanly with DSA90-8 (beams 3,475). SB19ST (Fs 980) crosses lower with no gap.
+- **Power (4Ω):** 12.6 W @ 98 dB (63% of 20 W); **25 W @ 101 dB burst — over the 20 W rating** → DSP limiter, capped ~99.5 dB.
+- **⚠ Datasheet error:** lists Sd 31.4 cm² — impossible for a 20 mm dome (≈ a 3" cone's area; likely faceplate area mis-entered). Immaterial for a tweeter; do not use that figure.
+- **vs SB19ST:** SB19ST has a confirmed 60° curve, crosses lower (Fs 980), and is 30 W. TD20F-4 is higher-Fs, 60°-unmeasured, 20 W. Behind SB19ST on evidence; competitive only if paired with DSA90-8 and a measured 60° beats it.
+
+### Monacor DT-100 — Candidate (25 mm soft dome, low Fs — crosses cleanly; dispersion UNVERIFIED)
+- Role: **HIGH** | Type: Soft dome | VC/dome: **25 mm** | Faceplate: **116×80×26 mm rectangular** (ferrite, 0.525 kg) | Cutout: **Ø72 mm round** | Mounting depth: 26 mm | Impedance: 8Ω | Ferrofluid
+- Sensitivity: **92 dB/W/m** | Power: **30W RMS / 60W max** | Fs: **1,500 Hz** | Mfr recommended crossover: **2,500 Hz / 12 dB/oct**
+- **Source:** [Monacor datasheet](https://doc.soundimports.nl/pdf/brands/Monacor/DT-100/pdf_monacor_DT-100_1.pdf) (Order 10.0040) | [SoundImports](https://www.soundimports.eu/en/) €43.95 | **[Willys-Hifi](https://willys-hifi.com/products/monacor-dt-100-tweeter) £28.27 (cheapest)** | Drop-in for Peerless KO10DT / DT115
+- **Crossover — clean match:** Fs 1,500 → cross ~2.5–3 kHz (DSP LR4). Lands at the mid's beam onset (SB12PFCR25-4 2,730 Hz, DS115-8 2,636 Hz) → conventional well-integrated 3-way crossover, **no directivity hole** (unlike the high-Fs micro-domes ND13/16/20, PTMini).
+- **Power (8Ω):** 4.0W @ 98 dB, 7.9W @ burst — trivial; −7 dB DSP pad; large headroom.
+- **⚠ Dispersion UNVERIFIED:** the Monacor datasheet has **no polar/off-axis plot** — the "wide dispersion" wording was the *Willys listing*, not Monacor (Monacor claims only "good linearity, brilliant, detail"). A 25 mm dome is *larger* than the 13–19 mm domes, so physically beams *earlier* at the top, not later. **No 60° data exists.** Do not credit dispersion without a measured plot — cf. Scan-Speak's "Wide Dispersion" D2604/830000, contradicted by its own 60° datasheet and rejected.
+- **vs SB19ST:** SB19ST is smaller (19 mm → physically wider 60°), crosses lower (1,960 Hz), and **has a confirmed 60° curve** (−5–6 dB @ 13 kHz). DT-100 is hotter (92 vs 88.5 dB) but larger-dome, higher-crossover, dispersion unverified. SB19ST is the stronger 60° bet on current data.
+
+### Monacor DT-28N — Candidate (28 mm silk cone, neo, tiny faceplate — best low-xover Monacor) | dispersion UNVERIFIED
+- Role: **HIGH** | Type: **28 mm silk cone** (neodymium) | Faceplate: **55×55×20 mm square** | Cutout: **Ø50 mm** | Mounting depth: 16.7 mm | Magnet: Ø46 mm neo | Weight: 0.074 kg | Impedance: 8Ω
+- Sensitivity: **94 dB/W/m** | Power: **50W RMS / 100W max** | Fs: **1,200 Hz** | Mfr recommended crossover: **2,000 Hz / 12 dB/oct**
+- **Source:** [Monacor datasheet](https://doc.soundimports.nl/pdf/brands/Monacor/DT-28N/pdf_monacor_DT-28N_1.pdf) (Order 10.4020) | [SoundImports](https://www.soundimports.eu/en/) €40.95
+- **Crossover — best of the Monacor pair:** Fs 1,200 → cross ~2,000–2,400 Hz (DSP LR4), **below** the mid's beam onset (SB12PFCR25-4 2,730 Hz) → clean window, no hole, and the lowest crossover of any conventional dome here except SB19ST.
+- **Spacing:** 55×55 mm plate is far smaller than DT-100 (116×80) → much tighter mid-tweeter centre spacing. Neodymium, 74 g (light).
+- **Power (8Ω):** 2.5W @ 98 dB, 5.0W @ burst — trivial; −9 dB DSP pad; huge headroom.
+- **⚠ Dispersion UNVERIFIED:** Monacor datasheet has **no polar plot.** 28 mm cone is the *largest* diaphragm of the DT-100/DT-28N/SB19ST set → by physics the narrowest top-octave dispersion, though cone (vs dome) behaviour differs. **No 60° data.** Must be measured before treating as 60°-suitable.
+- **Beats DT-100 on the measurable specs** (lower Fs/crossover, +2 dB sensitivity, +20W, far smaller plate). Already referenced in combos B11/B12. For a true 60° priority, SB19ST still leads on evidence (confirmed curve); DT-28N is the better choice if you'll measure dispersion at build.
 
 ### Scan-Speak Discovery D2606/920000 — Candidate
 - Role: **HIGH** | Dome: 25 mm coated textile | Faceplate OD: not confirmed | Impedance: 6Ω
@@ -529,7 +633,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Min crossover:** 2× Fs = **850 Hz** — lowest of any dome in the entire catalogue. Enables mid/tweeter crossover below 1 kHz.
 - **DSP correction vs TB sub (85 dB ref):** −4.6 dB attenuation (4Ω: 1W sens = 89.6 − 3.01 = 86.59 dB).
 - **Power at reference (4Ω, 98 dB):** 10^((98−86.59)/10) = **13.8W** (27.6% of 50W ✓). At burst (101 dB): **27.6W** (55.2% of 50W ✓; 21.2% of 130W ✓).
-- **Centre spacing (FP OD 61.9 mm):** DSA90-8 (92.3mm) → **77mm** | DS115-8 (115.6mm) → **89mm** | SB12PFCR25-4 (~122mm) → **92mm** | 12W/4524G00 (100mm) → **81mm** | 15W/4434G00 (114mm) → **88mm** | WF118WA07 (118mm) → **90mm** | Morel 428 (118.5mm) → **90mm**
+- **Centre spacing (FP OD 61.9 mm):** DSA90-8 (92.3mm) → **77mm** | DS115-8 (115.6mm) → **89mm** | SB12PFCR25-4 (~122mm) → **92mm** | 12W/4524G00 (~125mm) → **93mm** | 15W/4434G00 (114mm) → **88mm** | WF118WA07 (118mm) → **90mm** | Morel 428 (118.5mm) → **90mm**
 - **Why this stands out:** 850 Hz minimum crossover is 90 Hz lower than any ring radiator and 250 Hz lower than any dome in the catalogue. The compact 61.9mm FP creates the tightest achievable centre-spacing — 77–92mm depending on mid — minimising vertical lobe smearing. With a 4" mid (beaming ~2,600–2,900 Hz), crossover window is 850–2,600+ Hz (over 1,700 Hz of freedom). With a 5.25" mid (beaming ~2,390 Hz), window is 850–2,390 Hz — still excellent. Scan-Speak Illuminator-grade transient response and low distortion at 850 Hz crossover point.
 - **Pairings:** ILL1/ILL2/ILL3 (existing combos) updated to remove DISC flag; LS-series in combos.md covers new LSS mids.
 
@@ -539,7 +643,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - ⚠ Full T/S (Re, Qts, sensitivity, power, cutout, depth) not confirmed — fetch Scan-Speak R3004/602010 datasheet from scan-speak.dk before ordering
 - **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS tweeter index, June 2026) | LSS price: **€179.10 inc VAT / €150.50 exc VAT** | Stock (Jun 2026): in stock at LSS
 - **Min crossover:** 2× Fs = **840 Hz** — 10 Hz lower than D3004/602010 (850 Hz). Narrowly the most flexible crossover window of any tweeter in this catalogue.
-- **Centre spacing (FP OD 61.9 mm):** DSA90-8 → **77mm** | DS115-8 → **89mm** | 12W/4524G00 (100mm) → **81mm** | 15W/4434G00 (114mm) → **88mm** | WF118WA07 (118mm) → **90mm** | Morel 428 (118.5mm) → **90mm**
+- **Centre spacing (FP OD 61.9 mm):** DSA90-8 → **77mm** | DS115-8 → **89mm** | 12W/4524G00 (~125mm) → **93mm** | 15W/4434G00 (114mm) → **88mm** | WF118WA07 (118mm) → **90mm** | Morel 428 (118.5mm) → **90mm**
 - **Ineligible — off-axis:** Ring radiator. Same compact 61.9 mm Illuminator chassis and ultra-low Fs (420 Hz) as the D3004/602010 dome, but ring radiators measure horn-like at 60° off-axis (RAW-CAt Tweeter Shootout Part 6, Nov 2025) — disqualifying for the 60° kitchen geometry. The **D3004/602010 dome** (same chassis, Fs 425 Hz, 850 Hz min crossover) is the eligible alternative — see entry above.
 
 ### Audaphon TWS 30/4 ★★ — Candidate (30mm dome, Fs=470Hz, 93dB; lautsprechershop.de exclusive)
@@ -550,7 +654,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Min crossover:** 2× Fs = **940 Hz** — second-lowest dome in catalogue after D3004/602010 (850 Hz); 160 Hz lower than SEAS H1189-06 (1,100 Hz).
 - **DSP correction vs TB sub (85 dB ref):** −8.0 dB attenuation (4Ω: 1W sens = 93 − 3.01 = 89.99 dB).
 - **Power at reference (4Ω, 98 dB):** 10^((98−89.99)/10) = **6.3W** (6.3% of 100W ✓). At burst (101 dB): **12.6W** (12.6% ✓). Effectively indestructible at project SPL.
-- **Centre spacing (FP OD 104 mm):** DSA90-8 → **98mm** | DS115-8 → **110mm** | SB12PFCR25-4 → **113mm** | 12W/4524G00 (100mm) → **102mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm** | Morel 428 (118.5mm) → **111mm**
+- **Centre spacing (FP OD 104 mm):** DSA90-8 → **98mm** | DS115-8 → **110mm** | SB12PFCR25-4 → **113mm** | 12W/4524G00 (~125mm) → **114mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm** | Morel 428 (118.5mm) → **111mm**
 - **Why this stands out:** 940 Hz minimum crossover dramatically lower than any comparable 104mm dome from other vendors. The 30mm dome is the largest diaphragm of any candidate — potential for smooth, natural high frequency. 93 dB high sensitivity ensures near-indestructible power at project SPL. At €79 it is the best-value extremely-low-Fs dome per unit of crossover flexibility.
 - **vs D3004/602010 (850 Hz, €142):** D3004 is 90 Hz lower in min xover and 42mm more compact (62mm FP). TWS 30/4 saves €63 for a 90 Hz crossover headroom penalty. For pairings where the 104mm FP spacing is acceptable and 940 Hz is sufficient, TWS 30/4 is the clear value choice.
 - **vs SEAS H1189-06 (1,100 Hz, £55.00 Willys / £56.92 HFC):** TWS 30/4 has 160 Hz lower min xover and costs more at LSS (€79.00 vs €71.86). Prefers TWS 30/4 when crossover window matters; H1189-06 when buying from UK suppliers without EU delivery cost.
@@ -563,7 +667,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Min crossover:** 2× Fs = **1,200 Hz** — same class as SB29SDAC (1,200 Hz) and D2604/830000 (1,260 Hz).
 - **DSP correction vs TB sub (85 dB ref):** −6.0 dB attenuation (4Ω: 1W sens = 91 − 3.01 = 87.99 dB).
 - **Power at reference (4Ω, 98 dB):** 10^((98−87.99)/10) = **10.0W** (10% of 100W ✓). At burst (101 dB): **20.0W** (20% ✓). Effectively indestructible.
-- **Centre spacing (FP OD 103 mm):** DSA90-8 → **98mm** | DS115-8 → **109mm** | SB12PFCR25-4 → **112mm** | 12W/4524G00 (100mm) → **102mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm**
+- **Centre spacing (FP OD 103 mm):** DSA90-8 → **98mm** | DS115-8 → **109mm** | SB12PFCR25-4 → **112mm** | 12W/4524G00 (~125mm) → **114mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm**
 - **Why considered:** 100W power rating at €89.40 is excellent value for a 103mm-class dome. 91 dB sensitivity (2 dB lower than TWS 30/4) means 2 dB less DSP pad required. 28mm dome in standard class for this FP size.
 - **vs Audaphon TWS 30/4 (940 Hz, €79):** TWS 30/4 has 260 Hz lower min xover, 2 dB higher sensitivity, 1mm larger dome, €10 cheaper. RS28A-4 wins only on 2 dB lower DSP pad requirement — a marginal advantage. Prefer TWS 30/4 for the 260 Hz crossover freedom in most pairings. RS28A-4 is relevant only if 940 Hz → 1,200 Hz crossover gap is unimportant and 91 dB sensitivity is preferred.
 
@@ -576,7 +680,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP correction vs TB sub (85 dB ref):** Not calculable — sensitivity unconfirmed. Fetch datasheet.
 - **Power at reference:** Not calculable — sensitivity unconfirmed. Fetch datasheet.
 - **Available @ 24V into 4Ω:** ~61W >> 40W ✓.
-- **Centre spacing (FP OD 103.75 mm):** DSA90-8 → **98mm** | DS115-8 → **110mm** | 12W/4524G00 (100mm) → **102mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm** | Morel 428 (118.5mm) → **111mm**
+- **Centre spacing (FP OD 103.75 mm):** DSA90-8 → **98mm** | DS115-8 → **110mm** | 12W/4524G00 (~125mm) → **114mm** | 15W/4434G00 (114mm) → **109mm** | WF118WA07 (118mm) → **111mm** | Morel 428 (118.5mm) → **111mm**
 - **Why this stands out:** At €78.10 it prices between SB26STCN (€36.45, 25mm, Fs=950Hz) and SEAS H1189-06 (€71.86, 27mm, Fs=550Hz). The 22mm dome is smaller than all 25–30mm dome candidates → slightly wider off-axis dispersion above 10 kHz. Fs=750 Hz gives 1,500 Hz min crossover — broad window for all mids in the catalogue.
 - **Concern:** All specs estimated — datasheet required. 103.75mm FP is large (same class as H1189-06, DX25TG59-04).
 - **vs TW022WA06 (€80.30, +ferrofluid):** €2.20 more for ferrofluid. At ≤40W burst in this project, ferrofluid is unnecessary. Prefer WA05.
@@ -592,6 +696,31 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 ---
 
 ## Midranges
+
+### 101 dB Gate — Verified Shortlist (June 2026)
+
+Gate: Max SPL = Sens@2.83V + 10·log₁₀(P/P_ref) ≥ 101 dB, where P_ref = 2W (4Ω) or 1W (8Ω). Power basis: IEC or DIN continuous RMS. All values computed from verified datasheet specs.
+
+Sealed box formula: Fc = Fs·√(1+Vas/Vb); Qtc = Qts·√(1+Vas/Vb). Rec = Qtc≈0.75 (DSP-corrected target). Min = smallest box satisfying both Fc≤160 Hz AND Qtc≤0.9.
+
+| Driver | Price | Max SPL | Fs ratio @150Hz | f_beam | Sealed Vb rec → Fc | Sealed Vb min → Fc | P @101 dB | Result |
+|--------|-------|---------|-----------------|--------|--------------------|--------------------|-----------|--------|
+| **SB12MNRX2-25-4** ★ SELECTED | £48 Willys / €62 SI | **104.5 dB** | 2.36× ✓ | 2,746 Hz ✓ | **1.2 L → 149 Hz** | 1.2 L → 149 Hz† | 22.4W | ✓ All gates |
+| **Morel EW 428** | €153 LSS | **108.8 dB** | 2.42× ✓ | 2,570 Hz ✓‡ | **1.3 L → 133 Hz** | 0.85 L → 159 Hz | 25.1W | ✓ All gates |
+| **Morel EM 428** | €134 LSS | **108.8 dB** | 2.21× ✓ | 2,570 Hz ✓‡ | **1.5 L → 124 Hz** | 0.92 L → 149 Hz | 25.1W | ✓ All gates |
+| **Morel CAW 428** | €109 LSS | **109.8 dB** | 2.03× ✓§ | 2,570 Hz ✓‡ | **1.6 L → 146 Hz** | 1.22 L → 160 Hz† | 20.0W | ✓ (Vb ≥ 1.22 L) |
+| **12W/8524G00** (8Ω) | unverified | **102.0 dB** | 2.88× ✓ | 2,527 Hz ✓‡ | **1.8 L → 122 Hz** | 1.2 L → 146 Hz | 31.6W | ✓ (large box) |
+| **WF118WA07** | €96 LSS | **101.0 dB** | 2.68× ✓ | 2,641 Hz ✓ | **1.5 L → 117 Hz** | 0.93 L → 140 Hz | 50.2W≈limit | ⚠ burst at rated limit |
+
+†Binding constraint is Fc≤160 Hz, not Qtc; a smaller box pushes Fc above 160 Hz before Qtc hits 0.9.  
+‡Sd = 57–59 cm² exceeds the ≤55 cm² proxy; measured f_beam ≥ 2,500 Hz — operative gate passes.  
+§CAW 428: Fs=74 Hz is at the 2× minimum margin.
+
+**Enclosure note:** All candidates except 12W/8524G00 fit comfortably in a 1.2–1.6 L sealed mid chamber. The 12W/8524G00 wants 1.8 L for Qtc=0.75; it squeezes into 1.2 L at Qtc=0.9 but the 1.8 L preference makes it a poor fit for a compact build.
+
+**Drivers failing Gate 1 (representative):** DS115-8 100.7 dB; SB12PFCR25-4 99.3 dB; B4N 99.0 dB; SB12NRX25-4 100.3 dB. All fall short because they're in the 87–88 dB / 25–35W class.
+
+---
 
 ### Dayton Audio DSA90-8 — Candidate (top-ranked)
 - Role: **MID** | Size: 3" | Frame OD: 92.3 mm round | Impedance: 8Ω
@@ -693,7 +822,8 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power check:** At reference (98 dB): 22.4W ✓ (within 30W). At woofer max (101 dB): 44.7W ✗. Same practical fix: DSP sub limiter ~40W keeps mid within 30W.
 - **Fs check:** 58 Hz → **2.59× at 150 Hz** — excellent, better than DSA90-8 (2.25×) and SIG120-4 (2.01×).
 - **Xmax:** 4.9 mm — effectively equal to SB12PACR25-4 and better than DS115-8.
-- **Beaming:** Same Sd 50 cm² as PACR → beaming starts ~2,730 Hz. Beaming limit above the typical 4" mid crossover range.
+- **Beaming:** Sd 50 cm², effective diameter 80 mm (r = 40 mm) → beaming onset ~2,730 Hz (verified loudspeakerdatabase). On-axis it stays flat well above this; the 60° response slopes off in the 3–5 kHz region (rigid-piston estimate ~−4/−8/−14 dB at 3/4/5 kHz, likely less in reality as the cone decouples).
+- **Pairing with high-Fs wide-dispersion tweeters:** A [DIY build (FB DIY Loudspeaker group, June 2026)](https://www.facebook.com/groups/DIYLoudspeakerProjecPad/posts/1871934119829083/) runs **SB12PFCR25-4 + ND13FA-4 first-order at 5 kHz, no L-pad, "works brilliantly"** — an on-axis result. Crossing the 4" up to 5 kHz is fine on-axis; only a strict 60°-flat-power target is affected (the mid is beaming there). A genuinely strong, cheaper, more sensitive mid than DS115-8 (87.5 vs 85.3 dB, Xmax 4.9 vs 4.1).
 - **Character:** Natural fiber paper cone — warm, natural tonality. Better match to GHM-inspired tonal goal than the aluminium PACR version. Reviewers describe "deep midbass and warm sound character."
 - **Price note:** At €25.95 this is the cheapest standalone mid candidate with competitive specs — cheaper than B4N (€22.45 but lower Xmax and power), TCP115-8 (€14.01 but needs 29V PSU), DS115-8 (€36.95). Excellent value.
 
@@ -858,17 +988,19 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **DSP correction vs TB sub (85 dB ref):** −4.7 dB attenuation needed.
 
 ### Scan-Speak Discovery 12W/4524G00 ★★ — Candidate (compact 4.5" Discovery, Fs=50Hz; lautsprechershop.de)
-- Role: **MID** | Size: 4.5" | Frame OD: **100 mm** round | Impedance: 4Ω | Cone: Paper (Discovery grade) | Baffle cutout: ~82 mm (est)
-- Sensitivity: **88.8 dB @ 2.83V/1m** | Power: **40W RMS / 70W max** | Xmax: **±3 mm** | Fs: **50 Hz**
-- ⚠ Full T/S (Re, Qts, Sd, Vas, Mms) not confirmed from LSS page — fetch Scan-Speak Discovery 12W datasheet
+- Role: **MID** | Size: 4.5" | Frame OD: **~124.7 mm** (inferred from 8Ω sibling 12W/8524G00 datasheet — same physical platform; LSS page listed 100 mm which is the cutout, not OD) | Cutout: **~100 mm** | Impedance: 4Ω | Cone: NRSC Fibre Glass (Discovery grade) | Depth: ~53 mm
+- Sensitivity: **88.8 dB @ 2.83V/1m** ⚠ not confirmed — LSS page only; 8Ω sibling is 86 dB @2.83V | Power: **40W RMS / 70W max** ⚠ not confirmed for 4Ω | Xmax: **±3 mm** | Fs: **50 Hz**
+- ⚠ Sensitivity and power for the 4Ω version not confirmed from datasheet — the 8Ω sibling (12W/8524G00) is fully verified: 86 dB @2.83V / 40W IEC / Sd 59 cm² / Fs 52 Hz / Qts 0.32 / Vas 8.2 L (see note below)
+- **Note on 8Ω sibling (12W/8524G00):** Fully verified June 2026 from Scan-Speak datasheet. OD 124.7 mm, cutout 100 mm, depth 53.4 mm, Sd 59 cm², Fs 52 Hz, Qts 0.32, Vas 8.2 L, 40W IEC / 70W max, 86 dB @2.83V. Mechanical specs expected identical to 4Ω version; only impedance and sensitivity differ. **8Ω version Max SPL: 86 + 10·log₁₀(40) = 102.0 dB ✓.** Datasheet: [research/scan_speak_12w-8524g00.pdf](research/scan_speak_12w-8524g00.pdf)
 - **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€59.40 inc VAT / €49.92 exc VAT** | Stock (Jun 2026): in stock at LSS
 - **Fs margin at 150 Hz crossover:** 150/50 = **3.0×** — excellent; best Fs margin of any 4Ω 4.5" candidate.
 - **DSP correction vs TB sub (85 dB ref):** −3.8 dB attenuation (4Ω: 1W sens = 88.8 − 3.01 = 85.79 dB).
 - **Power at reference (4Ω, 98 dB):** 10^((98−85.79)/10) = **16.6W** (41.5% of 40W ✓). At burst (101 dB): **33.2W** (83% of 40W — near limit; 47% of 70W max ✓). Set DSP sub limiter at 40W to protect driver.
-- **Beaming:** ? (unconfirmed — Sd not yet confirmed; fetch datasheet for accurate beaming calculation).
-- **Centre spacing (FP OD 100 mm):** D3004/602010 (62mm) → **81mm** | Audaphon TWS 30/4 (104mm) → **102mm** | RS28A-4 (103mm) → **102mm** | XT25TG30-04 (104mm) → **102mm** | H1189-06 (103.8mm) → **102mm** | DX25TG59-04 (104mm) → **102mm** | SB12PFCR25-4 (122mm) → **111mm**
-- **Why this stands out:** FP=100mm is the most compact 4.5" mid in the catalogue — 15mm narrower than DS115-8 (116mm). Fs=50Hz delivers 3.0× margin at 150 Hz crossover. At €59.40 it prices close to DS115-8 (€36.95) with Scan-Speak Discovery construction and far smaller footprint. 4Ω → 61W available at 24V — ample headroom. The compact FP opens pairings with D3004/602010 (81mm spacing) that would be impossible with DS115-8 (89mm).
-- **Concern:** Xmax=3mm is lower than DS115-8 (4.1mm) and SB12PFCR25-4 (4.9mm). 40W RMS rating is modest; DSP limiter at 40W essential for burst protection.
+- **Beaming (inferred from 8Ω sibling Sd=59 cm²):** r_eff = √(0.0059/π) = 43.3 mm → f_beam = 344/(π×0.0433) = **2,527 Hz** ✓ (Sd=59 > 55 cm² proxy; f_beam passes operative ≥2,500 Hz gate). 0.8× ceiling = **2,022 Hz**. Window with SB19ST (Fs=980 Hz): 1,960–2,022 Hz (62 Hz, 0.04 oct, marginal — tightest of all candidates).
+- **Sealed box (8Ω sibling, Vas=8.2 L, Fs=52 Hz, Qts=0.32):** At 1.2 L: Fc = 52×2.799 = **145.5 Hz** ✓; Qtc = 0.32×2.799 = **0.896** ✓ (barely). At 1.5 L: Fc = **132 Hz** ✓, Qtc = **0.81** ✓. Large Vas means Qtc is near 0.9 in minimum box; use 1.5 L for comfort. Note: Scan-Speak lists "Cabinet volume — closed box: N.a." (no recommended volume given, not impossible).
+- **Centre spacing (FP OD ~124.7 mm):** D3004/602010 (62mm) → **93mm** | Audaphon TWS 30/4 (104mm) → **114mm** | RS28A-4 (103mm) → **114mm** | SB19ST (88mm) → **106mm**
+- **Why this stands out:** Fs=50Hz delivers 3.0× margin at 150 Hz — outstanding. 8Ω sibling confirmed at 102.0 dB max SPL; 4Ω version expected higher. Scan-Speak Discovery construction quality at €59.40.
+- **Concern:** Xmax=3mm is lower than DS115-8 (4.1mm) and SB12PFCR25-4 (4.9mm). Large Vas (8.2 L) demands a larger box for well-damped alignment. Crossover window is the tightest of all candidates (62 Hz only). Sensitivity of 4Ω version unverified — fetch 12W/4524G00 datasheet before ordering.
 
 ### Scan-Speak Discovery 15W/4434G00 ★★ — Candidate (5.25" Discovery, exceptional Fs+Xmax; lautsprechershop.de)
 - Role: **MID** | Size: 5.25" | Frame OD: **114 mm** round | Impedance: 4Ω | Cone: Paper (Discovery grade) | Baffle cutout: ~95 mm (est)
@@ -893,7 +1025,7 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **Power at reference (4Ω, 98 dB):** 10^((98−86.99)/10) = **12.6W** (15.8% of 80W ✓). At burst (101 dB): **25.2W** (31.5% of 80W ✓; 16.8% of 150W ✓). Power effectively unlimited at project SPL.
 - **Beaming:** ? (unconfirmed — Sd not yet confirmed; fetch datasheet). Compact FP is the ideal combination for a mid driver.
 - **Centre spacing (FP OD 101 mm):** D3004/602010 (62mm) → **82mm** | Audaphon TWS 30/4 (104mm) → **103mm** | RS28A-4 (103mm) → **102mm** | XT25TG30-04 (104mm) → **103mm** | H1189-06 (103.8mm) → **102mm**
-- **Why considered:** The Scan-Speak Illuminator 12MU is a purpose-built midrange unit — the Illuminator motor (FEA-optimised, copper ring, short voice coil in long gap) targets the 300 Hz–5 kHz range specifically. 101mm FP is nearly as compact as 12W/4524G00 (100mm). 90 dB is the highest sensitivity of any new LSS mid. At €306 it is 4–5× the cost of the 12W/4524G00 (€59.40) for a dedicated mid motor vs a woofer-range driver pressed into mid service.
+- **Why considered:** The Scan-Speak Illuminator 12MU is a purpose-built midrange unit — the Illuminator motor (FEA-optimised, copper ring, short voice coil in long gap) targets the 300 Hz–5 kHz range specifically. 101mm FP is nearly as compact as 12W/4524G00 (~125mm OD inferred). 90 dB is the highest sensitivity of any new LSS mid. At €306 it is 4–5× the cost of the 12W/4524G00 (€59.40) for a dedicated mid motor vs a woofer-range driver pressed into mid service.
 - **Concern:** €306 is significant for a kitchen counter build. Acoustic performance in this application (active DSP, 150 Hz crossover, limited off-axis demands) may not justify the premium over the €59.40 12W/4524G00. Recommended for builds where the best possible midrange fidelity is the primary goal regardless of cost.
 
 ### Wavecor WF118WA07 ★★ — Candidate (4.5" Balanced Drive paper cone, Fs=56Hz; lautsprechershop.de)
@@ -928,44 +1060,55 @@ Total DC draw at matched 98 dB (RMS): ~78–90W from PSU (~3.5–4A at 24V). At 
 - **vs WF118WA07 (€95.70):** €54 more for 8Hz lower Fs, 10W more power rating (no limiter needed), premium BD motor. Prefer WA07 on value; BD05 if burst margin is a priority.
 
 ### Morel EW 428 ★★ — Candidate (4.5" premium motor, best Xmax in 428 family; lautsprechershop.de)
-- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** round | Impedance: **8Ω** | Cone: ? (EW = premium motor, cone material TBC) | Baffle cutout: ~97 mm (est)
-- Sensitivity: **87 dB @ 2.83V/1m** (= 87 dB @ 1W/1m for 8Ω) | Power: **150W** | Xmax: **±4.5 mm** | Fs: **62 Hz**
-- ⚠ Full T/S and cone material not confirmed — fetch Morel EW 428 datasheet before ordering
-- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€153.00 inc VAT / €128.57 exc VAT** | Stock (Jun 2026): in stock at LSS
-- **Fs margin at 150 Hz crossover:** 150/62 = **2.42×** — good, adequate margin.
-- **DSP correction vs TB sub (85 dB ref):** −2.0 dB — near-perfect match (same class as WF118WA07).
-- **Power at reference (8Ω, 98 dB):** 10^((98−87)/10) = **12.6W** (8.4% of 150W ✓). At burst (101 dB): **25.1W** (16.7% ✓). Power practically indestructible — 150W is 6× the burst requirement.
-- **Beaming:** ? (unconfirmed — Sd not yet confirmed; fetch datasheet).
-- **Centre spacing (FP OD 118.5 mm):** D3004/602010 (62mm) → **90mm** | Audaphon TWS 30/4 (104mm) → **111mm** | RS28A-4 (103mm) → **111mm** | XT25TG30-04 (104mm) → **111mm** | H1189-06 (103.8mm) → **111mm**
-- **Why this stands out:** 150W rating at 25.1W burst demand = 6× safety factor — uniquely immune to over-drive. Xmax=4.5mm is the best in the Morel 428 family and matches or exceeds all other 4.5" mids. 8Ω means mid channel at 24V delivers ~31W → well above 25.1W burst. No DSP power limiter needed.
-- **Concern:** €153 is significant. Fs=62Hz (2.42× margin) is adequate but not exceptional compared to WF118WA07 (2.68×). 8Ω gives less amp headroom than 4Ω alternatives (31W vs 61W at 24V), though 31W >> 25.1W burst.
-- **vs WF118WA07 (4Ω, Xmax=4mm, €95.70):** WA07: lower cost, better Fs margin (2.68×), 4Ω (more amp headroom), Xmax only 0.5mm less, but burst power at rating limit (50W). EW 428: 150W ceiling, Xmax=4.5mm, 8Ω (less amp overhead, still adequate). Choose WA07 for value; EW 428 if burst power headroom and 150W thermal rating matter.
+- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** | Cutout: **94 mm** | Depth: **56 mm** | Impedance: **8Ω** | Cone: Damped Polymer Composite (DPC) | Surround: rubber
+- Sensitivity: **87 dB @ 2.83V/1m** (= 87 dB @ 1W/1m for 8Ω) | Power: **150W (DIN)** | Xmax: **±4.5 mm** | Fs: **62 Hz**
+- **T/S (verified from datasheet):** Qts 0.35 | Qes 0.41 | Qms 2.36 | Sd **57 cm²** | Vas **4.7 L** | Mms 6.16 g | Cms 1.046 mm/N | Rms 1.02 kg/s | BL 6.1 N·A | Re 6.3Ω | Le 0.44 mH
+- **Source:** Morel EW 428 datasheet (verified June 2026) | [research/morel_ew428.pdf](research/morel_ew428.pdf) | LSS: **€153.00 inc VAT / €128.57 exc VAT** | Stock (Jun 2026): in stock at LSS
+- **Gate 1 — Max SPL (8Ω, P_ref=1W):** 87 + 10·log₁₀(150) = **108.8 dB** ✓ — 7.8 dB above 101 dB burst ceiling.
+- **Gate 2 — Fs margin:** 150/62 = **2.42×** ✓
+- **Gate 3 — Beaming (Sd=57 cm²):** r_eff = √(0.0057/π) = 42.6 mm → f_beam = 344/(π×0.0426) = **2,570 Hz** ✓. Sd=57 cm² exceeds the ≤55 cm² proxy threshold by 2 cm² but beaming onset is above 2,500 Hz — operative gate passes. 0.8× ceiling = **2,056 Hz** (crossover window with SB19ST: 1,960–2,056 Hz, 96 Hz / 0.07 oct, marginal).
+- **Gate 4 — Physical:** OD 118.5 mm ✓ (≤130 mm) | Depth 56 mm ✓ (≤110 mm) | 8Ω ✓
+- **Gate 5 — Sealed 1.2 L:** α = 4.7/1.2 = 3.917; √(1+3.917) = 2.217; Fc = 62 × 2.217 = **137.5 Hz** ✓; Qtc = 0.35 × 2.217 = **0.776** ✓
+- **DSP correction vs TB sub (85 dB ref):** −2.0 dB — near-perfect match.
+- **Power at reference (8Ω, 98 dB):** 10^(11/10) = **12.6W** (8.4% of 150W ✓). At burst (101 dB): 10^(14/10) = **25.1W** (16.7% ✓). Amp at 36V into 8Ω: 68.9W available — no limiter needed.
+- **Centre spacing (FP OD 118.5 mm):** D3004/602010 (62mm) → **90mm** | Audaphon TWS 30/4 (104mm) → **111mm** | RS28A-4 (103mm) → **111mm** | SB19ST (88mm) → **103mm**
+- **Why this stands out:** 150W rating vs 25.1W burst demand = 6× safety factor — uniquely immune to over-drive. Xmax=4.5mm is the best in the Morel 428 family and best of any 4.5" candidate. Fc=137.5 Hz in 1.2 L gives the most sub/mid room of any verified mid. No DSP power limiter needed at any project SPL.
+- **Concern:** €153 significant. Crossover window with SB19ST is marginal (96 Hz, 0.07 oct) — ideal xover ~2,007 Hz. DPC cone character differs from paper; not warm/natural but neutral-analytical.
+- **vs WF118WA07 (4Ω, Xmax=4mm, €95.70):** WA07 is €57 cheaper, Fs margin better (2.68×), 4Ω. EW 428 wins on 150W ceiling (no limiter), Xmax (4.5mm vs 4mm), Fc lower (138 vs 126 Hz). Choose WA07 for value; EW 428 if burst headroom is paramount.
 
 ### Morel CAW 428 ★ — Candidate (4.5", 4mm Xmax, lower cost than EW 428; lautsprechershop.de)
-- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** round | Impedance: **8Ω** | Power: **150W** | Xmax: **±4 mm** | Fs: **74 Hz** | Sensitivity: **88 dB @ 1W/1m** (= 88 dB @ 2.83V/1m for 8Ω)
-- ⚠ Full T/S not confirmed — fetch Morel CAW 428 datasheet
-- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€109.00 inc VAT / €91.60 exc VAT** | Stock (Jun 2026): in stock at LSS
-- **Fs margin at 150 Hz crossover:** 150/74 = **2.03×** — ⚠ just at the 2× minimum threshold. Raise crossover to 160–170 Hz (sub handles this easily) to increase margin to 2.16–2.30×.
-- **DSP correction vs TB sub (85 dB ref):** −3.0 dB — modest correction.
-- **Power at reference (8Ω, 98 dB):** 10.0W (6.7% of 150W ✓). At burst (101 dB): **20.0W** (13.3% ✓).
-- **Beaming:** Same FP as EW 428 → same ~2,740 Hz estimate.
-- **Centre spacing:** Same as EW 428 (FP=118.5mm).
-- **vs Morel EW 428 (Fs=62Hz, Xmax=4.5mm, €153):** EW 428 is strictly better acoustically at only €44 more. EW 428 has 12Hz lower Fs (better margin), 0.5mm more Xmax, better motor. Choose EW 428 unless budget constrained. CAW 428 with crossover raised to 165Hz is viable if €44 matters.
+- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** | Cutout: **94 mm** | Depth: **50 mm** | Impedance: **8Ω** | Cone: Damped Polymer Composite (DPC)
+- Sensitivity: **88 dB @ 2.83V/1m** | Power: **150W (DIN)** | Xmax: **±4.0 mm** | Fs: **74 Hz**
+- **T/S (verified from datasheet):** Qts 0.38 | Qes 0.46 | Qms 2.33 | Sd **57 cm²** | Vas **4.5 L** | Mms 4.55 g | Cms 1.007 mm/N | Rms 0.91 kg/s | BL 5.0 N·A | Re 5.5Ω | Le 0.32 mH
+- **Source:** Morel CAW 428 datasheet (verified June 2026) | [research/morel_caw428.pdf](research/morel_caw428.pdf) | LSS: **€109.00 inc VAT / €91.60 exc VAT** | Stock (Jun 2026): in stock at LSS
+- **Gate 1 — Max SPL (8Ω, P_ref=1W):** 88 + 10·log₁₀(150) = **109.8 dB** ✓
+- **Gate 2 — Fs margin:** 150/74 = **2.03×** ⚠ marginal — just at 2× minimum. At 160 Hz crossover: 2.16×.
+- **Gate 3 — Beaming (Sd=57 cm²):** same as EW 428 → f_beam = **2,570 Hz** ✓ (Sd=57 > 55 cm² proxy; f_beam passes operative gate). 0.8× ceiling = **2,056 Hz**.
+- **Gate 4 — Physical:** OD 118.5 mm ✓ | Depth 50 mm ✓ (shallowest of any candidate) | 8Ω ✓
+- **Gate 5 — Sealed 1.2 L:** α = 4.5/1.2 = 3.75; √4.75 = 2.179; Fc = 74 × 2.179 = **161.3 Hz** ⚠ (1.3 Hz over 160 Hz target); Qtc = 0.38 × 2.179 = **0.828** ✓. **Use 1.3–1.5 L box:** at 1.5 L → Fc = 74 × 2.0 = **148 Hz** ✓, Qtc = **0.76** ✓.
+- **DSP correction vs TB sub (85 dB ref):** −3.0 dB.
+- **Power at reference (8Ω, 98 dB):** 10^(10/10) = **10.0W** (6.7% of 150W ✓). At burst (101 dB): 10^(13/10) = **20.0W** (13.3% ✓).
+- **Centre spacing:** Same OD as EW 428 (118.5 mm) → same spacings.
+- **vs Morel EW 428 (Fs=62Hz, Xmax=4.5mm, €153):** EW 428 is better: 12Hz lower Fs (2.42× vs 2.03×), 0.5mm more Xmax, lower Fc in 1.2 L (138 vs 161 Hz). Cost delta: EW 428 is €44 more. Choose EW 428; CAW 428 only if budget constrained (€44 saving) with crossover raised to 160 Hz and box volume ≥1.3 L.
 
 ### Morel EM 428 ★ — Candidate (4.5" standard motor, entry of 428 family; lautsprechershop.de)
-- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** round | Impedance: **8Ω** | Power: **150W** | Xmax: **±3 mm** | Fs: **68 Hz** | Sensitivity: **87 dB @ 1W/1m**
-- ⚠ Full T/S not confirmed — fetch Morel EM 428 datasheet
-- **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€134.00 inc VAT / €112.61 exc VAT** | Stock (Jun 2026): in stock at LSS
-- **Fs margin at 150 Hz crossover:** 150/68 = **2.21×** — adequate.
+- Role: **MID** | Size: 4.5" | Frame OD: **118.5 mm** | Cutout: **94 mm** | Depth: **56 mm** | Impedance: **8Ω** | Cone: Damped Polymer Composite (DPC)
+- Sensitivity: **87 dB @ 2.83V/1m** | Power: **150W (DIN)** | Xmax: **±3.0 mm** | Fs: **68 Hz**
+- **T/S (verified from datasheet):** Qts 0.41 | Qes 0.48 | Qms 3.03 | Sd **57 cm²** | Vas **3.5 L** | Mms 6.55 g | Cms 0.88 mm/N | Rms 0.86 kg/s | BL 5.4 N·A | Re 5.4Ω | Le 0.36 mH
+- **Source:** Morel EM 428 datasheet (verified June 2026) | [research/morel_em428.pdf](research/morel_em428.pdf) | LSS: **€134.00 inc VAT / €112.61 exc VAT** | Stock (Jun 2026): in stock at LSS
+- **Gate 1 — Max SPL (8Ω, P_ref=1W):** 87 + 10·log₁₀(150) = **108.8 dB** ✓
+- **Gate 2 — Fs margin:** 150/68 = **2.21×** ✓
+- **Gate 3 — Beaming (Sd=57 cm²):** same as EW 428 → f_beam = **2,570 Hz** ✓. 0.8× ceiling = **2,056 Hz**.
+- **Gate 4 — Physical:** OD 118.5 mm ✓ | Depth 56 mm ✓ | 8Ω ✓
+- **Gate 5 — Sealed 1.2 L:** α = 3.5/1.2 = 2.917; √(1+2.917) = 1.979; Fc = 68 × 1.979 = **134.6 Hz** ✓; Qtc = 0.41 × 1.979 = **0.811** ✓. Smallest Vas of any Morel 428 → lowest Fc in 1.2 L box.
 - **DSP correction vs TB sub (85 dB ref):** −2.0 dB.
-- **Power at reference (8Ω, 98 dB):** 12.6W (8.4% of 150W ✓). At burst (101 dB): **25.1W** (16.7% ✓).
-- **Beaming:** Same FP as EW 428 → ~2,740 Hz estimate.
-- **vs Morel EW 428 (Fs=62Hz, Xmax=4.5mm, €153):** EW 428 is better in every acoustic parameter: 6Hz lower Fs, 1.5mm more Xmax, better motor — at only €19 more. **Choose EW 428 over EM 428 unconditionally.** EM 428 is only relevant if EW 428 sells out at LSS.
+- **Power at reference (8Ω, 98 dB):** 10^(11/10) = **12.6W** (8.4% of 150W ✓). At burst (101 dB): 10^(14/10) = **25.1W** (16.7% ✓).
+- **vs Morel EW 428 (Fs=62Hz, Xmax=4.5mm, €153):** EW 428 is better in every acoustic parameter: 6Hz lower Fs, 1.5mm more Xmax, same 150W rating — at only €19 more. **Choose EW 428 over EM 428 unconditionally.** EM 428 relevant only if EW 428 sells out.
 
 ### SEAS CA12RCY H1152-08 ★ — Candidate (classic paper cone, 4.5"; lautsprechershop.de)
 - Role: **MID** | Size: 4.5" | Frame OD: **120.4 mm** round | Impedance: **8Ω** | Cone: Paper (SEAS Prestige classic)
-- Sensitivity: **? (unconfirmed — fetch datasheet)** | Power: **? (unconfirmed — fetch datasheet)** | Xmax: **? (unconfirmed — fetch datasheet)** | Fs: **? (unconfirmed — fetch datasheet)**
-- ⚠ Full T/S not confirmed from LSS page — fetch SEAS CA12RCY H1152-08 datasheet before ordering
+- Sensitivity: **? (unconfirmed)** | Power: **? (unconfirmed)** | Xmax: **? (unconfirmed)** | Fs: **? (unconfirmed)**
+- ⚠ Full T/S not confirmed. The local file `research/seas_ca12rcy.pdf` is **the wrong driver** — it contains the SEAS 27TFFNC/CG H1406 tweeter, not the CA12RCY. Fetch the correct CA12RCY datasheet from seas.no before any analysis or ordering.
 - **Source:** [Lautsprechershop.de](https://www.lautsprechershop.de/chassis/zy2_main_en.htm) (LSS woofer index, June 2026) | LSS price: **€94.90 inc VAT / €79.75 exc VAT** | Stock (Jun 2026): in stock at LSS
 - **Fs margin at 150 Hz crossover:** Not calculable — Fs unconfirmed. Fetch datasheet.
 - **DSP correction vs TB sub (85 dB ref):** Not calculable — sensitivity unconfirmed. Fetch datasheet.
@@ -1449,10 +1592,14 @@ All drivers indexed from SoundImports woofer pages (3"–5.25" filter, cheapest 
 - **Source:** SoundImports product page | Price: €62.45 | Stock: in stock
 - Note: High-damping surround for non-resonant character. 88.5 dB — needs −3.5 dB pad. Xmax only 2.3mm for a €62 driver.
 
-### SB Acoustics SB12MNRX2-25-4 — Catalogue
-- Role: **MID** | Size: 4" | Imp: 4Ω | Sensitivity: 91 dB | Power: 50W RMS | Fs: 58 Hz | Qts: 0.27 | Qms: 3.60 | Qes: 0.29 | Xmax: 4.4mm | Vas: 6.3 L | OD: 123mm | Cone: natural fibers | Surround: butyl rubber | VC: 25.4mm | Re: 3.2Ω | BL: 4.1 Tm
-- **Source:** https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html | Price: €61.95 | Stock: 10+
-- Note: Updated version of MNRX25-4. Significantly higher sensitivity (91 vs 88.5 dB) and power (50 vs 30W). Qts 0.27 very low — well-damped, easy to place in any enclosure. Xmax 4.4mm excellent. Low Qts means strong bass control. 150 Hz crossover: 58 Hz → 2.59× margin (solid).
+### SB Acoustics SB12MNRX2-25-4 ✅ SELECTED — MID (the only 4" that matches the W5 output)
+- Role: **MID** | Size: 4" Norex midrange | Imp: 4Ω | Re: 3.2Ω | Le: 0.15 mH | Sd: 50 cm² | VC: 25.4 mm | OD: 123 mm | Net wt: 0.92 kg | Shorting ring
+- **Sensitivity: 90.5 dB @ 2.83V/1m** | **Power: 50W RMS** | **Fs: 63.5 Hz** | Qts 0.32 (Qms 4.19, Qes 0.35) | Mms 4.2 g | Bl 3.9 Tm | Vas 5.3 L | Cms 1.5 mm/N | **Xmax: ±2.2 mm (4.4 mm p-p linear travel)**
+- **Source (verified):** [SB datasheet](https://sbacoustics.com/wp-content/uploads/2021/03/4in-SB12MNRX2-25-4.pdf) + [product page](https://sbacoustics.com/product/4-sb12mnrx2-25-4-norex/) (owner-confirmed Jun 2026); local `research/speakers/sb12mnrx2.pdf` | [SoundImports](https://www.soundimports.eu/en/sb-acoustics-sb12mnrx2-25-4.html) €61.95, 10+
+- **Why selected — output match to W5-1138SMF (the governing requirement):** W5 sets the system ceiling at **98 dB @40W RMS / 101 dB @80W burst**. Max SPL = sens + 10·log₁₀(P/2W, 4Ω) = 90.5 + 10·log₁₀(25) = **104.5 dB** → matches the 101 dB burst with **+3.5 dB margin**. It is the **only 4" mid that reaches the burst** — PFCR25-4 and NRX25-4 (both 87.5 dB / 30 W) are power-limited at **99.3 dB (−1.7 dB short)**; B4N (85/25) at 99.0. MNRX2 matches via sensitivity + power, not excursion.
+- **Xmax caveat:** ±2.2 mm is modest, but adequate for a mid crossed at 150 Hz — excursion-limited SPL at 150 Hz ≈ 105 dB (> 101). Relies on a clean 150 Hz handoff to the sub (no lower).
+- **Crossovers:** to sub at 150 Hz → Fs 63.5 = **2.36× margin** (≥2× ✓). To tweeter: beams ~2,730 Hz (Sd 50) → clean handoff at 2 kHz. DSP pad −5.5 dB vs 85 dB sub.
+- **Corrects prior errors:** earlier catalogue figures (91 dB / Fs 58 / Xmax 4.4 one-way / Qts 0.27 / Vas 6.3) were wrong — superseded by the verified datasheet values above.
 
 ### SB Acoustics SB12PFC25-4 — Catalogue (OOS or same as PFCR25-4)
 - Role: **MID** | Size: 4" | Imp: 4Ω | Sensitivity: 87.5 dB | Power: 30W RMS | Fs: 58 Hz | Xmax: 5mm | Qts: 0.43 | Vas: 5.1 L | Cone: natural fiber paper | Surround: butyl rubber | VC: 1"

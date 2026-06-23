@@ -1,0 +1,21 @@
+* DIGITISED from the SB Acoustics datasheet polar plot (400-DPI render),
+* traced by eye ~+/-1-2 dB. MAGNITUDE ONLY - no phase (datasheet has none);
+* derive minimum-phase in your sim tool. NOT an independent measurement.
+* Columns: Freq(Hz)  SPL(dB @2.83V/1m)  Phase(deg, placeholder 0)
+300.0	54.00	0.0
+500.0	80.00	0.0
+700.0	87.00	0.0
+1000.0	91.00	0.0
+1500.0	91.00	0.0
+2000.0	90.00	0.0
+3000.0	90.00	0.0
+4000.0	90.00	0.0
+5000.0	90.00	0.0
+6000.0	89.00	0.0
+8000.0	90.00	0.0
+10000.0	89.00	0.0
+12000.0	89.00	0.0
+13000.0	88.00	0.0
+15000.0	88.00	0.0
+18000.0	87.00	0.0
+20000.0	86.00	0.0

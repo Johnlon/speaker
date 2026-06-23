@@ -121,9 +121,16 @@
 
 <div class="container">
 
-<div style="margin:20px 0;padding:16px 20px;border:2px solid #b3261e;border-radius:10px;background:#2a1412;color:#ffd9d4">
-  <strong style="color:#ff6a5a">⛔ Ring-radiator picks below are WITHDRAWN.</strong>
-  Ring radiators measure horn-like at 60&deg; off-axis (large deviation by 30&deg;, severe HF rolloff by 60&deg; &mdash; RAW-CAt Ultimate Tweeter Shootout Part 6, Nov 2025), which disqualifies them for the 60&deg; kitchen geometry. That makes every <em>R2604/833000</em>, <em>R2604/832000</em>, <em>XT25TG30-04</em>, <em>XT25BG60-04</em>, <em>XT25SC90-04</em>, <em>XT25SC40-04</em> and <em>XT19TD00-04</em> recommendation on this page <strong>ineligible</strong>, including the current &ldquo;60&deg; Off-axis &mdash; Top Pick.&rdquo; A small soft-dome tweeter is mandatory for this position; the page is pending a full refresh once the tweeter is reselected. Treat the dome-based picks (e.g. D2604/833000) as current and ignore the ring-radiator cards until then.
+<div style="margin:20px 0;padding:18px 22px;border:2px solid #2e7d32;border-radius:10px;background:#10220f;color:#d7f5d4">
+  <div style="font-size:18px;font-weight:700;color:#7fe07a;margin-bottom:8px">✅ SELECTED SYSTEM (June 2026)</div>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;color:#d7f5d4">
+    <tr><td style="padding:2px 10px 2px 0"><b>Sub</b></td><td>Tang Band W5-1138SMF</td><td>85 dB · 40 W→98 dB / 80 W→101 dB</td></tr>
+    <tr><td style="padding:2px 10px 2px 0"><b>PR</b></td><td>SB Acoustics SB15SFCR-00</td><td>racetrack, re-tune ~53 g → 40 Hz</td></tr>
+    <tr><td style="padding:2px 10px 2px 0"><b>Mid</b></td><td>SB Acoustics SB12MNRX2-25-4</td><td>90.5 dB · 50 W · only 4&Prime; that matches the W5 burst (104.5 dB max)</td></tr>
+    <tr><td style="padding:2px 10px 2px 0"><b>Tweeter</b></td><td>SB Acoustics SB19ST-C000-4</td><td>88.5 dB · 30 W · Fs 980</td></tr>
+  </table>
+  <div style="margin-top:8px;font-size:13px">Crossovers (JAB5/ADAU1701, 36 V): sub→mid <b>150 Hz LR</b>; mid→tweeter <b>~2 kHz LR4</b>. Full justification &amp; evidence in <code>drivers.md</code> &ldquo;SELECTED SYSTEM&rdquo; and <code>research/tweeter_offaxis_evidence.md</code>.</div>
+  <div style="margin-top:10px;font-size:12px;color:#bdbd8a">⚠ The driver cards below are the OLD survey and are <b>superseded</b> by the box above — ring radiators are ineligible (horn-like 60° off-axis, RAW-CAt Part 6); this page still needs a full card-by-card rebuild around the selected system.</div>
 </div>
 
 <!-- ══════════════════════════════════════════════════
@@ -142,24 +149,10 @@
   <div class="summary-grid">
 
     <div class="summary-card">
-      <h3>60&#176; Off-axis — Top Pick</h3>
-      <div class="pick">DS115-8 + R2604/833000</div>
-      <div class="detail">Ring rad &middot; 100W &middot; no limiter ever &middot; moderate 0.68 oct window &middot; 1,670 Hz xover</div>
-      <div class="total">£80 <span style="font-size:13px;color:var(--muted)">(Willys)</span></div>
-    </div>
-
-    <div class="summary-card">
       <h3>On-axis Quality — Top Pick</h3>
       <div class="pick">DS115-8 + D2604/833000</div>
       <div class="detail">100W dome &middot; moderate 0.57 oct window &middot; 1,735 Hz xover &middot; paper warmth + Scan-Speak detail</div>
       <div class="total" style="color:var(--muted);font-size:14px">£32 + TBD</div>
-    </div>
-
-    <div class="summary-card">
-      <h3>Visual — Round</h3>
-      <div class="pick">DS115-8 + XT25TG30-04</div>
-      <div class="detail">Both round &middot; ring rad &middot; moderate 0.68 oct window &middot; DSP limiter at burst (0.4 dB margin)</div>
-      <div class="total">£75</div>
     </div>
 
     <div class="summary-card">
@@ -197,13 +190,6 @@
       <div class="total">£53</div>
     </div>
 
-    <div class="summary-card">
-      <h3>Best Value — Ring Rad</h3>
-      <div class="pick">DS115-8 + R2604/833000</div>
-      <div class="detail">Ring rad &middot; 100W &middot; no limiter &middot; moderate 0.68 oct window</div>
-      <div class="total">£80 <span style="font-size:13px;color:var(--muted)">(Willys)</span></div>
-    </div>
-
   </div>
 </div>
 
@@ -213,114 +199,11 @@
 <div id="tab-offaxis" class="tab-panel">
   <div class="section-title">Best for 60&#176; off-axis — kitchen / cooker</div>
   <div class="section-sub">
-    A small soft-dome tweeter is mandatory here — it holds HF dispersion at wide angles, whereas ring radiators measure horn-like at 60&deg; (RAW-CAt Part 6) and are ineligible. Ranked: measured 60&deg; off-axis &rarr; crossover window width &rarr; power headroom. <strong>Picks in this section are ring radiators and are withdrawn pending dome reselection (see banner at top).</strong>
+    A small soft-dome tweeter is mandatory here — ring radiators measure horn-like at 60&deg; (RAW-CAt Part 6) and are ineligible. The selected system uses <strong>SB12MNRX2-25-4 + SB19ST-C000-4</strong> — see the selected system panel above for details. This table has no eligible entries until a dome-based survey replaces the old ring radiator candidates.
   </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Mid</th>
-        <th>Tweeter</th>
-        <th>Xover / Window</th>
-        <th>Mid power</th>
-        <th>Tweet power</th>
-        <th>Price</th>
-        <th>PSU</th>
-        <th>Character</th>
-        <th>Why</th>
-        <th>Buy / Datasheet</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="rank1">
-        <td><span class="ok">1</span></td>
-        <td>
-          <div class="driver">DS115-8 <span class="best">TOP PICK</span></div>
-          <div class="driver-sub">4" paper cone &middot; 8&#937; &middot; 85.3 dB &middot; 116mm OD &middot; 35W/70W rated</div>
-        </td>
-        <td>
-          <div class="driver">R2604/833000</div>
-          <div class="driver-sub">Scan-Speak ring rad &middot; 4&#937; &middot; 92 dB &middot; 100W rated &middot; Fs=440 Hz</div>
-        </td>
-        <td>
-          <div class="mono">1,670 Hz</div>
-          <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
-        </td>
-        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
-        <td><span class="mono">8.0W RMS / 15.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (100W rated)</span></td>
-        <td><span class="price">£80</span><br><span class="driver-sub">£32 + £48</span></td>
-        <td class="mono">29V / 4.6A</td>
-        <td>Warm + airy</td>
-        <td style="font-size:12px;color:var(--muted)">Ring rad with 100W rating — <strong style="color:var(--text)">no DSP limiter needed at any SPL.</strong> Widest window of any ring rad pair. Most DSP-forgiving alignment. Paper cone warmth + Scan-Speak ring rad detail. <strong>Alt: R2604/832000 at £57 Willys (inc VAT)</strong> — same 100W, 2 dB lower sensitivity, Fs=500 Hz → 0.49 oct window (borderline moderate/tight). £9 more than 833000 for a worse window — 833000 is the better pick.</td>
-        <td>
-          <div class="badges">
-            <a class="badge badge-willys" href="https://willys-hifi.com/products/scanspeak-r2604-833000-tweeter">833000 Willys £47.79</a>
-            <a class="badge badge-willys" href="https://willys-hifi.com/products/scanspeak-r2604-832000-tweeter">832000 Willys £57</a>
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/scan-speak-r2604-833000.html">SI €62.45</a>
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-ds115-8.html">DS115-8 SI</a>
-            <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
-          </div>
-        </td>
-      </tr>
-      <tr class="rank2">
-        <td><span class="warn">2</span></td>
-        <td>
-          <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper cone &middot; 8&#937; &middot; 85.3 dB &middot; 116mm OD &middot; 35W/70W rated</div>
-        </td>
-        <td>
-          <div class="driver">XT25TG30-04</div>
-          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 91.9 dB &middot; 15W rated &middot; Fs=440 Hz</div>
-        </td>
-        <td>
-          <div class="mono">1,670 Hz</div>
-          <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
-        </td>
-        <td><span class="mono">18.6W RMS / 37.2W burst</span><br><span class="ok" style="font-size:11px">&#10003; within 35W/70W</span></td>
-        <td><span class="mono">8.2W RMS / 16.3W burst</span><br><span class="warn" style="font-size:11px">&#9888; limiter needed (16.3W vs 15W)</span></td>
-        <td><span class="price">£75</span><br><span class="driver-sub">£32 + £43</span></td>
-        <td class="mono">29V / 4.6A</td>
-        <td>Warm + airy</td>
-        <td style="font-size:12px;color:var(--muted)">Same window as #1, £5 cheaper. Set DSP limiter at 100.6 dB (0.4 dB short of burst ceiling — inaudible). Identical dispersion character to R2604.</td>
-        <td>
-          <div class="badges">
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-xt25tg30-04.html">SI £43</a>
-            <a class="badge badge-falcon" href="https://www.falconacoustics.co.uk/peerless-vifa-xt25tg30-04-ring-radiator-tweeter.html">Falcon</a>
-            <a class="badge badge-pdf" href="https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf">Datasheet</a>
-          </div>
-        </td>
-      </tr>
-      <tr class="rank3">
-        <td>3</td>
-        <td>
-          <div class="driver">SB12PFCR25-4</div>
-          <div class="driver-sub">4" natural fibre cone &middot; 4&#937; &middot; 87.5 dB &middot; 122mm OD &middot; 30W rated</div>
-        </td>
-        <td>
-          <div class="driver">XT25BG60-04</div>
-          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 92.6 dB &middot; 15W rated &middot; Fs=570 Hz</div>
-        </td>
-        <td>
-          <div class="mono">1,938 Hz</div>
-          <div class="driver-sub mono"><span class="warn">0.36 oct — tight</span></div>
-        </td>
-        <td><span class="mono">22.5W RMS / 44.8W burst</span><br><span class="warn" style="font-size:11px">&#9888; burst &gt; 30W rated — SPL ceiling 99.3 dB, DSP limiter</span></td>
-        <td><span class="mono">6.9W RMS / 13.9W burst</span><br><span class="ok" style="font-size:11px">&#10003; no limiter (13.9W vs 15W)</span></td>
-        <td><span class="price">£25</span><br><span class="driver-sub">£25 + TBD</span></td>
-        <td class="mono">29V / 4.8A</td>
-        <td>Natural + open</td>
-        <td style="font-size:12px;color:var(--muted)"><strong style="color:#34d399">Tweeter fully safe at burst without limiter.</strong> Natural fibre cone, vented motor. Mid burst ceiling 99.3 dB — set DSP limiter 1.7 dB below full burst target. Tighter window than OA-1/2 — measure and iterate in ADAU1701.</td>
-        <td>
-          <div class="badges">
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/sb-acoustics-sb12pfcr25-4.html">SB12 SI €25.95</a>
-            <a class="badge badge-pdf" href="research/sb_acoustics_sb12pfcr25-4.pdf">SB12 datasheet</a>
-            <a class="badge badge-willys" href="https://willys-hifi.com/products/vifa-xt25bg60-04-tweeter">XT25BG60 Willys</a>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="warn-box" style="margin-top:12px">
+    <strong>Off-axis tab empty — all prior entries were ring radiators (ineligible).</strong> Rebuild pending around the selected system (SB19ST-C000-4 dome, ~2 kHz LR4).
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════
@@ -462,34 +345,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="rank1">
-        <td><span style="color:#a5b4fc;font-weight:600">ROUND</span></td>
-        <td>
-          <div class="driver">DS115-8</div>
-          <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 116mm round frame</div>
-        </td>
-        <td>
-          <div class="driver">XT25TG30-04</div>
-          <div class="driver-sub">Peerless ring rad &middot; 4&#937; &middot; 104mm round &middot; Fs=440 Hz</div>
-        </td>
-        <td>
-          <div class="mono">1,670 Hz</div>
-          <div class="driver-sub mono"><span class="ok">0.68 oct — moderate</span></div>
-        </td>
-        <td class="mono">110mm</td>
-        <td><span class="ok" style="font-size:11px">Ceiling: <strong>100.7/103.7 dB</strong> — well above target</span></td>
-        <td><span class="warn" style="font-size:11px">XT25 ceiling 100.6 dB burst — DSP limiter 0.4 dB below burst</span></td>
-        <td><span class="price">£75</span><br><span class="driver-sub">£32 + £43</span></td>
-        <td style="font-size:12px;color:var(--muted)">Both round frames — clean matched aesthetic. Ring rad for off-axis coverage. Best crossover window of all visual options. Both prices confirmed.</td>
-        <td>
-          <div class="badges">
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/peerless-xt25tg30-04.html">XT25 SI £43</a>
-            <a class="badge badge-si" href="https://www.soundimports.eu/en/dayton-audio-ds115-8.html">DS115-8 SI</a>
-            <a class="badge badge-pdf" href="research/dayton_ds115-8.pdf">DS115-8 datasheet</a>
-            <a class="badge badge-pdf" href="https://doc.soundimports.nl/pdf/brands/Peerless%20by%20Tymphany/XT25TG30-04/XT25TG30-04.pdf">XT25 datasheet</a>
-          </div>
-        </td>
-      </tr>
       <tr class="rank2">
         <td><span style="color:#a78bfa;font-weight:600">SQUARE ACCENT</span><br><span style="font-size:11px;color:var(--muted)">round mid + square tweet</span></td>
         <td>
@@ -831,13 +686,13 @@
         </td>
       </tr>
       <tr>
-        <td>4 — best ring rad</td>
+        <td>4 — ineligible</td>
         <td>
           <div class="driver">DS115-8</div>
           <div class="driver-sub">4" paper &middot; 8&#937; &middot; 85.3 dB &middot; 35W/70W</div>
         </td>
         <td>
-          <div class="driver">R2604/833000 <span class="best">NO LIMITER</span></div>
+          <div class="driver">R2604/833000</div>
           <div class="driver-sub">Scan-Speak ring rad &middot; 4&#937; &middot; 92 dB &middot; 100W &middot; Fs=440 Hz</div>
         </td>
         <td>
@@ -849,7 +704,7 @@
         <td><span class="price">£80</span><br><span class="driver-sub">£32 + £48 (Willys)</span></td>
         <td class="mono">29V / 4.6A</td>
         <td>Warm + airy</td>
-        <td style="font-size:12px;color:var(--muted)">Same window as #3, only £5 more. 100W tweeter = no limiter ever. Beats #3 on every technical metric. <strong>Alt: R2604/832000 at £57 (inc VAT)</strong> — same 100W but £9 more and 0.49 oct window (vs 0.68 oct). 833000 is better value.</td>
+        <td style="font-size:12px;color:var(--muted)"><strong style="color:#ff6a5a">INELIGIBLE — ring radiator (poor 60&deg; off-axis, RAW-CAt Part 6).</strong> Withdrawn pending dome reselection.</td>
         <td>
           <div class="badges">
             <a class="badge badge-willys" href="https://willys-hifi.com/products/scanspeak-r2604-833000-tweeter">833000 Willys £47.79</a>

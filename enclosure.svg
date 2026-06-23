@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="545" viewBox="0 0 1080 545" font-family="Segoe UI, Arial, sans-serif">
+  <style>
+    .cab   { fill:#f7f5f0; stroke:#222; stroke-width:2.5; }
+    .frame { fill:#d9d2c4; stroke:#333; stroke-width:1.5; }
+    .cut   { fill:#fff; stroke:#555; stroke-width:1; stroke-dasharray:5 4; }
+    .pocket{ fill:#e8eef7; stroke:#3d6098; stroke-width:1.5; stroke-dasharray:6 4; }
+    .vent  { fill:#bbb; stroke:none; }
+    .lbl   { font-size:13px; fill:#111; font-weight:600; text-anchor:middle; }
+    .sub   { font-size:10.5px; fill:#555; text-anchor:middle; }
+    .dim   { font-size:10px; fill:#1a6; text-anchor:middle; }
+    .title { font-size:18px; fill:#111; font-weight:700; }
+    .note  { font-size:11px; fill:#666; }
+    .edge  { font-size:9px; fill:#b3261e; font-weight:700; text-anchor:middle; }
+  </style>
+
+  <text x="40" y="28" class="title">Kitchen Counter Monitor — Enclosure 220 × 180 × 360 mm (side-firing sub + PR)</text>
+  <text x="40" y="46" class="note">Orthographic views, each 1 unit = 1 mm. 18 mm front baffle, 12 mm other panels. 20 mm bottom margin (acoustic floor) so side cutouts clear. Geometry provisional — pending final lockdown.</text>
+
+  <!-- ============ FRONT (220 W × 360 H) : mid + tweeter ============ -->
+  <g transform="translate(40,90)">
+    <rect class="cab" x="0" y="0" width="220" height="360"/>
+    <!-- tweeter SB19ST: centre (110,286 from bottom) -> svg y = 360-286 = 74 ; ~30 mm top margin -->
+    <circle class="frame" cx="110" cy="74" r="44"/>
+    <circle class="cut"   cx="110" cy="74" r="30"/>
+    <text x="110" y="77" class="sub">SB19ST</text>
+    <!-- mid SB12MNRX2: centre (110,172 from bottom) -> svg y = 360-172 = 188 -->
+    <circle class="frame" cx="110" cy="188" r="61.5"/>
+    <circle class="cut"   cx="110" cy="188" r="51"/>
+    <text x="110" y="185" class="sub">SB12MNRX2</text>
+    <text x="110" y="199" class="sub">mid Ø123</text>
+    <text x="110" y="375" class="lbl">FRONT</text>
+    <text x="110" y="389" class="dim">220 mm wide</text>
+    <text x="-8" y="180" class="dim" transform="rotate(-90,-8,180)">360 mm tall</text>
+  </g>
+
+  <!-- ============ LEFT SIDE (180 D × 360 H) : sub ============ -->
+  <g transform="translate(320,90)">
+    <rect class="cab" x="0" y="0" width="180" height="360"/>
+    <!-- sub W5-1138SMF: centre depth 90, height 100 -> svg (90, 360-100=260) -->
+    <circle class="frame" cx="90" cy="260" r="77.5"/>
+    <circle class="cut"   cx="90" cy="260" r="60"/>
+    <text x="90" y="257" class="sub">W5-1138SMF</text>
+    <text x="90" y="270" class="sub">sub Ø155</text>
+    <text x="90" y="375" class="lbl">LEFT side</text>
+    <text x="90" y="389" class="dim">180 mm deep</text>
+    <text x="172" y="14" class="edge">front→</text>
+  </g>
+
+  <!-- ============ RIGHT SIDE (180 D × 360 H) : PR ============ -->
+  <g transform="translate(560,90)">
+    <rect class="cab" x="0" y="0" width="180" height="360"/>
+    <!-- PR SB15SFCR-00 portrait: frame 153 (depth) x 252 (height), cutout 119 x 220; centre depth 90, height 150 -->
+    <rect class="frame" x="13.5" y="84" width="153" height="252" rx="76.5" ry="76.5"/>
+    <rect class="cut" x="30.5" y="100" width="119" height="220" rx="59.5" ry="59.5"/>
+    <text x="90" y="207" class="sub">SB15SFCR-00</text>
+    <text x="90" y="221" class="sub">PR (portrait)</text>
+    <text x="90" y="375" class="lbl">RIGHT side</text>
+    <text x="90" y="389" class="dim">180 mm deep</text>
+    <text x="10" y="14" class="edge">←front</text>
+  </g>
+
+  <!-- ============ REAR (220 W × 360 H) : electronics pocket ============ -->
+  <g transform="translate(800,90)">
+    <rect class="cab" x="0" y="0" width="220" height="360"/>
+    <!-- pocket 175 x 127, centre x110, height 270 -> svg (110, 360-270=90) -->
+    <rect class="pocket" x="22.5" y="26.5" width="175" height="127" rx="4"/>
+    <text x="110" y="78" class="sub">JAB5 + PSU pocket</text>
+    <text x="110" y="92" class="sub">175 × 127 × 46</text>
+    <!-- vent holes grid -->
+    <g class="vent">
+      <circle cx="55" cy="115" r="3"/><circle cx="85" cy="115" r="3"/><circle cx="115" cy="115" r="3"/><circle cx="145" cy="115" r="3"/><circle cx="175" cy="115" r="3"/>
+      <circle cx="55" cy="135" r="3"/><circle cx="85" cy="135" r="3"/><circle cx="115" cy="135" r="3"/><circle cx="145" cy="135" r="3"/><circle cx="175" cy="135" r="3"/>
+    </g>
+    <text x="110" y="375" class="lbl">REAR</text>
+    <text x="110" y="389" class="dim">220 mm wide</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(40,512)">
+    <rect class="frame" x="0" y="-9" width="16" height="12"/>
+    <text x="22" y="1" class="note">driver frame</text>
+    <rect class="cut" x="120" y="-9" width="16" height="12"/>
+    <text x="142" y="1" class="note">cutout</text>
+    <rect class="pocket" x="210" y="-9" width="16" height="12"/>
+    <text x="232" y="1" class="note">recessed electronics pocket (rear)</text>
+    <text x="470" y="1" class="note">Crossovers: 150 Hz LR (sub→mid) · ~2 kHz LR4 (mid→tweeter)</text>
+  </g>
+</svg>

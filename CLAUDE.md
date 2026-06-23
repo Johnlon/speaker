@@ -4,6 +4,21 @@ Project and file structure, requirements, evaluation policy, and fixed system co
 
 ---
 
+## HARD RULE — Verified Facts Only (read this first; overrides everything below)
+
+Every fact, number, spec, ranking, opinion, and recommendation — in files **and** in chat — MUST be backed by a source you have actually read this session: a datasheet, a published measurement, or a manufacturer/dealer page. Substantiate every claim with the source inline.
+
+- **NEVER present an AI guess, assumption, inference, or "typically / usually / should be" claim as fact.** A plausible-sounding inference is not a fact. If it isn't measured or sourced, it is not true yet.
+- **If something is not verified, say so explicitly** ("not verified", "unknown — needs datasheet") and do NOT build a recommendation, ranking, or design decision on it. Stop and fetch the source, or flag the gap to the owner and wait.
+- **Never silently fill a gap.** "I don't know / not yet verified" is the correct answer when you don't have the source. It is always better than a confident guess.
+- **Derived numbers** (power, beaming, crossover, volume) must show the formula AND the sourced input values they were computed from.
+- **Clearly separate** sourced fact from anything provisional. No unlabelled provisional content anywhere.
+- This rule overrides speed, convenience, and the urge to be helpful or decisive.
+
+**Why this exists:** an earlier unverified "ring radiator off-axis advantage" — a pure AI hallucination — led the owner to buy £160 of unusable tweeters. Unverified assumptions have a real, expensive cost. This must never happen again.
+
+---
+
 ## Autonomous Operation
 
 Only work fully autonomously when the owner has explicitly instructed you to do so in the current session. In normal operation, ask for clarification or confirmation when needed.
@@ -35,6 +50,18 @@ The owner cannot track console output across sessions. Write all findings to the
 **Never put per-driver data in combos.md.** If a fact is true regardless of which driver the mid or tweeter is paired with, it belongs in drivers.md.
 
 When performing a supplier stock check, record findings in the relevant driver entry in drivers.md (stock and date) and update combos.md/solutions.html if a previously available driver is now out of stock.
+
+---
+
+## Tweeter Off-Axis Gate — Mandatory Before Any Recommendation
+
+Before writing any tweeter recommendation to any file, AND before describing any tweeter as a "good candidate", "promising", or using any positive language about its off-axis performance in chat:
+
+1. **Read the actual 60° off-axis curve in the datasheet** — open the local PDF, find the FR plot showing the 60° curve, and state the measured dB difference between on-axis and 60° at 13 kHz. If no local PDF exists, fetch it before proceeding.
+2. **Calculate beaming frequency** from Sd: D = 2√(Sd/π), f_beam = 344 / (π × D/2). This is context only — it does NOT establish suitability. A low beaming frequency predicts poor off-axis, but a high beaming frequency does NOT confirm good off-axis. Only measured data does.
+3. **Check measured polar data** if available — RAW-CAt Ultimate Tweeter Shootout Part 6 (Nov 2025) has measured 30° data for 40+ tweeters. Note: RAW-CAt measures at 30° only, not 60°. A good 30° score does not imply good 60° performance.
+
+**The gate blocks any positive statement about a tweeter's off-axis performance until step 1 is complete and the dB figure at 13 kHz / 60° is recorded.** Theoretical calculations alone never satisfy this gate. No exceptions.
 
 ---
 

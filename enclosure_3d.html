@@ -3,261 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kitchen Counter Monitor — 3D Enclosure (side-firing sub + PR, rear electronics)</title>
+<title>Kitchen Counter Monitor — 3D (photoreal)</title>
 <style>
-  html, body { margin: 0; height: 100%; background: #0e1116; color: #cfd8e3;
-    font-family: "Segoe UI", system-ui, sans-serif; overflow: hidden; }
-  #app { position: fixed; inset: 0; }
-  .panel { background: rgba(16,20,27,.82); border: 1px solid #2c3a48; border-radius: 10px;
-    backdrop-filter: blur(6px); }
-  #hud { position: fixed; top: 14px; left: 16px; max-width: 380px; padding: 14px 16px; }
-  #hud h1 { font-size: 15px; margin: 0 0 6px; color: #fff; }
-  #hud .dim { font-size: 12px; color: #8ea3b8; margin: 0 0 10px; }
-  #hud table { font-size: 12px; border-collapse: collapse; width: 100%; }
-  #hud td { padding: 2px 6px 2px 0; }
-  .sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px;
-    margin-right: 6px; vertical-align: middle; }
-  #hud .face { color: #6f8298; }
-  #controls { position: fixed; bottom: 14px; left: 16px; font-size: 12px;
-    color: #6f8298; padding: 8px 12px; }
-  #controls .hint { display:block; margin-bottom: 7px; }
-  button { background: #243140; color: #cfd8e3; border: 1px solid #38495b;
-    border-radius: 6px; padding: 5px 10px; font-size: 12px; cursor: pointer; margin: 0 4px 4px 0; }
-  button:hover { background: #2e3e50; }
-  button.on { background: #3a5f8a; border-color: #5b86b8; color: #fff; }
-  .grp { display:inline-block; margin-right: 10px; }
+  html,body{margin:0;height:100%;background:#0a0b0d;overflow:hidden;font-family:"Segoe UI",system-ui,sans-serif;color:#cdd4dd}
+  #app{position:fixed;inset:0}
+  .panel{position:fixed;background:rgba(14,16,20,.78);border:1px solid #2a3340;border-radius:10px;backdrop-filter:blur(6px)}
+  #hud{top:14px;left:16px;padding:12px 15px;max-width:320px}
+  #hud h1{font-size:14px;margin:0 0 4px;color:#fff}
+  #hud p{font-size:11.5px;color:#8a98a8;margin:0}
+  #ui{bottom:14px;left:16px;padding:8px 10px;font-size:12px;color:#8a98a8}
+  button{background:#222c38;color:#cdd4dd;border:1px solid #38465a;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;margin:0 4px 0 0}
+  button:hover{background:#2c3a4a}button.on{background:#3a5f8a;border-color:#5b86b8;color:#fff}
 </style>
 </head>
 <body>
 <div id="app"></div>
 <div id="hud" class="panel">
   <h1>Kitchen Counter Monitor</h1>
-  <p class="dim">220 W &times; 180 D &times; 360 H mm &nbsp;•&nbsp; side-firing sub + PR · rear electronics</p>
-  <table>
-    <tr><td><span class="sw" style="background:#c8553d"></span>Sub W5-1138SMF</td><td class="face">left side · &empty;155</td></tr>
-    <tr><td><span class="sw" style="background:#588b8b"></span>Mid DS115-8</td><td class="face">front · &empty;115.6</td></tr>
-    <tr><td><span class="sw" style="background:#dca94b"></span>Tweeter R2604</td><td class="face">front · &empty;104</td></tr>
-    <tr><td><span class="sw" style="background:#7a6fb0"></span>PR SB15SFCR-00</td><td class="face">right side · 169&times;253</td></tr>
-    <tr><td><span class="sw" style="background:#3d6098"></span>Electronics pocket</td><td class="face">rear · 175&times;127&times;46</td></tr>
-  </table>
+  <p>220 × 180 × 360 mm · side-firing sub (left) + PR (right) · mid + tweeter front · drivers to scale.</p>
 </div>
-<div id="controls" class="panel">
-  <span class="hint">Drag to orbit · scroll to zoom</span>
-  <span class="grp">
-    <button id="btnFront">Front</button>
-    <button id="btnLeft">Sub side</button>
-    <button id="btnRight">PR side</button>
-    <button id="btnRear">Rear</button>
-    <button id="btnIso">Iso</button>
-  </span>
-  <span class="grp">
-    <button id="btnCut">Cutaway</button>
-    <button id="btnWire">Wireframe</button>
-    <button id="btnSpin">Auto-rotate</button>
-    <button id="btnGrid" class="on">Grid</button>
-  </span>
+<div id="ui" class="panel">
+  <button id="bIso">Iso</button><button id="bFront">Front</button><button id="bLeft">Sub side</button><button id="bRight">PR side</button>
+  <button id="bSpin">Auto-rotate</button><button id="bWire">Wire</button>
 </div>
 
 <script type="importmap">
 { "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
 }}
 </script>
-
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-// ---- enclosure dimensions (mm; 1mm = 1 unit) ----
-const W = 220, D = 180, H = 360;          // external; locked
-const FRONT = D, REAR = 0, LEFT = 0, RIGHT = W;
+const W=220, D=180, H=360, TF=18, T=12;   // mm; front baffle 18, others 12
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0e1116);
-scene.fog = new THREE.Fog(0x0e1116, 1400, 2600);
-
-const app = document.getElementById('app');
-const camera = new THREE.PerspectiveCamera(45, innerWidth/innerHeight, 1, 6000);
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(innerWidth, innerHeight);
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+const app=document.getElementById('app');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(innerWidth,innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.15;
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 app.appendChild(renderer.domElement);
 
-const pmrem = new THREE.PMREMGenerator(renderer);
-scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x0b0c0f);
+const pmrem=new THREE.PMREMGenerator(renderer);
+scene.environment=pmrem.fromScene(new RoomEnvironment(),0.03).texture;
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.08;
-controls.minDistance = 250;
-controls.maxDistance = 2200;
+const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,1,6000);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.08;controls.minDistance=300;controls.maxDistance=2200;controls.target.set(0,0,0);
 
-// ---- lighting ----
-scene.add(new THREE.HemisphereLight(0xb9d2ff, 0x1a1f26, 0.55));
-const key = new THREE.DirectionalLight(0xffffff, 2.2);
-key.position.set(360, 620, 540);
-key.castShadow = true;
-key.shadow.mapSize.set(2048, 2048);
-key.shadow.camera.near = 100; key.shadow.camera.far = 2200;
-key.shadow.camera.left = -500; key.shadow.camera.right = 500;
-key.shadow.camera.top = 500; key.shadow.camera.bottom = -500;
-key.shadow.bias = -0.0004;
-scene.add(key);
-const rim = new THREE.DirectionalLight(0x6f9bff, 0.7); rim.position.set(-420, 260, -360); scene.add(rim);
+// ---- lighting (soft studio) ----
+scene.add(new THREE.HemisphereLight(0xb9d2ff,0x14181c,0.35));
+const key=new THREE.DirectionalLight(0xfff4e8,2.6);key.position.set(420,640,560);key.castShadow=true;
+key.shadow.mapSize.set(2048,2048);key.shadow.camera.near=100;key.shadow.camera.far=2400;
+key.shadow.camera.left=-500;key.shadow.camera.right=500;key.shadow.camera.top=500;key.shadow.camera.bottom=-500;
+key.shadow.bias=-0.0003;key.shadow.radius=6;scene.add(key);
+const fill=new THREE.DirectionalLight(0x9fb4ff,0.6);fill.position.set(-460,200,360);scene.add(fill);
+const rim=new THREE.DirectionalLight(0xffffff,0.8);rim.position.set(-200,300,-560);scene.add(rim);
 
-// ---- root group centred on origin ----
-const root = new THREE.Group();
-root.position.set(-W/2, -H/2, -D/2);
-scene.add(root);
+// ---- materials (PBR) ----
+const matCab=new THREE.MeshPhysicalMaterial({color:0x6e4d30,roughness:0.58,metalness:0.0,clearcoat:0.18,clearcoatRoughness:0.5,side:THREE.DoubleSide});
+const matFrame=new THREE.MeshStandardMaterial({color:0x17181b,roughness:0.5,metalness:0.35});
+const matCone=new THREE.MeshStandardMaterial({color:0x0c0c0e,roughness:0.92,metalness:0.0,side:THREE.DoubleSide});
+const matSurr=new THREE.MeshStandardMaterial({color:0x070708,roughness:0.32,metalness:0.0,side:THREE.DoubleSide});
+const matCap=new THREE.MeshStandardMaterial({color:0x141416,roughness:0.28,metalness:0.15});
+const matScrew=new THREE.MeshStandardMaterial({color:0xa8acb0,roughness:0.28,metalness:0.95});
+const matDome=new THREE.MeshStandardMaterial({color:0x1b1b20,roughness:0.62,metalness:0.0});
+const matPR=new THREE.MeshStandardMaterial({color:0x0e0e11,roughness:0.45,metalness:0.06,side:THREE.DoubleSide});
+const wireMats=[matCab,matFrame,matCone,matSurr,matCap,matDome,matPR];
 
-// ---- ground + grid ----
-const groundY = -H/2 - 1;
-const ground = new THREE.Mesh(
-  new THREE.PlaneGeometry(4000, 4000),
-  new THREE.MeshStandardMaterial({ color: 0x12161c, roughness: 1 }));
-ground.rotation.x = -Math.PI/2; ground.position.y = groundY; ground.receiveShadow = true;
-scene.add(ground);
-const grid = new THREE.GridHelper(2400, 48, 0x2c3a48, 0x1c242e);
-grid.position.y = groundY + 0.2; scene.add(grid);
+const root=new THREE.Group();root.position.set(-W/2,-H/2,-D/2);scene.add(root);
 
-// ---- cabinet ----
-const cabMat = new THREE.MeshStandardMaterial({ color: 0x6b5640, roughness: 0.78, side: THREE.DoubleSide, transparent: true, opacity: 1 });
-const toggleMats = [], wireMeshes = [];
-const cab = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), cabMat);
-cab.position.set(W/2, H/2, D/2); cab.castShadow = true; cab.receiveShadow = true;
-root.add(cab); toggleMats.push(cabMat); wireMeshes.push(cab);
-const edges = new THREE.LineSegments(
-  new THREE.EdgesGeometry(new THREE.BoxGeometry(W, H, D)),
-  new THREE.LineBasicMaterial({ color: 0x9fb4c9 }));
-edges.position.set(W/2, H/2, D/2); root.add(edges);
+// ===== cabinet from beveled extruded panels (with cutouts) =====
+function rectShape(w,h){const s=new THREE.Shape();s.moveTo(0,0);s.lineTo(w,0);s.lineTo(w,h);s.lineTo(0,h);s.lineTo(0,0);return s;}
+function holeCircle(cx,cy,r){const p=new THREE.Path();p.absarc(cx,cy,r,0,Math.PI*2,true);return p;}
+function holeStadium(cx,cy,w,h){const p=new THREE.Path();const r=w/2,hs=(h-w)/2;
+  p.moveTo(cx-r,cy-hs);p.lineTo(cx-r,cy+hs);p.absarc(cx,cy+hs,r,Math.PI,0,true);
+  p.lineTo(cx+r,cy-hs);p.absarc(cx,cy-hs,r,0,Math.PI,true);return p;}
+function panel(shape,thick){
+  const g=new THREE.ExtrudeGeometry(shape,{depth:thick,bevelEnabled:true,bevelThickness:1.6,bevelSize:1.6,bevelSegments:2,curveSegments:48});
+  const m=new THREE.Mesh(g,matCab);m.castShadow=true;m.receiveShadow=true;return m;}
 
-// ============ generic driver built in LOCAL space ============
-// Baffle plane at local z=0; cone protrudes +z (outward); basket protrudes -z (into box).
-function makeDriver(odMM, cutoutMM, color, proud, into) {
-  const g = new THREE.Group();
-  const rOuter = odMM/2, rCut = cutoutMM/2;
+// front (z=180), holes for mid(110,172 Ø102) + tweeter(110,286 Ø60)
+const fs=rectShape(W,H);fs.holes.push(holeCircle(110,172,51));fs.holes.push(holeCircle(110,286,30));
+const front=panel(fs,TF);front.position.set(0,0,D-TF);root.add(front);
+// rear (z=0)
+const rear=panel(rectShape(W,H),T);rear.position.set(0,0,0);root.add(rear);
+// left (x=0), sub hole Ø120 at depth90/height130
+const ls=rectShape(D,H);ls.holes.push(holeCircle(90,100,60));
+const left=panel(ls,T);left.rotation.y=-Math.PI/2;left.position.set(T,0,0);root.add(left);
+// right (x=220), PR stadium 119x220 at depth90/height150
+const rs=rectShape(D,H);rs.holes.push(holeStadium(90,150,119,220));
+const right=panel(rs,T);right.rotation.y=-Math.PI/2;right.position.set(W,0,0);root.add(right);
+// top + bottom
+const top=panel(rectShape(W,D),T);top.rotation.x=Math.PI/2;top.position.set(0,H,0);root.add(top);
+const bot=panel(rectShape(W,D),T);bot.rotation.x=Math.PI/2;bot.position.set(0,T,0);root.add(bot);
 
-  const ring = new THREE.Mesh(new THREE.RingGeometry(rCut, rOuter, 64),
-    new THREE.MeshStandardMaterial({ color, roughness: 0.55, metalness: 0.25, side: THREE.DoubleSide }));
-  ring.position.z = 0.6; ring.castShadow = true;
-  g.add(ring); wireMeshes.push(ring);
-
-  const cone = new THREE.Mesh(new THREE.ConeGeometry(rCut, proud, 64, 1, true),
-    new THREE.MeshStandardMaterial({ color, roughness: 0.42, metalness: 0.12, side: THREE.DoubleSide }));
-  cone.rotation.x = -Math.PI/2; cone.position.z = proud/2; cone.castShadow = true;  // wide base at z=0, apex +z
-  g.add(cone); wireMeshes.push(cone);
-
-  const cap = new THREE.Mesh(new THREE.SphereGeometry(rCut*0.32, 32, 20, 0, Math.PI*2, 0, Math.PI/2),
-    new THREE.MeshStandardMaterial({ color: 0x14181d, roughness: 0.32, metalness: 0.3 }));
-  cap.rotation.x = Math.PI/2; cap.position.z = proud + 1;
-  g.add(cap); wireMeshes.push(cap);
-
-  if (into > 0) {
-    const baskMat = new THREE.MeshStandardMaterial({ color: 0x23282f, roughness: 0.85, side: THREE.DoubleSide, transparent: true, opacity: 1 });
-    const bask = new THREE.Mesh(new THREE.CylinderGeometry(rCut*0.55, rCut*0.92, into, 32, 1, true), baskMat);
-    bask.rotation.x = Math.PI/2; bask.position.z = -into/2;
-    g.add(bask); wireMeshes.push(bask); toggleMats.push(baskMat);
-  }
+// ===== driver builders (fire +z local; cone goes -z) =====
+function coneDriver(cutR,frameR){
+  const g=new THREE.Group();
+  const tube=(frameR-cutR)*0.45, surrR=cutR-tube*0.5, coneD=cutR*0.75, rdc=cutR*0.34;
+  // cast mounting flange (raised frame the screws pass through)
+  const fsh=new THREE.Shape();fsh.absarc(0,0,frameR,0,Math.PI*2,false);
+  const fho=new THREE.Path();fho.absarc(0,0,cutR*0.99,0,Math.PI*2,true);fsh.holes.push(fho);
+  const fr=new THREE.Mesh(new THREE.ExtrudeGeometry(fsh,{depth:3.2,bevelEnabled:true,bevelThickness:0.9,bevelSize:1.1,bevelSegments:2,curveSegments:72}),matFrame);
+  fr.castShadow=true;g.add(fr);
+  // surround (rubber roll)
+  const sr=new THREE.Mesh(new THREE.TorusGeometry(surrR,tube,20,72),matSurr);sr.position.z=tube*0.55;g.add(sr);
+  // cone (curved lathe, dipping back)
+  const pts=[new THREE.Vector2(rdc,-coneD),new THREE.Vector2(rdc+(surrR-rdc)*0.55,-coneD*0.42),new THREE.Vector2(surrR,0)];
+  const cone=new THREE.Mesh(new THREE.LatheGeometry(pts,72),matCone);cone.rotation.x=Math.PI/2;g.add(cone);
+  // dust cap (convex)
+  const cap=new THREE.Mesh(new THREE.SphereGeometry(rdc,40,20,0,Math.PI*2,0,Math.PI/2),matCap);
+  cap.rotation.x=Math.PI/2;cap.position.z=-coneD+rdc*0.55;g.add(cap);
+  // 4 screws through the flange, with countersink recesses
+  for(let i=0;i<4;i++){const a=Math.PI/4+i/4*Math.PI*2,r=frameR*0.85,px=Math.cos(a)*r,py=Math.sin(a)*r;
+    const rec=new THREE.Mesh(new THREE.CircleGeometry(frameR*0.06,20),matCap);rec.position.set(px,py,3.25);g.add(rec);
+    const s=new THREE.Mesh(new THREE.CylinderGeometry(frameR*0.04,frameR*0.045,1.6,16),matScrew);
+    s.rotation.x=Math.PI/2;s.position.set(px,py,3.7);g.add(s);}
+  g.traverse(o=>{if(o.isMesh)o.castShadow=true;});
+  return g;
+}
+function domeTweeter(faceR,domeR){
+  const g=new THREE.Group();
+  const fp=new THREE.Mesh(new THREE.CylinderGeometry(faceR,faceR,3,64),matFrame);fp.rotation.x=Math.PI/2;fp.position.z=1.5;g.add(fp);
+  // shallow recess ring
+  const rec=new THREE.Mesh(new THREE.RingGeometry(domeR*1.25,faceR*0.82,48),matCap);rec.position.z=3.05;g.add(rec);
+  const surr=new THREE.Mesh(new THREE.TorusGeometry(domeR*1.12,domeR*0.18,16,48),matSurr);surr.position.z=3.2;g.add(surr);
+  const dome=new THREE.Mesh(new THREE.SphereGeometry(domeR,40,24,0,Math.PI*2,0,Math.PI/2),matDome);
+  dome.rotation.x=Math.PI/2;dome.position.z=3.0;g.add(dome);
+  for(let i=0;i<4;i++){const a=Math.PI/4+i/4*Math.PI*2;
+    const s=new THREE.Mesh(new THREE.CylinderGeometry(1.4,1.4,2,12),matScrew);
+    s.rotation.x=Math.PI/2;s.position.set(Math.cos(a)*faceR*0.86,Math.sin(a)*faceR*0.86,3);g.add(s);}
+  g.traverse(o=>{if(o.isMesh)o.castShadow=true;});
+  return g;
+}
+function prDriver(fw,fh,cw,ch){ // frame w/h, cutout w/h (racetrack)
+  const g=new THREE.Group();
+  // frame faceplate (stadium ring): extrude frame stadium with cutout-stadium hole
+  const fsh=new THREE.Shape();const r=fw/2,hs=(fh-fw)/2;
+  fsh.moveTo(-r,-hs);fsh.lineTo(-r,hs);fsh.absarc(0,hs,r,Math.PI,0,true);fsh.lineTo(r,-hs);fsh.absarc(0,-hs,r,0,Math.PI,true);
+  const hole=new THREE.Path();const cr=cw/2,chs=(ch-cw)/2;
+  hole.moveTo(-cr,-chs);hole.lineTo(-cr,chs);hole.absarc(0,chs,cr,Math.PI,0,true);hole.lineTo(cr,-chs);hole.absarc(0,-chs,cr,0,Math.PI,true);
+  fsh.holes.push(hole);
+  const fp=new THREE.Mesh(new THREE.ExtrudeGeometry(fsh,{depth:3,bevelEnabled:true,bevelThickness:1,bevelSize:1,bevelSegments:1,curveSegments:48}),matFrame);g.add(fp);
+  // flat slightly-convex diaphragm (stadium plate)
+  const dsh=new THREE.Shape();const dr=cw/2*0.94,dhs=(ch-cw)/2;
+  dsh.moveTo(-dr,-dhs);dsh.lineTo(-dr,dhs);dsh.absarc(0,dhs,dr,Math.PI,0,true);dsh.lineTo(dr,-dhs);dsh.absarc(0,-dhs,dr,0,Math.PI,true);
+  const dia=new THREE.Mesh(new THREE.ExtrudeGeometry(dsh,{depth:5,bevelEnabled:true,bevelThickness:3,bevelSize:4,bevelSegments:3,curveSegments:48}),matPR);
+  dia.position.z=-1;g.add(dia);
+  g.traverse(o=>{if(o.isMesh){o.castShadow=true;}});
   return g;
 }
 
-// ============ racetrack PR built in LOCAL space ============
-function makeRacetrack(wMM, hMM, color, proud) {
-  const g = new THREE.Group();
-  const r = wMM/2, straight = hMM - wMM, hs = straight/2, hw = wMM/2;
-  const shape = new THREE.Shape();
-  shape.moveTo(-hw, -hs); shape.lineTo(-hw, hs);
-  shape.absarc(0, hs, r, Math.PI, 0, true);
-  shape.lineTo(hw, -hs);
-  shape.absarc(0, -hs, r, 0, Math.PI, true);
-
-  const body = new THREE.Mesh(new THREE.ExtrudeGeometry(shape, { depth: proud, bevelEnabled: false }),
-    new THREE.MeshStandardMaterial({ color, roughness: 0.5, metalness: 0.18 }));
-  body.castShadow = true; g.add(body); wireMeshes.push(body);
-
-  const plate = new THREE.Mesh(new THREE.ShapeGeometry(shape),
-    new THREE.MeshStandardMaterial({ color: 0x6258a0, roughness: 0.6, metalness: 0.2, side: THREE.DoubleSide }));
-  plate.position.z = proud + 0.5; g.add(plate); wireMeshes.push(plate);
-  return g;
-}
-
-// ============ place a local-space part on a named face ============
-// front/rear: (a,b) = (x,y).  left/right: (a,b) = (y,z).
-function place(g, face, a, b) {
-  if (face === 'front') { g.position.set(a, b, FRONT); }
-  else if (face === 'rear')  { g.position.set(a, b, REAR);  g.rotation.y = Math.PI; }
-  else if (face === 'left')  { g.position.set(LEFT,  a, b); g.rotation.y = -Math.PI/2; }
-  else if (face === 'right') { g.position.set(RIGHT, a, b); g.rotation.y =  Math.PI/2; }
+// place on faces
+function place(g,face,a,b){
+  if(face==='front'){g.position.set(a,b,D);}
+  else if(face==='left'){g.rotation.y=-Math.PI/2;g.position.set(0,b,a);}     // a=depth,b=height
+  else if(face==='right'){g.rotation.y=Math.PI/2;g.position.set(W,b,a);}
   root.add(g);
-  return g;
 }
+place(domeTweeter(44,9.5),'front',110,286);
+place(coneDriver(51,61.5),'front',110,172);            // mid Ø123/cutout102
+place(coneDriver(60,77.9),'left',90,100);              // sub Ø155.8/cutout120 (net 30mm down)
+place(prDriver(153,252,119,220),'right',90,150);       // PR
 
-// ============ electronics pocket (recess into box from rear) ============
-function rearPocket(cx, cy, wMM, hMM, depthMM) {
-  const boxMat = new THREE.MeshStandardMaterial({ color: 0x3d6098, roughness: 0.75, metalness: 0.1, transparent:true, opacity:0.85 });
-  const box = new THREE.Mesh(new THREE.BoxGeometry(wMM, hMM, depthMM), boxMat);
-  box.position.set(cx, cy, REAR + depthMM/2);
-  root.add(box); wireMeshes.push(box); toggleMats.push(boxMat);
-  const out = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(wMM, hMM, depthMM)),
-    new THREE.LineBasicMaterial({ color: 0x9fc0ee }));
-  out.position.copy(box.position); root.add(out);
-  const holeMat = new THREE.MeshStandardMaterial({ color: 0x0a0d11, roughness: 0.9 });
-  const cols = 6, rows = 4, sx = wMM*0.62/(cols-1), sy = hMM*0.5/(rows-1);
-  for (let i=0;i<cols;i++) for (let j=0;j<rows;j++) {
-    const h = new THREE.Mesh(new THREE.CircleGeometry(3.5, 18), holeMat);
-    h.position.set(cx - wMM*0.31 + i*sx, cy - hMM*0.25 + j*sy, REAR - 0.5);
-    h.rotation.y = Math.PI; root.add(h);
-  }
-}
+// ===== ground (soft reflection + contact shadow) =====
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(6000,6000),
+  new THREE.MeshStandardMaterial({color:0x0a0b0d,roughness:0.55,metalness:0.1}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-H/2-1;ground.receiveShadow=true;scene.add(ground);
 
-// ============ build the system ============
-place(makeDriver(155, 120, 0xc8553d, 14, 60), 'left',  130, 90);   // SUB  — left side (y=130, z=90)
-place(makeRacetrack(168.75, 253, 0x7a6fb0, 16), 'right', 150, 90); // PR   — right side (y=150, z=90)
-place(makeDriver(115.6, 93.6, 0x588b8b, 10, 36), 'front', 110, 150); // MID — front column
-place(makeDriver(104, 74, 0xdca94b, 9, 30), 'front', 110, 265);      // TWEETER — above mid
-rearPocket(110, 180, 175, 127, 46);                                  // electronics — rear
+// ===== camera views =====
+function view(p){camera.position.set(p[0],p[1],p[2]);controls.target.set(0,0,0);controls.update();}
+const iso=[470,300,560];view(iso);
+document.getElementById('bIso').onclick=()=>view(iso);
+document.getElementById('bFront').onclick=()=>view([0,30,720]);
+document.getElementById('bLeft').onclick=()=>view([-720,40,120]);
+document.getElementById('bRight').onclick=()=>view([720,40,120]);
+let spin=false,wire=false;
+document.getElementById('bSpin').onclick=e=>{spin=!spin;e.target.classList.toggle('on',spin);controls.autoRotate=spin;controls.autoRotateSpeed=1.0;};
+document.getElementById('bWire').onclick=e=>{wire=!wire;e.target.classList.toggle('on',wire);wireMats.forEach(m=>m.wireframe=wire);};
 
-// soil-pipe mid rear chamber (internal cylinder behind the mid)
-const pipeMat = new THREE.MeshStandardMaterial({ color: 0x4a525c, roughness: 0.9, transparent:true, opacity:0.5, side: THREE.DoubleSide });
-const pipe = new THREE.Mesh(new THREE.CylinderGeometry(55, 55, 70, 40, 1, true), pipeMat);
-pipe.rotation.x = Math.PI/2; pipe.position.set(110, 150, FRONT - 35 - 18);
-root.add(pipe); toggleMats.push(pipeMat);
-
-// ============ camera presets ============
-const target = new THREE.Vector3(0, 0, 0);
-function view(px, py, pz){ camera.position.set(px,py,pz); controls.target.copy(target); controls.update(); }
-function isoView(){ view(480, 330, 600); }
-isoView();
-document.getElementById('btnFront').onclick = ()=> view(0, 30, 700);
-document.getElementById('btnRear').onclick  = ()=> view(0, 30, -700);
-document.getElementById('btnLeft').onclick  = ()=> view(-700, 30, 0);
-document.getElementById('btnRight').onclick = ()=> view(700, 30, 0);
-document.getElementById('btnIso').onclick   = isoView;
-
-// ============ toggles ============
-let cut=false, wire=false, spin=false, gridOn=true;
-const $ = id => document.getElementById(id);
-$('btnCut').onclick = ()=>{ cut=!cut; $('btnCut').classList.toggle('on',cut);
-  cabMat.opacity = cut?0.12:1.0; cabMat.depthWrite = !cut; edges.material.color.set(cut?0x6f8298:0x9fb4c9); };
-$('btnWire').onclick = ()=>{ wire=!wire; $('btnWire').classList.toggle('on',wire);
-  wireMeshes.forEach(m=>{ if(m.material) m.material.wireframe=wire; }); };
-$('btnSpin').onclick = ()=>{ spin=!spin; $('btnSpin').classList.toggle('on',spin);
-  controls.autoRotate=spin; controls.autoRotateSpeed=1.2; };
-$('btnGrid').onclick = ()=>{ gridOn=!gridOn; $('btnGrid').classList.toggle('on',gridOn);
-  grid.visible=gridOn; ground.visible=gridOn; };
-
-addEventListener('resize', ()=>{ camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix();
-  renderer.setSize(innerWidth, innerHeight); });
-
-(function loop(){ requestAnimationFrame(loop); controls.update(); renderer.render(scene, camera); })();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+(function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);})();
 </script>
 </body>
 </html>
